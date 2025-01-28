@@ -1,0 +1,15 @@
+---
+title: "Yiwei's Portfolio"
+image: images/Headshot.jpg
+about:
+  template: jolla # see additional templates here https://quarto.org/docs/websites/website-about.html
+  links:  # add links to your various social profiles
+    - icon: linkedin
+      text: LinkedIn
+      href: www.linkedin.com/in/yiwei-lu78
+    - icon: github
+      text: Github
+      href: https://github.com/lywww88
+---
+
+Enter your biography blurb here.
