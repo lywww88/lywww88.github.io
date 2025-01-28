@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Project A"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Yiwei’s Portfolio",
+    "section": "",
+    "text": "Enter your biography blurb here."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "This is an about me page\n\n\nYiwei Lu"
+  },
+  {
+    "objectID": "about.html#who-am-i",
+    "href": "about.html#who-am-i",
+    "title": "About",
+    "section": "",
+    "text": "Yiwei Lu"
+  }
+]
