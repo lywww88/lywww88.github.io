@@ -1,5 +1,5 @@
 ---
-title: "Yiwei’s Portfolio"
+title: "Portfolio of Yiwei Lu"
 image: images/Headshot.jpg
 about:
   template: jolla # see additional templates here https://quarto.org/docs/websites/website-about.html
