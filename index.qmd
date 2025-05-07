@@ -1,18 +1,54 @@
 ---
 title: "Portfolio of Yiwei Lu"
-image: images/Headshot.jpg
-about:
-  template: jolla
-  description: >
-    Hello! I’m **Yiwei Lu**, currently a Master’s candidate in Business Analytics at UC Irvine. I enjoy transforming complex datasets into clear, actionable insights that help organizations make smarter decisions. Outside of work, I spend time exploring new machine learning techniques, building dashboards, snowboarding, and biking around Southern California.
-  links:
-    - icon: linkedin
-      text: LinkedIn
-      href: https://www.linkedin.com/in/yiwei-lu78
-    - icon: github
-      text: GitHub
-      href: https://github.com/lywww88
-    - icon: download
-      text: Resume
-      href: resume.pdf
+format:
+  html:
+    toc: false
 ---
+
+::: {.profile style="text-align:center; margin: 2em 0;"}
+![](images/Headshot.jpg){style="width:150px; height:150px; border-radius:50%;"}
+:::
+
+::: {.about-text style="max-width: 720px; margin: 2em auto; font-size: 1rem; color: #555;"}
+Hello! I’m **Yiwei Lu**, a Master’s candidate in Business Analytics at **UC Irvine**. I’m passionate about transforming complex datasets into clear, actionable insights that empower organizations to make smarter decisions. Outside of work, you’ll find me exploring new machine learning techniques, crafting interactive dashboards, snowboarding down the slopes, or enjoying a scenic bike ride through Southern California.
+:::
+
+---
+
+## 🚀 Featured Projects
+
+::: {.project-card}
+**Customer Churn Prediction**  
+Built a machine learning model using Random Forest to predict customer churn with 92% accuracy.  
+[View Project](projects/churn.qmd){.btn}
+:::
+
+::: {.project-card}
+**SmartTripBot Travel Assistant**  
+Developed a chatbot that plans spontaneous trips based on live data and personal preferences.  
+[View Project](projects/smarttripbot.qmd){.btn}
+:::
+
+---
+
+## 📬 Let’s Connect
+
+<div class="link-buttons"
+     style="display: flex; gap: 1em; flex-wrap: wrap; justify-content: center; margin: 1.5em 0;">
+
+  <a href="https://www.linkedin.com/in/yiwei-lu78"
+     class="btn" target="_blank">
+    <i class="bi bi-linkedin"></i> LinkedIn
+  </a>
+
+  <a href="https://github.com/lywww88"
+     class="btn" target="_blank">
+    <i class="bi bi-github"></i> GitHub
+  </a>
+
+  <a href="resume.pdf"
+     class="btn" target="_blank">
+    <i class="bi bi-download"></i> Resume
+  </a>
+
+</div>
