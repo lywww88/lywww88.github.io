@@ -1,5 +1,33 @@
 [
   {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Hi! I’m Yiwei Lu, currently pursuing my Master’s in Business Analytics at UC Irvine.\nI specialize in using data to tell stories, solve problems, and drive better business decisions.\nI’ve worked in both startup and corporate environments, using tools like Python, SQL, Tableau, and AWS to optimize operations, forecast trends, and uncover growth opportunities.\n\n\n\nTo bridge the gap between raw data and real-world decisions.\nI strive to uncover hidden patterns, make insights accessible, and build tools that help people make smarter, faster choices.\n\n\n\n\n\nProgramming & Analytics: Python, SQL, R, SPSS\n\nVisualization: Tableau, Excel\n\nCloud & DB: AWS, Azure, Database Management\n\nLanguages: English, Mandarin Chinese\n\nSoft Skills: Time Management, Problem Solving\n\n\n\n\n\n\nLinkedIn\n\n📧 yiweil36@uci.edu"
+  },
+  {
+    "objectID": "about.html#mission",
+    "href": "about.html#mission",
+    "title": "About",
+    "section": "",
+    "text": "To bridge the gap between raw data and real-world decisions.\nI strive to uncover hidden patterns, make insights accessible, and build tools that help people make smarter, faster choices."
+  },
+  {
+    "objectID": "about.html#skills",
+    "href": "about.html#skills",
+    "title": "About",
+    "section": "",
+    "text": "Programming & Analytics: Python, SQL, R, SPSS\n\nVisualization: Tableau, Excel\n\nCloud & DB: AWS, Azure, Database Management\n\nLanguages: English, Mandarin Chinese\n\nSoft Skills: Time Management, Problem Solving"
+  },
+  {
+    "objectID": "about.html#connect-with-me",
+    "href": "about.html#connect-with-me",
+    "title": "About",
+    "section": "",
+    "text": "LinkedIn\n\n📧 yiweil36@uci.edu"
+  },
+  {
     "objectID": "projects/index.html",
     "href": "projects/index.html",
     "title": "Projects",
@@ -12,19 +40,5 @@
     "title": "Yiwei’s Portfolio",
     "section": "",
     "text": "Enter your biography blurb here."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "This is an about me page\n\n\nYiwei Lu"
-  },
-  {
-    "objectID": "about.html#who-am-i",
-    "href": "about.html#who-am-i",
-    "title": "About",
-    "section": "",
-    "text": "Yiwei Lu"
   }
 ]
