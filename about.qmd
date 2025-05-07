@@ -3,11 +3,25 @@ title: "About"
 ---
 
 # About this site
-This is an about me page
+This is an about me page.
 
 ## Who am I?
 
-Yiwei Lu
+Hi! I'm **Yiwei Lu**, a Business Analytics graduate student at UC Irvine with a strong foundation in computer information systems and real-world experience in data analysis, machine learning, and dashboard design.
+
+I'm passionate about solving business problems with data and storytelling — whether it's predicting customer churn, optimizing product listings, or building sentiment analysis apps.
 
 ## What is my Mission?
 
+To bridge the gap between business and technology by turning complex data into actionable insights that drive smarter decisions. I aim to contribute to data-driven organizations that value innovation, growth, and meaningful impact.
+
+---
+
+### 🚀 Highlights:
+- **Current Role:** Student Analyst @ Johnson & Johnson  
+- **Past Experience:** Business Analyst @ CalHome Inc  
+- **Key Projects:** Uber Conversion Prediction, Financial NLP Chatbot, Airbnb Sentiment Model  
+- **Languages & Tools:** Python, SQL, Tableau, AWS, R, SPSS  
+- **Fluent in:** English and Mandarin
+
+📫 [Email Me](mailto:yiweil36@uci.edu) | [LinkedIn](https://www.linkedin.com/in/yiwei-lu78)
