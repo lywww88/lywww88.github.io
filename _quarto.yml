@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "Yiwei's Portfolio"
+  title: "Portfolio of Yiwei Lu"
   navbar:
     logo: images/logo.png 
     left:
