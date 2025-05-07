@@ -4,11 +4,10 @@ project:
 website:
   title: "Yiwei's Portfolio"
   navbar:
-    logo: img/logo.png  # 可选，若不需要 logo 可删掉此行
+    logo: images/logo.png 
     left:
       - href: index.qmd
         text: Home
-    center:
       - href: about.qmd
         text: About Me
     right:
