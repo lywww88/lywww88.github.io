@@ -10,15 +10,15 @@ website:
         text: Home
       - href: about.qmd
         text: About Me
-    right:
       - text: Projects
         menu:
-          - href: projects/data-viz.qmd
-            text: Data Visualization
-          - href: projects/ml-models.qmd
-            text: Machine Learning
+          - href: projects/index.qmd
+            text: Projects
+          - href: projects/Startup.qmd
+            text: Startup
+    right:
       - icon: github
-        href: https://github.com/yourusername
+        href: https://github.com/lywww88
         aria-label: GitHub
 
 format:
