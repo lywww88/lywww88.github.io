@@ -22,10 +22,10 @@ jobs:
         with:
           version: "latest"
 
-      - name: Render Quarto project
+      - name: Render Quarto Project
         run: quarto render
 
-      - name: Upload artifact
+      - name: Upload HTML to Pages
         uses: actions/upload-pages-artifact@v1
         with:
           path: _site
