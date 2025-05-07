@@ -27,3 +27,12 @@
   border-radius: 0.5em;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+.contact-icons a {
+  display: inline-block;
+  margin-right: 1em;
+}
+.contact-icons a img {
+  width: 24px;
+  height: auto;
+  vertical-align: middle;
+}
