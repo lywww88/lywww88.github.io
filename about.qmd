@@ -1,5 +1,7 @@
 ---
 title: "About"
+layout: page
+permalink: /about/
 ---
 
 # About this site
@@ -7,25 +9,8 @@ This is an about me page that shares who I am, what I do, and where I'm heading 
 
 ## Who am I?
 
-Hi! I'm **Yiwei Lu**, currently pursuing my Master’s in Business Analytics at the University of California, Irvine.  
-I specialize in using data to tell stories, solve problems, and drive better business decisions.
-
-I’ve worked in both startup and corporate environments, using tools like Python, SQL, Tableau, and AWS to optimize e-commerce operations, design dashboards, and deploy predictive models.
+Hi! I'm **Yiwei Lu**, a Business Analytics graduate student at UC Irvine...
 
 ## What is my Mission?
 
-To bridge the gap between raw data and real-world decisions.  
-I strive to uncover hidden patterns, make insights accessible, and build tools that help people make smarter, faster choices.
-
-My goal is to be a strategic data partner in organizations that care about growth, innovation, and user-centric design.
-
----
-
-### 👨‍💻 Skills
-- **Programming:** Python, SQL, R, SPSS  
-- **Visualization:** Tableau, Excel  
-- **Cloud & DB:** AWS, Azure, Database Management  
-- **Languages:** English, Mandarin Chinese  
-
-### 📫 Connect with me  
-[LinkedIn](https://www.linkedin.com/in/yiwei-lu78) | [Email](mailto:yiweil36@uci.edu)
+To bridge the gap between raw data and real-world decisions...
