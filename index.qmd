@@ -2,8 +2,10 @@
 title: "Portfolio of Yiwei Lu"
 image: images/Headshot.jpg
 about:
-  template: jolla # see additional templates here https://quarto.org/docs/websites/website-about.html
-  links:  # add links to your various social profiles
+  template: jolla
+  description: >
+    Hello! I’m **Yiwei Lu**, currently a Master’s candidate in Business Analytics at UC Irvine. I enjoy transforming complex datasets into clear, actionable insights that help organizations make smarter decisions. Outside of work, I spend time exploring new machine learning techniques, building dashboards, snowboarding, and biking around Southern California.
+  links:
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/yiwei-lu78
@@ -14,9 +16,3 @@ about:
       text: Resume
       href: resume.pdf
 ---
-
-:::{.about-text style="max-width: 720px; margin: 2em auto; font-size: 1rem; color: #555;"}
-
-Hello! I’m **Yiwei Lu**, currently a Master’s candidate in Business Analytics at UC Irvine. I enjoy transforming complex datasets into clear, actionable insights that help organizations make smarter decisions. Outside of work, I spend time exploring new machine learning techniques, building dashboards, snowboarding, and biking around Southern California.
-
-:::
