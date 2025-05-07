@@ -3,25 +3,29 @@ title: "About"
 ---
 
 # About this site
-This is an about me page.
+This is an about me page that shares who I am, what I do, and where I'm heading next.
 
 ## Who am I?
 
-Hi! I'm **Yiwei Lu**, a Business Analytics graduate student at UC Irvine with a strong foundation in computer information systems and real-world experience in data analysis, machine learning, and dashboard design.
+Hi! I'm **Yiwei Lu**, currently pursuing my Master’s in Business Analytics at the University of California, Irvine.  
+I specialize in using data to tell stories, solve problems, and drive better business decisions.
 
-I'm passionate about solving business problems with data and storytelling — whether it's predicting customer churn, optimizing product listings, or building sentiment analysis apps.
+I’ve worked in both startup and corporate environments, using tools like Python, SQL, Tableau, and AWS to optimize e-commerce operations, design dashboards, and deploy predictive models.
 
 ## What is my Mission?
 
-To bridge the gap between business and technology by turning complex data into actionable insights that drive smarter decisions. I aim to contribute to data-driven organizations that value innovation, growth, and meaningful impact.
+To bridge the gap between raw data and real-world decisions.  
+I strive to uncover hidden patterns, make insights accessible, and build tools that help people make smarter, faster choices.
+
+My goal is to be a strategic data partner in organizations that care about growth, innovation, and user-centric design.
 
 ---
 
-### 🚀 Highlights:
-- **Current Role:** Student Analyst @ Johnson & Johnson  
-- **Past Experience:** Business Analyst @ CalHome Inc  
-- **Key Projects:** Uber Conversion Prediction, Financial NLP Chatbot, Airbnb Sentiment Model  
-- **Languages & Tools:** Python, SQL, Tableau, AWS, R, SPSS  
-- **Fluent in:** English and Mandarin
+### 👨‍💻 Skills
+- **Programming:** Python, SQL, R, SPSS  
+- **Visualization:** Tableau, Excel  
+- **Cloud & DB:** AWS, Azure, Database Management  
+- **Languages:** English, Mandarin Chinese  
 
-📫 [Email Me](mailto:yiweil36@uci.edu) | [LinkedIn](https://www.linkedin.com/in/yiwei-lu78)
+### 📫 Connect with me  
+[LinkedIn](https://www.linkedin.com/in/yiwei-lu78) | [Email](mailto:yiweil36@uci.edu)
