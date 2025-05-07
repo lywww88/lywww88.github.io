@@ -1,93 +1,16 @@
 ---
 title: "Yiwei’s Portfolio"
-format:
-  html:
-    theme:
-      - cosmo
-    css: styles.css
-    toc: false
+image: images/Headshot.jpg
+about:
+  template: jolla
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/yiwei-lu78
+    - icon: github
+      text: GitHub
+      href: https://github.com/lywww88
+    - icon: download
+      text: Resume
+      href: resume.pdf
 ---
-
-<!-- Hero Section -->
-::: columns
-::: {.column width="60%"}
-# Hi, I’m **Yiwei Lu** 👋
-
-Master’s student in Business Analytics at UC Irvine, focused on turning complex data into clear, actionable insights.
-
-[About Me](about.qmd){.btn}
-[View Projects](projects/index.qmd){.btn .btn-primary}
-:::
-
-::: {.column width="40%"}
-![](images/Headshot.jpg){width="100%" style="border-radius:50%; box-shadow:0 4px 8px rgba(0,0,0,0.1);"}
-:::
-:::
-
----
-
-<!-- Highlights Section -->
-## 🚀 Highlights
-
-::: columns
-::: {.column width="30%"}
-- 🎓 **Education**: M.S. in Business Analytics (UCI)
-- 💼 **Experience**: Student Analyst @ J&J
-- 📈 **Skills**: Python, SQL, Tableau, R
-:::
-
-::: {.column width="30%"}
-- ☁️ **Cloud**: AWS & Azure
-- 🤖 **ML**: Random Forest, XGBoost
-- 📊 **Visualization**: Interactive Dashboards
-:::
-
-::: {.column width="30%"}
-- 🗣️ **Language**: Fluent English & Mandarin
-- 🎨 **Design**: Adobe Photoshop
-- 💡 **Soft Skills**: Problem-solving, Time Management
-:::
-:::
-
----
-
-<!-- Featured Projects -->
-## 📂 Featured Projects
-
-::: grid
-: gutter: 1.5rem
-###
-
-::: card
-![](projects/project-a/thumbnail.png){width="100%"}
-**Uber Driver Conversion Prediction**  
-High-performance XGBoost ensemble (AUC 0.97) to optimize driver onboarding.  
-[Learn More](projects/project-a/index.qmd)
-:::
-
-::: card
-![](projects/project-b/thumbnail.png){width="100%"}
-**Financial Chatbot**  
-NLP-driven chatbot delivering real-time stock sentiment and insights.  
-[Learn More](projects/project-b/index.qmd)
-:::
-
-::: card
-![](projects/project-c/thumbnail.png){width="100%"}
-**Airbnb Analytics**  
-Sentiment & pricing strategy dashboard powered by TF-IDF and clustering.  
-[Learn More](projects/project-c/index.qmd)
-:::
-
-:::
-
----
-
-<!-- Contact Footer -->
-## 📫 Get in Touch
-
-<div class="contact-icons">
-  <a href="mailto:yiweil36@uci.edu" title="Email"><img src="images/icons/email.svg" alt="Email" style="width:24px; margin-right:8px;"/></a>
-  <a href="https://www.linkedin.com/in/yiwei-lu78" target="_blank" title="LinkedIn"><img src="images/icons/linkedin.svg" alt="LinkedIn" style="width:24px; margin-right:8px;"/></a>
-  <a href="https://github.com/lywww88" target="_blank" title="GitHub"><img src="images/icons/github.svg" alt="GitHub" style="width:24px; margin-right:8px;"/></a>
-</div>
