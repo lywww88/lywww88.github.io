@@ -4,22 +4,27 @@ project:
 website:
   title: "Yiwei's Portfolio"
   navbar:
+    logo: img/logo.png  # 可选，若不需要 logo 可删掉此行
     left:
       - href: index.qmd
         text: Home
+    center:
       - href: about.qmd
-        text: About
-      - href: projects/
-        text: Projects
-
+        text: About Me
+    right:
+      - text: Projects
+        menu:
+          - href: projects/data-viz.qmd
+            text: Data Visualization
+          - href: projects/ml-models.qmd
+            text: Machine Learning
+      - icon: github
+        href: https://github.com/yourusername
+        aria-label: GitHub
 
 format:
   html:
     theme:
       - cosmo
-      - brand
     css: styles.css
     toc: true
-
-
-
