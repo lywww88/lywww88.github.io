@@ -1,5 +1,5 @@
 ---
-title: "Portfolio of Yiwei Lu"
+title: ""
 format:
   html:
     toc: false
@@ -15,7 +15,7 @@ Hello! I’m **Yiwei Lu**, a Master’s candidate in Business Analytics at **UC 
 
 ---
 
-## 🚀 Featured Projects
+## Featured Projects
 
 ::: {.project-card}
 **Customer Churn Prediction**  
@@ -31,7 +31,7 @@ Developed a chatbot that plans spontaneous trips based on live data and personal
 
 ---
 
-## 📬 Let’s Connect
+## Let’s Connect
 
 <div class="link-buttons"
      style="display: flex; gap: 1em; flex-wrap: wrap; justify-content: center; margin: 1.5em 0;">
