@@ -1,16 +1,38 @@
 ---
 title: "About"
-layout: page
-permalink: /about/
+format: html
+page-layout: full
+description: "About Yiwei Lu – Business Analytics Professional"
 ---
 
-# About this site
-This is an about me page that shares who I am, what I do, and where I'm heading next.
+# 👋 About Me
 
-## Who am I?
+Hi! I'm **Yiwei Lu**, currently pursuing my Master’s in Business Analytics at UC Irvine.
 
-Hi! I'm **Yiwei Lu**, a Business Analytics graduate student at UC Irvine...
+I specialize in using data to tell stories, solve problems, and drive better business decisions.
 
-## What is my Mission?
+I've worked in both startup and corporate environments, using tools like **Python**, **SQL**, **Tableau**, and **AWS** to optimize operations, forecast trends, and uncover growth opportunities.
 
-To bridge the gap between raw data and real-world decisions...
+---
+
+## 🎯 Mission
+
+To bridge the gap between raw data and real-world decisions.  
+I strive to uncover hidden patterns, make insights accessible, and build tools that help people make smarter, faster choices.
+
+---
+
+## 🛠️ Skills
+
+- **Programming & Analytics**: Python, SQL, R, SPSS  
+- **Visualization**: Tableau, Excel  
+- **Cloud & DB**: AWS, Azure, Database Management  
+- **Languages**: English, Mandarin Chinese  
+- **Soft Skills**: Time Management, Problem Solving
+
+---
+
+## 🔗 Connect with Me
+
+- [LinkedIn](https://www.linkedin.com/in/yiwei-lu78)  
+- 📧 yiweil36@uci.edu
