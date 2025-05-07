@@ -42,10 +42,17 @@
     "text": "Project A"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
+    "objectID": "index.html#featured-projects",
+    "href": "index.html#featured-projects",
     "title": "Portfolio of Yiwei Lu",
-    "section": "",
-    "text": "Hello! I’m Yiwei Lu, currently a Master’s candidate in Business Analytics at UC Irvine. I enjoy transforming complex datasets into clear, actionable insights that help organizations make smarter decisions. Outside of work, I spend time exploring new machine learning techniques, building dashboards, snowboarding, and biking around Southern California."
+    "section": "🚀 Featured Projects",
+    "text": "🚀 Featured Projects\n\nCustomer Churn Prediction\nBuilt a machine learning model using Random Forest to predict customer churn with 92% accuracy.\nView Project\n\n\nSmartTripBot Travel Assistant\nDeveloped a chatbot that plans spontaneous trips based on live data and personal preferences.\nView Project"
+  },
+  {
+    "objectID": "index.html#lets-connect",
+    "href": "index.html#lets-connect",
+    "title": "Portfolio of Yiwei Lu",
+    "section": "📬 Let’s Connect",
+    "text": "📬 Let’s Connect\n\n  LinkedIn \n  GitHub \n  Resume"
   }
 ]
