@@ -4,21 +4,28 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "Hi! I’m Yiwei Lu, currently pursuing my Master’s in Business Analytics at UC Irvine.\nI specialize in using data to tell stories, solve problems, and drive better business decisions.\nI’ve worked in both startup and corporate environments, using tools like Python, SQL, Tableau, and AWS to optimize operations, forecast trends, and uncover growth opportunities.\n\n\n\nTo bridge the gap between raw data and real-world decisions.\nI strive to uncover hidden patterns, make insights accessible, and build tools that help people make smarter, faster choices.\n\n\n\n\n\nProgramming & Analytics: Python, SQL, R, SPSS\n\nVisualization: Tableau, Excel\n\nCloud & DB: AWS, Azure, Database Management\n\nLanguages: English, Mandarin Chinese\n\nSoft Skills: Time Management, Problem Solving\n\n\n\n\n\n\nLinkedIn\n\n📧 yiweil36@uci.edu"
+    "text": "Hello! I’m Yiwei Lu, a Business Analytics graduate from UC Irvine with a passion for turning data into actionable insights.\n\n💼 Current Student Analyst @ Johnson & Johnson\n• Building predictive models (Decision Tree, Random Forest, Logistic Regression)\n• Designing Tableau dashboards for sales forecasting, retention KPIs, and churn analysis\n📊 Former Business Analyst @ CalHome Inc\n• Automated multi-platform product listings with Python & AWS S3\n• Analyzed Amazon/Walmart/Home Depot/Shopify sales & inventory to optimize procurement\n• Evaluated influencer marketing & offline campaigns, delivering data-driven recommendations\n\n\n\n\n\nM.S. in Business Analytics, UC Irvine (June 2025)\n\nB.S. in Computer Information Systems, Cal Poly Pomona (May 2021)\n\n\n\n\n\n\nLanguages & Tools: Python, SQL, R, SPSS, Tableau, Google Analytics\n\nCloud & Database: AWS, Azure, SQL/NoSQL\n\nData Management: Excel, Access, Big Data Systems\n\nSoft Skills: Time Management, Independent Problem-Solving, Adaptability\n\n\n\n\n\n\nTo bridge the gap between raw data and strategic decision-making, empowering businesses to make smarter, faster, and more informed choices.\n\n\n\n\n\n\nLinkedIn\n\n📧 yiweil36@uci.edu"
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "About",
+    "section": "",
+    "text": "M.S. in Business Analytics, UC Irvine (June 2025)\n\nB.S. in Computer Information Systems, Cal Poly Pomona (May 2021)"
+  },
+  {
+    "objectID": "about.html#technical-skills",
+    "href": "about.html#technical-skills",
+    "title": "About",
+    "section": "",
+    "text": "Languages & Tools: Python, SQL, R, SPSS, Tableau, Google Analytics\n\nCloud & Database: AWS, Azure, SQL/NoSQL\n\nData Management: Excel, Access, Big Data Systems\n\nSoft Skills: Time Management, Independent Problem-Solving, Adaptability"
   },
   {
     "objectID": "about.html#mission",
     "href": "about.html#mission",
     "title": "About",
     "section": "",
-    "text": "To bridge the gap between raw data and real-world decisions.\nI strive to uncover hidden patterns, make insights accessible, and build tools that help people make smarter, faster choices."
-  },
-  {
-    "objectID": "about.html#skills",
-    "href": "about.html#skills",
-    "title": "About",
-    "section": "",
-    "text": "Programming & Analytics: Python, SQL, R, SPSS\n\nVisualization: Tableau, Excel\n\nCloud & DB: AWS, Azure, Database Management\n\nLanguages: English, Mandarin Chinese\n\nSoft Skills: Time Management, Problem Solving"
+    "text": "To bridge the gap between raw data and strategic decision-making, empowering businesses to make smarter, faster, and more informed choices."
   },
   {
     "objectID": "about.html#connect-with-me",
@@ -39,6 +46,6 @@
     "href": "index.html",
     "title": "Yiwei’s Portfolio",
     "section": "",
-    "text": "Enter your biography blurb here."
+    "text": "Hello! I’m Yiwei Lu, currently a Master’s candidate in Business Analytics at UC Irvine. I love transforming complex datasets into clear, actionable insights that help organizations make smarter decisions. Outside of work, you’ll find me exploring new machine learning techniques, crafting interactive dashboards, snowboarding down the slopes, or enjoying a scenic bike ride through Southern California."
   }
 ]
