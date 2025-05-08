@@ -13,11 +13,11 @@ format:
   <img src="images/Headshot.jpg" alt="Yiwei Lu Headshot" style="width:150px; height:150px; border-radius:50%;"/>
 
   <!-- Name + Motto -->
-  <div style="flex: 1;">
-    <h1 style="margin-bottom: 0.3em;">Yiwei Lu</h1>
-    <p style="font-style: italic; font-size: 1.1em; color: #555;">
-      I believe clarity creates freedom — in data, design, and life.
-    </p>
+  <div style="flex: 1; font-size: 1rem; color: #555;" markdown="1">
+
+**Yiwei Lu**  
+*I believe clarity creates freedom — in data, design, and life.*
+
   </div>
 
 </div>
