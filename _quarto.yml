@@ -17,9 +17,13 @@ website:
           - href: projects/Startup.qmd
             text: Startup
     right:
-      - icon: github
-        href: https://github.com/lywww88
-        aria-label: GitHub
+    - icon: github
+      href: https://github.com/lywww88
+      aria-label: GitHub
+    - href: resume.pdf
+      text: Resume
+      aria-label: Download Resume
+      download: true
 
 format:
   html:
