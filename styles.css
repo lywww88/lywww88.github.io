@@ -34,18 +34,17 @@
   display: block !important;
 }
 
-/* 隐藏标题文字（只保留 logo 图像） */
+/* === 隐藏导航栏文字标题（logo 旁边） === */
 .navbar-brand span {
   display: none !important;
 }
 
-/* === NavLink 动画效果 === */
+/* === NavLink 悬停下划线动画 === */
 .navbar-nav .nav-link {
   position: relative;
   transition: color 0.3s ease;
 }
 
-/* 悬停时文字下划线动画 */
 .navbar-nav .nav-link::after {
   content: "";
   position: absolute;
@@ -65,15 +64,22 @@
   color: #007bff !important;
 }
 
-/* ✅ 修复下拉菜单箭头换行问题 */
+/* === 修复 dropdown 箭头换行问题 === */
 .dropdown-toggle::after {
   display: inline-block !important;
-  content: "▾";
   font-size: 0.65em;
-  margin-left: 0.4em;
+  margin-left: 0.35em;
   vertical-align: middle;
-  transform: translateY(-1px);
+  transform: none !important;
+  position: static !important;
+  content: "▾";
+  line-height: 1;
   color: #666;
+}
+
+.navbar-nav .dropdown-toggle::after {
+  float: none !important;
+  clear: none !important;
 }
 
 /* === 全站按钮样式（.btn） === */
