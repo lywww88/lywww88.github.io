@@ -17,7 +17,7 @@
 }
 
 .navbar-brand img {
-  height: 120px !important;                    /* logo 尺寸 */
+  height: 60px !important;                    /* logo 尺寸 */
   max-height: unset !important;                /* 取消 Bootstrap 限制 */
   width: auto !important;
   object-fit: contain;
@@ -82,4 +82,9 @@
   display: flex;
   gap: 0.5em;
   align-items: center;
+}
+
+/* === 隐藏 Navbar 中的文字标题 === */
+.navbar-brand span {
+  display: none !important;
 }
