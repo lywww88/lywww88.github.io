@@ -43,28 +43,25 @@ Developed an interactive dashboard to predict Uber driver performance using mach
 
 ## Let’s Connect
 
-<div class="link-buttons"
-     style="display: flex; gap: 1em; flex-wrap: wrap; justify-content: center; align-items: center; margin: 1.5em 0;">
+<hr style="border: none; border-top: 1px solid #ccc; margin: 1em auto; max-width: 600px;">
 
-  <!-- LinkedIn -->
-  <a href="https://www.linkedin.com/in/yiwei-lu78"
-     class="btn" target="_blank">
-    <i class="bi bi-linkedin"></i> LinkedIn
-  </a>
+<div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; max-width: 600px; margin: 1.5em auto;">
 
-  <!-- GitHub -->
-  <a href="https://github.com/lywww88"
-     class="btn" target="_blank">
-    <i class="bi bi-github"></i> GitHub
-  </a>
+  <!-- Left side: LinkedIn + GitHub -->
+  <div style="display: flex; gap: 1em;">
+    <a href="https://www.linkedin.com/in/yiwei-lu78" class="btn" target="_blank">
+      <i class="bi bi-linkedin"></i> LinkedIn
+    </a>
+    <a href="https://github.com/lywww88" class="btn" target="_blank">
+      <i class="bi bi-github"></i> GitHub
+    </a>
+  </div>
 
-  <!-- Divider -->
-  <div style="width: 1px; height: 32px; background-color: #ccc;"></div>
-
-  <!-- Resume -->
-  <a href="resume.pdf"
-     class="btn" target="_blank">
-    <i class="bi bi-download"></i> Resume
-  </a>
+  <!-- Right side: Resume -->
+  <div>
+    <a href="resume.pdf" class="btn" target="_blank">
+      <i class="bi bi-download"></i> Resume
+    </a>
+  </div>
 
 </div>
