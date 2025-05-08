@@ -61,7 +61,6 @@ Built an AI chatbot that delivers real-time stock analysis by integrating LLMs w
 
 
 Developed an interactive dashboard to predict Uber driver performance using machine learning models.  
-It visualizes metrics such as driver ratings, trip durations, and customer feedback.
 
 <div style="margin-top: 1em; display: flex; gap: 0.8em;">
   <a href="https://syntax3rr0r1.netlify.app/" class="btn" target="_blank">Open Demo →</a>
