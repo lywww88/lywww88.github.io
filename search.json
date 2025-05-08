@@ -39,56 +39,7 @@
     "href": "projects/index.html",
     "title": "Projects",
     "section": "",
-    "text": "Built an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.\nRead More →\n\n\n\nFinancial Chatbot"
-  },
-  {
-    "objectID": "projects/index.html#financial-chatbot-for-stock-market-insights-financial-chatbot",
-    "href": "projects/index.html#financial-chatbot-for-stock-market-insights-financial-chatbot",
-    "title": "Projects",
-    "section": "",
-    "text": "Built an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.\nRead More →\n\n\n\nFinancial Chatbot"
-  },
-  {
-    "objectID": "projects/index.html#uber-driver-prediction-dashboard-uber-prediction-dashboard",
-    "href": "projects/index.html#uber-driver-prediction-dashboard-uber-prediction-dashboard",
-    "title": "Projects",
-    "section": "🚗 Uber Driver Prediction Dashboard {#Uber Prediction Dashboard}",
-    "text": "🚗 Uber Driver Prediction Dashboard {#Uber Prediction Dashboard}\nDeveloped an interactive dashboard to predict Uber driver performance using machine learning models. It visualizes metrics such as driver ratings, trip durations, and customer feedback.\nRead More →\n\n\n\nUber Dashboard"
-  },
-  {
-    "objectID": "projects/index.html#airbnb-sentiment-dashboard-hosting-strategy-airbnb-app",
-    "href": "projects/index.html#airbnb-sentiment-dashboard-hosting-strategy-airbnb-app",
-    "title": "Projects",
-    "section": "🏡 Airbnb Sentiment Dashboard & Hosting Strategy {#Airbnb App}",
-    "text": "🏡 Airbnb Sentiment Dashboard & Hosting Strategy {#Airbnb App}\nWe developed a review sentiment analysis app for Airbnb hosts using XGBoost and NLP. The project segments hosts based on pricing and review behavior, and provides strategic recommendations to increase guest satisfaction and optimize revenue.\nRead More →\n\n\n\nAirbnb Sentiment App"
-  },
-  {
-    "objectID": "projects/index.html#e-commerce-sql-relational-database-design-e-commerce-sql-relational-database-design",
-    "href": "projects/index.html#e-commerce-sql-relational-database-design-e-commerce-sql-relational-database-design",
-    "title": "Projects",
-    "section": "🛒 E-Commerce SQL & Relational Database Design {#E-Commerce SQL & Relational Database Design}",
-    "text": "🛒 E-Commerce SQL & Relational Database Design {#E-Commerce SQL & Relational Database Design}\nDesigned a relational data model and normalized schema for an online fashion retailer using Looker. We wrote SQL queries for churn prediction, marketing attribution, product return analysis, and inventory optimization.\nRead More →\n\n\n\nSQL E-commerce Project"
-  },
-  {
-    "objectID": "projects/index.html#repositioning-google-pixel-a-strategic-marketing-analysis-marketing-analysis---google-pixel",
-    "href": "projects/index.html#repositioning-google-pixel-a-strategic-marketing-analysis-marketing-analysis---google-pixel",
-    "title": "Projects",
-    "section": "📱 Repositioning Google Pixel — A Strategic Marketing Analysis {#Marketing Analysis - Google Pixel}",
-    "text": "📱 Repositioning Google Pixel — A Strategic Marketing Analysis {#Marketing Analysis - Google Pixel}\nA strategic marketing project focused on diagnosing Google Pixel’s weak market share despite strong AI and camera technology. We analyzed brand positioning, competitive threats, and proposed data-driven solutions to strengthen Pixel 9’s presence in the premium smartphone market.\nRead More →\n\n\n\nGoogle Pixel Project"
-  },
-  {
-    "objectID": "projects/index.html#predicting-anemia-with-machine-learning-predicting-anemia-ml-model",
-    "href": "projects/index.html#predicting-anemia-with-machine-learning-predicting-anemia-ml-model",
-    "title": "Projects",
-    "section": "🩺 Predicting Anemia with Machine Learning {#Predicting Anemia ML Model}",
-    "text": "🩺 Predicting Anemia with Machine Learning {#Predicting Anemia ML Model}\nThis project uses blood test data to train models (Decision Trees, Logistic Regression) for anemia prediction. After feature selection and applying SMOTE, we achieved up to 100% recall, aiding early medical detection.\nRead More →\n\n\n\nAnemia Prediction"
-  },
-  {
-    "objectID": "projects/index.html#obesity-risk-analysis-and-behavioral-clustering-obesity-risk-analysis",
-    "href": "projects/index.html#obesity-risk-analysis-and-behavioral-clustering-obesity-risk-analysis",
-    "title": "Projects",
-    "section": "⚖️ Obesity Risk Analysis and Behavioral Clustering {#Obesity Risk Analysis}",
-    "text": "⚖️ Obesity Risk Analysis and Behavioral Clustering {#Obesity Risk Analysis}\nAn in-depth analysis of obesity using classification, clustering, and ANOVA. We explored lifestyle and dietary variables to understand obesity risks and public health implications.\nRead More →\n\n\n\nObesity Risk Analysis"
+    "text": "##\n\n🤖 Financial Chatbot for Stock Market Insights\n\n###\n\nFinancial Chatbot\n\nBuilt an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.\nRead More →\n\n\n\nFinancial Chatbot\n\n\n\n##\n\n🚗 Uber Driver Prediction Dashboard\n\n###\n\nUber Dashboard\n\nDeveloped an interactive dashboard to predict Uber driver performance using machine learning models. It visualizes metrics such as driver ratings, trip durations, and customer feedback.\nRead More →\n\n\n\nUber Dashboard\n\n\n\n##\n\n🏡 Airbnb Sentiment Dashboard & Hosting Strategy\n\n###\n\nAirbnb App\n\nWe developed a review sentiment analysis app for Airbnb hosts using XGBoost and NLP. The project segments hosts based on pricing and review behavior, and provides strategic recommendations to increase guest satisfaction and optimize revenue.\nRead More →\n\n\n\nAirbnb Sentiment App\n\n\n\n##\n\n🛒 E-Commerce SQL & Relational Database Design\n\n###\n\nE-Commerce SQL\n\nDesigned a relational data model and normalized schema for an online fashion retailer using Looker. We wrote SQL queries for churn prediction, marketing attribution, product return analysis, and inventory optimization.\nRead More →\n\n\n\nSQL E-commerce Project\n\n\n\n##\n\n📱 Repositioning Google Pixel — A Strategic Marketing Analysis\n\n###\n\nGoogle Pixel\n\nA strategic marketing project focused on diagnosing Google Pixel’s weak market share despite strong AI and camera technology. We analyzed brand positioning, competitive threats, and proposed data-driven solutions to strengthen Pixel 9’s presence in the premium smartphone market.\nRead More →\n\n\n\nGoogle Pixel Project\n\n\n\n##\n\n🩺 Predicting Anemia with Machine Learning\n\n###\n\nAnemia ML\n\nThis project uses blood test data to train models (Decision Trees, Logistic Regression) for anemia prediction. After feature selection and applying SMOTE, we achieved up to 100% recall, aiding early medical detection.\nRead More →\n\n\n\nAnemia Prediction\n\n\n\n##\n\n⚖️ Obesity Risk Analysis and Behavioral Clustering\n\n###\n\nObesity Risk\n\nAn in-depth analysis of obesity using classification, clustering, and ANOVA. We explored lifestyle and dietary variables to understand obesity risks and public health implications.\nRead More →\n\n\n\nObesity Risk Analysis"
   },
   {
     "objectID": "index.html",
