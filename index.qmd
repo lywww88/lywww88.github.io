@@ -41,10 +41,10 @@ Developed an interactive dashboard to predict Uber driver performance using mach
 
 ---
 
+
 ## Let’s Connect
 
 <div class="connect-container">
-  <!-- 左侧三按钮 -->
   <div class="connect-left">
     <a href="https://www.linkedin.com/in/yiwei-lu78" class="btn" target="_blank">
       <i class="bi bi-linkedin"></i> LinkedIn
@@ -57,10 +57,8 @@ Developed an interactive dashboard to predict Uber driver performance using mach
     </a>
   </div>
 
-  <!-- 中间分隔线 -->
   <span class="connect-separator"></span>
 
-  <!-- 右侧 Resume 按钮 -->
   <div class="connect-right">
     <a href="resume.pdf" class="btn" download>
       <i class="bi bi-download"></i> Resume
