@@ -7,7 +7,7 @@ format:
 ---
 
 <!-- Profile Section -->
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 2em; max-width: 900px; margin: 2em auto; text-align: left;">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 2em; max-width: 900px; margin: 2em auto;">
 
   <!-- Avatar -->
   <img src="images/Headshot.jpg" alt="Yiwei Lu Headshot" style="width:150px; height:150px; border-radius:50%;"/>
