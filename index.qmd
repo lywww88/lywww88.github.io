@@ -94,8 +94,8 @@ Each project highlights creative problem-solving and technical implementation, w
 
 <!-- 右侧图片 -->
 <div style="flex: 0 0 420px;">
-  <img src="images/datathon.jpg"
-       alt="Uber Dashboard"
+  <img src="images/project.jpg"
+       alt="More Projects"
        style="width: 100%; height: 250px; border-radius: 0.5em;" />
 </div>
 :::
