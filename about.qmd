@@ -11,39 +11,64 @@ menu:
 Hello! I’m **Yiwei Lu**, a Business Analytics graduate from UC Irvine with a passion for turning data into actionable insights.
 
 - **Current Student Analyst** @ Johnson & Johnson  
-  • Building predictive models (Decision Tree, Random Forest, Logistic Regression)  
-  • Designing Tableau dashboards for sales forecasting, retention KPIs, and churn analysis  
 
-- **Former Business Analyst** @ CalHome Inc  
-  • Automated multi-platform product listings with Python & AWS S3  
-  • Analyzed Amazon/Walmart/Home Depot/Shopify sales & inventory to optimize procurement  
-  • Evaluated influencer marketing & offline campaigns, delivering data-driven recommendations  
+- **Former Business Analyst** @ CalHome Inc   
 
 ---
 
 ## Education
 
 - **M.S. in Business Analytics**, UC Irvine (June 2025)  
+https://www.cpp.edu/
 - **B.S. in Computer Information Systems**, Cal Poly Pomona (May 2021)  
+https://uci.edu/
 
 ---
 
 ## Technical Skills
 
-- **Languages & Tools:** Python, SQL, R, SPSS, Tableau, Google Analytics  
-- **Cloud & Database:** AWS, Azure, SQL/NoSQL  
-- **Data Management:** Excel, Access, Big Data Systems  
-- **Soft Skills:** Time Management, Independent Problem-Solving, Adaptability  
+- **Languages & Tools:**  
+  Proficient in Python (Pandas, NumPy, Scikit-learn), SQL (complex queries, joins, CTEs), R for statistical computing, and SPSS for data analysis. Experienced in Tableau for interactive dashboarding and Google Analytics for website traffic and campaign performance insights.
+
+- **Cloud Platforms & Databases:**  
+  Hands-on experience with cloud environments such as AWS (EC2, S3, Lambda) and Microsoft Azure. Comfortable working with both SQL and NoSQL databases, including MySQL, PostgreSQL, and MongoDB, for scalable data storage and retrieval.
+
+- **Data Management & Analysis:**  
+  Skilled in using Microsoft Excel (advanced formulas, pivot tables, VBA) and Microsoft Access for business reporting. Familiar with processing large datasets and integrating big data systems to extract trends and drive strategic decisions.
+
+- **Soft Skills & Collaboration:**  
+  Strong time management and organizational skills with a proven ability to work independently under tight deadlines. Highly adaptable, with a collaborative mindset and a solution-oriented approach to problem-solving across cross-functional teams.
+
+---
+
+## Languages Spoken
+
+- **Mandarin Chinese:** Native proficiency  
+- **English:** Professional working proficiency
 
 ---
 
 ## Mission
 
-> *To bridge the gap between raw data and strategic decision-making, empowering businesses to make smarter, faster, and more informed choices.*
+> *To bridge the gap between raw data and strategic decision-making, empowering businesses to make smarter, faster, and more informed choices.*  
+>  
+> I believe data is more than numbers — it’s a narrative waiting to be uncovered. My mission is to transform complex datasets into clear, actionable insights that drive meaningful business outcomes. Whether it’s forecasting trends, optimizing operations, or identifying growth opportunities, I aim to provide tools and analysis that turn uncertainty into confident decision-making.  
+>  
+> With every project, I strive to combine analytical precision with business intuition — ensuring that data not only informs but inspires.
 
 ---
 
-## Connect with Me
+## 🤝 Connect with Me
 
-- [LinkedIn](https://www.linkedin.com/in/yiwei-lu78)  
-- yiweil36@uci.edu 
+<div class="connect-container">
+  <a href="https://www.linkedin.com/in/yiwei-lu78" class="btn" target="_blank">
+    <i class="bi bi-linkedin"></i> LinkedIn
+  </a>
+  <a href="mailto:yiweilu36@uci.edu" class="btn">
+    <i class="bi bi-envelope"></i> Email Me
+  </a>
+</div>
+
+<p style="text-align: center; color: #888; font-size: 0.85em; margin-top: 3em;">
+  © 2025 Yiwei Lu. All rights reserved.
+</p>
