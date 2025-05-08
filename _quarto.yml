@@ -31,6 +31,9 @@ website:
       - icon: github
         href: https://github.com/lywww88
         aria-label: GitHub
+      - icon: database
+        href: https://www.kaggle.com/yiweilu  # 替换成你的 Kaggle 链接
+        aria-label: Kaggle
       - href: resume.pdf
         text: Resume
         icon: download
