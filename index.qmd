@@ -105,9 +105,9 @@ Discover data-driven projects in machine learning, dashboard design, and analyti
 </div>
 :::
 
----
-
-## Let’s Connect
+<p style="text-align: center; color: #aaa; font-size: 0.9em; margin-top: 2em;">
+  Let’s stay in touch — here’s where to find me online.
+</p>
 
 <div class="connect-container" style="display: flex; flex-wrap: wrap; gap: 1em; align-items: center;">
   <a href="https://www.linkedin.com/in/yiwei-lu78" class="btn" target="_blank">
