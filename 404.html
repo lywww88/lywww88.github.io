@@ -27,16 +27,34 @@
     .project-btn {
       background-color: #28a745;
     }
+
+    /* 🦖 动画样式 */
+    .dino {
+      display: inline-block;
+      animation: bounce 1s infinite ease-in-out;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
   </style>
 </head>
 <body>
-  <h1>🦖🦖🦖🦖🦖🦖🦖🦖 404 — Page Not Found 🦖🦖🦖🦖🦖🦖🦖🦖</h1>
-  <p>But hey, don't worry. You can still explore my site:</p>
+
+  <!-- ✅ 恐龙跳动 -->
+  <h1>
+    <span class="dino">🦖</span><span class="dino">🦖</span><span class="dino">🦖</span>
+    404 — Page Not Found
+    <span class="dino">🦖</span><span class="dino">🦖</span><span class="dino">🦖</span>
+  </h1>
+
+  <p>Follow the <span class="dino">🦖</span> dino squad — this way to safety ⚠️⬇️⚠️</p>
 
   <!-- Home Button -->
-  <a href="/" class="btn home-btn">Back to Home</a>
+  <a href="/" class="btn home-btn">🦖 Back to Home 🦖</a>
 
   <!-- Projects Button -->
-  <a href="/projects.html" class="btn project-btn">View Projects</a>
+  <a href="https://lywww88.github.io/projects/" class="btn project-btn">🦖 View Projects 🦖</a>
+
 </body>
 </html>
