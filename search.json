@@ -39,14 +39,28 @@
     "href": "projects/index.html",
     "title": "Projects",
     "section": "",
-    "text": "A strategic marketing project focused on diagnosing Google Pixel’s weak market share despite strong AI and camera technology. We analyzed brand positioning, competitive threats, and proposed data-driven solutions to strengthen Pixel 9’s presence in the premium smartphone market.\nRead More →\n\n\n\nGoogle Pixel Project"
+    "text": "We developed a review sentiment analysis app for Airbnb hosts using XGBoost and NLP. The project segments hosts based on pricing and review behavior, and provides strategic recommendations to increase guest satisfaction and optimize revenue.\nRead More →\n\n\n\nAirbnb Sentiment App"
+  },
+  {
+    "objectID": "projects/index.html#airbnb-sentiment-dashboard-hosting-strategy",
+    "href": "projects/index.html#airbnb-sentiment-dashboard-hosting-strategy",
+    "title": "Projects",
+    "section": "",
+    "text": "We developed a review sentiment analysis app for Airbnb hosts using XGBoost and NLP. The project segments hosts based on pricing and review behavior, and provides strategic recommendations to increase guest satisfaction and optimize revenue.\nRead More →\n\n\n\nAirbnb Sentiment App"
+  },
+  {
+    "objectID": "projects/index.html#e-commerce-sql-relational-database-design",
+    "href": "projects/index.html#e-commerce-sql-relational-database-design",
+    "title": "Projects",
+    "section": "🛒 E-Commerce SQL & Relational Database Design",
+    "text": "🛒 E-Commerce SQL & Relational Database Design\nDesigned a relational data model and normalized schema for an online fashion retailer using Looker. We wrote SQL queries for churn prediction, marketing attribution, product return analysis, and inventory optimization.\nRead More →\n\n\n\nSQL E-commerce Project"
   },
   {
     "objectID": "projects/index.html#repositioning-google-pixel-a-strategic-marketing-analysis",
     "href": "projects/index.html#repositioning-google-pixel-a-strategic-marketing-analysis",
     "title": "Projects",
-    "section": "",
-    "text": "A strategic marketing project focused on diagnosing Google Pixel’s weak market share despite strong AI and camera technology. We analyzed brand positioning, competitive threats, and proposed data-driven solutions to strengthen Pixel 9’s presence in the premium smartphone market.\nRead More →\n\n\n\nGoogle Pixel Project"
+    "section": "📱 Repositioning Google Pixel — A Strategic Marketing Analysis",
+    "text": "📱 Repositioning Google Pixel — A Strategic Marketing Analysis\nA strategic marketing project focused on diagnosing Google Pixel’s weak market share despite strong AI and camera technology. We analyzed brand positioning, competitive threats, and proposed data-driven solutions to strengthen Pixel 9’s presence in the premium smartphone market.\nRead More →\n\n\n\nGoogle Pixel Project"
   },
   {
     "objectID": "projects/index.html#predicting-anemia-with-machine-learning",
@@ -63,11 +77,11 @@
     "text": "⚖️ Obesity Risk Analysis and Behavioral Clustering\nAn in-depth analysis of obesity using classification, clustering, and ANOVA. We explored lifestyle and dietary variables to understand obesity risks and public health implications.\nRead More →\n\n\n\nObesity Risk Analysis"
   },
   {
-    "objectID": "projects/index.html#project-a",
-    "href": "projects/index.html#project-a",
-    "title": "Projects",
-    "section": "📊 Project A",
-    "text": "📊 Project A\nExample placeholder project.\nRead More →\n\n\n\nProject A"
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Portfolio of Yiwei Lu",
+    "section": "",
+    "text": "Hello! I’m &lt;strong&gt;Yiwei Lu&lt;/strong&gt;, a Master’s candidate in Business Analytics at &lt;strong&gt;UC Irvine&lt;/strong&gt;.\nI’m passionate about transforming complex datasets into clear, actionable insights that empower organizations to make smarter decisions.\nOutside of work, you’ll find me exploring new machine learning techniques, crafting interactive dashboards,\nsnowboarding down the slopes, or enjoying a scenic bike ride through Southern California."
   },
   {
     "objectID": "index.html#featured-projects",
@@ -81,6 +95,6 @@
     "href": "index.html#lets-connect",
     "title": "Portfolio of Yiwei Lu",
     "section": "Let’s Connect",
-    "text": "Let’s Connect\n\n  LinkedIn \n  GitHub \n  Resume"
+    "text": "Let’s Connect\n\n   LinkedIn \n   GitHub \n\n\n\n\n   Resume"
   }
 ]
