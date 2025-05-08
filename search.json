@@ -81,14 +81,14 @@
     "href": "index.html",
     "title": "Portfolio of Yiwei Lu",
     "section": "",
-    "text": "Hello! I’m &lt;strong&gt;Yiwei Lu&lt;/strong&gt;, a Master’s candidate in Business Analytics at &lt;strong&gt;UC Irvine&lt;/strong&gt;.\nI’m passionate about transforming complex datasets into clear, actionable insights that empower organizations to make smarter decisions.\nOutside of work, you’ll find me exploring new machine learning techniques, crafting interactive dashboards,\nsnowboarding down the slopes, or enjoying a scenic bike ride through Southern California."
+    "text": "Hello! I’m Yiwei Lu, a Master’s candidate in Business Analytics at UC Irvine.\nI’m passionate about transforming complex datasets into clear, actionable insights that empower organizations to make smarter decisions.\nOutside of work, you’ll find me exploring new machine learning techniques, crafting interactive dashboards,\nsnowboarding down the slopes, or enjoying a scenic bike ride through Southern California."
   },
   {
     "objectID": "index.html#featured-projects",
     "href": "index.html#featured-projects",
     "title": "Portfolio of Yiwei Lu",
     "section": "Featured Projects",
-    "text": "Featured Projects\n\nCustomer Churn Prediction\nBuilt a machine learning model using Random Forest to predict customer churn with 92% accuracy.\nView Project\n\n\nSmartTripBot Travel Assistant\nDeveloped a chatbot that plans spontaneous trips based on live data and personal preferences.\nView Project"
+    "text": "Featured Projects\n\nFinancial Chatbot for Stock Market Insights\nBuilt an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.\nClick here to view →\n\n\nUber Driver Prediction Dashboard\nDeveloped an interactive dashboard to predict Uber driver performance using machine learning models. It visualizes metrics such as driver ratings, trip durations, and customer feedback.\nClick here to view →"
   },
   {
     "objectID": "index.html#lets-connect",
