@@ -38,8 +38,7 @@ website:
 
 format:
   html:
-    theme:
-      - cosmo
+    theme: cosmo
     toc: true
     allow-raw-html: true
     css: styles.css
