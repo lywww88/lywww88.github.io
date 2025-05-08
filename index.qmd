@@ -44,24 +44,26 @@ Developed an interactive dashboard to predict Uber driver performance using mach
 ## Let’s Connect
 
 <div class="connect-container">
+  <!-- 左侧三按钮 -->
+  <div class="connect-left">
+    <a href="https://www.linkedin.com/in/yiwei-lu78" class="btn" target="_blank">
+      <i class="bi bi-linkedin"></i> LinkedIn
+    </a>
+    <a href="https://github.com/lywww88" class="btn" target="_blank">
+      <i class="bi bi-github"></i> GitHub
+    </a>
+    <a href="mailto:yiweilu36@uci.edu" class="btn">
+      <i class="bi bi-envelope"></i> Email Me
+    </a>
+  </div>
 
-  <!-- 左侧：LinkedIn + GitHub + Email -->
-  <a href="https://www.linkedin.com/in/yiwei-lu78" class="btn" target="_blank">
-    <i class="bi bi-linkedin"></i> LinkedIn
-  </a>
-  <a href="https://github.com/lywww88" class="btn" target="_blank">
-    <i class="bi bi-github"></i> GitHub
-  </a>
-  <a href="mailto:yiweilu36@uci.edu" class="btn">
-    <i class="bi bi-envelope"></i> Email Me
-  </a>
-
-  <!-- 中间的分隔竖线 -->
+  <!-- 中间分隔线 -->
   <span class="connect-separator"></span>
 
-  <!-- 右侧：Resume -->
-  <a href="resume.pdf" class="btn" download>
-    <i class="bi bi-download"></i> Resume
-  </a>
-
+  <!-- 右侧 Resume 按钮 -->
+  <div class="connect-right">
+    <a href="resume.pdf" class="btn" download>
+      <i class="bi bi-download"></i> Resume
+    </a>
+  </div>
 </div>
