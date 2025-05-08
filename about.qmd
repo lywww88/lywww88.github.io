@@ -41,7 +41,7 @@ https://uci.edu/
 
 ---
 
-## Languages Spoken
+## Languages
 
 - **Mandarin Chinese:** Native proficiency  
 - **English:** Professional working proficiency
@@ -58,7 +58,7 @@ https://uci.edu/
 
 ---
 
-## 🤝 Connect with Me
+## Connect with Me
 
 <div class="connect-container">
   <a href="https://www.linkedin.com/in/yiwei-lu78" class="btn" target="_blank">
