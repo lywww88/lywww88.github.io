@@ -4,7 +4,7 @@ project:
 website:
   title: "Portfolio - Yiwei Lu"
   navbar:
-    logo: images/logo.png
+    logo: images/logo1.png
     left:
       - href: index.qmd
         text: Home
