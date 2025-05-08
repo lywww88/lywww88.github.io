@@ -18,6 +18,7 @@
 
 .navbar-brand img {
   height: 200px !important;                    /* logo 尺寸 */
+  background-color: red !important;
   width: auto !important;
   object-fit: contain;
   padding: 0 !important;
