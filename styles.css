@@ -70,3 +70,15 @@
   gap: 0.5em;
   align-items: center;
 }
+
+.navbar {
+  min-height: 140px !important;  /* 强制 navbar 整体高度增加 */
+  align-items: center !important; /* 确保垂直居中 logo */
+}
+
+.navbar-brand {
+  display: flex !important;
+  align-items: center !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
