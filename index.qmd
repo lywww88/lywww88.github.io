@@ -104,25 +104,21 @@ Each project highlights creative problem-solving and technical implementation, w
 
 ## Let’s Connect
 
-<div class="connect-container">
+<div class="connect-container" style="display: flex; flex-wrap: wrap; gap: 1em; justify-content: center; align-items: center;">
   <a href="https://www.linkedin.com/in/yiwei-lu78" class="btn" target="_blank">
     <i class="bi bi-linkedin"></i> LinkedIn
   </a>
   <a href="https://github.com/lywww88" class="btn" target="_blank">
     <i class="bi bi-github"></i> GitHub
   </a>
-
-  <span class="connect-separator"></span>
-
+  <span style="color: #ccc;">|</span>
   <a href="mailto:yiweilu36@uci.edu" class="btn">
     <i class="bi bi-envelope"></i> Email Me
   </a>
   <a href="https://lywww88.github.io/about.html" class="btn" target="_blank">
     <i class="bi bi-person-circle"></i> About
   </a>
-
-  <span class="connect-separator"></span>
-
+  <span style="color: #ccc;">|</span>
   <a href="resume.pdf" class="btn" download>
     <i class="bi bi-download"></i> Resume
   </a>
