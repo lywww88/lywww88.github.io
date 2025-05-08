@@ -18,8 +18,9 @@ website:
         menu:
           - href: projects/FoodAI.qmd
             text: FoodAI
-          - href: projects/Platemate.qmd
+          - href: https://www.instagram.com/platemateofficial/profilecard
             text: Platemate
+            target: _blank
       - href: about.qmd
         text: About
     right:
