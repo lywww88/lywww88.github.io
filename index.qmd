@@ -65,14 +65,17 @@ It visualizes metrics such as driver ratings, trip durations, and customer feedb
 </div>
 </div>
 
-<!-- 右侧图片 + 文章按钮 -->
-<div style="flex: 0 0 300px; display: flex; flex-direction: column; align-items: center;">
+<!-- 右侧图片 + 按钮 -->
+<div style="flex: 0 0 280px; text-align: center;">
   <img src="images/datathon.jpg"
        alt="Uber Dashboard"
        style="width: 100%; border-radius: 0.5em;" />
-  <div style="margin-top: 1em;">
-    <a href="https://devpost.com/software/uber-driver-conversion-analysis" class="btn" target="_blank">Open Article →</a>
-  </div>
+  <a href="https://devpost.com/software/uber-driver-conversion-analysis"
+     class="btn"
+     target="_blank"
+     style="margin-top: 1em; display: inline-block;">
+    Open Article →
+  </a>
 </div>
 
 </div>
