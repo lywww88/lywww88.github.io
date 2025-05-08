@@ -49,7 +49,7 @@ Designed a relational data model and normalized schema for an online fashion ret
 A strategic marketing project focused on diagnosing Google Pixel's weak market share despite strong AI and camera technology. We analyzed brand positioning, competitive threats, and proposed data-driven solutions to strengthen Pixel 9’s presence in the premium smartphone market.  
 [Read More →](project-pixel/)
 
-![Google Pixel Project](images/pixel-cover.jpg){width=600px}
+![Google Pixel Project](../images/pixel-cover.png){width=600px}
 
 ---
 
