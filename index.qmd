@@ -43,26 +43,25 @@ Developed an interactive dashboard to predict Uber driver performance using mach
 
 ## Let’s Connect
 
-<table style="width:100%;max-width:600px;margin:1.5em auto;border-collapse:collapse;">
-  <tr>
-    <!-- 左侧：LinkedIn + GitHub + Email -->
-    <td style="text-align:left;padding:0;">
-      <a href="https://www.linkedin.com/in/yiwei-lu78" class="btn" target="_blank">
-        <i class="bi bi-linkedin"></i> LinkedIn
-      </a>
-      <a href="https://github.com/lywww88" class="btn" target="_blank">
-        <i class="bi bi-github"></i> GitHub
-      </a>
-      <a href="mailto:yiweilu36@uci.edu" class="btn" target="_blank">
-        <i class="bi bi-envelope"></i> Email Me
-      </a>
-    </td>
+<div class="connect-container">
 
-    <!-- 右侧：Resume -->
-    <td style="text-align:right;padding:0;border-left:1px solid #ccc;">
-      <a href="resume.pdf" class="btn" target="_blank">
-        <i class="bi bi-download"></i> Resume
-      </a>
-    </td>
-  </tr>
-</table>
+  <!-- 左侧：LinkedIn + GitHub + Email -->
+  <a href="https://www.linkedin.com/in/yiwei-lu78" class="btn" target="_blank">
+    <i class="bi bi-linkedin"></i> LinkedIn
+  </a>
+  <a href="https://github.com/lywww88" class="btn" target="_blank">
+    <i class="bi bi-github"></i> GitHub
+  </a>
+  <a href="mailto:yiweilu36@uci.edu" class="btn">
+    <i class="bi bi-envelope"></i> Email Me
+  </a>
+
+  <!-- 中间的分隔竖线 -->
+  <span class="connect-separator"></span>
+
+  <!-- 右侧：Resume -->
+  <a href="resume.pdf" class="btn" download>
+    <i class="bi bi-download"></i> Resume
+  </a>
+
+</div>
