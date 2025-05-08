@@ -29,8 +29,8 @@ Outside of work, you’ll find me exploring new machine learning techniques, cra
 
 ::: { .project-card style="display: flex; flex-wrap: wrap; gap: 1.5em; align-items: flex-start;" markdown="1" }
 
-<!-- 左侧文字（支持 **加粗**、[链接](…) 等 Markdown） -->
-<div style="flex: 1;">
+<!-- 左侧文字 -->
+<div style="flex: 1;" markdown="1">
 **Financial Chatbot for Stock Market Insights**
 
 Built an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.
@@ -40,11 +40,11 @@ Built an AI chatbot that delivers real-time stock analysis by integrating LLMs w
 </div>
 </div>
 
-<!-- 右侧图片（纯 HTML） -->
-<div style="flex: 0 0 180px;">
+<!-- 右侧图片 -->
+<div style="flex: 0 0 250px;">
   <img src="images/financial-chatbot.png"
        alt="Chatbot Image"
-       style="width: 100%; border-radius: 0.5em;" />
+       style="width: 100%; height: auto; border-radius: 0.5em;" />
 </div>
 
 :::
