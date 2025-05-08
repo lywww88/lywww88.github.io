@@ -17,7 +17,7 @@
 }
 
 .navbar-brand img {
-  height: 80px !important;                    /* logo 尺寸 */
+  height: 60px !important;                    /* logo 尺寸 */
   max-height: unset !important;                /* 取消 Bootstrap 限制 */
   width: auto !important;
   object-fit: contain;
