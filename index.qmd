@@ -107,7 +107,6 @@ Discover data-driven projects in machine learning, dashboard design, and analyti
 ## Let’s Connect
 
 <div style="max-width: 800px; margin: 0 auto; padding: 0 1.5rem;">
-  <h2>Let’s Connect</h2>
   <div class="connect-container" style="display: flex; flex-wrap: wrap; gap: 1em; justify-content: flex-start; align-items: center;">
     <a href="https://www.linkedin.com/in/yiwei-lu78" class="btn" target="_blank">
       <i class="bi bi-linkedin"></i> LinkedIn
@@ -125,6 +124,7 @@ Discover data-driven projects in machine learning, dashboard design, and analyti
     <a href="https://lywww88.github.io/about.html" class="btn" target="_blank">
       <i class="bi bi-person-circle"></i> About Me
     </a>
+    <span style="color: #ccc;">|</span>
     <a href="resume.pdf" class="btn" download>
       <i class="bi bi-file-earmark-arrow-down"></i> Resume
     </a>
