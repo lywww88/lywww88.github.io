@@ -2,37 +2,37 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "About Me",
     "section": "",
-    "text": "Hello! I’m Yiwei Lu, a Business Analytics graduate from UC Irvine with a passion for turning data into actionable insights.\n\n💼 Current Student Analyst @ Johnson & Johnson\n• Building predictive models (Decision Tree, Random Forest, Logistic Regression)\n• Designing Tableau dashboards for sales forecasting, retention KPIs, and churn analysis\n📊 Former Business Analyst @ CalHome Inc\n• Automated multi-platform product listings with Python & AWS S3\n• Analyzed Amazon/Walmart/Home Depot/Shopify sales & inventory to optimize procurement\n• Evaluated influencer marketing & offline campaigns, delivering data-driven recommendations\n\n\n\n\n\nM.S. in Business Analytics, UC Irvine (June 2025)\n\nB.S. in Computer Information Systems, Cal Poly Pomona (May 2021)\n\n\n\n\n\n\nLanguages & Tools: Python, SQL, R, SPSS, Tableau, Google Analytics\n\nCloud & Database: AWS, Azure, SQL/NoSQL\n\nData Management: Excel, Access, Big Data Systems\n\nSoft Skills: Time Management, Independent Problem-Solving, Adaptability\n\n\n\n\n\n\nTo bridge the gap between raw data and strategic decision-making, empowering businesses to make smarter, faster, and more informed choices.\n\n\n\n\n\n\nLinkedIn\n\n📧 yiweil36@uci.edu"
+    "text": "Hello! I’m Yiwei Lu, a Business Analytics graduate from UC Irvine with a passion for turning data into actionable insights.\n\nCurrent Student Analyst @ Johnson & Johnson\n• Building predictive models (Decision Tree, Random Forest, Logistic Regression)\n• Designing Tableau dashboards for sales forecasting, retention KPIs, and churn analysis\nFormer Business Analyst @ CalHome Inc\n• Automated multi-platform product listings with Python & AWS S3\n• Analyzed Amazon/Walmart/Home Depot/Shopify sales & inventory to optimize procurement\n• Evaluated influencer marketing & offline campaigns, delivering data-driven recommendations\n\n\n\n\n\nM.S. in Business Analytics, UC Irvine (June 2025)\n\nB.S. in Computer Information Systems, Cal Poly Pomona (May 2021)\n\n\n\n\n\n\nLanguages & Tools: Python, SQL, R, SPSS, Tableau, Google Analytics\n\nCloud & Database: AWS, Azure, SQL/NoSQL\n\nData Management: Excel, Access, Big Data Systems\n\nSoft Skills: Time Management, Independent Problem-Solving, Adaptability\n\n\n\n\n\n\nTo bridge the gap between raw data and strategic decision-making, empowering businesses to make smarter, faster, and more informed choices.\n\n\n\n\n\n\nLinkedIn\n\nyiweil36@uci.edu"
   },
   {
     "objectID": "about.html#education",
     "href": "about.html#education",
-    "title": "About",
+    "title": "About Me",
     "section": "",
     "text": "M.S. in Business Analytics, UC Irvine (June 2025)\n\nB.S. in Computer Information Systems, Cal Poly Pomona (May 2021)"
   },
   {
     "objectID": "about.html#technical-skills",
     "href": "about.html#technical-skills",
-    "title": "About",
+    "title": "About Me",
     "section": "",
     "text": "Languages & Tools: Python, SQL, R, SPSS, Tableau, Google Analytics\n\nCloud & Database: AWS, Azure, SQL/NoSQL\n\nData Management: Excel, Access, Big Data Systems\n\nSoft Skills: Time Management, Independent Problem-Solving, Adaptability"
   },
   {
     "objectID": "about.html#mission",
     "href": "about.html#mission",
-    "title": "About",
+    "title": "About Me",
     "section": "",
     "text": "To bridge the gap between raw data and strategic decision-making, empowering businesses to make smarter, faster, and more informed choices."
   },
   {
     "objectID": "about.html#connect-with-me",
     "href": "about.html#connect-with-me",
-    "title": "About",
+    "title": "About Me",
     "section": "",
-    "text": "LinkedIn\n\n📧 yiweil36@uci.edu"
+    "text": "LinkedIn\n\nyiweil36@uci.edu"
   },
   {
     "objectID": "projects/index.html",
@@ -109,6 +109,6 @@
     "href": "index.html#lets-connect",
     "title": "Portfolio of Yiwei Lu",
     "section": "Let’s Connect",
-    "text": "Let’s Connect\n\n\n\n\n&lt;a href=\"https://www.linkedin.com/in/yiwei-lu78\" class=\"btn\" target=\"_blank\"&gt;\n  &lt;i class=\"bi bi-linkedin\"&gt;&lt;/i&gt; LinkedIn\n&lt;/a&gt;\n&lt;a href=\"https://github.com/lywww88\" class=\"btn\" target=\"_blank\"&gt;\n  &lt;i class=\"bi bi-github\"&gt;&lt;/i&gt; GitHub\n&lt;/a&gt;\n\n\n\n&lt;a href=\"resume.pdf\" class=\"btn\" target=\"_blank\"&gt;\n  &lt;i class=\"bi bi-download\"&gt;&lt;/i&gt; Resume\n&lt;/a&gt;"
+    "text": "Let’s Connect\n\n\n\nLinkedIn GitHub\n\nclass: text-right Resume"
   }
 ]
