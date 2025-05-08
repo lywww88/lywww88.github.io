@@ -4,7 +4,7 @@ project:
 website:
   title: "Portfolio - Yiwei Lu"
   navbar:
-    logo: images/logo.png      # 左上角 logo 地址
+    logo: images/logo.png
     left:
       - href: index.qmd
         text: Home
@@ -16,9 +16,8 @@ website:
             text: School Projects
           - href: projects/index.qmd
             text: Capstone Project
-      - text: Startup
-          - href: projects/Startup.qmd
-            text: Startup
+      - href: projects/Startup.qmd
+        text: Startup
     right:
       - icon: github
         href: https://github.com/lywww88
@@ -33,6 +32,6 @@ format:
     theme:
       - cosmo
     toc: true
-    allow-raw-html: true     # 支持原生 <table>、<div> 等 HTML
+    allow-raw-html: true
     css:
-      - styles.css           # 自定义样式文件
+      - styles.css
