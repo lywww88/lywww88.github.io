@@ -109,7 +109,7 @@
     "href": "index.html#featured-projects",
     "title": "Portfolio - Yiwei Lu",
     "section": "Featured Projects",
-    "text": "Featured Projects\n\n\n\n\nFinancial Chatbot for Stock Market Insights\nBuilt an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.\n\n[Click here to view →](https://medium.com/@dylankl_74733/revolutionizing-stock-market-insights-the-financial-chatbot-that-empowers-investors-d1d8197e6c13){.btn}\n\n\n\n\n&lt;img src=\"images/financial-chatbot.png\" alt=\"Chatbot Image\" style=\"width: 100%; border-radius: 0.5em;\" /&gt;\n\n\n\n\nUber Driver Prediction Dashboard\nDeveloped an interactive dashboard to predict Uber driver performance using machine learning models. It visualizes metrics such as driver ratings, trip durations, and customer feedback.\n\nClick here to view →"
+    "text": "Featured Projects\n\n\n\n\nFinancial Chatbot for Stock Market Insights\nBuilt an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.\n\nClick here to view →\n\n\n\n\n&lt;img src=\"images/financial-chatbot.png\"\n     alt=\"Chatbot Image\"\n     style=\"width: 100%; border-radius: 0.5em;\" /&gt;\n\n\n\n\nUber Driver Prediction Dashboard\nDeveloped an interactive dashboard to predict Uber driver performance using machine learning models. It visualizes metrics such as driver ratings, trip durations, and customer feedback.\n\nClick here to view →"
   },
   {
     "objectID": "index.html#lets-connect",
