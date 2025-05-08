@@ -3,7 +3,7 @@ title: Projects
 page-layout: full
 ---
 
-## 🤖 Financial Chatbot for Stock Market Insights  
+## 🤖 Financial Chatbot for Stock Market Insights {#Financial Chatbot}
 Built an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.  
 [Read More →](https://medium.com/@dylankl_74733/revolutionizing-stock-market-insights-the-financial-chatbot-that-empowers-investors-d1d8197e6c13)
 
@@ -11,7 +11,7 @@ Built an AI chatbot that delivers real-time stock analysis by integrating LLMs w
 
 ---
 
-## 🚗 Uber Driver Prediction Dashboard  
+## 🚗 Uber Driver Prediction Dashboard {#Uber Prediction Dashboard}
 Developed an interactive dashboard to predict Uber driver performance using machine learning models. It visualizes metrics such as driver ratings, trip durations, and customer feedback.  
 [Read More →](https://syntax3rr0r1.netlify.app/)
 
@@ -19,7 +19,7 @@ Developed an interactive dashboard to predict Uber driver performance using mach
 
 ---
 
-## 🏡 Airbnb Sentiment Dashboard & Hosting Strategy  
+## 🏡 Airbnb Sentiment Dashboard & Hosting Strategy  {#Airbnb App}
 We developed a review sentiment analysis app for Airbnb hosts using XGBoost and NLP. The project segments hosts based on pricing and review behavior, and provides strategic recommendations to increase guest satisfaction and optimize revenue.  
 [Read More →](project-airbnb/)
 
@@ -27,7 +27,7 @@ We developed a review sentiment analysis app for Airbnb hosts using XGBoost and 
 
 ---
 
-## 🛒 E-Commerce SQL & Relational Database Design  
+## 🛒 E-Commerce SQL & Relational Database Design  {#E-Commerce SQL & Relational Database Design}
 Designed a relational data model and normalized schema for an online fashion retailer using Looker. We wrote SQL queries for churn prediction, marketing attribution, product return analysis, and inventory optimization.  
 [Read More →](project-looker/)
 
@@ -35,7 +35,7 @@ Designed a relational data model and normalized schema for an online fashion ret
 
 ---
 
-## 📱 Repositioning Google Pixel — A Strategic Marketing Analysis  
+## 📱 Repositioning Google Pixel — A Strategic Marketing Analysis  {#Marketing Analysis - Google Pixel}
 A strategic marketing project focused on diagnosing Google Pixel's weak market share despite strong AI and camera technology. We analyzed brand positioning, competitive threats, and proposed data-driven solutions to strengthen Pixel 9’s presence in the premium smartphone market.  
 [Read More →](project-pixel/)
 
@@ -43,7 +43,7 @@ A strategic marketing project focused on diagnosing Google Pixel's weak market s
 
 ---
 
-## 🩺 Predicting Anemia with Machine Learning  
+## 🩺 Predicting Anemia with Machine Learning  {#Predicting Anemia ML Model}
 This project uses blood test data to train models (Decision Trees, Logistic Regression) for anemia prediction. After feature selection and applying SMOTE, we achieved up to 100% recall, aiding early medical detection.  
 [Read More →](project-anemia/)
 
@@ -51,7 +51,7 @@ This project uses blood test data to train models (Decision Trees, Logistic Regr
 
 ---
 
-## ⚖️ Obesity Risk Analysis and Behavioral Clustering  
+## ⚖️ Obesity Risk Analysis and Behavioral Clustering  {#Obesity Risk Analysis}
 An in-depth analysis of obesity using classification, clustering, and ANOVA. We explored lifestyle and dietary variables to understand obesity risks and public health implications.  
 [Read More →](project-obesity/)
 
