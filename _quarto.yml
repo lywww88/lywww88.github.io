@@ -8,8 +8,6 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: about.qmd
-        text: About
       - text: Projects
         menu:
           - href: projects/index.qmd
@@ -22,6 +20,8 @@ website:
             text: FoodAI
           - href: projects/Platemate.qmd
             text: Platemate
+      - href: about.qmd
+        text: About
     right:
       - icon: linkedin
         href: https://www.linkedin.com/in/yiwei-lu78
