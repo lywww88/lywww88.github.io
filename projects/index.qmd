@@ -59,7 +59,7 @@ A strategic marketing project focused on diagnosing Google Pixel's weak market s
 This project uses blood test data to train models (Decision Trees, Logistic Regression) for anemia prediction. After feature selection and applying SMOTE, we achieved up to 100% recall, aiding early medical detection.  
 [Read More →](project-anemia/)
 
-![Anemia Prediction](../images/anemia-cover.png){width=600px}
+![Anemia Prediction](../images/anemia-cover.jpg){width=600px}
 
 ---
 
