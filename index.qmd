@@ -41,7 +41,6 @@ Developed an interactive dashboard to predict Uber driver performance using mach
 
 ---
 
-
 ## Let’s Connect
 
 <div class="connect-container">
@@ -60,7 +59,7 @@ Developed an interactive dashboard to predict Uber driver performance using mach
   <span class="connect-separator"></span>
 
   <div class="connect-right">
-    <a href="resume.pdf" class="btn" download>
+    <a href="resume.pdf" class="btn" target="_blank">
       <i class="bi bi-download"></i> Resume
     </a>
   </div>
