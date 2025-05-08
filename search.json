@@ -109,6 +109,6 @@
     "href": "index.html#lets-connect",
     "title": "Portfolio of Yiwei Lu",
     "section": "Let’s Connect",
-    "text": "Let’s Connect\n\n\n\nLinkedIn GitHub\n\nclass: text-right Resume"
+    "text": "Let’s Connect\n\n\n\nLinkedIn GitHub\n::: column {.text-right} Resume\n\n:::"
   }
 ]

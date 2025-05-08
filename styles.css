@@ -1,7 +1,19 @@
 /* === NAVBAR LOGO SIZE === */
 .navbar-brand img {
-  height: 50px;  /* 调整 logo 高度 */
+  height: 80px;  /* 调整 logo 高度 */
   width: auto;
+}
+
+/* === RESPONSIVE NAVBAR LEFT-ALIGN === */
+/* 覆盖默认的 space-between，使 logo 与菜单都靠左 */
+.navbar {
+  justify-content: flex-start !important;
+}
+
+/* 调整菜单（nav links）与 logo 之间的间距 */
+.navbar-nav {
+  margin-left: 1rem !important;   /* 根据需要调节左侧空隙 */
+  margin-right: 0 !important;     /* 确保右侧无多余空隙 */
 }
 
 /* === CUSTOM BUTTON STYLES === */
@@ -43,7 +55,7 @@ h1, h2, h3, h4 {
   font-weight: 600;
 }
 
-/* === PROJECT CARD STYLE EXAMPLE (可选) === */
+/* === PROJECT CARD STYLE === */
 .project-card {
   border: 1px solid #e0e0e0;
   border-radius: 0.5em;
@@ -54,10 +66,4 @@ h1, h2, h3, h4 {
 
 .project-card:hover {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-/* === RESPONSIVE NAVBAR CENTERING === */
-.navbar-nav {
-  margin-left: auto;
-  margin-right: auto;
 }
