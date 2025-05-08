@@ -1,6 +1,10 @@
 /* === NAVBAR LOGO SIZE === */
 .navbar-brand img {
   height: 120px !important;
+  width: auto !important;
+  object-fit: contain;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 /* NAVBAR 左对齐（覆盖默认布局） */
