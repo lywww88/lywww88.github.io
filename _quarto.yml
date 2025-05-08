@@ -11,9 +11,9 @@ website:
       - text: '<span class="nav-text">Projects</span>'
         menu:
           - href: projects/index.qmd
-            text: '<span class="nav-text">School Projects</span>'
+            text: '<span class="nav-text">Projects</span>'
           - href: projects/index.qmd
-            text: '<span class="nav-text">Capstone Project</span>'
+            text: '<span class="nav-text">Capstone</span>'
       - text: '<span class="nav-text">Startup</span>'
         menu:
           - href: https://forecastai-poc.netlify.app/
