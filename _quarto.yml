@@ -23,9 +23,8 @@ website:
 
       - href: resume.pdf
         text: Resume
-        aria-label: Download Resume
-        attributes:
-          download: ""
+        icon: download
+        target: _blank
 
 format:
   html:
