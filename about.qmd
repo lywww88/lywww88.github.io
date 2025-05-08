@@ -20,22 +20,9 @@ Hello! I’m **Yiwei Lu**, a Business Analytics graduate from UC Irvine with a p
 
 ## Education
 
-::: {.education-block}
+- **M.S. in Business Analytics**, [University of California, Irvine](https://uci.edu/) *(Expected June 2025)*  
 
-<ul style="line-height: 1.8; padding-left: 1.4em; font-size: 1rem; margin-top: 1em;">
-  <li>
-    <strong>M.S. in Business Analytics</strong>, 
-    <a href="https://uci.edu/" target="_blank">University of California, Irvine</a>  
-    <em>(Expected June 2025)</em>
-  </li>
-  <li>
-    <strong>B.S. in Computer Information Systems</strong>, 
-    <a href="https://www.cpp.edu/" target="_blank">California State Polytechnic University, Pomona</a>  
-    <em>(May 2021)</em>
-  </li>
-</ul>
-
-:::
+- **B.S. in Computer Information Systems**, [California State Polytechnic University, Pomona](https://www.cpp.edu/) *(May 2021)*
 
 ---
 
