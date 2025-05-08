@@ -17,8 +17,7 @@ format:
 
 Hello! I’m **Yiwei Lu**, a Master’s candidate in Business Analytics at **UC Irvine**.  
 I’m passionate about transforming complex datasets into clear, actionable insights that empower organizations to make smarter decisions.  
-Outside of work, you’ll find me exploring new machine learning techniques, crafting interactive dashboards,  
-snowboarding down the slopes, or enjoying a scenic bike ride through Southern California.
+Outside of work, you’ll find me exploring new machine learning techniques, crafting interactive dashboards, snowboarding down the slopes, or enjoying a scenic bike ride through Southern California.
 
   </div>
 
@@ -44,11 +43,12 @@ Developed an interactive dashboard to predict Uber driver performance using mach
 
 ## Let’s Connect
 
+```{=html}
 <hr style="border: none; border-top: 1px solid #ccc; margin: 1em auto; max-width: 600px;">
 
 <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; max-width: 600px; margin: 1.5em auto;">
 
-  <!-- Left side: LinkedIn + GitHub -->
+  <!-- 左侧：LinkedIn + GitHub -->
   <div style="display: flex; gap: 1em;">
     <a href="https://www.linkedin.com/in/yiwei-lu78" class="btn" target="_blank">
       <i class="bi bi-linkedin"></i> LinkedIn
@@ -58,7 +58,7 @@ Developed an interactive dashboard to predict Uber driver performance using mach
     </a>
   </div>
 
-  <!-- Right side: Resume -->
+  <!-- 右侧：Resume -->
   <div>
     <a href="resume.pdf" class="btn" target="_blank">
       <i class="bi bi-download"></i> Resume
