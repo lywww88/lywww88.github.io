@@ -1,6 +1,6 @@
 /* === NAVBAR LOGO SIZE === */
 .navbar-brand img {
-  height: 120px !important;
+  height: 200px !important;
   width: auto !important;
   object-fit: contain;
   padding: 0 !important;
@@ -72,7 +72,7 @@
 }
 
 .navbar {
-  min-height: 140px !important;  /* 强制 navbar 整体高度增加 */
+  min-height: 80px !important;  /* 强制 navbar 整体高度增加 */
   align-items: center !important; /* 确保垂直居中 logo */
 }
 
