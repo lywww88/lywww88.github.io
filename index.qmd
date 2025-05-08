@@ -70,7 +70,7 @@ It visualizes metrics such as driver ratings, trip durations, and customer feedb
 <div style="flex: 0 0 420px;">
   <img src="images/datathon.jpg"
        alt="Uber Dashboard"
-       style="width: 100%; height: 350px; border-radius: 0.5em;" />
+       style="width: 100%; height: 300px; border-radius: 0.5em;" />
 </div>
 
 </div>
