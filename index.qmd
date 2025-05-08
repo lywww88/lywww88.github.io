@@ -28,27 +28,27 @@ Outside of work, you’ll find me exploring new machine learning techniques, cra
 ## Featured Projects
 
 ::: {.project-card}
-
 <div style="display: flex; flex-wrap: wrap; gap: 1.5em; align-items: flex-start;" markdown="1">
 
-  <!-- 左边文字 -->
+  <!-- 左侧文字内容 -->
   <div style="flex: 1;" markdown="1">
-  **Financial Chatbot for Stock Market Insights**
+**Financial Chatbot for Stock Market Insights**
 
-  Built an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.
+Built an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.
 
-  <div style="margin-top: 1em;">
-    [Click here to view →](https://medium.com/@dylankl_74733/revolutionizing-stock-market-insights-the-financial-chatbot-that-empowers-investors-d1d8197e6c13){.btn}
+<div style="margin-top: 1em;">
+  [Click here to view →](https://medium.com/@dylankl_74733/revolutionizing-stock-market-insights-the-financial-chatbot-that-empowers-investors-d1d8197e6c13){.btn}
+</div>
   </div>
-  </div>
 
-  <!-- 右边图 -->
+  <!-- 右侧图片 -->
   <div style="flex: 0 0 180px;">
-    <img src="images/financial-chatbot.png" alt="Chatbot Image" style="width: 100%; border-radius: 0.5em;" />
+    <img src="images/financial-chatbot.png"
+         alt="Chatbot Image"
+         style="width: 100%; border-radius: 0.5em;" />
   </div>
 
 </div>
-
 :::
 
 ::: {.project-card}
