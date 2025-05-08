@@ -1,6 +1,6 @@
 /* === NAVBAR LOGO SIZE === */
 .navbar-brand img {
-  height: 80px;      /* Logo 高度 */
+  height: 120px;      /* Logo 高度 */
   width: auto;
 }
 
@@ -12,29 +12,6 @@
 .navbar-nav {
   margin-left: 1rem !important;
   margin-right: 0 !important;
-}
-
-/* === 自定义按钮样式（全站通用 .btn） === */
-.btn {
-  display: inline-block;
-  margin: 0.5em 0.5em 0.5em 0;
-  padding: 0.6em 1.2em;
-  border: 2px solid #007bff;
-  border-radius: 0.5em;
-  text-decoration: none;
-  font-weight: bold;
-  color: #007bff;
-  background-color: white;
-  transition: all 0.3s ease;
-}
-.btn:hover {
-  background-color: #007bff;
-  color: white;
-}
-.btn-primary {
-  background-color: #007bff;
-  color: white;
-  border-color: #007bff;
 }
 
 /* === 全局字体和排版 === */
@@ -60,15 +37,45 @@ h1, h2, h3, h4 {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
+/* === 自定义按钮样式（全站通用 .btn） === */
+.btn {
+  display: inline-block;
+  margin: 0.4em 0.4em 0.4em 0;
+  padding: 0.4em 0.8em;
+  font-size: 0.875rem;
+  border: 2px solid #6c757d;     /* 灰色边框 */
+  border-radius: 0.4em;
+  text-decoration: none;
+  font-weight: 600;
+  color: #6c757d;                 /* 灰色文字 */
+  background-color: #f8f9fa;      /* 浅灰底 */
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.btn:hover {
+  background-color: #6c757d;      /* 深灰底 */
+  color: #fff;                    /* 白字 */
+}
+/* 如果你在某些地方还需要 primary 色，可以这样： */
+.btn-primary {
+  background-color: #6c757d;
+  color: #fff;
+  border-color: #6c757d;
+}
+
 /* === Let’s Connect 区块样式 === */
 .connect-container {
   display: flex;
-  justify-content: center;  /* 整组水平居中 */
-  align-items: center;      /* 垂直居中 */
-  flex-wrap: wrap;          /* 小屏下自动换行 */
-  gap: 1em;                 /* 按钮间基础间距 */
-  margin: 2em auto;         /* 上下外边距，左右居中 */
+  align-items: center;   /* 垂直居中 */
+  flex-wrap: wrap;       /* 小屏自动换行 */
+  gap: 1em;              /* 按钮间基础间距 */
+  max-width: 600px;
+  margin: 2em auto;      /* 上下留白，左右居中 */
 }
+/* 左侧按钮组（若你用 .connect-left）*/
+/* .connect-left { display:flex; gap:1em; } */
+/* 右侧按钮组（若你用 .connect-right）*/
+/* .connect-right { display:flex; gap:1em; margin-left:auto; } */
+
 /* 中间的竖线分隔 */
 .connect-separator {
   width: 1px;
