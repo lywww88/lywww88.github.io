@@ -42,5 +42,4 @@ format:
       - cosmo
     toc: true
     allow-raw-html: true
-    css:
-      - styles.css
+    css: styles.css
