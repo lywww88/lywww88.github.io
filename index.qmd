@@ -90,8 +90,14 @@ It visualizes metrics such as driver ratings, trip durations, and customer feedb
   <a href="https://github.com/lywww88" class="btn" target="_blank">
     <i class="bi bi-github"></i> GitHub
   </a>
+
+  <span class="connect-separator"></span>
+
   <a href="mailto:yiweilu36@uci.edu" class="btn">
     <i class="bi bi-envelope"></i> Email Me
+  </a>
+  <a href="https://lywww88.github.io/about.html" class="btn" target="_blank">
+    <i class="bi bi-person-circle"></i> About
   </a>
 
   <span class="connect-separator"></span>
