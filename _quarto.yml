@@ -2,18 +2,21 @@ project:
   type: website
 
 website:
-  title: "Portfolio of Yiwei Lu"
+  title: "Portfolio - Yiwei Lu"
   navbar:
     logo: images/logo.png      # 左上角 logo 地址
     left:
       - href: index.qmd
         text: Home
       - href: about.qmd
-        text: About Me
+        text: About
       - text: Projects
         menu:
           - href: projects/index.qmd
-            text: All Projects
+            text: School Projects
+          - href: projects/index.qmd
+            text: Capstone Project
+      - text: Startup
           - href: projects/Startup.qmd
             text: Startup
     right:
