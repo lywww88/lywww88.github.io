@@ -11,16 +11,16 @@ website:
       - text: '<span class="nav-text">Projects</span>'
         menu:
           - href: projects/index.qmd
-            text: School Projects
+            text: '<span class="nav-text">School Projects</span>'
           - href: projects/index.qmd
-            text: Capstone Project
+            text: '<span class="nav-text">Capstone Project</span>'
       - text: '<span class="nav-text">Startup</span>'
         menu:
           - href: https://forecastai-poc.netlify.app/
-            text: FoodAI
+            text: '<span class="nav-text">FoodAI</span>'
             target: _blank
           - href: https://www.instagram.com/platemateofficial/profilecard
-            text: Platemate
+            text: '<span class="nav-text">Platemate</span>'
             target: _blank
       - href: about.qmd
         text: '<span class="nav-text">About</span>'
