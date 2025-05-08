@@ -109,13 +109,13 @@
     "href": "index.html#featured-projects",
     "title": "Portfolio - Yiwei Lu",
     "section": "Featured Projects",
-    "text": "Featured Projects\n\n\n\nFinancial Chatbot for Stock Market\nBuilt an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.\n\nOpen Article →\n\n\n\n\n\n\n\n\n\n\n\nUber Driver Prediction Dashboard\nDatathon 2025 Competition\n🏆 “Best Use of StrataScratch DC” 🏆\nDeveloped an interactive dashboard to predict Uber driver performance using machine learning models.\n\nOpen Demo → Open Article →\n\n\n\n\n\n\n\n\n\n\n\n\nExplore More Projects\nDiscover data-driven projects in machine learning, dashboard design, and analytics—each showcasing practical solutions with visuals and links.\n\nProject Page →"
+    "text": "Featured Projects\n\n\n\nFinancial Chatbot for Stock Market\nBuilt an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.\n\nOpen Article →\n\n\n\n\n\n\n\n\n\n\n\nUber Driver Prediction Dashboard\nDatathon 2025 Competition\n🏆 “Best Use of StrataScratch DC” 🏆\nDeveloped an interactive dashboard to predict Uber driver performance using machine learning models.\n\nOpen Demo → Open Article →\n\n\n\n\n\n\n\n\n\n\n\n\nExplore More Projects\nDiscover data-driven projects in machine learning, dashboard design, and analytics. Each showcasing practical solutions with visuals and links.\n\nProject Page →"
   },
   {
     "objectID": "index.html#lets-connect",
     "href": "index.html#lets-connect",
     "title": "Portfolio - Yiwei Lu",
     "section": "Let’s Connect",
-    "text": "Let’s Connect\n\n\n&lt;a href=\"https://www.linkedin.com/in/yiwei-lu78\" class=\"btn\" target=\"_blank\"&gt;\n  &lt;i class=\"bi bi-linkedin\"&gt;&lt;/i&gt; LinkedIn\n&lt;/a&gt;\n&lt;a href=\"https://wa.me/1234567890\" class=\"btn\" target=\"_blank\"&gt;\n  &lt;i class=\"bi bi-whatsapp\"&gt;&lt;/i&gt; WhatsApp\n&lt;/a&gt;\n&lt;a href=\"https://github.com/lywww88\" class=\"btn\" target=\"_blank\"&gt;\n  &lt;i class=\"bi bi-github\"&gt;&lt;/i&gt; GitHub\n&lt;/a&gt;\n&lt;span style=\"color: #ccc;\"&gt;|&lt;/span&gt;\n&lt;a href=\"mailto:yiweilu36@uci.edu\" class=\"btn\"&gt;\n  &lt;i class=\"bi bi-envelope\"&gt;&lt;/i&gt; Email Me\n&lt;/a&gt;\n&lt;a href=\"https://lywww88.github.io/about.html\" class=\"btn\" target=\"_blank\"&gt;\n  &lt;i class=\"bi bi-person-circle\"&gt;&lt;/i&gt; About Me\n&lt;/a&gt;\n&lt;span style=\"color: #ccc;\"&gt;|&lt;/span&gt;\n&lt;a href=\"resume.pdf\" class=\"btn\" download&gt;\n  &lt;i class=\"bi bi-file-earmark-arrow-down\"&gt;&lt;/i&gt; Resume\n&lt;/a&gt;\n\n\n\n© 2025 Yiwei Lu. All rights reserved."
+    "text": "Let’s Connect\n\n  LinkedIn    WhatsApp    GitHub  |   Email Me    About Me    Resume \n\n\n© 2025 Yiwei Lu. All rights reserved."
   }
 ]
