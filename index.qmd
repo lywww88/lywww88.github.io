@@ -28,15 +28,15 @@ snowboarding down the slopes, or enjoying a scenic bike ride through Southern Ca
 ## Featured Projects
 
 ::: {.project-card}
-**Customer Churn Prediction**  
-Built a machine learning model using Random Forest to predict customer churn with 92% accuracy.  
-[View Project](projects/churn.qmd){.btn}
+**Financial Chatbot for Stock Market Insights**  
+Built an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.  
+[Click here to view →](https://medium.com/@dylankl_74733/revolutionizing-stock-market-insights-the-financial-chatbot-that-empowers-investors-d1d8197e6c13){.btn}
 :::
 
 ::: {.project-card}
-**SmartTripBot Travel Assistant**  
-Developed a chatbot that plans spontaneous trips based on live data and personal preferences.  
-[View Project](projects/smarttripbot.qmd){.btn}
+**Uber Driver Prediction Dashboard**  
+Developed an interactive dashboard to predict Uber driver performance using machine learning models. It visualizes metrics such as driver ratings, trip durations, and customer feedback.  
+[Click here to view →](https://syntax3rr0r1.netlify.app/){.btn}
 :::
 
 ---
