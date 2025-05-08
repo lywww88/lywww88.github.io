@@ -42,6 +42,27 @@
     "text": "LinkedIn    Email Me \n\n\n© 2025 Yiwei Lu. All rights reserved."
   },
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Portfolio - Yiwei Lu",
+    "section": "",
+    "text": "Yiwei Lu \n  I believe clarity creates freedom — in data, design, and life."
+  },
+  {
+    "objectID": "index.html#featured-projects",
+    "href": "index.html#featured-projects",
+    "title": "Portfolio - Yiwei Lu",
+    "section": "Featured Projects",
+    "text": "Featured Projects\n\n\n\nFinancial Chatbot for Stock Market\nBuilt an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.\n\nOpen Article →\n\n\n\n\n\n\n\n\n\n\n\nUber Driver Prediction Dashboard\nDatathon 2025 Competition\n🏆 “Best Use of StrataScratch DC” 🏆\nDeveloped an interactive dashboard to predict Uber driver performance using machine learning models.\n\nOpen Demo → Open Article →\n\n\n\n\n\n\n\n\n\n\n\n\nExplore More Projects\nDiscover data-driven projects in machine learning, dashboard design, and analytics. Each showcasing practical solutions with visuals and links.\n\nProject Page →"
+  },
+  {
+    "objectID": "index.html#lets-connect",
+    "href": "index.html#lets-connect",
+    "title": "Portfolio - Yiwei Lu",
+    "section": "Let’s Connect",
+    "text": "Let’s Connect\n\n  LinkedIn    WhatsApp    GitHub  |   Email Me    About Me \n\n\n© 2025 Yiwei Lu. All rights reserved."
+  },
+  {
     "objectID": "projects/index.html",
     "href": "projects/index.html",
     "title": "Projects",
@@ -98,24 +119,17 @@
     "text": "⚖️ Obesity Risk Analysis\nObesity Risk Analysis and Behavioral Clustering\nAn in-depth analysis of obesity using classification, clustering, and ANOVA. We explored lifestyle and dietary variables to understand obesity risks and public health implications.\nRead More →\n\n\n\nObesity Risk Analysis\n\n\n\n© 2025 Yiwei Lu. All rights reserved."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Portfolio - Yiwei Lu",
+    "objectID": "ww.html",
+    "href": "ww.html",
+    "title": "ww",
     "section": "",
-    "text": "Yiwei Lu \n  I believe clarity creates freedom — in data, design, and life."
+    "text": "Here’s where I keep some personal reflections, photos, and creative moments."
   },
   {
-    "objectID": "index.html#featured-projects",
-    "href": "index.html#featured-projects",
-    "title": "Portfolio - Yiwei Lu",
-    "section": "Featured Projects",
-    "text": "Featured Projects\n\n\n\nFinancial Chatbot for Stock Market\nBuilt an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.\n\nOpen Article →\n\n\n\n\n\n\n\n\n\n\n\nUber Driver Prediction Dashboard\nDatathon 2025 Competition\n🏆 “Best Use of StrataScratch DC” 🏆\nDeveloped an interactive dashboard to predict Uber driver performance using machine learning models.\n\nOpen Demo → Open Article →\n\n\n\n\n\n\n\n\n\n\n\n\nExplore More Projects\nDiscover data-driven projects in machine learning, dashboard design, and analytics. Each showcasing practical solutions with visuals and links.\n\nProject Page →"
-  },
-  {
-    "objectID": "index.html#lets-connect",
-    "href": "index.html#lets-connect",
-    "title": "Portfolio - Yiwei Lu",
-    "section": "Let’s Connect",
-    "text": "Let’s Connect\n\n  LinkedIn    WhatsApp    GitHub  |   Email Me    About Me \n\n\n© 2025 Yiwei Lu. All rights reserved."
+    "objectID": "ww.html#welcome-to-my-life-page",
+    "href": "ww.html#welcome-to-my-life-page",
+    "title": "ww",
+    "section": "",
+    "text": "Here’s where I keep some personal reflections, photos, and creative moments."
   }
 ]
