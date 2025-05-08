@@ -7,14 +7,14 @@ website:
     logo: images/logo1.png
     left:
       - href: index.qmd
-        text: Home
-      - text: Projects
+        text: '<span class="nav-text">Home</span>'
+      - text: '<span class="nav-text">Projects</span>'
         menu:
           - href: projects/index.qmd
             text: School Projects
           - href: projects/index.qmd
             text: Capstone Project
-      - text: Startup
+      - text: '<span class="nav-text">Startup</span>'
         menu:
           - href: https://forecastai-poc.netlify.app/
             text: FoodAI
@@ -23,7 +23,7 @@ website:
             text: Platemate
             target: _blank
       - href: about.qmd
-        text: About
+        text: '<span class="nav-text">About</span>'
     right:
       - icon: linkedin
         href: https://www.linkedin.com/in/yiwei-lu78
