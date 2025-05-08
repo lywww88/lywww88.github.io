@@ -39,6 +39,14 @@
   display: none !important;
 }
 
+/* === 当前页面下划线高亮 === */
+.navbar-nav .active .nav-text::after {
+  width: 100%;
+}
+.navbar-nav .active .nav-text {
+  color: #007bff !important;
+}
+
 /* ✅ 只对 nav-text 加下划线动画 */
 .nav-text {
   position: relative;
