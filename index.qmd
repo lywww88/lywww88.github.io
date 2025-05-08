@@ -45,15 +45,8 @@ Developed an interactive dashboard to predict Uber driver performance using mach
 
 <hr style="border: none; border-top: 1px solid #ccc; margin: 1em auto; max-width: 600px;">
 
-::: columns
-
-::: column
-[LinkedIn](https://www.linkedin.com/in/yiwei-lu78){.btn}
-[GitHub](https://github.com/lywww88){.btn}
-:::
-
-::: column {.text-right}
-[Resume](resume.pdf){.btn}
-:::
-
-:::
+<div class="connect-buttons">
+  [LinkedIn](https://www.linkedin.com/in/yiwei-lu78){.btn}
+  [GitHub](https://github.com/lywww88){.btn}
+  [Resume](resume.pdf){.btn .float-right}
+</div>
