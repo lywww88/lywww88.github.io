@@ -43,26 +43,18 @@ Developed an interactive dashboard to predict Uber driver performance using mach
 
 ## Let’s Connect
 
-```{=html}
 <hr style="border: none; border-top: 1px solid #ccc; margin: 1em auto; max-width: 600px;">
 
-<div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; max-width: 600px; margin: 1.5em auto;">
+::: columns
 
-  <!-- 左侧：LinkedIn + GitHub -->
-  <div style="display: flex; gap: 1em;">
-    <a href="https://www.linkedin.com/in/yiwei-lu78" class="btn" target="_blank">
-      <i class="bi bi-linkedin"></i> LinkedIn
-    </a>
-    <a href="https://github.com/lywww88" class="btn" target="_blank">
-      <i class="bi bi-github"></i> GitHub
-    </a>
-  </div>
+::: column
+[LinkedIn](https://www.linkedin.com/in/yiwei-lu78){.btn} 
+[GitHub](https://github.com/lywww88){.btn}
+:::
 
-  <!-- 右侧：Resume -->
-  <div>
-    <a href="resume.pdf" class="btn" target="_blank">
-      <i class="bi bi-download"></i> Resume
-    </a>
-  </div>
+::: column
+class: text-right
+[Resume](resume.pdf){.btn}
+:::
 
-</div>
+:::
