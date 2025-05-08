@@ -13,10 +13,17 @@ format:
   <img src="images/Headshot.jpg" alt="Yiwei Lu Headshot" style="width:150px; height:150px; border-radius:50%;"/>
 
   <!-- Name + Motto -->
-  <div style="flex: 1; font-size: 1rem; color: #555;" markdown="1">
+  <div style="flex: 1;" markdown="1">
 
-**Yiwei Lu**  
-*I believe clarity creates freedom — in data, design, and life.*
+<div style="text-align: center;">
+  <span style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif; font-size: 2.3em; font-weight: 800;">
+    Yiwei Lu
+  </span>  
+  <br/>
+  <span style="font-style: italic; font-size: 1.1em; color: #555;">
+    I believe clarity creates freedom — in data, design, and life.
+  </span>
+</div>
 
   </div>
 
