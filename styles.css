@@ -1,28 +1,34 @@
 /* === NAVBAR LOGO SIZE === */
 .navbar-brand img {
-  height: 120px;      /* Logo 高度 */
-  width: auto;
+  height: 120px !important;
+  width: auto !important;
 }
 
 /* === NAVBAR 左对齐（覆盖 bootstrap 的 space-between） === */
 .navbar {
   justify-content: flex-start !important;
 }
-/* Logo 和菜单之间留点距离 */
 .navbar-nav {
   margin-left: 1rem !important;
   margin-right: 0 !important;
 }
 
-/* === 全局字体和排版 === */
-body {
-  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  line-height: 1.6;
-  font-size: 16px;
-  color: #333;
+/* === 全站通用 .btn 自定义按钮样式 === */
+.btn {
+  display: inline-block;
+  margin: 0.4em 0.4em 0.4em 0;
+  padding: 0.5em 1em;
+  border: 2px solid #666;         /* 灰色边框 */
+  border-radius: 0.4em;
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;                    /* 深灰文字 */
+  background-color: #f5f5f5;      /* 浅灰背景 */
+  transition: all 0.2s ease;
 }
-h1, h2, h3, h4 {
-  font-weight: 600;
+.btn:hover {
+  background-color: #ddd;
+  color: #111;
 }
 
 /* === Project Card 样式 === */
@@ -31,53 +37,22 @@ h1, h2, h3, h4 {
   border-radius: 0.5em;
   padding: 1em;
   margin-bottom: 1em;
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.2s ease;
 }
 .project-card:hover {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* === 自定义按钮样式（全站通用 .btn） === */
-.btn {
-  display: inline-block;
-  margin: 0.4em 0.4em 0.4em 0;
-  padding: 0.4em 0.8em;
-  font-size: 0.875rem;
-  border: 2px solid #6c757d;     /* 灰色边框 */
-  border-radius: 0.4em;
-  text-decoration: none;
-  font-weight: 600;
-  color: #6c757d;                 /* 灰色文字 */
-  background-color: #f8f9fa;      /* 浅灰底 */
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
-.btn:hover {
-  background-color: #6c757d;      /* 深灰底 */
-  color: #fff;                    /* 白字 */
-}
-/* 如果你在某些地方还需要 primary 色，可以这样： */
-.btn-primary {
-  background-color: #6c757d;
-  color: #fff;
-  border-color: #6c757d;
-}
-
 /* === Let’s Connect 区块样式 === */
 .connect-container {
   display: flex;
-  align-items: center;   /* 垂直居中 */
-  flex-wrap: wrap;       /* 小屏自动换行 */
-  gap: 1em;              /* 按钮间基础间距 */
+  align-items: center;
+  flex-wrap: wrap;
   max-width: 600px;
-  margin: 2em auto;      /* 上下留白，左右居中 */
+  margin: 2em auto;
+  gap: 1em;
 }
-/* 左侧按钮组（若你用 .connect-left）*/
-/* .connect-left { display:flex; gap:1em; } */
-/* 右侧按钮组（若你用 .connect-right）*/
-/* .connect-right { display:flex; gap:1em; margin-left:auto; } */
-
-/* 中间的竖线分隔 */
-.connect-separator {
+.connect-container .separator {
   width: 1px;
   height: 2em;
   background-color: #ccc;
