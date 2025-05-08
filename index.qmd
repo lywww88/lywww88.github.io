@@ -1,8 +1,9 @@
 ---
 title: ""
 format:
-  html:
+  html: 
     toc: false
+    allow-html: true
 ---
 
 <!-- Profile Section -->
@@ -43,8 +44,6 @@ Developed an interactive dashboard to predict Uber driver performance using mach
 
 ## Let’s Connect
 
-::: {.no-markdown}
-
 <hr style="border: none; border-top: 1px solid #ccc; margin: 1em auto; max-width: 600px;">
 
 <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; max-width: 600px; margin: 1.5em auto;">
@@ -67,5 +66,3 @@ Developed an interactive dashboard to predict Uber driver performance using mach
   </div>
 
 </div>
-
-:::
