@@ -109,17 +109,26 @@
   color: #111;
 }
 
-/* === 项目卡片样式 === */
+/* === 项目卡片样式（优化对齐与留白）=== */
 .project-card {
   border: 1px solid #e0e0e0;
   border-radius: 0.5em;
-  padding: 1em;
-  margin-bottom: 1em;
+  padding: 1.5em;
+  margin-bottom: 1.5em;
   transition: box-shadow 0.3s ease;
+  text-align: left;
+  line-height: 1.6;
 }
 
 .project-card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* 卡片内按钮样式（优化间距与视觉统一） */
+.project-card .btn {
+  margin-top: 1em;
+  padding: 0.4em 1em;
+  font-size: 0.9rem;
 }
 
 /* === Let’s Connect 区块样式 === */
