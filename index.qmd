@@ -31,19 +31,16 @@ Outside of work, you’ll find me exploring new machine learning techniques, cra
 
 <!-- 左边文字 -->
 <div style="flex: 1;">
-  <p style="font-weight: bold; margin: 0;">Financial Chatbot for Stock Market Insights</p>
-  <p style="margin: 0.5em 0;">
-    Built an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs,
-    helping users make informed investment decisions.
-  </p>
+  **Financial Chatbot for Stock Market Insights**
+
+  Built an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.
+
   <div style="margin-top: 1em;">
-    <a href="https://medium.com/@dylankl_74733/revolutionizing-stock-market-insights-the-financial-chatbot-that-empowers-investors-d1d8197e6c13" class="btn" target="_blank">
-      Click here to view →
-    </a>
+    [Click here to view →](https://medium.com/@dylankl_74733/revolutionizing-stock-market-insights-the-financial-chatbot-that-empowers-investors-d1d8197e6c13){.btn}
   </div>
 </div>
 
-<!-- 右边图片 -->
+<!-- 右边图 -->
 <div style="flex: 0 0 180px;">
   <img src="images/financial-chatbot.png" alt="Chatbot Image" style="width: 100%; border-radius: 0.5em;" />
 </div>
