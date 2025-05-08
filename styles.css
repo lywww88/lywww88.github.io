@@ -2,7 +2,7 @@
 .navbar {
   justify-content: flex-start !important;      /* 左对齐菜单 */
   align-items: center !important;              /* 垂直居中 */
-  min-height: 120px !important;                /* 撑开整体高度 */
+  min-height: 80px !important;                /* 撑开整体高度 */
 }
 
 .navbar-nav {
