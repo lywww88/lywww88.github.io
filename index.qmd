@@ -31,7 +31,7 @@ Outside of work, you’ll find me exploring new machine learning techniques, cra
 
 <!-- 左侧文字 -->
 <div style="flex: 1;" markdown="1">
-**Financial Chatbot for Stock Market Insights**
+**Financial Chatbot for Stock Market**
 
 Built an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.
 
