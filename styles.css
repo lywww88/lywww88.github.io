@@ -44,6 +44,7 @@
   position: relative;
   display: inline-block;
   transition: color 0.3s ease;
+  font-weight: 600; /* 推荐值，700更粗，500更轻 */
 }
 
 .nav-text::after {
