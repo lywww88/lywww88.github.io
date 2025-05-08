@@ -3,7 +3,23 @@ title: Projects
 page-layout: full
 ---
 
-## 📱 Repositioning Google Pixel — A Strategic Marketing Analysis
+## 🏡 Airbnb Sentiment Dashboard & Hosting Strategy  
+We developed a review sentiment analysis app for Airbnb hosts using XGBoost and NLP. The project segments hosts based on pricing and review behavior, and provides strategic recommendations to increase guest satisfaction and optimize revenue.  
+[Read More →](project-airbnb/)
+
+![Airbnb Sentiment App](images/airbnb-cover.jpg){width=600px}
+
+---
+
+## 🛒 E-Commerce SQL & Relational Database Design  
+Designed a relational data model and normalized schema for an online fashion retailer using Looker. We wrote SQL queries for churn prediction, marketing attribution, product return analysis, and inventory optimization.  
+[Read More →](project-looker/)
+
+![SQL E-commerce Project](images/sql-cover.jpg){width=600px}
+
+---
+
+## 📱 Repositioning Google Pixel — A Strategic Marketing Analysis  
 A strategic marketing project focused on diagnosing Google Pixel's weak market share despite strong AI and camera technology. We analyzed brand positioning, competitive threats, and proposed data-driven solutions to strengthen Pixel 9’s presence in the premium smartphone market.  
 [Read More →](project-pixel/)
 
@@ -11,7 +27,7 @@ A strategic marketing project focused on diagnosing Google Pixel's weak market s
 
 ---
 
-## 🩺 Predicting Anemia with Machine Learning
+## 🩺 Predicting Anemia with Machine Learning  
 This project uses blood test data to train models (Decision Trees, Logistic Regression) for anemia prediction. After feature selection and applying SMOTE, we achieved up to 100% recall, aiding early medical detection.  
 [Read More →](project-anemia/)
 
@@ -19,16 +35,8 @@ This project uses blood test data to train models (Decision Trees, Logistic Regr
 
 ---
 
-## ⚖️ Obesity Risk Analysis and Behavioral Clustering
+## ⚖️ Obesity Risk Analysis and Behavioral Clustering  
 An in-depth analysis of obesity using classification, clustering, and ANOVA. We explored lifestyle and dietary variables to understand obesity risks and public health implications.  
 [Read More →](project-obesity/)
 
 ![Obesity Risk Analysis](images/obesity-cover.jpg){width=600px}
-
----
-
-## 📊 Project A
-Example placeholder project.  
-[Read More →](project-a/)
-
-![Project A](images/project-a.jpg){width=600px}
