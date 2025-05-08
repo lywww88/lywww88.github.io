@@ -36,13 +36,13 @@ Outside of work, you’ll find me exploring new machine learning techniques, cra
 Built an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.
 
 <div style="margin-top: 1em;">
-  [Click here to view →](https://medium.com/@dylankl_74733/revolutionizing-stock-market-insights-the-financial-chatbot-that-empowers-investors-d1d8197e6c13){.btn}
+  [Open Article →](https://medium.com/@dylankl_74733/revolutionizing-stock-market-insights-the-financial-chatbot-that-empowers-investors-d1d8197e6c13){.btn}
 </div>
 </div>
 
 <!-- 右侧图片 -->
 <div style="flex: 0 0 250px;">
-  <img src="images/financial-chatbot.png"
+  <img src="images/financial-chatbot.gif"
        alt="Chatbot Image"
        style="width: 100%; height: auto; border-radius: 0.5em;" />
 </div>
@@ -55,7 +55,7 @@ Built an AI chatbot that delivers real-time stock analysis by integrating LLMs w
 Developed an interactive dashboard to predict Uber driver performance using machine learning models. It visualizes metrics such as driver ratings, trip durations, and customer feedback.
 
 <div style="margin-top: 1em;">
-  [Click here to view →](https://syntax3rr0r1.netlify.app/){.btn}
+  [Open Demo →](https://syntax3rr0r1.netlify.app/){.btn}
 </div>
 :::
 
