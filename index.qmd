@@ -28,15 +28,23 @@ Outside of work, you’ll find me exploring new machine learning techniques, cra
 ## Featured Projects
 
 ::: {.project-card}
-**Financial Chatbot for Stock Market Insights**  
-Built an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.  
-[Click here to view →](https://medium.com/@dylankl_74733/revolutionizing-stock-market-insights-the-financial-chatbot-that-empowers-investors-d1d8197e6c13){.btn}
+**Financial Chatbot for Stock Market Insights**
+
+Built an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.
+
+<div style="margin-top: 1em;">
+  [Click here to view →](https://medium.com/@dylankl_74733/revolutionizing-stock-market-insights-the-financial-chatbot-that-empowers-investors-d1d8197e6c13){.btn}
+</div>
 :::
 
 ::: {.project-card}
-**Uber Driver Prediction Dashboard**  
-Developed an interactive dashboard to predict Uber driver performance using machine learning models. It visualizes metrics such as driver ratings, trip durations, and customer feedback.  
-[Click here to view →](https://syntax3rr0r1.netlify.app/){.btn}
+**Uber Driver Prediction Dashboard**
+
+Developed an interactive dashboard to predict Uber driver performance using machine learning models. It visualizes metrics such as driver ratings, trip durations, and customer feedback.
+
+<div style="margin-top: 1em;">
+  [Click here to view →](https://syntax3rr0r1.netlify.app/){.btn}
+</div>
 :::
 
 ---
