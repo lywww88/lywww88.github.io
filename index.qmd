@@ -5,11 +5,14 @@ format:
     toc: false
 ---
 
-<div style="display: flex; align-items: center; gap: 2em; max-width: 900px; margin: 2em auto;">
+<!-- Profile Section -->
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 2em; max-width: 900px; margin: 2em auto;">
 
+  <!-- Avatar -->
   <img src="images/Headshot.jpg" alt="Yiwei Lu Headshot" style="width:150px; height:150px; border-radius:50%;"/>
 
-  <div style="font-size: 1rem; color: #555;">
+  <!-- Bio -->
+  <div style="flex: 1; font-size: 1rem; color: #555;">
     Hello! I’m <strong>Yiwei Lu</strong>, a Master’s candidate in Business Analytics at <strong>UC Irvine</strong>.
     I’m passionate about transforming complex datasets into clear, actionable insights that empower organizations to make smarter decisions.
     Outside of work, you’ll find me exploring new machine learning techniques, crafting interactive dashboards,
@@ -17,6 +20,7 @@ format:
   </div>
 
 </div>
+
 ---
 
 ## Featured Projects
