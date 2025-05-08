@@ -13,7 +13,9 @@ Built an AI chatbot that delivers real-time stock analysis by integrating LLMs w
 
 ---
 
-## 🚗 Uber Driver Prediction Dashboard {#Uber Prediction Dashboard}
+## 🚗 Uber Prediction {#uber-prediction}
+
+**Uber Driver Prediction Dashboard**  
 Developed an interactive dashboard to predict Uber driver performance using machine learning models. It visualizes metrics such as driver ratings, trip durations, and customer feedback.  
 [Read More →](https://syntax3rr0r1.netlify.app/)
 
@@ -21,7 +23,9 @@ Developed an interactive dashboard to predict Uber driver performance using mach
 
 ---
 
-## 🏡 Airbnb Sentiment Dashboard & Hosting Strategy  {#Airbnb App}
+## 🏡 Airbnb App {#airbnb-app}
+
+**Airbnb Sentiment Dashboard & Hosting Strategy**  
 We developed a review sentiment analysis app for Airbnb hosts using XGBoost and NLP. The project segments hosts based on pricing and review behavior, and provides strategic recommendations to increase guest satisfaction and optimize revenue.  
 [Read More →](project-airbnb/)
 
@@ -29,15 +33,19 @@ We developed a review sentiment analysis app for Airbnb hosts using XGBoost and 
 
 ---
 
-## 🛒 E-Commerce SQL & Relational Database Design  {#E-Commerce SQL & Relational Database Design}
+## 🛒 E-Commerce SQL {#ecommerce-sql}
+
+**E-Commerce SQL & Relational Database Design**  
 Designed a relational data model and normalized schema for an online fashion retailer using Looker. We wrote SQL queries for churn prediction, marketing attribution, product return analysis, and inventory optimization.  
 [Read More →](project-looker/)
 
-![SQL E-commerce Project](images/sql-cover.jpg){width=600px}
+![SQL E-commerce Project](../images/sql-cover.png){width=600px}
 
 ---
 
-## 📱 Repositioning Google Pixel — A Strategic Marketing Analysis  {#Marketing Analysis - Google Pixel}
+## 📱 Google Pixel Strategy {#pixel-strategy}
+
+**Repositioning Google Pixel — A Strategic Marketing Analysis**  
 A strategic marketing project focused on diagnosing Google Pixel's weak market share despite strong AI and camera technology. We analyzed brand positioning, competitive threats, and proposed data-driven solutions to strengthen Pixel 9’s presence in the premium smartphone market.  
 [Read More →](project-pixel/)
 
@@ -45,7 +53,9 @@ A strategic marketing project focused on diagnosing Google Pixel's weak market s
 
 ---
 
-## 🩺 Predicting Anemia with Machine Learning  {#Predicting Anemia ML Model}
+## 🩺 Anemia ML Prediction {#anemia-ml}
+
+**Predicting Anemia with Machine Learning**  
 This project uses blood test data to train models (Decision Trees, Logistic Regression) for anemia prediction. After feature selection and applying SMOTE, we achieved up to 100% recall, aiding early medical detection.  
 [Read More →](project-anemia/)
 
@@ -53,8 +63,10 @@ This project uses blood test data to train models (Decision Trees, Logistic Regr
 
 ---
 
-## ⚖️ Obesity Risk Analysis and Behavioral Clustering  {#Obesity Risk Analysis}
+## ⚖️ Obesity Risk Analysis {#obesity-risk}
+
+**Obesity Risk Analysis and Behavioral Clustering**  
 An in-depth analysis of obesity using classification, clustering, and ANOVA. We explored lifestyle and dietary variables to understand obesity risks and public health implications.  
 [Read More →](project-obesity/)
 
-![Obesity Risk Analysis](images/obesity-cover.jpg){width=600px} 
+![Obesity Risk Analysis](images/obesity-cover.jpg){width=600px}
