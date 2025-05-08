@@ -28,12 +28,24 @@ Outside of work, you’ll find me exploring new machine learning techniques, cra
 ## Featured Projects
 
 ::: {.project-card}
-**Financial Chatbot for Stock Market Insights**
+<div style="display: flex; flex-wrap: wrap; gap: 1em; align-items: flex-start;">
 
-Built an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.
+  <!-- 左侧文字内容 -->
+  <div style="flex: 1 1 300px;">
+    **Financial Chatbot for Stock Market Insights**
 
-<div style="margin-top: 1em;">
-  [Click here to view →](https://medium.com/@dylankl_74733/revolutionizing-stock-market-insights-the-financial-chatbot-that-empowers-investors-d1d8197e6c13){.btn}
+    Built an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.
+
+    <div style="margin-top: 1em;">
+      [Click here to view →](https://medium.com/@dylankl_74733/revolutionizing-stock-market-insights-the-financial-chatbot-that-empowers-investors-d1d8197e6c13){.btn}
+    </div>
+  </div>
+
+  <!-- 右侧图片 -->
+  <div style="flex: 0 0 180px;">
+    <img src="../images/financial-chatbot.png" alt="Chatbot Image" style="width: 100%; border-radius: 0.5em;" />
+  </div>
+
 </div>
 :::
 
