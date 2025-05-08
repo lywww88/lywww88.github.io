@@ -39,7 +39,35 @@
     "href": "projects/index.html",
     "title": "Projects",
     "section": "",
-    "text": "Project A"
+    "text": "A strategic marketing project focused on diagnosing Google Pixel’s weak market share despite strong AI and camera technology. We analyzed brand positioning, competitive threats, and proposed data-driven solutions to strengthen Pixel 9’s presence in the premium smartphone market.\nRead More →\n\n\n\nGoogle Pixel Project"
+  },
+  {
+    "objectID": "projects/index.html#repositioning-google-pixel-a-strategic-marketing-analysis",
+    "href": "projects/index.html#repositioning-google-pixel-a-strategic-marketing-analysis",
+    "title": "Projects",
+    "section": "",
+    "text": "A strategic marketing project focused on diagnosing Google Pixel’s weak market share despite strong AI and camera technology. We analyzed brand positioning, competitive threats, and proposed data-driven solutions to strengthen Pixel 9’s presence in the premium smartphone market.\nRead More →\n\n\n\nGoogle Pixel Project"
+  },
+  {
+    "objectID": "projects/index.html#predicting-anemia-with-machine-learning",
+    "href": "projects/index.html#predicting-anemia-with-machine-learning",
+    "title": "Projects",
+    "section": "🩺 Predicting Anemia with Machine Learning",
+    "text": "🩺 Predicting Anemia with Machine Learning\nThis project uses blood test data to train models (Decision Trees, Logistic Regression) for anemia prediction. After feature selection and applying SMOTE, we achieved up to 100% recall, aiding early medical detection.\nRead More →\n\n\n\nAnemia Prediction"
+  },
+  {
+    "objectID": "projects/index.html#obesity-risk-analysis-and-behavioral-clustering",
+    "href": "projects/index.html#obesity-risk-analysis-and-behavioral-clustering",
+    "title": "Projects",
+    "section": "⚖️ Obesity Risk Analysis and Behavioral Clustering",
+    "text": "⚖️ Obesity Risk Analysis and Behavioral Clustering\nAn in-depth analysis of obesity using classification, clustering, and ANOVA. We explored lifestyle and dietary variables to understand obesity risks and public health implications.\nRead More →\n\n\n\nObesity Risk Analysis"
+  },
+  {
+    "objectID": "projects/index.html#project-a",
+    "href": "projects/index.html#project-a",
+    "title": "Projects",
+    "section": "📊 Project A",
+    "text": "📊 Project A\nExample placeholder project.\nRead More →\n\n\n\nProject A"
   },
   {
     "objectID": "index.html#featured-projects",
