@@ -1,28 +1,37 @@
-/* === NAVBAR LOGO SIZE === */
+/* === NAVBAR 样式整合 === */
+.navbar {
+  justify-content: flex-start !important;      /* 左对齐菜单 */
+  align-items: center !important;              /* 垂直居中 */
+  min-height: 120px !important;                /* 撑开整体高度 */
+}
+
+.navbar-nav {
+  margin-left: 2rem !important;                /* logo 与菜单间距 */
+}
+
+.navbar-brand {
+  display: flex !important;
+  align-items: center !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
 .navbar-brand img {
-  height: 200px !important;
+  height: 120px !important;                    /* logo 尺寸 */
   width: auto !important;
   object-fit: contain;
   padding: 0 !important;
   margin: 0 !important;
 }
 
-/* NAVBAR 左对齐（覆盖默认布局） */
-.navbar {
-  justify-content: flex-start !important;
-}
-.navbar-nav {
-  margin-left: 2rem !important;
-}
-
-/* === 全站通用 .btn 自定义按钮样式 === */
+/* === 全站按钮样式（.btn） === */
 .btn {
   display: inline-block;
   padding: 0.3em 0.8em;
-  border: 2px solid #666;    /* 灰色边框 */
+  border: 2px solid #666;                      /* 灰色边框 */
   border-radius: 0.3em;
   font-weight: bold;
-  font-size: 0.9rem;         /* 明确调小字体 */
+  font-size: 0.9rem;                           /* 字体稍小 */
   color: #333;
   background-color: #f5f5f5;
   transition: all 0.2s ease;
@@ -34,7 +43,7 @@
   color: #111;
 }
 
-/* === Project Card 样式 === */
+/* === 项目卡片样式 === */
 .project-card {
   border: 1px solid #e0e0e0;
   border-radius: 0.5em;
@@ -42,11 +51,12 @@
   margin-bottom: 1em;
   transition: box-shadow 0.3s ease;
 }
+
 .project-card:hover {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* === Let’s Connect 区块样式 === */
+/* === Let’s Connect 样式 === */
 .connect-container {
   display: flex;
   align-items: center;
@@ -65,20 +75,9 @@
   margin: 0 1em;
 }
 
-.connect-left, .connect-right {
+.connect-left,
+.connect-right {
   display: flex;
   gap: 0.5em;
   align-items: center;
-}
-
-.navbar {
-  min-height: 80px !important;  /* 强制 navbar 整体高度增加 */
-  align-items: center !important; /* 确保垂直居中 logo */
-}
-
-.navbar-brand {
-  display: flex !important;
-  align-items: center !important;
-  padding: 0 !important;
-  margin: 0 !important;
 }
