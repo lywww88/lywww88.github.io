@@ -34,18 +34,24 @@ Developed a chatbot that plans spontaneous trips based on live data and personal
 ## Let’s Connect
 
 <div class="link-buttons"
-     style="display: flex; gap: 1em; flex-wrap: wrap; justify-content: center; margin: 1.5em 0;">
+     style="display: flex; gap: 1em; flex-wrap: wrap; justify-content: center; align-items: center; margin: 1.5em 0;">
 
+  <!-- LinkedIn -->
   <a href="https://www.linkedin.com/in/yiwei-lu78"
      class="btn" target="_blank">
     <i class="bi bi-linkedin"></i> LinkedIn
   </a>
 
+  <!-- GitHub -->
   <a href="https://github.com/lywww88"
      class="btn" target="_blank">
     <i class="bi bi-github"></i> GitHub
   </a>
 
+  <!-- Divider -->
+  <div style="width: 1px; height: 32px; background-color: #ccc;"></div>
+
+  <!-- Resume -->
   <a href="resume.pdf"
      class="btn" target="_blank">
     <i class="bi bi-download"></i> Resume
