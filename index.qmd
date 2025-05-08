@@ -110,6 +110,9 @@ Discover a portfolio of data-driven projects in machine learning, dashboard desi
   <a href="https://www.linkedin.com/in/yiwei-lu78" class="btn" target="_blank">
     <i class="bi bi-linkedin"></i> LinkedIn
   </a>
+  <a href="https://wa.me/6266736276" class="btn" target="_blank">
+    <i class="bi bi-whatsapp"></i> WhatsApp
+  </a>
   <a href="https://github.com/lywww88" class="btn" target="_blank">
     <i class="bi bi-github"></i> GitHub
   </a>
@@ -122,7 +125,7 @@ Discover a portfolio of data-driven projects in machine learning, dashboard desi
   </a>
   <span style="color: #ccc;">|</span>
   <a href="resume.pdf" class="btn" download>
-    <i class="bi bi-download"></i> Resume
+    <i class="bi bi-file-earmark-arrow-down"></i> Resume
   </a>
 </div>
 
