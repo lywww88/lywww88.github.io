@@ -29,9 +29,6 @@ format:
 
 </div>
 
----
-
-## Featured Projects
 
 ::: { .project-card style="display: flex; flex-wrap: wrap; gap: 1.5em; align-items: flex-start;" markdown="1" }
 
