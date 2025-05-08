@@ -64,7 +64,7 @@
   color: #007bff !important;
 }
 
-/* === 修复 dropdown 箭头在文字旁边显示 === */
+/* === 修复 dropdown 箭头在文字旁边显示，放大并美化 === */
 .navbar-nav .dropdown-toggle {
   display: inline-flex !important;
   align-items: center !important;
@@ -76,13 +76,13 @@
 .navbar-nav .dropdown-toggle::after {
   content: "▾";
   display: inline !important;
-  font-size: 0.7em;
+  font-size: 0.9em;         /* ✅ 放大箭头 */
   line-height: 1;
   color: #666;
   margin-left: 0.25em;
   vertical-align: middle;
   position: relative;
-  top: 0.1em;
+  top: 0.05em;
   border: none !important;
   transform: none !important;
 }
@@ -102,9 +102,8 @@
 }
 
 .btn:hover {
-  background-color: #007bff;
-  color: #fff;
-  border-color: #007bff;
+  background-color: #ddd;
+  color: #111;
 }
 
 /* === 项目卡片样式 === */
