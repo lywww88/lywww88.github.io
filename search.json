@@ -109,7 +109,7 @@
     "href": "index.html#featured-projects",
     "title": "Portfolio - Yiwei Lu",
     "section": "Featured Projects",
-    "text": "Featured Projects\n\n\n\nFinancial Chatbot for Stock Market Insights\nBuilt an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.\n\nClick here to view →\n\n\n\n\n\n\n\n\nUber Driver Prediction Dashboard\nDeveloped an interactive dashboard to predict Uber driver performance using machine learning models. It visualizes metrics such as driver ratings, trip durations, and customer feedback.\n\nClick here to view →"
+    "text": "Featured Projects\n\n\n\nFinancial Chatbot for Stock Market\nBuilt an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.\n\nOpen Article →\n\n\n\n\n\n\n\n\nUber Driver Prediction Dashboard\n🏆Awarded “Best Use of StrataScratch” at Datathon DC🏆\nDeveloped an interactive dashboard to predict Uber driver performance using machine learning models. It visualizes metrics such as driver ratings, trip durations, and customer feedback.\n\nOpen Demo →"
   },
   {
     "objectID": "index.html#lets-connect",
