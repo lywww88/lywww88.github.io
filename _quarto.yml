@@ -38,6 +38,11 @@ website:
         text: Resume
         icon: download
         target: _blank
+      - href: ww.html
+        text: 🦖
+        aria-label: Life
+        icon: none
+        target: _self
 
 format:
   html:
