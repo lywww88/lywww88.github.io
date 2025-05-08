@@ -16,9 +16,16 @@ website:
             text: School Projects
           - href: projects/index.qmd
             text: Capstone Project
-      - href: projects/Startup.qmd
-        text: Startup
+      - text: Startup
+        menu:
+          - href: projects/FoodAI.qmd
+            text: FoodAI
+          - href: projects/Platemate.qmd
+            text: Platemate
     right:
+      - icon: linkedin
+        href: https://www.linkedin.com/in/yiwei-lu78
+        aria-label: LinkedIn
       - icon: github
         href: https://github.com/lywww88
         aria-label: GitHub
