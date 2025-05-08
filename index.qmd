@@ -42,7 +42,7 @@ Built an AI chatbot that delivers real-time stock analysis by integrating LLMs w
 
 <!-- 右侧图片 -->
 <div style="flex: 0 0 250px;">
-  <img src="images/financial-chatbot.gif"
+  <img src="images/financial-chatbot1.gif"
        alt="Chatbot Image"
        style="width: 100%; height: auto; border-radius: 0.5em;" />
 </div>
