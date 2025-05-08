@@ -7,7 +7,7 @@ page-layout: full
 Built an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.  
 [Read More →](https://medium.com/@dylankl_74733/revolutionizing-stock-market-insights-the-financial-chatbot-that-empowers-investors-d1d8197e6c13)
 
-![Financial Chatbot](images/financial-chatbot.png){width=600px}
+![Financial Chatbot](../images/financial-chatbot.png){width=600px}
 
 ---
 
