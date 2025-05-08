@@ -51,7 +51,7 @@ Built an AI chatbot that delivers real-time stock analysis by integrating LLMs w
 
 ::: {.project-card}
 **Uber Driver Prediction Dashboard**  
-*🏆Awarded “Best Use of StrataScratch” at Datathon DC🏆*
+<small>🏆 Awarded “Best Use of StrataScratch DC” at Datathon 2025</small>
 
 Developed an interactive dashboard to predict Uber driver performance using machine learning models. It visualizes metrics such as driver ratings, trip durations, and customer feedback.
 
