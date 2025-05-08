@@ -17,7 +17,7 @@ website:
       - text: '<span class="nav-text">Startup</span>'
         menu:
           - href: https://forecastai-poc.netlify.app/
-            text: '<span class="nav-text">FoodAI</span>'
+            text: '<span class="nav-text">Forecast AI</span>'
             target: _blank
           - href: https://www.instagram.com/platemateofficial/profilecard
             text: '<span class="nav-text">Platemate</span>'
@@ -32,7 +32,7 @@ website:
         href: https://github.com/lywww88
         aria-label: GitHub
       - icon: database
-        href: https://www.kaggle.com/yiweilu  # 替换成你的 Kaggle 链接
+        href: https://www.kaggle.com/yiweilu  
         aria-label: Kaggle
       - href: resume.pdf
         text: Resume
