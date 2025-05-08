@@ -32,3 +32,4 @@ format:
       - cosmo
     css: styles.css
     toc: true
+    allow-html: true
