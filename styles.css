@@ -1,14 +1,14 @@
 /* === NAVBAR 样式整合 === */
 .navbar {
-  justify-content: flex-start !important;      /* 左对齐菜单 */
-  align-items: center !important;              /* 垂直居中 */
-  min-height: 60px !important;                 /* 撑开整体高度 */
+  justify-content: flex-start !important;
+  align-items: center !important;
+  min-height: 60px !important;
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.75);       /* 半透明背景 */
-  backdrop-filter: blur(10px);                 /* 背景模糊 */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);   /* 阴影效果 */
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   transition: background 0.3s ease, box-shadow 0.3s ease;
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
@@ -34,7 +34,7 @@
   display: block !important;
 }
 
-/* === 隐藏导航栏标题文字 === */
+/* 隐藏标题文字（只保留 logo 图像） */
 .navbar-brand span {
   display: none !important;
 }
@@ -45,6 +45,7 @@
   transition: color 0.3s ease;
 }
 
+/* 悬停时文字下划线动画 */
 .navbar-nav .nav-link::after {
   content: "";
   position: absolute;
@@ -62,6 +63,17 @@
 
 .navbar-nav .nav-link:hover {
   color: #007bff !important;
+}
+
+/* ✅ 修复下拉菜单箭头换行问题 */
+.dropdown-toggle::after {
+  display: inline-block !important;
+  content: "▾";
+  font-size: 0.65em;
+  margin-left: 0.4em;
+  vertical-align: middle;
+  transform: translateY(-1px);
+  color: #666;
 }
 
 /* === 全站按钮样式（.btn） === */
