@@ -102,7 +102,7 @@
     "href": "index.html",
     "title": "Portfolio - Yiwei Lu",
     "section": "",
-    "text": "Hello! I’m Yiwei Lu, a Master’s candidate in Business Analytics at UC Irvine.\nI’m passionate about transforming complex datasets into clear, actionable insights that empower organizations to make smarter decisions.\nOutside of work, you’ll find me exploring new machine learning techniques, crafting interactive dashboards, snowboarding down the slopes, or enjoying a scenic bike ride through Southern California."
+    "text": "&lt;h1 style=\"margin-bottom: 0.3em;\"&gt;Yiwei Lu&lt;/h1&gt;\n&lt;p style=\"font-style: italic; font-size: 1.1em; color: #555;\"&gt;\n  I believe clarity creates freedom — in data, design, and life.\n&lt;/p&gt;"
   },
   {
     "objectID": "index.html#featured-projects",
