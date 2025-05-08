@@ -83,3 +83,8 @@
   gap: 0.5em;
   align-items: center;
 }
+
+/* === 隐藏 Navbar 中的文字标题 === */
+.navbar-brand span {
+  display: none !important;
+}
