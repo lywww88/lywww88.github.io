@@ -86,8 +86,7 @@ It visualizes metrics such as driver ratings, trip durations, and customer feedb
 <div style="flex: 1;" markdown="1">
 **Explore More Projects**  
 
-Discover a growing portfolio of data-driven projects spanning machine learning, dashboard design, and real-world analytics challenges.  
-Each project highlights creative problem-solving and technical implementation, with visuals and links to live demos or source code.
+Discover a portfolio of data-driven projects in machine learning, dashboard design, and analytics. Each project demonstrates practical problem-solving and technical implementation with visual examples and links.
 
 <div style="margin-top: 1em; display: flex; gap: 0.8em;">
   <a href="https://lywww88.github.io/projects/" class="btn" target="_blank">Project Page →</a>
@@ -98,7 +97,7 @@ Each project highlights creative problem-solving and technical implementation, w
 <div style="flex: 0 0 420px;">
   <img src="images/project.jpg"
        alt="More Projects"
-       style="width: 100%; height: 250px; border-radius: 0.5em;" />
+       style="width: 100%; height: auto; border-radius: 0.5em;" />
 </div>
 
 </div>
