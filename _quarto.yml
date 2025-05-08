@@ -16,8 +16,9 @@ website:
             text: Capstone Project
       - text: Startup
         menu:
-          - href: projects/FoodAI.qmd
+          - href: https://forecastai-poc.netlify.app/
             text: FoodAI
+            target: _blank
           - href: https://www.instagram.com/platemateofficial/profilecard
             text: Platemate
             target: _blank
