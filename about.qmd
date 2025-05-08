@@ -10,11 +10,11 @@ menu:
 
 Hello! I’m **Yiwei Lu**, a Business Analytics graduate from UC Irvine with a passion for turning data into actionable insights.
 
-- 💼 **Current Student Analyst** @ Johnson & Johnson  
+- **Current Student Analyst** @ Johnson & Johnson  
   • Building predictive models (Decision Tree, Random Forest, Logistic Regression)  
   • Designing Tableau dashboards for sales forecasting, retention KPIs, and churn analysis  
 
-- 📊 **Former Business Analyst** @ CalHome Inc  
+- **Former Business Analyst** @ CalHome Inc  
   • Automated multi-platform product listings with Python & AWS S3  
   • Analyzed Amazon/Walmart/Home Depot/Shopify sales & inventory to optimize procurement  
   • Evaluated influencer marketing & offline campaigns, delivering data-driven recommendations  
@@ -43,7 +43,7 @@ Hello! I’m **Yiwei Lu**, a Business Analytics graduate from UC Irvine with a p
 
 ---
 
-## 🔗 Connect with Me
+## Connect with Me
 
 - [LinkedIn](https://www.linkedin.com/in/yiwei-lu78)  
-- 📧 yiweil36@uci.edu 
+- yiweil36@uci.edu 
