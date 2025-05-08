@@ -39,14 +39,28 @@
     "href": "projects/index.html",
     "title": "Projects",
     "section": "",
-    "text": "We developed a review sentiment analysis app for Airbnb hosts using XGBoost and NLP. The project segments hosts based on pricing and review behavior, and provides strategic recommendations to increase guest satisfaction and optimize revenue.\nRead More →\n\n\n\nAirbnb Sentiment App"
+    "text": "Built an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.\nRead More →\n\n\n\nFinancial Chatbot"
+  },
+  {
+    "objectID": "projects/index.html#financial-chatbot-for-stock-market-insights",
+    "href": "projects/index.html#financial-chatbot-for-stock-market-insights",
+    "title": "Projects",
+    "section": "",
+    "text": "Built an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.\nRead More →\n\n\n\nFinancial Chatbot"
+  },
+  {
+    "objectID": "projects/index.html#uber-driver-prediction-dashboard",
+    "href": "projects/index.html#uber-driver-prediction-dashboard",
+    "title": "Projects",
+    "section": "🚗 Uber Driver Prediction Dashboard",
+    "text": "🚗 Uber Driver Prediction Dashboard\nDeveloped an interactive dashboard to predict Uber driver performance using machine learning models. It visualizes metrics such as driver ratings, trip durations, and customer feedback.\nRead More →\n\n\n\nUber Dashboard"
   },
   {
     "objectID": "projects/index.html#airbnb-sentiment-dashboard-hosting-strategy",
     "href": "projects/index.html#airbnb-sentiment-dashboard-hosting-strategy",
     "title": "Projects",
-    "section": "",
-    "text": "We developed a review sentiment analysis app for Airbnb hosts using XGBoost and NLP. The project segments hosts based on pricing and review behavior, and provides strategic recommendations to increase guest satisfaction and optimize revenue.\nRead More →\n\n\n\nAirbnb Sentiment App"
+    "section": "🏡 Airbnb Sentiment Dashboard & Hosting Strategy",
+    "text": "🏡 Airbnb Sentiment Dashboard & Hosting Strategy\nWe developed a review sentiment analysis app for Airbnb hosts using XGBoost and NLP. The project segments hosts based on pricing and review behavior, and provides strategic recommendations to increase guest satisfaction and optimize revenue.\nRead More →\n\n\n\nAirbnb Sentiment App"
   },
   {
     "objectID": "projects/index.html#e-commerce-sql-relational-database-design",
@@ -95,6 +109,6 @@
     "href": "index.html#lets-connect",
     "title": "Portfolio of Yiwei Lu",
     "section": "Let’s Connect",
-    "text": "Let’s Connect\n\n   LinkedIn \n   GitHub \n\n\n\n\n   Resume"
+    "text": "Let’s Connect\n\n\n\n\n&lt;a href=\"https://www.linkedin.com/in/yiwei-lu78\" class=\"btn\" target=\"_blank\"&gt;\n  &lt;i class=\"bi bi-linkedin\"&gt;&lt;/i&gt; LinkedIn\n&lt;/a&gt;\n&lt;a href=\"https://github.com/lywww88\" class=\"btn\" target=\"_blank\"&gt;\n  &lt;i class=\"bi bi-github\"&gt;&lt;/i&gt; GitHub\n&lt;/a&gt;\n\n\n\n&lt;a href=\"resume.pdf\" class=\"btn\" target=\"_blank\"&gt;\n  &lt;i class=\"bi bi-download\"&gt;&lt;/i&gt; Resume\n&lt;/a&gt;"
   }
 ]
