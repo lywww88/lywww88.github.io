@@ -109,7 +109,7 @@
     "href": "index.html#featured-projects",
     "title": "Portfolio - Yiwei Lu",
     "section": "Featured Projects",
-    "text": "Featured Projects\n\n\n\nFinancial Chatbot for Stock Market\nBuilt an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.\n\nOpen Article →\n\n\n\n\n\n\n\n\n\n\n\nUber Driver Prediction Dashboard\n🏆 Awarded “Best Use of StrataScratch DC” at Datathon 2025\nDeveloped an interactive dashboard to predict Uber driver performance using machine learning models.\nIt visualizes metrics such as driver ratings, trip durations, and customer feedback.\n\nOpen Demo → Open Article →"
+    "text": "Featured Projects\n\n\n\nFinancial Chatbot for Stock Market\nBuilt an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.\n\nOpen Article →\n\n\n\n\n\n\n\n\n\n\n\nUber Driver Prediction Dashboard\n🏆 Awarded “Best Use of StrataScratch DC” at Datathon 2025 🏆\nDeveloped an interactive dashboard to predict Uber driver performance using machine learning models.\nIt visualizes metrics such as driver ratings, trip durations, and customer feedback.\n\nOpen Demo →\n\n\n\n\n\n\n&lt;a href=\"https://devpost.com/software/uber-driver-conversion-analysis\" class=\"btn\" target=\"_blank\"&gt;Open Article →&lt;/a&gt;"
   },
   {
     "objectID": "index.html#lets-connect",
