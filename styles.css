@@ -2,7 +2,7 @@
 .navbar {
   justify-content: flex-start !important;      /* 左对齐菜单 */
   align-items: center !important;              /* 垂直居中 */
-  min-height: 80px !important;                /* 撑开整体高度 */
+  min-height: 60px !important;                 /* 撑开整体高度 */
 }
 
 .navbar-nav {
@@ -17,12 +17,13 @@
 }
 
 .navbar-brand img {
-  height: 200px !important;                    /* logo 尺寸 */
-  background-color: red !important;
+  height: 120px !important;                    /* logo 尺寸 */
+  max-height: unset !important;                /* 取消 Bootstrap 限制 */
   width: auto !important;
   object-fit: contain;
   padding: 0 !important;
   margin: 0 !important;
+  display: block !important;
 }
 
 /* === 全站按钮样式（.btn） === */
