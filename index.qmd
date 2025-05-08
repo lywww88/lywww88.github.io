@@ -43,7 +43,7 @@ Outside of work, you’ll find me exploring new machine learning techniques, cra
 
   <!-- 右侧图片 -->
   <div style="flex: 0 0 180px;">
-    <img src="../images/financial-chatbot.png" alt="Chatbot Image" style="width: 100%; border-radius: 0.5em;" />
+    <img src="images/financial-chatbot.png" alt="Chatbot Image" style="width: 100%; border-radius: 0.5em;" />
   </div>
 
 </div>
