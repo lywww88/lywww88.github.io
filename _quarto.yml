@@ -30,6 +30,6 @@ format:
     theme:
       - cosmo
     toc: true
-    allow-raw-html: true     # 一定要打开，否则原生 <table> 等 HTML 会被当文本
+    allow-raw-html: true     # 支持原生 <table>、<div> 等 HTML
     css:
-      - styles.css           # 自定义样式文件，放在最后以覆盖默认
+      - styles.css           # 自定义样式文件
