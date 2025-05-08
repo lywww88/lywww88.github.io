@@ -55,7 +55,8 @@ Built an AI chatbot that delivers real-time stock analysis by integrating LLMs w
 <!-- 左侧文字内容 -->
 <div style="flex: 1;" markdown="1">
 **Uber Driver Prediction Dashboard**  
-<small>Datathon 2025 Competition</small>
+<small><em>Datathon 2025 Competition</em></small>  
+
 <small>🏆 “Best Use of StrataScratch DC” 🏆</small>
 
 
@@ -72,7 +73,7 @@ It visualizes metrics such as driver ratings, trip durations, and customer feedb
 <div style="flex: 0 0 420px;">
   <img src="images/datathon.jpg"
        alt="Uber Dashboard"
-       style="width: 100%; height: auto; border-radius: 0.5em;" />
+       style="width: 100%; height: 250px; border-radius: 0.5em;" />
 </div>
 
 </div>
