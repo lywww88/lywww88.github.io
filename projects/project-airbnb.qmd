@@ -4,7 +4,7 @@ format:
   html:
     page-layout: full
     toc: false
-    css: false
+    css: []         # ✅ 不加载默认 CSS
     include-in-header: false
     include-after-body: false
     page-footer: false
