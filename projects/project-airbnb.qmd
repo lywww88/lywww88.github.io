@@ -1,19 +1,16 @@
 ---
-title: "Airbnb Sentiment"
+title: "Airbnb Sentiment Application & Hosting Strategy"
 page-layout: full
 format:
   html:
-    title-block: false
+    title-block: true
 ---
 
 <style>
-h1.title {
-  text-align: center;
-  font-size: 2.2em;
-  margin-top: 1em;
-  margin-bottom: 0.8em;
+.btn-back {
+  margin-bottom: 1.5em;
+  display: inline-block;
 }
-
 iframe.pdf-reader {
   width: 100%;
   height: 90vh;
@@ -23,9 +20,7 @@ iframe.pdf-reader {
 }
 </style>
 
-<a href="index.html" class="btn">← Back</a>
-
-<h1 class="title">Airbnb Sentiment Application & Hosting Strategy</h1>
+<a href="index.html" class="btn btn-back">← Back</a>
 
 <iframe 
   class="pdf-reader"
