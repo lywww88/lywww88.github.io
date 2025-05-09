@@ -80,8 +80,8 @@
     "objectID": "projects/index.html#Sentiment-app",
     "href": "projects/index.html#Sentiment-app",
     "title": "Portfolio - Yiwei Lu",
-    "section": "🏡 Airbnb Review Sentiment App",
-    "text": "🏡 Airbnb Review Sentiment App\nAirbnb Sentiment Application & Hosting Strategy\nWe developed a review sentiment analysis app for Airbnb hosts using XGBoost and NLP. The project segments hosts based on pricing and review behavior, and provides strategic recommendations to increase guest satisfaction and optimize revenue.\nRead More"
+    "section": "🏡 Review Sentiment App",
+    "text": "🏡 Review Sentiment App\nAirbnb Sentiment Application & Hosting Strategy\nWe developed a review sentiment analysis app for Airbnb hosts using XGBoost and NLP. The project segments hosts based on pricing and review behavior, and provides strategic recommendations to increase guest satisfaction and optimize revenue.\nRead More"
   },
   {
     "objectID": "projects/index.html#ecommerce-sql",

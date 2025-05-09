@@ -160,3 +160,19 @@
   gap: 0.5em;
   align-items: center;
 }
+
+/* === Resume 链接扁平强化样式 === */
+.navbar-nav .nav-item a[aria-label="Resume"] {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #444 !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.navbar-nav .nav-item a[aria-label="Resume"]:hover {
+  transform: scale(1.06);
+  color: #007bff !important;
+}
