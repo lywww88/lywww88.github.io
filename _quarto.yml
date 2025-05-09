@@ -1,4 +1,4 @@
-project:
+roject:
   type: website
 
 website:
@@ -8,13 +8,20 @@ website:
     left:
       - href: index.qmd
         text: '<span class="nav-text">Home</span>'
-      - href: projects/index.qmd            # ← 给顶层 Projects 加上 href
-        text: '<span class="nav-text">Projects</span>'
+      - text: '<span class="nav-text">Projects</span>'
         menu:
           - href: projects/index.qmd
             text: '<span class="nav-text">Projects</span>'
-          - href: projects/capstone.qmd
+          - href: projects/index.qmd
             text: '<span class="nav-text">Capstone</span>'
+      - text: '<span class="nav-text">Startup</span>'
+        menu:
+          - href: https://forecastai-poc.netlify.app/
+            text: '<span class="nav-text">Forecast AI</span>'
+            target: _blank
+          - href: https://www.instagram.com/platemateofficial/profilecard
+            text: '<span class="nav-text">Platemate</span>'
+            target: _blank
       - href: about.qmd
         text: '<span class="nav-text">About</span>'
     right:
@@ -25,7 +32,7 @@ website:
         href: https://github.com/lywww88
         aria-label: GitHub
       - icon: database
-        href: https://www.kaggle.com/yiweilu
+        href: https://www.kaggle.com/yiweilu  
         aria-label: Kaggle
       - href: resume.pdf
         text: '<span class="nav-text"><i class="bi bi-download"></i> Resume</span>'
