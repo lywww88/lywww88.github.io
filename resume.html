@@ -1,0 +1,57 @@
+---
+title: ""
+page-layout: full
+format:
+  html:
+    title-block: false
+---
+
+<style>
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 0;
+}
+
+.header-title {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 2em;
+  font-weight: 700;
+  margin: 0;
+}
+
+iframe.pdf-reader {
+  width: 100%;
+  height: 90vh;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.download-btn {
+  text-decoration: none;
+  font-size: 1.2em;
+  color: #007bff;
+  padding: 0.3em 0.6em;
+}
+
+.download-btn:hover {
+  text-decoration: underline;
+}
+</style>
+
+<div class="header-bar">
+  <a href="index.html" class="btn">← Back</a>
+  <h1 class="header-title">Yiwei Lu - Resume</h1>
+  <a href="resume.pdf" class="download-btn" download title="Download Resume">
+    <i class="bi bi-download"></i>
+  </a>
+</div>
+
+<iframe 
+  class="pdf-reader"
+  src="resume.pdf" 
+  title="Resume Reader">
+</iframe>
