@@ -77,7 +77,7 @@ Developed an interactive dashboard to predict Uber driver performance using mach
 
 **Airbnb Sentiment Application & Hosting Strategy**  
 We developed a review sentiment analysis app for Airbnb hosts using XGBoost and NLP. The project segments hosts based on pricing and review behavior, and provides strategic recommendations to increase guest satisfaction and optimize revenue.  
-<a href="project-airbnb.html" class="btn" target="_blank">Read More</a>
+<a href="projects/project-airbnb.html" class="btn" target="_blank">Read More</a>
 
 <img src="../images/airbnb-cover.png">
 :::
