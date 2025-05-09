@@ -1,4 +1,4 @@
-project:
+  project:
   type: website
 
 website:
@@ -34,7 +34,7 @@ website:
       - icon: database
         href: https://www.kaggle.com/yiweilu  
         aria-label: Kaggle
-      - href: resume.pdf
+      - href: resume.html
         text: '<span class="nav-text"><i class="bi bi-download"></i> Resume</span>'
         aria-label: Resume
         target: _blank
