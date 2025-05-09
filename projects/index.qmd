@@ -44,6 +44,14 @@ hr {
   padding: 0.4em 1em;
   font-size: 0.9rem;
 }
+
+/* ✅ 解决 anchor 跳转空白间距 */
+:target::before {
+  content: "";
+  display: block;
+  height: 0px;
+  margin-top: 0px;
+}
 </style>
 
 ::: {.project-card-page}
