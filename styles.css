@@ -161,21 +161,18 @@
   align-items: center;
 }
 
-/* === Resume 高亮按钮样式 === */
-.btn-highlight {
-  background-color: #ffd54f;
-  color: #000;
+/* === Resume 链接扁平强化样式 === */
+.navbar-nav .nav-item a[aria-label="Resume"] {
   font-weight: 600;
-  padding: 0.45em 1em;
-  border-radius: 8px;
-  border: none;
-  font-size: 0.95rem;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  color: #444 !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  transition: transform 0.2s ease, color 0.3s ease;
 }
 
-.btn-highlight:hover {
-  background-color: #ffb300;
-  transform: scale(1.05);
-  color: #000;
+.navbar-nav .nav-item a[aria-label="Resume"]:hover {
+  transform: scale(1.06);
+  color: #007bff !important;
 }
