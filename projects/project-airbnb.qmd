@@ -1,5 +1,5 @@
 ---
-title: "Airbnb Sentiment Application & Hosting Strategy"
+title: ""
 page-layout: full
 format:
   html:
