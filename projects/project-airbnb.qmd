@@ -1,14 +1,23 @@
 ---
-title: ""
+title: "Airbnb Sentiment Paper"
 page-layout: full
 format:
   html:
     title-block: false
-    css: styles.css
 ---
 
+<style>
+iframe.pdf-reader {
+  width: 100%;
+  height: 90vh;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+</style>
+
 <iframe 
+  class="pdf-reader"
   src="project-airbnb.pdf" 
-  style="width: 100%; height: 90vh; border: none;" 
-  title="Airbnb Sentiment Report PDF">
+  title="Airbnb Final Paper PDF">
 </iframe>
