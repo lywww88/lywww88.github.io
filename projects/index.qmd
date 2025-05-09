@@ -7,14 +7,6 @@ format:
 ---
 
 <style>
-/* === 解决锚点跳转被导航栏遮挡（仅作用于本页） === */
-:target::before {
-  content: "";
-  display: block;
-  height: 60px;       /* = navbar 高度 */
-  margin-top: -60px;  /* 抵消同样的距离 */
-  visibility: hidden; /* 不会看到这个“垫片” */
-}
 
 /* 重置 hr 的默认 margin */
 hr {
@@ -65,8 +57,6 @@ Built an AI chatbot that delivers real-time stock analysis by integrating LLMs w
 <img src="../images/financial-chatbot.png">
 :::
 
----
-
 ::: {.project-card-page}
 ## 🚗 Uber Driver Prediction {#uber-prediction}
 
@@ -76,8 +66,6 @@ Developed an interactive dashboard to predict Uber driver performance using mach
 
 <img src="../images/uber-dashboard.png">
 :::
-
----
 
 ::: {.project-card-page}
 ## 🏡 Review Sentiment App {#Sentiment-app}
@@ -89,8 +77,6 @@ We developed a review sentiment analysis app for Airbnb hosts using XGBoost and 
 <img src="../images/airbnb-cover.png">
 :::
 
----
-
 ::: {.project-card-page}
 ## 🛒 E-Commerce SQL {#ecommerce-sql}
 
@@ -100,8 +86,6 @@ Designed a relational data model and normalized schema for an online fashion ret
 
 <img src="../images/sql-cover.png">
 :::
-
----
 
 ::: {.project-card-page}
 ## 📱 Google Pixel Strategy {#pixel-strategy}
@@ -113,8 +97,6 @@ A strategic marketing project focused on diagnosing Google Pixel's weak market s
 <img src="../images/pixel-cover.png">
 :::
 
----
-
 ::: {.project-card-page}
 ## 🩺 Anemia ML Prediction {#anemia-ml}
 
@@ -124,8 +106,6 @@ This project uses blood test data to train models (Decision Trees, Logistic Regr
 
 <img src="../images/anemia-cover.jpg">
 :::
-
----
 
 ::: {.project-card-page}
 ## ⚖️ Obesity Risk Analysis {#obesity-risk}
