@@ -7,7 +7,7 @@ format: html
 <script>
   var password = prompt("Enter password to access this page:");
   if (password !== "mimacuowu") {
-    alert("Wrong password. Redirecting...");
+    alert("Wrong password⚠. Redirecting...");
     window.location.href = "/";
     // 阻止页面继续加载
     document.body.innerHTML = "";
@@ -15,6 +15,6 @@ format: html
 </script>
 
 <!-- ✅ 正文内容写在这里 👇 -->
-## Welcome to My Life Page
+## Welcome to 🦖 BASE
 
-Here’s where I keep some personal reflections, photos, and creative moments.
+Here’s where 🦖 keep some personal reflections, photos, and creative moments.
