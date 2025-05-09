@@ -8,7 +8,6 @@ format:
 
 <style>
 
-/* 重置 hr 的默认 margin */
 hr {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
@@ -46,7 +45,6 @@ hr {
   font-size: 0.9rem;
 }
 
-/* ✅ 去掉卡片内标题顶部空白 */
 .project-card-page h2 {
   margin-top: 0;
 }
@@ -87,7 +85,7 @@ We developed a review sentiment analysis app for Airbnb hosts using XGBoost and 
 
 **E-Commerce SQL & Relational Database Design**  
 Designed a relational data model and normalized schema for an online fashion retailer using Looker. We wrote SQL queries for churn prediction, marketing attribution, product return analysis, and inventory optimization.  
-<a href="project-looker/" class="btn" target="_blank">Read More</a>
+<a href="/projects/project-looker.html/" class="btn" target="_blank">Read More</a>
 
 <img src="../images/sql-cover.png">
 :::
@@ -97,7 +95,7 @@ Designed a relational data model and normalized schema for an online fashion ret
 
 **Repositioning Google Pixel — A Strategic Marketing Analysis**  
 A strategic marketing project focused on diagnosing Google Pixel's weak market share despite strong AI and camera technology. We analyzed brand positioning, competitive threats, and proposed data-driven solutions to strengthen Pixel 9’s presence in the premium smartphone market.  
-<a href="project-pixel/" class="btn" target="_blank">Read More</a>
+<a href="/projects/project-pixel.html" class="btn" target="_blank">Read More</a>
 
 <img src="../images/pixel-cover.png">
 :::
@@ -107,7 +105,7 @@ A strategic marketing project focused on diagnosing Google Pixel's weak market s
 
 **Predicting Anemia with Machine Learning**  
 This project uses blood test data to train models (Decision Trees, Logistic Regression) for anemia prediction. After feature selection and applying SMOTE, we achieved up to 100% recall, aiding early medical detection.  
-<a href="project-anemia/" class="btn" target="_blank">Read More</a>
+<a href="/projects/project-anemia.html" class="btn" target="_blank">Read More</a>
 
 <img src="../images/anemia-cover.jpg">
 :::
@@ -117,7 +115,7 @@ This project uses blood test data to train models (Decision Trees, Logistic Regr
 
 **Obesity Risk Analysis and Behavioral Clustering**  
 An in-depth analysis of obesity using classification, clustering, and ANOVA. We explored lifestyle and dietary variables to understand obesity risks and public health implications.  
-<a href="project-obesity/" class="btn" target="_blank">Read More</a>
+<a href="/projects/project-obesity.html" class="btn" target="_blank">Read More</a>
 
 <img src="../images/obesity-cover.png">
 :::
