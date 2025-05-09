@@ -90,8 +90,8 @@
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* ✅ 悬停时箭头旋转 + 变蓝 */
-.navbar-nav .dropdown-toggle:hover::after {
+/* ✅ 悬停 dropdown（整组）时箭头旋转 */
+.navbar-nav .dropdown:hover .dropdown-toggle::after {
   transform: rotate(180deg);
   color: #007bff;
 }
