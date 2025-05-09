@@ -39,31 +39,6 @@
   display: none !important;
 }
 
-/* === Resume 样式修正 ✅ === */
-.navbar a[aria-label="Resume"] .resume-link {
-  font-weight: 600;
-  font-size: 1rem;
-  color: #444 !important;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4em;
-  transition: transform 0.2s ease, color 0.3s ease;
-}
-
-.navbar a[aria-label="Resume"] .resume-link:hover {
-  transform: scale(1.06);
-  color: #007bff !important;
-}
-
-/* Resume 图标浮动动画 */
-.navbar a[aria-label="Resume"] .resume-link i {
-  transition: transform 0.3s ease;
-}
-
-.navbar a[aria-label="Resume"] .resume-link:hover i {
-  transform: translateY(-2px);
-}
-
 /* === 通用 nav-text 下划线动画 + 当前页高亮 === */
 .nav-text {
   position: relative;
@@ -93,26 +68,38 @@
   width: 100%;
 }
 
-/* === Dropdown 箭头优化 === */
+/* === Dropdown 箭头优化 + 翻转动画 === */
 .navbar-nav .dropdown-toggle {
   display: inline-flex !important;
   align-items: center !important;
   white-space: nowrap !important;
   gap: 0.4em;
+  transition: all 0.3s ease;
 }
 
 .navbar-nav .dropdown-toggle::after {
   content: "▾";
-  display: inline !important;
-  font-size: 1.3em;
+  display: inline-block;
+  font-size: 1em;
   line-height: 1;
   color: #666;
-  margin-left: 0.25em;
+  margin-left: 0.2em;
   vertical-align: middle;
   position: relative;
-  top: 0.05em;
-  border: none !important;
-  transform: none !important;
+  top: 0.15em;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* ✅ 悬停时箭头旋转 + 变蓝 */
+.navbar-nav .dropdown-toggle:hover::after {
+  transform: rotate(180deg);
+  color: #007bff;
+}
+
+/* ✅ 如果 Quarto/Bootstrap 渲染菜单后加了 aria-expanded，则展开状态时也翻转 */
+.navbar-nav .dropdown-toggle[aria-expanded="true"]::after {
+  transform: rotate(180deg);
+  color: #007bff;
 }
 
 /* === 按钮样式 === */
