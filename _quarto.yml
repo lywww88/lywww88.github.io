@@ -35,9 +35,8 @@ website:
         href: https://www.kaggle.com/yiweilu  
         aria-label: Kaggle
       - href: resume.pdf
-        text: Resume
-        icon: download
-        class: btn-highlight
+        text: '<span class="resume-link"><i class="bi bi-download"></i> Resume</span>'
+        aria-label: Resume
         target: _blank
       - href: ww.html
         text: 🦖
