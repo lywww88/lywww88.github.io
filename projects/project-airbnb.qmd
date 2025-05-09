@@ -1,1 +1,9 @@
+---
+title: "Airbnb Sentiment PDF"
+format:
+  html:
+    theme: cosmo
+    toc: false
+---
 
+<iframe src="project-airbnb.pdf" width="100%" height="900px" style="border: none;"></iframe>
