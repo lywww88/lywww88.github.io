@@ -1,88 +1,123 @@
 ---
 title: ""
 page-layout: full
+format:
+  html:
+    title-block: false
 ---
 
-::: {.project-card}
+<style>
+.project-card-page {
+  border: 1px solid #e0e0e0;
+  border-radius: 0.5em;
+  padding: 1.5em;
+  margin-bottom: 1.5em;
+  transition: box-shadow 0.3s ease;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.project-card-page:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.project-card-page img {
+  display: block;
+  margin: 1.5em auto;
+  max-width: 100%;
+  width: 600px;
+  height: auto;
+  border-radius: 0.5em;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.project-card-page .btn {
+  margin-top: 1em;
+  padding: 0.4em 1em;
+  font-size: 0.9rem;
+}
+</style>
+
+::: {.project-card-page}
 ## 🤖 Financial Chatbot {#financial-chatbot}
 
 **Financial Chatbot for Stock Market Insights**  
 Built an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.  
 <a href="https://medium.com/@dylankl_74733/revolutionizing-stock-market-insights-the-financial-chatbot-that-empowers-investors-d1d8197e6c13" class="btn" target="_blank">Read More</a>
 
-<img src="../images/financial-chatbot.png" width="600px">
+<img src="../images/financial-chatbot.png">
 :::
 
 ---
 
-::: {.project-card}
+::: {.project-card-page}
 ## 🚗 Uber Prediction {#uber-prediction}
 
 **Uber Driver Prediction Dashboard**  
 Developed an interactive dashboard to predict Uber driver performance using machine learning models. It visualizes metrics such as driver ratings, trip durations, and customer feedback.  
 <a href="https://syntax3rr0r1.netlify.app/" class="btn" target="_blank">Read More</a>
 
-<img src="../images/uber-dashboard.png" width="600px">
+<img src="../images/uber-dashboard.png">
 :::
 
 ---
 
-::: {.project-card}
+::: {.project-card-page}
 ## 🏡 Airbnb App {#airbnb-app}
 
 **Airbnb Sentiment Dashboard & Hosting Strategy**  
 We developed a review sentiment analysis app for Airbnb hosts using XGBoost and NLP. The project segments hosts based on pricing and review behavior, and provides strategic recommendations to increase guest satisfaction and optimize revenue.  
 <a href="project-airbnb/" class="btn" target="_blank">Read More</a>
 
-<img src="../images/airbnb-cover.png" width="600px">
+<img src="../images/airbnb-cover.png">
 :::
 
 ---
 
-::: {.project-card}
+::: {.project-card-page}
 ## 🛒 E-Commerce SQL {#ecommerce-sql}
 
 **E-Commerce SQL & Relational Database Design**  
 Designed a relational data model and normalized schema for an online fashion retailer using Looker. We wrote SQL queries for churn prediction, marketing attribution, product return analysis, and inventory optimization.  
 <a href="project-looker/" class="btn" target="_blank">Read More</a>
 
-<img src="../images/sql-cover.png" width="600px">
+<img src="../images/sql-cover.png">
 :::
 
 ---
 
-::: {.project-card}
+::: {.project-card-page}
 ## 📱 Google Pixel Strategy {#pixel-strategy}
 
 **Repositioning Google Pixel — A Strategic Marketing Analysis**  
 A strategic marketing project focused on diagnosing Google Pixel's weak market share despite strong AI and camera technology. We analyzed brand positioning, competitive threats, and proposed data-driven solutions to strengthen Pixel 9’s presence in the premium smartphone market.  
 <a href="project-pixel/" class="btn" target="_blank">Read More</a>
 
-<img src="../images/pixel-cover.png" width="600px">
+<img src="../images/pixel-cover.png">
 :::
 
 ---
 
-::: {.project-card}
+::: {.project-card-page}
 ## 🩺 Anemia ML Prediction {#anemia-ml}
 
 **Predicting Anemia with Machine Learning**  
 This project uses blood test data to train models (Decision Trees, Logistic Regression) for anemia prediction. After feature selection and applying SMOTE, we achieved up to 100% recall, aiding early medical detection.  
 <a href="project-anemia/" class="btn" target="_blank">Read More</a>
 
-<img src="../images/anemia-cover.jpg" width="600px">
+<img src="../images/anemia-cover.jpg">
 :::
 
 ---
 
-::: {.project-card}
+::: {.project-card-page}
 ## ⚖️ Obesity Risk Analysis {#obesity-risk}
 
 **Obesity Risk Analysis and Behavioral Clustering**  
 An in-depth analysis of obesity using classification, clustering, and ANOVA. We explored lifestyle and dietary variables to understand obesity risks and public health implications.  
 <a href="project-obesity/" class="btn" target="_blank">Read More</a>
 
-<img src="../images/obesity-cover.png" width="600px">
+<img src="../images/obesity-cover.png">
 :::
 
 <p style="text-align: center; color: #888; font-size: 0.85em; margin-top: 3em;">
