@@ -1,3 +1,8 @@
+/* === 隐藏默认下拉箭头 === */
+.navbar-nav .dropdown-toggle::after {
+  content: none !important;
+}
+
 /* === NAVBAR 样式整合 === */
 .navbar {
   justify-content: flex-start !important;
@@ -74,25 +79,25 @@
   align-items: center !important;
   white-space: nowrap !important;
   gap: 0.4em;
-  position: relative;    /* 让 ::before 有定位上下文 */
+  position: relative;
 }
 
 .navbar-nav .dropdown-toggle::before {
-  content: "▾";           /* 使用向下三角 */
+  content: "▾";
   display: inline-block;
-  font-size: 1em;
+  font-size: 1.5em;
   line-height: 1;
   color: #666;
   margin-left: 0.2em;
-  transform: rotate(-90deg);    /* 先旋转到向左 */
+  transform: rotate(-90deg);
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* 鼠标悬停或菜单聚焦时 → 翻转到向下 */
+/* 悬停或聚焦时 翻转到向下 */
 .navbar-nav .dropdown:hover .dropdown-toggle::before,
 .navbar-nav .dropdown:focus-within .dropdown-toggle::before {
-  transform: rotate(0deg);     /* 旋回到向下 */
-  color: #007bff;              /* 可选：变蓝强调 */
+  transform: rotate(0deg);
+  color: #007bff;
 }
 
 /* === 按钮样式 === */
