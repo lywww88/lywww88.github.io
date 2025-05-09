@@ -68,7 +68,7 @@
   width: 100%;
 }
 
-/* === Dropdown 箭头优化 + 翻转动画 === */
+/* === Dropdown 箭头优化 + 翻转动画（hover & focus-within） === */
 .navbar-nav .dropdown-toggle {
   display: inline-flex !important;
   align-items: center !important;
@@ -90,14 +90,9 @@
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* ✅ 悬停 dropdown（整组）时箭头旋转 */
-.navbar-nav .dropdown:hover .dropdown-toggle::after {
-  transform: rotate(180deg);
-  color: #007bff;
-}
-
-/* ✅ 如果 Quarto/Bootstrap 渲染菜单后加了 aria-expanded，则展开状态时也翻转 */
-.navbar-nav .dropdown-toggle[aria-expanded="true"]::after {
+/* 鼠标悬停整个 .dropdown 或者聚焦其中任意子元素时翻转 */
+.navbar-nav .dropdown:hover .dropdown-toggle::after,
+.navbar-nav .dropdown:focus-within .dropdown-toggle::after {
   transform: rotate(180deg);
   color: #007bff;
 }
