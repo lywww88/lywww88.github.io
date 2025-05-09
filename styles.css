@@ -39,6 +39,31 @@
   display: none !important;
 }
 
+/* === Resume 样式修正 ✅ === */
+.navbar a[aria-label="Resume"] .resume-link {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #444 !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.navbar a[aria-label="Resume"] .resume-link:hover {
+  transform: scale(1.06);
+  color: #007bff !important;
+}
+
+/* Resume 图标浮动动画 */
+.navbar a[aria-label="Resume"] .resume-link i {
+  transition: transform 0.3s ease;
+}
+
+.navbar a[aria-label="Resume"] .resume-link:hover i {
+  transform: translateY(-2px);
+}
+
 /* === 通用 nav-text 下划线动画 + 当前页高亮 === */
 .nav-text {
   position: relative;
@@ -73,13 +98,13 @@
   display: inline-flex !important;
   align-items: center !important;
   white-space: nowrap !important;
-  gap: 0.35em;
+  gap: 0.4em;
 }
 
 .navbar-nav .dropdown-toggle::after {
   content: "▾";
   display: inline !important;
-  font-size: 1.5em;
+  font-size: 1.3em;
   line-height: 1;
   color: #666;
   margin-left: 0.25em;
@@ -159,27 +184,4 @@
   align-items: center;
 }
 
-/* === Resume 样式修正 ✅ === */
-.navbar a[aria-label="Resume"] .resume-link {
-  font-weight: 600;
-  font-size: 1rem;
-  color: #444 !important;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4em;
-  transition: transform 0.2s ease, color 0.3s ease;
-}
 
-.navbar a[aria-label="Resume"] .resume-link:hover {
-  transform: scale(1.06);
-  color: #007bff !important;
-}
-
-/* Resume 图标浮动动画 */
-.navbar a[aria-label="Resume"] .resume-link i {
-  transition: transform 0.3s ease;
-}
-
-.navbar a[aria-label="Resume"] .resume-link:hover i {
-  transform: translateY(-2px);
-}
