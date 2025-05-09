@@ -3,75 +3,87 @@ title: Projects
 page-layout: full
 ---
 
+::: {.project-card}
 ## 🤖 Financial Chatbot {#financial-chatbot}
 
 **Financial Chatbot for Stock Market Insights**  
 Built an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.  
-[Read More →](https://medium.com/@dylankl_74733/revolutionizing-stock-market-insights-the-financial-chatbot-that-empowers-investors-d1d8197e6c13)
+<a href="https://medium.com/@dylankl_74733/revolutionizing-stock-market-insights-the-financial-chatbot-that-empowers-investors-d1d8197e6c13" class="btn" target="_blank">Read More</a>
 
 ![Financial Chatbot](../images/financial-chatbot.png){width=600px}
+:::
 
 ---
 
+::: {.project-card}
 ## 🚗 Uber Prediction {#uber-prediction}
 
 **Uber Driver Prediction Dashboard**  
 Developed an interactive dashboard to predict Uber driver performance using machine learning models. It visualizes metrics such as driver ratings, trip durations, and customer feedback.  
-[Read More →](https://syntax3rr0r1.netlify.app/)
+<a href="https://syntax3rr0r1.netlify.app/" class="btn" target="_blank">Read More</a>
 
 ![Uber Dashboard](../images/uber-dashboard.png){width=600px}
+:::
 
 ---
 
+::: {.project-card}
 ## 🏡 Airbnb App {#airbnb-app}
 
 **Airbnb Sentiment Dashboard & Hosting Strategy**  
 We developed a review sentiment analysis app for Airbnb hosts using XGBoost and NLP. The project segments hosts based on pricing and review behavior, and provides strategic recommendations to increase guest satisfaction and optimize revenue.  
-[Read More →](project-airbnb/)
+<a href="project-airbnb/" class="btn" target="_blank">Read More</a>
 
 ![Airbnb Sentiment App](../images/airbnb-cover.png){width=600px}
+:::
 
 ---
 
+::: {.project-card}
 ## 🛒 E-Commerce SQL {#ecommerce-sql}
 
 **E-Commerce SQL & Relational Database Design**  
 Designed a relational data model and normalized schema for an online fashion retailer using Looker. We wrote SQL queries for churn prediction, marketing attribution, product return analysis, and inventory optimization.  
-[Read More →](project-looker/)
+<a href="project-looker/" class="btn" target="_blank">Read More</a>
 
 ![SQL E-commerce Project](../images/sql-cover.png){width=600px}
+:::
 
 ---
 
+::: {.project-card}
 ## 📱 Google Pixel Strategy {#pixel-strategy}
 
 **Repositioning Google Pixel — A Strategic Marketing Analysis**  
 A strategic marketing project focused on diagnosing Google Pixel's weak market share despite strong AI and camera technology. We analyzed brand positioning, competitive threats, and proposed data-driven solutions to strengthen Pixel 9’s presence in the premium smartphone market.  
-[Read More →](project-pixel/)
+<a href="project-pixel/" class="btn" target="_blank">Read More</a>
 
 ![Google Pixel Project](../images/pixel-cover.png){width=600px}
+:::
 
 ---
 
+::: {.project-card}
 ## 🩺 Anemia ML Prediction {#anemia-ml}
 
 **Predicting Anemia with Machine Learning**  
 This project uses blood test data to train models (Decision Trees, Logistic Regression) for anemia prediction. After feature selection and applying SMOTE, we achieved up to 100% recall, aiding early medical detection.  
-[Read More →](project-anemia/)
+<a href="project-anemia/" class="btn" target="_blank">Read More</a>
 
 ![Anemia Prediction](../images/anemia-cover.jpg){width=600px}
+:::
 
 ---
 
+::: {.project-card}
 ## ⚖️ Obesity Risk Analysis {#obesity-risk}
 
 **Obesity Risk Analysis and Behavioral Clustering**  
 An in-depth analysis of obesity using classification, clustering, and ANOVA. We explored lifestyle and dietary variables to understand obesity risks and public health implications.  
-[Read More →](project-obesity/)
+<a href="project-obesity/" class="btn" target="_blank">Read More</a>
 
 ![Obesity Risk Analysis](../images/obesity-cover.png){width=600px}
-
-
+:::
 
 <p style="text-align: center; color: #888; font-size: 0.85em; margin-top: 3em;">
   © 2025 Yiwei Lu. All rights reserved.
