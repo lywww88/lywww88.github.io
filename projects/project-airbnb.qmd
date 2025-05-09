@@ -1,9 +1,31 @@
 ---
 title: ""
-page-layout: full
 format:
   html:
-    title-block: false
+    page-layout: full
+    toc: false
+    css: false
+    include-in-header: false
+    include-after-body: false
+    page-footer: false
+    include-before-body: |
+      <style>
+        .navbar, .page-header, .page-footer {
+          display: none !important;
+        }
+        body, html {
+          margin: 0;
+          padding: 0;
+          height: 100%;
+          overflow: hidden;
+          background: #fff;
+        }
+        iframe {
+          width: 100%;
+          height: 100vh;
+          border: none;
+        }
+      </style>
 ---
 
-<iframe src="project-airbnb.pdf" width="100%" height="1600px" style="border: none;"></iframe>
+<iframe src="project-airbnb.pdf"></iframe>
