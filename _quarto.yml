@@ -37,6 +37,7 @@ website:
       - href: resume.pdf
         text: Resume
         icon: download
+        class: btn-highlight
         target: _blank
       - href: ww.html
         text: 🦖
