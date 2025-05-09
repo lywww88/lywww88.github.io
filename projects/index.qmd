@@ -7,6 +7,14 @@ format:
 ---
 
 <style>
+/* 重置 hr 的默认 margin */
+hr {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  border: none;
+  border-top: 1px solid #eee;
+}
+
 .project-card-page {
   border: 1px solid #e0e0e0;
   border-radius: 0.5em;
@@ -51,7 +59,7 @@ Built an AI chatbot that delivers real-time stock analysis by integrating LLMs w
 ---
 
 ::: {.project-card-page}
-## 🚗 Uber Prediction {#uber-prediction}
+## 🚗 Uber Driver Prediction {#uber-prediction}
 
 **Uber Driver Prediction Dashboard**  
 Developed an interactive dashboard to predict Uber driver performance using machine learning models. It visualizes metrics such as driver ratings, trip durations, and customer feedback.  
@@ -63,9 +71,9 @@ Developed an interactive dashboard to predict Uber driver performance using mach
 ---
 
 ::: {.project-card-page}
-## 🏡 Airbnb App {#airbnb-app}
+## 🏡 Airbnb Review Sentiment App {#Sentiment-app}
 
-**Airbnb Sentiment Dashboard & Hosting Strategy**  
+**Airbnb Sentiment Application & Hosting Strategy**  
 We developed a review sentiment analysis app for Airbnb hosts using XGBoost and NLP. The project segments hosts based on pricing and review behavior, and provides strategic recommendations to increase guest satisfaction and optimize revenue.  
 <a href="project-airbnb/" class="btn" target="_blank">Read More</a>
 
