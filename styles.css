@@ -1,3 +1,12 @@
+/* === 解决锚点跳转被导航栏遮挡 === */
+:target::before {
+  content: "";
+  display: block;
+  height: 60px;       /* = 你的 navbar 高度 */
+  margin-top: -60px;   /* 向上抵消同样距离 */
+  visibility: hidden;
+}
+
 /* === 隐藏默认下拉箭头 === */
 .navbar-nav .dropdown-toggle::after {
   content: none !important;
