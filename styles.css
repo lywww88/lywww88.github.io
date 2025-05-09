@@ -79,7 +79,7 @@
 .navbar-nav .dropdown-toggle::after {
   content: "▾";
   display: inline !important;
-  font-size: 1em;
+  font-size: 1.5em;
   line-height: 1;
   color: #666;
   margin-left: 0.25em;
@@ -159,27 +159,27 @@
   align-items: center;
 }
 
-/* === Resume 链接扁平强化样式（修正选择器） === */
-.navbar a[aria-label="Resume"] {
+/* === Resume 样式修正 ✅ === */
+.navbar a[aria-label="Resume"] .resume-link {
   font-weight: 600;
   font-size: 1rem;
   color: #444 !important;
   display: inline-flex;
   align-items: center;
-  gap: 0.35em;
+  gap: 0.4em;
   transition: transform 0.2s ease, color 0.3s ease;
 }
 
-.navbar a[aria-label="Resume"]:hover {
+.navbar a[aria-label="Resume"] .resume-link:hover {
   transform: scale(1.06);
   color: #007bff !important;
 }
 
-/* Resume 图标浮动动效（可选） */
-.resume-link i {
+/* Resume 图标浮动动画 */
+.navbar a[aria-label="Resume"] .resume-link i {
   transition: transform 0.3s ease;
 }
 
-.resume-link:hover i {
+.navbar a[aria-label="Resume"] .resume-link:hover i {
   transform: translateY(-2px);
 }
