@@ -68,33 +68,31 @@
   width: 100%;
 }
 
-/* === Dropdown 箭头优化 + 翻转动画（hover & focus-within） === */
+/* === Dropdown 箭头：初始向左，hover/打开时向下 === */
 .navbar-nav .dropdown-toggle {
   display: inline-flex !important;
   align-items: center !important;
   white-space: nowrap !important;
   gap: 0.4em;
-  transition: all 0.3s ease;
+  position: relative;    /* 让 ::before 有定位上下文 */
 }
 
-.navbar-nav .dropdown-toggle::after {
-  content: "▾";
+.navbar-nav .dropdown-toggle::before {
+  content: "▾";           /* 使用向下三角 */
   display: inline-block;
   font-size: 1em;
   line-height: 1;
   color: #666;
   margin-left: 0.2em;
-  vertical-align: middle;
-  position: relative;
-  top: 0.15em;
+  transform: rotate(-90deg);    /* 先旋转到向左 */
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* 鼠标悬停整个 .dropdown 或者聚焦其中任意子元素时翻转 */
-.navbar-nav .dropdown:hover .dropdown-toggle::after,
-.navbar-nav .dropdown:focus-within .dropdown-toggle::after {
-  transform: rotate(180deg);
-  color: #007bff;
+/* 鼠标悬停或菜单聚焦时 → 翻转到向下 */
+.navbar-nav .dropdown:hover .dropdown-toggle::before,
+.navbar-nav .dropdown:focus-within .dropdown-toggle::before {
+  transform: rotate(0deg);     /* 旋回到向下 */
+  color: #007bff;              /* 可选：变蓝强调 */
 }
 
 /* === 按钮样式 === */
