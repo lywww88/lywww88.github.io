@@ -1,5 +1,5 @@
 ---
-title: Projects
+title: ""
 page-layout: full
 ---
 
@@ -10,7 +10,7 @@ page-layout: full
 Built an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.  
 <a href="https://medium.com/@dylankl_74733/revolutionizing-stock-market-insights-the-financial-chatbot-that-empowers-investors-d1d8197e6c13" class="btn" target="_blank">Read More</a>
 
-![Financial Chatbot](../images/financial-chatbot.png){width=600px}
+<img src="../images/financial-chatbot.png" width="600px">
 :::
 
 ---
@@ -22,7 +22,7 @@ Built an AI chatbot that delivers real-time stock analysis by integrating LLMs w
 Developed an interactive dashboard to predict Uber driver performance using machine learning models. It visualizes metrics such as driver ratings, trip durations, and customer feedback.  
 <a href="https://syntax3rr0r1.netlify.app/" class="btn" target="_blank">Read More</a>
 
-![Uber Dashboard](../images/uber-dashboard.png){width=600px}
+<img src="../images/uber-dashboard.png" width="600px">
 :::
 
 ---
@@ -34,7 +34,7 @@ Developed an interactive dashboard to predict Uber driver performance using mach
 We developed a review sentiment analysis app for Airbnb hosts using XGBoost and NLP. The project segments hosts based on pricing and review behavior, and provides strategic recommendations to increase guest satisfaction and optimize revenue.  
 <a href="project-airbnb/" class="btn" target="_blank">Read More</a>
 
-![Airbnb Sentiment App](../images/airbnb-cover.png){width=600px}
+<img src="../images/airbnb-cover.png" width="600px">
 :::
 
 ---
@@ -46,7 +46,7 @@ We developed a review sentiment analysis app for Airbnb hosts using XGBoost and 
 Designed a relational data model and normalized schema for an online fashion retailer using Looker. We wrote SQL queries for churn prediction, marketing attribution, product return analysis, and inventory optimization.  
 <a href="project-looker/" class="btn" target="_blank">Read More</a>
 
-![SQL E-commerce Project](../images/sql-cover.png){width=600px}
+<img src="../images/sql-cover.png" width="600px">
 :::
 
 ---
@@ -58,7 +58,7 @@ Designed a relational data model and normalized schema for an online fashion ret
 A strategic marketing project focused on diagnosing Google Pixel's weak market share despite strong AI and camera technology. We analyzed brand positioning, competitive threats, and proposed data-driven solutions to strengthen Pixel 9’s presence in the premium smartphone market.  
 <a href="project-pixel/" class="btn" target="_blank">Read More</a>
 
-![Google Pixel Project](../images/pixel-cover.png){width=600px}
+<img src="../images/pixel-cover.png" width="600px">
 :::
 
 ---
@@ -70,7 +70,7 @@ A strategic marketing project focused on diagnosing Google Pixel's weak market s
 This project uses blood test data to train models (Decision Trees, Logistic Regression) for anemia prediction. After feature selection and applying SMOTE, we achieved up to 100% recall, aiding early medical detection.  
 <a href="project-anemia/" class="btn" target="_blank">Read More</a>
 
-![Anemia Prediction](../images/anemia-cover.jpg){width=600px}
+<img src="../images/anemia-cover.jpg" width="600px">
 :::
 
 ---
@@ -82,7 +82,7 @@ This project uses blood test data to train models (Decision Trees, Logistic Regr
 An in-depth analysis of obesity using classification, clustering, and ANOVA. We explored lifestyle and dietary variables to understand obesity risks and public health implications.  
 <a href="project-obesity/" class="btn" target="_blank">Read More</a>
 
-![Obesity Risk Analysis](../images/obesity-cover.png){width=600px}
+<img src="../images/obesity-cover.png" width="600px">
 :::
 
 <p style="text-align: center; color: #888; font-size: 0.85em; margin-top: 3em;">
