@@ -7,6 +7,15 @@ format:
 ---
 
 <style>
+/* === 解决锚点跳转被导航栏遮挡（仅作用于本页） === */
+:target::before {
+  content: "";
+  display: block;
+  height: 60px;       /* = navbar 高度 */
+  margin-top: -60px;  /* 抵消同样的距离 */
+  visibility: hidden; /* 不会看到这个“垫片” */
+}
+
 /* 重置 hr 的默认 margin */
 hr {
   margin-top: 0.5em;
@@ -43,14 +52,6 @@ hr {
   margin-top: 1em;
   padding: 0.4em 1em;
   font-size: 0.9rem;
-}
-
-/* ✅ 解决 anchor 跳转空白间距 */
-:target::before {
-  content: "";
-  display: block;
-  height: 0px;
-  margin-top: 0px;
 }
 </style>
 
