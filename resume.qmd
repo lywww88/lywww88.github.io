@@ -1,62 +1,48 @@
 ---
-title: ""
+title: "Yiwei Lu – Resume"
 format:
   html:
-    page-layout: full      # “全宽”布局要写在 format.html 下
-    title-block: false     # 关闭默认页眉
+    page-layout: full
+    title-block: true
     resources:
-      - Resume.pdf         # 声明要打包的 PDF
+      - Resume.pdf
 ---
 
 <style>
-body { margin: 0; padding: 0; }
-.header-bar {
+.resume-preview-container {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1em;
-  background: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  justify-content: center;
+  margin-top: 2em;
 }
-.header-title { font-size: 1.8rem; margin: 0; }
-.btn, .download-btn {
+
+.resume-preview {
+  width: 90%;
+  height: 90vh;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.download-btn {
+  display: inline-block;
+  margin: 1em auto;
+  padding: 0.6em 1.2em;
+  background-color: #007bff;
+  color: white;
   text-decoration: none;
-  padding: 0.4em 0.8em;
-  border: 1px solid #007bff;
-  border-radius: 4px;
-  color: #007bff;
-  transition: background .2s, color .2s;
+  font-size: 1.1em;
+  border-radius: 6px;
+  transition: background 0.2s;
 }
-.btn:hover, .download-btn:hover {
-  background: #007bff;
-  color: #fff;
-}
-.pdf-reader {
-  width: 100vw;
-  height: calc(100vh - 4em);
-  border: none;
-}
-.fallback-msg {
-  text-align: center;
-  margin: 2em;
-  color: #666;
+.download-btn:hover {
+  background-color: #0056b3;
 }
 </style>
 
-<div class="header-bar">
-  <a href="index.html" class="btn">← Back</a>
-  <h1 class="header-title">Yiwei Lu – Resume</h1>
-  <a href="Resume.pdf" class="download-btn" download>Download PDF</a>
+<div style="text-align: center;">
+  <a href="Resume.pdf" class="download-btn" download>📄 Download PDF</a>
 </div>
 
-<iframe
-  class="pdf-reader"
-  src="Resume.pdf"
-  title="Resume Reader"
-  onerror="this.style.display='none'; document.getElementById('fallback').style.display='block';">
-</iframe>
-
-<div id="fallback" class="fallback-msg" style="display: none;">
-  ⚠️ Resume 加载失败。<br/>
-  <a href="Resume.pdf" download>点击这里下载 PDF</a>
+<div class="resume-preview-container">
+  <embed src="Resume.pdf" type="application/pdf" class="resume-preview" />
 </div>
