@@ -140,11 +140,11 @@
     "text": "Financial Chatbot for Stock Market Insights\nBuilt an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.\nRead More"
   },
   {
-    "objectID": "projects/index.html#uber-prediction",
-    "href": "projects/index.html#uber-prediction",
+    "objectID": "projects/index.html#uber-driver-prediction",
+    "href": "projects/index.html#uber-driver-prediction",
     "title": "Portfolio - Yiwei Lu",
-    "section": "Uber Driver Prediction ",
-    "text": "Uber Driver Prediction \nUber Driver Prediction Dashboard\nAwarded “Best Use of StrataScratch DC” at Datathon 2025 Competition\nDeveloped by Team SYNTAX ERROR, this interactive dashboard predicts Uber driver performance using machine learning models. It visualizes key metrics such as driver ratings, trip durations, and customer feedback.\nRead More"
+    "section": " Uber Driver Prediction",
+    "text": "Uber Driver Prediction\nUber Driver Prediction Dashboard\nAwarded “Best Use of StrataScratch DC” at Datathon 2025 Competition\nDeveloped by Team SYNTAX ERROR, this interactive dashboard predicts Uber driver performance using machine learning models. It visualizes key metrics such as driver ratings, trip durations, and customer feedback.\nRead More"
   },
   {
     "objectID": "projects/index.html#Sentiment-app",
