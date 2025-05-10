@@ -182,21 +182,16 @@ ul.task-list li input[type="checkbox"] {
 
 
 <style>
-h1 {
-  text-align: center;
-  font-size: 1.8em;  
-  font-weight: 700;
-  margin-top: 1em;
-}
-
 .download-btn {
-  display: inline-block;
-  margin: 1em auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  margin: 1em auto 0.5em;
   padding: 0.6em 1.4em;
   background-color: #007bff;
   color: white;
   text-decoration: none;
-  font-size: 1.1em;
+  font-size: 1.05em;
   font-weight: 600;
   border-radius: 6px;
   transition: background 0.2s;
@@ -205,27 +200,30 @@ h1 {
   background-color: #0056b3;
 }
 
+.download-btn svg {
+  width: 1.1em;
+  height: 1.1em;
+  stroke: white;
+}
+
 .resume-container {
   display: flex;
   justify-content: center;
-  padding: 2em 0;
+  padding: 1em 0 2em;
 }
 
 .resume-frame {
   width: 80vw;
   max-width: 850px;
   min-width: 400px;
-  height: 90vh;
+  height: 88vh;
   border: 1px solid #ccc;
   border-radius: 10px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 </style>
-<h1>
-Yiwei Lu – Resume
-</h1>
 <div style="text-align: center;">
-<p><a href="Resume.pdf" class="download-btn" download="">Download Resume</a></p>
+<p><a href="Resume.pdf" class="download-btn" download=""> <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2M7 10l5 5m0 0l5-5m-5 5V4"></path> </svg> Yiwei Lu Resume </a></p>
 </div>
 <div class="resume-container">
 <p><embed src="Resume.pdf" type="application/pdf" class="resume-frame"></p>
