@@ -116,7 +116,7 @@
     "href": "resume.html",
     "title": "Portfolio - Yiwei Lu",
     "section": "",
-    "text": "Yiwei Lu Resume"
+    "text": "Yiwei Lu Resume \n\n\n\n\n\nLet’s stay in touch — here’s where to find me online.\n\n\n  LinkedIn    WhatsApp    GitHub  |   Email Me    Home Page \n\n\n© 2025 Yiwei Lu. All rights reserved."
   },
   {
     "objectID": "projects/project-airbnb.html",
@@ -143,8 +143,8 @@
     "objectID": "projects/index.html#uber-prediction",
     "href": "projects/index.html#uber-prediction",
     "title": "Portfolio - Yiwei Lu",
-    "section": "Uber Driver Prediction",
-    "text": "Uber Driver Prediction\nUber Driver Prediction Dashboard\nDeveloped by Team SYNTAX ERROR, this interactive dashboard predicts Uber driver performance using machine learning models. It visualizes key metrics such as driver ratings, trip durations, and customer feedback.\nAwarded “Best Use of StrataScratch DC” at Datathon 2025 Competition\nRead More"
+    "section": " Uber Driver Prediction",
+    "text": "Uber Driver Prediction\nUber Driver Prediction Dashboard\nAwarded “Best Use of StrataScratch DC” at Datathon 2025 Competition\nDeveloped by Team SYNTAX ERROR, this interactive dashboard predicts Uber driver performance using machine learning models. It visualizes key metrics such as driver ratings, trip durations, and customer feedback.\nRead More"
   },
   {
     "objectID": "projects/index.html#Sentiment-app",
