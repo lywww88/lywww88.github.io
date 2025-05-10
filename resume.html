@@ -40,18 +40,31 @@ iframe.pdf-reader {
 .download-btn:hover {
   text-decoration: underline;
 }
+
+.fallback-msg {
+  text-align: center;
+  color: #888;
+  margin-top: 1em;
+}
 </style>
 
 <div class="header-bar">
   <a href="index.html" class="btn">← Back</a>
   <h1 class="header-title">Yiwei Lu - Resume</h1>
   <a href="resume.pdf" class="download-btn" download title="Download Resume">
-    <i class="bi bi-download"></i>
+    <i class="bi bi-download"></i> Download PDF
   </a>
 </div>
 
-<iframe 
+<iframe
   class="pdf-reader"
-  src="resume.pdf" 
-  title="Resume Reader">
+  src="resume.pdf"
+  title="Resume Reader"
+  onerror="this.style.display='none'; document.getElementById('fallback').style.display='block';">
 </iframe>
+
+<div id="fallback" class="fallback-msg" style="display:none;">
+  ⚠️ The resume couldn't be loaded. 
+  <br />
+  <a href="resume.pdf" download>Click here to download it instead.</a>
+</div>
