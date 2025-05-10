@@ -123,7 +123,7 @@ Discover data-driven projects in machine learning, dashboard design, and analyti
   <a href="mailto:yiweilu36@uci.edu" class="btn">
     <i class="bi bi-envelope"></i> Email Me
   </a>
-  <a href="https://lywww88.github.io/about.html" class="btn" target="_blank">
+  <a href="https://lywww88.github.io/about.html" class="btn">
     <i class="bi bi-person-circle"></i> About Me
   </a>
 </div>
