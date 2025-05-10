@@ -170,4 +170,12 @@
   align-items: center;
 }
 
-
+nav[role="doc-toc"] li a[href="#toc-divider"] {
+  pointer-events: none;        /* 禁用点击 */
+  color: transparent;          /* 隐藏文字 */
+  border-top: 1px solid #ccc;  /* 横线样式 */
+  margin: 0.8em 0;             /* 上下间距 */
+  display: block;              /* 占整行 */
+  height: 1px;                 /* 压缩高度 */
+  line-height: 0;
+}
