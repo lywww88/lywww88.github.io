@@ -1,11 +1,11 @@
 ---
-title: ""
-menu:
-  main:
-    text: "About"
-    href: about.qmd
+title: "About"
+format:
+  html:
     toc: true
     toc-title: ""
+    page-layout: full
+    title-block: false
 ---
 
 # About Me
@@ -90,7 +90,7 @@ Outside of work, I’m a curious learner who enjoys exploring tech trends, visua
   <a href="mailto:yiweilu36@uci.edu" class="btn">
     <i class="bi bi-envelope"></i> Email Me
   </a>
-  <a href="https://lywww88.github.io/" class="btn" target="_blank">
+  <a href="https://lywww88.github.io/" class="btn">
     <i class="bi bi-person-circle"></i> Home Page
   </a>
 </div>
