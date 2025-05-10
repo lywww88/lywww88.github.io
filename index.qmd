@@ -3,7 +3,6 @@ title: ""
 format:
   html: 
     toc: false
-    page-layout: full
 ---
 
 <!-- Profile Section -->
