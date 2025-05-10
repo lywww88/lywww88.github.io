@@ -74,13 +74,11 @@ Built an AI chatbot that delivers real-time stock analysis by integrating LLMs w
 :::
 
 ::: {.project-card-page}
-## Uber Driver Prediction {#uber-prediction}
+## <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Uber_logo_2018.svg" alt="Uber Logo" style="height: 1em; vertical-align: middle; margin-right: 0.4em;"> Uber Driver Prediction {#uber-prediction}
 
 **Uber Driver Prediction Dashboard**  
-
+**Awarded “Best Use of StrataScratch DC” at Datathon 2025 Competition**  
 Developed by Team **SYNTAX ERROR**, this interactive dashboard predicts Uber driver performance using machine learning models. It visualizes key metrics such as driver ratings, trip durations, and customer feedback.
-
-**Awarded “Best Use of StrataScratch DC” at Datathon 2025 Competition**
 
 <a href="https://syntax3rr0r1.netlify.app/" class="btn" target="_blank">Read More</a>
 
