@@ -8,6 +8,17 @@ menu:
     toc-title: ""
 ---
 
+<style>
+nav[role="doc-toc"] li:nth-child(7)::after {
+  content: "";
+  display: block;
+  height: 1px;
+  margin: 0.8em 0;
+  background-color: #ccc;
+  pointer-events: none;
+}
+</style>
+
 # About Me
 
 **Welcome!** I’m **Yiwei Lu (David)** — a Business Analytics graduate from UC Irvine with a focus on transforming data into clear, actionable insights. My background spans projects in healthcare, e-commerce, and technology, where I’ve worked closely with data to support business decisions, streamline operations, and enhance user experiences. I enjoy working at the intersection of data, strategy, and communication — helping teams understand not just what the numbers say, but what they mean.
