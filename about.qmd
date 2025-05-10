@@ -14,6 +14,37 @@ format:
 
 Outside of work, I’m a curious learner who enjoys exploring tech trends, visual storytelling, and problem-solving challenges. I also love to travel, explore new cultures, and capture moments through photography. My free time often includes hiking, snowboarding, badminton, and the occasional adventure off the beaten path—whether it’s trying a new trail or discovering a hidden coffee shop in a new city. Whether in the workplace or beyond, I believe in asking thoughtful questions, staying open-minded, and building connections through shared goals.
 
+---
+
+## Languages
+
+- **Mandarin Chinese:** Native proficiency  
+
+- **English:** Professional working proficiency
+
+---
+
+## Technical Skills
+
+- **Languages & Tools:**  
+  Experience with Python, R, and SPSS for data analysis. Familiar with data visualization and reporting tools such as Tableau, PowerBI and Google Analytics.
+
+- **Cloud Platforms & Databases:**  
+  Background working with AWS services, as well as Microsoft Azure. Comfortable using both SQL and NoSQL databases, including MySQL, PostgreSQL, MongoDB, and Cassandra for scalable data storage and retrieval.
+
+- **Data Management & Analysis:**  
+  Skilled in using Microsoft Excel and Microsoft Access for business reporting. Familiar with processing large datasets and integrating big data systems to extract trends and drive strategic decisions.
+
+- **Soft Skills & Collaboration:**  
+  Strong time management and organizational skills with a proven ability to work independently under tight deadlines. Highly adaptable, with a collaborative mindset and a solution-oriented approach to problem-solving across cross-functional teams.
+
+---
+
+## Education
+
+- **M.S. in Business Analytics**, [University of California, Irvine](https://uci.edu/) *(Expected June 2025)*  
+
+- **B.S. in Computer Information Systems**, [California State Polytechnic University, Pomona](https://www.cpp.edu/) *(May 2021)*
 
 ---
 
@@ -27,38 +58,6 @@ Outside of work, I’m a curious learner who enjoys exploring tech trends, visua
 
 - **Consulting Intern**  
   *Fly Media (Shanghai)* — *May 2019 – Aug 2019*  
-
----
-
-## Education
-
-- **M.S. in Business Analytics**, [University of California, Irvine](https://uci.edu/) *(Expected June 2025)*  
-
-- **B.S. in Computer Information Systems**, [California State Polytechnic University, Pomona](https://www.cpp.edu/) *(May 2021)*
-
----
-
-## Technical Skills
-
-- **Languages & Tools:**  
-  Experience with Python, R, and SPSS for data analysis. Familiar with data visualization and reporting tools such as Tableau, PowerBI and Google Analytics.
-
-- **Cloud Platforms & Databases:**  
-  Background working with AWS services including EC2, S3, and Lambda, as well as Microsoft Azure. Comfortable using both SQL and NoSQL databases, including MySQL, PostgreSQL, MongoDB, and Cassandra for scalable data storage and retrieval.
-
-- **Data Management & Analysis:**  
-  Skilled in using Microsoft Excel and Microsoft Access for business reporting. Familiar with processing large datasets and integrating big data systems to extract trends and drive strategic decisions.
-
-- **Soft Skills & Collaboration:**  
-  Strong time management and organizational skills with a proven ability to work independently under tight deadlines. Highly adaptable, with a collaborative mindset and a solution-oriented approach to problem-solving across cross-functional teams.
-
----
-
-## Languages
-
-- **Mandarin Chinese:** Native proficiency  
-
-- **English:** Professional working proficiency
 
 ---
 
