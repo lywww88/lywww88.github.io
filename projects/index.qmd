@@ -9,6 +9,17 @@ format:
 ---
 
 <style>
+nav[role="doc-toc"] li:nth-child(7)::after {
+  content: "";
+  display: block;
+  height: 1px;
+  margin: 0.8em 0;
+  background-color: #ccc;
+  pointer-events: none;
+}
+</style>
+
+<style>
 
 hr {
   margin-top: 0.5em;
