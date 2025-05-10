@@ -3,30 +3,24 @@ title: "Yiwei Lu – Resume"
 format:
   html:
     page-layout: full
-    title-block: true
+    title-block: false
     resources:
       - Resume.pdf
 ---
 
 <style>
-.resume-preview-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 2em;
+h1 {
+  text-align: center;
+  font-size: 2.2em;
+  font-weight: 700;
+  margin-top: 1em;
 }
 
-.resume-preview {
-  width: 90%;
-  height: 90vh;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-}
-
+/* 下载按钮 */
 .download-btn {
   display: inline-block;
   margin: 1em auto;
-  padding: 0.6em 1.2em;
+  padding: 0.6em 1.4em;
   background-color: #007bff;
   color: white;
   text-decoration: none;
@@ -37,12 +31,32 @@ format:
 .download-btn:hover {
   background-color: #0056b3;
 }
+
+/* PDF 容器 */
+.resume-container {
+  display: flex;
+  justify-content: center;
+  padding: 2em 0;
+}
+
+/* PDF 本体 */
+.resume-frame {
+  width: 80vw;
+  max-width: 850px;
+  min-width: 400px;
+  height: 90vh;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
 </style>
+
+<h1>Yiwei Lu – Resume</h1>
 
 <div style="text-align: center;">
   <a href="Resume.pdf" class="download-btn" download>📄 Download PDF</a>
 </div>
 
-<div class="resume-preview-container">
-  <embed src="Resume.pdf" type="application/pdf" class="resume-preview" />
+<div class="resume-container">
+  <embed src="Resume.pdf" type="application/pdf" class="resume-frame" />
 </div>
