@@ -70,14 +70,26 @@ Outside of work, I’m a curious learner who enjoys exploring tech trends, visua
 
 ---
 
-## Connect with Me
+<p style="text-align: center; color: #aaa; font-size: 0.9em; margin-top: 2em;">
+  Let’s stay in touch — here’s where to find me online.
+</p>
 
-<div class="connect-container">
+<div class="connect-container" style="display: flex; flex-wrap: wrap; gap: 1em; align-items: center;">
   <a href="https://www.linkedin.com/in/yiwei-lu78" class="btn" target="_blank">
     <i class="bi bi-linkedin"></i> LinkedIn
   </a>
+  <a href="https://wa.me/6266736276" class="btn" target="_blank">
+    <i class="bi bi-whatsapp"></i> WhatsApp
+  </a>
+  <a href="https://github.com/lywww88" class="btn" target="_blank">
+    <i class="bi bi-github"></i> GitHub
+  </a>
+  <span style="color: #ccc;">|</span>
   <a href="mailto:yiweilu36@uci.edu" class="btn">
     <i class="bi bi-envelope"></i> Email Me
+  </a>
+  <a href="https://lywww88.github.io/" class="btn" target="_blank">
+    <i class="bi bi-person-circle"></i> Home Page
   </a>
 </div>
 
