@@ -170,12 +170,3 @@
   align-items: center;
 }
 
-/* 在 ToC 的指定位置添加一条横线 */
-nav[role="doc-toc"] li:nth-child(7)::after {
-  content: "";
-  display: block;
-  height: 1px;
-  margin: 0.8em 0;
-  background-color: #ccc;
-  pointer-events: none;
-}
