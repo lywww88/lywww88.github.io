@@ -124,10 +124,7 @@ An in-depth analysis of obesity using classification, clustering, and ANOVA. We 
 <img src="../images/obesity-cover.png">
 :::
 
-<!-- 右侧横线分隔 -->
-<div style="width: 100%; display: flex; justify-content: flex-end; margin: 1em 0;">
-  <div style="width: 200px; border-top: 1px solid #ccc;"></div>
-</div>
+## <span style="display:block; border-top:1px solid #ccc; margin:1em 0;"></span>
 
 ::: {.project-card-page}
 ## Explore Capstone Project {#Capstone}
@@ -139,7 +136,6 @@ Analyzed sales trends and customer churn for J&J’s neurovascular division to u
 
 <img src="../images/JJ.png">
 :::
-
 
 <p style="text-align: center; color: #888; font-size: 0.85em; margin-top: 3em;">
   © 2025 Yiwei Lu. All rights reserved.
