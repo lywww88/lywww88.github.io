@@ -34,7 +34,7 @@ iframe.pdf-reader {
 <div class="header-bar">
   <a href="index.html" class="btn">← Back</a>
   <h1 class="header-title">Airbnb Sentiment Application & Hosting Strategy</h1>
-  <span style="width: 80px;"></span> <!-- 占位元素，保持标题居中 -->
+  <span style="width: 80px;"></span> 
 </div>
 
 <iframe 
