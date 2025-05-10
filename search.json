@@ -143,43 +143,57 @@
     "objectID": "projects/index.html#uber-prediction",
     "href": "projects/index.html#uber-prediction",
     "title": "Portfolio - Yiwei Lu",
-    "section": "🚗 Uber Driver Prediction",
-    "text": "🚗 Uber Driver Prediction\nUber Driver Prediction Dashboard\nDeveloped an interactive dashboard to predict Uber driver performance using machine learning models. It visualizes metrics such as driver ratings, trip durations, and customer feedback.\nRead More"
+    "section": "Uber Driver Prediction",
+    "text": "Uber Driver Prediction\nUber Driver Prediction Dashboard\nDeveloped by Team SYNTAX ERROR, this interactive dashboard predicts Uber driver performance using machine learning models. It visualizes key metrics such as driver ratings, trip durations, and customer feedback.\nAwarded “Best Use of StrataScratch DC” at Datathon 2025 Competition\nRead More"
   },
   {
     "objectID": "projects/index.html#Sentiment-app",
     "href": "projects/index.html#Sentiment-app",
     "title": "Portfolio - Yiwei Lu",
-    "section": "🏡 Review Sentiment App",
-    "text": "🏡 Review Sentiment App\nAirbnb Sentiment Application & Hosting Strategy\nWe developed a review sentiment analysis app for Airbnb hosts using XGBoost and NLP. The project segments hosts based on pricing and review behavior, and provides strategic recommendations to increase guest satisfaction and optimize revenue.\nRead More"
+    "section": "Review Sentiment App",
+    "text": "Review Sentiment App\nAirbnb Sentiment Application & Hosting Strategy\nWe developed a review sentiment analysis app for Airbnb hosts using XGBoost and NLP. The project segments hosts based on pricing and review behavior, and provides strategic recommendations to increase guest satisfaction and optimize revenue.\nRead More"
   },
   {
     "objectID": "projects/index.html#ecommerce-sql",
     "href": "projects/index.html#ecommerce-sql",
     "title": "Portfolio - Yiwei Lu",
-    "section": "🛒 E-Commerce SQL",
-    "text": "🛒 E-Commerce SQL\nE-Commerce SQL & Relational Database Design\nDesigned a relational data model and normalized schema for an online fashion retailer using Looker. We wrote SQL queries for churn prediction, marketing attribution, product return analysis, and inventory optimization.\nRead More"
+    "section": "E-Commerce SQL",
+    "text": "E-Commerce SQL\nE-Commerce SQL & Relational Database Design\nDesigned a relational data model and normalized schema for an online fashion retailer using Looker. We wrote SQL queries for churn prediction, marketing attribution, product return analysis, and inventory optimization.\nRead More"
   },
   {
     "objectID": "projects/index.html#pixel-strategy",
     "href": "projects/index.html#pixel-strategy",
     "title": "Portfolio - Yiwei Lu",
-    "section": "📱 Google Pixel Strategy",
-    "text": "📱 Google Pixel Strategy\nRepositioning Google Pixel — A Strategic Marketing Analysis\nA strategic marketing project focused on diagnosing Google Pixel’s weak market share despite strong AI and camera technology. We analyzed brand positioning, competitive threats, and proposed data-driven solutions to strengthen Pixel 9’s presence in the premium smartphone market.\nRead More"
+    "section": "Google Pixel Strategy",
+    "text": "Google Pixel Strategy\nRepositioning Google Pixel — A Strategic Marketing Analysis\nA strategic marketing project focused on diagnosing Google Pixel’s weak market share despite strong AI and camera technology. We analyzed brand positioning, competitive threats, and proposed data-driven solutions to strengthen Pixel 9’s presence in the premium smartphone market.\nRead More"
   },
   {
     "objectID": "projects/index.html#anemia-ml",
     "href": "projects/index.html#anemia-ml",
     "title": "Portfolio - Yiwei Lu",
-    "section": "🩺 Anemia ML Prediction",
-    "text": "🩺 Anemia ML Prediction\nPredicting Anemia with Machine Learning\nThis project uses blood test data to train models (Decision Trees, Logistic Regression) for anemia prediction. After feature selection and applying SMOTE, we achieved up to 100% recall, aiding early medical detection.\nRead More"
+    "section": "Anemia ML Prediction",
+    "text": "Anemia ML Prediction\nPredicting Anemia with Machine Learning\nThis project uses blood test data to train models (Decision Trees, Logistic Regression) for anemia prediction. After feature selection and applying SMOTE, we achieved up to 100% recall, aiding early medical detection.\nRead More"
   },
   {
     "objectID": "projects/index.html#obesity-risk",
     "href": "projects/index.html#obesity-risk",
     "title": "Portfolio - Yiwei Lu",
-    "section": "⚖️ Obesity Risk Analysis",
-    "text": "⚖️ Obesity Risk Analysis\nObesity Risk Analysis and Behavioral Clustering\nAn in-depth analysis of obesity using classification, clustering, and ANOVA. We explored lifestyle and dietary variables to understand obesity risks and public health implications.\nRead More"
+    "section": "Obesity Risk Analysis",
+    "text": "Obesity Risk Analysis\nObesity Risk Analysis and Behavioral Clustering\nAn in-depth analysis of obesity using classification, clustering, and ANOVA. We explored lifestyle and dietary variables to understand obesity risks and public health implications.\nRead More"
+  },
+  {
+    "objectID": "projects/index.html#capstone-project",
+    "href": "projects/index.html#capstone-project",
+    "title": "Portfolio - Yiwei Lu",
+    "section": "Capstone Project",
+    "text": "Capstone Project"
+  },
+  {
+    "objectID": "projects/index.html#Capstone",
+    "href": "projects/index.html#Capstone",
+    "title": "Portfolio - Yiwei Lu",
+    "section": "Explore Capstone Project",
+    "text": "Explore Capstone Project\nJohnson & Johnson Cerenovus\nAnalyzed sales trends and customer churn for J&J’s neurovascular division to uncover key drivers of revenue growth and retention.\nCapstone Page"
   },
   {
     "objectID": "ww.html",
