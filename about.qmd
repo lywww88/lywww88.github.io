@@ -4,6 +4,8 @@ menu:
   main:
     text: "About"
     href: about.qmd
+    toc: true
+    toc-title: ""
 ---
 
 # About Me
