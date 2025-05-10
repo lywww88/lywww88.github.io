@@ -49,16 +49,16 @@ iframe.pdf-reader {
 </style>
 
 <div class="header-bar">
-  <a href="index.html" class="btn">← Back</a>
+  <a href="/index.html" class="btn">← Back</a>
   <h1 class="header-title">Yiwei Lu - Resume</h1>
-  <a href="Resume.pdf" class="download-btn" download title="Download Resume">
+  <a href="/Resume.pdf" class="download-btn" download title="Download Resume">
     <i class="bi bi-download"></i> Download PDF
   </a>
 </div>
 
 <iframe
   class="pdf-reader"
-  src="Resume.pdf"
+  src="/Resume.pdf"
   title="Resume Reader"
   onerror="this.style.display='none'; document.getElementById('fallback').style.display='block';">
 </iframe>
@@ -66,5 +66,5 @@ iframe.pdf-reader {
 <div id="fallback" class="fallback-msg" style="display: none;">
   ⚠️ The resume couldn't be loaded.  
   <br />
-  <a href="Resume.pdf" download>Click here to download it instead.</a>
+  <a href="/Resume.pdf" download>Click here to download it instead.</a>
 </div>
