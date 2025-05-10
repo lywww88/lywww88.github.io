@@ -1,0 +1,62 @@
+---
+title: ""
+format:
+  html:
+    page-layout: full      # “全宽”布局要写在 format.html 下
+    title-block: false     # 关闭默认页眉
+    resources:
+      - Resume.pdf         # 声明要打包的 PDF
+---
+
+<style>
+body { margin: 0; padding: 0; }
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.header-title { font-size: 1.8rem; margin: 0; }
+.btn, .download-btn {
+  text-decoration: none;
+  padding: 0.4em 0.8em;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  color: #007bff;
+  transition: background .2s, color .2s;
+}
+.btn:hover, .download-btn:hover {
+  background: #007bff;
+  color: #fff;
+}
+.pdf-reader {
+  width: 100vw;
+  height: calc(100vh - 4em);
+  border: none;
+}
+.fallback-msg {
+  text-align: center;
+  margin: 2em;
+  color: #666;
+}
+</style>
+
+<div class="header-bar">
+  <a href="index.html" class="btn">← Back</a>
+  <h1 class="header-title">Yiwei Lu – Resume</h1>
+  <a href="Resume.pdf" class="download-btn" download>Download PDF</a>
+</div>
+
+<iframe
+  class="pdf-reader"
+  src="Resume.pdf"
+  title="Resume Reader"
+  onerror="this.style.display='none'; document.getElementById('fallback').style.display='block';">
+</iframe>
+
+<div id="fallback" class="fallback-msg" style="display: none;">
+  ⚠️ Resume 加载失败。<br/>
+  <a href="Resume.pdf" download>点击这里下载 PDF</a>
+</div>
