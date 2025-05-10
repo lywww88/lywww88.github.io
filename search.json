@@ -102,21 +102,21 @@
     "href": "about.html#mission",
     "title": "Portfolio - Yiwei Lu",
     "section": "Mission",
-    "text": "Mission\n\nTo bridge the gap between raw data and strategic decision-making, empowering businesses to make smarter, faster, and more informed choices.\nI believe data is more than numbers — it’s a narrative waiting to be uncovered. My mission is to transform complex datasets into clear, actionable insights that drive meaningful business outcomes. Whether it’s forecasting trends, optimizing operations, or identifying growth opportunities, I aim to provide tools and analysis that turn uncertainty into confident decision-making.\nWith every project, I strive to combine analytical precision with business intuition — ensuring that data not only informs but inspires.\n\n\n\nLet’s stay in touch — here’s where to find me online.\n\n\n  LinkedIn    WhatsApp    GitHub  |   Email Me    Home Page \n\n\n© 2025 Yiwei Lu. All rights reserved."
+    "text": "Mission\n\nTo bridge the gap between raw data and strategic decision-making, empowering businesses to make smarter, faster, and more informed choices.\nI believe data is more than numbers — it’s a narrative waiting to be uncovered. My mission is to transform complex datasets into clear, actionable insights that drive meaningful business outcomes. Whether it’s forecasting trends, optimizing operations, or identifying growth opportunities, I aim to provide tools and analysis that turn uncertainty into confident decision-making.\nWith every project, I strive to combine analytical precision with business intuition — ensuring that data not only informs but inspires.\n\n\n\nLet’s stay in touch — here’s where to find me online.\n\n\n  LinkedIn    WhatsApp    GitHub  |   Email Me    Home Page \n\n\n\n\n\n© 2025 Yiwei Lu. All rights reserved."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Portfolio - Yiwei Lu",
     "section": "",
-    "text": "Yiwei Lu \n  I believe clarity creates freedom — in data, design, and life. \n\n\n\n\n\n\nFinancial Chatbot for Stock Market\nBuilt an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.\n\nOpen Article →\n\n\n\n\n\n\n\n\n\n\n\nUber Driver Prediction Dashboard\nDatathon 2025 Competition\n🏆 “Best Use of StrataScratch DC” 🏆\nDeveloped an interactive dashboard to predict Uber driver performance using machine learning models.\n\nOpen Demo → Open Article →\n\n\n\n\n\n\n\n\n\n\n\n\nExplore More Projects\nDiscover data-driven projects in machine learning, dashboard design, and analytics. Each showcasing practical solutions with visuals and links.\n\nProject Page →\n\n\n\n\n\n\n\n\n\nLet’s stay in touch — here’s where to find me online.\n\n\n  LinkedIn    WhatsApp    GitHub  |   Email Me    About Me \n\n\n© 2025 Yiwei Lu. All rights reserved."
+    "text": "Yiwei Lu \n  I believe clarity creates freedom — in data, design, and life. \n\n\n\n\n\n\nFinancial Chatbot for Stock Market\nBuilt an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.\n\nOpen Article →\n\n\n\n\n\n\n\n\n\n\n\nUber Driver Prediction Dashboard\nDatathon 2025 Competition\n🏆 “Best Use of StrataScratch DC” 🏆\nDeveloped an interactive dashboard to predict Uber driver performance using machine learning models.\n\nOpen Demo → Open Article →\n\n\n\n\n\n\n\n\n\n\n\n\nExplore More Projects\nDiscover data-driven projects in machine learning, dashboard design, and analytics. Each showcasing practical solutions with visuals and links.\n\nProject Page →\n\n\n\n\n\n\n\n\n\n\n\n\nLet’s stay in touch — here’s where to find me online.\n\n\n  LinkedIn    WhatsApp    GitHub  |   Email Me    About Me \n\n\n\n\n\n© 2025 Yiwei Lu. All rights reserved."
   },
   {
     "objectID": "resume.html",
     "href": "resume.html",
     "title": "Portfolio - Yiwei Lu",
     "section": "",
-    "text": "Yiwei Lu Resume \n\n\n\n\n\n\n\n\nLet’s stay in touch — here’s where to find me online.\n\n\n  LinkedIn    WhatsApp    GitHub  |   Email Me    Home Page \n\n\n\n\n\n© 2025 Yiwei Lu. All rights reserved."
+    "text": "Yiwei Lu Resume \n\n\n\n\n\n\n\n\n\n\n\nLet’s stay in touch — here’s where to find me online.\n\n\n  LinkedIn    WhatsApp    GitHub  |   Email Me    Home Page \n\n\n\n\n\n© 2025 Yiwei Lu. All rights reserved."
   },
   {
     "objectID": "projects/project-airbnb.html",
@@ -143,8 +143,8 @@
     "objectID": "projects/index.html#uber-prediction",
     "href": "projects/index.html#uber-prediction",
     "title": "Portfolio - Yiwei Lu",
-    "section": " Uber Driver Prediction",
-    "text": "Uber Driver Prediction\nUber Driver Prediction Dashboard\nAwarded “Best Use of StrataScratch DC” at Datathon 2025 Competition\nDeveloped by Team SYNTAX ERROR, this interactive dashboard predicts Uber driver performance using machine learning models. It visualizes key metrics such as driver ratings, trip durations, and customer feedback.\nRead More"
+    "section": "Uber Driver Prediction ",
+    "text": "Uber Driver Prediction \nUber Driver Prediction Dashboard\nAwarded “Best Use of StrataScratch DC” at Datathon 2025 Competition\nDeveloped by Team SYNTAX ERROR, this interactive dashboard predicts Uber driver performance using machine learning models. It visualizes key metrics such as driver ratings, trip durations, and customer feedback.\nRead More"
   },
   {
     "objectID": "projects/index.html#Sentiment-app",
