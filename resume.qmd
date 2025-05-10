@@ -11,7 +11,7 @@ format:
 <style>
 h1 {
   text-align: center;
-  font-size: 2.2em;
+  font-size: 1.8em;  
   font-weight: 700;
   margin-top: 1em;
 }
@@ -32,14 +32,12 @@ h1 {
   background-color: #0056b3;
 }
 
-/* PDF 容器 */
 .resume-container {
   display: flex;
   justify-content: center;
   padding: 2em 0;
 }
 
-/* PDF 本体 */
 .resume-frame {
   width: 80vw;
   max-width: 850px;
