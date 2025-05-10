@@ -51,7 +51,7 @@ hr {
 </style>
 
 ::: {.project-card-page}
-## 🤖 Financial Chatbot {#financial-chatbot}
+## Financial Chatbot {#financial-chatbot}
 
 **Financial Chatbot for Stock Market Insights**  
 Built an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.  
@@ -61,17 +61,21 @@ Built an AI chatbot that delivers real-time stock analysis by integrating LLMs w
 :::
 
 ::: {.project-card-page}
-## 🚗 Uber Driver Prediction {#uber-prediction}
+## Uber Driver Prediction {#uber-prediction}
 
 **Uber Driver Prediction Dashboard**  
-Developed an interactive dashboard to predict Uber driver performance using machine learning models. It visualizes metrics such as driver ratings, trip durations, and customer feedback.  
+
+Developed by Team **SYNTAX ERROR**, this interactive dashboard predicts Uber driver performance using machine learning models. It visualizes key metrics such as driver ratings, trip durations, and customer feedback.
+
+**Awarded “Best Use of StrataScratch DC” at Datathon 2025 Competition**
+
 <a href="https://syntax3rr0r1.netlify.app/" class="btn" target="_blank">Read More</a>
 
 <img src="../images/uber-dashboard.png">
 :::
 
 ::: {.project-card-page}
-## 🏡 Review Sentiment App {#Sentiment-app}
+## Review Sentiment App {#Sentiment-app}
 
 **Airbnb Sentiment Application & Hosting Strategy**  
 We developed a review sentiment analysis app for Airbnb hosts using XGBoost and NLP. The project segments hosts based on pricing and review behavior, and provides strategic recommendations to increase guest satisfaction and optimize revenue.  
@@ -81,7 +85,7 @@ We developed a review sentiment analysis app for Airbnb hosts using XGBoost and 
 :::
 
 ::: {.project-card-page}
-## 🛒 E-Commerce SQL {#ecommerce-sql}
+## E-Commerce SQL {#ecommerce-sql}
 
 **E-Commerce SQL & Relational Database Design**  
 Designed a relational data model and normalized schema for an online fashion retailer using Looker. We wrote SQL queries for churn prediction, marketing attribution, product return analysis, and inventory optimization.  
@@ -91,7 +95,7 @@ Designed a relational data model and normalized schema for an online fashion ret
 :::
 
 ::: {.project-card-page}
-## 📱 Google Pixel Strategy {#pixel-strategy}
+## Google Pixel Strategy {#pixel-strategy}
 
 **Repositioning Google Pixel — A Strategic Marketing Analysis**  
 A strategic marketing project focused on diagnosing Google Pixel's weak market share despite strong AI and camera technology. We analyzed brand positioning, competitive threats, and proposed data-driven solutions to strengthen Pixel 9’s presence in the premium smartphone market.  
@@ -101,7 +105,7 @@ A strategic marketing project focused on diagnosing Google Pixel's weak market s
 :::
 
 ::: {.project-card-page}
-## 🩺 Anemia ML Prediction {#anemia-ml}
+## Anemia ML Prediction {#anemia-ml}
 
 **Predicting Anemia with Machine Learning**  
 This project uses blood test data to train models (Decision Trees, Logistic Regression) for anemia prediction. After feature selection and applying SMOTE, we achieved up to 100% recall, aiding early medical detection.  
@@ -111,13 +115,28 @@ This project uses blood test data to train models (Decision Trees, Logistic Regr
 :::
 
 ::: {.project-card-page}
-## ⚖️ Obesity Risk Analysis {#obesity-risk}
+## Obesity Risk Analysis {#obesity-risk}
 
 **Obesity Risk Analysis and Behavioral Clustering**  
 An in-depth analysis of obesity using classification, clustering, and ANOVA. We explored lifestyle and dietary variables to understand obesity risks and public health implications.  
 <a href="/projects/project-obesity.html" class="btn" target="_blank">Read More</a>
 
 <img src="../images/obesity-cover.png">
+:::
+
+<hr>
+
+## Capstone Project
+
+::: {.project-card-page}
+## Explore Capstone Project {#Capstone}
+
+**Johnson & Johnson Cerenovus**  
+Analyzed sales trends and customer churn for J&J’s neurovascular division to uncover key drivers of revenue growth and retention.
+
+<a href="/projects/Capstone.html" class="btn" target="_blank">Capstone Page</a>
+
+<img src="../images/JJ.jpg">
 :::
 
 <p style="text-align: center; color: #888; font-size: 0.85em; margin-top: 3em;">
