@@ -4,6 +4,8 @@ page-layout: full
 format:
   html:
     title-block: false
+    toc: true
+    toc-title: "Projects"
 ---
 
 <style>
