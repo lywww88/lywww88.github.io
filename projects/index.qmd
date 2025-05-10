@@ -75,9 +75,9 @@ Built an AI chatbot that delivers real-time stock analysis by integrating LLMs w
 
 ::: {.project-card-page}
 
-<h2 id="uber-prediction" style="display: flex; align-items: center; gap: 0.6em; margin: 0;">
+<h2 id="uber-prediction" style="display: flex; align-items: center; gap: 0.6em; margin: 0 0 0.6em 0;">
   <img src="../images/uber.jpg" alt="Uber Logo" style="height: 1.4em; width: 1.4em; object-fit: contain;">
-  Uber Driver Prediction
+  <span style="font-weight: 600;">Uber Driver Prediction</span>
 </h2>
 
 **Uber Driver Prediction Dashboard**  
