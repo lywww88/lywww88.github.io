@@ -19,8 +19,11 @@ website:
           - href: https://forecastai-poc.netlify.app/
             text: '<span class="nav-text">Forecast AI</span>'
             target: _blank
-          - href: https://www.instagram.com/platemateofficial/profilecard
+          - href: https://platemateofficial.netlify.app/
             text: '<span class="nav-text">Platemate</span>'
+            target: _blank
+          - href: https://skillforgeofficial.netlify.app/
+            text: '<span class="nav-text">Skill Forge</span>'
             target: _blank
       - href: about.qmd
         text: '<span class="nav-text">About</span>'
