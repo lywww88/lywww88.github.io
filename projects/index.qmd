@@ -137,7 +137,7 @@ Analyzed sales trends and customer churn for J&J’s neurovascular division to u
 
 <a href="/projects/Capstone.html" class="btn" target="_blank">Capstone Page</a>
 
-<img src="../images/JJ.jpg">
+<img src="../images/JJ.png">
 :::
 
 
