@@ -5,6 +5,7 @@ format:
     toc: true
     toc-title: " "    
     title-block: false
+    page-layout: full
 ---
 
 ## About Me
