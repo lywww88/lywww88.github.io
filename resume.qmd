@@ -1,5 +1,5 @@
 ---
-title: "Yiwei Lu – Resume"
+title: ""
 format:
   html:
     page-layout: full
@@ -54,7 +54,7 @@ h1 {
 <h1>Yiwei Lu – Resume</h1>
 
 <div style="text-align: center;">
-  <a href="Resume.pdf" class="download-btn" download>📄 Download PDF</a>
+  <a href="Resume.pdf" class="download-btn" download>Download Resume</a>
 </div>
 
 <div class="resume-container">
