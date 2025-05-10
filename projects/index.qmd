@@ -124,12 +124,13 @@ An in-depth analysis of obesity using classification, clustering, and ANOVA. We 
 <img src="../images/obesity-cover.png">
 :::
 
-<hr>
-
-## Explore Capstone Project
+<!-- 右侧横线分隔 -->
+<div style="width: 100%; display: flex; justify-content: flex-end; margin: 1em 0;">
+  <div style="width: 200px; border-top: 1px solid #ccc;"></div>
+</div>
 
 ::: {.project-card-page}
-### Johnson & Johnson {#Capstone}
+## Explore Capstone Project {#Capstone}
 
 **Johnson & Johnson Cerenovus Capstone Project**  
 Analyzed sales trends and customer churn for J&J’s neurovascular division to uncover key drivers of revenue growth and retention.
@@ -138,6 +139,7 @@ Analyzed sales trends and customer churn for J&J’s neurovascular division to u
 
 <img src="../images/JJ.jpg">
 :::
+
 
 <p style="text-align: center; color: #888; font-size: 0.85em; margin-top: 3em;">
   © 2025 Yiwei Lu. All rights reserved.
