@@ -4,7 +4,6 @@ format:
   html:
     toc: true
     toc-title: " "    
-    page-layout: full
     title-block: false
 ---
 
