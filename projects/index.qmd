@@ -74,7 +74,7 @@ Built an AI chatbot that delivers real-time stock analysis by integrating LLMs w
 :::
 
 ::: {.project-card-page}
-## <img src="../images/uber.png" alt="Uber Logo" style="height: 1em; vertical-align: middle; margin-right: 0.4em;"> Uber Driver Prediction {#uber-prediction}
+## <img src="../images/uber.jpg" alt="Uber Logo" style="height: 1em; vertical-align: middle; margin-right: 0.4em;"> Uber Driver Prediction {#uber-prediction}
 
 **Uber Driver Prediction Dashboard**  
 **Awarded “Best Use of StrataScratch DC” at Datathon 2025 Competition**  
