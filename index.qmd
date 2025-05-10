@@ -4,7 +4,6 @@ format:
   html: 
     toc: false
     page-layout: full
-    allow-html: true
 ---
 
 <!-- Profile Section -->
