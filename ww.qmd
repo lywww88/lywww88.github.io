@@ -47,11 +47,10 @@ body {
   right: -3px;
   bottom: -3px;
   border-radius: inherit;
-  background: linear-gradient(135deg, #38bdf8, #06b6d4, #3b82f6);
+  background: radial-gradient(circle at center, #38bdf8 0%, transparent 70%);
   z-index: -1;
-  animation: pulseBorder 6s linear infinite;
-  filter: blur(12px);
-  opacity: 0.5;
+  filter: blur(14px);
+  opacity: 0.3;
 }
 
 .protected-content h1,
@@ -89,5 +88,5 @@ body {
 </style>
 
 <div class="protected-content">
-  <p>🦖 WELCOME TO BASE 🦖</p>
+  <p><strong>🦖 WELCOME TO BASE 🦖</strong></p>
 </div> 
