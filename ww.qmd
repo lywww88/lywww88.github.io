@@ -1,20 +1,52 @@
 ---
-title: "ww"
+title: "🦖 BASE"
 format: html
 ---
 
-<!-- 密码保护脚本 -->
+<!-- 🚨 密码保护脚本 -->
 <script>
-  var password = prompt("Enter password to access this page:");
+  const password = prompt("🔒 Access Restricted\nPlease enter your access code:");
   if (password !== "mimacuowu") {
-    alert("Wrong password. Redirecting...");
+    alert("❌ Access Denied.\nRedirecting to surface web...");
     window.location.href = "/";
-    // 阻止页面继续加载
     document.body.innerHTML = "";
   }
 </script>
 
-<!-- ✅ 正文内容写在这里 👇 -->
-## Welcome to 🦖 BASE
+<!-- ✅ 正文 -->
+<style>
+.protected-content {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  color: #e2e8f0;
+  background: #0f172a;
+  padding: 4em 2em;
+  border-radius: 10px;
+  text-align: center;
+  margin: 5em auto;
+  max-width: 600px;
+  box-shadow: 0 0 30px rgba(0, 255, 180, 0.1);
+  animation: fadeIn 1.2s ease-in;
+}
 
-Here’s where 🦖 keep some personal reflections, photos, and creative moments.
+.protected-content h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.3em;
+  color: #38bdf8;
+}
+
+.protected-content p {
+  font-size: 1.1em;
+  color: #94a3b8;
+  margin-top: 0.2em;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+
+<div class="protected-content">
+  <h1>🦖 WELCOME TO BASE</h1>
+  <p>This is your private playground.<br>Reflections, projects, and traces of creative chaos.</p>
+</div>
