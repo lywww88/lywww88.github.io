@@ -157,8 +157,8 @@
     "objectID": "projects/index.html#ecommerce-sql",
     "href": "projects/index.html#ecommerce-sql",
     "title": "Portfolio - Yiwei Lu",
-    "section": "E-Commerce",
-    "text": "E-Commerce\nE-Commerce SQL & Relational Database Design\nDesigned a relational data model and normalized schema for a global fashion retailer. Wrote SQL queries to support churn prediction, marketing attribution, return behavior analysis, and inventory optimization.\nRead More"
+    "section": "E-Commerce Database",
+    "text": "E-Commerce Database\nE-Commerce SQL & Relational Database Design\nDesigned a relational data model and normalized schema for a global fashion retailer. Wrote SQL queries to support churn prediction, marketing attribution, return behavior analysis, and inventory optimization.\nRead More"
   },
   {
     "objectID": "projects/index.html#pixel-strategy",
