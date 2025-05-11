@@ -169,14 +169,14 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -185,7 +185,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page">
 
     
   
@@ -206,36 +206,69 @@ ul.task-list li input[type="checkbox"] {
     document.body.innerHTML = "";
   }
 </script>
-<!-- ✅ 正文 -->
+<!-- ✅ 酷炫样式 -->
 <style>
-.protected-content {
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(ellipse at top, #0f172a 0%, #0a0f1f 100%);
   font-family: 'Segoe UI', system-ui, sans-serif;
-  color: #e2e8f0;
-  background: #0f172a;
+  overflow-x: hidden;
+}
+
+.protected-content {
+  backdrop-filter: blur(20px);
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
   padding: 4em 2em;
-  border-radius: 10px;
   text-align: center;
-  margin: 5em auto;
-  max-width: 600px;
-  box-shadow: 0 0 30px rgba(0, 255, 180, 0.1);
-  animation: fadeIn 1.2s ease-in;
+  color: #e2e8f0;
+  max-width: 640px;
+  margin: 8em auto;
+  box-shadow: 0 0 60px rgba(0, 255, 180, 0.1);
+  position: relative;
+  animation: floatUp 1.2s ease-out;
+}
+
+.protected-content::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, #38bdf8, #06b6d4, #3b82f6);
+  z-index: -1;
+  animation: pulseBorder 6s linear infinite;
+  filter: blur(8px);
+  opacity: 0.6;
 }
 
 .protected-content h1 {
-  font-size: 2.5em;
+  font-size: 2.6em;
   margin-bottom: 0.3em;
   color: #38bdf8;
+  letter-spacing: 1px;
 }
 
 .protected-content p {
   font-size: 1.1em;
-  color: #94a3b8;
-  margin-top: 0.2em;
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin-top: 0.5em;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
+/* 动画效果 */
+@keyframes floatUp {
+  from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseBorder {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 </style>
 <div class="protected-content">
