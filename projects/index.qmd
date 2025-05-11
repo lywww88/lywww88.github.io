@@ -101,7 +101,7 @@ Developed a sentiment analysis app for Airbnb hosts using NLP and XGBoost. The a
 :::
 
 ::: {.project-card-page}
-## E-Commerce {#ecommerce-sql}
+## E-Commerce Database {#ecommerce-sql}
 
 **E-Commerce SQL & Relational Database Design**  
 Designed a relational data model and normalized schema for a global fashion retailer. Wrote SQL queries to support churn prediction, marketing attribution, return behavior analysis, and inventory optimization.
