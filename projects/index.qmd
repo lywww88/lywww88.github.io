@@ -87,7 +87,7 @@ Created an intelligent chatbot that combines large language models with financia
 
 As part of Team SYNTAX ERROR, developed a machine learning dashboard to predict whether new Uber sign-ups would convert into active drivers. Combined XGBoost with KMeans to analyze onboarding patterns, achieving 0.97 AUC. SHAP analysis highlighted onboarding delays and signup source as key drivers.
 
-<a href="https://syntax3rr0r1.netlify.app/" class="btn">Read More</a>
+<a href="https://syntax3rr0r1.netlify.app/" class="btn" target="_blank>Read More</a>
 
 <img src="../images/uber-dashboard.png">
 :::
