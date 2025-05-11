@@ -130,63 +130,63 @@
     "href": "projects/index.html",
     "title": "Portfolio - Yiwei Lu",
     "section": "",
-    "text": "Financial Chatbot for Stock Market Insights\nBuilt an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.\nRead More\n© 2025 Yiwei Lu. All rights reserved."
+    "text": "AI Chatbot for Stock Market Analysis\nCreated an intelligent chatbot that combines large language models with financial data APIs to generate real-time stock insights, enabling users to make better investment choices. Read More\n© 2025 Yiwei Lu. All rights reserved."
   },
   {
     "objectID": "projects/index.html#financial-chatbot",
     "href": "projects/index.html#financial-chatbot",
     "title": "Portfolio - Yiwei Lu",
     "section": "",
-    "text": "Financial Chatbot for Stock Market Insights\nBuilt an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.\nRead More"
+    "text": "AI Chatbot for Stock Market Analysis\nCreated an intelligent chatbot that combines large language models with financial data APIs to generate real-time stock insights, enabling users to make better investment choices. Read More"
   },
   {
     "objectID": "projects/index.html#uber-prediction",
     "href": "projects/index.html#uber-prediction",
     "title": "Portfolio - Yiwei Lu",
     "section": "Prediction Dashboard",
-    "text": "Prediction Dashboard\nUber Driver Prediction Dashboard\nDatathon 2025 Competition\n🏆 “Best Use of StrataScratch DC” 🏆\nDeveloped by Team SYNTAX ERROR, this interactive dashboard predicts Uber driver performance using machine learning models. It visualizes key metrics such as driver ratings, trip durations, and customer feedback.\nRead More"
+    "text": "Prediction Dashboard\nUber Driver Prediction Dashboard\nDatathon 2025 Competition 🏆 “Best Use of StrataScratch DC” 🏆\nAs part of Team SYNTAX ERROR, developed a machine learning dashboard to predict whether new Uber sign-ups would convert into active drivers. Combined XGBoost with KMeans to analyze onboarding patterns, achieving 0.97 AUC. SHAP analysis highlighted onboarding delays and signup source as key drivers.\nRead More"
   },
   {
     "objectID": "projects/index.html#Sentiment-app",
     "href": "projects/index.html#Sentiment-app",
     "title": "Portfolio - Yiwei Lu",
     "section": "Review Sentiment App",
-    "text": "Review Sentiment App\nAirbnb Sentiment Application & Hosting Strategy\nWe developed a review sentiment analysis app for Airbnb hosts using XGBoost and NLP. The project segments hosts based on pricing and review behavior, and provides strategic recommendations to increase guest satisfaction and optimize revenue.\nRead More"
+    "text": "Review Sentiment App\nAirbnb Sentiment Application & Hosting Strategy\nDeveloped a sentiment analysis app for Airbnb hosts using NLP and XGBoost. The app predicts whether a review is positive or negative, visualizes key terms through word clouds, and allows users to flag incorrect predictions. These user-labeled responses are designed to support future supervised model retraining for improved accuracy and adaptability. Read More"
   },
   {
     "objectID": "projects/index.html#ecommerce-sql",
     "href": "projects/index.html#ecommerce-sql",
     "title": "Portfolio - Yiwei Lu",
     "section": "E-Commerce",
-    "text": "E-Commerce\nE-Commerce SQL & Relational Database Design\nDesigned a relational data model and normalized schema for an online fashion retailer using Looker. We wrote SQL queries for churn prediction, marketing attribution, product return analysis, and inventory optimization.\nRead More"
+    "text": "E-Commerce\nE-Commerce SQL & Relational Database Design\nDesigned a relational data model and normalized schema for a global fashion retailer. Wrote SQL queries to support churn prediction, marketing attribution, return behavior analysis, and inventory optimization. Read More"
   },
   {
     "objectID": "projects/index.html#pixel-strategy",
     "href": "projects/index.html#pixel-strategy",
     "title": "Portfolio - Yiwei Lu",
     "section": "Marketing Strategy",
-    "text": "Marketing Strategy\nRepositioning Google Pixel — A Strategic Marketing Analysis\nA strategic marketing project focused on diagnosing Google Pixel’s weak market share despite strong AI and camera technology. We analyzed brand positioning, competitive threats, and proposed data-driven solutions to strengthen Pixel 9’s presence in the premium smartphone market.\nRead More"
+    "text": "Marketing Strategy\nRepositioning Google Pixel — A Strategic Marketing Analysis\nAnalyzed Google Pixel’s weak market penetration despite technical strengths in AI and camera performance. Assessed brand positioning, competitive dynamics, and proposed strategic recommendations to enhance Pixel 9’s presence in the premium smartphone segment. Read More"
   },
   {
     "objectID": "projects/index.html#anemia-ml",
     "href": "projects/index.html#anemia-ml",
     "title": "Portfolio - Yiwei Lu",
     "section": "Anemia Prediction",
-    "text": "Anemia Prediction\nPredicting Anemia with Machine Learning\nThis project uses blood test data to train models (Decision Trees, Logistic Regression) for anemia prediction. After feature selection and applying SMOTE, we achieved up to 100% recall, aiding early medical detection.\nRead More"
+    "text": "Anemia Prediction\nPredicting Anemia with Machine Learning\nDeveloped classification models using blood test data to predict anemia, focusing on early detection support. Leveraged feature selection techniques to identify the most relevant clinical indicators and applied SMOTE to address class imbalance. Models such as Decision Trees and Logistic Regression were used to explore interpretability and predictive performance. Read More"
   },
   {
     "objectID": "projects/index.html#obesity-risk",
     "href": "projects/index.html#obesity-risk",
     "title": "Portfolio - Yiwei Lu",
     "section": "Obesity Risk Analysis",
-    "text": "Obesity Risk Analysis\nObesity Risk Analysis and Behavioral Clustering\nAn in-depth analysis of obesity using classification, clustering, and ANOVA. We explored lifestyle and dietary variables to understand obesity risks and public health implications.\nRead More"
+    "text": "Obesity Risk Analysis\nObesity Risk Analysis and Behavioral Clustering\nConducted a comprehensive analysis of obesity risk using classification models, clustering techniques, and ANOVA. Explored lifestyle and dietary factors to uncover patterns linked to obesity. After segmenting individuals into behavioral clusters, we provided tailored recommendations for each group to support targeted public health interventions. Read More"
   },
   {
     "objectID": "projects/index.html#Capstone",
     "href": "projects/index.html#Capstone",
     "title": "Portfolio - Yiwei Lu",
     "section": "Explore Capstone Project",
-    "text": "Explore Capstone Project\nJohnson & Johnson Cerenovus Capstone Project\nAnalyzed sales trends and customer churn for J&J’s neurovascular division to uncover key drivers of revenue growth and retention.\nCapstone Page"
+    "text": "Explore Capstone Project\nJohnson & Johnson Cerenovus Capstone Project\nAnalyzed sales trends and customer churn data to uncover key drivers of revenue growth and client retention. Identified patterns across product lines, customer segments, and geographic regions, providing insights to support strategic planning and targeted engagement efforts. Capstone Page"
   },
   {
     "objectID": "ww.html",
