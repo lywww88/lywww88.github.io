@@ -53,11 +53,14 @@ hr {
 }
 
 .project-card-page .btn {
-  margin-top: 1em;
-  padding: 0.4em 1em;
-  font-size: 0.9rem;
   display: inline-block;   
-  margin-left: 0.1em;     
+  margin-top: 0.6em;           
+  margin-left: 0;             
+  padding: 0.4em 1.1em;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 6px;
+  text-align: center;
 }
 
 .project-card-page h2 {
