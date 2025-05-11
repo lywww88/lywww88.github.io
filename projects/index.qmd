@@ -96,7 +96,7 @@ We developed a review sentiment analysis app for Airbnb hosts using XGBoost and 
 :::
 
 ::: {.project-card-page}
-## E-Commerce SQL {#ecommerce-sql}
+## E-Commerce {#ecommerce-sql}
 
 **E-Commerce SQL & Relational Database Design**  
 Designed a relational data model and normalized schema for an online fashion retailer using Looker. We wrote SQL queries for churn prediction, marketing attribution, product return analysis, and inventory optimization.  
@@ -106,7 +106,7 @@ Designed a relational data model and normalized schema for an online fashion ret
 :::
 
 ::: {.project-card-page}
-## Google Pixel Strategy {#pixel-strategy}
+## Marketing Strategy {#pixel-strategy}
 
 **Repositioning Google Pixel — A Strategic Marketing Analysis**  
 A strategic marketing project focused on diagnosing Google Pixel's weak market share despite strong AI and camera technology. We analyzed brand positioning, competitive threats, and proposed data-driven solutions to strengthen Pixel 9’s presence in the premium smartphone market.  
@@ -116,7 +116,7 @@ A strategic marketing project focused on diagnosing Google Pixel's weak market s
 :::
 
 ::: {.project-card-page}
-## Anemia ML Prediction {#anemia-ml}
+## Anemia Prediction {#anemia-ml}
 
 **Predicting Anemia with Machine Learning**  
 This project uses blood test data to train models (Decision Trees, Logistic Regression) for anemia prediction. After feature selection and applying SMOTE, we achieved up to 100% recall, aiding early medical detection.  
