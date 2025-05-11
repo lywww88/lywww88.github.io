@@ -77,10 +77,9 @@ Built an AI chatbot that delivers real-time stock analysis by integrating LLMs w
 ## Prediction Dashboard {#uber-prediction}
 
 **Uber Driver Prediction Dashboard**  
-<small><em>Datathon 2025 Competition</em></small>  
-<small>🏆 “Best Use of StrataScratch DC” 🏆</small>
+<small>Datathon 2025 Competition 🏆 “Best Use of StrataScratch DC” 🏆</small>
 
-Developed by Team **SYNTAX ERROR**, this interactive dashboard predicts Uber driver performance using machine learning models. It visualizes key metrics such as driver ratings, trip durations, and customer feedback.
+As part of Team SYNTAX ERROR, developed a machine learning dashboard to predict whether new Uber sign-ups would convert into active drivers. Combined XGBoost with KMeans to analyze onboarding patterns, achieving 0.97 AUC. SHAP analysis highlighted onboarding delays and signup source as key drivers.
 
 <a href="https://syntax3rr0r1.netlify.app/" class="btn">Read More</a>
 
