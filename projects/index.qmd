@@ -56,6 +56,8 @@ hr {
   margin-top: 1em;
   padding: 0.4em 1em;
   font-size: 0.9rem;
+  display: inline-block;   
+  margin-left: 0.1em;     
 }
 
 .project-card-page h2 {
@@ -67,7 +69,8 @@ hr {
 ## Financial Chatbot {#financial-chatbot}
 
 **AI Chatbot for Stock Market Analysis**  
-Created an intelligent chatbot that combines large language models with financial data APIs to generate real-time stock insights, enabling users to make better investment choices. 
+Created an intelligent chatbot that combines large language models with financial data APIs to generate real-time stock insights, enabling users to make better investment choices.
+
 <a href="https://medium.com/@dylankl_74733/revolutionizing-stock-market-insights-the-financial-chatbot-that-empowers-investors-d1d8197e6c13" class="btn" target="_blank">Read More</a>
 
 <img src="../images/financial-chatbot.png">
@@ -91,6 +94,7 @@ As part of Team SYNTAX ERROR, developed a machine learning dashboard to predict 
 
 **Airbnb Sentiment Application & Hosting Strategy**  
 Developed a sentiment analysis app for Airbnb hosts using NLP and XGBoost. The app predicts whether a review is positive or negative, visualizes key terms through word clouds, and allows users to flag incorrect predictions. These user-labeled responses are designed to support future supervised model retraining for improved accuracy and adaptability.
+
 <a href="/projects/project-airbnb.html" class="btn" target="_blank">Read More</a>
 
 <img src="../images/airbnb-cover.png">
@@ -101,6 +105,7 @@ Developed a sentiment analysis app for Airbnb hosts using NLP and XGBoost. The a
 
 **E-Commerce SQL & Relational Database Design**  
 Designed a relational data model and normalized schema for a global fashion retailer. Wrote SQL queries to support churn prediction, marketing attribution, return behavior analysis, and inventory optimization.
+
 <a href="/projects/project-looker.html/" class="btn" target="_blank">Read More</a>
 
 <img src="../images/sql-cover.png">
@@ -111,6 +116,7 @@ Designed a relational data model and normalized schema for a global fashion reta
 
 **Repositioning Google Pixel — A Strategic Marketing Analysis**  
 Analyzed Google Pixel’s weak market penetration despite technical strengths in AI and camera performance. Assessed brand positioning, competitive dynamics, and proposed strategic recommendations to enhance Pixel 9’s presence in the premium smartphone segment.
+
 <a href="/projects/project-pixel.html" class="btn" target="_blank">Read More</a>
 
 <img src="../images/pixel-cover.png">
@@ -121,6 +127,7 @@ Analyzed Google Pixel’s weak market penetration despite technical strengths in
 
 **Predicting Anemia with Machine Learning**  
 Developed classification models using blood test data to predict anemia, focusing on early detection support. Leveraged feature selection techniques to identify the most relevant clinical indicators and applied SMOTE to address class imbalance. Models such as Decision Trees and Logistic Regression were used to explore interpretability and predictive performance.
+
 <a href="/projects/project-anemia.html" class="btn" target="_blank">Read More</a>
 
 <img src="../images/anemia-cover.jpg">
@@ -131,6 +138,7 @@ Developed classification models using blood test data to predict anemia, focusin
 
 **Obesity Risk Analysis and Behavioral Clustering**  
 Conducted a comprehensive analysis of obesity risk using classification models, clustering techniques, and ANOVA. Explored lifestyle and dietary factors to uncover patterns linked to obesity. After segmenting individuals into behavioral clusters, we provided tailored recommendations for each group to support targeted public health interventions.
+
 <a href="/projects/project-obesity.html" class="btn" target="_blank">Read More</a>
 
 <img src="../images/obesity-cover.png">
@@ -143,6 +151,7 @@ Conducted a comprehensive analysis of obesity risk using classification models, 
 
 **Johnson & Johnson Cerenovus Capstone Project**  
 Analyzed sales trends and customer churn data to uncover key drivers of revenue growth and client retention. Identified patterns across product lines, customer segments, and geographic regions, providing insights to support strategic planning and targeted engagement efforts.
+
 <a href="/projects/Capstone.html" class="btn" target="_blank">Capstone Page</a>
 
 <img src="../images/JJ.png">
