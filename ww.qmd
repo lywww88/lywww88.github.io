@@ -9,9 +9,9 @@ format:
 <!-- 🌌 星空背景 Canvas -->
 <canvas id="space-bg" style="position: fixed; top: 0; left: 0; z-index: -1;"></canvas>
 
-<!-- 🛡️ 登录框 -->
+<!-- 登录框 -->
 <div class="login-box" id="login-box">
-  <h2>🛡️ Secure Login</h2>
+  <h2>🦖 Secure Login 🦖</h2>
   <input type="text" id="username" placeholder="Username" />
   <input type="password" id="password" placeholder="Password" />
   <button onclick="validateLogin()">Enter</button>
@@ -129,18 +129,22 @@ body {
 }
 
 .protected-content {
+  display: none; /* 确保初始隐藏 */
   backdrop-filter: blur(24px);
   background: rgba(0, 20, 40, 0.4);
   border: 1px solid rgba(0,255,255,0.2);
   border-radius: 20px;
   box-shadow: 0 0 50px rgba(0, 255, 255, 0.2);
-  padding: 4em 2em;
+  padding: 3em 2em;
   text-align: center;
   max-width: 700px;
-  margin: 10vh auto;
+  width: 90%;
   color: #e0f7fa;
-  z-index: 1;
-  position: relative;
+  position: absolute;   /* ✅ 让它脱离文档流 */
+  top: 50%;              /* ✅ 居中定位 */
+  left: 50%;
+  transform: translate(-50%, -50%); /* ✅ 完美水平垂直居中 */
+  z-index: 10;
   animation: floatIn 1.5s ease-out;
 }
 
