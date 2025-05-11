@@ -66,8 +66,8 @@ hr {
 ::: {.project-card-page}
 ## Financial Chatbot {#financial-chatbot}
 
-**Financial Chatbot for Stock Market Insights**  
-Built an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.  
+**AI Chatbot for Stock Market Analysis**  
+Created an intelligent chatbot that combines large language models with financial data APIs to generate real-time stock insights, enabling users to make better investment choices. 
 <a href="https://medium.com/@dylankl_74733/revolutionizing-stock-market-insights-the-financial-chatbot-that-empowers-investors-d1d8197e6c13" class="btn" target="_blank">Read More</a>
 
 <img src="../images/financial-chatbot.png">
@@ -90,7 +90,7 @@ As part of Team SYNTAX ERROR, developed a machine learning dashboard to predict 
 ## Review Sentiment App {#Sentiment-app}
 
 **Airbnb Sentiment Application & Hosting Strategy**  
-We developed a review sentiment analysis app for Airbnb hosts using XGBoost and NLP. The project segments hosts based on pricing and review behavior, and provides strategic recommendations to increase guest satisfaction and optimize revenue.  
+Developed a sentiment analysis app for Airbnb hosts using NLP and XGBoost. The app predicts whether a review is positive or negative, visualizes key terms through word clouds, and allows users to flag incorrect predictions. These user-labeled responses are designed to support future supervised model retraining for improved accuracy and adaptability.
 <a href="/projects/project-airbnb.html" class="btn" target="_blank">Read More</a>
 
 <img src="../images/airbnb-cover.png">
@@ -100,7 +100,7 @@ We developed a review sentiment analysis app for Airbnb hosts using XGBoost and 
 ## E-Commerce {#ecommerce-sql}
 
 **E-Commerce SQL & Relational Database Design**  
-Designed a relational data model and normalized schema for an online fashion retailer using Looker. We wrote SQL queries for churn prediction, marketing attribution, product return analysis, and inventory optimization.  
+Designed a relational data model and normalized schema for a global fashion retailer. Wrote SQL queries to support churn prediction, marketing attribution, return behavior analysis, and inventory optimization.
 <a href="/projects/project-looker.html/" class="btn" target="_blank">Read More</a>
 
 <img src="../images/sql-cover.png">
@@ -110,7 +110,7 @@ Designed a relational data model and normalized schema for an online fashion ret
 ## Marketing Strategy {#pixel-strategy}
 
 **Repositioning Google Pixel — A Strategic Marketing Analysis**  
-A strategic marketing project focused on diagnosing Google Pixel's weak market share despite strong AI and camera technology. We analyzed brand positioning, competitive threats, and proposed data-driven solutions to strengthen Pixel 9’s presence in the premium smartphone market.  
+Analyzed Google Pixel’s weak market penetration despite technical strengths in AI and camera performance. Assessed brand positioning, competitive dynamics, and proposed strategic recommendations to enhance Pixel 9’s presence in the premium smartphone segment.
 <a href="/projects/project-pixel.html" class="btn" target="_blank">Read More</a>
 
 <img src="../images/pixel-cover.png">
@@ -120,7 +120,7 @@ A strategic marketing project focused on diagnosing Google Pixel's weak market s
 ## Anemia Prediction {#anemia-ml}
 
 **Predicting Anemia with Machine Learning**  
-This project uses blood test data to train models (Decision Trees, Logistic Regression) for anemia prediction. After feature selection and applying SMOTE, we achieved up to 100% recall, aiding early medical detection.  
+Developed classification models using blood test data to predict anemia, focusing on early detection support. Leveraged feature selection techniques to identify the most relevant clinical indicators and applied SMOTE to address class imbalance. Models such as Decision Trees and Logistic Regression were used to explore interpretability and predictive performance.
 <a href="/projects/project-anemia.html" class="btn" target="_blank">Read More</a>
 
 <img src="../images/anemia-cover.jpg">
@@ -130,7 +130,7 @@ This project uses blood test data to train models (Decision Trees, Logistic Regr
 ## Obesity Risk Analysis {#obesity-risk}
 
 **Obesity Risk Analysis and Behavioral Clustering**  
-An in-depth analysis of obesity using classification, clustering, and ANOVA. We explored lifestyle and dietary variables to understand obesity risks and public health implications.  
+Conducted a comprehensive analysis of obesity risk using classification models, clustering techniques, and ANOVA. Explored lifestyle and dietary factors to uncover patterns linked to obesity. After segmenting individuals into behavioral clusters, we provided tailored recommendations for each group to support targeted public health interventions.
 <a href="/projects/project-obesity.html" class="btn" target="_blank">Read More</a>
 
 <img src="../images/obesity-cover.png">
@@ -142,7 +142,7 @@ An in-depth analysis of obesity using classification, clustering, and ANOVA. We 
 ## Explore Capstone Project {#Capstone}
 
 **Johnson & Johnson Cerenovus Capstone Project**  
-Analyzed sales trends and customer churn for J&J’s neurovascular division to uncover key drivers of revenue growth and retention.  
+Analyzed sales trends and customer churn data to uncover key drivers of revenue growth and client retention. Identified patterns across product lines, customer segments, and geographic regions, providing insights to support strategic planning and targeted engagement efforts.
 <a href="/projects/Capstone.html" class="btn" target="_blank">Capstone Page</a>
 
 <img src="../images/JJ.png">
