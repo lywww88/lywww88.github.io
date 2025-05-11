@@ -2,175 +2,87 @@
 title: ""
 format:
   html:
-    page-layout: full
     title-block: false
+    page-layout: full
 ---
 
-<!-- 🌌 星空背景 Canvas -->
-<canvas id="space-bg" style="position: fixed; top: 0; left: 0; z-index: -1;"></canvas>
-
-<!-- 登录框 -->
-<div class="login-box" id="login-box">
-  <h2>🦖 Secure Login 🦖</h2>
-  <input type="text" id="username" placeholder="Username" />
-  <input type="password" id="password" placeholder="Password" />
-  <button onclick="validateLogin()">Enter</button>
-</div>
-
-<!-- 🧊 私密内容（默认隐藏） -->
-<div class="protected-content" id="protected-content" style="display: none;">
-  <h1>🦖 WELCOME TO BASE</h1>
-  <p>This is your private basecamp.<br>Upload ideas. Drop reflections. Hack the future.</p>
-</div>
-
-<!-- 🌌 星空动画 -->
+<!-- 🚨 密码保护脚本 -->
 <script>
-const canvas = document.getElementById('space-bg');
-const ctx = canvas.getContext('2d');
-let w = canvas.width = window.innerWidth;
-let h = canvas.height = window.innerHeight;
-const stars = [];
-
-for(let i=0; i<150; i++){
-  stars.push({
-    x: Math.random() * w,
-    y: Math.random() * h,
-    radius: Math.random() * 1.5,
-    dx: (Math.random() - 0.5) * 0.2,
-    dy: (Math.random() - 0.5) * 0.2
-  });
-}
-
-function drawStars(){
-  ctx.clearRect(0, 0, w, h);
-  ctx.fillStyle = "#0ff";
-  for(let i=0; i<stars.length; i++){
-    let s = stars[i];
-    s.x += s.dx;
-    s.y += s.dy;
-    if(s.x < 0 || s.x > w) s.dx *= -1;
-    if(s.y < 0 || s.y > h) s.dy *= -1;
-    ctx.beginPath();
-    ctx.arc(s.x, s.y, s.radius, 0, 2*Math.PI);
-    ctx.fill();
+  const password = prompt("🔒 Access Restricted\nPlease enter your access code:");
+  if (password !== "mimacuowu") {
+    alert("❌ Access Denied.\nRedirecting to surface web...");
+    window.location.href = "/";
+    document.body.innerHTML = "";
   }
-  requestAnimationFrame(drawStars);
-}
-
-drawStars();
-window.addEventListener('resize', () => {
-  w = canvas.width = window.innerWidth;
-  h = canvas.height = window.innerHeight;
-});
-
-// ✅ 登录验证逻辑
-function validateLogin() {
-  const username = document.getElementById("username").value.trim();
-  const password = document.getElementById("password").value;
-
-  if (username === "yiwei" && password === "mimacuowu") {
-    document.getElementById("login-box").style.display = "none";
-    document.getElementById("protected-content").style.display = "block";
-  } else {
-    alert("❌ Invalid credentials. Try again.");
-  }
-}
 </script>
 
+<!-- ✅ 酷炫样式 -->
 <style>
 body {
   margin: 0;
+  padding: 0;
+  background: radial-gradient(ellipse at top, #0f172a 0%, #0a0f1f 100%);
   font-family: 'Segoe UI', system-ui, sans-serif;
-  overflow: hidden;
-  background: black;
-}
-
-.login-box {
-  background: rgba(30, 41, 59, 0.8);
-  padding: 3em 2em;
-  border-radius: 12px;
-  box-shadow: 0 0 40px rgba(0,255,180,0.1);
-  text-align: center;
-  max-width: 400px;
-  width: 100%;
-  color: #e2e8f0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.login-box input {
-  width: 100%;
-  padding: 0.7em;
-  margin: 0.5em 0;
-  border-radius: 6px;
-  border: none;
-  outline: none;
-  background: #334155;
-  color: #e2e8f0;
-}
-
-.login-box button {
-  margin-top: 1em;
-  width: 100%;
-  padding: 0.7em;
-  border: none;
-  background: #3b82f6;
-  color: white;
-  font-weight: 600;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.login-box button:hover {
-  background: #2563eb;
+  overflow-x: hidden;
 }
 
 .protected-content {
-  display: none; /* 确保初始隐藏 */
-  backdrop-filter: blur(24px);
-  background: rgba(0, 20, 40, 0.4);
-  border: 1px solid rgba(0,255,255,0.2);
-  border-radius: 20px;
-  box-shadow: 0 0 50px rgba(0, 255, 255, 0.2);
-  padding: 3em 2em;
+  backdrop-filter: blur(20px);
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 4em 2em;
   text-align: center;
-  max-width: 700px;
-  width: 90%;
-  color: #e0f7fa;
-  position: absolute;   /* ✅ 让它脱离文档流 */
-  top: 50%;              /* ✅ 居中定位 */
-  left: 50%;
-  transform: translate(-50%, -50%); /* ✅ 完美水平垂直居中 */
-  z-index: 10;
-  animation: floatIn 1.5s ease-out;
+  color: #e2e8f0;
+  max-width: 640px;
+  margin: 8em auto;
+  box-shadow: 0 0 60px rgba(0, 255, 180, 0.1);
+  position: relative;
+  animation: floatUp 1.2s ease-out;
+}
+
+.protected-content::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, #38bdf8, #06b6d4, #3b82f6);
+  z-index: -1;
+  animation: pulseBorder 6s linear infinite;
+  filter: blur(8px);
+  opacity: 0.6;
 }
 
 .protected-content h1 {
   font-size: 2.6em;
-  background: linear-gradient(90deg, #00f0ff, #0fffc3, #00f0ff);
-  background-size: 300% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: glowText 6s linear infinite;
+  margin-bottom: 0.3em;
+  color: #38bdf8;
+  letter-spacing: 1px;
 }
 
 .protected-content p {
-  font-size: 1.2em;
-  color: #b0e0f0;
-  margin-top: 1em;
+  font-size: 1.1em;
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin-top: 0.5em;
 }
 
-@keyframes glowText {
-  0% { background-position: 0% center; }
-  50% { background-position: 100% center; }
-  100% { background-position: 0% center; }
-}
-
-@keyframes floatIn {
-  from { opacity: 0; transform: translateY(40px); }
+/* 动画效果 */
+@keyframes floatUp {
+  from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+@keyframes pulseBorder {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 </style>
+
+<div class="protected-content">
+  <h1>🦖 WELCOME TO BASE</h1>
+  <p>This is your private playground.<br>Reflections, projects, and traces of creative chaos.</p>
+</div> 酷炫base
