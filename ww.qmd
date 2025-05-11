@@ -6,7 +6,6 @@ format:
     page-layout: full
 ---
 
-<!-- 🚨 密码保护脚本 -->
 <script>
   const password = prompt("🔒 Access Restricted\nPlease enter your access code:");
   if (password !== "mimacuowu") {
@@ -16,27 +15,26 @@ format:
   }
 </script>
 
-<!-- ✅ 酷炫样式 -->
 <style>
 body {
   margin: 0;
   padding: 0;
-  background: radial-gradient(ellipse at top, #0f172a 0%, #0a0f1f 100%);
+  background: radial-gradient(ellipse at top, #1e3a8a 0%, #0f172a 100%);
   font-family: 'Segoe UI', system-ui, sans-serif;
   overflow-x: hidden;
 }
 
 .protected-content {
   backdrop-filter: blur(20px);
-  background: rgba(30, 41, 59, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(36, 60, 90, 0.85);
+  border: 1px solid rgba(0, 255, 255, 0.2);
   border-radius: 16px;
   padding: 4em 2em;
   text-align: center;
   color: #e2e8f0;
   max-width: 640px;
   margin: 8em auto;
-  box-shadow: 0 0 60px rgba(0, 255, 180, 0.1);
+  box-shadow: 0 0 80px rgba(0, 255, 255, 0.1);
   position: relative;
   animation: floatUp 1.2s ease-out;
 }
@@ -52,25 +50,33 @@ body {
   background: linear-gradient(135deg, #38bdf8, #06b6d4, #3b82f6);
   z-index: -1;
   animation: pulseBorder 6s linear infinite;
-  filter: blur(8px);
-  opacity: 0.6;
+  filter: blur(12px);
+  opacity: 0.5;
+}
+
+.protected-content h1,
+.protected-content p {
+  color: #e0f7fa;
+  text-shadow: 0 0 12px rgba(0, 255, 255, 0.2);
 }
 
 .protected-content h1 {
   font-size: 2.6em;
-  margin-bottom: 0.3em;
-  color: #38bdf8;
+  margin-bottom: 0.4em;
+  background: linear-gradient(90deg, #00f0ff, #0fffc3, #00f0ff);
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glowText 6s linear infinite;
   letter-spacing: 1px;
 }
 
 .protected-content p {
-  font-size: 1.1em;
-  color: #cbd5e1;
+  font-size: 1.15em;
   line-height: 1.6;
   margin-top: 0.5em;
 }
 
-/* 动画效果 */
 @keyframes floatUp {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
@@ -83,6 +89,5 @@ body {
 </style>
 
 <div class="protected-content">
-  <h1>🦖 WELCOME TO BASE</h1>
-  <p>This is your private playground.<br>Reflections, projects, and traces of creative chaos.</p>
-</div> 酷炫base
+  <p>🦖 WELCOME TO BASE 🦖</p>
+</div> 
