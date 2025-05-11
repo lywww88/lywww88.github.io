@@ -2,87 +2,157 @@
 title: ""
 format:
   html:
-    title-block: false
     page-layout: full
+    title-block: false
 ---
 
-<!-- 🚨 密码保护脚本 -->
+<!-- 🚨 用户名 + 密码保护 -->
 <script>
-  const password = prompt("🔒 Access Restricted\nPlease enter your access code:");
-  if (password !== "mimacuowu") {
-    alert("❌ Access Denied.\nRedirecting to surface web...");
+  const username = prompt("🔒 Access Restricted\nPlease enter your username:");
+  const password = prompt("🔐 Password:");
+
+  const correctUser = "yiwei";
+  const correctPass = "mimacuowu";
+
+  if (username !== correctUser || password !== correctPass) {
+    alert("❌ Access Denied.\nInvalid credentials. Redirecting to surface web...");
     window.location.href = "/";
     document.body.innerHTML = "";
   }
 </script>
 
-<!-- ✅ 酷炫样式 -->
+<!-- 🌌 星空 + 动态粒子背景 -->
+<canvas id="space-bg" style="position: fixed; top: 0; left: 0; z-index: -1;"></canvas>
+
 <style>
 body {
   margin: 0;
-  padding: 0;
-  background: radial-gradient(ellipse at top, #0f172a 0%, #0a0f1f 100%);
   font-family: 'Segoe UI', system-ui, sans-serif;
-  overflow-x: hidden;
+  overflow: hidden;
+  background: black;
 }
 
+/* 🧊 主卡片样式 */
 .protected-content {
-  backdrop-filter: blur(20px);
-  background: rgba(30, 41, 59, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
+  backdrop-filter: blur(24px);
+  background: rgba(0, 20, 40, 0.4);
+  border: 1px solid rgba(0,255,255,0.2);
+  border-radius: 20px;
+  box-shadow: 0 0 50px rgba(0, 255, 255, 0.2);
   padding: 4em 2em;
   text-align: center;
-  color: #e2e8f0;
-  max-width: 640px;
-  margin: 8em auto;
-  box-shadow: 0 0 60px rgba(0, 255, 180, 0.1);
+  max-width: 700px;
+  margin: 10vh auto;
+  color: #e0f7fa;
+  z-index: 1;
   position: relative;
-  animation: floatUp 1.2s ease-out;
-}
-
-.protected-content::before {
-  content: "";
-  position: absolute;
-  top: -3px;
-  left: -3px;
-  right: -3px;
-  bottom: -3px;
-  border-radius: inherit;
-  background: linear-gradient(135deg, #38bdf8, #06b6d4, #3b82f6);
-  z-index: -1;
-  animation: pulseBorder 6s linear infinite;
-  filter: blur(8px);
-  opacity: 0.6;
+  animation: floatIn 1.5s ease-out;
 }
 
 .protected-content h1 {
   font-size: 2.6em;
-  margin-bottom: 0.3em;
-  color: #38bdf8;
-  letter-spacing: 1px;
+  background: linear-gradient(90deg, #00f0ff, #0fffc3, #00f0ff);
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glowText 6s linear infinite;
 }
 
 .protected-content p {
-  font-size: 1.1em;
-  color: #cbd5e1;
-  line-height: 1.6;
-  margin-top: 0.5em;
+  font-size: 1.2em;
+  color: #b0e0f0;
+  margin-top: 1em;
 }
 
-/* 动画效果 */
-@keyframes floatUp {
-  from { opacity: 0; transform: translateY(30px); }
+/* ✨ 动画 */
+@keyframes glowText {
+  0% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+  100% { background-position: 0% center; }
+}
+
+@keyframes floatIn {
+  from { opacity: 0; transform: translateY(40px); }
   to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes pulseBorder {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
 }
 </style>
 
 <div class="protected-content">
   <h1>🦖 WELCOME TO BASE</h1>
-  <p>This is your private playground.<br>Reflections, projects, and traces of creative chaos.</p>
+  <p>This is your private basecamp.<br>Upload ideas. Drop reflections. Hack the future.</p>
 </div>
+
+<!-- 🪐 粒子背景脚本 -->
+<script>
+const canvas = document.getElementById('space-bg');
+const ctx = canvas.getContext('2d');
+let w = canvas.width = window.innerWidth;
+let h = canvas.height = window.innerHeight;
+const stars = [];
+
+for(let i=0; i<150; i++){
+  stars.push({
+    x: Math.random() * w,
+    y: Math.random() * h,
+    radius: Math.random() * 1.5,
+    dx: (Math.random() - 0.5) * 0.2,
+    dy: (Math.random() - 0.5) * 0.2
+  });
+}
+
+function drawStars(){
+  ctx.clearRect(0, 0, w, h);
+  ctx.fillStyle = "#0ff";
+  for(let i=0; i<stars.length; i++){
+    let s = stars[i];
+    s.x += s.dx;
+    s.y += s.dy;
+    if(s.x < 0 || s.x > w) s.dx *= -1;
+    if(s.y < 0 || s.y > h) s.dy *= -1;
+    ctx.beginPath();
+    ctx.arc(s.x, s.y, s.radius, 0, 2*Math.PI);
+    ctx.fill();
+  }
+  requestAnimationFrame(drawStars);
+}
+
+drawStars();
+window.addEventListener('resize', () => {
+  w = canvas.width = window.innerWidth;
+  h = canvas.height = window.innerHeight;
+});
+</script>
+
+<!-- 🎧 背景音乐自动播放（支持循环） -->
+<audio id="bg-music" autoplay loop preload="auto">
+  <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_aeabb37f2b.mp3?filename=cyberpunk-dark-technology-117196.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<!-- 🔊 控制按钮 -->
+<button onclick="toggleMusic()" style="
+  position: fixed;
+  bottom: 1.5em;
+  right: 1.5em;
+  background: rgba(0, 255, 255, 0.12);
+  color: #0ff;
+  border: 1px solid #0ff;
+  border-radius: 8px;
+  padding: 0.6em 1em;
+  font-weight: bold;
+  font-size: 0.95em;
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+  z-index: 999;
+">🔊 Music On/Off</button>
+
+<script>
+  const bgMusic = document.getElementById("bg-music");
+  function toggleMusic() {
+    if (bgMusic.paused) {
+      bgMusic.play();
+    } else {
+      bgMusic.pause();
+    }
+  }
+</script>
