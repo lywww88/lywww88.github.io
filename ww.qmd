@@ -6,83 +6,24 @@ format:
     title-block: false
 ---
 
-<!-- 🚨 用户名 + 密码保护 -->
-<script>
-  const username = prompt("🔒 Access Restricted\nPlease enter your username:");
-  const password = prompt("🔐 Password:");
-
-  const correctUser = "yiwei";
-  const correctPass = "mimacuowu";
-
-  if (username !== correctUser || password !== correctPass) {
-    alert("❌ Access Denied.\nInvalid credentials. Redirecting to surface web...");
-    window.location.href = "/";
-    document.body.innerHTML = "";
-  }
-</script>
-
-<!-- 🌌 星空 + 动态粒子背景 -->
+<!-- 🌌 星空背景 Canvas -->
 <canvas id="space-bg" style="position: fixed; top: 0; left: 0; z-index: -1;"></canvas>
 
-<style>
-body {
-  margin: 0;
-  font-family: 'Segoe UI', system-ui, sans-serif;
-  overflow: hidden;
-  background: black;
-}
+<!-- 🛡️ 登录框 -->
+<div class="login-box" id="login-box">
+  <h2>🛡️ Secure Login</h2>
+  <input type="text" id="username" placeholder="Username" />
+  <input type="password" id="password" placeholder="Password" />
+  <button onclick="validateLogin()">Enter</button>
+</div>
 
-/* 🧊 主卡片样式 */
-.protected-content {
-  backdrop-filter: blur(24px);
-  background: rgba(0, 20, 40, 0.4);
-  border: 1px solid rgba(0,255,255,0.2);
-  border-radius: 20px;
-  box-shadow: 0 0 50px rgba(0, 255, 255, 0.2);
-  padding: 4em 2em;
-  text-align: center;
-  max-width: 700px;
-  margin: 10vh auto;
-  color: #e0f7fa;
-  z-index: 1;
-  position: relative;
-  animation: floatIn 1.5s ease-out;
-}
-
-.protected-content h1 {
-  font-size: 2.6em;
-  background: linear-gradient(90deg, #00f0ff, #0fffc3, #00f0ff);
-  background-size: 300% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: glowText 6s linear infinite;
-}
-
-.protected-content p {
-  font-size: 1.2em;
-  color: #b0e0f0;
-  margin-top: 1em;
-}
-
-/* ✨ 动画 */
-@keyframes glowText {
-  0% { background-position: 0% center; }
-  50% { background-position: 100% center; }
-  100% { background-position: 0% center; }
-}
-
-@keyframes floatIn {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-</style>
-
-<div class="protected-content">
+<!-- 🧊 私密内容（默认隐藏） -->
+<div class="protected-content" id="protected-content" style="display: none;">
   <h1>🦖 WELCOME TO BASE</h1>
   <p>This is your private basecamp.<br>Upload ideas. Drop reflections. Hack the future.</p>
 </div>
 
-<!-- 🪐 粒子背景脚本 -->
+<!-- 🌌 星空动画 -->
 <script>
 const canvas = document.getElementById('space-bg');
 const ctx = canvas.getContext('2d');
@@ -121,38 +62,111 @@ window.addEventListener('resize', () => {
   w = canvas.width = window.innerWidth;
   h = canvas.height = window.innerHeight;
 });
-</script>
 
-<!-- 🎧 背景音乐自动播放（支持循环） -->
-<audio id="bg-music" autoplay loop preload="auto">
-  <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_aeabb37f2b.mp3?filename=cyberpunk-dark-technology-117196.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
+// ✅ 登录验证逻辑
+function validateLogin() {
+  const username = document.getElementById("username").value.trim();
+  const password = document.getElementById("password").value;
 
-<!-- 🔊 控制按钮 -->
-<button onclick="toggleMusic()" style="
-  position: fixed;
-  bottom: 1.5em;
-  right: 1.5em;
-  background: rgba(0, 255, 255, 0.12);
-  color: #0ff;
-  border: 1px solid #0ff;
-  border-radius: 8px;
-  padding: 0.6em 1em;
-  font-weight: bold;
-  font-size: 0.95em;
-  backdrop-filter: blur(6px);
-  cursor: pointer;
-  z-index: 999;
-">🔊 Music On/Off</button>
-
-<script>
-  const bgMusic = document.getElementById("bg-music");
-  function toggleMusic() {
-    if (bgMusic.paused) {
-      bgMusic.play();
-    } else {
-      bgMusic.pause();
-    }
+  if (username === "yiwei" && password === "mimacuowu") {
+    document.getElementById("login-box").style.display = "none";
+    document.getElementById("protected-content").style.display = "block";
+  } else {
+    alert("❌ Invalid credentials. Try again.");
   }
+}
 </script>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  overflow: hidden;
+  background: black;
+}
+
+.login-box {
+  background: rgba(30, 41, 59, 0.8);
+  padding: 3em 2em;
+  border-radius: 12px;
+  box-shadow: 0 0 40px rgba(0,255,180,0.1);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  color: #e2e8f0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.login-box input {
+  width: 100%;
+  padding: 0.7em;
+  margin: 0.5em 0;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background: #334155;
+  color: #e2e8f0;
+}
+
+.login-box button {
+  margin-top: 1em;
+  width: 100%;
+  padding: 0.7em;
+  border: none;
+  background: #3b82f6;
+  color: white;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-box button:hover {
+  background: #2563eb;
+}
+
+.protected-content {
+  backdrop-filter: blur(24px);
+  background: rgba(0, 20, 40, 0.4);
+  border: 1px solid rgba(0,255,255,0.2);
+  border-radius: 20px;
+  box-shadow: 0 0 50px rgba(0, 255, 255, 0.2);
+  padding: 4em 2em;
+  text-align: center;
+  max-width: 700px;
+  margin: 10vh auto;
+  color: #e0f7fa;
+  z-index: 1;
+  position: relative;
+  animation: floatIn 1.5s ease-out;
+}
+
+.protected-content h1 {
+  font-size: 2.6em;
+  background: linear-gradient(90deg, #00f0ff, #0fffc3, #00f0ff);
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glowText 6s linear infinite;
+}
+
+.protected-content p {
+  font-size: 1.2em;
+  color: #b0e0f0;
+  margin-top: 1em;
+}
+
+@keyframes glowText {
+  0% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+  100% { background-position: 0% center; }
+}
+
+@keyframes floatIn {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
