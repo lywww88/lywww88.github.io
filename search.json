@@ -81,7 +81,7 @@
     "href": "about.html#working-experience",
     "title": "Portfolio - Yiwei Lu",
     "section": "Working Experience",
-    "text": "Working Experience\n\nStudent Analyst\nJohnson & Johnson — Jan 2025 – Jun 2025\nBusiness Analyst\nCalHome Inc — Oct 2021 – Jul 2024\nConsulting Intern\nFly Media (Shanghai) — May 2019 – Aug 2019"
+    "text": "Working Experience\n\nStudent Analyst\nJohnson & Johnson, Irvine, CA — Jan 2025 – Jun 2025\nBusiness Analyst\nCalHome Inc, Pomona, CA — Oct 2021 – Jul 2024\nConsultant (Intern)\nFly Media, Shanghai, China — May 2019 – Aug 2019"
   },
   {
     "objectID": "about.html#technical-skills",
@@ -144,7 +144,7 @@
     "href": "projects/index.html#uber-prediction",
     "title": "Portfolio - Yiwei Lu",
     "section": "Prediction Dashboard",
-    "text": "Prediction Dashboard\nUber Driver Prediction Dashboard\nAwarded “Best Use of StrataScratch DC” at Datathon 2025 Competition\nDeveloped by Team SYNTAX ERROR, this interactive dashboard predicts Uber driver performance using machine learning models. It visualizes key metrics such as driver ratings, trip durations, and customer feedback.\nRead More"
+    "text": "Prediction Dashboard\nUber Driver Prediction Dashboard\nDatathon 2025 Competition\n🏆 “Best Use of StrataScratch DC” 🏆\nDeveloped by Team SYNTAX ERROR, this interactive dashboard predicts Uber driver performance using machine learning models. It visualizes key metrics such as driver ratings, trip durations, and customer feedback.\nRead More"
   },
   {
     "objectID": "projects/index.html#Sentiment-app",
@@ -157,22 +157,22 @@
     "objectID": "projects/index.html#ecommerce-sql",
     "href": "projects/index.html#ecommerce-sql",
     "title": "Portfolio - Yiwei Lu",
-    "section": "E-Commerce SQL",
-    "text": "E-Commerce SQL\nE-Commerce SQL & Relational Database Design\nDesigned a relational data model and normalized schema for an online fashion retailer using Looker. We wrote SQL queries for churn prediction, marketing attribution, product return analysis, and inventory optimization.\nRead More"
+    "section": "E-Commerce",
+    "text": "E-Commerce\nE-Commerce SQL & Relational Database Design\nDesigned a relational data model and normalized schema for an online fashion retailer using Looker. We wrote SQL queries for churn prediction, marketing attribution, product return analysis, and inventory optimization.\nRead More"
   },
   {
     "objectID": "projects/index.html#pixel-strategy",
     "href": "projects/index.html#pixel-strategy",
     "title": "Portfolio - Yiwei Lu",
-    "section": "Google Pixel Strategy",
-    "text": "Google Pixel Strategy\nRepositioning Google Pixel — A Strategic Marketing Analysis\nA strategic marketing project focused on diagnosing Google Pixel’s weak market share despite strong AI and camera technology. We analyzed brand positioning, competitive threats, and proposed data-driven solutions to strengthen Pixel 9’s presence in the premium smartphone market.\nRead More"
+    "section": "Marketing Strategy",
+    "text": "Marketing Strategy\nRepositioning Google Pixel — A Strategic Marketing Analysis\nA strategic marketing project focused on diagnosing Google Pixel’s weak market share despite strong AI and camera technology. We analyzed brand positioning, competitive threats, and proposed data-driven solutions to strengthen Pixel 9’s presence in the premium smartphone market.\nRead More"
   },
   {
     "objectID": "projects/index.html#anemia-ml",
     "href": "projects/index.html#anemia-ml",
     "title": "Portfolio - Yiwei Lu",
-    "section": "Anemia ML Prediction",
-    "text": "Anemia ML Prediction\nPredicting Anemia with Machine Learning\nThis project uses blood test data to train models (Decision Trees, Logistic Regression) for anemia prediction. After feature selection and applying SMOTE, we achieved up to 100% recall, aiding early medical detection.\nRead More"
+    "section": "Anemia Prediction",
+    "text": "Anemia Prediction\nPredicting Anemia with Machine Learning\nThis project uses blood test data to train models (Decision Trees, Logistic Regression) for anemia prediction. After feature selection and applying SMOTE, we achieved up to 100% recall, aiding early medical detection.\nRead More"
   },
   {
     "objectID": "projects/index.html#obesity-risk",
