@@ -18,8 +18,11 @@ website:
             text: '<span class="nav-text">Capstone Project</span>'
       - text: '<span class="nav-text">Startup</span>'
         menu:
+          - href: Startup/SAbout.qmd
+            text: '<span class="nav-text">Startup Journey</span>'
+            target: _blank
           - href: https://forecastai-poc.netlify.app/
-            text: '<span class="nav-text">Forecast AI</span>'
+            text: '<span class="nav-text">Klug Forecast AI</span>'
             target: _blank
           - href: https://platemateofficial.netlify.app/
             text: '<span class="nav-text">Platemate</span>'
