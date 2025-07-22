@@ -1,1 +1,28 @@
 
+---
+title: ""
+format:
+  html:
+    title-block: false
+    page-layout: full
+---
+
+<style>
+.under-dev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  color: #444;
+  opacity: 0.85;
+  letter-spacing: 0.5px;
+}
+</style>
+
+<div class="under-dev">
+  🚧 This page is under development. Please check back soon. 07.22.25
+</div>
