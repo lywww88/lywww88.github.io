@@ -12,7 +12,7 @@ website:
         menu:
           - href: projects/index.qmd
             text: '<span class="nav-text">Projects</span>'
-          - href: projects/index.qmd
+          - href: Capstone.qmd
             text: '<span class="nav-text">Capstone</span>'
       - text: '<span class="nav-text">Startup</span>'
         menu:
