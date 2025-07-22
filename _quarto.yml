@@ -42,33 +42,33 @@ website:
       - href: about.qmd
         text: '<span class="nav-text">About</span>'
 
-right:
-  - icon: linkedin
-    href: https://www.linkedin.com/in/yiwei-lu78
-    aria-label: LinkedIn
+    right:
+      - icon: linkedin
+        href: https://www.linkedin.com/in/yiwei-lu78
+        aria-label: LinkedIn
 
-  - icon: github
-    href: https://github.com/lywww88
-    aria-label: GitHub
+      - icon: github
+        href: https://github.com/lywww88
+        aria-label: GitHub
 
-  - icon: database
-    href: https://www.kaggle.com/yiweilu  
-    aria-label: Kaggle
+      - icon: database
+        href: https://www.kaggle.com/yiweilu  
+        aria-label: Kaggle
 
-  - text: '<span class="nav-text"><i class="bi bi-download"></i> Resume</span>'
-    menu:
-      - href: resume.html
-        text: '<span class="nav-text"><i class="bi bi-eye"></i> View Resume</span>'
+      - text: '<span class="nav-text"><i class="bi bi-download"></i> Resume</span>'
+        menu:
+          - href: resume.html
+            text: '<span class="nav-text"><i class="bi bi-eye"></i> View Resume</span>'
+            target: _self
+          - href: Resume_YL_2025_D1.pdf
+            text: '<span class="nav-text"><i class="bi bi-file-earmark-arrow-down"></i> Download PDF</span>'
+            target: _blank
+
+      - href: ww.html
+        text: '<span class="bounce-emoji" title="My digital dino life 🦖">🦖</span>'
+        aria-label: My Life in Pixels
+        icon: none
         target: _self
-      - href: Resume_YL_2025_D1.pdf
-        text: '<span class="nav-text"><i class="bi bi-file-earmark-arrow-down"></i> Download PDF</span>'
-        target: _blank
-
-  - href: ww.html
-    text: 🦖
-    aria-label: My Life in Pixels
-    icon: none
-    target: _self
 
 format:
   html:
