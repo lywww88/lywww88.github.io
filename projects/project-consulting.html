@@ -107,7 +107,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text"><span class="nav-text">Projects</span></span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../Capstone.qmd">
+    <a class="dropdown-item" href="../projects/Capstone.html">
  <span class="dropdown-text"><span class="nav-text">Capstone</span></span></a>
   </li>  
     </ul>
@@ -210,10 +210,18 @@ iframe.pdf-reader {
 <h1 class="header-title">
 Smart Grocery Shopping Assistant
 </h1>
-<p><span style="width: 80px;"></span></p>
+<p><select id="pdf-selector" style="width: 160px; font-size: 1em; padding: 4px;"> <option value="project-consulting.pdf">Paper</option> <option value="project-pixel-presentation.pdf">Presentation</option> </select></p>
 </div>
-<iframe class="pdf-reader" src="project-consulting.pdf" title="Tech &amp; Consulting">
+<iframe id="pdf-frame" class="pdf-reader" src="project-consulting.pdf" title="PDF Viewer">
 </iframe>
+<script>
+  const selector = document.getElementById('pdf-selector');
+  const iframe = document.getElementById('pdf-frame');
+
+  selector.addEventListener('change', function () {
+    iframe.src = this.value;
+  });
+</script>
 
 
 
