@@ -55,12 +55,10 @@ format:
     </svg>
     Yiwei Lu Resume
   </a>
-  <div style="color: gray; font-size: 0.9em; margin-top: 0.5em;">
+  <p style="color: gray; font-size: 0.9em; margin-top: 0.5em;">
     Last updated: <span id="last-updated">July 22, 2025</span>
-  </div>
+  </p>
 </div>
-
-<div aria-hidden="true" style="border-top: 1px solid #ccc; margin: 1.5em 0;"></div>
 
 <div class="resume-container">
   <iframe src="Resume_YL_2025_D1.pdf" class="resume-frame" frameborder="0" allowfullscreen></iframe>
