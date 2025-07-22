@@ -10,30 +10,37 @@ website:
     left:
       - href: index.qmd
         text: '<span class="nav-text">Home</span>'
+
       - text: '<span class="nav-text">Projects</span>'
         menu:
           - href: projects/index.qmd
             text: '<span class="nav-text">Projects</span>'
           - href: projects/Capstone.qmd
             text: '<span class="nav-text">Capstone Project</span>'
+
       - text: '<span class="nav-text">Startup</span>'
         menu:
-          - text: "Beta Launch："
+          - text: '<span style="font-size: 0.75rem; font-weight: 600; color: gray;">BETA LAUNCH</span>'
           - href: https://forecastai-poc.netlify.app/
-            text: '<span class="nav-text">Klug Forecast AI</span>'
+            text: '<strong>Klug Forecast AI</strong>'
             target: _blank
-          - text: "Concept Stage："
+
+          - text: '<span style="font-size: 0.75rem; font-weight: 600; color: gray;">CONCEPT STAGE</span>'
           - href: https://platemateofficial.netlify.app/
-            text: '<span class="nav-text">Platemate</span>'
+            text: '<strong>Platemate</strong>'
             target: _blank
           - href: https://skillforgeofficial.netlify.app/
-            text: '<span class="nav-text">Skill Forge</span>'
+            text: '<strong>Skill Forge</strong>'
             target: _blank
-          - text: "---"
-          - text: "Startup Journey"
-            href: startup/journey.qmd
+
+          - text: '<hr style="margin: 0.3em 0;">'
+
+          - href: startup/journey.qmd
+            text: 'Startup Journey'
+
       - href: about.qmd
         text: '<span class="nav-text">About</span>'
+
     right:
       - icon: linkedin
         href: https://www.linkedin.com/in/yiwei-lu78
