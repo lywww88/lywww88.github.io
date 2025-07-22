@@ -57,7 +57,7 @@ website:
 
       - text: '<span class="nav-text"><i class="bi bi-download"></i> Resume</span>'
         menu:
-          - href: Resume_YL_2025_D1.pdf
+          - href: resume.qmd
             text: '<span class="nav-text"><i class="bi bi-eye"></i> View Resume</span>'
             target: _self
           - href: Resume_YL_2025_D1.pdf
