@@ -189,13 +189,6 @@
     "text": "E-Commerce Database\nE-Commerce SQL & Relational Database Design\nDesigned a relational data model and normalized schema for a global fashion retailer. Wrote SQL queries to support churn prediction, marketing attribution, return behavior analysis, and inventory optimization.\nRead More"
   },
   {
-    "objectID": "projects/index.html#pixel-strategy",
-    "href": "projects/index.html#pixel-strategy",
-    "title": "Portfolio - Yiwei Lu",
-    "section": "Marketing Strategy",
-    "text": "Marketing Strategy\nRepositioning Google Pixel — A Strategic Marketing Analysis\nAnalyzed Google Pixel’s weak market penetration despite technical strengths in AI and camera performance. Assessed brand positioning, competitive dynamics, and proposed strategic recommendations to enhance Pixel 9’s presence in the premium smartphone segment.\nRead More"
-  },
-  {
     "objectID": "projects/index.html#anemia-ml",
     "href": "projects/index.html#anemia-ml",
     "title": "Portfolio - Yiwei Lu",
@@ -217,6 +210,13 @@
     "text": "Technology Consulting\nSmart Grocery Shopping Assistant\nHands-on consulting course focused on applying AI and analytics to real-world business problems. Topics include use case development, prompt engineering, product management, Agile delivery, and stakeholder alignment. Culminates in a Shark Tank–style team project judged by industry experts.\nRead More"
   },
   {
+    "objectID": "projects/index.html#pixel-strategy",
+    "href": "projects/index.html#pixel-strategy",
+    "title": "Portfolio - Yiwei Lu",
+    "section": "Marketing Strategy",
+    "text": "Marketing Strategy\nRepositioning Google Pixel — A Strategic Marketing Analysis\nAnalyzed Google Pixel’s weak market penetration despite technical strengths in AI and camera performance. Assessed brand positioning, competitive dynamics, and proposed strategic recommendations to enhance Pixel 9’s presence in the premium smartphone segment.\nRead More"
+  },
+  {
     "objectID": "projects/index.html#Capstone",
     "href": "projects/index.html#Capstone",
     "title": "Portfolio - Yiwei Lu",
@@ -233,9 +233,9 @@
   {
     "objectID": "projects/project-anemia.html",
     "href": "projects/project-anemia.html",
-    "title": "Portfolio - Yiwei Lu",
+    "title": "\nDiagnosing Anemia with Machine Learning\n",
     "section": "",
-    "text": "🚧 This page is under development. Please check back soon."
+    "text": "← Back\n\nDiagnosing Anemia with Machine Learning\n\n Presentation Paper"
   },
   {
     "objectID": "ww.html",
