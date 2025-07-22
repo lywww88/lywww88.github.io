@@ -42,7 +42,7 @@ website:
       - href: about.qmd
         text: '<span class="nav-text">About</span>'
 
-    right:
+right:
   - icon: linkedin
     href: https://www.linkedin.com/in/yiwei-lu78
     aria-label: LinkedIn
