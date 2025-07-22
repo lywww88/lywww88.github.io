@@ -76,7 +76,7 @@ Created an intelligent chatbot that combines large language models with financia
 
 <a href="https://medium.com/@dylankl_74733/revolutionizing-stock-market-insights-the-financial-chatbot-that-empowers-investors-d1d8197e6c13" class="btn" target="_blank">Read More</a>
 
-<img src="../images/financial-chatbot.png">
+<img src="../images/financial-chatbot1.png">
 :::
 
 ::: {.project-card-page}
