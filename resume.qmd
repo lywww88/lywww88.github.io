@@ -55,7 +55,7 @@ format:
     </svg>
     Yiwei Lu Resume
   </a>
-  <div style="color: gray; font-size: 0.9em;">
+  <div style="color: gray; font-size: 0.9em; margin-top: 0.5em;">
     Last updated: <span id="last-updated">July 22, 2025</span>
   </div>
 </div>
@@ -98,6 +98,6 @@ format:
 </p>
 
 <script>
-  // 自动年份
-  document.getElementById("year").textContent = new Date().getFullYear();
+// 自动年份更新
+document.getElementById("year").textContent = new Date().getFullYear();
 </script>
