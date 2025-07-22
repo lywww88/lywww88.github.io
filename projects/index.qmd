@@ -137,17 +137,6 @@ Developed classification models using blood test data to predict anemia, focusin
 :::
 
 ::: {.project-card-page}
-## Technology Consulting {#tech-consulting}
-
-**Smart Grocery Shopping Assistant**  
-Hands-on consulting course focused on applying AI and analytics to real-world business problems. Topics include use case development, prompt engineering, product management, Agile delivery, and stakeholder alignment. Culminates in a Shark Tank–style team project judged by industry experts.
-
-<a href="/projects/project-consulting.html" class="btn">Read More</a>
-
-<img src="../images/consulting.png">
-:::
-
-::: {.project-card-page}
 ## Obesity Risk Analysis {#obesity-risk}
 
 **Obesity Risk Analysis and Behavioral Clustering**  
@@ -156,6 +145,17 @@ Conducted a comprehensive analysis of obesity risk using classification models, 
 <a href="/projects/project-obesity.html" class="btn">Read More</a>
 
 <img src="../images/obesity-cover.png">
+:::
+
+::: {.project-card-page}
+## Technology Consulting {#tech-consulting}
+
+**Smart Grocery Shopping Assistant**  
+Hands-on consulting course focused on applying AI and analytics to real-world business problems. Topics include use case development, prompt engineering, product management, Agile delivery, and stakeholder alignment. Culminates in a Shark Tank–style team project judged by industry experts.
+
+<a href="/projects/project-consulting.html" class="btn">Read More</a>
+
+<img src="../images/consulting.png">
 :::
 
 
