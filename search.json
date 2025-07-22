@@ -84,102 +84,32 @@
     "text": "← Back\n\nAirbnb Sentiment Application & Hosting Strategy"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
+    "objectID": "ww.html",
+    "href": "ww.html",
     "title": "Portfolio - Yiwei Lu",
     "section": "",
-    "text": "Welcome! I’m Yiwei Lu (David) — a Business Analytics graduate from UC Irvine with a focus on transforming data into clear, actionable insights. My background spans projects in healthcare, e-commerce, and technology, where I’ve worked closely with data to support business decisions, streamline operations, and enhance user experiences. I enjoy working at the intersection of data, strategy, and communication — helping teams understand not just what the numbers say, but what they mean.\nOutside of work, I’m a curious learner who enjoys exploring tech trends, visual storytelling, and problem-solving challenges. I also love to travel, explore new cultures, and capture moments through photography. My free time often includes hiking, snowboarding, badminton, and the occasional adventure off the beaten path—whether it’s trying a new trail or discovering a hidden coffee shop in a new city. Whether in the workplace or beyond, I believe in asking thoughtful questions, staying open-minded, and building connections through shared goals."
+    "text": "🦖 WELCOME TO BASE 🦖"
   },
   {
-    "objectID": "about.html#about-me",
-    "href": "about.html#about-me",
-    "title": "Portfolio - Yiwei Lu",
+    "objectID": "projects/project-anemia.html",
+    "href": "projects/project-anemia.html",
+    "title": "\nDiagnosing Anemia with Machine Learning\n",
     "section": "",
-    "text": "Welcome! I’m Yiwei Lu (David) — a Business Analytics graduate from UC Irvine with a focus on transforming data into clear, actionable insights. My background spans projects in healthcare, e-commerce, and technology, where I’ve worked closely with data to support business decisions, streamline operations, and enhance user experiences. I enjoy working at the intersection of data, strategy, and communication — helping teams understand not just what the numbers say, but what they mean.\nOutside of work, I’m a curious learner who enjoys exploring tech trends, visual storytelling, and problem-solving challenges. I also love to travel, explore new cultures, and capture moments through photography. My free time often includes hiking, snowboarding, badminton, and the occasional adventure off the beaten path—whether it’s trying a new trail or discovering a hidden coffee shop in a new city. Whether in the workplace or beyond, I believe in asking thoughtful questions, staying open-minded, and building connections through shared goals."
+    "text": "← Back\n\nDiagnosing Anemia with Machine Learning\n\n Presentation Paper \n\n\n\n\n\n\n\n\n© 2025 Yiwei Lu. All rights reserved."
   },
   {
-    "objectID": "about.html#education",
-    "href": "about.html#education",
-    "title": "Portfolio - Yiwei Lu",
-    "section": "Education",
-    "text": "Education\n\nM.S. in Business Analytics, University of California, Irvine (June 2025)\nB.S. in Computer Information Systems, California State Polytechnic University, Pomona (May 2021)"
-  },
-  {
-    "objectID": "about.html#working-experience",
-    "href": "about.html#working-experience",
-    "title": "Portfolio - Yiwei Lu",
-    "section": "Working Experience",
-    "text": "Working Experience\n\nData Analyst\nJohnson & Johnson, Irvine, CA — Jan 2025 – Jun 2025\nBusiness Analyst\nCalHome Inc, Pomona, CA — Oct 2021 – Jul 2024\nBusiness Consultant (Intern)\nFly Media, Shanghai, China — May 2019 – Aug 2019"
-  },
-  {
-    "objectID": "about.html#technical-skills",
-    "href": "about.html#technical-skills",
-    "title": "Portfolio - Yiwei Lu",
-    "section": "Technical Skills",
-    "text": "Technical Skills\n\nLanguages & Tools:\nExperience with Python, R, and SPSS for data analysis. Familiar with data visualization and reporting tools such as Tableau, PowerBI and Google Analytics.\nCloud Platforms & Databases:\nBackground working with AWS services, as well as Microsoft Azure. Comfortable using both SQL and NoSQL databases, including MySQL, PostgreSQL, MongoDB, and Cassandra for scalable data storage and retrieval.\nData Management & Analysis:\nSkilled in using Microsoft Excel and Microsoft Access for business reporting. Familiar with processing large datasets and integrating big data systems to extract trends and drive strategic decisions.\nSoft Skills & Collaboration:\nStrong time management and organizational skills with a proven ability to work independently under tight deadlines. Highly adaptable, with a collaborative mindset and a solution-oriented approach to problem-solving across cross-functional teams."
-  },
-  {
-    "objectID": "about.html#languages",
-    "href": "about.html#languages",
-    "title": "Portfolio - Yiwei Lu",
-    "section": "Languages",
-    "text": "Languages\n\nMandarin Chinese: Native proficiency\nEnglish: Professional working proficiency"
-  },
-  {
-    "objectID": "about.html#mission",
-    "href": "about.html#mission",
-    "title": "Portfolio - Yiwei Lu",
-    "section": "Mission",
-    "text": "Mission\n\nTo bridge the gap between raw data and strategic decision-making, empowering businesses to make smarter, faster, and more informed choices.\nI believe data is more than numbers — it’s a narrative waiting to be uncovered. My mission is to transform complex datasets into clear, actionable insights that drive meaningful business outcomes. Whether it’s forecasting trends, optimizing operations, or identifying growth opportunities, I aim to provide tools and analysis that turn uncertainty into confident decision-making.\nWith every project, I strive to combine analytical precision with business intuition — ensuring that data not only informs but inspires.\n\n\n\nLet’s stay in touch — here’s where to find me online.\n\n\n  LinkedIn    WhatsApp    GitHub  |   Email Me    My Journey \n\n\n\n\n\n© 2025 Yiwei Lu. All rights reserved."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Portfolio - Yiwei Lu",
+    "objectID": "projects/project-obesity.html",
+    "href": "projects/project-obesity.html",
+    "title": "\nObesity Analysis\n",
     "section": "",
-    "text": "Yiwei Lu \n  I believe clarity creates freedom — in data, design, and life. \n\n\n\n\n\n\nFinancial Chatbot for Stock Market\nBuilt an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.\n\nOpen Article →\n\n\n\n\n\n\n\n\n\n\n\nUber Driver Prediction Dashboard\nDatathon 2025 Competition\n🏆 “Best Use of StrataScratch DC” 🏆\nDeveloped an interactive dashboard to predict Uber driver performance using machine learning models.\n\nOpen Demo → Open Article →\n\n\n\n\n\n\n\n\n\n\n\n\nExplore More Projects\nDiscover data-driven projects in machine learning, dashboard design, and analytics. Each showcasing practical solutions with visuals and links.\n\nProject Page →\n\n\n\n\n\n\n\n\n\n\n\n\nLet’s stay in touch — here’s where to find me online.\n\n\n  LinkedIn    WhatsApp    GitHub  |   Email Me    About Me \n\n\n\n\n\n© 2025 Yiwei Lu. All rights reserved."
+    "text": "← Back\n\nObesity Analysis\n\n Presentation Paper \n\n\n\n\n\n\n\n\n© 2025 Yiwei Lu. All rights reserved."
   },
   {
-    "objectID": "projects/project-looker.html",
-    "href": "projects/project-looker.html",
-    "title": "Portfolio - Yiwei Lu",
+    "objectID": "projects/project-consulting.html",
+    "href": "projects/project-consulting.html",
+    "title": "\nSmart Grocery Shopping Assistant\n",
     "section": "",
-    "text": "🚧 This page is under development. Please check back soon.\n\n\n\n\n\n© 2025 Yiwei Lu. All rights reserved."
-  },
-  {
-    "objectID": "projects/maintain.html",
-    "href": "projects/maintain.html",
-    "title": "Portfolio - Yiwei Lu",
-    "section": "",
-    "text": "🚧 This page is under development. Please check back soon.\n\n\n\n\n\n© 2025 Yiwei Lu. All rights reserved."
-  },
-  {
-    "objectID": "projects/Capstone.html",
-    "href": "projects/Capstone.html",
-    "title": "Portfolio - Yiwei Lu",
-    "section": "",
-    "text": "🚧 The Capstone Project page is under development. Please check back soon. Updated 07.22.25\n\n\nJohnson & Johnson Cerenovus Capstone Project Led a data-driven analysis of sales performance and customer retention for Cerenovus, a Johnson & Johnson medical device division. Explored multi-year transaction data to identify key revenue drivers, product line dynamics, and regional sales trends. Applied clustering and churn modeling to uncover at-risk segments and generate actionable recommendations for improving account engagement and strategic planning.\n\n\n\n\n\n© 2025 Yiwei Lu. All rights reserved."
-  },
-  {
-    "objectID": "projects/project-pixel.html",
-    "href": "projects/project-pixel.html",
-    "title": "\nGoogle Pixel Marketing\n",
-    "section": "",
-    "text": "← Back\n\nGoogle Pixel Marketing\n\n Presentation Paper \n\n\n\n\n\n\n\n\n© 2025 Yiwei Lu. All rights reserved."
-  },
-  {
-    "objectID": "resume.html",
-    "href": "resume.html",
-    "title": "Portfolio - Yiwei Lu",
-    "section": "",
-    "text": "View / Download Resume \n\n\n\n\n\n\n\n\n\n\n\nLet’s stay in touch — here’s where to find me online.\n\n\n  LinkedIn    WhatsApp    GitHub  |   Email Me    Home Page \n\n\n\n\n\n© 2025 Yiwei Lu. All rights reserved."
-  },
-  {
-    "objectID": "projects/project-airbnb.html",
-    "href": "projects/project-airbnb.html",
-    "title": "\nAirbnb Sentiment Application & Hosting Strategy\n",
-    "section": "",
-    "text": "← Back\n\nAirbnb Sentiment Application & Hosting Strategy\n\n Paper Presentation App Demo \n\n\n\n\n\n\n\n\n© 2025 Yiwei Lu. All rights reserved."
+    "text": "← Back\n\nSmart Grocery Shopping Assistant\n\n Presentation \n\n\n\n\n\n\n\n\n© 2025 Yiwei Lu. All rights reserved."
   },
   {
     "objectID": "projects/index.html",
@@ -252,39 +182,102 @@
     "text": "Explore Capstone Project\nJohnson & Johnson Cerenovus Capstone Project\nDeveloped a full-stack analytics dashboard to support sales and retention strategy at Cerenovus, a Johnson & Johnson medical device division. Integrated SQL-based data pipelines, machine learning models (including churn prediction and clustering), and interactive visualizations to identify key revenue drivers, at-risk accounts, and regional product trends. The tool enables real-time exploration and supports strategic planning across sales teams.\nCapstone Page"
   },
   {
-    "objectID": "projects/project-consulting.html",
-    "href": "projects/project-consulting.html",
-    "title": "\nSmart Grocery Shopping Assistant\n",
+    "objectID": "projects/project-airbnb.html",
+    "href": "projects/project-airbnb.html",
+    "title": "\nAirbnb Sentiment Application & Hosting Strategy\n",
     "section": "",
-    "text": "← Back\n\nSmart Grocery Shopping Assistant\n\n Presentation \n\n\n\n\n\n\n\n\n© 2025 Yiwei Lu. All rights reserved."
+    "text": "← Back\n\nAirbnb Sentiment Application & Hosting Strategy\n\n Paper Presentation App Demo \n\n\n\n\n\n\n\n\n© 2025 Yiwei Lu. All rights reserved."
   },
   {
-    "objectID": "projects/project-obesity.html",
-    "href": "projects/project-obesity.html",
-    "title": "\nObesity Analysis\n",
-    "section": "",
-    "text": "← Back\n\nObesity Analysis\n\n Presentation Paper \n\n\n\n\n\n\n\n\n© 2025 Yiwei Lu. All rights reserved."
-  },
-  {
-    "objectID": "projects/project-anemia.html",
-    "href": "projects/project-anemia.html",
-    "title": "\nDiagnosing Anemia with Machine Learning\n",
-    "section": "",
-    "text": "← Back\n\nDiagnosing Anemia with Machine Learning\n\n Presentation Paper \n\n\n\n\n\n\n\n\n© 2025 Yiwei Lu. All rights reserved."
-  },
-  {
-    "objectID": "ww.html",
-    "href": "ww.html",
-    "title": "Portfolio - Yiwei Lu",
-    "section": "",
-    "text": "🦖 WELCOME TO BASE 🦖"
-  },
-  {
-    "objectID": "resume1.html",
-    "href": "resume1.html",
+    "objectID": "resume.html",
+    "href": "resume.html",
     "title": "Portfolio - Yiwei Lu",
     "section": "",
     "text": "Yiwei Lu Resume \n\n\n\n\n\n\n\n\n\n\n\nLet’s stay in touch — here’s where to find me online.\n\n\n  LinkedIn    WhatsApp    GitHub  |   Email Me    Home Page \n\n\n\n\n\n© 2025 Yiwei Lu. All rights reserved."
+  },
+  {
+    "objectID": "projects/project-pixel.html",
+    "href": "projects/project-pixel.html",
+    "title": "\nGoogle Pixel Marketing\n",
+    "section": "",
+    "text": "← Back\n\nGoogle Pixel Marketing\n\n Presentation Paper \n\n\n\n\n\n\n\n\n© 2025 Yiwei Lu. All rights reserved."
+  },
+  {
+    "objectID": "projects/Capstone.html",
+    "href": "projects/Capstone.html",
+    "title": "Portfolio - Yiwei Lu",
+    "section": "",
+    "text": "🚧 The Capstone Project page is under development. Please check back soon. Updated 07.22.25\n\n\nJohnson & Johnson Cerenovus Capstone Project Led a data-driven analysis of sales performance and customer retention for Cerenovus, a Johnson & Johnson medical device division. Explored multi-year transaction data to identify key revenue drivers, product line dynamics, and regional sales trends. Applied clustering and churn modeling to uncover at-risk segments and generate actionable recommendations for improving account engagement and strategic planning.\n\n\n\n\n\n© 2025 Yiwei Lu. All rights reserved."
+  },
+  {
+    "objectID": "projects/maintain.html",
+    "href": "projects/maintain.html",
+    "title": "Portfolio - Yiwei Lu",
+    "section": "",
+    "text": "🚧 This page is under development. Please check back soon.\n\n\n\n\n\n© 2025 Yiwei Lu. All rights reserved."
+  },
+  {
+    "objectID": "projects/project-looker.html",
+    "href": "projects/project-looker.html",
+    "title": "Portfolio - Yiwei Lu",
+    "section": "",
+    "text": "🚧 This page is under development. Please check back soon.\n\n\n\n\n\n© 2025 Yiwei Lu. All rights reserved."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Portfolio - Yiwei Lu",
+    "section": "",
+    "text": "Yiwei Lu \n  I believe clarity creates freedom — in data, design, and life. \n\n\n\n\n\n\nFinancial Chatbot for Stock Market\nBuilt an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.\n\nOpen Article →\n\n\n\n\n\n\n\n\n\n\n\nUber Driver Prediction Dashboard\nDatathon 2025 Competition\n🏆 “Best Use of StrataScratch DC” 🏆\nDeveloped an interactive dashboard to predict Uber driver performance using machine learning models.\n\nOpen Demo → Open Article →\n\n\n\n\n\n\n\n\n\n\n\n\nExplore More Projects\nDiscover data-driven projects in machine learning, dashboard design, and analytics. Each showcasing practical solutions with visuals and links.\n\nProject Page →\n\n\n\n\n\n\n\n\n\n\n\n\nLet’s stay in touch — here’s where to find me online.\n\n\n  LinkedIn    WhatsApp    GitHub  |   Email Me    About Me \n\n\n\n\n\n© 2025 Yiwei Lu. All rights reserved."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Portfolio - Yiwei Lu",
+    "section": "",
+    "text": "Welcome! I’m Yiwei Lu (David) — a Business Analytics graduate from UC Irvine with a focus on transforming data into clear, actionable insights. My background spans projects in healthcare, e-commerce, and technology, where I’ve worked closely with data to support business decisions, streamline operations, and enhance user experiences. I enjoy working at the intersection of data, strategy, and communication — helping teams understand not just what the numbers say, but what they mean.\nOutside of work, I’m a curious learner who enjoys exploring tech trends, visual storytelling, and problem-solving challenges. I also love to travel, explore new cultures, and capture moments through photography. My free time often includes hiking, snowboarding, badminton, and the occasional adventure off the beaten path—whether it’s trying a new trail or discovering a hidden coffee shop in a new city. Whether in the workplace or beyond, I believe in asking thoughtful questions, staying open-minded, and building connections through shared goals."
+  },
+  {
+    "objectID": "about.html#about-me",
+    "href": "about.html#about-me",
+    "title": "Portfolio - Yiwei Lu",
+    "section": "",
+    "text": "Welcome! I’m Yiwei Lu (David) — a Business Analytics graduate from UC Irvine with a focus on transforming data into clear, actionable insights. My background spans projects in healthcare, e-commerce, and technology, where I’ve worked closely with data to support business decisions, streamline operations, and enhance user experiences. I enjoy working at the intersection of data, strategy, and communication — helping teams understand not just what the numbers say, but what they mean.\nOutside of work, I’m a curious learner who enjoys exploring tech trends, visual storytelling, and problem-solving challenges. I also love to travel, explore new cultures, and capture moments through photography. My free time often includes hiking, snowboarding, badminton, and the occasional adventure off the beaten path—whether it’s trying a new trail or discovering a hidden coffee shop in a new city. Whether in the workplace or beyond, I believe in asking thoughtful questions, staying open-minded, and building connections through shared goals."
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "Portfolio - Yiwei Lu",
+    "section": "Education",
+    "text": "Education\n\nM.S. in Business Analytics, University of California, Irvine (June 2025)\nB.S. in Computer Information Systems, California State Polytechnic University, Pomona (May 2021)"
+  },
+  {
+    "objectID": "about.html#working-experience",
+    "href": "about.html#working-experience",
+    "title": "Portfolio - Yiwei Lu",
+    "section": "Working Experience",
+    "text": "Working Experience\n\nData Analyst\nJohnson & Johnson, Irvine, CA — Jan 2025 – Jun 2025\nBusiness Analyst\nCalHome Inc, Pomona, CA — Oct 2021 – Jul 2024\nBusiness Consultant (Intern)\nFly Media, Shanghai, China — May 2019 – Aug 2019"
+  },
+  {
+    "objectID": "about.html#technical-skills",
+    "href": "about.html#technical-skills",
+    "title": "Portfolio - Yiwei Lu",
+    "section": "Technical Skills",
+    "text": "Technical Skills\n\nLanguages & Tools:\nExperience with Python, R, and SPSS for data analysis. Familiar with data visualization and reporting tools such as Tableau, PowerBI and Google Analytics.\nCloud Platforms & Databases:\nBackground working with AWS services, as well as Microsoft Azure. Comfortable using both SQL and NoSQL databases, including MySQL, PostgreSQL, MongoDB, and Cassandra for scalable data storage and retrieval.\nData Management & Analysis:\nSkilled in using Microsoft Excel and Microsoft Access for business reporting. Familiar with processing large datasets and integrating big data systems to extract trends and drive strategic decisions.\nSoft Skills & Collaboration:\nStrong time management and organizational skills with a proven ability to work independently under tight deadlines. Highly adaptable, with a collaborative mindset and a solution-oriented approach to problem-solving across cross-functional teams."
+  },
+  {
+    "objectID": "about.html#languages",
+    "href": "about.html#languages",
+    "title": "Portfolio - Yiwei Lu",
+    "section": "Languages",
+    "text": "Languages\n\nMandarin Chinese: Native proficiency\nEnglish: Professional working proficiency"
+  },
+  {
+    "objectID": "about.html#mission",
+    "href": "about.html#mission",
+    "title": "Portfolio - Yiwei Lu",
+    "section": "Mission",
+    "text": "Mission\n\nTo bridge the gap between raw data and strategic decision-making, empowering businesses to make smarter, faster, and more informed choices.\nI believe data is more than numbers — it’s a narrative waiting to be uncovered. My mission is to transform complex datasets into clear, actionable insights that drive meaningful business outcomes. Whether it’s forecasting trends, optimizing operations, or identifying growth opportunities, I aim to provide tools and analysis that turn uncertainty into confident decision-making.\nWith every project, I strive to combine analytical precision with business intuition — ensuring that data not only informs but inspires.\n\n\n\nLet’s stay in touch — here’s where to find me online.\n\n\n  LinkedIn    WhatsApp    GitHub  |   Email Me    My Journey \n\n\n\n\n\n© 2025 Yiwei Lu. All rights reserved."
   },
   {
     "objectID": "lywww88.github.io/index.html",
