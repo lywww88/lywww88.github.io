@@ -165,7 +165,7 @@ Conducted a comprehensive analysis of obesity risk using classification models, 
 ## Explore Capstone Project {#Capstone}
 
 **Johnson & Johnson Cerenovus Capstone Project**  
-Analyzed sales trends and customer churn data to uncover key drivers of revenue growth and client retention. Identified patterns across product lines, customer segments, and geographic regions, providing insights to support strategic planning and targeted engagement efforts.
+Developed a full-stack analytics dashboard to support sales and retention strategy at Cerenovus, a Johnson & Johnson medical device division. Integrated SQL-based data pipelines, machine learning models (including churn prediction and clustering), and interactive visualizations to identify key revenue drivers, at-risk accounts, and regional product trends. The tool enables real-time exploration and supports strategic planning across sales teams.
 
 <a href="/projects/Capstone.html" class="btn">Capstone Page</a>
 
