@@ -203,18 +203,18 @@
     "text": "Anemia Prediction\nPredicting Anemia with Machine Learning\nDeveloped classification models using blood test data to predict anemia, focusing on early detection support. Leveraged feature selection techniques to identify the most relevant clinical indicators and applied SMOTE to address class imbalance. Models such as Decision Trees and Logistic Regression were used to explore interpretability and predictive performance.\nRead More"
   },
   {
-    "objectID": "projects/index.html#tech-consulting",
-    "href": "projects/index.html#tech-consulting",
-    "title": "Portfolio - Yiwei Lu",
-    "section": "Technology Consulting",
-    "text": "Technology Consulting\nSmart Grocery Shopping Assistant\nHands-on consulting course focused on applying AI and analytics to real-world business problems. Topics include use case development, prompt engineering, product management, Agile delivery, and stakeholder alignment. Culminates in a Shark Tank–style team project judged by industry experts.\nRead More"
-  },
-  {
     "objectID": "projects/index.html#obesity-risk",
     "href": "projects/index.html#obesity-risk",
     "title": "Portfolio - Yiwei Lu",
     "section": "Obesity Risk Analysis",
     "text": "Obesity Risk Analysis\nObesity Risk Analysis and Behavioral Clustering\nConducted a comprehensive analysis of obesity risk using classification models, clustering techniques, and ANOVA. Explored lifestyle and dietary factors to uncover patterns linked to obesity. After segmenting individuals into behavioral clusters, we provided tailored recommendations for each group to support targeted public health interventions.\nRead More"
+  },
+  {
+    "objectID": "projects/index.html#tech-consulting",
+    "href": "projects/index.html#tech-consulting",
+    "title": "Portfolio - Yiwei Lu",
+    "section": "Technology Consulting",
+    "text": "Technology Consulting\nSmart Grocery Shopping Assistant\nHands-on consulting course focused on applying AI and analytics to real-world business problems. Topics include use case development, prompt engineering, product management, Agile delivery, and stakeholder alignment. Culminates in a Shark Tank–style team project judged by industry experts.\nRead More"
   },
   {
     "objectID": "projects/index.html#Capstone",
