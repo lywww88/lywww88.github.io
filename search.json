@@ -203,13 +203,6 @@
     "text": "Anemia Prediction\nPredicting Anemia with Machine Learning\nDeveloped classification models using blood test data to predict anemia, focusing on early detection support. Leveraged feature selection techniques to identify the most relevant clinical indicators and applied SMOTE to address class imbalance. Models such as Decision Trees and Logistic Regression were used to explore interpretability and predictive performance.\nRead More"
   },
   {
-    "objectID": "projects/index.html#obesity-risk",
-    "href": "projects/index.html#obesity-risk",
-    "title": "Portfolio - Yiwei Lu",
-    "section": "Obesity Risk Analysis",
-    "text": "Obesity Risk Analysis\nObesity Risk Analysis and Behavioral Clustering\nConducted a comprehensive analysis of obesity risk using classification models, clustering techniques, and ANOVA. Explored lifestyle and dietary factors to uncover patterns linked to obesity. After segmenting individuals into behavioral clusters, we provided tailored recommendations for each group to support targeted public health interventions.\nRead More"
-  },
-  {
     "objectID": "projects/index.html#tech-consulting",
     "href": "projects/index.html#tech-consulting",
     "title": "Portfolio - Yiwei Lu",
@@ -217,11 +210,18 @@
     "text": "Technology Consulting\nSmart Grocery Shopping Assistant\nHands-on consulting course focused on applying AI and analytics to real-world business problems. Topics include use case development, prompt engineering, product management, Agile delivery, and stakeholder alignment. Culminates in a Shark Tank–style team project judged by industry experts.\nRead More"
   },
   {
+    "objectID": "projects/index.html#obesity-risk",
+    "href": "projects/index.html#obesity-risk",
+    "title": "Portfolio - Yiwei Lu",
+    "section": "Obesity Risk Analysis",
+    "text": "Obesity Risk Analysis\nObesity Risk Analysis and Behavioral Clustering\nConducted a comprehensive analysis of obesity risk using classification models, clustering techniques, and ANOVA. Explored lifestyle and dietary factors to uncover patterns linked to obesity. After segmenting individuals into behavioral clusters, we provided tailored recommendations for each group to support targeted public health interventions.\nRead More"
+  },
+  {
     "objectID": "projects/index.html#Capstone",
     "href": "projects/index.html#Capstone",
     "title": "Portfolio - Yiwei Lu",
     "section": "Explore Capstone Project",
-    "text": "Explore Capstone Project\nJohnson & Johnson Cerenovus Capstone Project\nAnalyzed sales trends and customer churn data to uncover key drivers of revenue growth and client retention. Identified patterns across product lines, customer segments, and geographic regions, providing insights to support strategic planning and targeted engagement efforts.\nCapstone Page"
+    "text": "Explore Capstone Project\nJohnson & Johnson Cerenovus Capstone Project\nDeveloped a full-stack analytics dashboard to support sales and retention strategy at Cerenovus, a Johnson & Johnson medical device division. Integrated SQL-based data pipelines, machine learning models (including churn prediction and clustering), and interactive visualizations to identify key revenue drivers, at-risk accounts, and regional product trends. The tool enables real-time exploration and supports strategic planning across sales teams.\nCapstone Page"
   },
   {
     "objectID": "projects/project-consulting.html",
