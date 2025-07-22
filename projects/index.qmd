@@ -147,10 +147,8 @@ Conducted a comprehensive analysis of obesity risk using classification models, 
 <img src="../images/obesity-cover.png">
 :::
 
-<div aria-hidden="true" style="border-top: 1px solid #ccc; margin: 1.5em 0;"></div>
-
 ::: {.project-card-page}
-## Technology & Analytics Consulting {#tech & consulting}
+## Technology Consulting {#tech-consulting}
 
 **Smart Grocery Shopping Assistant**  
 Hands-on consulting course focused on applying AI and analytics to real-world business problems. Topics include use case development, prompt engineering, product management, Agile delivery, and stakeholder alignment. Culminates in a Shark Tank–style team project judged by industry experts.
