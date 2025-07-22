@@ -9,7 +9,7 @@ format:
 ---
 
 <style>
-nav[role="doc-toc"] li:nth-child(7)::after {
+nav[role="doc-toc"] li:nth-child(8)::after {
   content: "";
   display: block;
   height: 1px;
@@ -157,6 +157,8 @@ Conducted a comprehensive analysis of obesity risk using classification models, 
 
 <img src="../images/obesity-cover.png">
 :::
+
+
 
 
 <div aria-hidden="true" style="border-top: 1px solid #ccc; margin: 1.5em 0;"></div>
