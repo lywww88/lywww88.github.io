@@ -1,1 +1,94 @@
+---
+title: ""
+format:
+  html:
+    page-layout: full
+    title-block: false
+---
 
+<style>
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  margin: 1em auto 0.5em;
+  padding: 0.6em 1.4em;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  font-size: 1.05em;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+.download-btn:hover {
+  background-color: #0056b3;
+}
+.download-btn svg {
+  width: 1.1em;
+  height: 1.1em;
+  stroke: white;
+}
+.resume-container {
+  display: flex;
+  justify-content: center;
+  padding: 1em 0 2em;
+}
+.resume-frame {
+  width: 80vw;
+  max-width: 850px;
+  min-width: 400px;
+  height: 88vh;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+</style>
+
+<div style="text-align: center;">
+  <a href="https://drive.google.com/file/d/1dvW6anwd4aV7jaQYi4yjn62RANVlJTJ1/view?usp=sharing" class="download-btn" target="_blank">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2M7 10l5 5m0 0l5-5m-5 5V4"/>
+    </svg>
+    View / Download Resume
+  </a>
+</div>
+
+<div aria-hidden="true" style="border-top: 1px solid #ccc; margin: 1.5em 0;"></div>
+
+<div class="resume-container">
+  <iframe class="resume-frame"
+          src="https://drive.google.com/file/d/1dvW6anwd4aV7jaQYi4yjn62RANVlJTJ1/preview"
+          allow="autoplay"></iframe>
+</div>
+
+<div aria-hidden="true" style="border-top: 1px solid #ccc; margin: 1.5em 0;"></div>
+
+<p style="text-align: center; color: #aaa; font-size: 0.9em; margin-top: 2em;">
+  Let’s stay in touch — here’s where to find me online.
+</p>
+
+<div class="connect-container" style="display: flex; flex-wrap: wrap; gap: 1em; align-items: center; justify-content: center;">
+  <a href="https://www.linkedin.com/in/yiwei-lu78" class="btn" target="_blank">
+    <i class="bi bi-linkedin"></i> LinkedIn
+  </a>
+  <a href="https://wa.me/6266736276" class="btn" target="_blank">
+    <i class="bi bi-whatsapp"></i> WhatsApp
+  </a>
+  <a href="https://github.com/lywww88" class="btn" target="_blank">
+    <i class="bi bi-github"></i> GitHub
+  </a>
+  <span style="color: #ccc;">|</span>
+  <a href="mailto:yiweilu36@uci.edu" class="btn">
+    <i class="bi bi-envelope"></i> Email Me
+  </a>
+  <a href="https://lywww88.github.io/" class="btn">
+    <i class="bi bi-person-circle"></i> Home Page
+  </a>
+</div>
+
+<div aria-hidden="true" style="border-top: 1px solid #ccc; margin: 1.5em 0;"></div>
+
+<p style="text-align: center; color: #888; font-size: 0.85em; margin-top: 3em;">
+  © 2025 Yiwei Lu. All rights reserved.
+</p>
