@@ -133,7 +133,7 @@ Developed classification models using blood test data to predict anemia, focusin
 
 <a href="/projects/project-anemia.html" class="btn">Read More</a>
 
-<img src="../images/anemia-cover.jpg">
+<img src="../images/anemia-cover1.png">
 :::
 
 ::: {.project-card-page}
