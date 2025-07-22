@@ -170,3 +170,8 @@
   align-items: center;
 }
 
+/* ✅ 仅隐藏 Resume 的菜单项左侧箭头 */
+.navbar-nav .dropdown > a:has(i.bi-download)::before {
+  display: none !important;
+}
+
