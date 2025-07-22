@@ -182,23 +182,38 @@ ul.task-list li input[type="checkbox"] {
 
 
 <style>
-.under-dev {
+.header-bar {
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 60vh;
+  justify-content: space-between;
+  padding: 1em 0;
+}
+
+.header-title {
+  flex-grow: 1;
   text-align: center;
-  font-size: 1.5rem;
-  font-weight: 500;
-  font-family: 'Segoe UI', system-ui, sans-serif;
-  color: #444;
-  opacity: 0.85;
-  letter-spacing: 0.5px;
+  font-size: 2em;
+  font-weight: 700;
+  margin: 0;
+}
+
+iframe.pdf-reader {
+  width: 100%;
+  height: 90vh;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 </style>
-<div class="under-dev">
-<p>🚧 This page is under development. Please check back soon.</p>
+<div class="header-bar">
+<a href="index.html" class="btn">← Back</a>
+<h1 class="header-title">
+Google Pixel Marketing
+</h1>
+<p><span style="width: 80px;"></span></p>
 </div>
+<iframe class="pdf-reader" src="project-pixel-paper.pdf" title="Google Pixel Marketing">
+</iframe>
 
 
 

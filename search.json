@@ -135,9 +135,9 @@
   {
     "objectID": "projects/project-pixel.html",
     "href": "projects/project-pixel.html",
-    "title": "Portfolio - Yiwei Lu",
+    "title": "\nGoogle Pixel Marketing\n",
     "section": "",
-    "text": "🚧 This page is under development. Please check back soon."
+    "text": "← Back\n\nGoogle Pixel Marketing"
   },
   {
     "objectID": "resume.html",
@@ -210,11 +210,11 @@
     "text": "Obesity Risk Analysis\nObesity Risk Analysis and Behavioral Clustering\nConducted a comprehensive analysis of obesity risk using classification models, clustering techniques, and ANOVA. Explored lifestyle and dietary factors to uncover patterns linked to obesity. After segmenting individuals into behavioral clusters, we provided tailored recommendations for each group to support targeted public health interventions.\nRead More"
   },
   {
-    "objectID": "projects/index.html#technology-analytics-consulting-tech-consulting",
-    "href": "projects/index.html#technology-analytics-consulting-tech-consulting",
+    "objectID": "projects/index.html#tech-consulting",
+    "href": "projects/index.html#tech-consulting",
     "title": "Portfolio - Yiwei Lu",
-    "section": "Technology & Analytics Consulting {#tech & consulting}",
-    "text": "Technology & Analytics Consulting {#tech & consulting}\nSmart Grocery Shopping Assistant\nHands-on consulting course focused on applying AI and analytics to real-world business problems. Topics include use case development, prompt engineering, product management, Agile delivery, and stakeholder alignment. Culminates in a Shark Tank–style team project judged by industry experts.\nRead More"
+    "section": "Technology Consulting",
+    "text": "Technology Consulting\nSmart Grocery Shopping Assistant\nHands-on consulting course focused on applying AI and analytics to real-world business problems. Topics include use case development, prompt engineering, product management, Agile delivery, and stakeholder alignment. Culminates in a Shark Tank–style team project judged by industry experts.\nRead More"
   },
   {
     "objectID": "projects/index.html#Capstone",
