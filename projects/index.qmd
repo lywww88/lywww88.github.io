@@ -171,7 +171,7 @@ Developed a full-stack analytics dashboard to support sales and retention strate
 
 <a href="/projects/Capstone.html" class="btn">Capstone Page</a>
 
-<img src="../images/JJ.png">
+<img src="../images/JJ-cover.png">
 :::
 
 <p style="text-align: center; color: #888; font-size: 0.85em; margin-top: 3em;">
