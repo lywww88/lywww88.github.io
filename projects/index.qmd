@@ -137,17 +137,6 @@ Developed classification models using blood test data to predict anemia, focusin
 :::
 
 ::: {.project-card-page}
-## Obesity Risk Analysis {#obesity-risk}
-
-**Obesity Risk Analysis and Behavioral Clustering**  
-Conducted a comprehensive analysis of obesity risk using classification models, clustering techniques, and ANOVA. Explored lifestyle and dietary factors to uncover patterns linked to obesity. After segmenting individuals into behavioral clusters, we provided tailored recommendations for each group to support targeted public health interventions.
-
-<a href="/projects/project-obesity.html" class="btn">Read More</a>
-
-<img src="../images/obesity-cover.png">
-:::
-
-::: {.project-card-page}
 ## Technology Consulting {#tech-consulting}
 
 **Smart Grocery Shopping Assistant**  
@@ -156,6 +145,17 @@ Hands-on consulting course focused on applying AI and analytics to real-world bu
 <a href="/projects/project-consulting.html" class="btn">Read More</a>
 
 <img src="../images/consulting.png">
+:::
+
+::: {.project-card-page}
+## Obesity Risk Analysis {#obesity-risk}
+
+**Obesity Risk Analysis and Behavioral Clustering**  
+Conducted a comprehensive analysis of obesity risk using classification models, clustering techniques, and ANOVA. Explored lifestyle and dietary factors to uncover patterns linked to obesity. After segmenting individuals into behavioral clusters, we provided tailored recommendations for each group to support targeted public health interventions.
+
+<a href="/projects/project-obesity.html" class="btn">Read More</a>
+
+<img src="../images/obesity-cover.png">
 :::
 
 
