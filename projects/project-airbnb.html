@@ -210,10 +210,18 @@ iframe.pdf-reader {
 <h1 class="header-title">
 Airbnb Sentiment Application &amp; Hosting Strategy
 </h1>
-<p><span style="width: 80px;"></span></p>
+<p><select id="pdf-selector" style="width: 200px; font-size: 1em; padding: 4px;"> <option value="project-airbnb.pdf">Paper</option> <option value="project-airbnb-presentation.pdf">Presentation</option> <option value="404.html">App Demo</option> </select></p>
 </div>
-<iframe class="pdf-reader" src="project-airbnb.pdf" title="Airbnb Final Paper PDF">
+<iframe id="pdf-frame" class="pdf-reader" src="project-airbnb.pdf" title="Airbnb Sentiment">
 </iframe>
+<script>
+  const selector = document.getElementById('pdf-selector');
+  const iframe = document.getElementById('pdf-frame');
+
+  selector.addEventListener('change', function () {
+    iframe.src = this.value;
+  });
+</script>
 
 
 
