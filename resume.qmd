@@ -62,7 +62,7 @@ format:
 <div aria-hidden="true" style="border-top: 1px solid #ccc; margin: 1.5em 0;"></div>
 
 <div class="resume-container">
-  <embed src="Resume_YL_2025_D1.pdf" type="application/pdf" class="resume-frame" />
+  <iframe src="Resume_YL_2025_D1.pdf" class="resume-frame" frameborder="0" allowfullscreen></iframe>
 </div>
 
 <div aria-hidden="true" style="border-top: 1px solid #ccc; margin: 1.5em 0;"></div>
