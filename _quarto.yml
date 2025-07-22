@@ -18,18 +18,20 @@ website:
             text: '<span class="nav-text">Capstone Project</span>'
       - text: '<span class="nav-text">Startup</span>'
         menu:
-          - href: Startup/SAbout.qmd
-            text: '<span class="nav-text">Startup Journey</span>'
-            target: _blank
+          - text: "Beta Launch："
           - href: https://forecastai-poc.netlify.app/
             text: '<span class="nav-text">Klug Forecast AI</span>'
             target: _blank
+          - text: "Concept Stage："
           - href: https://platemateofficial.netlify.app/
             text: '<span class="nav-text">Platemate</span>'
             target: _blank
           - href: https://skillforgeofficial.netlify.app/
             text: '<span class="nav-text">Skill Forge</span>'
             target: _blank
+          - text: "---"
+          - text: "About Startup"
+            href: startup/about.qmd
       - href: about.qmd
         text: '<span class="nav-text">About</span>'
     right:
