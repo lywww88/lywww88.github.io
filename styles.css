@@ -170,7 +170,9 @@
   align-items: center;
 }
 
-.navbar-nav .dropdown.no-arrow .dropdown-toggle::before {
+
+
+/* ✅ 隐藏 Resume 菜单项的箭头（只影响 resume-tab） */
+.navbar-nav .dropdown .resume-tab::before {
   display: none !important;
 }
-
