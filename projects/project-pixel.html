@@ -210,10 +210,18 @@ iframe.pdf-reader {
 <h1 class="header-title">
 Google Pixel Marketing
 </h1>
-<p><span style="width: 80px;"></span></p>
+<p><select id="pdf-selector" style="width: 180px; font-size: 1em; padding: 4px;"> <option value="project-pixel-paper.pdf">Paper</option> <option value="project-pixel-presentation.pdf">Presentation</option> </select></p>
 </div>
-<iframe class="pdf-reader" src="project-pixel-paper.pdf" title="Google Pixel Marketing">
+<iframe id="pdf-frame" class="pdf-reader" src="project-pixel-paper.pdf" title="Google Pixel Marketing PDF">
 </iframe>
+<script>
+  const selector = document.getElementById('pdf-selector');
+  const iframe = document.getElementById('pdf-frame');
+
+  selector.addEventListener('change', function () {
+    iframe.src = this.value;
+  });
+</script>
 
 
 
