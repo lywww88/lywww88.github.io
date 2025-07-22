@@ -13,7 +13,7 @@ format:
   display: inline-flex;
   align-items: center;
   gap: 0.5em;
-  margin: 1em auto 0.5em;
+  margin: 1em auto 0.3em;
   padding: 0.6em 1.4em;
   background-color: #007bff;
   color: white;
@@ -26,7 +26,6 @@ format:
 .download-btn:hover {
   background-color: #0056b3;
 }
-
 .download-btn svg {
   width: 1.1em;
   height: 1.1em;
@@ -38,7 +37,6 @@ format:
   justify-content: center;
   padding: 1em 0 2em;
 }
-
 .resume-frame {
   width: 80vw;
   max-width: 850px;
@@ -57,6 +55,9 @@ format:
     </svg>
     Yiwei Lu Resume
   </a>
+  <div style="color: gray; font-size: 0.9em;">
+    Last updated: <span id="last-updated">July 22, 2025</span>
+  </div>
 </div>
 
 <div aria-hidden="true" style="border-top: 1px solid #ccc; margin: 1.5em 0;"></div>
@@ -71,7 +72,7 @@ format:
   Let’s stay in touch — here’s where to find me online.
 </p>
 
-<div class="connect-container" style="display: flex; flex-wrap: wrap; gap: 1em; align-items: center;">
+<div class="connect-container" style="display: flex; flex-wrap: wrap; gap: 1em; align-items: center; justify-content: center;">
   <a href="https://www.linkedin.com/in/yiwei-lu78" class="btn" target="_blank">
     <i class="bi bi-linkedin"></i> LinkedIn
   </a>
@@ -93,5 +94,10 @@ format:
 <div aria-hidden="true" style="border-top: 1px solid #ccc; margin: 1.5em 0;"></div>
 
 <p style="text-align: center; color: #888; font-size: 0.85em; margin-top: 3em;">
-  © 2025 Yiwei Lu. All rights reserved.
+  © <span id="year"></span> Yiwei Lu. All rights reserved.
 </p>
+
+<script>
+  // 自动年份
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
