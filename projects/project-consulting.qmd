@@ -34,11 +34,24 @@ iframe.pdf-reader {
 <div class="header-bar">
   <a href="index.html" class="btn">← Back</a>
   <h1 class="header-title">Smart Grocery Shopping Assistant</h1>
-  <span style="width: 80px;"></span> 
+  <select id="pdf-selector" style="width: 160px; font-size: 1em; padding: 4px;">
+    <option value="project-consulting.pdf">Paper</option>
+    <option value="project-pixel-presentation.pdf">Presentation</option>
+  </select>
 </div>
 
 <iframe 
+  id="pdf-frame"
   class="pdf-reader"
   src="project-consulting.pdf" 
-  title="Tech & Consulting">
+  title="PDF Viewer">
 </iframe>
+
+<script>
+  const selector = document.getElementById('pdf-selector');
+  const iframe = document.getElementById('pdf-frame');
+
+  selector.addEventListener('change', function () {
+    iframe.src = this.value;
+  });
+</script>
