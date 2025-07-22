@@ -115,17 +115,6 @@ Designed a relational data model and normalized schema for a global fashion reta
 :::
 
 ::: {.project-card-page}
-## Marketing Strategy {#pixel-strategy}
-
-**Repositioning Google Pixel — A Strategic Marketing Analysis**  
-Analyzed Google Pixel’s weak market penetration despite technical strengths in AI and camera performance. Assessed brand positioning, competitive dynamics, and proposed strategic recommendations to enhance Pixel 9’s presence in the premium smartphone segment.
-
-<a href="/projects/project-pixel.html" class="btn">Read More</a>
-
-<img src="../images/pixel-cover.png">
-:::
-
-::: {.project-card-page}
 ## Anemia Prediction {#anemia-ml}
 
 **Predicting Anemia with Machine Learning**  
@@ -156,6 +145,17 @@ Hands-on consulting course focused on applying AI and analytics to real-world bu
 <a href="/projects/project-consulting.html" class="btn">Read More</a>
 
 <img src="../images/consulting.png">
+:::
+
+::: {.project-card-page}
+## Marketing Strategy {#pixel-strategy}
+
+**Repositioning Google Pixel — A Strategic Marketing Analysis**  
+Analyzed Google Pixel’s weak market penetration despite technical strengths in AI and camera performance. Assessed brand positioning, competitive dynamics, and proposed strategic recommendations to enhance Pixel 9’s presence in the premium smartphone segment.
+
+<a href="/projects/project-pixel.html" class="btn">Read More</a>
+
+<img src="../images/pixel-cover.png">
 :::
 
 
