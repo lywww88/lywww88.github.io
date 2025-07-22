@@ -158,10 +158,10 @@ Hands-on consulting course focused on applying AI and analytics to real-world bu
 <img src="../images/consulting.png">
 :::
 
+<div aria-hidden="true" style="border-top: 1px solid #ccc; margin: 1.5em 0;"></div>
+
 ::: {.project-card-page}
 ## Explore Capstone Project {#Capstone}
-
-<div aria-hidden="true" style="border-top: 1px solid #ccc; margin: 1.5em 0;"></div>
 
 **Johnson & Johnson Cerenovus Capstone Project**  
 Analyzed sales trends and customer churn data to uncover key drivers of revenue growth and client retention. Identified patterns across product lines, customer segments, and geographic regions, providing insights to support strategic planning and targeted engagement efforts.
