@@ -58,7 +58,7 @@ format:
 
 <div class="resume-container">
   <iframe class="resume-frame"
-          src="https://drive.google.com/file/d/1dvW6anwd4aV7jaQYi4yjn62RANVlJTJ1/view?usp=sharing"
+          src="https://drive.google.com/file/d/1dvW6anwd4aV7jaQYi4yjn62RANVlJTJ1/preview"
           allow="autoplay"></iframe>
 </div>
 
