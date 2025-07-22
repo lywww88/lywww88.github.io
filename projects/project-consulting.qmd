@@ -1,1 +1,44 @@
+---
+title: ""
+page-layout: full
+format:
+  html:
+    title-block: false
+---
 
+<style>
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 0;
+}
+
+.header-title {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 2em;
+  font-weight: 700;
+  margin: 0;
+}
+
+iframe.pdf-reader {
+  width: 100%;
+  height: 90vh;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+</style>
+
+<div class="header-bar">
+  <a href="index.html" class="btn">← Back</a>
+  <h1 class="header-title">Smart Grocery Shopping Assistant</h1>
+  <span style="width: 80px;"></span> 
+</div>
+
+<iframe 
+  class="pdf-reader"
+  src="project-consulting.pdf" 
+  title="Tech & Consulting">
+</iframe>
