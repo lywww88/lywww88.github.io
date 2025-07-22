@@ -5,7 +5,7 @@ format:
     page-layout: full
     title-block: false
     resources:
-      - Resume.pdf
+      - Resume_YL_2025_D1.pdf
 ---
 
 <style>
@@ -51,7 +51,7 @@ format:
 </style>
 
 <div style="text-align: center;">
-  <a href="Resume.pdf" class="download-btn" download>
+  <a href="Resume_YL_2025_D1.pdf" class="download-btn" download>
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2M7 10l5 5m0 0l5-5m-5 5V4"/>
     </svg>
@@ -62,7 +62,7 @@ format:
 <div aria-hidden="true" style="border-top: 1px solid #ccc; margin: 1.5em 0;"></div>
 
 <div class="resume-container">
-  <embed src="Resume.pdf" type="application/pdf" class="resume-frame" />
+  <embed src="Resume_YL_2025_D1.pdf" type="application/pdf" class="resume-frame" />
 </div>
 
 <div aria-hidden="true" style="border-top: 1px solid #ccc; margin: 1.5em 0;"></div>
