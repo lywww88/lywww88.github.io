@@ -170,8 +170,9 @@
   align-items: center;
 }
 
-/* ✅ 仅隐藏 Resume 的菜单项左侧箭头 */
-.navbar-nav .dropdown > a:has(i.bi-download)::before {
+
+
+/* ✅ 隐藏 Resume 菜单项的箭头（只影响 resume-tab） */
+.navbar-nav .dropdown .resume-tab::before {
   display: none !important;
 }
-
