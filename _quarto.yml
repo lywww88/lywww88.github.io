@@ -31,7 +31,7 @@ website:
             target: _blank
           - text: "---"
           - text: "Startup Journey"
-            href: startup/about.qmd
+            href: startup/journey.qmd
       - href: about.qmd
         text: '<span class="nav-text">About</span>'
     right:
