@@ -1,1 +1,59 @@
+---
+title: "Startup Journey"
+format:
+  html:
+    title-block: false
+    page-layout: full
+---
 
+<style>
+.page-intro {
+  max-width: 800px;
+  margin: 4em auto 2em;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  padding: 0 1em;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-top: 3em;
+  margin-bottom: 1em;
+  color: #2c3e50;
+}
+
+.under-dev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40vh;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  color: #666;
+  opacity: 0.85;
+  letter-spacing: 0.5px;
+}
+</style>
+
+<div class="page-intro">
+  Over the past year, I’ve taken ideas from early-stage concepts to functional prototypes—exploring how data, design, and human behavior intersect in the startup world.
+  This page documents my journey across projects like <strong>Klug Forecast AI</strong>, <strong>Platemate</strong>, and <strong>Skill Forge</strong>:
+  from scribbled wireframes to live web apps, and everything in between.
+</div>
+
+<div class="section-title">🚧 What’s Coming</div>
+
+<div class="page-intro">
+  I’m working on detailed write-ups, behind-the-scenes insights, and lessons learned from each startup. These will include ideation process, stack choices, user research,
+  and what failed along the way (yes, that too).
+</div>
+
+<div class="under-dev">
+  Full story launching soon. Stay tuned!
+</div>
