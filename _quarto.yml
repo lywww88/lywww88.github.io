@@ -55,7 +55,7 @@ website:
         href: https://www.kaggle.com/yiweilu  
         aria-label: Kaggle
 
-      - text: '<span class="nav-text"><i class="bi bi-download"></i> Resume</span>'
+      - text: '<span class="nav-text resume-tab"><i class="bi bi-download"></i> Resume</span>'
         menu:
           - href: resume.qmd
             text: '<span class="nav-text"><i class="bi bi-eye"></i> View Resume</span>'
