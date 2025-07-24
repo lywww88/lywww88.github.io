@@ -24,14 +24,14 @@ format:
   font-weight: 500;
   font-size: 0.95rem;
 
-  padding: 0.6em 1.2em;
+  padding: 0.35em 1em;  /* ⬅️ 更紧凑的上下内边距 */
   border-radius: 0.4em;
   border: 1px solid #b3d7ff;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
 
-  width: fit-content;
   max-width: 860px;
-  margin: 0.6em auto 0.5em auto; /* top, sides, bottom */
+  width: 100%; /* 保持最大宽度限制 */
+  margin: 0.6em auto 0.5em auto;
 }
 
 .announcement-bar a {
@@ -45,7 +45,6 @@ format:
   text-decoration: underline;
 }
 </style>
-
 
 <!-- Profile Section -->
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 2em; max-width: 900px; margin: 2em auto;">
