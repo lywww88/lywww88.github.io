@@ -5,19 +5,19 @@ format:
     toc: false
 ---
 
-<!-- Announcement Bar -->
-<div style="display: flex; justify-content: center;">
-  <div class="announcement-bar">
-    📢 <strong>Announcement:</strong> My portfolio has just been updated! 
-    <a href="https://lywww88.github.io/projects/" target="_blank">Click here to view →</a>
-  </div>
+<!-- ✅ 公告栏 HTML：直接写在这里，不需要额外嵌套 style -->
+
+<div class="announcement-bar">
+  📢 <strong>Announcement:</strong> My portfolio has just been updated! 
+  <a href="https://lywww88.github.io/projects/" target="_blank">Click here to view →</a>
 </div>
 
+<!-- ✅ 公告栏样式定义，建议放页面顶部 -->
 <style>
 .announcement-bar {
   display: flex;
   justify-content: center;
-  align-items: center;  /* 垂直居中 */
+  align-items: center;
   text-align: center;
   background: #fff7e6;
   color: #663c00;
@@ -40,6 +40,7 @@ format:
   text-decoration: underline;
 }
 </style>
+
 
 <!-- Profile Section -->
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 2em; max-width: 900px; margin: 2em auto;">
