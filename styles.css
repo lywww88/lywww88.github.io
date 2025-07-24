@@ -174,3 +174,16 @@
 .navbar-nav .dropdown:has(.resume-tab) > .dropdown-toggle::before {
   display: none !important;
 }
+
+/* === 顶部公告栏样式 === */
+.announcement-bar {
+  width: 100%;
+  text-align: center;
+  padding: 0.5em 1em;
+  background-color: #f0f8ff;
+  font-size: 0.95rem;
+  color: #003366;
+  font-weight: 600;
+  border-bottom: 1px solid #ccc;
+  z-index: 999;
+}
