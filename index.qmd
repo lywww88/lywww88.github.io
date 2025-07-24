@@ -6,25 +6,29 @@ format:
 ---
 
 <!-- Announcement Bar -->
-<div class="announcement-bar">
-  🎲 Not sure what to view? <a href="https://lywww88.github.io/projects/">Try your luck & explore a project →</a>
+<div style="display: flex; justify-content: center;">
+  <div class="announcement-bar">
+    📢 <strong>Announcement:</strong> My portfolio has just been updated! 
+    <a href="https://lywww88.github.io/projects/" target="_blank">Click here to view →</a>
+  </div>
 </div>
 
 <style>
 .announcement-bar {
   text-align: center;
-  background: #f4f8ff;
-  color: #333;
+  background: #fff7e6;
+  color: #663c00;
   font-weight: 500;
   font-size: 0.95rem;
-  padding: 0.6em 1em;
-  border-bottom: 1px solid #d0d0d0;
-  position: sticky;
-  top: 60px;
-  z-index: 999;
+  padding: 0.6em 1.2em;
+  border-radius: 0.4em;
+  border: 1px solid #f0c36d;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+  max-width: 860px;
+  margin: 1.5em auto;
 }
 .announcement-bar a {
-  color: #007bff;
+  color: #c76a00;
   font-weight: 600;
   text-decoration: none;
   margin-left: 0.3em;
