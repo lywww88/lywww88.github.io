@@ -19,7 +19,7 @@ format:
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: #fff7e6;
+  background: #e6f2ff;
   color: #663c00;
   font-weight: 500;
   font-size: 0.95rem;
