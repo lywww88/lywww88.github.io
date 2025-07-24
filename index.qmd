@@ -20,7 +20,7 @@ format:
   align-items: center;
   text-align: center;
   background: #e6f2ff;
-  color: #663c00;
+  color: #003366;
   font-weight: 500;
   font-size: 0.95rem;
   padding: 0.6em 1.2em;
