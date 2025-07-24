@@ -198,34 +198,40 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<!-- ✅ Announcement HTML -->
+<!-- ✅ Announcement Bar -->
 <div class="announcement-bar">
-<p>🚀 <strong>Stay tuned!</strong> - Startup Journey Launching soon. <a href="https://lywww88.github.io/startup/journey.html" target="_blank">Learn more →</a></p>
+<p>🚀 <strong>Stay tuned! – Startup Journey Launching soon.</strong> <a href="https://lywww88.github.io/startup/journey.html" target="_blank">Learn more →</a></p>
 </div>
-<!-- ✅ 公告栏样式定义，建议放页面顶部 -->
+<!-- ✅ Announcement Bar Style -->
 <style>
 .announcement-bar {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+
   background: #e6f2ff;
   color: #003366;
   font-weight: 500;
   font-size: 0.95rem;
+
   padding: 0.6em 1.2em;
   border-radius: 0.4em;
   border: 1px solid #b3d7ff;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+
+  width: fit-content;
   max-width: 860px;
-  margin: 0.7em auto 0;
+  margin: 0.6em auto 0.5em auto; /* top, sides, bottom */
 }
+
 .announcement-bar a {
   color: #c76a00;
   font-weight: 600;
   text-decoration: none;
-  margin-left: 0.3em;
+  margin-left: 0.4em;
 }
+
 .announcement-bar a:hover {
   text-decoration: underline;
 }
