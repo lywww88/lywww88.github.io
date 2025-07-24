@@ -5,6 +5,35 @@ format:
     toc: false
 ---
 
+<!-- Announcement Bar -->
+<div class="announcement-bar">
+  🎲 Not sure what to view? <a href="https://lywww88.github.io/projects/">Try your luck & explore a project →</a>
+</div>
+
+<style>
+.announcement-bar {
+  text-align: center;
+  background: #f4f8ff;
+  color: #333;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.6em 1em;
+  border-bottom: 1px solid #d0d0d0;
+  position: sticky;
+  top: 60px;
+  z-index: 999;
+}
+.announcement-bar a {
+  color: #007bff;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 0.3em;
+}
+.announcement-bar a:hover {
+  text-decoration: underline;
+}
+</style>
+
 <!-- Profile Section -->
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 2em; max-width: 900px; margin: 2em auto;">
 
@@ -27,7 +56,6 @@ format:
   </div>
 
 </div>
-
 
 ::: { .project-card style="display: flex; flex-wrap: wrap; gap: 1.5em; align-items: flex-start;" markdown="1" }
 
