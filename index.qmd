@@ -15,6 +15,9 @@ format:
 
 <style>
 .announcement-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;  /* 垂直居中 */
   text-align: center;
   background: #fff7e6;
   color: #663c00;
