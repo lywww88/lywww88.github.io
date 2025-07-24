@@ -5,11 +5,11 @@ format:
     toc: false
 ---
 
-<!-- ✅ 公告栏 HTML：直接写在这里，不需要额外嵌套 style -->
+<!-- ✅ Announcement HTML -->
 
 <div class="announcement-bar">
-  📢 <strong>Announcement:</strong> My portfolio has just been updated! 
-  <a href="https://lywww88.github.io/projects/" target="_blank">Click here to view →</a>
+  🚀 <strong>Now Live:</strong> Just launched new work — Documents, Presentation, and more. 
+  <a href="https://lywww88.github.io/projects/" target="_blank">Take a look →</a>
 </div>
 
 <!-- ✅ 公告栏样式定义，建议放页面顶部 -->
