@@ -170,9 +170,7 @@
   align-items: center;
 }
 
-
-
-/* ✅ 隐藏 Resume 菜单项的箭头（只影响 resume-tab） */
-.navbar-nav .dropdown .resume-tab::before {
+/* ✅ Hide arrow ONLY for Resume dropdown */
+.navbar-nav .dropdown:has(.resume-tab) > .dropdown-toggle::before {
   display: none !important;
 }
