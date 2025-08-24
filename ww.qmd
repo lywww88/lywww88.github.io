@@ -89,7 +89,6 @@ format:
 </style>
 
 <div class="ww-hub">
-  <!-- 头像 -->
   <img src="images/Headshot.jpg" alt="Yiwei Lu" class="avatar">
   <h1>Yiwei's Corner 🌿</h1>
   <p class="tagline">A cozy space for my daily vibes and little adventures ✨</p>
@@ -97,8 +96,8 @@ format:
   <!-- Daily Note -->
   <div class="ww-note">
     <h2>📌 Daily Note</h2>
-    <p>☀️ 最近在听：Taylor Swift - Lover</p>
-    <p>📖 今天读了一点书，还带狗狗去散步 🐶</p>
+    <p>☀️Taylor Swift - Lover</p>
+    <p>📖 🐶</p>
     <small>Last updated: Aug 24, 2025</small>
   </div>
 
