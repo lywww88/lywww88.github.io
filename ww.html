@@ -195,21 +195,31 @@ ul.task-list li input[type="checkbox"] {
         
     </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 style="margin-bottom:0.5rem;" class="title display-7">
-Yiwei’s Corner 🌿
-</h1></header>
+<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
 
-<div style="text-align:center; margin-top:2rem; font-family:system-ui, sans-serif;">
+<!-- 🔒 -->
+<script>
+  (function () {
+    const KEY = "ww-pass-ok";
+    const PASSWORD = "mimacuowu";   
 
-<p style="color:#555; font-size:1.05rem;">
-A cozy space for my daily vibes and little adventures ✨
-</p>
-</div>
-<div style="margin:1.5rem auto 0; text-align:left; display:block; background:#fff; padding:1rem 1.5rem; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.08); max-width:680px;">
-<h2 style="margin:0 0 0.5rem;" class="anchored">
+    if (localStorage.getItem(KEY) === "1") return;
+    const input = prompt("🔒 Private page\nEnter access code:");
+    if (input === PASSWORD) {
+      localStorage.setItem(KEY, "1");
+      return;
+    }
+    alert("❌ Access denied.");
+    location.href = "/";  
+    document.write("");  
+  })();
+</script>
+<!-- 📌 Daily Note -->
+<div style="max-width:600px;margin:2rem auto;padding:1rem;border:1px solid #eee;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.05);">
+<h2 style="margin:0 0 .5rem;" class="anchored">
 📌 Daily Note
 </h2>
 <p>
@@ -220,14 +230,20 @@ A cozy space for my daily vibes and little adventures ✨
 </p>
 <p><small style="color:#888;">Last updated: Aug 24, 2025</small></p>
 </div>
-<div style="margin:1.8rem auto 0; display:flex; justify-content:center; gap:1.2rem; flex-wrap:wrap; align-items:center; max-width:700px;">
-<p><a href="https://instagram.com/REPLACE_YOUR_IG" target="_blank"> <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram" width="45"> </a> <a href="https://www.ebay.com/usr/REPLACE_EBAY" target="_blank"> <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/EBay_logo.png" alt="eBay" width="70"> </a> <a href="https://youtube.com/" target="_blank"> <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" width="55"> </a> <a href="https://photos.google.com/" target="_blank"> <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Google_Photos_icon.svg" alt="Google Photos" width="55"> </a> <a href="./blog.html" target="_self"> <img src="https://cdn-icons-png.flaticon.com/512/1828/1828778.png" alt="Blog" width="45"> </a></p>
+<div style="display:flex;justify-content:center;align-items:center;gap:1.5rem;margin:2rem 0;">
+<p><a href="https://instagram.com/REPLACE_YOUR_IG" target="_blank" style="display:inline-block;transition:transform 0.2s;"> <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" style="height:40px;width:40px;"> </a> <a href="https://www.ebay.com/usr/REPLACE_EBAY" target="_blank" style="display:inline-block;transition:transform 0.2s;"> <img src="https://images.prismic.io/ebayevo/Zm_StJm069VX1ywC_logo_I6728-54758-3626-50811.png?auto=format%2Ccompress&amp;fit=max&amp;w=3840&amp;q=100" alt="eBay" style="height:40px;width:40px;object-fit:contain;"> </a> <a href="https://youtube.com/" target="_blank" style="display:inline-block;transition:transform 0.2s;"> <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" style="height:40px;width:40px;"> </a> <a href="https://photos.google.com/" target="_blank" style="display:inline-block;transition:transform 0.2s;"> <img src="https://www.google.com/photos/about/static/images/ui/logo-photos.png" alt="Google Photos" style="height:40px;width:40px;"> </a></p>
 </div>
-<!-- Giscus：也不要缩进，否则会被当作代码文本 -->
-<div id="comments" style="margin:2.2rem auto 0; max-width:800px;">
+<div id="comments">
 <script src="https://giscus.app/client.js" data-repo="lywww88/lywww88.github.io" data-repo-id="R_kgDONwfB9w" data-category="General" data-category-id="DIC_kwDONwfB984CuiuO" data-mapping="pathname" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="light" crossorigin="anonymous" async="">
-</script>
+  </script>
 </div>
+<script>
+  document.querySelectorAll('a').forEach(a => {
+    a.addEventListener('mousedown', () => a.style.transform = 'scale(0.9)');
+    a.addEventListener('mouseup', () => a.style.transform = 'scale(1)');
+    a.addEventListener('mouseleave', () => a.style.transform = 'scale(1)');
+  });
+</script>
 
 
 
