@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Capstone"
 format:
   html:
     title-block: false
