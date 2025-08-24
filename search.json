@@ -254,9 +254,16 @@
   {
     "objectID": "ww.html",
     "href": "ww.html",
-    "title": "\nYiwei’s Corner\n",
+    "title": "TEST",
     "section": "",
-    "text": "Yiwei’s Corner\n\n\nA cozy space for my daily vibes and little adventures ✨\n\n\n\n&lt;h2&gt;📌 Daily Note&lt;/h2&gt;\n&lt;p&gt;Test1&lt;/p&gt;\n&lt;p&gt;Test2&lt;/p&gt;\n&lt;small&gt;Last updated: Aug 24, 2025&lt;/small&gt;\n\n\n   \n   \n   \n   \n   \n\n\n\n&lt;script src=\"https://giscus.app/client.js\"\n    data-repo=\"lywww88/lywww88.github.io\"\n    data-repo-id=\"R_kgDONwfB9w\"\n    data-category=\"General\"\n    data-category-id=\"DIC_kwDONwfB984CuiuO\"\n    data-mapping=\"pathname\"\n    data-strict=\"0\"\n    data-reactions-enabled=\"1\"\n    data-emit-metadata=\"0\"\n    data-input-position=\"bottom\"\n    data-theme=\"preferred_color_scheme\"\n    data-lang=\"en\"\n    crossorigin=\"anonymous\"\n    async&gt;\n&lt;/script&gt;"
+    "text": "A cozy space for my daily vibes and little adventures ✨\n\n\n☀️ Test1\n📖 Test2 🐶\nLast updated: Aug 24, 2025"
+  },
+  {
+    "objectID": "ww.html#daily-note",
+    "href": "ww.html#daily-note",
+    "title": "TEST",
+    "section": "",
+    "text": "☀️ Test1\n📖 Test2 🐶\nLast updated: Aug 24, 2025"
   },
   {
     "objectID": "lywww88.github.io/projects/project-airbnb.html",
