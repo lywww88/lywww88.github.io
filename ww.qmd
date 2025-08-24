@@ -7,47 +7,109 @@ format:
     page-layout: full
 ---
 
-<!-- 🔒 -->
+<!-- lock -->
 <script>
   (function () {
     const KEY = "ww-pass-ok";
     const PASSWORD = "mimacuowu";   
 
     if (localStorage.getItem(KEY) === "1") return;
+
     const input = prompt("🔒 Private page\nEnter access code:");
     if (input === PASSWORD) {
       localStorage.setItem(KEY, "1");
       return;
     }
     alert("❌ Access denied.");
-    location.href = "/";  
-    document.write("");  
+    location.href = "/";
+    document.write("");
   })();
 </script>
 
+<!-- 仅在本页生效的样式（避免和全局冲突） -->
+<style>
+  .ww-card {
+    max-width: 680px;
+    margin: 2.2rem auto;
+    padding: 1.25rem 1.2rem;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    background: #fff;
+  }
+  .ww-card h2 {
+    margin: 0 0 .9rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+  .ww-card p { margin: .55rem 0; }
+  .ww-muted { color: #777; }
+
+  .ww-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.4rem;
+    margin: 2rem 0 1.25rem;
+  }
+  .ww-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    background: #fff;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    transition: transform .18s ease, box-shadow .18s ease;
+  }
+  .ww-social a:hover {
+    transform: translateY(-2px) scale(1.06);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  }
+  .ww-social a img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 8px;
+    display: block;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ww-social a,
+    .ww-social a:hover { transition: none; transform: none; }
+  }
+</style>
+
 <!-- 📌 Daily Note -->
-<div style="max-width:600px;margin:2rem auto;padding:1rem;border:1px solid #eee;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.05);">
-  <h2 style="margin:0 0 .5rem;">📌 Daily Note</h2>
+<div class="ww-card">
+  <h2>Daily Note</h2>
   <p>☀️ Test1</p>
-  <p>📖 Test2 🐶</p>
-  <small style="color:#888;">Last updated: Aug 24, 2025</small>
+  <p>📖 Test2 </p>
+  <small class="ww-muted">Last updated: Aug 24, 2025</small>
 </div>
 
-<div style="display:flex;justify-content:center;align-items:center;gap:1.5rem;margin:2rem 0;">
-  <a href="https://instagram.com/REPLACE_YOUR_IG" target="_blank" style="display:inline-block;transition:transform 0.2s;">
-    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" style="height:40px;width:40px;">
+<!-- 🌐 社交链接（统一 40px，横向居中） -->
+<div class="ww-social" aria-label="social links">
+  <a href="https://instagram.com/lywww88" target="_blank" rel="noopener" aria-label="Instagram">
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" loading="lazy" referrerpolicy="no-referrer">
   </a>
-  <a href="https://www.ebay.com/usr/REPLACE_EBAY" target="_blank" style="display:inline-block;transition:transform 0.2s;">
-    <img src="https://images.prismic.io/ebayevo/Zm_StJm069VX1ywC_logo_I6728-54758-3626-50811.png?auto=format%2Ccompress&fit=max&w=3840&q=100" alt="eBay" style="height:40px;width:40px;object-fit:contain;">
+
+  <a href="https://www.ebay.com/usr/w_shoppp" target="_blank" rel="noopener" aria-label="eBay">
+    <!-- Wikipedia 官方 logo，适配 object-fit: contain -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/EBay_logo.png" alt="eBay" loading="lazy" referrerpolicy="no-referrer">
   </a>
-  <a href="https://youtube.com/" target="_blank" style="display:inline-block;transition:transform 0.2s;">
-    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" style="height:40px;width:40px;">
+
+  <a href="https://youtube.com/" target="_blank" rel="noopener" aria-label="YouTube">
+    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" loading="lazy" referrerpolicy="no-referrer">
   </a>
-  <a href="https://photos.google.com/" target="_blank" style="display:inline-block;transition:transform 0.2s;">
-    <img src="https://www.google.com/photos/about/static/images/ui/logo-photos.png" alt="Google Photos" style="height:40px;width:40px;">
+
+  <a href="https://photos.google.com/" target="_blank" rel="noopener" aria-label="Google Photos">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Google_Photos_icon.svg" alt="Google Photos" loading="lazy" referrerpolicy="no-referrer">
   </a>
 </div>
 
+<!-- 💬 Giscus 评论区 -->
 <div id="comments">
   <script src="https://giscus.app/client.js"
       data-repo="lywww88/lywww88.github.io"
@@ -65,9 +127,10 @@ format:
 </div>
 
 <script>
-  document.querySelectorAll('a').forEach(a => {
-    a.addEventListener('mousedown', () => a.style.transform = 'scale(0.9)');
-    a.addEventListener('mouseup', () => a.style.transform = 'scale(1)');
-    a.addEventListener('mouseleave', () => a.style.transform = 'scale(1)');
+  // 点击压下反馈（不影响布局）
+  document.querySelectorAll('.ww-social a').forEach(a => {
+    a.addEventListener('mousedown', () => a.style.transform = 'translateY(0) scale(0.92)');
+    ['mouseup','mouseleave'].forEach(ev =>
+      a.addEventListener(ev, () => a.style.transform = ''));
   });
 </script>
