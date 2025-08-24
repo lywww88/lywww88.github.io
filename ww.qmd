@@ -1,86 +1,131 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Yiwei's Corner</title>
-  <style>
-    body {
-      font-family: "Segoe UI", system-ui, sans-serif;
-      background: #f9f9f9;
-      text-align: center;
-      padding: 2em;
-    }
+---
+title: ""
+format:
+  html:
+    allow-raw-html: true
+    title-block: false
+    page-layout: full
+---
 
-    .avatar {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 1em;
-    }
+<style>
+  /* === 仅作用于 ww.html 页面 === */
+  .ww-hub {
+    max-width: 640px;
+    margin: 4rem auto;
+    text-align: center;
+    padding: 0 1rem;
+    font-family: "Segoe UI", system-ui, sans-serif;
+  }
 
-    h1 {
-      font-size: 2em;
-      margin: 0.2em 0;
-      color: #333;
-    }
+  .ww-hub img.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+  }
 
-    p.tagline {
-      color: #666;
-      margin-bottom: 2em;
-    }
+  .ww-hub h1 {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+    background: linear-gradient(90deg, #ff6cab, #7366ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
-    .note {
-      background: white;
-      border-radius: 8px;
-      padding: 1em;
-      margin: 1.5em auto;
-      max-width: 400px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      text-align: left;
-    }
+  .ww-hub p.tagline {
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+  }
 
-    .note h2 {
-      margin-top: 0;
-      font-size: 1.2em;
-    }
+  /* Daily Note */
+  .ww-note {
+    background: white;
+    border-radius: 12px;
+    padding: 1.2rem 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    text-align: left;
+    border-left: 4px solid #7366ff;
+  }
+  .ww-note h2 { font-size: 1.1rem; margin: 0 0 0.6rem; color: #555; }
+  .ww-note p { margin: 0.4rem 0; font-size: 0.95rem; color: #444; }
+  .ww-note small { display: block; margin-top: .8rem; color: #888; font-size: 0.8rem; text-align: right; }
 
-    .links a {
-      display: block;
-      margin: 0.5em auto;
-      padding: 0.8em;
-      width: 200px;
-      text-decoration: none;
-      border-radius: 6px;
-      color: white;
-      font-weight: bold;
-    }
+  /* Links */
+  .ww-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+  .ww-link-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .6rem;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 14px;
+    color: white;
+    transition: transform .2s ease, box-shadow .25s ease;
+  }
+  .ww-link-btn:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  }
 
-    .instagram { background: #e1306c; }
-    .ebay { background: #0064D2; }
-    .whatsapp { background: #25D366; }
-    .youtube { background: #ff0000; }
-  </style>
-</head>
-<body>
+  .instagram { background: linear-gradient(45deg, #fd1d1d, #e1306c, #f77737); }
+  .ebay { background: linear-gradient(45deg, #0064D2, #0a84ff); }
+  .whatsapp { background: linear-gradient(45deg, #25D366, #128c7e); }
+  .youtube { background: linear-gradient(45deg, #ff0000, #cc0000); }
+  .photos { background: linear-gradient(45deg, #fbbf24, #f59e0b); color: #111; }
+  .blog { background: linear-gradient(45deg, #9333ea, #7e22ce); }
+</style>
 
+<div class="ww-hub">
+  <!-- 头像 -->
   <img src="images/Headshot.jpg" alt="Yiwei Lu" class="avatar">
   <h1>Yiwei's Corner 🌿</h1>
-  <p class="tagline">A cozy space for my daily vibes ✨</p>
+  <p class="tagline">A cozy space for my daily vibes and little adventures ✨</p>
 
-  <div class="note">
+  <!-- Daily Note -->
+  <div class="ww-note">
     <h2>📌 Daily Note</h2>
     <p>☀️ 最近在听：Taylor Swift - Lover</p>
     <p>📖 今天读了一点书，还带狗狗去散步 🐶</p>
     <small>Last updated: Aug 24, 2025</small>
   </div>
 
-  <div class="links">
-    <a href="https://instagram.com/REPLACE_YOUR_IG" target="_blank" class="instagram">📸 Instagram</a>
-    <a href="https://www.ebay.com/usr/REPLACE_EBAY" target="_blank" class="ebay">🛍️ eBay Store</a>
-    <a href="https://wa.me/6266736276" target="_blank" class="whatsapp">💬 WhatsApp</a>
-    <a href="https://youtube.com/" target="_blank" class="youtube">🎥 YouTube</a>
+  <!-- 链接按钮 -->
+  <div class="ww-links">
+    <a href="https://instagram.com/REPLACE_YOUR_IG" target="_blank" class="ww-link-btn instagram">📸 Instagram</a>
+    <a href="https://www.ebay.com/usr/REPLACE_EBAY" target="_blank" class="ww-link-btn ebay">🛍️ eBay Store</a>
+    <a href="https://wa.me/6266736276" target="_blank" class="ww-link-btn whatsapp">💬 WhatsApp</a>
+    <a href="https://youtube.com/" target="_blank" class="ww-link-btn youtube">🎥 YouTube</a>
+    <a href="https://photos.google.com/" target="_blank" class="ww-link-btn photos">🌄 Photo Album</a>
+    <a href="/blog.html" target="_self" class="ww-link-btn blog">📝 Notes & Blog</a>
   </div>
 
-</body>
-</html>
+  <!-- 💬 Giscus 评论区 -->
+  <div id="comments">
+    <script src="https://giscus.app/client.js"
+        data-repo="lywww88/lywww88.github.io"
+        data-repo-id="你的-repo-id"
+        data-category="General"
+        data-category-id="你的-category-id"
+        data-mapping="pathname"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </div>
+</div>
