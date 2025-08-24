@@ -5,7 +5,7 @@ project:
     - projects/*.pdf
 
 website:
-  title: "Portfolio - Yiwei Lu"
+  title: "Yiwei Lu"
   navbar:
     logo: images/logo1.png
     left:
