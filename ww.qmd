@@ -11,74 +11,129 @@ format:
     margin: 0;
     padding: 0;
     font-family: "Segoe UI", system-ui, sans-serif;
-    background: #fafafa;
+    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
     color: #333;
   }
 
   .hub {
-    max-width: 500px;
-    margin: 4rem auto;
+    max-width: 520px;
+    margin: 5rem auto;
     text-align: center;
     padding: 0 1rem;
   }
 
-  /* 顶部头像 */
+  /* 头像 */
   .hub img.avatar {
     width: 120px;
     height: 120px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 1rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border: 3px solid #fff;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.1);
   }
 
   .hub h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin: 0.5rem 0;
+    background: linear-gradient(90deg, #ff6cab, #7366ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
+
   .hub p.tagline {
     color: #666;
     margin-bottom: 2rem;
+    font-size: 1.05rem;
   }
 
-  /* 链接按钮 */
+  /* Daily Note 区块 */
+  .note {
+    background: white;
+    border-radius: 12px;
+    padding: 1.2rem 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    text-align: left;
+    border-left: 4px solid #7366ff;
+    animation: fadeIn 1.2s ease-out;
+  }
+  .note h2 {
+    font-size: 1.1rem;
+    margin: 0 0 0.6rem;
+    color: #555;
+  }
+  .note p {
+    margin: 0.4rem 0;
+    font-size: 0.95rem;
+    color: #444;
+  }
+  .note small {
+    display: block;
+    margin-top: .8rem;
+    color: #888;
+    font-size: 0.8rem;
+    text-align: right;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* 链接按钮容器 */
   .links {
     display: flex;
     flex-direction: column;
     gap: 1rem;
   }
 
+  /* 按钮 */
   .link-btn {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: .6rem;
-    padding: 0.9rem;
+    padding: 1rem;
     text-decoration: none;
     font-size: 1rem;
     font-weight: 600;
-    border-radius: 12px;
+    border-radius: 14px;
     color: white;
-    transition: transform .15s ease, box-shadow .2s ease;
+    transition: transform .2s ease, box-shadow .25s ease;
+    animation: pulse 3s infinite ease-in-out;
   }
   .link-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
   }
 
-  .instagram { background: #E1306C; }
-  .ebay { background: #0064D2; }
-  .whatsapp { background: #25D366; }
-  .youtube { background: #FF0000; }
-  .photos { background: #fbbf24; color: #111; }
-  .blog { background: #9333ea; }
+  .instagram { background: linear-gradient(45deg, #fd1d1d, #e1306c, #f77737); }
+  .ebay { background: linear-gradient(45deg, #0064D2, #0a84ff); }
+  .whatsapp { background: linear-gradient(45deg, #25D366, #128c7e); }
+  .youtube { background: linear-gradient(45deg, #ff0000, #cc0000); }
+  .photos { background: linear-gradient(45deg, #fbbf24, #f59e0b); color: #111; }
+  .blog { background: linear-gradient(45deg, #9333ea, #7e22ce); }
 
+  /* 呼吸动画 */
+  @keyframes pulse {
+    0%,100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+  }
 </style>
 
 <div class="hub">
   <img src="images/Headshot.jpg" alt="Yiwei Lu" class="avatar">
-  <h1>Yiwei Lu</h1>
-  <p class="tagline">Sharing little pieces of life 🌿</p>
+  <h1>Yiwei's Corner 🌿</h1>
+  <p class="tagline">A cozy space for my daily vibes and little adventures ✨</p>
+
+  <!-- Daily Note -->
+  <div class="note">
+    <h2>📌 Daily Note</h2>
+    <p>☀️ 最近在听：Taylor Swift - Lover</p>
+    <p>📖 今天读了一点书，还带狗狗去散步 🐶</p>
+    <small>Last updated: Aug 24, 2025</small>
+  </div>
 
   <div class="links">
     <a href="https://instagram.com/REPLACE_YOUR_IG" target="_blank" class="link-btn instagram">📸 Instagram</a>
