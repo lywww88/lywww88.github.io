@@ -1,5 +1,6 @@
 ---
-title: ""
+title: "About - Yiwei Lu"   
+page-title: false           
 format:
   html:
     toc: true
