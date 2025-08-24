@@ -7,54 +7,50 @@ format:
     page-layout: full
 ---
 
-# TEST
-A cozy space for my daily vibes and little adventures ✨  
+<div style="text-align:center; margin-top:2rem; font-family:system-ui, sans-serif;">
+  <h1 style="margin-bottom:0.5rem;">Yiwei’s Corner</h1>
+  <p style="color:#555; font-size:1.05rem;">A cozy space for my daily vibes and little adventures ✨</p>
 
-## 📌 Daily Note
-☀️ Test1  
-📖 Test2 🐶  
-<small>Last updated: Aug 24, 2025</small>
+  <!-- Daily Note -->
+  <div style="margin-top:2rem; text-align:left; display:inline-block; background:#fff; padding:1rem 1.5rem; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.08);">
+    <h2 style="margin:0 0 0.5rem;">📌 Daily Note</h2>
+    <p>☀️ Test1</p>
+    <p>📖 Test2 🐶</p>
+    <small style="color:#888;">Last updated: Aug 24, 2025</small>
+  </div>
 
----
+  <div style="margin-top:2rem; display:flex; justify-content:center; gap:1.5rem; flex-wrap:wrap;">
+    <a href="https://instagram.com/REPLACE_YOUR_IG" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram" width="45">
+    </a>
+    <a href="https://www.ebay.com/usr/REPLACE_EBAY" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/EBay_logo.png" alt="eBay" width="70">
+    </a>
+    <a href="https://youtube.com/" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" width="55">
+    </a>
+    <a href="https://photos.google.com/" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Google_Photos_icon.svg" alt="Google Photos" width="55">
+    </a>
+    <a href="/blog.html" target="_self">
+      <img src="https://cdn-icons-png.flaticon.com/512/1828/1828778.png" alt="Blog" width="45">
+    </a>
+  </div>
 
-<div style="margin-top:2rem; line-height:2; text-align:center;">
-
-  <a href="https://instagram.com/REPLACE_YOUR_IG" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="40">
-  </a>
-
-  <a href="https://www.ebay.com/usr/REPLACE_EBAY" target="_blank" style="margin-left:1rem;">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/EBay_logo.png" alt="eBay" width="60">
-  </a>
-
-  <a href="https://youtube.com/" target="_blank" style="margin-left:1rem;">
-    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" width="45">
-  </a>
-
-  <a href="https://photos.google.com/" target="_blank" style="margin-left:1rem;">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Google_Photos_icon.svg" alt="Google Photos" width="45">
-  </a>
-
-  <a href="/blog.html" target="_self" style="margin-left:1rem;">
-    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828778.png" alt="Blog" width="40">
-  </a>
-
-</div>
-
----
-
-<div id="comments" style="margin-top:3rem;">
-<script src="https://giscus.app/client.js"
-        data-repo="lywww88/lywww88.github.io"
-        data-repo-id="R_kgDONwfB9w"
-        data-category="General"
-        data-category-id="DIC_kwDONwfB984CuiuO"
-        data-mapping="pathname"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="light"
-        crossorigin="anonymous"
-        async>
-</script>
+  <!-- 💬 Giscus  -->
+  <div id="comments" style="margin-top:3rem; text-align:left; max-width:640px; margin-left:auto; margin-right:auto;">
+    <script src="https://giscus.app/client.js"
+            data-repo="lywww88/lywww88.github.io"
+            data-repo-id="R_kgDONwfB9w"
+            data-category="General"
+            data-category-id="DIC_kwDONwfB984CuiuO"
+            data-mapping="pathname"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="bottom"
+            data-theme="light"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </div>
 </div>
