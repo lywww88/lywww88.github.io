@@ -1,60 +1,86 @@
----
-title: ""
-pagetitle: "Yiwei's Corner - Yiwei Lu"
-format:
-  html:
-    title-block: false
-    page-layout: full
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Yiwei's Corner</title>
+  <style>
+    body {
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: #f9f9f9;
+      text-align: center;
+      padding: 2em;
+    }
 
-<div class="container py-5">
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1em;
+    }
 
-  <!-- 顶部头像 + 标题 -->
-  <div class="text-center mb-4">
-    <img src="images/Headshot.jpg" alt="Yiwei Lu" width="120" height="120"
-         class="rounded-circle img-thumbnail mb-3">
-    <h1 class="fw-bold" style="margin-bottom:.25rem;">Yiwei's Corner 🌿</h1>
-    <p class="text-muted">A cozy space for my daily vibes and little adventures ✨</p>
+    h1 {
+      font-size: 2em;
+      margin: 0.2em 0;
+      color: #333;
+    }
+
+    p.tagline {
+      color: #666;
+      margin-bottom: 2em;
+    }
+
+    .note {
+      background: white;
+      border-radius: 8px;
+      padding: 1em;
+      margin: 1.5em auto;
+      max-width: 400px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+
+    .note h2 {
+      margin-top: 0;
+      font-size: 1.2em;
+    }
+
+    .links a {
+      display: block;
+      margin: 0.5em auto;
+      padding: 0.8em;
+      width: 200px;
+      text-decoration: none;
+      border-radius: 6px;
+      color: white;
+      font-weight: bold;
+    }
+
+    .instagram { background: #e1306c; }
+    .ebay { background: #0064D2; }
+    .whatsapp { background: #25D366; }
+    .youtube { background: #ff0000; }
+  </style>
+</head>
+<body>
+
+  <img src="images/Headshot.jpg" alt="Yiwei Lu" class="avatar">
+  <h1>Yiwei's Corner 🌿</h1>
+  <p class="tagline">A cozy space for my daily vibes ✨</p>
+
+  <div class="note">
+    <h2>📌 Daily Note</h2>
+    <p>☀️ 最近在听：Taylor Swift - Lover</p>
+    <p>📖 今天读了一点书，还带狗狗去散步 🐶</p>
+    <small>Last updated: Aug 24, 2025</small>
   </div>
 
-  <!-- Daily Note 卡片（Bootstrap 组件） -->
-  <div class="card shadow-sm mb-4 mx-auto" style="max-width: 720px;">
-    <div class="card-body">
-      <h5 class="card-title mb-2">📌 Daily Note</h5>
-      <p class="card-text mb-1">☀️ 最近在听：Taylor Swift — Lover</p>
-      <p class="card-text mb-0">📖 今天读了一点书，还带狗狗去散步 🐶</p>
-      <div class="text-end">
-        <small class="text-secondary">Last updated: Aug 24, 2025</small>
-      </div>
-    </div>
+  <div class="links">
+    <a href="https://instagram.com/REPLACE_YOUR_IG" target="_blank" class="instagram">📸 Instagram</a>
+    <a href="https://www.ebay.com/usr/REPLACE_EBAY" target="_blank" class="ebay">🛍️ eBay Store</a>
+    <a href="https://wa.me/6266736276" target="_blank" class="whatsapp">💬 WhatsApp</a>
+    <a href="https://youtube.com/" target="_blank" class="youtube">🎥 YouTube</a>
   </div>
 
-  <!-- 链接网格（纯 Bootstrap 栅格 + 按钮） -->
-  <div class="row g-3 mx-auto" style="max-width: 720px;">
-    <div class="col-12 col-sm-6">
-      <a class="btn btn-danger btn-lg w-100" target="_blank"
-         href="https://instagram.com/REPLACE_YOUR_IG">📸 Instagram</a>
-    </div>
-    <div class="col-12 col-sm-6">
-      <a class="btn btn-primary btn-lg w-100" target="_blank"
-         href="https://www.ebay.com/usr/REPLACE_EBAY">🛍️ eBay Store</a>
-    </div>
-    <div class="col-12 col-sm-6">
-      <a class="btn btn-success btn-lg w-100" target="_blank"
-         href="https://wa.me/6266736276">💬 WhatsApp</a>
-    </div>
-    <div class="col-12 col-sm-6">
-      <a class="btn btn-danger btn-lg w-100" target="_blank"
-         href="https://youtube.com/">🎥 YouTube / Playlist</a>
-    </div>
-    <div class="col-12 col-sm-6">
-      <a class="btn btn-warning btn-lg w-100" target="_blank"
-         href="https://photos.google.com/">🌄 Photo Album</a>
-    </div>
-    <div class="col-12 col-sm-6">
-      <a class="btn btn-purple btn-lg w-100" target="_self"
-         href="/blog.html" style="background:#6f42c1;border-color:#6f42c1;">📝 Notes & Blog</a>
-    </div>
-  </div>
-
-</div>
+</body>
+</html>
