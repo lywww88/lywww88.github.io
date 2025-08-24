@@ -1,5 +1,6 @@
 ---
-title: "Journey"
+title: ""
+page-title: "Journey - Yiwei Lu"      
 format:
   html:
     title-block: false
