@@ -1,5 +1,6 @@
 ---
 title: ""
+page-title: "Projects - Yiwei Lu"      
 page-layout: full
 format:
   html:
