@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Yiwei’s Corner - Yiwei Lu – Yiwei Lu</title>
+<title>ww – Yiwei Lu</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -200,51 +200,125 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="container py-5">
-<!-- 顶部头像 + 标题 -->
-<div class="text-center mb-4">
-<pre><code>&lt;img src="images/Headshot.jpg" alt="Yiwei Lu" width="120" height="120"
-     class="rounded-circle img-thumbnail mb-3"&gt;
-&lt;h1 class="fw-bold" style="margin-bottom:.25rem;"&gt;Yiwei's Corner 🌿&lt;/h1&gt;
-&lt;p class="text-muted"&gt;A cozy space for my daily vibes and little adventures ✨&lt;/p&gt;</code></pre>
+<style>
+  /* === 仅作用于 ww.html 页面 === */
+  .ww-hub {
+    max-width: 640px;
+    margin: 4rem auto;
+    text-align: center;
+    padding: 0 1rem;
+    font-family: "Segoe UI", system-ui, sans-serif;
+  }
+
+  .ww-hub img.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+  }
+
+  .ww-hub h1 {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+    background: linear-gradient(90deg, #ff6cab, #7366ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .ww-hub p.tagline {
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+  }
+
+  /* Daily Note */
+  .ww-note {
+    background: white;
+    border-radius: 12px;
+    padding: 1.2rem 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    text-align: left;
+    border-left: 4px solid #7366ff;
+  }
+  .ww-note h2 { font-size: 1.1rem; margin: 0 0 0.6rem; color: #555; }
+  .ww-note p { margin: 0.4rem 0; font-size: 0.95rem; color: #444; }
+  .ww-note small { display: block; margin-top: .8rem; color: #888; font-size: 0.8rem; text-align: right; }
+
+  /* Links */
+  .ww-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+  .ww-link-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .6rem;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 14px;
+    color: white;
+    transition: transform .2s ease, box-shadow .25s ease;
+  }
+  .ww-link-btn:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  }
+
+  .instagram { background: linear-gradient(45deg, #fd1d1d, #e1306c, #f77737); }
+  .ebay { background: linear-gradient(45deg, #0064D2, #0a84ff); }
+  .whatsapp { background: linear-gradient(45deg, #25D366, #128c7e); }
+  .youtube { background: linear-gradient(45deg, #ff0000, #cc0000); }
+  .photos { background: linear-gradient(45deg, #fbbf24, #f59e0b); color: #111; }
+  .blog { background: linear-gradient(45deg, #9333ea, #7e22ce); }
+</style>
+<div class="ww-hub">
+<!-- 头像 --> <img src="images/Headshot.jpg" alt="Yiwei Lu" class="avatar">
+<h1>
+Yiwei’s Corner 🌿
+</h1>
+<p class="tagline">
+A cozy space for my daily vibes and little adventures ✨
+</p>
+<!-- Daily Note -->
+<div class="ww-note">
+<pre><code>&lt;h2&gt;📌 Daily Note&lt;/h2&gt;
+&lt;p&gt;☀️ 最近在听：Taylor Swift - Lover&lt;/p&gt;
+&lt;p&gt;📖 今天读了一点书，还带狗狗去散步 🐶&lt;/p&gt;
+&lt;small&gt;Last updated: Aug 24, 2025&lt;/small&gt;</code></pre>
 </div>
-<!-- Daily Note 卡片（Bootstrap 组件） -->
-<div class="card shadow-sm mb-4 mx-auto" style="max-width: 720px;">
-<pre><code>&lt;div class="card-body"&gt;
-  &lt;h5 class="card-title mb-2"&gt;📌 Daily Note&lt;/h5&gt;
-  &lt;p class="card-text mb-1"&gt;☀️ 最近在听：Taylor Swift — Lover&lt;/p&gt;
-  &lt;p class="card-text mb-0"&gt;📖 今天读了一点书，还带狗狗去散步 🐶&lt;/p&gt;
-  &lt;div class="text-end"&gt;
-    &lt;small class="text-secondary"&gt;Last updated: Aug 24, 2025&lt;/small&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+<!-- 链接按钮 -->
+<div class="ww-links">
+<pre><code>&lt;a href="https://instagram.com/REPLACE_YOUR_IG" target="_blank" class="ww-link-btn instagram"&gt;📸 Instagram&lt;/a&gt;
+&lt;a href="https://www.ebay.com/usr/REPLACE_EBAY" target="_blank" class="ww-link-btn ebay"&gt;🛍️ eBay Store&lt;/a&gt;
+&lt;a href="https://wa.me/6266736276" target="_blank" class="ww-link-btn whatsapp"&gt;💬 WhatsApp&lt;/a&gt;
+&lt;a href="https://youtube.com/" target="_blank" class="ww-link-btn youtube"&gt;🎥 YouTube&lt;/a&gt;
+&lt;a href="https://photos.google.com/" target="_blank" class="ww-link-btn photos"&gt;🌄 Photo Album&lt;/a&gt;
+&lt;a href="/blog.html" target="_self" class="ww-link-btn blog"&gt;📝 Notes &amp; Blog&lt;/a&gt;</code></pre>
 </div>
-<!-- 链接网格（纯 Bootstrap 栅格 + 按钮） -->
-<div class="row g-3 mx-auto" style="max-width: 720px;">
-<pre><code>&lt;div class="col-12 col-sm-6"&gt;
-  &lt;a class="btn btn-danger btn-lg w-100" target="_blank"
-     href="https://instagram.com/REPLACE_YOUR_IG"&gt;📸 Instagram&lt;/a&gt;
-&lt;/div&gt;
-&lt;div class="col-12 col-sm-6"&gt;
-  &lt;a class="btn btn-primary btn-lg w-100" target="_blank"
-     href="https://www.ebay.com/usr/REPLACE_EBAY"&gt;🛍️ eBay Store&lt;/a&gt;
-&lt;/div&gt;
-&lt;div class="col-12 col-sm-6"&gt;
-  &lt;a class="btn btn-success btn-lg w-100" target="_blank"
-     href="https://wa.me/6266736276"&gt;💬 WhatsApp&lt;/a&gt;
-&lt;/div&gt;
-&lt;div class="col-12 col-sm-6"&gt;
-  &lt;a class="btn btn-danger btn-lg w-100" target="_blank"
-     href="https://youtube.com/"&gt;🎥 YouTube / Playlist&lt;/a&gt;
-&lt;/div&gt;
-&lt;div class="col-12 col-sm-6"&gt;
-  &lt;a class="btn btn-warning btn-lg w-100" target="_blank"
-     href="https://photos.google.com/"&gt;🌄 Photo Album&lt;/a&gt;
-&lt;/div&gt;
-&lt;div class="col-12 col-sm-6"&gt;
-  &lt;a class="btn btn-purple btn-lg w-100" target="_self"
-     href="/blog.html" style="background:#6f42c1;border-color:#6f42c1;"&gt;📝 Notes &amp; Blog&lt;/a&gt;
-&lt;/div&gt;</code></pre>
+<!-- 💬 Giscus 评论区 -->
+<div id="comments">
+<pre><code>&lt;script src="https://giscus.app/client.js"
+    data-repo="lywww88/lywww88.github.io"
+    data-repo-id="你的-repo-id"
+    data-category="General"
+    data-category-id="你的-category-id"
+    data-mapping="pathname"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="light"
+    crossorigin="anonymous"
+    async&gt;
+&lt;/script&gt;</code></pre>
 </div>
 </div>
 
