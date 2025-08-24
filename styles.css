@@ -177,17 +177,13 @@
   cursor: pointer;
 
   /* 🔥 默认就有呼吸发光效果 */
-  animation: w-glow 1.5s infinite alternate;
+  animation: w-glow 1s infinite alternate;
+  transition: transform 0.3s ease;  /* 平滑放大 */
 }
 
-/* Hover 额外放大 */
+/* Hover 时额外放大 */
 .navbar img.w-logo:hover {
-  transform: scale(1.2);
-}
-
-/* 点击时触发弹跳 */
-.navbar img.w-logo:active {
-  animation: w-bounce 0.6s;   /* 临时覆盖呼吸动画，播放一次弹跳 */
+  transform: scale(1.2);   /* 鼠标移上去放大 */
 }
 
 /* 呼吸发光动画 */
@@ -198,15 +194,8 @@
   }
   100% {
     filter: drop-shadow(0 0 8px rgba(0,123,255,0.8));
-    transform: scale(1.05);
+    transform: scale(1.05); /* 呼吸轻微放大 */
   }
-}
-
-/* 弹跳动画 */
-@keyframes w-bounce {
-  0%,20%,50%,80%,100% { transform: translateY(0); }
-  40% { transform: translateY(-6px); }
-  60% { transform: translateY(-3px); }
 }
 
 /* ✅ Hide arrow ONLY for Resume dropdown */
