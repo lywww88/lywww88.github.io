@@ -65,7 +65,7 @@ website:
             text: '<span class="nav-text"><i class="bi bi-file-earmark-arrow-down"></i> Download PDF</span>'
             target: _blank
 
-      - href: ww.html
+      - href: ww.qmd
         text: '<img class="w-logo" src="/images/W.PNG" alt="W Logo">'
         aria-label: W
         icon: none
