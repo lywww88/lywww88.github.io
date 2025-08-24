@@ -183,7 +183,7 @@
 
 /* Hover 时额外放大 */
 .navbar img.w-logo:hover {
-  transform: scale(1.2);   /* 鼠标移上去放大 */
+  transform: scale(1.35);   /* 鼠标移上去放大 */
 }
 
 /* 呼吸发光动画 */
