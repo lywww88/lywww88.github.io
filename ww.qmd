@@ -2,6 +2,7 @@
 title: ""
 format:
   html:
+    allow-raw-html: true
     title-block: false
     page-layout: full
 ---
