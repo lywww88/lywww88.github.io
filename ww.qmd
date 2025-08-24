@@ -1,1 +1,170 @@
+---
+title: ""
+format:
+  html:
+    title-block: false
+    page-layout: full
+---
 
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(ellipse at top, #1e3a8a 0%, #0f172a 100%);
+    font-family: "Segoe UI", system-ui, sans-serif;
+    color: #e2e8f0;
+  }
+
+  .hub-wrap {
+    max-width: 760px;
+    margin: 6rem auto 5rem;
+    padding: 0 1rem;
+  }
+
+  .hero {
+    text-align: center;
+    margin-bottom: 2.2rem;
+  }
+  .hero h1 {
+    font-size: 2.3rem;
+    margin: .2rem 0 .6rem;
+    background: linear-gradient(90deg, #00f0ff, #0fffc3, #00f0ff);
+    background-size: 300% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glowText 6s linear infinite;
+  }
+  .hero p {
+    font-size: 1.05rem;
+    opacity: .9;
+    margin: 0;
+  }
+
+  .panel {
+    backdrop-filter: blur(18px);
+    background: rgba(36, 60, 90, 0.85);
+    border: 1px solid rgba(34,211,238,.25);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 0 60px rgba(34,211,238,.1);
+  }
+
+  .link-grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: .9rem;
+  }
+  @media (min-width: 600px) {
+    .link-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  .card-link {
+    display: flex;
+    align-items: center;
+    gap: .9rem;
+    padding: .9rem 1rem;
+    border-radius: 12px;
+    background: rgba(15, 23, 42, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    text-decoration: none;
+    color: #e5faff;
+    transition: transform .18s ease, box-shadow .2s ease, border-color .2s ease;
+  }
+  .card-link:hover {
+    transform: translateY(-3px);
+    border-color: rgba(34,211,238,.55);
+    box-shadow: 0 8px 22px rgba(0,0,0,.25);
+  }
+  .card-ico {
+    font-size: 1.2rem;
+    width: 2.1rem;
+    height: 2.1rem;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    background: radial-gradient(circle at 30% 30%, rgba(34,211,238,.25), rgba(20,184,166,.15));
+  }
+  .card-main {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.35;
+  }
+  .card-main b { color: #e6fbff; }
+  .card-main small { color: #bfefff; opacity: .85 }
+
+  @keyframes glowText {
+    0% { background-position: 0% 50% }
+    100% { background-position: 200% 50% }
+  }
+</style>
+
+<div class="hub-wrap">
+
+  <div class="hero">
+    <h1>Yiwei's Corner 🌙</h1>
+    <p>A little mix of life — photos, vibes, and side adventures ✨</p>
+  </div>
+
+  <div class="panel">
+    <div class="link-grid">
+
+      <!-- Instagram -->
+      <a class="card-link" href="https://instagram.com/REPLACE_YOUR_IG" target="_blank">
+        <span class="card-ico">📸</span>
+        <span class="card-main">
+          <b>Instagram</b>
+          <small>Snippets of daily life</small>
+        </span>
+      </a>
+
+      <!-- eBay Store -->
+      <a class="card-link" href="https://www.ebay.com/usr/REPLACE_EBAY" target="_blank">
+        <span class="card-ico">🛍️</span>
+        <span class="card-main">
+          <b>eBay Store</b>
+          <small>Curated finds & fun sales</small>
+        </span>
+      </a>
+
+      <!-- WhatsApp -->
+      <a class="card-link" href="https://wa.me/6266736276" target="_blank">
+        <span class="card-ico">💬</span>
+        <span class="card-main">
+          <b>WhatsApp</b>
+          <small>Quick chat with me</small>
+        </span>
+      </a>
+
+      <!-- YouTube 或 Spotify -->
+      <a class="card-link" href="https://www.youtube.com/" target="_blank">
+        <span class="card-ico">🎶</span>
+        <span class="card-main">
+          <b>Playlist</b>
+          <small>Music I’ve been looping</small>
+        </span>
+      </a>
+
+      <!-- 相册 / 照片墙 -->
+      <a class="card-link" href="https://photos.google.com/" target="_blank">
+        <span class="card-ico">🌄</span>
+        <span class="card-main">
+          <b>Photo Album</b>
+          <small>Captured moments</small>
+        </span>
+      </a>
+
+      <!-- 随笔/博客 -->
+      <a class="card-link" href="/blog.html" target="_self">
+        <span class="card-ico">📝</span>
+        <span class="card-main">
+          <b>Notes</b>
+          <small>Casual thoughts & reflections</small>
+        </span>
+      </a>
+
+    </div>
+  </div>
+
+</div>
