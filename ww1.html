@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ww – Yiwei Lu</title>
+<title>ww1 – Yiwei Lu</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -176,7 +176,7 @@ ul.task-list li input[type="checkbox"] {
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link active" href="./ww.html" target="_blank" aria-current="page"> <i class="bi bi-none" role="img" aria-label="W">
+    <a class="nav-link" href="./ww.html" target="_blank"> <i class="bi bi-none" role="img" aria-label="W">
 </i> 
 <span class="menu-text"><img class="w-logo" src="./images/W.PNG" alt="W Logo"></span></a>
   </li>  
@@ -200,163 +200,89 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<script>
+  const password = prompt("🔒 Access Restricted\nPlease enter your access code:");
+  if (password !== "mimacuowu") {
+    alert("❌ Access Denied.\nRedirecting to surface web...");
+    window.location.href = "/";
+    document.body.innerHTML = "";
+  }
+</script>
 <style>
-  body {
-    margin: 0;
-    padding: 0;
-    background: radial-gradient(ellipse at top, #1e3a8a 0%, #0f172a 100%);
-    font-family: "Segoe UI", system-ui, sans-serif;
-    color: #e2e8f0;
-  }
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(ellipse at top, #1e3a8a 0%, #0f172a 100%);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  overflow-x: hidden;
+}
 
-  .hub-wrap {
-    max-width: 760px;
-    margin: 6rem auto 5rem;
-    padding: 0 1rem;
-  }
+.protected-content {
+  backdrop-filter: blur(20px);
+  background: rgba(36, 60, 90, 0.85);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 4em 2em;
+  text-align: center;
+  color: #e2e8f0;
+  max-width: 640px;
+  margin: 8em auto;
+  box-shadow: 0 0 80px rgba(0, 255, 255, 0.1);
+  position: relative;
+  animation: floatUp 1.2s ease-out;
+}
 
-  .hero {
-    text-align: center;
-    margin-bottom: 2.2rem;
-  }
-  .hero h1 {
-    font-size: 2.3rem;
-    margin: .2rem 0 .6rem;
-    background: linear-gradient(90deg, #00f0ff, #0fffc3, #00f0ff);
-    background-size: 300% auto;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: glowText 6s linear infinite;
-  }
-  .hero p {
-    font-size: 1.05rem;
-    opacity: .9;
-    margin: 0;
-  }
+.protected-content::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: inherit;
+  background: radial-gradient(circle at center, #38bdf8 0%, transparent 70%);
+  z-index: -1;
+  filter: blur(14px);
+  opacity: 0.3;
+}
 
-  .panel {
-    backdrop-filter: blur(18px);
-    background: rgba(36, 60, 90, 0.85);
-    border: 1px solid rgba(34,211,238,.25);
-    border-radius: 16px;
-    padding: 1.5rem;
-    box-shadow: 0 0 60px rgba(34,211,238,.1);
-  }
+.protected-content h1,
+.protected-content p {
+  color: #e0f7fa;
+  text-shadow: 0 0 12px rgba(0, 255, 255, 0.2);
+}
 
-  .link-grid {
-    display: grid;
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-    gap: .9rem;
-  }
-  @media (min-width: 600px) {
-    .link-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-  }
+.protected-content h1 {
+  font-size: 2.6em;
+  margin-bottom: 0.4em;
+  background: linear-gradient(90deg, #00f0ff, #0fffc3, #00f0ff);
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glowText 6s linear infinite;
+  letter-spacing: 1px;
+}
 
-  .card-link {
-    display: flex;
-    align-items: center;
-    gap: .9rem;
-    padding: .9rem 1rem;
-    border-radius: 12px;
-    background: rgba(15, 23, 42, 0.35);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    text-decoration: none;
-    color: #e5faff;
-    transition: transform .18s ease, box-shadow .2s ease, border-color .2s ease;
-  }
-  .card-link:hover {
-    transform: translateY(-3px);
-    border-color: rgba(34,211,238,.55);
-    box-shadow: 0 8px 22px rgba(0,0,0,.25);
-  }
-  .card-ico {
-    font-size: 1.2rem;
-    width: 2.1rem;
-    height: 2.1rem;
-    display: grid;
-    place-items: center;
-    border-radius: 10px;
-    background: radial-gradient(circle at 30% 30%, rgba(34,211,238,.25), rgba(20,184,166,.15));
-  }
-  .card-main {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.35;
-  }
-  .card-main b { color: #e6fbff; }
-  .card-main small { color: #bfefff; opacity: .85 }
+.protected-content p {
+  font-size: 1.15em;
+  line-height: 1.6;
+  margin-top: 0.5em;
+}
 
-  @keyframes glowText {
-    0% { background-position: 0% 50% }
-    100% { background-position: 200% 50% }
-  }
+@keyframes floatUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseBorder {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 </style>
-<div class="hub-wrap">
-<div class="hero">
-<pre><code>&lt;h1&gt;Yiwei's Corner 🌙&lt;/h1&gt;
-&lt;p&gt;A little mix of life — photos, vibes, and side adventures ✨&lt;/p&gt;</code></pre>
-</div>
-<div class="panel">
-<pre><code>&lt;div class="link-grid"&gt;
-
-  &lt;!-- Instagram --&gt;
-  &lt;a class="card-link" href="https://instagram.com/REPLACE_YOUR_IG" target="_blank"&gt;
-    &lt;span class="card-ico"&gt;📸&lt;/span&gt;
-    &lt;span class="card-main"&gt;
-      &lt;b&gt;Instagram&lt;/b&gt;
-      &lt;small&gt;Snippets of daily life&lt;/small&gt;
-    &lt;/span&gt;
-  &lt;/a&gt;
-
-  &lt;!-- eBay Store --&gt;
-  &lt;a class="card-link" href="https://www.ebay.com/usr/REPLACE_EBAY" target="_blank"&gt;
-    &lt;span class="card-ico"&gt;🛍️&lt;/span&gt;
-    &lt;span class="card-main"&gt;
-      &lt;b&gt;eBay Store&lt;/b&gt;
-      &lt;small&gt;Curated finds &amp; fun sales&lt;/small&gt;
-    &lt;/span&gt;
-  &lt;/a&gt;
-
-  &lt;!-- WhatsApp --&gt;
-  &lt;a class="card-link" href="https://wa.me/6266736276" target="_blank"&gt;
-    &lt;span class="card-ico"&gt;💬&lt;/span&gt;
-    &lt;span class="card-main"&gt;
-      &lt;b&gt;WhatsApp&lt;/b&gt;
-      &lt;small&gt;Quick chat with me&lt;/small&gt;
-    &lt;/span&gt;
-  &lt;/a&gt;
-
-  &lt;!-- YouTube 或 Spotify --&gt;
-  &lt;a class="card-link" href="https://www.youtube.com/" target="_blank"&gt;
-    &lt;span class="card-ico"&gt;🎶&lt;/span&gt;
-    &lt;span class="card-main"&gt;
-      &lt;b&gt;Playlist&lt;/b&gt;
-      &lt;small&gt;Music I’ve been looping&lt;/small&gt;
-    &lt;/span&gt;
-  &lt;/a&gt;
-
-  &lt;!-- 相册 / 照片墙 --&gt;
-  &lt;a class="card-link" href="https://photos.google.com/" target="_blank"&gt;
-    &lt;span class="card-ico"&gt;🌄&lt;/span&gt;
-    &lt;span class="card-main"&gt;
-      &lt;b&gt;Photo Album&lt;/b&gt;
-      &lt;small&gt;Captured moments&lt;/small&gt;
-    &lt;/span&gt;
-  &lt;/a&gt;
-
-  &lt;!-- 随笔/博客 --&gt;
-  &lt;a class="card-link" href="/blog.html" target="_self"&gt;
-    &lt;span class="card-ico"&gt;📝&lt;/span&gt;
-    &lt;span class="card-main"&gt;
-      &lt;b&gt;Notes&lt;/b&gt;
-      &lt;small&gt;Casual thoughts &amp; reflections&lt;/small&gt;
-    &lt;/span&gt;
-  &lt;/a&gt;
-
-&lt;/div&gt;</code></pre>
-</div>
+<div class="protected-content">
+<p>
+<strong>🦖 WELCOME TO BASE 🦖</strong>
+</p>
 </div>
 
 
