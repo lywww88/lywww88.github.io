@@ -70,6 +70,12 @@ website:
         icon: none
         target: _self
 
+      - href: https://www.ebay.com/usr/w_shoppp
+        text: '<img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/EBay_logo.svg" alt="eBay" style="height:20px; vertical-align:middle;">'
+        aria-label: eBay
+        icon: none
+        target: _blank
+
 format:
   html:
     theme: cosmo
