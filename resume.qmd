@@ -1,5 +1,6 @@
 ---
 title: ""
+page-title: "Resume - Yiwei Lu"      
 format:
   html:
     page-layout: full
