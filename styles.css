@@ -166,29 +166,31 @@
   align-items: center;
 }
 
-/* === W Logo 样式控制 (右上角) === */
-.navbar img[alt="W Logo"] {
-  height: 28px !important;     /* 固定大小，不受 .navbar-brand img 影响 */
+/* 右上角 W Logo 尺寸与基础状态 */
+.navbar img.w-logo {
+  height: 28px !important;     /* 和其它图标差不多大 */
   width: auto;
+  display: inline-block;        /* 确保 transform 生效 */
   vertical-align: middle;
+  transform-origin: center;
   transition: transform 0.3s ease, filter 0.3s ease;
   cursor: pointer;
 }
 
-/* Hover 动态效果（放大 + 轻微发光） */
-.navbar img[alt="W Logo"]:hover {
+/* Hover 动效（放大 + 轻微发光） */
+.navbar img.w-logo:hover {
   transform: scale(1.2);
-  filter: drop-shadow(0 0 6px rgba(0, 123, 255, 0.5));
+  filter: drop-shadow(0 0 6px rgba(0,123,255,0.5));
 }
 
-/* 点击时触发 bounce 动画 */
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+/* 点击时弹跳 */
+@keyframes w-bounce {
+  0%,20%,50%,80%,100% { transform: translateY(0); }
   40% { transform: translateY(-6px); }
   60% { transform: translateY(-3px); }
 }
-.navbar img[alt="W Logo"]:active {
-  animation: bounce 0.8s;
+.navbar img.w-logo:active {
+  animation: w-bounce 0.8s;
 }
 
 /* ✅ Hide arrow ONLY for Resume dropdown */
