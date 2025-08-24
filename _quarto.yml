@@ -1,6 +1,7 @@
 project:
   type: website
   resources:
+    - images/**         
     - projects/*.pdf
 
 website:
@@ -65,7 +66,7 @@ website:
             target: _blank
 
       - href: ww.html
-        text: '<img class="w-logo" src="https://lywww88.github.io/images/W.PNG" alt="W Logo">'
+        text: '<img class="w-logo" src="/images/W.PNG" alt="W Logo">'
         aria-label: W
         icon: none
         target: _blank
