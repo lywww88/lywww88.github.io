@@ -2,7 +2,7 @@
   {
     "objectID": "startup/journey.html",
     "href": "startup/journey.html",
-    "title": "Portfolio - Yiwei Lu",
+    "title": "Yiwei Lu",
     "section": "",
     "text": "🚀 What’s Coming\n\n\nOver the past year, I’ve taken ideas from early-stage concepts to functional prototypes—exploring how data, design, and human behavior intersect in the startup world. This page documents my journey across projects like Klug Forecast AI, Platemate, and Skill Forge: from scribbled wireframes to live web apps, and everything in between.I’m working on detailed write-ups, behind-the-scenes insights, and lessons learned from each startup. These will include ideation process, stack choices, user research, and what failed along the way (yes, that too). Full story launching soon. Stay tuned!\n\n\n\n\n\nLet’s stay in touch — here’s where to find me online.\n\n\n  LinkedIn    WhatsApp    GitHub  |   Email Me    About Me \n\n\n\n\n\n© 2025 Yiwei Lu. All rights reserved."
   },
@@ -23,56 +23,56 @@
   {
     "objectID": "lywww88.github.io/projects/index.html",
     "href": "lywww88.github.io/projects/index.html",
-    "title": "Portfolio - Yiwei Lu",
+    "title": "Yiwei Lu",
     "section": "",
     "text": "Financial Chatbot for Stock Market Insights\nBuilt an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.\nRead More\n© 2025 Yiwei Lu. All rights reserved."
   },
   {
     "objectID": "lywww88.github.io/projects/index.html#financial-chatbot",
     "href": "lywww88.github.io/projects/index.html#financial-chatbot",
-    "title": "Portfolio - Yiwei Lu",
+    "title": "Yiwei Lu",
     "section": "",
     "text": "Financial Chatbot for Stock Market Insights\nBuilt an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.\nRead More"
   },
   {
     "objectID": "lywww88.github.io/projects/index.html#uber-prediction",
     "href": "lywww88.github.io/projects/index.html#uber-prediction",
-    "title": "Portfolio - Yiwei Lu",
+    "title": "Yiwei Lu",
     "section": "🚗 Uber Driver Prediction",
     "text": "🚗 Uber Driver Prediction\nUber Driver Prediction Dashboard\nDeveloped an interactive dashboard to predict Uber driver performance using machine learning models. It visualizes metrics such as driver ratings, trip durations, and customer feedback.\nRead More"
   },
   {
     "objectID": "lywww88.github.io/projects/index.html#Sentiment-app",
     "href": "lywww88.github.io/projects/index.html#Sentiment-app",
-    "title": "Portfolio - Yiwei Lu",
+    "title": "Yiwei Lu",
     "section": "🏡 Review Sentiment App",
     "text": "🏡 Review Sentiment App\nAirbnb Sentiment Application & Hosting Strategy\nWe developed a review sentiment analysis app for Airbnb hosts using XGBoost and NLP. The project segments hosts based on pricing and review behavior, and provides strategic recommendations to increase guest satisfaction and optimize revenue.\nRead More"
   },
   {
     "objectID": "lywww88.github.io/projects/index.html#ecommerce-sql",
     "href": "lywww88.github.io/projects/index.html#ecommerce-sql",
-    "title": "Portfolio - Yiwei Lu",
+    "title": "Yiwei Lu",
     "section": "🛒 E-Commerce SQL",
     "text": "🛒 E-Commerce SQL\nE-Commerce SQL & Relational Database Design\nDesigned a relational data model and normalized schema for an online fashion retailer using Looker. We wrote SQL queries for churn prediction, marketing attribution, product return analysis, and inventory optimization.\nRead More"
   },
   {
     "objectID": "lywww88.github.io/projects/index.html#pixel-strategy",
     "href": "lywww88.github.io/projects/index.html#pixel-strategy",
-    "title": "Portfolio - Yiwei Lu",
+    "title": "Yiwei Lu",
     "section": "📱 Google Pixel Strategy",
     "text": "📱 Google Pixel Strategy\nRepositioning Google Pixel — A Strategic Marketing Analysis\nA strategic marketing project focused on diagnosing Google Pixel’s weak market share despite strong AI and camera technology. We analyzed brand positioning, competitive threats, and proposed data-driven solutions to strengthen Pixel 9’s presence in the premium smartphone market.\nRead More"
   },
   {
     "objectID": "lywww88.github.io/projects/index.html#anemia-ml",
     "href": "lywww88.github.io/projects/index.html#anemia-ml",
-    "title": "Portfolio - Yiwei Lu",
+    "title": "Yiwei Lu",
     "section": "🩺 Anemia ML Prediction",
     "text": "🩺 Anemia ML Prediction\nPredicting Anemia with Machine Learning\nThis project uses blood test data to train models (Decision Trees, Logistic Regression) for anemia prediction. After feature selection and applying SMOTE, we achieved up to 100% recall, aiding early medical detection.\nRead More"
   },
   {
     "objectID": "lywww88.github.io/projects/index.html#obesity-risk",
     "href": "lywww88.github.io/projects/index.html#obesity-risk",
-    "title": "Portfolio - Yiwei Lu",
+    "title": "Yiwei Lu",
     "section": "⚖️ Obesity Risk Analysis",
     "text": "⚖️ Obesity Risk Analysis\nObesity Risk Analysis and Behavioral Clustering\nAn in-depth analysis of obesity using classification, clustering, and ANOVA. We explored lifestyle and dietary variables to understand obesity risks and public health implications.\nRead More"
   },
@@ -86,7 +86,7 @@
   {
     "objectID": "ww.html",
     "href": "ww.html",
-    "title": "Portfolio - Yiwei Lu",
+    "title": "Yiwei Lu",
     "section": "",
     "text": "🦖 WELCOME TO BASE 🦖"
   },
@@ -114,70 +114,70 @@
   {
     "objectID": "projects/index.html",
     "href": "projects/index.html",
-    "title": "Portfolio - Yiwei Lu",
+    "title": "Projects",
     "section": "",
     "text": "AI Chatbot for Stock Market Analysis\nCreated an intelligent chatbot that combines large language models with financial data APIs to generate real-time stock insights, enabling users to make better investment choices.\nRead More\n© 2025 Yiwei Lu. All rights reserved."
   },
   {
     "objectID": "projects/index.html#financial-chatbot",
     "href": "projects/index.html#financial-chatbot",
-    "title": "Portfolio - Yiwei Lu",
+    "title": "Projects",
     "section": "",
     "text": "AI Chatbot for Stock Market Analysis\nCreated an intelligent chatbot that combines large language models with financial data APIs to generate real-time stock insights, enabling users to make better investment choices.\nRead More"
   },
   {
     "objectID": "projects/index.html#uber-prediction",
     "href": "projects/index.html#uber-prediction",
-    "title": "Portfolio - Yiwei Lu",
+    "title": "Projects",
     "section": "Prediction Dashboard",
     "text": "Prediction Dashboard\nUber Driver Prediction Dashboard\nDatathon 2025 Competition 🏆 “Best Use of StrataScratch DC” 🏆\nAs part of Team SYNTAX ERROR, developed a machine learning dashboard to predict whether new Uber sign-ups would convert into active drivers. Combined XGBoost with KMeans to analyze onboarding patterns, achieving 0.97 AUC. SHAP analysis highlighted onboarding delays and signup source as key drivers.\nRead More"
   },
   {
     "objectID": "projects/index.html#Sentiment-app",
     "href": "projects/index.html#Sentiment-app",
-    "title": "Portfolio - Yiwei Lu",
+    "title": "Projects",
     "section": "Review Sentiment App",
     "text": "Review Sentiment App\nAirbnb Sentiment Application & Hosting Strategy\nDeveloped a sentiment analysis app for Airbnb hosts using NLP and XGBoost. The app predicts whether a review is positive or negative, visualizes key terms through word clouds, and allows users to flag incorrect predictions. These user-labeled responses are designed to support future supervised model retraining for improved accuracy and adaptability.\nRead More"
   },
   {
     "objectID": "projects/index.html#ecommerce-sql",
     "href": "projects/index.html#ecommerce-sql",
-    "title": "Portfolio - Yiwei Lu",
+    "title": "Projects",
     "section": "E-Commerce Database",
     "text": "E-Commerce Database\nE-Commerce SQL & Relational Database Design\nDesigned a relational data model and normalized schema for a global fashion retailer. Wrote SQL queries to support churn prediction, marketing attribution, return behavior analysis, and inventory optimization.\nRead More"
   },
   {
     "objectID": "projects/index.html#anemia-ml",
     "href": "projects/index.html#anemia-ml",
-    "title": "Portfolio - Yiwei Lu",
+    "title": "Projects",
     "section": "Anemia Prediction",
     "text": "Anemia Prediction\nPredicting Anemia with Machine Learning\nDeveloped classification models using blood test data to predict anemia, focusing on early detection support. Leveraged feature selection techniques to identify the most relevant clinical indicators and applied SMOTE to address class imbalance. Models such as Decision Trees and Logistic Regression were used to explore interpretability and predictive performance.\nRead More"
   },
   {
     "objectID": "projects/index.html#obesity-risk",
     "href": "projects/index.html#obesity-risk",
-    "title": "Portfolio - Yiwei Lu",
+    "title": "Projects",
     "section": "Obesity Risk Analysis",
     "text": "Obesity Risk Analysis\nObesity Risk Analysis and Behavioral Clustering\nConducted a comprehensive analysis of obesity risk using classification models, clustering techniques, and ANOVA. Explored lifestyle and dietary factors to uncover patterns linked to obesity. After segmenting individuals into behavioral clusters, we provided tailored recommendations for each group to support targeted public health interventions.\nRead More"
   },
   {
     "objectID": "projects/index.html#tech-consulting",
     "href": "projects/index.html#tech-consulting",
-    "title": "Portfolio - Yiwei Lu",
+    "title": "Projects",
     "section": "Technology Consulting",
     "text": "Technology Consulting\nSmart Grocery Shopping Assistant\nHands-on consulting course focused on applying AI and analytics to real-world business problems. Topics include use case development, prompt engineering, product management, Agile delivery, and stakeholder alignment. Culminates in a Shark Tank–style team project judged by industry experts.\nRead More"
   },
   {
     "objectID": "projects/index.html#pixel-strategy",
     "href": "projects/index.html#pixel-strategy",
-    "title": "Portfolio - Yiwei Lu",
+    "title": "Projects",
     "section": "Marketing Strategy",
     "text": "Marketing Strategy\nRepositioning Google Pixel — A Strategic Marketing Analysis\nAnalyzed Google Pixel’s weak market penetration despite technical strengths in AI and camera performance. Assessed brand positioning, competitive dynamics, and proposed strategic recommendations to enhance Pixel 9’s presence in the premium smartphone segment.\nRead More"
   },
   {
     "objectID": "projects/index.html#Capstone",
     "href": "projects/index.html#Capstone",
-    "title": "Portfolio - Yiwei Lu",
+    "title": "Projects",
     "section": "Explore Capstone Project",
     "text": "Explore Capstone Project\nJohnson & Johnson Cerenovus Capstone Project\nDeveloped a full-stack analytics dashboard to support sales and retention strategy at Cerenovus, a Johnson & Johnson medical device division. Integrated SQL-based data pipelines, machine learning models (including churn prediction and clustering), and interactive visualizations to identify key revenue drivers, at-risk accounts, and regional product trends. The tool enables real-time exploration and supports strategic planning across sales teams.\nCapstone Page"
   },
@@ -212,21 +212,21 @@
   {
     "objectID": "projects/maintain.html",
     "href": "projects/maintain.html",
-    "title": "Portfolio - Yiwei Lu",
+    "title": "Yiwei Lu",
     "section": "",
     "text": "🚧 This page is under development. Please check back soon.\n\n\n\n\n\n© 2025 Yiwei Lu. All rights reserved."
   },
   {
     "objectID": "projects/project-looker.html",
     "href": "projects/project-looker.html",
-    "title": "Portfolio - Yiwei Lu",
+    "title": "Yiwei Lu",
     "section": "",
     "text": "🚧 This page is under development. Please check back soon.\n\n\n\n\n\n© 2025 Yiwei Lu. All rights reserved."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Portfolio - Yiwei Lu",
+    "title": "Yiwei Lu",
     "section": "",
     "text": "🚀 Stay tuned! – Test Announcement Bar Learn more →\n\n\n\n\n\n \n\n\n\n Yiwei Lu \n  I believe clarity creates freedom — in data, design, and life. \n\n\n\n\n\n\nFinancial Chatbot for Stock Market\nBuilt an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.\n\nOpen Article →\n\n\n\n\n\n\n\n\n\n\n\nUber Driver Prediction Dashboard\nDatathon 2025 Competition\n🏆 “Best Use of StrataScratch DC” 🏆\nDeveloped an interactive dashboard to predict Uber driver performance using machine learning models.\n\nOpen Demo → Open Article →\n\n\n\n\n\n\n\n\n\n\n\n\nExplore More Projects\nDiscover data-driven projects in machine learning, dashboard design, and analytics. Each showcasing practical solutions with visuals and links.\n\nProject Page →\n\n\n\n\n\n\n\n\n\n\n\n\nLet’s stay in touch — here’s where to find me online.\n\n\n  LinkedIn    WhatsApp    GitHub  |   Email Me    About Me \n\n\n\n\n\n© 2025 Yiwei Lu. All rights reserved."
   },
@@ -282,7 +282,7 @@
   {
     "objectID": "lywww88.github.io/index.html",
     "href": "lywww88.github.io/index.html",
-    "title": "Portfolio - Yiwei Lu",
+    "title": "Yiwei Lu",
     "section": "",
     "text": "Yiwei Lu \n  I believe clarity creates freedom — in data, design, and life. \n\n\n\n\n\n\nFinancial Chatbot for Stock Market\nBuilt an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.\n\nOpen Article →\n\n\n\n\n\n\n\n\n\n\n\nUber Driver Prediction Dashboard\nDatathon 2025 Competition\n🏆 “Best Use of StrataScratch DC” 🏆\nDeveloped an interactive dashboard to predict Uber driver performance using machine learning models.\n\nOpen Demo → Open Article →\n\n\n\n\n\n\n\n\n\n\n\n\nExplore More Projects\nDiscover data-driven projects in machine learning, dashboard design, and analytics. Each showcasing practical solutions with visuals and links.\n\nProject Page →\n\n\n\n\n\n\n\n\n\nLet’s stay in touch — here’s where to find me online.\n\n\n  LinkedIn    WhatsApp    GitHub  |   Email Me    About Me \n\n\n© 2025 Yiwei Lu. All rights reserved."
   },
