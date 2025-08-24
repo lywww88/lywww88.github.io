@@ -29,6 +29,7 @@
   margin: 0 !important;
 }
 
+/* 左上角主 Logo (YL) */
 .navbar-brand img {
   height: 80px !important;
   width: auto !important;
@@ -165,9 +166,9 @@
   align-items: center;
 }
 
-/* === W Logo 样式控制 === */
+/* === W Logo 样式控制 (右上角) === */
 .navbar img[alt="W Logo"] {
-  height: 28px !important;     /* 和 LinkedIn/GitHub 差不多 */
+  height: 28px !important;     /* 固定大小，不受 .navbar-brand img 影响 */
   width: auto;
   vertical-align: middle;
   transition: transform 0.3s ease, filter 0.3s ease;
