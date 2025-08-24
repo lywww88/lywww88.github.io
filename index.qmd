@@ -7,7 +7,7 @@ format:
 
 <!-- ✅ Announcement Bar -->
 <div class="announcement-bar">
-  🚀 <strong>Stay tuned! – Test Announcement Bar</strong> 
+  🚀 <strong>Stay tuned! – Test Announcement Bar</strong>
   <a href="https://lywww88.github.io/startup/journey.html" target="_blank">Learn more →</a>
 </div>
 
@@ -15,8 +15,11 @@ format:
 <style>
 .announcement-bar {
   display: flex;
-  justify-content: center;   /* 水平居中 */
-  align-items: center;       /* 垂直居中 */
+  justify-content: center;    /* 水平居中 */
+  align-items: center;        /* 垂直居中 */
+  flex-wrap: nowrap;          /* 禁止换行 */
+  white-space: nowrap;        /* 内容强制一行 */
+  gap: .6em;                  /* 元素间距 */
 
   background: #e6f2ff;
   color: #003366;
@@ -24,7 +27,7 @@ format:
   font-size: 0.95rem;
 
   min-height: 40px;
-  padding: 0 1em;
+  padding: 0.4em 1em;
 
   border-radius: 0.4em;
   border: 1px solid #b3d7ff;
@@ -35,14 +38,21 @@ format:
   box-sizing: border-box;
 }
 
-/* 🔑 把 a 链接也拉成 flex 对齐 */
+.announcement-bar strong,
 .announcement-bar a {
-  display: flex;
-  align-items: center;
+  display: inline-flex;
+  align-items: center;   /* 确保基线对齐 */
+  line-height: 1;        /* 避免行高影响垂直居中 */
+}
+
+.announcement-bar a {
   color: #c76a00;
   font-weight: 600;
   text-decoration: none;
-  margin-left: 0.4em;
+}
+
+.announcement-bar a:hover {
+  text-decoration: underline;
 }
 </style>
 
