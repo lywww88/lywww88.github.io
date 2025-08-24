@@ -19,8 +19,8 @@ format:
   <!-- Daily Note -->
   <div>
     <h2>📌 Daily Note</h2>
-    <p>☀️</p>
-    <p>📖🐶</p>
+    <p>Test1</p>
+    <p>Test2</p>
     <small>Last updated: Aug 24, 2025</small>
   </div>
 
