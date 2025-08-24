@@ -2,7 +2,7 @@
   {
     "objectID": "startup/journey.html",
     "href": "startup/journey.html",
-    "title": "Journey",
+    "title": "Yiwei Lu",
     "section": "",
     "text": "🚀 What’s Coming\n\n\nOver the past year, I’ve taken ideas from early-stage concepts to functional prototypes—exploring how data, design, and human behavior intersect in the startup world. This page documents my journey across projects like Klug Forecast AI, Platemate, and Skill Forge: from scribbled wireframes to live web apps, and everything in between.I’m working on detailed write-ups, behind-the-scenes insights, and lessons learned from each startup. These will include ideation process, stack choices, user research, and what failed along the way (yes, that too). Full story launching soon. Stay tuned!\n\n\n\n\n\nLet’s stay in touch — here’s where to find me online.\n\n\n  LinkedIn    WhatsApp    GitHub  |   Email Me    About Me \n\n\n\n\n\n© 2025 Yiwei Lu. All rights reserved."
   },
@@ -163,70 +163,70 @@
   {
     "objectID": "projects/index.html",
     "href": "projects/index.html",
-    "title": "Projects",
+    "title": "Yiwei Lu",
     "section": "",
     "text": "AI Chatbot for Stock Market Analysis\nCreated an intelligent chatbot that combines large language models with financial data APIs to generate real-time stock insights, enabling users to make better investment choices.\nRead More\n© 2025 Yiwei Lu. All rights reserved."
   },
   {
     "objectID": "projects/index.html#financial-chatbot",
     "href": "projects/index.html#financial-chatbot",
-    "title": "Projects",
+    "title": "Yiwei Lu",
     "section": "",
     "text": "AI Chatbot for Stock Market Analysis\nCreated an intelligent chatbot that combines large language models with financial data APIs to generate real-time stock insights, enabling users to make better investment choices.\nRead More"
   },
   {
     "objectID": "projects/index.html#uber-prediction",
     "href": "projects/index.html#uber-prediction",
-    "title": "Projects",
+    "title": "Yiwei Lu",
     "section": "Prediction Dashboard",
     "text": "Prediction Dashboard\nUber Driver Prediction Dashboard\nDatathon 2025 Competition 🏆 “Best Use of StrataScratch DC” 🏆\nAs part of Team SYNTAX ERROR, developed a machine learning dashboard to predict whether new Uber sign-ups would convert into active drivers. Combined XGBoost with KMeans to analyze onboarding patterns, achieving 0.97 AUC. SHAP analysis highlighted onboarding delays and signup source as key drivers.\nRead More"
   },
   {
     "objectID": "projects/index.html#Sentiment-app",
     "href": "projects/index.html#Sentiment-app",
-    "title": "Projects",
+    "title": "Yiwei Lu",
     "section": "Review Sentiment App",
     "text": "Review Sentiment App\nAirbnb Sentiment Application & Hosting Strategy\nDeveloped a sentiment analysis app for Airbnb hosts using NLP and XGBoost. The app predicts whether a review is positive or negative, visualizes key terms through word clouds, and allows users to flag incorrect predictions. These user-labeled responses are designed to support future supervised model retraining for improved accuracy and adaptability.\nRead More"
   },
   {
     "objectID": "projects/index.html#ecommerce-sql",
     "href": "projects/index.html#ecommerce-sql",
-    "title": "Projects",
+    "title": "Yiwei Lu",
     "section": "E-Commerce Database",
     "text": "E-Commerce Database\nE-Commerce SQL & Relational Database Design\nDesigned a relational data model and normalized schema for a global fashion retailer. Wrote SQL queries to support churn prediction, marketing attribution, return behavior analysis, and inventory optimization.\nRead More"
   },
   {
     "objectID": "projects/index.html#anemia-ml",
     "href": "projects/index.html#anemia-ml",
-    "title": "Projects",
+    "title": "Yiwei Lu",
     "section": "Anemia Prediction",
     "text": "Anemia Prediction\nPredicting Anemia with Machine Learning\nDeveloped classification models using blood test data to predict anemia, focusing on early detection support. Leveraged feature selection techniques to identify the most relevant clinical indicators and applied SMOTE to address class imbalance. Models such as Decision Trees and Logistic Regression were used to explore interpretability and predictive performance.\nRead More"
   },
   {
     "objectID": "projects/index.html#obesity-risk",
     "href": "projects/index.html#obesity-risk",
-    "title": "Projects",
+    "title": "Yiwei Lu",
     "section": "Obesity Risk Analysis",
     "text": "Obesity Risk Analysis\nObesity Risk Analysis and Behavioral Clustering\nConducted a comprehensive analysis of obesity risk using classification models, clustering techniques, and ANOVA. Explored lifestyle and dietary factors to uncover patterns linked to obesity. After segmenting individuals into behavioral clusters, we provided tailored recommendations for each group to support targeted public health interventions.\nRead More"
   },
   {
     "objectID": "projects/index.html#tech-consulting",
     "href": "projects/index.html#tech-consulting",
-    "title": "Projects",
+    "title": "Yiwei Lu",
     "section": "Technology Consulting",
     "text": "Technology Consulting\nSmart Grocery Shopping Assistant\nHands-on consulting course focused on applying AI and analytics to real-world business problems. Topics include use case development, prompt engineering, product management, Agile delivery, and stakeholder alignment. Culminates in a Shark Tank–style team project judged by industry experts.\nRead More"
   },
   {
     "objectID": "projects/index.html#pixel-strategy",
     "href": "projects/index.html#pixel-strategy",
-    "title": "Projects",
+    "title": "Yiwei Lu",
     "section": "Marketing Strategy",
     "text": "Marketing Strategy\nRepositioning Google Pixel — A Strategic Marketing Analysis\nAnalyzed Google Pixel’s weak market penetration despite technical strengths in AI and camera performance. Assessed brand positioning, competitive dynamics, and proposed strategic recommendations to enhance Pixel 9’s presence in the premium smartphone segment.\nRead More"
   },
   {
     "objectID": "projects/index.html#Capstone",
     "href": "projects/index.html#Capstone",
-    "title": "Projects",
+    "title": "Yiwei Lu",
     "section": "Explore Capstone Project",
     "text": "Explore Capstone Project\nJohnson & Johnson Cerenovus Capstone Project\nDeveloped a full-stack analytics dashboard to support sales and retention strategy at Cerenovus, a Johnson & Johnson medical device division. Integrated SQL-based data pipelines, machine learning models (including churn prediction and clustering), and interactive visualizations to identify key revenue drivers, at-risk accounts, and regional product trends. The tool enables real-time exploration and supports strategic planning across sales teams.\nCapstone Page"
   },
@@ -254,9 +254,9 @@
   {
     "objectID": "ww.html",
     "href": "ww.html",
-    "title": "\nYiwei’s Corner 🌿\n",
+    "title": "Yiwei Lu",
     "section": "",
-    "text": "Yiwei’s Corner 🌿\n\n\nA cozy space for my daily vibes and little adventures ✨\n\n\n\n&lt;h2&gt;📌 Daily Note&lt;/h2&gt;\n&lt;p&gt;☀️ 最近在听：Taylor Swift - Lover&lt;/p&gt;\n&lt;p&gt;📖 今天读了一点书，还带狗狗去散步 🐶&lt;/p&gt;\n&lt;small&gt;Last updated: Aug 24, 2025&lt;/small&gt;\n\n\n&lt;a href=\"https://instagram.com/REPLACE_YOUR_IG\" target=\"_blank\" class=\"link-btn instagram\"&gt;📸 Instagram&lt;/a&gt;\n&lt;a href=\"https://www.ebay.com/usr/REPLACE_EBAY\" target=\"_blank\" class=\"link-btn ebay\"&gt;🛍️ eBay Store&lt;/a&gt;\n&lt;a href=\"https://wa.me/6266736276\" target=\"_blank\" class=\"link-btn whatsapp\"&gt;💬 WhatsApp&lt;/a&gt;\n&lt;a href=\"https://youtube.com/\" target=\"_blank\" class=\"link-btn youtube\"&gt;🎥 YouTube / Playlist&lt;/a&gt;\n&lt;a href=\"https://photos.google.com/\" target=\"_blank\" class=\"link-btn photos\"&gt;🌄 Photo Album&lt;/a&gt;\n&lt;a href=\"/blog.html\" target=\"_self\" class=\"link-btn blog\"&gt;📝 Notes & Blog&lt;/a&gt;"
+    "text": "&lt;img src=\"images/Headshot.jpg\" alt=\"Yiwei Lu\" width=\"120\" height=\"120\"\n     class=\"rounded-circle img-thumbnail mb-3\"&gt;\n&lt;h1 class=\"fw-bold\" style=\"margin-bottom:.25rem;\"&gt;Yiwei's Corner 🌿&lt;/h1&gt;\n&lt;p class=\"text-muted\"&gt;A cozy space for my daily vibes and little adventures ✨&lt;/p&gt;\n\n\n\n&lt;div class=\"card-body\"&gt;\n  &lt;h5 class=\"card-title mb-2\"&gt;📌 Daily Note&lt;/h5&gt;\n  &lt;p class=\"card-text mb-1\"&gt;☀️ 最近在听：Taylor Swift — Lover&lt;/p&gt;\n  &lt;p class=\"card-text mb-0\"&gt;📖 今天读了一点书，还带狗狗去散步 🐶&lt;/p&gt;\n  &lt;div class=\"text-end\"&gt;\n    &lt;small class=\"text-secondary\"&gt;Last updated: Aug 24, 2025&lt;/small&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n\n\n\n&lt;div class=\"col-12 col-sm-6\"&gt;\n  &lt;a class=\"btn btn-danger btn-lg w-100\" target=\"_blank\"\n     href=\"https://instagram.com/REPLACE_YOUR_IG\"&gt;📸 Instagram&lt;/a&gt;\n&lt;/div&gt;\n&lt;div class=\"col-12 col-sm-6\"&gt;\n  &lt;a class=\"btn btn-primary btn-lg w-100\" target=\"_blank\"\n     href=\"https://www.ebay.com/usr/REPLACE_EBAY\"&gt;🛍️ eBay Store&lt;/a&gt;\n&lt;/div&gt;\n&lt;div class=\"col-12 col-sm-6\"&gt;\n  &lt;a class=\"btn btn-success btn-lg w-100\" target=\"_blank\"\n     href=\"https://wa.me/6266736276\"&gt;💬 WhatsApp&lt;/a&gt;\n&lt;/div&gt;\n&lt;div class=\"col-12 col-sm-6\"&gt;\n  &lt;a class=\"btn btn-danger btn-lg w-100\" target=\"_blank\"\n     href=\"https://youtube.com/\"&gt;🎥 YouTube / Playlist&lt;/a&gt;\n&lt;/div&gt;\n&lt;div class=\"col-12 col-sm-6\"&gt;\n  &lt;a class=\"btn btn-warning btn-lg w-100\" target=\"_blank\"\n     href=\"https://photos.google.com/\"&gt;🌄 Photo Album&lt;/a&gt;\n&lt;/div&gt;\n&lt;div class=\"col-12 col-sm-6\"&gt;\n  &lt;a class=\"btn btn-purple btn-lg w-100\" target=\"_self\"\n     href=\"/blog.html\" style=\"background:#6f42c1;border-color:#6f42c1;\"&gt;📝 Notes & Blog&lt;/a&gt;\n&lt;/div&gt;"
   },
   {
     "objectID": "lywww88.github.io/projects/project-airbnb.html",
