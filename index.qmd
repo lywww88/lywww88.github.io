@@ -17,20 +17,19 @@ format:
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
 
   background: #e6f2ff;
   color: #003366;
   font-weight: 500;
   font-size: 0.95rem;
-  line-height: 1;             
 
-  padding: 0.3em 0.8em;        
+  height: 40px;               
+  padding: 0 1em;             
   border-radius: 0.4em;
   border: 1px solid #b3d7ff;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
 
-  width: 100%;
+  width: 100%;                 
   margin: 0.6em 0;
   box-sizing: border-box;
 }
@@ -40,7 +39,6 @@ format:
   font-weight: 600;
   text-decoration: none;
   margin-left: 0.4em;
-  line-height: 1;              
 }
 
 .announcement-bar a:hover {
