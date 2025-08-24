@@ -65,8 +65,8 @@ website:
             target: _blank
 
       - href: ww.html
-        text: '<span class="bounce-emoji" title="My digital dino life 🦖">🦖</span>'
-        aria-label: My Life in Pixels
+        text: '<span class="bounce-emoji" title="Digital dino life">🦖</span>'
+        aria-label: igital dino life
         icon: none
         target: _self
 
