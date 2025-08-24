@@ -7,69 +7,54 @@ format:
     page-layout: full
 ---
 
-<div style="max-width:700px;margin:2rem auto;text-align:center;font-family:sans-serif;">
+# TEST
+A cozy space for my daily vibes and little adventures ✨  
 
-  <!-- 头像 -->
-  <img src="images/Headshot.jpg" alt="Yiwei Lu" width="120" height="120" style="border-radius:50%;">
+## 📌 Daily Note
+☀️ Test1  
+📖 Test2 🐶  
+<small>Last updated: Aug 24, 2025</small>
 
-  <!-- 标题 -->
-  <h1>Yiwei's Corner</h1>
-  <p>A cozy space for my daily vibes and little adventures ✨</p>
+---
 
-  <!-- Daily Note -->
-  <div>
-    <h2>📌 Daily Note</h2>
-    <p>Test1</p>
-    <p>Test2</p>
-    <small>Last updated: Aug 24, 2025</small>
-  </div>
+<div style="margin-top:2rem; line-height:2; text-align:center;">
 
-<div style="margin-top:2rem;display:flex;flex-direction:column;align-items:center;gap:1.2rem;">
-
-  <!-- Instagram -->
   <a href="https://instagram.com/REPLACE_YOUR_IG" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" style="height:40px;">
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="40">
   </a>
 
-  <!-- eBay -->
-  <a href="https://www.ebay.com/usr/w_shoppp" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/EBay_logo.png" alt="eBay" style="height:40px;">
+  <a href="https://www.ebay.com/usr/REPLACE_EBAY" target="_blank" style="margin-left:1rem;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/EBay_logo.png" alt="eBay" width="60">
   </a>
 
-  <!-- YouTube -->
-  <a href="https://youtube.com/" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" style="height:40px;">
+  <a href="https://youtube.com/" target="_blank" style="margin-left:1rem;">
+    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" width="45">
   </a>
 
-  <!-- Google Photos -->
-  <a href="https://photos.google.com/" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Google_Photos_icon.svg" alt="Google Photos" style="height:40px;">
+  <a href="https://photos.google.com/" target="_blank" style="margin-left:1rem;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Google_Photos_icon.svg" alt="Google Photos" width="45">
   </a>
 
-  <!-- Blog -->
-  <a href="/blog.html" target="_self">
-    <img src="https://cdn-icons-png.flaticon.com/512/2932/2932624.png" alt="Blog" style="height:40px;">
+  <a href="/blog.html" target="_self" style="margin-left:1rem;">
+    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828778.png" alt="Blog" width="40">
   </a>
 
 </div>
 
-  <!-- 💬 Giscus -->
-  <div style="margin-top:3rem;text-align:left;">
-    <script src="https://giscus.app/client.js"
+---
+
+<div id="comments" style="margin-top:3rem;">
+<script src="https://giscus.app/client.js"
         data-repo="lywww88/lywww88.github.io"
         data-repo-id="R_kgDONwfB9w"
         data-category="General"
         data-category-id="DIC_kwDONwfB984CuiuO"
         data-mapping="pathname"
-        data-strict="0"
         data-reactions-enabled="1"
         data-emit-metadata="0"
         data-input-position="bottom"
-        data-theme="preferred_color_scheme"
-        data-lang="en"
+        data-theme="light"
         crossorigin="anonymous"
         async>
-    </script>
-  </div>
-
+</script>
 </div>
