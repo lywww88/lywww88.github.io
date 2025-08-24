@@ -65,7 +65,7 @@ website:
             target: _blank
 
       - href: ww.html
-        text: '<img src="images/W.png" alt="W Logo" style="height:20px; vertical-align:middle;">'
+        text: '<img src="images/W.png" alt="W Logo" style="height:28px; vertical-align:middle;">'
         aria-label: W
         icon: none
         target: _blank
