@@ -82,7 +82,7 @@ format:
 
 <div class="ww-card">
   <h2>Notes</h2>
-  <p>This is a personal space for thoughts, reflections, and random updates.  
+  <p>Testing, Testing, Testing.  
   Feel free to leave a comment below and share your ideas.</p>
   <small class="ww-muted">Last updated: Aug 24, 2025</small>
 </div>
@@ -105,7 +105,7 @@ format:
   </a>
 </div>
 
-<!-- 💬 Giscus 评论区 -->
+<!-- 💬 Giscus -->
 <div id="comments">
   <script src="https://giscus.app/client.js"
       data-repo="lywww88/lywww88.github.io"
