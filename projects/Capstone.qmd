@@ -1,5 +1,5 @@
 ---
-title: "Capstone"
+title: ""
 format:
   html:
     title-block: false
@@ -37,7 +37,7 @@ format:
 </style>
 
 <div class="under-dev">
-  🚧 The Capstone Project page is under development. Please check back soon. <br>Updated 07.22.25
+  The Capstone Project page is under development.
 </div>
 
 <div class="project-description">
