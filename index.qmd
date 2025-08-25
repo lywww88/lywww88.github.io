@@ -15,11 +15,11 @@ format:
 <style>
 .announcement-bar {
   display: flex;
-  justify-content: center;    /* 水平居中 */
-  align-items: center;        /* 垂直居中 */
-  flex-wrap: nowrap;          /* 禁止换行 */
-  white-space: nowrap;        /* 内容强制一行 */
-  gap: .6em;                  /* 元素间距 */
+  justify-content: center;    
+  align-items: center;        
+  flex-wrap: nowrap;          
+  white-space: nowrap;       
+  gap: .6em;                  
 
   background: #e6f2ff;
   color: #003366;
@@ -41,8 +41,8 @@ format:
 .announcement-bar strong,
 .announcement-bar a {
   display: inline-flex;
-  align-items: center;   /* 确保基线对齐 */
-  line-height: 1;        /* 避免行高影响垂直居中 */
+  align-items: center;   
+  line-height: 1;        
 }
 
 .announcement-bar a {
@@ -81,7 +81,7 @@ format:
 
 ::: { .project-card style="display: flex; flex-wrap: wrap; gap: 1.5em; align-items: flex-start;" markdown="1" }
 
-<!-- 左侧文字 -->
+<!-- Left Text -->
 <div style="flex: 1;" markdown="1">
 **Financial Chatbot for Stock Market**
 
@@ -92,7 +92,7 @@ Built an AI chatbot that delivers real-time stock analysis by integrating LLMs w
 </div>
 </div>
 
-<!-- 右侧图片 -->
+<!-- Right Pic -->
 <div style="flex: 0 0 420px;">
   <img src="images/financial-chatbot1.gif"
        alt="Chatbot Image"
@@ -104,7 +104,7 @@ Built an AI chatbot that delivers real-time stock analysis by integrating LLMs w
 ::: {.project-card}
 <div style="display: flex; flex-wrap: wrap; gap: 1.5em; align-items: flex-start;" markdown="1">
 
-<!-- 左侧文字内容 -->
+<!-- Left Contents -->
 <div style="flex: 1;" markdown="1">
 **Uber Driver Prediction Dashboard**  
 <small><em>Datathon 2025 Competition</em></small>  
@@ -120,7 +120,7 @@ Developed an interactive dashboard to predict Uber driver performance using mach
 </div>
 </div>
 
-<!-- 右侧图片 -->
+<!-- Right Pic -->
 <div style="flex: 0 0 420px;">
   <img src="images/datathon.jpg"
        alt="Uber Dashboard"
@@ -133,7 +133,7 @@ Developed an interactive dashboard to predict Uber driver performance using mach
 ::: {.project-card}
 <div style="display: flex; flex-wrap: wrap; gap: 1.5em; align-items: flex-start;" markdown="1">
 
-<!-- 左侧文字内容 -->
+<!-- Left Contents -->
 <div style="flex: 1;" markdown="1">
 **Explore More Projects**  
 
@@ -144,7 +144,7 @@ Discover data-driven projects in machine learning, dashboard design, and analyti
 </div>
 </div>
 
-<!-- 右侧图片 -->
+<!-- Right Pic -->
 <div style="flex: 0 0 420px;">
   <img src="images/project.jpg"
        alt="More Projects"
