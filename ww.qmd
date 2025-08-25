@@ -15,7 +15,7 @@ format:
 
     if (localStorage.getItem(KEY) === "1") return;
 
-    const input = prompt("🔒 Private page\nEnter access code:");
+    const input = prompt("🔒 Access Restricted\nEnter access code:");
     if (input === PASSWORD) {
       localStorage.setItem(KEY, "1");
       return;
