@@ -1,9 +1,9 @@
-/* === 隐藏默认下拉箭头 === */
+/* === Hidden === */
 .navbar-nav .dropdown-toggle::after {
   content: none !important;
 }
 
-/* === NAVBAR 样式整合 === */
+/* === NAVBAR === */
 .navbar {
   justify-content: flex-start !important;
   align-items: center !important;
@@ -29,7 +29,7 @@
   margin: 0 !important;
 }
 
-/* 左上角主 Logo (YL) */
+/* Logo (YL) */
 .navbar-brand img {
   height: 80px !important;
   max-height: none !important;   
@@ -38,12 +38,12 @@
   display: block !important;
 }
 
-/* 隐藏 logo 旁边文字 */
+/* Hidden logo words */
 .navbar-brand span {
   display: none !important;
 }
 
-/* === 通用 nav-text 下划线动画 + 当前页高亮 === */
+/* === nav-text underline === */
 .nav-text {
   position: relative;
   display: inline-block;
@@ -72,7 +72,7 @@
   width: 100%;
 }
 
-/* === Dropdown 箭头：初始向左，hover/打开时向下 === */
+/* === Dropdown === */
 .navbar-nav .dropdown-toggle {
   display: inline-flex !important;
   align-items: center !important;
@@ -98,7 +98,7 @@
   color: #007bff;
 }
 
-/* === 按钮样式 === */
+/* === Button === */
 .btn {
   display: inline-block;
   padding: 0.4em 1em;
@@ -120,7 +120,7 @@
   box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
 }
 
-/* === 项目卡片样式 === */
+/* === Card style === */
 .project-card {
   border: 1px solid #e0e0e0;
   border-radius: 0.5em;
@@ -141,7 +141,7 @@
   font-size: 0.9rem;
 }
 
-/* === Let’s Connect 样式 === */
+/* === Let’s Connect === */
 .connect-container {
   display: flex;
   align-items: center;
@@ -167,7 +167,7 @@
   align-items: center;
 }
 
-/* 右上角 W Logo 尺寸与基础状态 */
+/* W Logo base */
 .navbar img.w-logo {
   height: 28px !important;     
   width: auto;
@@ -176,17 +176,17 @@
   transform-origin: center;
   cursor: pointer;
 
-  /* 🔥 默认就有呼吸发光效果 */
+  /* breath */
   animation: w-glow 1s infinite alternate;
-  transition: transform 0.3s ease;  /* 平滑放大 */
+  transition: transform 0.4s ease;  /* zoom in */
 }
 
-/* Hover 时额外放大 */
+/* Hover zoom in */
 .navbar img.w-logo:hover {
-  transform: scale(1.35);   /* 鼠标移上去放大 */
+  transform: scale(1.5);   /* 鼠标移上去放大 */
 }
 
-/* 呼吸发光动画 */
+/* breath */
 @keyframes w-glow {
   0% {
     filter: drop-shadow(0 0 0px rgba(0,123,255,0));
@@ -194,11 +194,11 @@
   }
   100% {
     filter: drop-shadow(0 0 8px rgba(0,123,255,0.8));
-    transform: scale(1.05); /* 呼吸轻微放大 */
+    transform: scale(1.15); /* breath zoom in */
   }
 }
 
-/* ✅ Hide arrow ONLY for Resume dropdown */
+/* Hide arrow ONLY for Resume dropdown */
 .navbar-nav .dropdown:has(.resume-tab) > .dropdown-toggle::before {
   display: none !important;
 }
