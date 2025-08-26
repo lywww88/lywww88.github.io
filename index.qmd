@@ -11,27 +11,29 @@ format:
   <a href="#" class="js-open-release">Check it out →</a>
 </div>
 
-<!-- ✅ Release Notes Modal -->
+<!-- ✅ Release Notes (template is inert, won’t be escaped) -->
+<template id="release-template">
+  <p>Added two handy UI helpers to improve navigation:</p>
+  <ul>
+    <li><strong>Floating Search</strong> — open site-wide search from anywhere.</li>
+    <li><strong>Back-to-Top</strong> — jump back to the top smoothly.</li>
+  </ul>
+  <p>Use them from the bottom-right corner. Keyboard shortcut:
+     <kbd>⌘/Ctrl</kbd> + <kbd>K</kbd> to search.</p>
+</template>
+
+<!-- Modal skeleton -->
 <div id="release-overlay" style="display:none;"></div>
 <div id="release-modal" role="dialog" aria-modal="true" aria-labelledby="release-title" style="display:none;">
   <button class="release-close" aria-label="Close">×</button>
   <h3 id="release-title">What’s new</h3>
-
-  <div class="release-body">
-    <p>Added two handy UI helpers to improve navigation:</p>
-    <ul>
-      <li><strong>Floating Search</strong> — open site-wide search from anywhere.</li>
-      <li><strong>Back-to-Top</strong> — jump back to the top smoothly.</li>
-    </ul>
-    <p>Use them from the bottom-right corner. Keyboard shortcut: <kbd>⌘/Ctrl</kbd> + <kbd>K</kbd> to search.</p>
-  </div>
-
+  <div class="release-body"></div>
   <div class="release-actions">
-    <button class="release-primary">Got it</button>
+    <button class="release-primary" type="button">Got it</button>
   </div>
 </div>
 
-<!-- ✅ Modal Styles -->
+<!-- Styles -->
 <style>
   /* Overlay */
   #release-overlay{
@@ -66,7 +68,6 @@ format:
     background: transparent; font-size: 1.2rem; cursor:pointer;
   }
   #release-modal .release-close:hover{ background:#f3f5f7; }
-  @media (max-width:480px){ #release-modal{ padding: 1rem .9rem .8rem; } }
 
   /* Announcement Bar */
   .announcement-bar {
@@ -82,36 +83,41 @@ format:
   .announcement-bar a:hover { text-decoration: underline; }
 </style>
 
-<!-- ✅ Modal Logic -->
+<!-- Logic -->
 <script>
-  (function(){
-    const openBtn = document.querySelector('.js-open-release');
-    const overlay = document.getElementById('release-overlay');
-    const modal   = document.getElementById('release-modal');
-    const closeBtn= modal.querySelector('.release-close');
-    const okBtn   = modal.querySelector('.release-primary');
+(function(){
+  const openBtn = document.querySelector('.js-open-release');
+  const overlay = document.getElementById('release-overlay');
+  const modal   = document.getElementById('release-modal');
+  const bodyBox = modal.querySelector('.release-body');
+  const closeBtn= modal.querySelector('.release-close');
+  const okBtn   = modal.querySelector('.release-primary');
+  const tpl     = document.getElementById('release-template');
 
-    function openModal(e){
-      if(e) e.preventDefault();
-      overlay.style.display = 'block';
-      modal.style.display   = 'block';
-      modal.querySelector('.release-close').focus(); // focus
-      document.addEventListener('keydown', onEsc);
-      document.body.style.overflow = 'hidden';       // prevent body scroll
-    }
-    function closeModal(){
-      overlay.style.display = 'none';
-      modal.style.display   = 'none';
-      document.removeEventListener('keydown', onEsc);
-      document.body.style.overflow = '';             // restore scroll
-    }
-    function onEsc(e){ if(e.key === 'Escape') closeModal(); }
+  // Inject HTML from <template> to avoid Markdown/Quarto escaping
+  if (tpl && bodyBox) bodyBox.innerHTML = tpl.innerHTML;
 
-    if(openBtn) openBtn.addEventListener('click', openModal);
-    overlay.addEventListener('click', closeModal);
-    closeBtn.addEventListener('click', closeModal);
-    okBtn.addEventListener('click', closeModal);
-  })();
+  function openModal(e){
+    if(e) e.preventDefault();
+    overlay.style.display = 'block';
+    modal.style.display   = 'block';
+    document.body.style.overflow = 'hidden';
+    closeBtn.focus();
+    document.addEventListener('keydown', onEsc);
+  }
+  function closeModal(){
+    overlay.style.display = 'none';
+    modal.style.display   = 'none';
+    document.body.style.overflow = '';
+    document.removeEventListener('keydown', onEsc);
+  }
+  function onEsc(e){ if(e.key === 'Escape') closeModal(); }
+
+  if (openBtn) openBtn.addEventListener('click', openModal);
+  overlay.addEventListener('click', closeModal);
+  closeBtn.addEventListener('click', closeModal);
+  okBtn.addEventListener('click', closeModal);
+})();
 </script>
 
 <!-- Profile Section -->
