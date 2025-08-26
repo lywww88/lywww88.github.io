@@ -76,8 +76,15 @@ format:
       text: |
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
         <style>
-          /* Hide the built-in navbar search; we use a floating button instead */
-          #quarto-search.navbar-search { display: none !important; }
+          /* Hide Quarto's built-in navbar search container (keep it in DOM for API) */
+          #quarto-search {
+            display: none !important;          /* hide the button */
+            width: 0 !important;
+            height: 0 !important;
+            overflow: hidden !important;
+            position: absolute !important;     /* make sure it doesn't affect layout */
+            left: -9999px !important;
+          }
         </style>
     include-after-body:
       text: |
