@@ -7,7 +7,7 @@ project:
 website:
   title: "Yiwei Lu"
   search:
-    location: navbar      # 必须是 navbar 或 sidebar
+    location: navbar     
     type: overlay
 
   navbar:
@@ -221,7 +221,7 @@ format:
           // --- Back to top visibility + action ---
           const backToTop = document.getElementById("back-to-top");
           window.addEventListener("scroll", () => {
-            if (window.scrollY > 300) {
+            if (window.scrollY > 200) {
               backToTop.style.opacity = "1";
               backToTop.style.visibility = "visible";
             } else {
