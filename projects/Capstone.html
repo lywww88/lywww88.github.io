@@ -211,44 +211,56 @@ ul.task-list li input[type="checkbox"] {
 
 
 <style>
+/* Compact banner */
 .under-dev {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 30vh;
+  gap: .6rem;
+  padding: .85rem 1rem;        
   text-align: center;
-  font-size: 1.5rem;
-  font-weight: 500;
-  font-family: 'Segoe UI', system-ui, sans-serif;
-  color: #444;
-  opacity: 0.85;
-  letter-spacing: 0.5px;
-  margin-bottom: 2em;
+  font-size: 1.05rem;
+  font-weight: 600;
+  font-family: system-ui, "Segoe UI", sans-serif;
+  color: #374151;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: .6rem;
+  box-shadow: 0 1px 6px rgba(0,0,0,.04);
+  max-width: 900px;
+  margin: 1.25rem auto .75rem; 
 }
 
+/* Body block just below banner */
 .project-description {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 1em 2em;
-  font-size: 1.1rem;
+  max-width: 900px;
+  margin: 0 auto;              
+  padding: 1rem 1.25rem;
+  font-size: 1.05rem;
   line-height: 1.7;
   color: #333;
   font-family: system-ui, sans-serif;
-  background-color: #f9f9f9;
-  border-radius: 0.5em;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  background-color: #ffffff;
+  border: 1px solid #eee;
+  border-radius: .6rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .04);
+}
+
+@media (max-width: 640px){
+  .under-dev { font-size: 1rem; padding: .75rem .9rem; }
+  .project-description { font-size: 1rem; padding: .9rem 1rem; }
 }
 </style>
 <div class="under-dev">
-<p>The Capstone Project page is under development.</p>
+<p><span>🛸</span> <span>The Capstone Project page is currently under development.</span></p>
 </div>
 <div class="project-description">
-<p><strong>Johnson &amp; Johnson Cerenovus Capstone Project</strong><br><br> Led a data-driven analysis of sales performance and customer retention for Cerenovus, a Johnson &amp; Johnson medical device division. Explored multi-year transaction data to identify key revenue drivers, product line dynamics, and regional sales trends. Applied clustering and churn modeling to uncover at-risk segments and generate actionable recommendations for improving account engagement and strategic planning.</p>
+<p><strong>Johnson &amp; Johnson Cerenovus Project</strong><br><br> Led a data-driven analysis of sales performance and customer retention for Cerenovus, a Johnson &amp; Johnson medical device division. Explored multi-year transaction data to identify key revenue drivers, product line dynamics, and regional sales trends. Applied clustering and churn modeling to uncover at-risk segments and produced actionable recommendations to improve account engagement and inform strategic planning.</p>
 </div>
-<div aria-hidden="true" style="border-top: 1px solid #ccc; margin: 1.5em 0;">
+<div aria-hidden="true" style="border-top: 1px solid #e5e7eb; max-width:900px; margin: 1.25rem auto;">
 
 </div>
-<p style="text-align: center; color: #888; font-size: 0.85em; margin-top: 3em;">
+<p style="text-align:center; color:#888; font-size:.85rem; margin: 1.25rem 0 2.5rem;">
 © 2025 Yiwei Lu. All rights reserved.
 </p>
 
@@ -674,7 +686,7 @@ ul.task-list li input[type="checkbox"] {
     padding: 0.6em 1.2em;
     border: none;
     border-radius: 30px;
-    background: #0d6efd;
+    background: ##0d6efd;
     color: #fff;
     font-weight: 600;
     font-size: 0.95rem;
@@ -784,7 +796,7 @@ ul.task-list li input[type="checkbox"] {
   // --- Back to top visibility + action ---
   const backToTop = document.getElementById("back-to-top");
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
+    if (window.scrollY > 200) {
       backToTop.style.opacity = "1";
       backToTop.style.visibility = "visible";
     } else {
