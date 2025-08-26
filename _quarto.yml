@@ -6,6 +6,10 @@ project:
 
 website:
   title: "Yiwei Lu"
+  search:
+    location: body    
+    type: overlay 
+    
   navbar:
     logo: images/logo1.png
     left:
@@ -80,3 +84,47 @@ format:
     include-in-header:
       text: |
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+        <style>
+          #quarto-search.navbar-search { display: none !important; }
+        </style>
+    include-after-body:
+      text: |
+        <!-- Floating Search Button -->
+        <button id="floating-search" aria-label="Search" onclick="window.quartoOpenSearch && window.quartoOpenSearch()">
+          <i class="bi bi-search"></i>
+        </button>
+        <style>
+          /* Floating search button (bottom-right) */
+          #floating-search{
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            width: 54px;
+            height: 54px;
+            border: none;
+            border-radius: 50%;
+            background: #0d6efd;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 24px rgba(13,110,253,.35);
+            cursor: pointer;
+            z-index: 1100;  /* above navbar shadow */
+            transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+          }
+          #floating-search:hover{
+            transform: translateY(-2px);
+            box-shadow: 0 14px 30px rgba(13,110,253,.45);
+          }
+          #floating-search:active{
+            transform: translateY(0) scale(.96);
+          }
+          #floating-search i{
+            font-size: 1.25rem;
+            line-height: 1;
+          }
+          @media (max-width: 480px){
+            #floating-search{ right: 16px; bottom: 16px; }
+          }
+        </style>
