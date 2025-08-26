@@ -208,11 +208,28 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<!-- Announcement bar  -->
+<!-- ✅ Announcement Bar -->
 <div class="announcement-bar">
-<p>📢 <strong> New Features Added:</strong> Floating <em>Search</em> &amp; <em>Back-to-Top</em> are now available. <a href="#" class="js-open-release">Check it out →</a></p>
+<p>📢 <strong> New Features Added:</strong> Floating <em>Search</em> &amp; <em>Back-to-Top</em> buttons are now available. <a href="#" class="js-open-release">Check it out →</a></p>
 </div>
-<!-- Modal skeleton（ -->
+<!-- ✅ Release Notes (template is inert, won’t be escaped) -->
+<template id="release-template">
+<p>
+We’ve added two handy UI helpers to improve navigation:
+</p>
+<ul>
+<li>
+<strong>Floating Search</strong> — open site-wide search from anywhere.
+</li>
+<li>
+<strong>Back-to-Top</strong> — jump back to the top smoothly.
+</li>
+</ul>
+<p>
+Keyboard shortcut: <kbd>⌘/Ctrl</kbd> + <kbd>K</kbd> to search.
+</p>
+<p></p></template><p></p>
+<!-- Modal skeleton -->
 <div id="release-overlay" style="display:none;">
 
 </div>
@@ -228,16 +245,17 @@ What’s new
 <pre><code>&lt;button class="release-primary" type="button"&gt;Got it&lt;/button&gt;</code></pre>
 </div>
 </div>
+<!-- Styles -->
 <style>
   /* Overlay */
   #release-overlay{
-    position: fixed; inset: 0;
+    position: fixed; inset: 0; 
     background: rgba(0,0,0,.35);
     z-index: 1200;
   }
   /* Modal */
   #release-modal{
-    position: fixed;
+    position: fixed; 
     left: 50%; top: 50%; transform: translate(-50%, -50%);
     width: min(560px, 92vw);
     background: #fff; color:#222;
@@ -262,53 +280,55 @@ What’s new
     background: transparent; font-size: 1.2rem; cursor:pointer;
   }
   #release-modal .release-close:hover{ background:#f3f5f7; }
-  /* Announcement bar*/
-  .announcement-bar{ display:flex; align-items:center; gap:.6em; background:#e6f2ff; color:#003366; font-weight:500; font-size:.95rem; padding:.4em 1em; border-radius:.4em; border:1px solid #b3d7ff; box-shadow:0 1px 5px rgba(0,0,0,.05); margin:.8em 0 1em }
-  .announcement-bar a{ color:#c76a00; font-weight:600; text-decoration:none }
-  .announcement-bar a:hover{ text-decoration:underline }
+
+  /* Announcement Bar */
+  .announcement-bar {
+    display: flex; justify-content: center; align-items: center; flex-wrap: nowrap;
+    white-space: nowrap; gap: .6em;
+    background: #e6f2ff; color: #003366; font-weight: 500; font-size: 0.95rem;
+    min-height: 40px; padding: 0.4em 1em; border-radius: 0.4em;
+    border: 1px solid #b3d7ff; box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+    width: 100%; margin: 0.8em 0 1em 0; box-sizing: border-box;
+  }
+  .announcement-bar strong, .announcement-bar a { display: inline-flex; align-items: center; line-height: 1; }
+  .announcement-bar a { color: #c76a00; font-weight: 600; text-decoration: none; }
+  .announcement-bar a:hover { text-decoration: underline; }
 </style>
+<!-- Logic -->
 <script>
-  (function(){
-    const openBtn = document.querySelector('.js-open-release');
-    const overlay = document.getElementById('release-overlay');
-    const modal   = document.getElementById('release-modal');
-    const bodyEl  = modal.querySelector('.release-body');
-    const closeBtn= modal.querySelector('.release-close');
-    const okBtn   = modal.querySelector('.release-primary');
+(function(){
+  const openBtn = document.querySelector('.js-open-release');
+  const overlay = document.getElementById('release-overlay');
+  const modal   = document.getElementById('release-modal');
+  const bodyBox = modal.querySelector('.release-body');
+  const closeBtn= modal.querySelector('.release-close');
+  const okBtn   = modal.querySelector('.release-primary');
+  const tpl     = document.getElementById('release-template');
 
-    // ✅ innerHTML 
-    const RELEASE_HTML = `
-      <p>Added two handy UI helpers to improve navigation:</p>
-      <ul>
-        <li><strong>Floating Search</strong> — open site-wide search from anywhere.</li>
-        <li><strong>Back-to-Top</strong> — jump back to the top smoothly.</li>
-      </ul>
-      <p>Keyboard shortcut:
-        <kbd>⌘/Ctrl</kbd> + <kbd>K</kbd> to search.</p>
-    `;
+  // Inject HTML from <template> to avoid Markdown/Quarto escaping
+  if (tpl && bodyBox) bodyBox.innerHTML = tpl.innerHTML;
 
-    function openModal(e){
-      if (e) e.preventDefault();
-      bodyEl.innerHTML = RELEASE_HTML;          
-      overlay.style.display = 'block';
-      modal.style.display   = 'block';
-      document.body.style.overflow = 'hidden';  
-      modal.querySelector('.release-close').focus();
-      document.addEventListener('keydown', onEsc);
-    }
-    function closeModal(){
-      overlay.style.display = 'none';
-      modal.style.display   = 'none';
-      document.body.style.overflow = '';
-      document.removeEventListener('keydown', onEsc);
-    }
-    function onEsc(e){ if (e.key === 'Escape') closeModal(); }
+  function openModal(e){
+    if(e) e.preventDefault();
+    overlay.style.display = 'block';
+    modal.style.display   = 'block';
+    document.body.style.overflow = 'hidden';
+    closeBtn.focus();
+    document.addEventListener('keydown', onEsc);
+  }
+  function closeModal(){
+    overlay.style.display = 'none';
+    modal.style.display   = 'none';
+    document.body.style.overflow = '';
+    document.removeEventListener('keydown', onEsc);
+  }
+  function onEsc(e){ if(e.key === 'Escape') closeModal(); }
 
-    if (openBtn) openBtn.addEventListener('click', openModal);
-    overlay.addEventListener('click', closeModal);
-    closeBtn.addEventListener('click', closeModal);
-    okBtn.addEventListener('click', closeModal);
-  })();
+  if (openBtn) openBtn.addEventListener('click', openModal);
+  overlay.addEventListener('click', closeModal);
+  closeBtn.addEventListener('click', closeModal);
+  okBtn.addEventListener('click', closeModal);
+})();
 </script>
 <!-- Profile Section -->
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 2em; max-width: 900px; margin: 2em auto;">
