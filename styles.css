@@ -167,7 +167,7 @@
   align-items: center;
 }
 
-/* W Logo base */
+/* === W Logo base === */
 .navbar img.w-logo {
   height: 28px !important;     
   width: auto;
@@ -176,17 +176,19 @@
   transform-origin: center;
   cursor: pointer;
 
-  /* breath */
+  /* Default breathing glow */
   animation: w-glow 1s infinite alternate;
-  transition: transform 0.4s ease;  /* zoom in */
+  transition: transform 0.4s ease, filter 0.4s ease;
 }
 
-/* Hover zoom in */
+/* === On hover: stop breathing, zoom in and glow stronger === */
 .navbar img.w-logo:hover {
-  transform: scale(1.5);   /* 鼠标移上去放大 */
+  animation: none;   /* stop breathing animation */
+  transform: scale(1.5);
+  filter: drop-shadow(0 0 12px rgba(0,123,255,1));
 }
 
-/* breath */
+/* === Breathing animation === */
 @keyframes w-glow {
   0% {
     filter: drop-shadow(0 0 0px rgba(0,123,255,0));
@@ -194,7 +196,7 @@
   }
   100% {
     filter: drop-shadow(0 0 8px rgba(0,123,255,0.8));
-    transform: scale(1.15); /* breath zoom in */
+    transform: scale(1.15);
   }
 }
 
