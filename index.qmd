@@ -18,7 +18,7 @@ format:
   <h3 id="release-title">What’s new</h3>
 
   <div class="release-body">
-    <p>We’ve added two handy UI helpers to improve navigation:</p>
+    <p>Added two handy UI helpers to improve navigation:</p>
     <ul>
       <li><strong>Floating Search</strong> — open site-wide search from anywhere.</li>
       <li><strong>Back-to-Top</strong> — jump back to the top smoothly.</li>
