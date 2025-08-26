@@ -90,7 +90,7 @@ format:
       text: |
         <!-- Floating, draggable search button -->
         <button id="floating-search" aria-label="Search" title="Search (⌘/Ctrl + K)">
-          <i class="bi bi-search"></i>
+          <i class="bi bi-search"></i> Search
         </button>
 
         <style>
