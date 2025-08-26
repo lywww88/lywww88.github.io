@@ -18,16 +18,12 @@ format:
   <button class="release-close" aria-label="Close">×</button>
   <h3 id="release-title">What’s new</h3>
   <div class="release-body">
-    <p>We’ve added two handy UI helpers to improve navigation:</p>
-    <ul>
-      <li><strong>Floating Search</strong> — open site-wide search from anywhere.</li>
-      <li><strong>Back-to-Top</strong> — jump back to the top smoothly.</li>
-    </ul>
-    <p>Use them from the bottom-right corner. Keyboard shortcut: <kbd>⌘/Ctrl</kbd> + <kbd>K</kbd> to search.</p>
-  </div>
-  <div class="release-actions">
-    <button class="release-primary">Got it</button>
-  </div>
+  <p>We’ve added two handy UI helpers to improve navigation:</p>
+  <ul>
+    <li><strong>Floating Search</strong> — open site-wide search from anywhere.</li>
+    <li><strong>Back-to-Top</strong> — jump back to the top smoothly.</li>
+  </ul>
+  <p>Use them from the bottom-right corner. Keyboard shortcut: <kbd>⌘/Ctrl</kbd> + <kbd>K</kbd> to search.</p>
 </div>
 
 <style>
