@@ -7,7 +7,7 @@ project:
 website:
   title: "Yiwei Lu"
   search:
-    location: navbar     
+    location: navbar
     type: overlay
 
   navbar:
@@ -15,14 +15,12 @@ website:
     left:
       - href: index.qmd
         text: '<span class="nav-text">Home</span>'
-
       - text: '<span class="nav-text">Projects</span>'
         menu:
           - href: projects/index.qmd
             text: '<span class="nav-text">Projects</span>'
           - href: projects/Capstone.qmd
             text: '<span class="nav-text">Capstone Project</span>'
-
       - text: '<span class="nav-text">Startup</span>'
         menu:
           - text: '<span style="font-size: 0.7rem; font-weight: 300; color: gray;">BETA LAUNCH</span>'
@@ -41,7 +39,6 @@ website:
           - href: startup/journey.qmd
             text: '<strong>Startup Journey</strong>'
             target: _self
-
       - href: about.qmd
         text: '<span class="nav-text">About</span>'
 
@@ -63,7 +60,6 @@ website:
           - href: Resume_YL_2025_D1.pdf
             text: '<span class="nav-text"><i class="bi bi-file-earmark-arrow-down"></i> Download PDF</span>'
             target: _blank
-
       - href: ww.html
         text: '<img class="w-logo" src="/images/W.PNG" alt="W Logo">'
         aria-label: W
@@ -111,7 +107,7 @@ format:
             padding: 0.6em 1.2em;
             border: none;
             border-radius: 30px;
-            background: ##0d6efd;
+            background: #0d6efd;    /* <-- fixed: single # */
             color: #fff;
             font-weight: 600;
             font-size: 0.95rem;
@@ -128,7 +124,7 @@ format:
           #floating-search i{ font-size: 1.1rem; }
           @media (max-width: 480px){ #floating-search{ right: 16px; bottom: 16px; } }
 
-          /* Back-to-top circle */
+          /* Back-to-top circle (unified blue) */
           #back-to-top {
             position: fixed;
             right: 22px;
@@ -137,30 +133,32 @@ format:
             height: 54px;
             border: none;
             border-radius: 50%;
-            background: #6f42c1;
+            background: #0d6efd;   /* <-- changed from purple to blue */
             color: #fff;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 10px 24px rgba(111,66,193,.35);
+            box-shadow: 0 10px 24px rgba(13,110,253,.35);
             cursor: pointer;
             z-index: 1100;
             transition: transform .18s ease, box-shadow .18s ease, background .18s ease, opacity .18s ease, visibility .18s ease;
             opacity: 0;
             visibility: hidden;
           }
-          #back-to-top:hover{ transform: translateY(-2px); box-shadow: 0 14px 30px rgba(111,66,193,.45); }
+          #back-to-top:hover{ transform: translateY(-2px); box-shadow: 0 14px 30px rgba(13,110,253,.45); }
           #back-to-top:active{ transform: translateY(0) scale(.96); }
           #back-to-top i{ font-size: 1.25rem; line-height: 1; }
           @media (max-width: 480px){ #back-to-top{ right: 16px; bottom: 80px; } }
         </style>
 
         <script>
-          // --- Search open & shortcut ---
+          // Open Quarto search
           function openSearch() {
             if (window.quartoOpenSearch) window.quartoOpenSearch();
           }
           document.getElementById('floating-search').addEventListener('click', openSearch);
+
+          // Keyboard shortcut: Cmd/Ctrl + K
           document.addEventListener('keydown', (e) => {
             const k = e.key.toLowerCase();
             if ((e.metaKey || e.ctrlKey) && k === 'k') {
@@ -169,11 +167,10 @@ format:
             }
           });
 
-          // --- Draggable (with saved position) ---
+          // Draggable with saved position
           (function () {
             const btn = document.getElementById('floating-search');
             if (!btn) return;
-
             try {
               const saved = JSON.parse(localStorage.getItem('fs-pos') || '{}');
               if (saved.left != null && saved.top != null) {
@@ -183,7 +180,6 @@ format:
                 btn.style.bottom = 'auto';
               }
             } catch (e) {}
-
             let dragging = false, ox = 0, oy = 0;
             const onDown = (e) => {
               dragging = true;
@@ -218,7 +214,7 @@ format:
             document.addEventListener('touchend', onUp);
           })();
 
-          // --- Back to top visibility + action ---
+          // Back to top
           const backToTop = document.getElementById("back-to-top");
           window.addEventListener("scroll", () => {
             if (window.scrollY > 200) {
