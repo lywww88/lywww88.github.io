@@ -29,6 +29,10 @@
   margin: 0 !important;
 }
 
+.navbar-nav .nav-link[href$="about.qmd"] {
+  margin-left: 1.8rem !important; 
+}
+
 /* Logo (YL) */
 .navbar-brand img {
   height: 80px !important;
