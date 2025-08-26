@@ -7,7 +7,7 @@ format:
 
 <!-- ✅ Announcement Bar -->
 <div class="announcement-bar">
-  🚀 <strong>No new updates. </strong>
+  📢 <strong> No New Updates. </strong>
   <a href="https://lywww88.github.io/" target="_blank">Learn more →</a>
 </div>
 
