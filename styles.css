@@ -29,6 +29,9 @@
   margin: 0 !important;
 }
 
+.navbar-nav .nav-link:last-child {
+  margin-left: 1.5rem; 
+}
 /* Logo (YL) */
 .navbar-brand img {
   height: 80px !important;
