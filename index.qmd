@@ -7,8 +7,8 @@ format:
 
 <!-- ✅ Announcement Bar -->
 <div class="announcement-bar">
-  📢 <strong> No New Updates. </strong>
-  <a href="https://lywww88.github.io/" target="_blank">Learn more →</a>
+  📢 <strong> New Features Added:</strong> Floating <em>Search</em> & <em>Back-to-Top</em> buttons are now available.
+  <a href="https://lywww88.github.io/" target="_blank">Check it out →</a>
 </div>
 
 <!-- ✅ Announcement Bar Style -->
