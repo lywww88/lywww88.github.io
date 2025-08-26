@@ -9,23 +9,29 @@ format:
 <div class="announcement-bar">
   📢 <strong> New Features Added:</strong> Floating <em>Search</em> & <em>Back-to-Top</em> buttons are now available.
   <a href="#" class="js-open-release">Check it out →</a>
-
 </div>
 
-<!-- Release Notes Modal -->
+<!-- ✅ Release Notes Modal -->
 <div id="release-overlay" style="display:none;"></div>
 <div id="release-modal" role="dialog" aria-modal="true" aria-labelledby="release-title" style="display:none;">
   <button class="release-close" aria-label="Close">×</button>
   <h3 id="release-title">What’s new</h3>
+
   <div class="release-body">
-  <p>We’ve added two handy UI helpers to improve navigation:</p>
-  <ul>
-    <li><strong>Floating Search</strong> — open site-wide search from anywhere.</li>
-    <li><strong>Back-to-Top</strong> — jump back to the top smoothly.</li>
-  </ul>
-  <p>Use them from the bottom-right corner. Keyboard shortcut: <kbd>⌘/Ctrl</kbd> + <kbd>K</kbd> to search.</p>
+    <p>We’ve added two handy UI helpers to improve navigation:</p>
+    <ul>
+      <li><strong>Floating Search</strong> — open site-wide search from anywhere.</li>
+      <li><strong>Back-to-Top</strong> — jump back to the top smoothly.</li>
+    </ul>
+    <p>Use them from the bottom-right corner. Keyboard shortcut: <kbd>⌘/Ctrl</kbd> + <kbd>K</kbd> to search.</p>
+  </div>
+
+  <div class="release-actions">
+    <button class="release-primary">Got it</button>
+  </div>
 </div>
 
+<!-- ✅ Modal Styles -->
 <style>
   /* Overlay */
   #release-overlay{
@@ -33,7 +39,6 @@ format:
     background: rgba(0,0,0,.35);
     z-index: 1200;
   }
-
   /* Modal */
   #release-modal{
     position: fixed; 
@@ -46,15 +51,9 @@ format:
     z-index: 1210;
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   }
-  #release-modal h3{
-    margin: 0 0 .6rem; font-size: 1.25rem;
-  }
-  #release-modal .release-body{
-    line-height: 1.6; color:#444; font-size: .98rem;
-  }
-  #release-modal .release-actions{
-    display:flex; justify-content:flex-end; gap:.6rem; margin-top: 1rem;
-  }
+  #release-modal h3{ margin: 0 0 .6rem; font-size: 1.25rem; }
+  #release-modal .release-body{ line-height: 1.6; color:#444; font-size: .98rem; }
+  #release-modal .release-actions{ display:flex; justify-content:flex-end; gap:.6rem; margin-top: 1rem; }
   #release-modal .release-primary{
     background:#0d6efd; color:#fff; border:none; border-radius:8px;
     padding:.55rem 1rem; font-weight:600; cursor:pointer;
@@ -67,13 +66,23 @@ format:
     background: transparent; font-size: 1.2rem; cursor:pointer;
   }
   #release-modal .release-close:hover{ background:#f3f5f7; }
+  @media (max-width:480px){ #release-modal{ padding: 1rem .9rem .8rem; } }
 
-  /* Small screens */
-  @media (max-width:480px){
-    #release-modal{ padding: 1rem .9rem .8rem; }
+  /* Announcement Bar */
+  .announcement-bar {
+    display: flex; justify-content: center; align-items: center; flex-wrap: nowrap;
+    white-space: nowrap; gap: .6em;
+    background: #e6f2ff; color: #003366; font-weight: 500; font-size: 0.95rem;
+    min-height: 40px; padding: 0.4em 1em; border-radius: 0.4em;
+    border: 1px solid #b3d7ff; box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+    width: 100%; margin: 0.8em 0 1em 0; box-sizing: border-box;
   }
+  .announcement-bar strong, .announcement-bar a { display: inline-flex; align-items: center; line-height: 1; }
+  .announcement-bar a { color: #c76a00; font-weight: 600; text-decoration: none; }
+  .announcement-bar a:hover { text-decoration: underline; }
 </style>
 
+<!-- ✅ Modal Logic -->
 <script>
   (function(){
     const openBtn = document.querySelector('.js-open-release');
@@ -86,70 +95,24 @@ format:
       if(e) e.preventDefault();
       overlay.style.display = 'block';
       modal.style.display   = 'block';
-      // focus trap (basic)
-      modal.querySelector('.release-close').focus();
+      modal.querySelector('.release-close').focus(); // focus
       document.addEventListener('keydown', onEsc);
+      document.body.style.overflow = 'hidden';       // prevent body scroll
     }
     function closeModal(){
       overlay.style.display = 'none';
       modal.style.display   = 'none';
       document.removeEventListener('keydown', onEsc);
+      document.body.style.overflow = '';             // restore scroll
     }
     function onEsc(e){ if(e.key === 'Escape') closeModal(); }
 
-    if(openBtn){
-      openBtn.addEventListener('click', openModal);
-    }
+    if(openBtn) openBtn.addEventListener('click', openModal);
     overlay.addEventListener('click', closeModal);
     closeBtn.addEventListener('click', closeModal);
     okBtn.addEventListener('click', closeModal);
   })();
 </script>
-
-<!-- ✅ Announcement Bar Style -->
-<style>
-.announcement-bar {
-  display: flex;
-  justify-content: center;    
-  align-items: center;        
-  flex-wrap: nowrap;          
-  white-space: nowrap;       
-  gap: .6em;                  
-
-  background: #e6f2ff;
-  color: #003366;
-  font-weight: 500;
-  font-size: 0.95rem;
-
-  min-height: 40px;
-  padding: 0.4em 1em;
-
-  border-radius: 0.4em;
-  border: 1px solid #b3d7ff;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
-
-  width: 100%;
-  margin: 0.8em 0 1em 0;
-  box-sizing: border-box;
-}
-
-.announcement-bar strong,
-.announcement-bar a {
-  display: inline-flex;
-  align-items: center;   
-  line-height: 1;        
-}
-
-.announcement-bar a {
-  color: #c76a00;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.announcement-bar a:hover {
-  text-decoration: underline;
-}
-</style>
 
 <!-- Profile Section -->
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 2em; max-width: 900px; margin: 2em auto;">
