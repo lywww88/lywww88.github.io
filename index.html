@@ -212,7 +212,24 @@ ul.task-list li input[type="checkbox"] {
 <div class="announcement-bar">
 <p>📢 <strong> New Features Added:</strong> Floating <em>Search</em> &amp; <em>Back-to-Top</em> buttons are now available. <a href="#" class="js-open-release">Check it out →</a></p>
 </div>
-<!-- ✅ Release Notes Modal -->
+<!-- ✅ Release Notes (template is inert, won’t be escaped) -->
+<template id="release-template">
+<p>
+Added two handy UI helpers to improve navigation:
+</p>
+<ul>
+<li>
+<strong>Floating Search</strong> — open site-wide search from anywhere.
+</li>
+<li>
+<strong>Back-to-Top</strong> — jump back to the top smoothly.
+</li>
+</ul>
+<p>
+Use them from the bottom-right corner. Keyboard shortcut: <kbd>⌘/Ctrl</kbd> + <kbd>K</kbd> to search.
+</p>
+<p></p></template><p></p>
+<!-- Modal skeleton -->
 <div id="release-overlay" style="display:none;">
 
 </div>
@@ -222,18 +239,13 @@ ul.task-list li input[type="checkbox"] {
 What’s new
 </h3>
 <div class="release-body">
-<pre><code>&lt;p&gt;Added two handy UI helpers to improve navigation:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Floating Search&lt;/strong&gt; — open site-wide search from anywhere.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Back-to-Top&lt;/strong&gt; — jump back to the top smoothly.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Use them from the bottom-right corner. Keyboard shortcut: &lt;kbd&gt;⌘/Ctrl&lt;/kbd&gt; + &lt;kbd&gt;K&lt;/kbd&gt; to search.&lt;/p&gt;</code></pre>
+
 </div>
 <div class="release-actions">
-<pre><code>&lt;button class="release-primary"&gt;Got it&lt;/button&gt;</code></pre>
+<pre><code>&lt;button class="release-primary" type="button"&gt;Got it&lt;/button&gt;</code></pre>
 </div>
 </div>
-<!-- ✅ Modal Styles -->
+<!-- Styles -->
 <style>
   /* Overlay */
   #release-overlay{
@@ -268,7 +280,6 @@ What’s new
     background: transparent; font-size: 1.2rem; cursor:pointer;
   }
   #release-modal .release-close:hover{ background:#f3f5f7; }
-  @media (max-width:480px){ #release-modal{ padding: 1rem .9rem .8rem; } }
 
   /* Announcement Bar */
   .announcement-bar {
@@ -283,36 +294,41 @@ What’s new
   .announcement-bar a { color: #c76a00; font-weight: 600; text-decoration: none; }
   .announcement-bar a:hover { text-decoration: underline; }
 </style>
-<!-- ✅ Modal Logic -->
+<!-- Logic -->
 <script>
-  (function(){
-    const openBtn = document.querySelector('.js-open-release');
-    const overlay = document.getElementById('release-overlay');
-    const modal   = document.getElementById('release-modal');
-    const closeBtn= modal.querySelector('.release-close');
-    const okBtn   = modal.querySelector('.release-primary');
+(function(){
+  const openBtn = document.querySelector('.js-open-release');
+  const overlay = document.getElementById('release-overlay');
+  const modal   = document.getElementById('release-modal');
+  const bodyBox = modal.querySelector('.release-body');
+  const closeBtn= modal.querySelector('.release-close');
+  const okBtn   = modal.querySelector('.release-primary');
+  const tpl     = document.getElementById('release-template');
 
-    function openModal(e){
-      if(e) e.preventDefault();
-      overlay.style.display = 'block';
-      modal.style.display   = 'block';
-      modal.querySelector('.release-close').focus(); // focus
-      document.addEventListener('keydown', onEsc);
-      document.body.style.overflow = 'hidden';       // prevent body scroll
-    }
-    function closeModal(){
-      overlay.style.display = 'none';
-      modal.style.display   = 'none';
-      document.removeEventListener('keydown', onEsc);
-      document.body.style.overflow = '';             // restore scroll
-    }
-    function onEsc(e){ if(e.key === 'Escape') closeModal(); }
+  // Inject HTML from <template> to avoid Markdown/Quarto escaping
+  if (tpl && bodyBox) bodyBox.innerHTML = tpl.innerHTML;
 
-    if(openBtn) openBtn.addEventListener('click', openModal);
-    overlay.addEventListener('click', closeModal);
-    closeBtn.addEventListener('click', closeModal);
-    okBtn.addEventListener('click', closeModal);
-  })();
+  function openModal(e){
+    if(e) e.preventDefault();
+    overlay.style.display = 'block';
+    modal.style.display   = 'block';
+    document.body.style.overflow = 'hidden';
+    closeBtn.focus();
+    document.addEventListener('keydown', onEsc);
+  }
+  function closeModal(){
+    overlay.style.display = 'none';
+    modal.style.display   = 'none';
+    document.body.style.overflow = '';
+    document.removeEventListener('keydown', onEsc);
+  }
+  function onEsc(e){ if(e.key === 'Escape') closeModal(); }
+
+  if (openBtn) openBtn.addEventListener('click', openModal);
+  overlay.addEventListener('click', closeModal);
+  closeBtn.addEventListener('click', closeModal);
+  okBtn.addEventListener('click', closeModal);
+})();
 </script>
 <!-- Profile Section -->
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 2em; max-width: 900px; margin: 2em auto;">
