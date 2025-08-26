@@ -8,8 +8,107 @@ format:
 <!-- ✅ Announcement Bar -->
 <div class="announcement-bar">
   📢 <strong> New Features Added:</strong> Floating <em>Search</em> & <em>Back-to-Top</em> buttons are now available.
-  <a href="https://lywww88.github.io/" target="_blank">Check it out →</a>
+  <a href="#" class="js-open-release">Check it out →</a>
+
 </div>
+
+<!-- Release Notes Modal -->
+<div id="release-overlay" style="display:none;"></div>
+<div id="release-modal" role="dialog" aria-modal="true" aria-labelledby="release-title" style="display:none;">
+  <button class="release-close" aria-label="Close">×</button>
+  <h3 id="release-title">What’s new</h3>
+  <div class="release-body">
+    <p>We’ve added two handy UI helpers to improve navigation:</p>
+    <ul>
+      <li><strong>Floating Search</strong> — open site-wide search from anywhere.</li>
+      <li><strong>Back-to-Top</strong> — jump back to the top smoothly.</li>
+    </ul>
+    <p>Use them from the bottom-right corner. Keyboard shortcut: <kbd>⌘/Ctrl</kbd> + <kbd>K</kbd> to search.</p>
+  </div>
+  <div class="release-actions">
+    <button class="release-primary">Got it</button>
+  </div>
+</div>
+
+<style>
+  /* Overlay */
+  #release-overlay{
+    position: fixed; inset: 0; 
+    background: rgba(0,0,0,.35);
+    z-index: 1200;
+  }
+
+  /* Modal */
+  #release-modal{
+    position: fixed; 
+    left: 50%; top: 50%; transform: translate(-50%, -50%);
+    width: min(560px, 92vw);
+    background: #fff; color:#222;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0,0,0,.25);
+    padding: 1.2rem 1.2rem 1rem;
+    z-index: 1210;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  #release-modal h3{
+    margin: 0 0 .6rem; font-size: 1.25rem;
+  }
+  #release-modal .release-body{
+    line-height: 1.6; color:#444; font-size: .98rem;
+  }
+  #release-modal .release-actions{
+    display:flex; justify-content:flex-end; gap:.6rem; margin-top: 1rem;
+  }
+  #release-modal .release-primary{
+    background:#0d6efd; color:#fff; border:none; border-radius:8px;
+    padding:.55rem 1rem; font-weight:600; cursor:pointer;
+    box-shadow: 0 6px 16px rgba(13,110,253,.35);
+  }
+  #release-modal .release-primary:hover{ filter: brightness(1.05); }
+  #release-modal .release-close{
+    position:absolute; right:10px; top:8px;
+    width:34px; height:34px; border:none; border-radius:50%;
+    background: transparent; font-size: 1.2rem; cursor:pointer;
+  }
+  #release-modal .release-close:hover{ background:#f3f5f7; }
+
+  /* Small screens */
+  @media (max-width:480px){
+    #release-modal{ padding: 1rem .9rem .8rem; }
+  }
+</style>
+
+<script>
+  (function(){
+    const openBtn = document.querySelector('.js-open-release');
+    const overlay = document.getElementById('release-overlay');
+    const modal   = document.getElementById('release-modal');
+    const closeBtn= modal.querySelector('.release-close');
+    const okBtn   = modal.querySelector('.release-primary');
+
+    function openModal(e){
+      if(e) e.preventDefault();
+      overlay.style.display = 'block';
+      modal.style.display   = 'block';
+      // focus trap (basic)
+      modal.querySelector('.release-close').focus();
+      document.addEventListener('keydown', onEsc);
+    }
+    function closeModal(){
+      overlay.style.display = 'none';
+      modal.style.display   = 'none';
+      document.removeEventListener('keydown', onEsc);
+    }
+    function onEsc(e){ if(e.key === 'Escape') closeModal(); }
+
+    if(openBtn){
+      openBtn.addEventListener('click', openModal);
+    }
+    overlay.addEventListener('click', closeModal);
+    closeBtn.addEventListener('click', closeModal);
+    okBtn.addEventListener('click', closeModal);
+  })();
+</script>
 
 <!-- ✅ Announcement Bar Style -->
 <style>
