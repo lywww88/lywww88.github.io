@@ -52,6 +52,13 @@ website:
       - icon: database
         href: https://www.kaggle.com/yiweilu
         aria-label: Kaggle
+      - icon: bell
+        aria-label: Updates
+        href: "#"
+        text: ""
+        target: _self
+        attributes:
+          class: "open-release-log"
       - text: '<span class="nav-text resume-tab"><i class="bi bi-download"></i> Resume</span>'
         menu:
           - href: resume.qmd
@@ -65,6 +72,7 @@ website:
         aria-label: W
         icon: none
         target: _blank
+
 
 format:
   html:
