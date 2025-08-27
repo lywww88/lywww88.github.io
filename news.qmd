@@ -1,88 +1,23 @@
 ---
-title: "News"
-page-layout: article
+title: ""
 format:
   html:
-    toc: true
-    toc-title: "On this page"
-    toc-location: left
-    smooth-scroll: true
-    include-after-body:
-      text: |
-        <style>
-          .updates-wrap{max-width: 900px; margin: 0 auto;}
-          .update-card{
-            border:1px solid #e6e8eb; border-radius:12px; padding:1rem 1.1rem;
-            box-shadow:0 8px 18px rgba(0,0,0,.04); margin:1rem 0; background:#fff;
-            transition: box-shadow .18s ease, transform .18s ease;
-          }
-          .update-card:hover{ box-shadow:0 12px 26px rgba(13,110,253,.12); transform: translateY(-1px);}
-          .update-head{display:flex; align-items:flex-start; gap:.8rem; flex-wrap:wrap;}
-          .update-title{margin:0; font-size:1.15rem; font-weight:800;}
-          .update-meta{color:#6c757d; font-size:.92rem;}
-          .update-body{line-height:1.72; margin-top:.5rem; font-size:1rem;}
-          .update-img{width:100%; border-radius:10px; margin:.75rem 0;}
-          .tags{display:flex; flex-wrap:wrap; gap:.4rem; margin-top:.5rem}
-          .tag{font-size:.78rem; padding:.25rem .5rem; background:#eef5ff; color:#0d6efd;
-              border:1px solid #d8e7ff; border-radius:999px; font-weight:600;}
-          .pill{display:inline-flex; align-items:center; gap:.4rem; padding:.25rem .55rem;
-                border-radius:999px; background:#f7f7fa; border:1px solid #e9e9f2; color:#555;}
-          .pill i{font-style:normal}
-          .divider{border-top:1px solid #eee; margin:1.25rem 0;}
-          .link-btn{display:inline-flex; align-items:center; gap:.4rem; font-weight:700;
-                    padding:.45rem .75rem; border-radius:8px; border:1px solid #d0d7de; text-decoration:none}
-          .link-btn:hover{background:#f6f8fa}
-          @media (max-width: 991px){.updates-wrap{padding:0 1rem}}
-        </style>
+    toc: false
 ---
 
-<div class="updates-wrap">
+<div style="max-width: 700px; margin: 4em auto; text-align: center; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">
 
-# News
+  <h1 style="font-weight: 800; font-size: 2.2em; margin-bottom: 0.6em; color:#003366;">
+    News P
+  </h1>
 
-Highlights from projects, competitions, launches, and milestones.  
-Tip: Click the 🔔 icon on the top-right to see the site changelog.
-
-<div class="divider" aria-hidden="true"></div>
-
-## 2025
-
-### Mar — **SAP Integration Naming Contest · 3rd Place**
-<div class="update-card">
-  <div class="update-head">
-    <span class="pill"><i>🏆</i> Result: <strong>3rd Place</strong></span>
-    <span class="pill"><i>🏢</i> Org: <strong>Metrie SAP</strong></span>
-    <span class="pill"><i>🗂</i> Entry: <strong>Project GoldenSync</strong></span>
-  </div>
-
-  <div class="update-body">
-    Our submission <em>Project GoldenSync</em> finished in the <strong>Top 3</strong> of the SAP integration naming contest—an extremely close race.  
-    Congrats to the winning name <strong>Project SapRoot</strong> and shoutout to all finalists!
-  </div>
-
-  <img src="images/news/saproot-winner.jpg" alt="SAP integration contest announcement" class="update-img"/>
-
-  <div class="tags">
-    <span class="tag">Recognition</span>
-    <span class="tag">Teamwork</span>
-    <span class="tag">Branding</span>
-  </div>
-
-  <p style="margin-top:.6rem;">
-    <a class="link-btn" href="https://www.linkedin.com/in/yiwei-lu78" target="_blank">View on LinkedIn →</a>
+  <p style="font-size: 1.1em; color: #555;">
+    This section is <strong>under development</strong>.<br/>
+    Updates and achievements will be shared here soon.
   </p>
-</div>
 
-<!--
-### Feb — Title of the update
-<div class="update-card">...</div>
--->
-
-<div class="divider" aria-hidden="true"></div>
-
-### How I curate this page
-- Concise cards with date → title → summary → link.
-- Tags for quick scanning (Recognition / Research / Product / Speaking / Media).
-- Images are optional but recommended.
+  <div style="margin-top: 2em;">
+    <a href="/" class="btn">← Back to Home</a>
+  </div>
 
 </div>
