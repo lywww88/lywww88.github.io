@@ -200,6 +200,30 @@
 }
 .avatar:hover { transform: scale(1.03); transition: all .25s ease; }
 
+/* === Name === */
+.name {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  font-size: 2.3em;
+  font-weight: 800;
+  color: #222;
+  transition: color .3s ease, transform .3s ease;
+}
+.name:hover {
+  color: #0d6efd;              /* 鼠标移上去变蓝 */
+  transform: scale(1.02);      /* 轻微放大 */
+}
+
+/* === Motto === */
+.motto {
+  font-style: italic;
+  font-size: 1.1em;
+  color: #555;
+  transition: color .3s ease;
+}
+.motto:hover {
+  color: #111;                 /* 鼠标移上去加深 */
+}
+
 /* === Breathing animation === */
 @keyframes w-glow {
   0% {
