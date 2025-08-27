@@ -200,17 +200,18 @@
 }
 .avatar:hover { transform: scale(1.03); transition: all .25s ease; }
 
-/* === Name === */
-.name {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+/* === Name text === */
+.name-text {
   font-size: 2.3em;
   font-weight: 800;
-  color: #222;
-  transition: color .3s ease, transform .3s ease;
+  letter-spacing: 0.5px;
+  background: linear-gradient(90deg, #0d6efd, #6610f2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: transform 0.25s ease;
 }
-.name:hover {
-  color: #0d6efd;              /* 鼠标移上去变蓝 */
-  transform: scale(1.02);      /* 轻微放大 */
+.name-text:hover {
+  transform: scale(1.03);
 }
 
 /* === Motto === */
@@ -218,10 +219,22 @@
   font-style: italic;
   font-size: 1.1em;
   color: #555;
-  transition: color .3s ease;
+  letter-spacing: 0.3px;
+  position: relative;
 }
-.motto:hover {
-  color: #111;                 /* 鼠标移上去加深 */
+.motto::before {
+  content: "❝";
+  color: #0d6efd;
+  margin-right: 6px;
+  font-size: 1.2em;
+  opacity: 0.8;
+}
+.motto::after {
+  content: "❞";
+  color: #0d6efd;
+  margin-left: 6px;
+  font-size: 1.2em;
+  opacity: 0.8;
 }
 
 /* === Breathing animation === */
