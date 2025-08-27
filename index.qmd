@@ -6,8 +6,7 @@ format:
 ---
 
 <div class="announcement-bar">
-  📢 <strong> News:</strong> Won <em>3rd Place</em> in SAP Integration Naming Contest!  
-  <a href="/news.html" target="_self">Read more →</a>
+📢 <strong> News:</strong> Won <em>3rd Place</em> in SAP Integration Naming Contest! <a href="/news.html" target="_self">Read more →</a>
 </div>
 
 <!-- ✅ Release Notes (script template: safe, never rendered directly) -->
@@ -95,7 +94,6 @@ a.btn:hover, .btn:hover { background: #f6f8fa; }
 <!-- Logic -->
 <script>
 (function(){
-  // 右上角图标（navbar里配置的 class），兼容旧的 .js-open-release
   const openBtns = document.querySelectorAll('a[aria-label="Updates"], .js-open-release');
 
   const overlay = document.getElementById('release-overlay');
@@ -107,7 +105,6 @@ a.btn:hover, .btn:hover { background: #f6f8fa; }
   const okBtn   = modal.querySelector('.release-primary');
   const tpl     = document.getElementById('release-template'); // text/x-template
 
-  // 安全注入模板内容
   if (tpl && bodyBox) {
     bodyBox.textContent = '';
     bodyBox.innerHTML = tpl.textContent.trim();
@@ -129,9 +126,8 @@ a.btn:hover, .btn:hover { background: #f6f8fa; }
   }
   function onEsc(e){ if(e.key === 'Escape') closeModal(); }
 
-  // 绑定打开
   openBtns.forEach(btn => btn.addEventListener('click', openModal));
-  // 绑定关闭
+
   overlay.addEventListener('click', closeModal);
   closeBtn.addEventListener('click', closeModal);
   okBtn.addEventListener('click', closeModal);
