@@ -45,19 +45,15 @@ website:
         text: '<span class="nav-text">About</span>'
 
     right:
-      - icon: linkedin
-        href: https://www.linkedin.com/in/yiwei-lu78
-        aria-label: LinkedIn
       - icon: github
         href: https://github.com/lywww88
         aria-label: GitHub
       - icon: database
         href: https://www.kaggle.com/yiweilu
         aria-label: Kaggle
-      - icon: bell
-        aria-label: Updates
-        href: "#"
-        target: _self
+      - icon: linkedin
+        href: https://www.linkedin.com/in/yiwei-lu78
+        aria-label: LinkedIn
       - text: '<span class="nav-text resume-tab"><i class="bi bi-download"></i> Resume</span>'
         menu:
           - href: resume.qmd
@@ -71,6 +67,10 @@ website:
         aria-label: W
         icon: none
         target: _blank
+      - icon: bell
+        aria-label: Updates
+        href: "#"
+        target: _self
 
 
 format:
@@ -151,7 +151,6 @@ format:
           #floating-search i{ font-size: 1.1rem; }
           @media (max-width: 480px){ #floating-search{ right: 16px; bottom: 16px; } }
 
-          /* 仅把手可拖动 */
           #fs-handle{
             width: 14px;
             height: 18px;
@@ -160,7 +159,7 @@ format:
             justify-content: center;
             margin-right: 2px;
             cursor: grab;
-            touch-action: none;              /* 允许拖动手势 */
+            touch-action: none;              
             user-select: none;
             -webkit-user-select: none;
             opacity: .85;
@@ -247,11 +246,10 @@ format:
             const fsButton = document.getElementById('floating-search');
             if (!fsButton) return;
             fsButton.addEventListener('click', (e) => {
-              if (fsButton.dataset.dragging === '1') return; // 刚拖完不触发
+              if (fsButton.dataset.dragging === '1') return; 
               openSearch();
             });
 
-            // 快捷键 Cmd/Ctrl + K
             document.addEventListener('keydown', (e) => {
               const k = e.key.toLowerCase();
               if ((e.metaKey || e.ctrlKey) && k === 'k') {
@@ -260,7 +258,6 @@ format:
               }
             });
 
-            // 仅把手可拖动 + 记住位置
             const handle = document.getElementById('fs-handle');
             try {
               const saved = JSON.parse(localStorage.getItem('fs-pos') || '{}');
@@ -340,7 +337,6 @@ format:
             const okBtn   = modal.querySelector('.release-primary');
             const tpl     = document.getElementById('release-template');
 
-            // 注入模板（只做一次）
             if (tpl && bodyBox && !bodyBox.dataset.inited) {
               bodyBox.textContent = '';
               bodyBox.innerHTML = tpl.textContent.trim();
