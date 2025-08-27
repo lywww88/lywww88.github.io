@@ -57,10 +57,7 @@ website:
       - icon: bell
         aria-label: Updates
         href: "#"
-        text: ""
         target: _self
-        attributes:
-          class: "open-release-log"
       - text: '<span class="nav-text resume-tab"><i class="bi bi-download"></i> Resume</span>'
         menu:
           - href: resume.qmd
