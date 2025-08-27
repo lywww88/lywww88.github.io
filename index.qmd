@@ -145,14 +145,10 @@ a.btn:hover, .btn:hover { background: #f6f8fa; }
   <!-- Name + Motto -->
   <div style="flex: 1;" markdown="1">
 
-<div style="text-align:center;">
-  <a href="about.html" style="text-decoration:none;">
-    <span class="name-text">Yiwei Lu (David)</span>
-  </a>
+<div style="text-align: center;">
+  <span class="name">Yiwei Lu (David)</span>  
   <br/>
-  <div class="motto">
-    I believe clarity creates freedom — in data, design, and life.
-  </div>
+  <span class="motto">I believe clarity creates freedom — in data, design, and life.</span>
 </div>
 
   </div>
