@@ -5,14 +5,13 @@ format:
     toc: false
 ---
 
-<!-- ✅ Announcement Bar -->
 <div class="announcement-bar">
-  📢 <strong> New Features Added:</strong> Floating <em>Search</em> & <em>Back-to-Top</em> buttons are now available.
-  <a href="#" class="js-open-release">Check it out →</a>
+  📢 <strong> News:</strong> Project 3rd place.
+  <a href="/career-updates.html" target="_self">Check it out →</a>
 </div>
 
-<!-- ✅ Release Notes (template is inert, won’t be escaped) -->
-<template id="release-template">
+<!-- ✅ Release Notes (script template: safe, never rendered directly) -->
+<script type="text/x-template" id="release-template">
   <p>We’ve added two handy UI helpers to improve navigation:</p>
   <ul>
     <li><strong>Floating Search</strong> — open site-wide search from anywhere.</li>
@@ -20,7 +19,7 @@ format:
   </ul>
   <p>Keyboard shortcut:
      <kbd>⌘/Ctrl</kbd> + <kbd>K</kbd> to search.</p>
-</template>
+</script>
 
 <!-- Modal skeleton -->
 <div id="release-overlay" style="display:none;"></div>
@@ -97,24 +96,30 @@ a.btn:hover, .btn:hover { background: #f6f8fa; }
 <!-- Logic -->
 <script>
 (function(){
-  const openBtn = document.querySelector('.js-open-release');
+  // 右上角图标（navbar里配置的 class），兼容旧的 .js-open-release
+  const openBtns = document.querySelectorAll('.open-release-log, .js-open-release');
+
   const overlay = document.getElementById('release-overlay');
   const modal   = document.getElementById('release-modal');
+  if (!overlay || !modal) return;
+
   const bodyBox = modal.querySelector('.release-body');
   const closeBtn= modal.querySelector('.release-close');
   const okBtn   = modal.querySelector('.release-primary');
-  const tpl     = document.getElementById('release-template');
+  const tpl     = document.getElementById('release-template'); // text/x-template
 
+  // 安全注入模板内容
   if (tpl && bodyBox) {
-    bodyBox.replaceChildren(tpl.content.cloneNode(true));
+    bodyBox.textContent = '';
+    bodyBox.innerHTML = tpl.textContent.trim();
   }
 
   function openModal(e){
-    if(e) e.preventDefault();
+    if(e) e.preventDefault(); // 阻止 href="#" 回到顶部
     overlay.style.display = 'block';
     modal.style.display   = 'block';
     document.body.style.overflow = 'hidden';
-    closeBtn.focus();
+    if (closeBtn) closeBtn.focus();
     document.addEventListener('keydown', onEsc);
   }
   function closeModal(){
@@ -125,7 +130,9 @@ a.btn:hover, .btn:hover { background: #f6f8fa; }
   }
   function onEsc(e){ if(e.key === 'Escape') closeModal(); }
 
-  if (openBtn) openBtn.addEventListener('click', openModal);
+  // 绑定打开
+  openBtns.forEach(btn => btn.addEventListener('click', openModal));
+  // 绑定关闭
   overlay.addEventListener('click', closeModal);
   closeBtn.addEventListener('click', closeModal);
   okBtn.addEventListener('click', closeModal);
