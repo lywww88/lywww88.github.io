@@ -9,7 +9,6 @@ format:
     smooth-scroll: true
     include-after-body: |
       <style>
-        /* ===== News cards (沿用 Career Updates 风格) ===== */
         .updates-wrap{max-width: 900px; margin: 0 auto;}
         .update-card{
           border:1px solid #e6e8eb; border-radius:12px; padding:1rem 1.1rem;
@@ -38,7 +37,7 @@ format:
 
 <div class="updates-wrap">
 
-# 📰 News
+# News
 
 Highlights from projects, competitions, launches, and milestones.  
 Tip: Click the 🔔 icon on the top-right to see the site changelog.
@@ -51,7 +50,7 @@ Tip: Click the 🔔 icon on the top-right to see the site changelog.
 <div class="update-card">
   <div class="update-head">
     <span class="pill"><i>🏆</i> Result: <strong>3rd Place</strong></span>
-    <span class="pill"><i>🏢</i> Org: <strong>Metrie EL & EL SAP</strong></span>
+    <span class="pill"><i>🏢</i> Org: <strong>Metrie SAP</strong></span>
     <span class="pill"><i>🗂</i> Entry: <strong>Project GoldenSync</strong></span>
   </div>
 
@@ -60,7 +59,6 @@ Tip: Click the 🔔 icon on the top-right to see the site changelog.
     Congrats to the winning name <strong>Project SapRoot</strong> and shoutout to all finalists!
   </div>
 
-  <!-- 把图片放到 images/news/ 目录；如文件名不同请同步修改 src -->
   <img src="images/news/saproot-winner.jpg" alt="SAP integration contest announcement" class="update-img"/>
 
   <div class="tags">
@@ -74,7 +72,6 @@ Tip: Click the 🔔 icon on the top-right to see the site changelog.
   </p>
 </div>
 
-<!-- 可以继续追加更多 News，按时间倒序即可 -->
 <!--
 ### Feb — Title of the update
 <div class="update-card">...</div>
