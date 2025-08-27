@@ -7,7 +7,7 @@ format:
 
 <div class="announcement-bar">
   📢 <strong> News:</strong> Project 3rd place.
-  <a href="/career-updates.html" target="_self">Check it out →</a>
+  <a href="/news.html" target="_self">Check it out →</a>
 </div>
 
 <!-- ✅ Release Notes (script template: safe, never rendered directly) -->
