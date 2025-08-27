@@ -68,7 +68,6 @@ format:
   }
   #release-modal .release-close:hover{ background:#f3f5f7; }
 
-/* 轻量按钮 */
 a.btn, .btn {
   display: inline-flex; align-items: center; gap: .4em;
   padding: .5em .9em; border-radius: .5em;
@@ -97,7 +96,7 @@ a.btn:hover, .btn:hover { background: #f6f8fa; }
 <script>
 (function(){
   // 右上角图标（navbar里配置的 class），兼容旧的 .js-open-release
-  const openBtns = document.querySelectorAll('.open-release-log, .js-open-release');
+  const openBtns = document.querySelectorAll('a[aria-label="Updates"], .js-open-release');
 
   const overlay = document.getElementById('release-overlay');
   const modal   = document.getElementById('release-modal');
