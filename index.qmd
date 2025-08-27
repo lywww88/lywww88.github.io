@@ -6,8 +6,8 @@ format:
 ---
 
 <div class="announcement-bar">
-  📢 <strong> News:</strong> Project 3rd place.
-  <a href="/news.html" target="_self">Check it out →</a>
+  📢 <strong> News:</strong> Won <em>3rd Place</em> in SAP Integration Naming Contest!  
+  <a href="/news.html" target="_self">Read more →</a>
 </div>
 
 <!-- ✅ Release Notes (script template: safe, never rendered directly) -->
