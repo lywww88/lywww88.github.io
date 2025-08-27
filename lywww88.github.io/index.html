@@ -107,6 +107,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../index.html"> 
 <span class="menu-text"><span class="nav-text">Home</span></span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../news.html"> 
+<span class="menu-text"><span class="nav-text">News</span></span></a>
+  </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-span-classnav-textprojectsspan" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text"><span class="nav-text">Projects</span></span>
@@ -156,17 +160,17 @@ ul.task-list li input[type="checkbox"] {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/in/yiwei-lu78"> <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/lywww88"> <i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://www.kaggle.com/yiweilu"> <i class="bi bi-database" role="img" aria-label="Kaggle">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/yiwei-lu78"> <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -189,6 +193,11 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../ww.html" target="_blank"> <i class="bi bi-none" role="img" aria-label="W">
 </i> 
 <span class="menu-text"><img class="w-logo" src="../images/W.PNG" alt="W Logo"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../#" target="_self"> <i class="bi bi-bell" role="img" aria-label="Updates">
+</i> 
+<span class="menu-text"></span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -680,19 +689,38 @@ Let’s stay in touch — here’s where to find me online.
   });
   </script>
 </div> <!-- /content -->
-<!-- Floating, draggable Search (handle-only dragging) -->
+<!-- ========== GLOBAL: Floating Search & Back-to-Top ========== -->
 <button id="floating-search" aria-label="Search" title="Search (⌘/Ctrl + K)">
   <span id="fs-handle" aria-label="Drag" title="Drag" role="button"></span>
   <i class="bi bi-search"></i> Search
 </button>
 
-<!-- Floating Back-to-Top -->
 <button id="back-to-top" aria-label="Back to Top" title="Back to Top">
   <i class="bi bi-arrow-up"></i>
 </button>
 
+<!-- ========== GLOBAL: Release Modal (bell) ========== -->
+<script type="text/x-template" id="release-template">
+  <p>Site updates & small improvements:</p>
+  <ul>
+    <li>Floating Search & Back-to-Top added.</li>
+    <li>Navigation polish on mobile.</li>
+  </ul>
+  <p>Keyboard: <kbd>⌘/Ctrl</kbd> + <kbd>K</kbd> to search.</p>
+</script>
+
+<div id="release-overlay" style="display:none;"></div>
+<div id="release-modal" role="dialog" aria-modal="true" aria-labelledby="release-title" style="display:none;">
+  <button class="release-close" aria-label="Close">×</button>
+  <h3 id="release-title">What’s new</h3>
+  <div class="release-body"></div>
+  <div class="release-actions">
+    <button class="release-primary" type="button">Got it</button>
+  </div>
+</div>
+
 <style>
-  /* Search pill：按钮默认点击；拖动交给把手 */
+  /* ===== Floating Search ===== */
   #floating-search{
     position: fixed;
     right: 22px;
@@ -717,7 +745,6 @@ Let’s stay in touch — here’s where to find me online.
   #floating-search i{ font-size: 1.1rem; }
   @media (max-width: 480px){ #floating-search{ right: 16px; bottom: 16px; } }
 
-  /* 把手：只有它能拖动 */
   #fs-handle{
     width: 14px;
     height: 18px;
@@ -726,12 +753,11 @@ Let’s stay in touch — here’s where to find me online.
     justify-content: center;
     margin-right: 2px;
     cursor: grab;
-    touch-action: none;              /* 允许拖动手势 */
+    touch-action: none;              
     user-select: none;
     -webkit-user-select: none;
     opacity: .85;
   }
-  /* 把手纹理（竖向 3 列点点） */
   #fs-handle::before{
     content: "";
     display: block;
@@ -746,11 +772,11 @@ Let’s stay in touch — here’s where to find me online.
   }
   #fs-handle:active{ cursor: grabbing; }
 
-  /* Back-to-top */
+  /* ===== Back-to-top ===== */
   #back-to-top {
     position: fixed;
     right: 22px;
-    bottom: 90px; /* above search */
+    bottom: 90px;
     width: 54px;
     height: 54px;
     border: none;
@@ -764,117 +790,189 @@ Let’s stay in touch — here’s where to find me online.
     cursor: pointer;
     z-index: 1100;
     transition: transform .18s ease, box-shadow .18s ease, background .18s ease, opacity .18s ease, visibility .18s ease;
-    opacity: 0;
-    visibility: hidden;
+    opacity: 0; visibility: hidden;
   }
   #back-to-top:hover{ transform: translateY(-2px); box-shadow: 0 14px 30px rgba(13,110,253,.45); }
   #back-to-top:active{ transform: translateY(0) scale(.96); }
   #back-to-top i{ font-size: 1.25rem; line-height: 1; }
   @media (max-width: 480px){ #back-to-top{ right: 16px; bottom: 80px; } }
+
+  /* ===== Modal ===== */
+  #release-overlay{
+    position: fixed; inset: 0; 
+    background: rgba(0,0,0,.35);
+    z-index: 1200;
+  }
+  #release-modal{
+    position: fixed; 
+    left: 50%; top: 50%; transform: translate(-50%, -50%);
+    width: min(560px, 92vw);
+    background: #fff; color:#222;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0,0,0,.25);
+    padding: 1.2rem 1.2rem 1rem;
+    z-index: 1210;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  #release-modal h3{ margin: 0 0 .6rem; font-size: 1.25rem; }
+  #release-modal .release-body{ line-height: 1.6; color:#444; font-size: .98rem; }
+  #release-modal .release-actions{ display:flex; justify-content:flex-end; gap:.6rem; margin-top: 1rem; }
+  #release-modal .release-primary{
+    background:#0d6efd; color:#fff; border:none; border-radius:8px;
+    padding:.55rem 1rem; font-weight:600; cursor:pointer;
+    box-shadow: 0 6px 16px rgba(13,110,253,.35);
+  }
+  #release-modal .release-primary:hover{ filter: brightness(1.05); }
+  #release-modal .release-close{
+    position:absolute; right:10px; top:8px;
+    width:34px; height:34px; border:none; border-radius:50%;
+    background: transparent; font-size: 1.2rem; cursor:pointer;
+  }
+  #release-modal .release-close:hover{ background:#f3f5f7; }
 </style>
 
 <script>
-  // Open Quarto search
+  // ===== Quarto Search Open =====
   function openSearch() {
     if (window.quartoOpenSearch) window.quartoOpenSearch();
   }
-
-  const fsButton = document.getElementById('floating-search');
-  fsButton.addEventListener('click', (e) => {
-    // 若刚结束拖动，阻止本次点击
-    if (fsButton.dataset.dragging === '1') return;
-    openSearch();
-  });
-
-  // Keyboard shortcut: Cmd/Ctrl + K
-  document.addEventListener('keydown', (e) => {
-    const k = e.key.toLowerCase();
-    if ((e.metaKey || e.ctrlKey) && k === 'k') {
-      openSearch();
-      e.preventDefault();
-    }
-  });
-
-  // Handle-only draggable with saved position
   (function () {
-    const btn = document.getElementById('floating-search');
-    const handle = document.getElementById('fs-handle');
-    if (!btn || !handle) return;
+    const fsButton = document.getElementById('floating-search');
+    if (!fsButton) return;
+    fsButton.addEventListener('click', (e) => {
+      if (fsButton.dataset.dragging === '1') return; 
+      openSearch();
+    });
 
-    // 恢复位置
+    document.addEventListener('keydown', (e) => {
+      const k = e.key.toLowerCase();
+      if ((e.metaKey || e.ctrlKey) && k === 'k') {
+        openSearch();
+        e.preventDefault();
+      }
+    });
+
+    const handle = document.getElementById('fs-handle');
     try {
       const saved = JSON.parse(localStorage.getItem('fs-pos') || '{}');
       if (saved.left != null && saved.top != null) {
-        btn.style.left = saved.left + 'px';
-        btn.style.top  = saved.top  + 'px';
-        btn.style.right = 'auto';
-        btn.style.bottom = 'auto';
+        fsButton.style.left = saved.left + 'px';
+        fsButton.style.top  = saved.top  + 'px';
+        fsButton.style.right = 'auto';
+        fsButton.style.bottom = 'auto';
       }
     } catch (e) {}
 
     let dragging = false, ox = 0, oy = 0;
-
     const onDown = (e) => {
-      // 仅把手触发拖动
-      if (!(e.target === handle || handle.contains(e.target))) return;
-
-      dragging = true;
-      btn.dataset.dragging = '1';
-      const rect = btn.getBoundingClientRect();
+      if (!(e.target === handle || (handle && handle.contains(e.target)))) return;
+      dragging = true; fsButton.dataset.dragging = '1';
+      const rect = fsButton.getBoundingClientRect();
       const pt = (e.touches ? e.touches[0] : e);
-      ox = pt.clientX - rect.left;
-      oy = pt.clientY - rect.top;
-      e.preventDefault();
-      e.stopPropagation();
+      ox = pt.clientX - rect.left; oy = pt.clientY - rect.top;
+      e.preventDefault(); e.stopPropagation();
     };
-
     const onMove = (e) => {
       if (!dragging) return;
       const pt = (e.touches ? e.touches[0] : e);
-      const x = pt.clientX - ox;
-      const y = pt.clientY - oy;
-      btn.style.left = Math.max(8, Math.min(window.innerWidth  - btn.offsetWidth  - 8, x)) + 'px';
-      btn.style.top  = Math.max(8, Math.min(window.innerHeight - btn.offsetHeight - 8, y)) + 'px';
-      btn.style.right = 'auto';
-      btn.style.bottom = 'auto';
+      const x = pt.clientX - ox, y = pt.clientY - oy;
+      fsButton.style.left = Math.max(8, Math.min(window.innerWidth  - fsButton.offsetWidth  - 8, x)) + 'px';
+      fsButton.style.top  = Math.max(8, Math.min(window.innerHeight - fsButton.offsetHeight - 8, y)) + 'px';
+      fsButton.style.right = 'auto'; fsButton.style.bottom = 'auto';
       e.preventDefault();
     };
-
     const onUp = () => {
       if (!dragging) return;
       dragging = false;
       try {
-        const left = parseInt(btn.style.left || 0, 10);
-        const top  = parseInt(btn.style.top  || 0, 10);
+        const left = parseInt(fsButton.style.left || 0, 10);
+        const top  = parseInt(fsButton.style.top  || 0, 10);
         localStorage.setItem('fs-pos', JSON.stringify({ left, top }));
       } catch (e) {}
-      // 结束后短暂阻止 click（避免“拖完就点开搜索”）
-      setTimeout(() => { btn.dataset.dragging = ''; }, 50);
+      setTimeout(() => { fsButton.dataset.dragging = ''; }, 50);
     };
 
-    // 只在把手上绑定按下；移动/抬起监听全局
-    handle.addEventListener('mousedown', onDown);
-    handle.addEventListener('touchstart', onDown, { passive: false });
+    if (handle){
+      handle.addEventListener('mousedown', onDown);
+      handle.addEventListener('touchstart', onDown, { passive: false });
+    }
     document.addEventListener('mousemove', onMove);
     document.addEventListener('mouseup', onUp);
     document.addEventListener('touchmove', onMove, { passive: false });
     document.addEventListener('touchend', onUp);
   })();
 
-  // Back to top
-  const backToTop = document.getElementById("back-to-top");
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 200) {
-      backToTop.style.opacity = "1";
-      backToTop.style.visibility = "visible";
-    } else {
-      backToTop.style.opacity = "0";
-      backToTop.style.visibility = "hidden";
+  // ===== Back to top =====
+  (function () {
+    const backToTop = document.getElementById("back-to-top");
+    if (!backToTop) return;
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 200) {
+        backToTop.style.opacity = "1";
+        backToTop.style.visibility = "visible";
+      } else {
+        backToTop.style.opacity = "0";
+        backToTop.style.visibility = "hidden";
+      }
+    });
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  })();
+
+  // ===== Bell (Updates) Modal with delegation =====
+  (function(){
+    const overlay = document.getElementById('release-overlay');
+    const modal   = document.getElementById('release-modal');
+    if (!overlay || !modal) return;
+
+    const bodyBox = modal.querySelector('.release-body');
+    const closeBtn= modal.querySelector('.release-close');
+    const okBtn   = modal.querySelector('.release-primary');
+    const tpl     = document.getElementById('release-template');
+
+    if (tpl && bodyBox && !bodyBox.dataset.inited) {
+      bodyBox.textContent = '';
+      bodyBox.innerHTML = tpl.textContent.trim();
+      bodyBox.dataset.inited = '1';
     }
-  });
-  backToTop.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
+
+    function openModal(e){
+      if (e) e.preventDefault();
+      overlay.style.display = 'block';
+      modal.style.display   = 'block';
+      document.body.style.overflow = 'hidden';
+      if (closeBtn) closeBtn.focus();
+      document.addEventListener('keydown', onEsc);
+    }
+    function closeModal(){
+      overlay.style.display = 'none';
+      modal.style.display   = 'none';
+      document.body.style.overflow = '';
+      document.removeEventListener('keydown', onEsc);
+    }
+    function onEsc(e){ if (e.key === 'Escape') closeModal(); }
+
+    // 事件委托：命中右上角铃铛（多选择器兜底）
+    const BELL_SELECTORS = [
+      'a[aria-label="Updates"]',
+      '.open-release-log',
+      '.js-open-release',
+      'a:has(.bi-bell)'
+    ];
+    document.addEventListener('click', (e) => {
+      const a = e.target.closest('a');
+      if (!a) return;
+      const hit = BELL_SELECTORS.some(sel => {
+        try { return a.matches(sel); } catch { return false; }
+      }) || (a.querySelector && a.querySelector('.bi-bell'));
+      if (hit) openModal(e);
+    }, { capture: true });
+
+    overlay.addEventListener('click', closeModal);
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (okBtn)    okBtn.addEventListener('click', closeModal);
+  })();
 </script>
 
 
