@@ -647,8 +647,9 @@ Airbnb Sentiment Application &amp; Hosting Strategy
   });
   </script>
 </div> <!-- /content -->
-<!-- Floating, draggable Search -->
+<!-- Floating, draggable Search (handle-only dragging) -->
 <button id="floating-search" aria-label="Search" title="Search (⌘/Ctrl + K)">
+  <span id="fs-handle" aria-label="Drag" title="Drag" role="button"></span>
   <i class="bi bi-search"></i> Search
 </button>
 
@@ -658,7 +659,7 @@ Airbnb Sentiment Application &amp; Hosting Strategy
 </button>
 
 <style>
-  /* Search pill */
+  /* Search pill：按钮默认点击；拖动交给把手 */
   #floating-search{
     position: fixed;
     right: 22px;
@@ -666,24 +667,53 @@ Airbnb Sentiment Application &amp; Hosting Strategy
     padding: 0.6em 1.2em;
     border: none;
     border-radius: 30px;
-    background: #0d6efd;    /* <-- fixed: single # */
+    background: #0d6efd;
     color: #fff;
     font-weight: 600;
     font-size: 0.95rem;
     display: flex;
     align-items: center;
-    gap: 0.4em;
-    cursor: grab;
+    gap: 0.55em;
+    cursor: pointer;                 /* 点击为主 */
     box-shadow: 0 10px 24px rgba(13,110,253,.35);
     z-index: 1100;
     transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+    touch-action: manipulation;      /* 移动端优先点击 */
   }
   #floating-search:hover{ transform: translateY(-2px); box-shadow: 0 14px 30px rgba(13,110,253,.45); }
-  #floating-search:active{ transform: translateY(0) scale(.96); cursor: grabbing; }
   #floating-search i{ font-size: 1.1rem; }
   @media (max-width: 480px){ #floating-search{ right: 16px; bottom: 16px; } }
 
-  /* Back-to-top circle (unified blue) */
+  /* 把手：只有它能拖动 */
+  #fs-handle{
+    width: 14px;
+    height: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2px;
+    cursor: grab;
+    touch-action: none;              /* 允许拖动手势 */
+    user-select: none;
+    -webkit-user-select: none;
+    opacity: .85;
+  }
+  /* 把手纹理（竖向 3 列点点） */
+  #fs-handle::before{
+    content: "";
+    display: block;
+    width: 10px; height: 14px;
+    background-image:
+      radial-gradient(currentColor 1px, transparent 1px),
+      radial-gradient(currentColor 1px, transparent 1px),
+      radial-gradient(currentColor 1px, transparent 1px);
+    background-size: 4px 4px;
+    background-position: 0 0, 3px 1.8px, 6px 0;
+    opacity: .9;
+  }
+  #fs-handle:active{ cursor: grabbing; }
+
+  /* Back-to-top */
   #back-to-top {
     position: fixed;
     right: 22px;
@@ -692,7 +722,7 @@ Airbnb Sentiment Application &amp; Hosting Strategy
     height: 54px;
     border: none;
     border-radius: 50%;
-    background: #0d6efd;   /* <-- changed from purple to blue */
+    background: #0d6efd;
     color: #fff;
     display: flex;
     align-items: center;
@@ -715,7 +745,13 @@ Airbnb Sentiment Application &amp; Hosting Strategy
   function openSearch() {
     if (window.quartoOpenSearch) window.quartoOpenSearch();
   }
-  document.getElementById('floating-search').addEventListener('click', openSearch);
+
+  const fsButton = document.getElementById('floating-search');
+  fsButton.addEventListener('click', (e) => {
+    // 若刚结束拖动，阻止本次点击
+    if (fsButton.dataset.dragging === '1') return;
+    openSearch();
+  });
 
   // Keyboard shortcut: Cmd/Ctrl + K
   document.addEventListener('keydown', (e) => {
@@ -726,10 +762,13 @@ Airbnb Sentiment Application &amp; Hosting Strategy
     }
   });
 
-  // Draggable with saved position
+  // Handle-only draggable with saved position
   (function () {
     const btn = document.getElementById('floating-search');
-    if (!btn) return;
+    const handle = document.getElementById('fs-handle');
+    if (!btn || !handle) return;
+
+    // 恢复位置
     try {
       const saved = JSON.parse(localStorage.getItem('fs-pos') || '{}');
       if (saved.left != null && saved.top != null) {
@@ -739,23 +778,35 @@ Airbnb Sentiment Application &amp; Hosting Strategy
         btn.style.bottom = 'auto';
       }
     } catch (e) {}
+
     let dragging = false, ox = 0, oy = 0;
+
     const onDown = (e) => {
+      // 仅把手触发拖动
+      if (!(e.target === handle || handle.contains(e.target))) return;
+
       dragging = true;
+      btn.dataset.dragging = '1';
       const rect = btn.getBoundingClientRect();
-      ox = (e.touches ? e.touches[0].clientX : e.clientX) - rect.left;
-      oy = (e.touches ? e.touches[0].clientY : e.clientY) - rect.top;
+      const pt = (e.touches ? e.touches[0] : e);
+      ox = pt.clientX - rect.left;
+      oy = pt.clientY - rect.top;
       e.preventDefault();
+      e.stopPropagation();
     };
+
     const onMove = (e) => {
       if (!dragging) return;
-      const x = (e.touches ? e.touches[0].clientX : e.clientX) - ox;
-      const y = (e.touches ? e.touches[0].clientY : e.clientY) - oy;
-      btn.style.left = Math.max(8, Math.min(window.innerWidth - btn.offsetWidth - 8, x)) + 'px';
+      const pt = (e.touches ? e.touches[0] : e);
+      const x = pt.clientX - ox;
+      const y = pt.clientY - oy;
+      btn.style.left = Math.max(8, Math.min(window.innerWidth  - btn.offsetWidth  - 8, x)) + 'px';
       btn.style.top  = Math.max(8, Math.min(window.innerHeight - btn.offsetHeight - 8, y)) + 'px';
       btn.style.right = 'auto';
       btn.style.bottom = 'auto';
+      e.preventDefault();
     };
+
     const onUp = () => {
       if (!dragging) return;
       dragging = false;
@@ -764,11 +815,15 @@ Airbnb Sentiment Application &amp; Hosting Strategy
         const top  = parseInt(btn.style.top  || 0, 10);
         localStorage.setItem('fs-pos', JSON.stringify({ left, top }));
       } catch (e) {}
+      // 结束后短暂阻止 click（避免“拖完就点开搜索”）
+      setTimeout(() => { btn.dataset.dragging = ''; }, 50);
     };
-    btn.addEventListener('mousedown', onDown);
+
+    // 只在把手上绑定按下；移动/抬起监听全局
+    handle.addEventListener('mousedown', onDown);
+    handle.addEventListener('touchstart', onDown, { passive: false });
     document.addEventListener('mousemove', onMove);
     document.addEventListener('mouseup', onUp);
-    btn.addEventListener('touchstart', onDown, { passive: false });
     document.addEventListener('touchmove', onMove, { passive: false });
     document.addEventListener('touchend', onUp);
   })();
