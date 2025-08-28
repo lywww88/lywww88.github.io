@@ -28,7 +28,7 @@ format:
 
     var ok = false;
     for (var i = 0; i < maxTries; i++) {
-      var input = prompt("🔒 This page is under testing. Please enter password ("+(maxTries - i)+" attempts left):");
+      var input = prompt("🔒 This page is under testing. ("+(maxTries - i)+" attempts left):");
       if (input === correct) { ok = true; break; }
       else { failData.count++; }
     }
