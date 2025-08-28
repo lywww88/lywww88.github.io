@@ -200,22 +200,42 @@
   font-size:2.3em;
   font-weight:800;
   background:linear-gradient(270deg,#0d6efd,#1e90ff,#00bfff,#0d6efd);
-  background-size:300% auto;
+  background-size:320% auto;
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
   animation:gradientScroll 6s linear infinite;
   transition:transform .3s ease;
+  will-change:background-position,transform;
   z-index:0;
 }
+
 .name::after{ content:none; }
+
 .name:hover{
   transform:scale(1.03);
-  background:linear-gradient(270deg,#ff6b6b,#ffd93d,#6bcbff,#8ef6e4,#b983ff,#ff6b6b);
-  background-size:350% auto;
+  background:linear-gradient(
+    270deg,
+    #ffd700 0%,
+    #ffc107 8%,
+    #ffdf6e 16%,
+    #ffe680 24%,
+    #ffd700 32%,
+    #ffb347 40%,
+    #ffd700 48%,
+    #9adcfb 56%,
+    #6ec9ff 64%,
+    #38bdf8 72%,
+    #ffd700 80%,
+    #ffdf6e 88%,
+    #ffd700 100%
+  );
+  background-size:500% auto;
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
-  animation:gradientScroll 4s linear infinite;
+  animation:gradientScroll 5s linear infinite;
+  will-change:background-position,transform;
 }
+
 @keyframes gradientScroll{
   0%{ background-position:0% center; }
   100%{ background-position:300% center; }
