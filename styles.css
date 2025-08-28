@@ -192,14 +192,6 @@
   filter: drop-shadow(0 0 12px rgba(0,123,255,1));
 }
 
-/* === headshot === */
-.avatar {
-  width:160px; height:160px; border-radius:50%;
-  border:4px solid #f3f4f6;
-  box-shadow:0 4px 16px rgba(0,0,0,.12);
-}
-.avatar:hover { transform: scale(1.03); transition: all .25s ease; }
-
 /* === Name === */
 .name {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
@@ -221,24 +213,19 @@
 }
 
 .name:hover {
-  background: linear-gradient(
-    270deg,
-    #1e90ff,   /* 亮蓝 */
-    #00bfff,   /* 青蓝 */
-    #87cefa,   /* 天蓝 */
-    #1e90ff
-  );
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradientScroll 3s linear infinite; /* hover 时加快滚动 */
-  text-shadow: 0 0 8px rgba(30,144,255,0.6), 0 0 16px rgba(0,191,255,0.5); /* 发光效果 */
+  background: none;                
+  -webkit-text-fill-color: #000;    
+  color: #000;                      
+  animation: none;                 
+  text-shadow:
+    0 0 6px  rgba(30,144,255,.45),
+    0 0 14px rgba(0,191,255,.35),
+    0 0 22px rgba(13,110,253,.35);
   transform: scale(1.05);
 }
 
-/* 渐变滚动动画 */
 @keyframes gradientScroll {
-  0% { background-position: 0% center; }
+  0%   { background-position: 0%   center; }
   100% { background-position: 300% center; }
 }
 
