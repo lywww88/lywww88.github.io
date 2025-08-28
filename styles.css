@@ -310,14 +310,12 @@
   opacity:.9;
   background:conic-gradient(
     #ffd700,   /* 金色 */
-    #0d6efd,   /* 深蓝 */
     #ffc107,   /* 金黄 */
     #1e90ff,   /* 亮蓝 */
     #ffdf6e,   /* 浅金 */
-    #00bfff,   /* 青蓝 */
     #ffd700    /* 金色收尾 */
   );
-  animation-duration:6s; /* hover 时加快旋转 */
+  animation-duration:4s; /* hover 时加快旋转 */
 }
 
 @keyframes avatarSpin{
