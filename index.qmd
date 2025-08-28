@@ -49,24 +49,23 @@ format:
 </style>
 
 <!-- Profile Section -->
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 2em; max-width: 900px; margin: 2em auto;">
+<div style="display:flex; flex-wrap:wrap; align-items:center; gap:2em; max-width:900px; margin:2em auto;">
 
-  <!-- Avatar -->
+  <!-- Avatar (needs wrapper for the glow ring) -->
   <div class="avatar-wrapper">
     <a href="about.html" title="About Me">
-      <img src="images/Headshot.jpg" alt="Yiwei Lu Headshot" class="avatar"/>
+      <img src="images/Headshot.jpg" alt="Yiwei Lu Headshot" class="avatar">
     </a>
   </div>
 
-  <div style="flex: 1;" markdown="1">
-    <div style="text-align: center;">
-      <span class="name" data-text="Yiwei Lu">Yiwei Lu</span>  
-      <br/>
-      <span class="motto">I believe clarity creates freedom — in data, design, and life.</span>
-    </div>
+  <!-- Name + Motto -->
+  <div style="flex:1; text-align:center;">
+    <span class="name" data-text="Yiwei Lu">Yiwei Lu</span><br/>
+    <span class="motto">I believe clarity creates freedom — in data, design, and life.</span>
   </div>
 
 </div>
+
 ::: { .project-card style="display: flex; flex-wrap: wrap; gap: 1.5em; align-items: flex-start;" markdown="1" }
 
 <!-- Left Text -->
