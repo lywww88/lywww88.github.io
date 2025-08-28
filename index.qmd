@@ -91,7 +91,6 @@ format:
 </style>
 
 
-
 <!-- Logic -->
 <script>
 (function(){
@@ -104,14 +103,18 @@ format:
   const bodyBox = modal.querySelector('.release-body');
   const closeBtn= modal.querySelector('.release-close');
   const okBtn   = modal.querySelector('.release-primary');
-  const tpl = document.getElementById('release-template');
+  const tpl     = document.getElementById('release-template');
 
   if (tpl && bodyBox) {
-    bodyBox.innerHTML = tpl.innerHTML.trim();
+    if ('content' in tpl) {
+      bodyBox.replaceChildren(tpl.content.cloneNode(true));
+    } else {
+      bodyBox.innerHTML = tpl.innerHTML.trim();
+    }
   }
 
   function openModal(e){
-    if(e) e.preventDefault(); // 阻止 href="#" 回到顶部
+    if(e) e.preventDefault();
     overlay.style.display = 'block';
     modal.style.display   = 'block';
     document.body.style.overflow = 'hidden';
@@ -127,7 +130,6 @@ format:
   function onEsc(e){ if(e.key === 'Escape') closeModal(); }
 
   openBtns.forEach(btn => btn.addEventListener('click', openModal));
-
   overlay.addEventListener('click', closeModal);
   closeBtn.addEventListener('click', closeModal);
   okBtn.addEventListener('click', closeModal);
