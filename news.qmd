@@ -37,7 +37,7 @@ format:
       failData.lockedUntil = now + lockMinutes * 60 * 1000;
       localStorage.setItem("news_fail", JSON.stringify(failData));
       document.addEventListener("DOMContentLoaded", function() {
-        document.body.innerHTML = "<h2 style='text-align:center;margin-top:20%;color:#c00;font-family:sans-serif;'>⛔ Access Denied<br>Too many failed attempts.<br>Please try again in "+lockMinutes+" minutes.</h2>";
+        document.body.innerHTML = "<h2 style='text-align:center;margin-top:20%;color:#c00;font-family:sans-serif;'>⛔ Access Denied ⛔<br>This page is currently under development and testing<br>Please try again in "+lockMinutes+" minutes.</h2>";
       });
     }
   }
@@ -48,21 +48,75 @@ format:
 /* ===== News page-only minimal styles ===== */
 .news-wrap{max-width:980px;margin:0 auto;padding:0 12px;}
 .news-intro{margin:22px auto 8px;font-size:1.05rem;line-height:1.8;color:#333;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;}
-
 .news-badge{display:inline-block;font-size:.78rem;padding:.2em .6em;border-radius:999px;background:#f5f9ff;border:1px solid #d8e2f1;color:#0b3d91;}
 
-/* Timeline */
-.news-tl{--datew:120px;--line:#e6edf5;--dot:#0d6efd;}
-.news-tl-year{font-weight:800;font-size:1.2rem;color:#2c3e50;margin:28px 0 10px;}
-.news-tl-list{display:grid;grid-template-columns:var(--datew) 24px 1fr;row-gap:16px;position:relative;}
-.news-tl-list::before{content:"";grid-column:2;grid-row:1/-1;width:2px;background:var(--line);justify-self:center;}
-.news-tl-item{display:contents;}
-.news-tl-date{grid-column:1;align-self:start;justify-self:end;text-align:right;padding-right:12px;font-weight:700;color:var(--dot);font-size:.95rem;}
-.news-tl-dot{grid-column:2;width:12px;height:12px;border-radius:50%;border:3px solid var(--dot);background:#fff;justify-self:center;align-self:center;box-shadow:0 0 0 3px rgba(13,110,253,.08);}
-.news-tl-card{grid-column:3;}
+/* ===== Timeline (合并后的最终版本：线更明显、圆点对齐且不被覆盖) ===== */
+.news-tl{ --datew:120px; --line:#cbd5e1; --dot:#0d6efd; }
 
-@media (max-width:740px){.news-tl{--datew:98px;}}
-@media (max-width:480px){.news-tl{--datew:86px;}.news-tl-date{font-size:.9rem;}}
+.news-tl-year{
+  font-weight:800; font-size:1.2rem; color:#2c3e50; margin:28px 0 10px;
+}
+
+.news-tl-list{
+  display:grid;
+  grid-template-columns: var(--datew) 28px 1fr; /* 中列更宽以容纳更粗竖线 */
+  row-gap:16px;
+  position:relative;
+}
+
+.news-tl-list::before{
+  content:"";
+  grid-column:2; grid-row:1 / -1;
+  width:3px; /* 更粗 */
+  background:linear-gradient(
+    180deg,
+    rgba(13,110,253,.18) 0%,
+    rgba(13,110,253,.28) 20%,
+    rgba(13,110,253,.28) 80%,
+    rgba(13,110,253,.18) 100%
+  );
+  justify-self:center;
+  border-radius:2px;
+  box-shadow:0 0 0 1px rgba(13,110,253,.08);
+}
+
+.news-tl-item{ display:contents; }
+
+.news-tl-date{
+  grid-column:1;
+  align-self:start;
+  justify-self:end;
+  text-align:right;
+  padding-right:12px;
+  font-weight:700;
+  color:var(--dot);
+  font-size:.95rem;
+}
+
+.news-tl-dot{
+  grid-column:2;
+  width:14px; height:14px;
+  border-radius:50%;
+  border:3px solid var(--dot);
+  background:#fff;
+  justify-self:center;
+  align-self:start;      /* 顶部对齐 */
+  margin-top:.6rem;      /* 与卡片标题行对齐；可微调 .5~.7rem */
+  box-shadow:0 0 0 3px rgba(13,110,253,.12);
+  transform:translateZ(0);
+}
+
+.news-tl-card{ grid-column:3; }
+
+@media (max-width:740px){
+  .news-tl{ --datew:98px; }
+  .news-tl-list{ grid-template-columns: var(--datew) 26px 1fr; }
+}
+@media (max-width:480px){
+  .news-tl{ --datew:86px; }
+  .news-tl-date{ font-size:.9rem; }
+  .news-tl-list{ grid-template-columns: var(--datew) 24px 1fr; }
+}
 </style>
 
 <div class="news-wrap">
@@ -73,91 +127,92 @@ format:
     Meanwhile, it highlights personal milestones, professional achievements, and project updates — a living record of progress and outcomes.
   </p>
 
-  <!-- Top section: pinned + most recent（复用全站 .project-card / .btn） -->
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0 18px;">
-    <div class="project-card">
-      <div style="margin-bottom:.35rem;">
-        <span class="news-badge">Pinned</span> <span class="news-badge">Award</span>
-      </div>
-      <h3 style="margin:0 0 .35rem;">Won 3rd Place — SAP Integration Naming Contest</h3>
-      <p style="margin:.25rem 0 .65rem;color:#666;">Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.</p>
-      <a class="btn" href="#sap-award">Jump to entry →</a>
-    </div>
-
-    <div class="project-card">
-      <div style="margin-bottom:.35rem;">
-        <span class="news-badge">Most Recent</span> <span class="news-badge">Design</span>
-      </div>
-      <h3 style="margin:0 0 .35rem;">Profile Section Revamp</h3>
-      <p style="margin:.25rem 0 .65rem;color:#666;">Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.</p>
-      <a class="btn" href="#profile-revamp">Jump to entry →</a>
-    </div>
+::: {.columns}
+::: {.column width="50%"}
+<div class="project-card">
+  <div style="margin-bottom:.35rem;">
+    <span class="news-badge">Pinned</span> <span class="news-badge">Award</span>
   </div>
+  <h3 style="margin:0 0 .35rem;">Won 3rd Place — SAP Integration Naming Contest</h3>
+  <p style="margin:.25rem 0 .65rem;color:#666;">Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.</p>
+  <a class="btn" href="#sap-award">Jump to entry →</a>
+</div>
+:::
 
-```{=html}
-  <!-- ===== Timeline ===== -->
-  <div class="news-tl" aria-label="Timeline of news and updates">
+::: {.column width="50%"}
+<div class="project-card">
+  <div style="margin-bottom:.35rem;">
+    <span class="news-badge">Most Recent</span> <span class="news-badge">Design</span>
+  </div>
+  <h3 style="margin:0 0 .35rem;">Profile Section Revamp</h3>
+  <p style="margin:.25rem 0 .65rem;color:#666;">Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.</p>
+  <a class="btn" href="#profile-revamp">Jump to entry →</a>
+</div>
+:::
+:::
 
-    <!-- 2025 -->
-    <div class="news-tl-year">2025</div>
-    <div class="news-tl-list">
+<!-- ===== Timeline ===== -->
+<div class="news-tl" aria-label="Timeline of news and updates">
 
-      <div class="news-tl-item" id="sap-award">
-        <div class="news-tl-date">Aug 27, 2025</div>
-        <div class="news-tl-dot"></div>
-        <div class="news-tl-card project-card">
-          <strong>Won 3rd Place — SAP Integration Naming Contest</strong>
-          <p style="margin:.35rem 0 .6rem;color:#667;">
-            Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.
-          </p>
-          <a class="btn" href="#sap-award">Permalink →</a>
-        </div>
+  <!-- 2025 -->
+  <div class="news-tl-year">2025</div>
+  <div class="news-tl-list">
+
+    <div class="news-tl-item" id="sap-award">
+      <div class="news-tl-date">Aug 27, 2025</div>
+      <div class="news-tl-dot"></div>
+      <div class="news-tl-card project-card">
+        <strong>Won 3rd Place — SAP Integration Naming Contest</strong>
+        <p style="margin:.35rem 0 .6rem;color:#667;">
+          Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.
+        </p>
+        <a class="btn" href="#sap-award">Permalink →</a>
       </div>
-
-      <div class="news-tl-item" id="profile-revamp">
-        <div class="news-tl-date">Aug 20, 2025</div>
-        <div class="news-tl-dot"></div>
-        <div class="news-tl-card project-card">
-          <strong>Profile Section Revamp</strong>
-          <p style="margin:.35rem 0 .6rem;color:#667;">
-            Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.
-          </p>
-          <span class="news-badge">Design</span>
-        </div>
-      </div>
-
-      <div class="news-tl-item" id="quick-search">
-        <div class="news-tl-date">Aug 15, 2025</div>
-        <div class="news-tl-dot"></div>
-        <div class="news-tl-card project-card">
-          <strong>Floating Search & Back-to-Top</strong>
-          <p style="margin:.35rem 0 .6rem;color:#667;">
-            Quick search (<kbd>⌘/Ctrl</kbd> + <kbd>K</kbd>) and a floating back-to-top button for long pages.
-          </p>
-          <span class="news-badge">UX</span>
-        </div>
-      </div>
-
     </div>
 
-    <!-- 2024 -->
-    <div class="news-tl-year">2024</div>
-    <div class="news-tl-list">
-      <div class="news-tl-item" id="gallery-launch">
-        <div class="news-tl-date">Dec 10, 2024</div>
-        <div class="news-tl-dot"></div>
-        <div class="news-tl-card project-card">
-          <strong>Launched Data Project Gallery</strong>
-          <p style="margin:.35rem 0 .6rem;color:#667;">
-            Centralized ML dashboards, datathon work, and experiment logs with consistent previews.
-          </p>
-          <a class="btn" href="https://lywww88.github.io/projects/" target="_blank">Open Projects →</a>
-        </div>
+    <div class="news-tl-item" id="profile-revamp">
+      <div class="news-tl-date">Aug 20, 2025</div>
+      <div class="news-tl-dot"></div>
+      <div class="news-tl-card project-card">
+        <strong>Profile Section Revamp</strong>
+        <p style="margin:.35rem 0 .6rem;color:#667;">
+          Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.
+        </p>
+        <span class="news-badge">Design</span>
+      </div>
+    </div>
+
+    <div class="news-tl-item" id="quick-search">
+      <div class="news-tl-date">Aug 15, 2025</div>
+      <div class="news-tl-dot"></div>
+      <div class="news-tl-card project-card">
+        <strong>Floating Search & Back-to-Top</strong>
+        <p style="margin:.35rem 0 .6rem;color:#667;">
+          Quick search (<kbd>⌘/Ctrl</kbd> + <kbd>K</kbd>) and a floating back-to-top button for long pages.
+        </p>
+        <span class="news-badge">UX</span>
       </div>
     </div>
 
   </div>
-```
+
+  <!-- 2024 -->
+  <div class="news-tl-year">2024</div>
+  <div class="news-tl-list">
+    <div class="news-tl-item" id="gallery-launch">
+      <div class="news-tl-date">Dec 10, 2024</div>
+      <div class="news-tl-dot"></div>
+      <div class="news-tl-card project-card">
+        <strong>Launched Data Project Gallery</strong>
+        <p style="margin:.35rem 0 .6rem;color:#667;">
+          Centralized ML dashboards, datathon work, and experiment logs with consistent previews.
+        </p>
+        <a class="btn" href="https://lywww88.github.io/projects/" target="_blank">Open Projects →</a>
+      </div>
+    </div>
+  </div>
+
+</div>
 
 </div> <!-- /.news-wrap -->
 
