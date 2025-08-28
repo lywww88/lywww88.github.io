@@ -198,12 +198,12 @@
   font-size: 2.3em;
   font-weight: 800;
 
-  /* 初始蓝色渐变滚动 */
+  /* Default: scrolling blue gradient text */
   background: linear-gradient(
     270deg,
-    #0d6efd,   /* 深蓝 */
-    #1e90ff,   /* 亮蓝 */
-    #00bfff,   /* 青蓝 */
+    #0d6efd,   /* Deep Blue */
+    #1e90ff,   /* Bright Blue */
+    #00bfff,   /* Cyan Blue */
     #0d6efd
   );
   background-size: 300% auto;
@@ -211,29 +211,71 @@
   -webkit-text-fill-color: transparent;
   animation: gradientScroll 6s linear infinite;
 
-  transition: all .5s ease; /* 过渡 */
+  transition: all .4s ease;
   display: inline-block;
 }
 
 .name:hover {
-  /* 悬停时 → 黑色 + 蓝色光圈 */
+  /* Hover: solid black text */
   background: none;
   -webkit-text-fill-color: #000;
   color: #000;
-  animation: none;
 
-  text-shadow:
-    0 0 6px rgba(30,144,255,.45),
-    0 0 14px rgba(0,191,255,.35),
-    0 0 22px rgba(13,110,253,.35);
+  /* Replace gradientScroll with glowing animation */
+  animation: textGlow 3s linear infinite;
 
   transform: scale(1.05);
 }
 
-/* 渐变滚动动画 */
+/* Blue gradient scroll animation (default) */
 @keyframes gradientScroll {
   0%   { background-position: 0% center; }
   100% { background-position: 300% center; }
+}
+
+/* Flowing glowing effect for hover */
+@keyframes textGlow {
+  0% {
+    text-shadow:
+      0 0 6px  rgba(13,110,253,.45),
+      0 0 14px rgba(30,144,255,.35),
+      0 0 22px rgba(0,191,255,.30);
+  }
+  25% {
+    text-shadow:
+      0 0 8px  rgba(0,191,255,.50),
+      0 0 18px rgba(30,144,255,.40),
+      0 0 28px rgba(13,110,253,.35);
+  }
+  50% {
+    text-shadow:
+      0 0 10px rgba(30,144,255,.55),
+      0 0 22px rgba(13,110,253,.45),
+      0 0 34px rgba(0,191,255,.38);
+  }
+  75% {
+    text-shadow:
+      0 0 8px  rgba(13,110,253,.50),
+      0 0 18px rgba(0,191,255,.42),
+      0 0 28px rgba(30,144,255,.36);
+  }
+  100% {
+    text-shadow:
+      0 0 6px  rgba(13,110,253,.45),
+      0 0 14px rgba(30,144,255,.35),
+      0 0 22px rgba(0,191,255,.30);
+  }
+}
+
+/* Accessibility: fallback static glow for reduced motion users */
+@media (prefers-reduced-motion: reduce) {
+  .name:hover {
+    animation: none;
+    text-shadow:
+      0 0 8px  rgba(13,110,253,.45),
+      0 0 18px rgba(30,144,255,.35),
+      0 0 26px rgba(0,191,255,.30);
+  }
 }
 
 /* === Motto === */
@@ -244,7 +286,7 @@
   transition: color .3s ease;
 }
 .motto:hover {
-  color: #111;                
+  color: #111; /* Darker on hover */
 }
 
 .motto::before {
