@@ -193,7 +193,6 @@
 }
 
 /* === Name === */
-/* 你的原样式 */
 .name{
   position:relative;
   display:inline-block;
@@ -220,29 +219,6 @@
 @keyframes gradientScroll{
   0%{ background-position:0% center; }
   100%{ background-position:300% center; }
-}
-
-/* 点击后的“金色模式” */
-.name.clicked{
-  transform:scale(1.04);
-  background:linear-gradient(270deg,#ffd700,#ffc107,#ffea00,#ffd700);
-  background-size:320% auto;
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  animation:goldScroll 3s linear infinite;
-}
-
-/* 金色滚动（独立于蓝/彩色） */
-@keyframes goldScroll{
-  0%{ background-position:0% center; }
-  100%{ background-position:320% center; }
-}
-
-/* 确保点击时金色优先于 hover 彩色 */
-.name.clicked:hover{
-  background:inherit;
-  animation:inherit;
-  transform:scale(1.04);
 }
 
 /* === Motto === */
