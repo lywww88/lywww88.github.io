@@ -193,6 +193,7 @@
 }
 
 /* === Name === */
+/* 你的原样式 */
 .name{
   position:relative;
   display:inline-block;
@@ -204,46 +205,44 @@
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
   animation:gradientScroll 6s linear infinite;
-  transition:transform .2s ease, filter .2s ease;
+  transition:transform .3s ease;
   z-index:0;
 }
 .name::after{ content:none; }
-
 .name:hover{
+  transform:scale(1.03);
   background:linear-gradient(270deg,#ff6b6b,#ffd93d,#6bcbff,#8ef6e4,#b983ff,#ff6b6b);
   background-size:350% auto;
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
   animation:gradientScroll 4s linear infinite;
 }
-
-.name:active{
-  transform:scale(1.1);
-  filter:brightness(1.25);
-}
-.name:active::after{
-  content:attr(data-text);
-  position:absolute;
-  inset:0;
-  z-index:-1;
-  pointer-events:none;
-  color:rgba(0,0,0,0.01);
-  text-shadow:
-    0 0 8px rgba(13,110,253,.85),
-    0 0 16px rgba(30,144,255,.65),
-    0 0 28px rgba(0,191,255,.55);
-  opacity:1;
-  animation:flash .5s ease;
-}
-
 @keyframes gradientScroll{
   0%{ background-position:0% center; }
   100%{ background-position:300% center; }
 }
-@keyframes flash{
-  0%{ opacity:0; }
-  50%{ opacity:1; }
-  100%{ opacity:0; }
+
+/* 点击后的“金色模式” */
+.name.clicked{
+  transform:scale(1.04);
+  background:linear-gradient(270deg,#ffd700,#ffc107,#ffea00,#ffd700);
+  background-size:320% auto;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation:goldScroll 3s linear infinite;
+}
+
+/* 金色滚动（独立于蓝/彩色） */
+@keyframes goldScroll{
+  0%{ background-position:0% center; }
+  100%{ background-position:320% center; }
+}
+
+/* 确保点击时金色优先于 hover 彩色 */
+.name.clicked:hover{
+  background:inherit;
+  animation:inherit;
+  transform:scale(1.04);
 }
 
 /* === Motto === */
