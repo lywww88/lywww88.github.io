@@ -219,37 +219,34 @@ ul.task-list li input[type="checkbox"] {
 
 <script>
 (function() {
-  var correct = "test123";  
-  var maxTries = 3;
-  var lockMinutes = 10;      
+  var correct = "test123"; 
+  var maxTries = 1;
+  var lockMinutes = 10;
   var now = Date.now();
 
-  // 从 localStorage 取出之前的失败记录
   var failData = JSON.parse(localStorage.getItem("news_fail")) || {count:0, lockedUntil:0};
 
   if (now < failData.lockedUntil) {
-    document.write("<h2 style='text-align:center;margin-top:20%;color:#c00;font-family:sans-serif;'>⛔ Access Denied<br>Too many failed attempts.<br>Please try again later.</h2>");
-    document.close();
+    document.addEventListener("DOMContentLoaded", function() {
+      document.body.innerHTML = "<h2 style='text-align:center;margin-top:20%;color:#c00;font-family:sans-serif;'>⛔ Access Denied ⛔<br>This page is currently under development and testing<br>Please try again later.</h2>";
+    });
   } else {
-    failData.count = 0; 
+    failData.count = 0;
     localStorage.setItem("news_fail", JSON.stringify(failData));
 
     var ok = false;
     for (var i = 0; i < maxTries; i++) {
       var input = prompt("🔒 This page is under testing. Please enter password ("+(maxTries - i)+" attempts left):");
-      if (input === correct) {
-        ok = true;
-        break;
-      } else {
-        failData.count++;
-      }
+      if (input === correct) { ok = true; break; }
+      else { failData.count++; }
     }
 
     if (!ok) {
       failData.lockedUntil = now + lockMinutes * 60 * 1000;
       localStorage.setItem("news_fail", JSON.stringify(failData));
-      document.write("<h2 style='text-align:center;margin-top:20%;color:#c00;font-family:sans-serif;'>⛔ Access Denied<br>Too many failed attempts.<br>Please try again in "+lockMinutes+" minutes.</h2>");
-      document.close();
+      document.addEventListener("DOMContentLoaded", function() {
+        document.body.innerHTML = "<h2 style='text-align:center;margin-top:20%;color:#c00;font-family:sans-serif;'>⛔ Access Denied ⛔<br>This page is currently under development and testing<br>Please try again in "+lockMinutes+" minutes.</h2>";
+      });
     }
   }
 })();
@@ -258,21 +255,75 @@ ul.task-list li input[type="checkbox"] {
 /* ===== News page-only minimal styles ===== */
 .news-wrap{max-width:980px;margin:0 auto;padding:0 12px;}
 .news-intro{margin:22px auto 8px;font-size:1.05rem;line-height:1.8;color:#333;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;}
-
 .news-badge{display:inline-block;font-size:.78rem;padding:.2em .6em;border-radius:999px;background:#f5f9ff;border:1px solid #d8e2f1;color:#0b3d91;}
 
-/* Timeline */
-.news-tl{--datew:120px;--line:#e6edf5;--dot:#0d6efd;}
-.news-tl-year{font-weight:800;font-size:1.2rem;color:#2c3e50;margin:28px 0 10px;}
-.news-tl-list{display:grid;grid-template-columns:var(--datew) 24px 1fr;row-gap:16px;position:relative;}
-.news-tl-list::before{content:"";grid-column:2;grid-row:1/-1;width:2px;background:var(--line);justify-self:center;}
-.news-tl-item{display:contents;}
-.news-tl-date{grid-column:1;align-self:start;justify-self:end;text-align:right;padding-right:12px;font-weight:700;color:var(--dot);font-size:.95rem;}
-.news-tl-dot{grid-column:2;width:12px;height:12px;border-radius:50%;border:3px solid var(--dot);background:#fff;justify-self:center;align-self:center;box-shadow:0 0 0 3px rgba(13,110,253,.08);}
-.news-tl-card{grid-column:3;}
+/* ===== Timeline (合并后的最终版本：线更明显、圆点对齐且不被覆盖) ===== */
+.news-tl{ --datew:120px; --line:#cbd5e1; --dot:#0d6efd; }
 
-@media (max-width:740px){.news-tl{--datew:98px;}}
-@media (max-width:480px){.news-tl{--datew:86px;}.news-tl-date{font-size:.9rem;}}
+.news-tl-year{
+  font-weight:800; font-size:1.2rem; color:#2c3e50; margin:28px 0 10px;
+}
+
+.news-tl-list{
+  display:grid;
+  grid-template-columns: var(--datew) 28px 1fr; /* 中列更宽以容纳更粗竖线 */
+  row-gap:16px;
+  position:relative;
+}
+
+.news-tl-list::before{
+  content:"";
+  grid-column:2; grid-row:1 / -1;
+  width:3px; /* 更粗 */
+  background:linear-gradient(
+    180deg,
+    rgba(13,110,253,.18) 0%,
+    rgba(13,110,253,.28) 20%,
+    rgba(13,110,253,.28) 80%,
+    rgba(13,110,253,.18) 100%
+  );
+  justify-self:center;
+  border-radius:2px;
+  box-shadow:0 0 0 1px rgba(13,110,253,.08);
+}
+
+.news-tl-item{ display:contents; }
+
+.news-tl-date{
+  grid-column:1;
+  align-self:start;
+  justify-self:end;
+  text-align:right;
+  padding-right:12px;
+  font-weight:700;
+  color:var(--dot);
+  font-size:.95rem;
+}
+
+.news-tl-dot{
+  grid-column:2;
+  width:14px; height:14px;
+  border-radius:50%;
+  border:3px solid var(--dot);
+  background:#fff;
+  justify-self:center;
+  align-self:start;      /* 顶部对齐 */
+  margin-top:.6rem;      /* 与卡片标题行对齐；可微调 .5~.7rem */
+  box-shadow:0 0 0 3px rgba(13,110,253,.12);
+  transform:translateZ(0);
+}
+
+.news-tl-card{ grid-column:3; }
+
+@media (max-width:740px){
+  .news-tl{ --datew:98px; }
+  .news-tl-list{ grid-template-columns: var(--datew) 26px 1fr; }
+}
+@media (max-width:480px){
+  .news-tl{ --datew:86px; }
+  .news-tl-date{ font-size:.9rem; }
+  .news-tl-list{ grid-template-columns: var(--datew) 24px 1fr; }
+}
 </style>
 <div class="news-wrap">
 <h2 style="text-align:center;" class="anchored">
@@ -282,88 +333,96 @@ ul.task-list li input[type="checkbox"] {
 🚧 This page is currently <strong>under development and testing</strong>, so its layout, design, and content may evolve over time.<br>
 Meanwhile, it highlights personal milestones, professional achievements, and project updates — a living record of progress and outcomes.
 </p>
-<!-- Top section: pinned + most recent（复用全站 .project-card / .btn） -->
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0 18px;">
-<pre><code>&lt;div class="project-card"&gt;
-  &lt;div style="margin-bottom:.35rem;"&gt;
-    &lt;span class="news-badge"&gt;Pinned&lt;/span&gt; &lt;span class="news-badge"&gt;Award&lt;/span&gt;
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="project-card">
+<div style="margin-bottom:.35rem;">
+<pre><code>&lt;span class="news-badge"&gt;Pinned&lt;/span&gt; &lt;span class="news-badge"&gt;Award&lt;/span&gt;</code></pre>
+</div>
+<h3 style="margin:0 0 .35rem;" class="anchored">
+Won 3rd Place — SAP Integration Naming Contest
+</h3>
+<p style="margin:.25rem 0 .65rem;color:#666;">
+Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.
+</p>
+<p><a class="btn" href="#sap-award">Jump to entry →</a></p>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="project-card">
+<div style="margin-bottom:.35rem;">
+<pre><code>&lt;span class="news-badge"&gt;Most Recent&lt;/span&gt; &lt;span class="news-badge"&gt;Design&lt;/span&gt;</code></pre>
+</div>
+<h3 style="margin:0 0 .35rem;" class="anchored">
+Profile Section Revamp
+</h3>
+<p style="margin:.25rem 0 .65rem;color:#666;">
+Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.
+</p>
+<p><a class="btn" href="#profile-revamp">Jump to entry →</a></p>
+</div>
+</div>
+</div>
+<!-- ===== Timeline ===== -->
+<div class="news-tl" aria-label="Timeline of news and updates">
+<!-- 2025 -->
+<div class="news-tl-year">
+2025
+</div>
+<div class="news-tl-list">
+<pre><code>&lt;div class="news-tl-item" id="sap-award"&gt;
+  &lt;div class="news-tl-date"&gt;Aug 27, 2025&lt;/div&gt;
+  &lt;div class="news-tl-dot"&gt;&lt;/div&gt;
+  &lt;div class="news-tl-card project-card"&gt;
+    &lt;strong&gt;Won 3rd Place — SAP Integration Naming Contest&lt;/strong&gt;
+    &lt;p style="margin:.35rem 0 .6rem;color:#667;"&gt;
+      Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.
+    &lt;/p&gt;
+    &lt;a class="btn" href="#sap-award"&gt;Permalink →&lt;/a&gt;
   &lt;/div&gt;
-  &lt;h3 style="margin:0 0 .35rem;"&gt;Won 3rd Place — SAP Integration Naming Contest&lt;/h3&gt;
-  &lt;p style="margin:.25rem 0 .65rem;color:#666;"&gt;Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.&lt;/p&gt;
-  &lt;a class="btn" href="#sap-award"&gt;Jump to entry →&lt;/a&gt;
 &lt;/div&gt;
 
-&lt;div class="project-card"&gt;
-  &lt;div style="margin-bottom:.35rem;"&gt;
-    &lt;span class="news-badge"&gt;Most Recent&lt;/span&gt; &lt;span class="news-badge"&gt;Design&lt;/span&gt;
+&lt;div class="news-tl-item" id="profile-revamp"&gt;
+  &lt;div class="news-tl-date"&gt;Aug 20, 2025&lt;/div&gt;
+  &lt;div class="news-tl-dot"&gt;&lt;/div&gt;
+  &lt;div class="news-tl-card project-card"&gt;
+    &lt;strong&gt;Profile Section Revamp&lt;/strong&gt;
+    &lt;p style="margin:.35rem 0 .6rem;color:#667;"&gt;
+      Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.
+    &lt;/p&gt;
+    &lt;span class="news-badge"&gt;Design&lt;/span&gt;
   &lt;/div&gt;
-  &lt;h3 style="margin:0 0 .35rem;"&gt;Profile Section Revamp&lt;/h3&gt;
-  &lt;p style="margin:.25rem 0 .65rem;color:#666;"&gt;Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.&lt;/p&gt;
-  &lt;a class="btn" href="#profile-revamp"&gt;Jump to entry →&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class="news-tl-item" id="quick-search"&gt;
+  &lt;div class="news-tl-date"&gt;Aug 15, 2025&lt;/div&gt;
+  &lt;div class="news-tl-dot"&gt;&lt;/div&gt;
+  &lt;div class="news-tl-card project-card"&gt;
+    &lt;strong&gt;Floating Search &amp; Back-to-Top&lt;/strong&gt;
+    &lt;p style="margin:.35rem 0 .6rem;color:#667;"&gt;
+      Quick search (&lt;kbd&gt;⌘/Ctrl&lt;/kbd&gt; + &lt;kbd&gt;K&lt;/kbd&gt;) and a floating back-to-top button for long pages.
+    &lt;/p&gt;
+    &lt;span class="news-badge"&gt;UX&lt;/span&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</code></pre>
 </div>
-  <!-- ===== Timeline ===== -->
-  <div class="news-tl" aria-label="Timeline of news and updates">
-
-    <!-- 2025 -->
-    <div class="news-tl-year">2025</div>
-    <div class="news-tl-list">
-
-      <div class="news-tl-item" id="sap-award">
-        <div class="news-tl-date">Aug 27, 2025</div>
-        <div class="news-tl-dot"></div>
-        <div class="news-tl-card project-card">
-          <strong>Won 3rd Place — SAP Integration Naming Contest</strong>
-          <p style="margin:.35rem 0 .6rem;color:#667;">
-            Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.
-          </p>
-          <a class="btn" href="#sap-award">Permalink →</a>
-        </div>
-      </div>
-
-      <div class="news-tl-item" id="profile-revamp">
-        <div class="news-tl-date">Aug 20, 2025</div>
-        <div class="news-tl-dot"></div>
-        <div class="news-tl-card project-card">
-          <strong>Profile Section Revamp</strong>
-          <p style="margin:.35rem 0 .6rem;color:#667;">
-            Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.
-          </p>
-          <span class="news-badge">Design</span>
-        </div>
-      </div>
-
-      <div class="news-tl-item" id="quick-search">
-        <div class="news-tl-date">Aug 15, 2025</div>
-        <div class="news-tl-dot"></div>
-        <div class="news-tl-card project-card">
-          <strong>Floating Search &amp; Back-to-Top</strong>
-          <p style="margin:.35rem 0 .6rem;color:#667;">
-            Quick search (<kbd>⌘/Ctrl</kbd> + <kbd>K</kbd>) and a floating back-to-top button for long pages.
-          </p>
-          <span class="news-badge">UX</span>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- 2024 -->
-    <div class="news-tl-year">2024</div>
-    <div class="news-tl-list">
-      <div class="news-tl-item" id="gallery-launch">
-        <div class="news-tl-date">Dec 10, 2024</div>
-        <div class="news-tl-dot"></div>
-        <div class="news-tl-card project-card">
-          <strong>Launched Data Project Gallery</strong>
-          <p style="margin:.35rem 0 .6rem;color:#667;">
-            Centralized ML dashboards, datathon work, and experiment logs with consistent previews.
-          </p>
-          <a class="btn" href="https://lywww88.github.io/projects/" target="_blank">Open Projects →</a>
-        </div>
-      </div>
-    </div>
-
-  </div>
+<!-- 2024 -->
+<div class="news-tl-year">
+2024
+</div>
+<div class="news-tl-list">
+<pre><code>&lt;div class="news-tl-item" id="gallery-launch"&gt;
+  &lt;div class="news-tl-date"&gt;Dec 10, 2024&lt;/div&gt;
+  &lt;div class="news-tl-dot"&gt;&lt;/div&gt;
+  &lt;div class="news-tl-card project-card"&gt;
+    &lt;strong&gt;Launched Data Project Gallery&lt;/strong&gt;
+    &lt;p style="margin:.35rem 0 .6rem;color:#667;"&gt;
+      Centralized ML dashboards, datathon work, and experiment logs with consistent previews.
+    &lt;/p&gt;
+    &lt;a class="btn" href="https://lywww88.github.io/projects/" target="_blank"&gt;Open Projects →&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
 </div>
 <p><!-- /.news-wrap --></p>
 <div aria-hidden="true" style="border-top: 1px solid #ccc; margin: 1.5em 0;">
