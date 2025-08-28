@@ -291,8 +291,13 @@
   border-radius:50%;
   z-index:-1;
   opacity:.35;
-  transition:opacity .4s ease;
-  background:conic-gradient(#0d6efd,#1e90ff,#00bfff,#0d6efd);
+  transition:opacity .4s ease, background .4s ease, animation-duration .4s ease;
+  background:conic-gradient(
+    #0d6efd,
+    #1e90ff,
+    #00bfff,
+    #0d6efd
+  );
   filter:blur(14px) saturate(1.2);
   transform-origin:50% 50%;
   animation:avatarSpin 16s linear infinite;
@@ -300,9 +305,19 @@
 }
 
 .avatar-wrapper:hover .avatar{ transform:scale(1.08); }
+
 .avatar-wrapper:hover::after{
   opacity:.9;
-  animation-duration:6s;
+  background:conic-gradient(
+    #ffd700,   /* 金色 */
+    #0d6efd,   /* 深蓝 */
+    #ffc107,   /* 金黄 */
+    #1e90ff,   /* 亮蓝 */
+    #ffdf6e,   /* 浅金 */
+    #00bfff,   /* 青蓝 */
+    #ffd700    /* 金色收尾 */
+  );
+  animation-duration:6s; /* hover 时加快旋转 */
 }
 
 @keyframes avatarSpin{
