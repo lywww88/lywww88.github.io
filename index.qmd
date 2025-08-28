@@ -7,7 +7,7 @@ format:
 ---
 
 <div class="announcement-bar">
-📢 <strong> News:</strong> Won <em>3rd Place</em> in SAP Integration Naming Contest! 
+📢 <strong> News site is under development! Coming soon!</strong> 
 <a href="news.html" target="_self">Read more →</a>
 </div>
 
