@@ -204,18 +204,10 @@
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
   animation:gradientScroll 6s linear infinite;
-  transition:all .5s ease;
+  transition:transform .3s ease;
   z-index:0;
 }
-.name::after{ content:none; }
-.name:hover{
-  background:none;
-  -webkit-text-fill-color:#000;
-  color:#000;
-  animation:none;
-  transform:scale(1.05);
-}
-.name:hover::after{
+.name::after{
   content:attr(data-text);
   position:absolute;
   inset:0;
@@ -227,8 +219,20 @@
     0 0 12px rgba(30,144,255,.45),
     0 0 20px rgba(0,191,255,.35),
     0 0 32px rgba(13,110,253,.30);
+  opacity:0;
+  transition:opacity .25s ease, filter .25s ease;
+}
+.name:hover{
+  transform:scale(1.03);
+  background:linear-gradient(270deg,#ff6b6b,#ffd93d,#6bcBff,#8ef6e4,#b983ff,#ff6b6b);
+  background-size:350% auto;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation:gradientScroll 4s linear infinite;
+}
+.name:hover::after{
   opacity:1;
-  transition:filter .3s ease, opacity .3s ease;
+  filter:saturate(1.2) brightness(1.1);
 }
 @keyframes gradientScroll{
   0%{ background-position:0% center; }
