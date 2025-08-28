@@ -5,7 +5,7 @@ format:
   html:
     title-block: false
     page-layout: full
-    toc: false
+    allow-html: true
 ---
 
 <style>
@@ -27,7 +27,7 @@ format:
   color: #2c3e50;
 }
 
-/* Buttons (如果全站已有 .btn 可删除此段) */
+/* Buttons */
 .btn {
   display:inline-flex; align-items:center; gap:.45em;
   padding:.55em .9em; border-radius:10px; border:1px solid #d8e2f1;
@@ -90,12 +90,9 @@ format:
   .tl-card{ padding: .85em .9em; }
   .tl-title{ font-size:1rem; }
 }
-
-/* 高亮最近一条（可选） */
 .tl-item.is-new::before{ border-color:#ffc107; box-shadow:0 0 0 3px rgba(255,193,7,.18); }
 .tl-item.is-new .tl-date{ color:#b78100; }
 
-/* Connect strip */
 .connect-container {
   display: flex; flex-wrap: wrap; gap: 1em; align-items: center; justify-content:center;
   max-width: 900px; margin: 2em auto;
@@ -110,6 +107,7 @@ format:
   📢 Most recent: <strong>Won 3rd Place in the SAP Integration Naming Contest</strong>.
 </div>
 
+```{=html}
 <div class="timeline" aria-label="Timeline of news and updates">
 
   <!-- 2025 -->
@@ -120,7 +118,7 @@ format:
       <div class="tl-card">
         <h4 class="tl-title">Won 3rd Place — SAP Integration Naming Contest</h4>
         <p class="tl-desc">
-          Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit in the naming strategy.
+          Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.
         </p>
         <div class="tl-actions">
           <span class="tl-badge">Award</span>
@@ -134,11 +132,9 @@ format:
       <div class="tl-card">
         <h4 class="tl-title">Profile Section Revamp</h4>
         <p class="tl-desc">
-          Introduced animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.
+          Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.
         </p>
-        <div class="tl-actions">
-          <span class="tl-badge">Design</span>
-        </div>
+        <div class="tl-actions"><span class="tl-badge">Design</span></div>
       </div>
     </article>
 
@@ -147,11 +143,9 @@ format:
       <div class="tl-card">
         <h4 class="tl-title">Floating Search & Back-to-Top</h4>
         <p class="tl-desc">
-          Added quick-search (<kbd>⌘/Ctrl</kbd> + <kbd>K</kbd>) and a subtle floating back-to-top button for long pages.
+          Quick search (<kbd>⌘/Ctrl</kbd>+<kbd>K</kbd>) and a floating back-to-top button for long pages.
         </p>
-        <div class="tl-actions">
-          <span class="tl-badge">UX</span>
-        </div>
+        <div class="tl-actions"><span class="tl-badge">UX</span></div>
       </div>
     </article>
   </div>
@@ -164,7 +158,7 @@ format:
       <div class="tl-card">
         <h4 class="tl-title">Launched Data Project Gallery</h4>
         <p class="tl-desc">
-          Centralized ML dashboards, datathon work, and experiment logs with consistent previews and links.
+          Centralized ML dashboards, datathon work, and experiment logs with consistent previews.
         </p>
         <div class="tl-actions">
           <span class="tl-badge">Launch</span>
@@ -175,6 +169,7 @@ format:
   </div>
 
 </div>
+```
 
 <div aria-hidden="true" style="border-top: 1px solid #ccc; margin: 1.5em 0;"></div>
 
