@@ -8,7 +8,7 @@ format:
 
 <div class="announcement-bar">
 📢 <strong> News:</strong> Won <em>3rd Place</em> in SAP Integration Naming Contest! 
-<a href="/news.html" target="_self">Read more →</a>
+<a href="news.html" target="_self">Read more →</a>
 </div>
 
 <!-- Styles announcement bar -->
@@ -49,25 +49,24 @@ format:
   }
 </style>
 
+
+:::{=html}
 <!-- Profile Section -->
 <div style="display:flex; flex-wrap:wrap; align-items:center; gap:2em; max-width:900px; margin:2em auto;">
-
-  <!-- Avatar -->
   <div class="avatar-wrapper">
     <a href="about.html" title="About Me">
       <img src="images/Headshot.jpg" alt="Yiwei Lu Headshot" class="avatar">
     </a>
   </div>
-
-  <!-- Name + Motto -->
   <div style="flex:1;">
     <div style="text-align:center;">
       <span class="name" data-text="Yiwei Lu">Yiwei Lu</span><br>
       <span class="motto">I believe clarity creates freedom — in data, design, and life.</span>
     </div>
   </div>
-
 </div>
+:::
+
 
 ::: { .project-card style="display: flex; flex-wrap: wrap; gap: 1.5em; align-items: flex-start;" markdown="1" }
 
