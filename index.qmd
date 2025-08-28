@@ -107,11 +107,7 @@ format:
   const tpl = document.getElementById('release-template');
 
   if (tpl && bodyBox) {
-    if (tpl.content) {
-      bodyBox.replaceChildren(tpl.content.cloneNode(true));
-    } else {
-      bodyBox.innerHTML = tpl.innerHTML.trim();
-    }
+    bodyBox.innerHTML = tpl.innerHTML.trim();
   }
 
   function openModal(e){
