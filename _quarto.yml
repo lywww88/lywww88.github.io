@@ -45,15 +45,19 @@ website:
         text: '<span class="nav-text">About</span>'
 
     right:
+      - icon: bell
+        aria-label: Updates
+        href: "#"
+        target: _self
+      - icon: linkedin
+        href: https://www.linkedin.com/in/yiwei-lu78
+        aria-label: LinkedIn
       - icon: github
         href: https://github.com/lywww88
         aria-label: GitHub
       - icon: database
         href: https://www.kaggle.com/yiweilu
         aria-label: Kaggle
-      - icon: linkedin
-        href: https://www.linkedin.com/in/yiwei-lu78
-        aria-label: LinkedIn
       - text: '<span class="nav-text resume-tab"><i class="bi bi-download"></i> Resume</span>'
         menu:
           - href: resume.qmd
@@ -67,10 +71,7 @@ website:
         aria-label: W
         icon: none
         target: _blank
-      - icon: bell
-        aria-label: Updates
-        href: "#"
-        target: _self
+
 
 
 format:
