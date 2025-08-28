@@ -194,77 +194,75 @@
 
 /* === Name === */
 .name {
+  position: relative;
+  display: inline-block;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
   font-size: 2.3em;
   font-weight: 800;
 
-  /* Default: scrolling blue gradient text */
+  /* 初始：蓝色渐变文字滚动 */
   background: linear-gradient(
     270deg,
-    #0d6efd,   /* Deep Blue */
-    #1e90ff,   /* Bright Blue */
-    #00bfff,   /* Cyan Blue */
-    #0d6efd
+    #0d6efd, #1e90ff, #00bfff, #0d6efd
   );
   background-size: 300% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradientScroll 6s linear infinite;
 
-  transition: all .4s ease;
-  display: inline-block;
+  transition: all .5s ease;
+  z-index: 0;
 }
 
+/* 鼠标移上去 → 黑色文字 + 渐变光圈 */
 .name:hover {
-  /* Hover: solid black text */
   background: none;
   -webkit-text-fill-color: #000;
   color: #000;
-
-  /* Replace gradientScroll with glowing animation */
-  animation: textGlow 3s linear infinite;
-
+  animation: none;
   transform: scale(1.05);
 }
 
-/* Blue gradient scroll animation (default) */
+/* 光圈伪元素 */
+.name:hover::after {
+  content: attr(data-text);   /* 必须在 HTML 里加 data-text="Yiwei Lu" */
+  position: absolute;
+  inset: 0;
+  z-index: -1;                /* 放在文字背后 */
+  pointer-events: none;
+
+  /* 用圆锥渐变制造明显的环形色带 */
+  --glow-angle: 0deg;
+  background: conic-gradient(
+    from var(--glow-angle),
+    #0d6efd,
+    #1e90ff,
+    #00bfff,
+    #0d6efd
+  );
+
+  -webkit-background-clip: text;
+  color: transparent;
+  filter: blur(12px) saturate(1.3); /* 扩散 + 提亮 */
+  opacity: 1;
+
+  animation: glowRotate 3s linear infinite; /* 持续旋转 */
+}
+
+/* 蓝色滚动渐变（默认文字） */
 @keyframes gradientScroll {
-  0%   { background-position: 0% center; }
+  0% { background-position: 0% center; }
   100% { background-position: 300% center; }
 }
 
-/* Flowing glowing effect for hover */
-@keyframes textGlow {
-  0% {
-    text-shadow:
-      0 0 6px  rgba(13,110,253,.45),
-      0 0 14px rgba(30,144,255,.35),
-      0 0 22px rgba(0,191,255,.30);
-  }
-  25% {
-    text-shadow:
-      0 0 8px  rgba(0,191,255,.50),
-      0 0 18px rgba(30,144,255,.40),
-      0 0 28px rgba(13,110,253,.35);
-  }
-  50% {
-    text-shadow:
-      0 0 10px rgba(30,144,255,.55),
-      0 0 22px rgba(13,110,253,.45),
-      0 0 34px rgba(0,191,255,.38);
-  }
-  75% {
-    text-shadow:
-      0 0 8px  rgba(13,110,253,.50),
-      0 0 18px rgba(0,191,255,.42),
-      0 0 28px rgba(30,144,255,.36);
-  }
-  100% {
-    text-shadow:
-      0 0 6px  rgba(13,110,253,.45),
-      0 0 14px rgba(30,144,255,.35),
-      0 0 22px rgba(0,191,255,.30);
-  }
+/* 光圈渐变旋转 */
+@property --glow-angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+@keyframes glowRotate {
+  to { --glow-angle: 1turn; }
 }
 
 /* === Motto === */
@@ -293,22 +291,66 @@
 
 /* === Avatar (Headshot) === */
 .avatar {
-  width: 180px;             
+  width: 180px;
   height: 180px;
-  border-radius: 50%;      
-  object-fit: cover;       
+  border-radius: 50%;
+  object-fit: cover;
   display: block;
-  margin: 0 auto;           
-  box-shadow: 0 0 12px rgba(13,110,253,0.35),
-              0 0 24px rgba(30,144,255,0.25); 
-  transition: box-shadow 0.4s ease;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0 8px rgba(13,110,253,0.25); /* 默认柔和蓝色阴影 */
+  transition: transform 0.4s ease;
 }
 
-.avatar:hover {
-  box-shadow: 0 0 16px rgba(13,110,253,0.55),
-              0 0 32px rgba(30,144,255,0.4);
-  transform: scale(1.09); 
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* 平滑过渡 */
+/* 包裹容器，用来放光圈 */
+.avatar-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* 光圈伪元素 */
+.avatar-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: -8px; /* 光圈比头像大一点 */
+  border-radius: 50%;
+  z-index: -1;
+
+  opacity: 0; /* 默认不显示 */
+  transition: opacity 0.4s ease;
+
+  /* 渐变光圈：蓝色系列 */
+  --glow-angle: 0deg;
+  background: conic-gradient(
+    from var(--glow-angle),
+    #0d6efd,  /* 深蓝 */
+    #1e90ff,  /* 亮蓝 */
+    #00bfff,  /* 青蓝 */
+    #0d6efd
+  );
+  filter: blur(14px) saturate(1.3);
+  animation: none;
+}
+
+/* 鼠标移上去时：头像放大 + 光圈渐变旋转 */
+.avatar-wrapper:hover .avatar {
+  transform: scale(1.08);
+}
+
+.avatar-wrapper:hover::after {
+  opacity: 1;
+  animation: glowRotate 4s linear infinite;
+}
+
+/* 动态旋转光圈 */
+@property --glow-angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+@keyframes glowRotate {
+  to { --glow-angle: 1turn; }
 }
 
 /* === Breathing animation === */
