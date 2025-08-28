@@ -11,37 +11,34 @@ format:
 
 <script>
 (function() {
-  var correct = "test123";  
-  var maxTries = 3;
-  var lockMinutes = 10;      
+  var correct = "test123"; 
+  var maxTries = 1;
+  var lockMinutes = 10;
   var now = Date.now();
 
-  // 从 localStorage 取出之前的失败记录
   var failData = JSON.parse(localStorage.getItem("news_fail")) || {count:0, lockedUntil:0};
 
   if (now < failData.lockedUntil) {
-    document.write("<h2 style='text-align:center;margin-top:20%;color:#c00;font-family:sans-serif;'>⛔ Access Denied<br>Too many failed attempts.<br>Please try again later.</h2>");
-    document.close();
+    document.addEventListener("DOMContentLoaded", function() {
+      document.body.innerHTML = "<h2 style='text-align:center;margin-top:20%;color:#c00;font-family:sans-serif;'>⛔ Access Denied<br>Too many failed attempts.<br>Please try again later.</h2>";
+    });
   } else {
-    failData.count = 0; 
+    failData.count = 0;
     localStorage.setItem("news_fail", JSON.stringify(failData));
 
     var ok = false;
     for (var i = 0; i < maxTries; i++) {
       var input = prompt("🔒 This page is under testing. Please enter password ("+(maxTries - i)+" attempts left):");
-      if (input === correct) {
-        ok = true;
-        break;
-      } else {
-        failData.count++;
-      }
+      if (input === correct) { ok = true; break; }
+      else { failData.count++; }
     }
 
     if (!ok) {
       failData.lockedUntil = now + lockMinutes * 60 * 1000;
       localStorage.setItem("news_fail", JSON.stringify(failData));
-      document.write("<h2 style='text-align:center;margin-top:20%;color:#c00;font-family:sans-serif;'>⛔ Access Denied<br>Too many failed attempts.<br>Please try again in "+lockMinutes+" minutes.</h2>");
-      document.close();
+      document.addEventListener("DOMContentLoaded", function() {
+        document.body.innerHTML = "<h2 style='text-align:center;margin-top:20%;color:#c00;font-family:sans-serif;'>⛔ Access Denied<br>Too many failed attempts.<br>Please try again in "+lockMinutes+" minutes.</h2>";
+      });
     }
   }
 })();
