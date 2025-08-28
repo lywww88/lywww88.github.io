@@ -20,7 +20,7 @@ format:
 
   if (now < failData.lockedUntil) {
     document.addEventListener("DOMContentLoaded", function() {
-      document.body.innerHTML = "<h2 style='text-align:center;margin-top:20%;color:#c00;font-family:sans-serif;'>⛔ Access Denied<br>Too many failed attempts.<br>Please try again later.</h2>";
+      document.body.innerHTML = "<h2 style='text-align:center;margin-top:20%;color:#c00;font-family:sans-serif;'>⛔ Access Denied ⛔<br>This page is currently under development and testing<br>Please try again later.</h2>";
     });
   } else {
     failData.count = 0;
