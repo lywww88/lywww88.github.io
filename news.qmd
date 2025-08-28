@@ -5,7 +5,9 @@ format:
   html:
     title-block: false
     page-layout: full
+    toc: false
 ---
+
 <style>
 .page-intro {
   max-width: 800px;
@@ -24,15 +26,154 @@ format:
   margin-bottom: 1em;
   color: #2c3e50;
 }
+
+/* Buttons (如果全站已有 .btn 可删除此段) */
+.btn {
+  display:inline-flex; align-items:center; gap:.45em;
+  padding:.55em .9em; border-radius:10px; border:1px solid #d8e2f1;
+  text-decoration:none; font-weight:600; color:#0b3d91;
+  background:#f5f9ff; transition:transform .05s ease, box-shadow .15s ease;
+}
+.btn:hover { box-shadow:0 2px 10px rgba(0,0,0,.06); text-decoration:none; }
+.btn:active { transform:translateY(1px); }
+
+/* ===== Timeline ===== */
+.timeline{
+  --line:#e6edf5;
+  --dot:#0d6efd;
+  --text:#2c3e50;
+  --muted:#6b7a90;
+  max-width: 920px; margin: 2.5em auto; padding: 0 1em;
+}
+.timeline-year{
+  font-weight: 800; font-size: 1.4rem; color: var(--text);
+  margin: 1.5em 0 .6em;
+}
+.tl-list{
+  position: relative; margin-left: 1rem; padding-left: 1.25rem;
+}
+.tl-list::before{
+  content:""; position:absolute; top:0; bottom:0; left:.35rem;
+  width:2px; background: var(--line);
+}
+.tl-item{
+  position: relative; margin: 1.1em 0 1.4em;
+}
+.tl-item::before{
+  content:""; position:absolute; left:-.05rem; top:.25rem;
+  width:.8rem; height:.8rem; border-radius:50%;
+  background: #fff; border:3px solid var(--dot);
+  box-shadow: 0 0 0 3px rgba(13,110,253,.08);
+}
+.tl-date{
+  display:inline-block; font-weight:700; color: var(--dot);
+  font-size:.95rem; margin-bottom:.35rem;
+}
+.tl-card{
+  background:#fff; border:1px solid #e8ecf3; border-radius:12px;
+  padding: .9em 1em; box-shadow: 0 2px 10px rgba(0,0,0,.03);
+}
+.tl-title{
+  margin:0 0 .25rem; font-weight:700; color: var(--text); font-size:1.05rem;
+}
+.tl-desc{
+  margin:.2rem 0 .6rem; color: var(--muted); line-height:1.65;
+}
+.tl-actions{ display:flex; gap:.5em; flex-wrap:wrap; }
+.tl-badge{
+  display:inline-block; font-size:.78rem; padding:.25em .55em;
+  border-radius:999px; background:#f5f9ff; border:1px solid #d8e2f1; color:#0b3d91;
+}
+
+/* 小屏优化 */
+@media (max-width: 600px){
+  .tl-card{ padding: .85em .9em; }
+  .tl-title{ font-size:1rem; }
+}
+
+/* 高亮最近一条（可选） */
+.tl-item.is-new::before{ border-color:#ffc107; box-shadow:0 0 0 3px rgba(255,193,7,.18); }
+.tl-item.is-new .tl-date{ color:#b78100; }
+
+/* Connect strip */
+.connect-container {
+  display: flex; flex-wrap: wrap; gap: 1em; align-items: center; justify-content:center;
+  max-width: 900px; margin: 2em auto;
+}
 </style>
 
 <div class="section-title">📰 News & Updates</div>
 
 <div class="page-intro">
-  Here I’ll share personal milestones, professional achievements, and project highlights.  
+  Here I’ll share personal milestones, professional achievements, and project highlights.
   <br><br>
-  📢 Most recent: <strong>Won 3rd Place in the SAP Integration Naming Contest</strong>.  
-  More updates and stories coming soon!
+  📢 Most recent: <strong>Won 3rd Place in the SAP Integration Naming Contest</strong>.
+</div>
+
+<div class="timeline" aria-label="Timeline of news and updates">
+
+  <!-- 2025 -->
+  <div class="timeline-year">2025</div>
+  <div class="tl-list">
+    <article class="tl-item is-new" id="sap-award">
+      <div class="tl-date">Aug 27, 2025</div>
+      <div class="tl-card">
+        <h4 class="tl-title">Won 3rd Place — SAP Integration Naming Contest</h4>
+        <p class="tl-desc">
+          Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit in the naming strategy.
+        </p>
+        <div class="tl-actions">
+          <span class="tl-badge">Award</span>
+          <a class="btn" href="#sap-award">Permalink →</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="tl-item" id="profile-revamp">
+      <div class="tl-date">Aug 20, 2025</div>
+      <div class="tl-card">
+        <h4 class="tl-title">Profile Section Revamp</h4>
+        <p class="tl-desc">
+          Introduced animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.
+        </p>
+        <div class="tl-actions">
+          <span class="tl-badge">Design</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="tl-item" id="quick-search">
+      <div class="tl-date">Aug 15, 2025</div>
+      <div class="tl-card">
+        <h4 class="tl-title">Floating Search & Back-to-Top</h4>
+        <p class="tl-desc">
+          Added quick-search (<kbd>⌘/Ctrl</kbd> + <kbd>K</kbd>) and a subtle floating back-to-top button for long pages.
+        </p>
+        <div class="tl-actions">
+          <span class="tl-badge">UX</span>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <!-- 2024 -->
+  <div class="timeline-year">2024</div>
+  <div class="tl-list">
+    <article class="tl-item" id="gallery-launch">
+      <div class="tl-date">Dec 10, 2024</div>
+      <div class="tl-card">
+        <h4 class="tl-title">Launched Data Project Gallery</h4>
+        <p class="tl-desc">
+          Centralized ML dashboards, datathon work, and experiment logs with consistent previews and links.
+        </p>
+        <div class="tl-actions">
+          <span class="tl-badge">Launch</span>
+          <a class="btn" href="https://lywww88.github.io/projects/" target="_blank">Open Projects →</a>
+        </div>
+      </div>
+    </article>
+  </div>
+
 </div>
 
 <div aria-hidden="true" style="border-top: 1px solid #ccc; margin: 1.5em 0;"></div>
@@ -41,7 +182,7 @@ format:
   Let’s stay in touch — here’s where to find me online.
 </p>
 
-<div class="connect-container" style="display: flex; flex-wrap: wrap; gap: 1em; align-items: center;">
+<div class="connect-container">
   <a href="https://www.linkedin.com/in/yiwei-lu78" class="btn" target="_blank"><i class="bi bi-linkedin"></i> LinkedIn</a>
   <a href="https://wa.me/6266736276" class="btn" target="_blank"><i class="bi bi-whatsapp"></i> WhatsApp</a>
   <a href="https://github.com/lywww88" class="btn" target="_blank"><i class="bi bi-github"></i> GitHub</a>
