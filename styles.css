@@ -267,17 +267,6 @@
   }
 }
 
-/* Accessibility: fallback static glow for reduced motion users */
-@media (prefers-reduced-motion: reduce) {
-  .name:hover {
-    animation: none;
-    text-shadow:
-      0 0 8px  rgba(13,110,253,.45),
-      0 0 18px rgba(30,144,255,.35),
-      0 0 26px rgba(0,191,255,.30);
-  }
-}
-
 /* === Motto === */
 .motto {
   font-style: italic;
