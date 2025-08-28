@@ -213,17 +213,25 @@
 }
 
 .name:hover {
-  background: none;                
-  -webkit-text-fill-color: #000;    
-  color: #000;                      
-  animation: none;                 
+  background: linear-gradient(
+    270deg,
+    #d9d9d9,  /* 银灰 */
+    #a6a6a6,  /* 深灰 */
+    #000000   /* 纯黑 */
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: gradientScroll 3s linear infinite;
+
   text-shadow:
     0 0 6px  rgba(30,144,255,.45),
     0 0 14px rgba(0,191,255,.35),
     0 0 22px rgba(13,110,253,.35);
+
   transform: scale(1.05);
 }
-
 @keyframes gradientScroll {
   0%   { background-position: 0%   center; }
   100% { background-position: 300% center; }
@@ -255,22 +263,22 @@
 
 /* === Avatar (Headshot) === */
 .avatar {
-  width: 160px;             /* 控制头像大小 */
-  height: 160px;
-  border-radius: 50%;       /* 圆形 */
-  object-fit: cover;        /* 填满裁切 */
+  width: 180px;             
+  height: 180px;
+  border-radius: 50%;      
+  object-fit: cover;       
   display: block;
-  margin: 0 auto;           /* 居中 */
+  margin: 0 auto;           
   box-shadow: 0 0 12px rgba(13,110,253,0.35),
-              0 0 24px rgba(30,144,255,0.25); /* 蓝色光圈 */
-  transition: box-shadow 0.3s ease;
+              0 0 24px rgba(30,144,255,0.25); 
+  transition: box-shadow 0.4s ease;
 }
 
 .avatar:hover {
-  /* 鼠标悬停时光圈更亮，但不放大 */
   box-shadow: 0 0 16px rgba(13,110,253,0.55),
               0 0 32px rgba(30,144,255,0.4);
-  transform: none !important; /* 防止意外缩放 */
+  transform: scale(1.09); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* 平滑过渡 */
 }
 
 /* === Breathing animation === */
