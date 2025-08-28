@@ -5,109 +5,138 @@ format:
   html:
     title-block: false
     page-layout: full
+    toc: false
     allow-html: true
 ---
 
 <style>
-.page-intro {
-  max-width: 800px;
-  margin: 4em auto 2em;
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #333;
-  font-family: 'Segoe UI', system-ui, sans-serif;
-  padding: 0 1em;
+/* ===== Page Head ===== */
+.section-title{
+  text-align:center; font-size:1.8rem; font-weight:700;
+  margin-top:2.6em; margin-bottom:.6em; color:#2c3e50;
 }
-.section-title {
-  text-align: center;
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-top: 3em;
-  margin-bottom: 1em;
-  color: #2c3e50;
+.page-intro{
+  max-width:920px; margin:.5em auto 1.0em; padding:0 1em;
+  font-size:1.05rem; line-height:1.8; color:#333;
+  font-family:'Segoe UI',system-ui,sans-serif;
+}
+/* 开发中公告条 */
+.dev-banner{
+  max-width:920px; margin:0 auto 1em; padding:.65em 1em;
+  background:#fff7e6; color:#8a5a00; border:1px solid #ffe0a3;
+  border-radius:10px; box-shadow:0 1px 6px rgba(0,0,0,.04);
+  display:flex; gap:.6em; align-items:center; font-weight:600;
 }
 
-/* Buttons */
-.btn {
-  display:inline-flex; align-items:center; gap:.45em;
-  padding:.55em .9em; border-radius:10px; border:1px solid #d8e2f1;
-  text-decoration:none; font-weight:600; color:#0b3d91;
-  background:#f5f9ff; transition:transform .05s ease, box-shadow .15s ease;
+/* ===== Top cards: Pinned & Most Recent ===== */
+.top-news{ max-width:920px; margin:1.2em auto 1.6em; padding:0 1em;
+  display:grid; grid-template-columns:1fr 1fr; gap:1em;
 }
-.btn:hover { box-shadow:0 2px 10px rgba(0,0,0,.06); text-decoration:none; }
-.btn:active { transform:translateY(1px); }
-
-/* ===== Timeline ===== */
-.timeline{
-  --line:#e6edf5;
-  --dot:#0d6efd;
-  --text:#2c3e50;
-  --muted:#6b7a90;
-  max-width: 920px; margin: 2.5em auto; padding: 0 1em;
-}
-.timeline-year{
-  font-weight: 800; font-size: 1.4rem; color: var(--text);
-  margin: 1.5em 0 .6em;
-}
-.tl-list{
-  position: relative; margin-left: 1rem; padding-left: 1.25rem;
-}
-.tl-list::before{
-  content:""; position:absolute; top:0; bottom:0; left:.35rem;
-  width:2px; background: var(--line);
-}
-.tl-item{
-  position: relative; margin: 1.1em 0 1.4em;
-}
-.tl-item::before{
-  content:""; position:absolute; left:-.05rem; top:.25rem;
-  width:.8rem; height:.8rem; border-radius:50%;
-  background: #fff; border:3px solid var(--dot);
-  box-shadow: 0 0 0 3px rgba(13,110,253,.08);
-}
-.tl-date{
-  display:inline-block; font-weight:700; color: var(--dot);
-  font-size:.95rem; margin-bottom:.35rem;
-}
-.tl-card{
+.top-card{
   background:#fff; border:1px solid #e8ecf3; border-radius:12px;
-  padding: .9em 1em; box-shadow: 0 2px 10px rgba(0,0,0,.03);
+  box-shadow:0 2px 12px rgba(0,0,0,.04);
+  padding:1em 1.1em;
 }
-.tl-title{
-  margin:0 0 .25rem; font-weight:700; color: var(--text); font-size:1.05rem;
-}
-.tl-desc{
-  margin:.2rem 0 .6rem; color: var(--muted); line-height:1.65;
-}
-.tl-actions{ display:flex; gap:.5em; flex-wrap:wrap; }
-.tl-badge{
-  display:inline-block; font-size:.78rem; padding:.25em .55em;
+.top-meta{ display:flex; align-items:center; gap:.6em; margin-bottom:.35em; }
+.badge{
+  display:inline-block; font-size:.78rem; padding:.22em .6em;
   border-radius:999px; background:#f5f9ff; border:1px solid #d8e2f1; color:#0b3d91;
 }
-
-/* 小屏优化 */
-@media (max-width: 600px){
-  .tl-card{ padding: .85em .9em; }
-  .tl-title{ font-size:1rem; }
+.badge.gold{ background:#fff8db; border-color:#ffe28a; color:#9a6b00; }
+.top-title{ margin:.1rem 0 .25rem; font-weight:800; color:#243447; }
+.top-desc{ color:#667; line-height:1.65; margin:.25rem 0 .7rem; }
+.btn{
+  display:inline-flex; align-items:center; gap:.45em;
+  padding:.5em .85em; border-radius:10px; border:1px solid #d8e2f1;
+  text-decoration:none; font-weight:600; color:#0b3d91; background:#f5f9ff;
+  transition:transform .05s ease, box-shadow .15s ease;
 }
+.btn:hover{ box-shadow:0 2px 10px rgba(0,0,0,.06); text-decoration:none; }
+.btn:active{ transform:translateY(1px); }
+
+/* ===== Timeline (rail-based; 不会错位) ===== */
+.timeline{ --rail:140px; --line:#e6edf5; --dot:#0d6efd; --text:#2c3e50; --muted:#6b7a90;
+  max-width:920px; margin:1.5em auto 2.5em; padding:0 1em;
+}
+.timeline-year{ font-weight:800; font-size:1.4rem; color:var(--text); margin:1.6em 0 .6em; }
+
+.tl-list{ position:relative; padding-left:var(--rail); }
+.tl-list::before{
+  content:""; position:absolute; top:0; bottom:0;
+  left:calc(var(--rail) - 2px); width:2px; background:var(--line);
+}
+
+.tl-item{ position:relative; margin:1.1em 0 1.4em; }
+
+/* 左侧日期列（固定宽度，右对齐） */
+.tl-date{
+  position:absolute; left:0; top:.25rem; width:calc(var(--rail) - 18px);
+  text-align:right; padding-right:14px; font-weight:700; color:var(--dot); font-size:.95rem;
+}
+
+/* 竖线上的圆点，精确与 rail 对齐 */
+.tl-item::before{
+  content:""; position:absolute; top:.6rem; left:calc(var(--rail) - 7px);
+  width:12px; height:12px; border-radius:50%;
+  background:#fff; border:3px solid var(--dot);
+  box-shadow:0 0 0 3px rgba(13,110,253,.08);
+}
+
+.tl-card{
+  background:#fff; border:1px solid #e8ecf3; border-radius:12px;
+  padding:.9em 1em; box-shadow:0 2px 10px rgba(0,0,0,.03);
+}
+
+.tl-title{ margin:0 0 .25rem; font-weight:700; color:var(--text); font-size:1.05rem; }
+.tl-desc{ margin:.2rem 0 .6rem; color:var(--muted); line-height:1.65; }
+.tl-actions{ display:flex; gap:.5em; flex-wrap:wrap; }
+.tl-badge{ display:inline-block; font-size:.78rem; padding:.25em .55em;
+  border-radius:999px; background:#f5f9ff; border:1px solid #d8e2f1; color:#0b3d91; }
 .tl-item.is-new::before{ border-color:#ffc107; box-shadow:0 0 0 3px rgba(255,193,7,.18); }
 .tl-item.is-new .tl-date{ color:#b78100; }
 
-.connect-container {
-  display: flex; flex-wrap: wrap; gap: 1em; align-items: center; justify-content:center;
-  max-width: 900px; margin: 2em auto;
+/* ===== Responsive ===== */
+@media (max-width: 740px){
+  .top-news{ grid-template-columns:1fr; }
+  .timeline{ --rail:110px; }
+  .tl-date{ font-size:.9rem; }
 }
+@media (max-width: 480px){
+  .timeline{ --rail:92px; }
+  .tl-date{ font-size:.85rem; }
+}
+.connect-container{ display:flex; flex-wrap:wrap; gap:1em; align-items:center; justify-content:center;
+  max-width:900px; margin:2em auto; }
 </style>
 
 <div class="section-title">📰 News & Updates</div>
 
 <div class="page-intro">
-  Here I’ll share personal milestones, professional achievements, and project highlights.
-  <br><br>
-  📢 Most recent: <strong>Won 3rd Place in the SAP Integration Naming Contest</strong>.
+  🚧 This page is currently <strong>under development and testing</strong>, which means its layout, design, and content may be refined or updated over time.  
+  In addition to ongoing improvements, this space is intended to highlight personal milestones, professional achievements, and project updates, serving as a living record of both progress and accomplishments.
+</div>
+
+<!-- ===== Top: Pinned + Most Recent ===== -->
+<div class="top-news">
+  <!-- Pinned -->
+  <div class="top-card">
+    <div class="top-meta"><span class="badge gold">Pinned</span><span class="badge">Award</span></div>
+    <h3 class="top-title">Won 3rd Place — SAP Integration Naming Contest</h3>
+    <p class="top-desc">Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.</p>
+    <a class="btn" href="#sap-award">Jump to entry →</a>
+  </div>
+
+  <!-- Most Recent -->
+  <div class="top-card">
+    <div class="top-meta"><span class="badge">Most Recent</span><span class="badge">Design</span></div>
+    <h3 class="top-title">Profile Section Revamp</h3>
+    <p class="top-desc">Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.</p>
+    <a class="btn" href="#profile-revamp">Jump to entry →</a>
+  </div>
 </div>
 
 ```{=html}
+<!-- ===== Timeline ===== -->
 <div class="timeline" aria-label="Timeline of news and updates">
 
   <!-- 2025 -->
@@ -143,7 +172,7 @@ format:
       <div class="tl-card">
         <h4 class="tl-title">Floating Search & Back-to-Top</h4>
         <p class="tl-desc">
-          Quick search (<kbd>⌘/Ctrl</kbd>+<kbd>K</kbd>) and a floating back-to-top button for long pages.
+          Quick search (<kbd>⌘/Ctrl</kbd> + <kbd>K</kbd>) and a floating back-to-top button for long pages.
         </p>
         <div class="tl-actions"><span class="tl-badge">UX</span></div>
       </div>
