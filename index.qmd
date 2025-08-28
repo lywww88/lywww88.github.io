@@ -7,8 +7,8 @@ format:
 ---
 
 <div class="announcement-bar">
-📢 <strong> News site is under development! Coming soon!</strong> 
-<a href="news.html" target="_self">Read more →</a>
+📢 <strong> News page is coming soon! </strong> 
+<a href="news.html" target="_self">Preview Page →</a>
 </div>
 
 <!-- Styles announcement bar -->
