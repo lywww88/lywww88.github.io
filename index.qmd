@@ -10,7 +10,7 @@ format:
 </div>
 
 <!-- ✅ Release Notes (script template: safe, never rendered directly) -->
-<script type="text/x-template" id="release-template">
+<template id="release-template">
   <p>Added two handy UI helpers to improve navigation:</p>
   <ul>
     <li><strong>Floating Search</strong> — open site-wide search from anywhere.</li>
@@ -18,7 +18,7 @@ format:
   </ul>
   <p>Keyboard shortcut:
      <kbd>⌘/Ctrl</kbd> + <kbd>K</kbd> to search.</p>
-</script>
+</template>
 
 <!-- Modal skeleton -->
 <div id="release-overlay" style="display:none;"></div>
@@ -104,11 +104,14 @@ format:
   const bodyBox = modal.querySelector('.release-body');
   const closeBtn= modal.querySelector('.release-close');
   const okBtn   = modal.querySelector('.release-primary');
-  const tpl     = document.getElementById('release-template'); // text/x-template
+  const tpl = document.getElementById('release-template');
 
   if (tpl && bodyBox) {
-    bodyBox.textContent = '';
-    bodyBox.innerHTML = tpl.textContent.trim();
+    if (tpl.content) {
+      bodyBox.replaceChildren(tpl.content.cloneNode(true));
+    } else {
+      bodyBox.innerHTML = tpl.innerHTML.trim();
+    }
   }
 
   function openModal(e){
