@@ -59,7 +59,7 @@ format:
   <!-- Name + Motto -->
   <div style="flex: 1;" markdown="1">
     <div style="text-align: center;">
-      <span class="name">Yiwei Lu</span>
+      <span class="name" data-text="Yiwei Lu">Yiwei Lu</span>
       <br/>
       <span class="motto">I believe clarity creates freedom — in data, design, and life.</span>
     </div>
