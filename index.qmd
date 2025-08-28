@@ -57,7 +57,7 @@ format:
   </a>
 
   <!-- Name + Motto -->
-  <div style="flex: 1;" markdown="1">
+  <div style="flex: 1;">
     <div style="text-align: center;">
       <span class="name" data-text="Yiwei Lu">Yiwei Lu</span>
       <br/>
