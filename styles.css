@@ -207,34 +207,39 @@
   font-weight: 800;
   background: linear-gradient(
     270deg,
-    #0d6efd,   
-    #1e90ff,   
-    #00bfff,   
-    #0d6efd   
+    #0d6efd,   /* 深蓝 */
+    #1e90ff,   /* 亮蓝 */
+    #00bfff,   /* 青蓝 */
+    #0d6efd
   );
-  background-size: 300% auto;   
+  background-size: 300% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: gradientScroll 5s linear infinite;
+  animation: gradientScroll 6s linear infinite;
   transition: all .3s ease;
   display: inline-block;
 }
 
 .name:hover {
-  background: none;    
-  -webkit-text-fill-color: #111;  
-  transform: scale(1.05);         
+  background: linear-gradient(
+    270deg,
+    #1e90ff,   /* 亮蓝 */
+    #00bfff,   /* 青蓝 */
+    #87cefa,   /* 天蓝 */
+    #1e90ff
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientScroll 3s linear infinite; /* hover 时加快滚动 */
+  text-shadow: 0 0 8px rgba(30,144,255,0.6), 0 0 16px rgba(0,191,255,0.5); /* 发光效果 */
+  transform: scale(1.05);
 }
 
+/* 渐变滚动动画 */
 @keyframes gradientScroll {
   0% { background-position: 0% center; }
   100% { background-position: 300% center; }
-}
-
-/* 渐变滚动关键帧 */
-@keyframes gradientScroll {
-  0% { background-position: 0% center; }
-  100% { background-position: 200% center; }
 }
 
 /* === Motto === */
@@ -245,10 +250,9 @@
   transition: color .3s ease;
 }
 .motto:hover {
-  color: #111;                 /* 鼠标移上去加深 */
+  color: #111;                
 }
 
-/* 在格言两侧添加大引号 */
 .motto::before {
   content: "❝";
   margin-right: 6px;
