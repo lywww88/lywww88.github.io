@@ -10,19 +10,15 @@ format:
 <!-- lock -->
 <script>
   (function () {
-    const KEY = "ww-pass-ok";
     const PASSWORD = "mimacuowu";   
-
-    if (localStorage.getItem(KEY) === "1") return;
 
     const input = prompt("🔒 Access Restricted\nEnter access code:");
     if (input === PASSWORD) {
-      localStorage.setItem(KEY, "1");
       return;
     }
     alert("❌ Access denied.");
-    location.href = "/";
-    document.write("");
+    location.href = "/";  
+    document.write("");   
   })();
 </script>
 
