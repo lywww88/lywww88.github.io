@@ -91,43 +91,61 @@ format:
 </style>
 
 
-<!-- Logic -->
+<!-- Logic (index only) -->
 <script>
-(function(){
-  const openBtns = document.querySelectorAll('a[aria-label="Updates"], .js-open-release');
+(function () {
+  // 防重复初始化
+  if (window.__releaseModalInited) return;
+  window.__releaseModalInited = true;
 
-  const overlay = document.getElementById('release-overlay');
-  const modal   = document.getElementById('release-modal');
+  const openBtns = document.querySelectorAll('a[aria-label="Updates"], .js-open-release');
+  const overlay  = document.getElementById('release-overlay');
+  const modal    = document.getElementById('release-modal');
   if (!overlay || !modal) return;
 
-  const bodyBox = modal.querySelector('.release-body');
-  const closeBtn= modal.querySelector('.release-close');
-  const okBtn   = modal.querySelector('.release-primary');
-  const tpl     = document.getElementById('release-template');
+  const bodyBox  = modal.querySelector('.release-body');
+  const closeBtn = modal.querySelector('.release-close');
+  const okBtn    = modal.querySelector('.release-primary');
+  const tpl      = document.getElementById('release-template');
 
-  if (tpl && bodyBox) {
+  // ✅ 正确：用 <template>.content 作为真实 DOM 注入
+  function hydrateFromTemplate() {
+    if (!tpl || !bodyBox) return;
     if ('content' in tpl) {
       bodyBox.replaceChildren(tpl.content.cloneNode(true));
     } else {
+      // 兼容极老浏览器
       bodyBox.innerHTML = tpl.innerHTML.trim();
     }
   }
+  hydrateFromTemplate();
 
-  function openModal(e){
-    if(e) e.preventDefault();
+  // 🛡 防止其它旧脚本把内容变成纯文本：检测到像 "<button …>" 的文本就立即还原
+  const mo = new MutationObserver(() => {
+    if (!bodyBox) return;
+    const onlyText = (bodyBox.childNodes.length === 1 && bodyBox.firstChild.nodeType === 3);
+    const txt = onlyText ? bodyBox.textContent.trim() : '';
+    if (onlyText && /<\s*button[\s>]/i.test(txt)) {
+      hydrateFromTemplate();
+    }
+  });
+  mo.observe(bodyBox, { childList: true, characterData: true, subtree: true });
+
+  function openModal(e) {
+    if (e) e.preventDefault();
     overlay.style.display = 'block';
     modal.style.display   = 'block';
     document.body.style.overflow = 'hidden';
     if (closeBtn) closeBtn.focus();
     document.addEventListener('keydown', onEsc);
   }
-  function closeModal(){
+  function closeModal() {
     overlay.style.display = 'none';
     modal.style.display   = 'none';
     document.body.style.overflow = '';
     document.removeEventListener('keydown', onEsc);
   }
-  function onEsc(e){ if(e.key === 'Escape') closeModal(); }
+  function onEsc(e) { if (e.key === 'Escape') closeModal(); }
 
   openBtns.forEach(btn => btn.addEventListener('click', openModal));
   overlay.addEventListener('click', closeModal);
