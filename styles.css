@@ -272,10 +272,12 @@
   box-shadow:0 0 8px rgba(13,110,253,.25);
   transition:transform .4s ease;
 }
+
 .avatar-wrapper{
   position:relative;
   display:inline-block;
 }
+
 .avatar-wrapper::after{
   content:"";
   position:absolute;
@@ -284,25 +286,21 @@
   z-index:-1;
   opacity:.35;
   transition:opacity .4s ease;
-  --glow-angle:0deg;
-  background:conic-gradient(from var(--glow-angle), #0d6efd,#1e90ff,#00bfff,#0d6efd);
+  background:conic-gradient(#0d6efd,#1e90ff,#00bfff,#0d6efd);
   filter:blur(14px) saturate(1.2);
-  animation:glowRotate 16s linear infinite;
+  transform-origin:50% 50%;
+  animation:avatarSpin 16s linear infinite;
+  will-change:transform;
 }
-.avatar-wrapper:hover .avatar{
-  transform:scale(1.08);
-}
+
+.avatar-wrapper:hover .avatar{ transform:scale(1.08); }
 .avatar-wrapper:hover::after{
   opacity:.9;
   animation-duration:6s;
 }
-@property --glow-angle{
-  syntax:"<angle>";
-  inherits:false;
-  initial-value:0deg;
-}
-@keyframes glowRotate{
-  to{ --glow-angle:1turn; }
+
+@keyframes avatarSpin{
+  to { transform: rotate(360deg); }
 }
 
 /* === Breathing animation === */
