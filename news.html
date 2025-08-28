@@ -160,17 +160,22 @@ ul.task-list li input[type="checkbox"] {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
+    <a class="nav-link" href="./#" target="_self"> <i class="bi bi-bell" role="img" aria-label="Updates">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/yiwei-lu78"> <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/lywww88"> <i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://www.kaggle.com/yiweilu"> <i class="bi bi-database" role="img" aria-label="Kaggle">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/in/yiwei-lu78"> <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -194,11 +199,6 @@ ul.task-list li input[type="checkbox"] {
 </i> 
 <span class="menu-text"><img class="w-logo" src="./images/W.PNG" alt="W Logo"></span></a>
   </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="./#" target="_self"> <i class="bi bi-bell" role="img" aria-label="Updates">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -210,49 +210,169 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
+    
 <!-- main -->
 <main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
 
+<script>
+(function() {
+  var correct = "test123";  
+  var maxTries = 3;
+  var lockMinutes = 10;      
+  var now = Date.now();
+
+  // 从 localStorage 取出之前的失败记录
+  var failData = JSON.parse(localStorage.getItem("news_fail")) || {count:0, lockedUntil:0};
+
+  if (now < failData.lockedUntil) {
+    document.write("<h2 style='text-align:center;margin-top:20%;color:#c00;font-family:sans-serif;'>⛔ Access Denied<br>Too many failed attempts.<br>Please try again later.</h2>");
+    document.close();
+  } else {
+    failData.count = 0; 
+    localStorage.setItem("news_fail", JSON.stringify(failData));
+
+    var ok = false;
+    for (var i = 0; i < maxTries; i++) {
+      var input = prompt("🔒 This page is under testing. Please enter password ("+(maxTries - i)+" attempts left):");
+      if (input === correct) {
+        ok = true;
+        break;
+      } else {
+        failData.count++;
+      }
+    }
+
+    if (!ok) {
+      failData.lockedUntil = now + lockMinutes * 60 * 1000;
+      localStorage.setItem("news_fail", JSON.stringify(failData));
+      document.write("<h2 style='text-align:center;margin-top:20%;color:#c00;font-family:sans-serif;'>⛔ Access Denied<br>Too many failed attempts.<br>Please try again in "+lockMinutes+" minutes.</h2>");
+      document.close();
+    }
+  }
+})();
+</script>
 <style>
-.page-intro {
-  max-width: 800px;
-  margin: 4em auto 2em;
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #333;
-  font-family: 'Segoe UI', system-ui, sans-serif;
-  padding: 0 1em;
-}
-.section-title {
-  text-align: center;
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-top: 3em;
-  margin-bottom: 1em;
-  color: #2c3e50;
-}
+/* ===== News page-only minimal styles ===== */
+.news-wrap{max-width:980px;margin:0 auto;padding:0 12px;}
+.news-intro{margin:22px auto 8px;font-size:1.05rem;line-height:1.8;color:#333;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;}
+
+.news-badge{display:inline-block;font-size:.78rem;padding:.2em .6em;border-radius:999px;background:#f5f9ff;border:1px solid #d8e2f1;color:#0b3d91;}
+
+/* Timeline */
+.news-tl{--datew:120px;--line:#e6edf5;--dot:#0d6efd;}
+.news-tl-year{font-weight:800;font-size:1.2rem;color:#2c3e50;margin:28px 0 10px;}
+.news-tl-list{display:grid;grid-template-columns:var(--datew) 24px 1fr;row-gap:16px;position:relative;}
+.news-tl-list::before{content:"";grid-column:2;grid-row:1/-1;width:2px;background:var(--line);justify-self:center;}
+.news-tl-item{display:contents;}
+.news-tl-date{grid-column:1;align-self:start;justify-self:end;text-align:right;padding-right:12px;font-weight:700;color:var(--dot);font-size:.95rem;}
+.news-tl-dot{grid-column:2;width:12px;height:12px;border-radius:50%;border:3px solid var(--dot);background:#fff;justify-self:center;align-self:center;box-shadow:0 0 0 3px rgba(13,110,253,.08);}
+.news-tl-card{grid-column:3;}
+
+@media (max-width:740px){.news-tl{--datew:98px;}}
+@media (max-width:480px){.news-tl{--datew:86px;}.news-tl-date{font-size:.9rem;}}
 </style>
-<div class="section-title">
+<div class="news-wrap">
+<h2 style="text-align:center;" class="anchored">
 📰 News &amp; Updates
+</h2>
+<p class="news-intro">
+🚧 This page is currently <strong>under development and testing</strong>, so its layout, design, and content may evolve over time.<br>
+Meanwhile, it highlights personal milestones, professional achievements, and project updates — a living record of progress and outcomes.
+</p>
+<!-- Top section: pinned + most recent（复用全站 .project-card / .btn） -->
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0 18px;">
+<pre><code>&lt;div class="project-card"&gt;
+  &lt;div style="margin-bottom:.35rem;"&gt;
+    &lt;span class="news-badge"&gt;Pinned&lt;/span&gt; &lt;span class="news-badge"&gt;Award&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;h3 style="margin:0 0 .35rem;"&gt;Won 3rd Place — SAP Integration Naming Contest&lt;/h3&gt;
+  &lt;p style="margin:.25rem 0 .65rem;color:#666;"&gt;Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.&lt;/p&gt;
+  &lt;a class="btn" href="#sap-award"&gt;Jump to entry →&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class="project-card"&gt;
+  &lt;div style="margin-bottom:.35rem;"&gt;
+    &lt;span class="news-badge"&gt;Most Recent&lt;/span&gt; &lt;span class="news-badge"&gt;Design&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;h3 style="margin:0 0 .35rem;"&gt;Profile Section Revamp&lt;/h3&gt;
+  &lt;p style="margin:.25rem 0 .65rem;color:#666;"&gt;Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.&lt;/p&gt;
+  &lt;a class="btn" href="#profile-revamp"&gt;Jump to entry →&lt;/a&gt;
+&lt;/div&gt;</code></pre>
 </div>
-<div class="page-intro">
-<p>Here I’ll share personal milestones, professional achievements, and project highlights.<br>
-<br><br> 📢 Most recent: <strong>Won 3rd Place in the SAP Integration Naming Contest</strong>.<br>
-More updates and stories coming soon!</p>
+  <!-- ===== Timeline ===== -->
+  <div class="news-tl" aria-label="Timeline of news and updates">
+
+    <!-- 2025 -->
+    <div class="news-tl-year">2025</div>
+    <div class="news-tl-list">
+
+      <div class="news-tl-item" id="sap-award">
+        <div class="news-tl-date">Aug 27, 2025</div>
+        <div class="news-tl-dot"></div>
+        <div class="news-tl-card project-card">
+          <strong>Won 3rd Place — SAP Integration Naming Contest</strong>
+          <p style="margin:.35rem 0 .6rem;color:#667;">
+            Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.
+          </p>
+          <a class="btn" href="#sap-award">Permalink →</a>
+        </div>
+      </div>
+
+      <div class="news-tl-item" id="profile-revamp">
+        <div class="news-tl-date">Aug 20, 2025</div>
+        <div class="news-tl-dot"></div>
+        <div class="news-tl-card project-card">
+          <strong>Profile Section Revamp</strong>
+          <p style="margin:.35rem 0 .6rem;color:#667;">
+            Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.
+          </p>
+          <span class="news-badge">Design</span>
+        </div>
+      </div>
+
+      <div class="news-tl-item" id="quick-search">
+        <div class="news-tl-date">Aug 15, 2025</div>
+        <div class="news-tl-dot"></div>
+        <div class="news-tl-card project-card">
+          <strong>Floating Search &amp; Back-to-Top</strong>
+          <p style="margin:.35rem 0 .6rem;color:#667;">
+            Quick search (<kbd>⌘/Ctrl</kbd> + <kbd>K</kbd>) and a floating back-to-top button for long pages.
+          </p>
+          <span class="news-badge">UX</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 2024 -->
+    <div class="news-tl-year">2024</div>
+    <div class="news-tl-list">
+      <div class="news-tl-item" id="gallery-launch">
+        <div class="news-tl-date">Dec 10, 2024</div>
+        <div class="news-tl-dot"></div>
+        <div class="news-tl-card project-card">
+          <strong>Launched Data Project Gallery</strong>
+          <p style="margin:.35rem 0 .6rem;color:#667;">
+            Centralized ML dashboards, datathon work, and experiment logs with consistent previews.
+          </p>
+          <a class="btn" href="https://lywww88.github.io/projects/" target="_blank">Open Projects →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </div>
+<p><!-- /.news-wrap --></p>
 <div aria-hidden="true" style="border-top: 1px solid #ccc; margin: 1.5em 0;">
 
 </div>
 <p style="text-align: center; color: #aaa; font-size: 0.9em; margin-top: 2em;">
 Let’s stay in touch — here’s where to find me online.
 </p>
-<div class="connect-container" style="display: flex; flex-wrap: wrap; gap: 1em; align-items: center;">
+<div class="connect-container">
 <p><a href="https://www.linkedin.com/in/yiwei-lu78" class="btn" target="_blank"><i class="bi bi-linkedin"></i> LinkedIn</a> <a href="https://wa.me/6266736276" class="btn" target="_blank"><i class="bi bi-whatsapp"></i> WhatsApp</a> <a href="https://github.com/lywww88" class="btn" target="_blank"><i class="bi bi-github"></i> GitHub</a> <span style="color: #ccc;">|</span> <a href="mailto:yiweilu36@uci.edu" class="btn"><i class="bi bi-envelope"></i> Email Me</a> <a href="https://lywww88.github.io/about.html" class="btn"><i class="bi bi-person-circle"></i> About Me</a></p>
 </div>
 <div aria-hidden="true" style="border-top: 1px solid #ccc; margin: 1.5em 0;">
@@ -677,10 +797,11 @@ Let’s stay in touch — here’s where to find me online.
 
 <!-- ========== GLOBAL: Release Modal (bell) ========== -->
 <script type="text/x-template" id="release-template">
-  <p>Site updates & small improvements:</p>
+  <p>Site Updates — 2025-08-27</p>
   <ul>
-    <li>Floating Search & Back-to-Top added.</li>
-    <li>Navigation polish on mobile.</li>
+    <li>Added floating Search & Back-to-Top button.</li>
+    <li>Improved mobile navigation polish.</li>
+    <li>Profile section redesign with gradient text and glowing avatar.</li>
   </ul>
   <p>Keyboard: <kbd>⌘/Ctrl</kbd> + <kbd>K</kbd> to search.</p>
 </script>

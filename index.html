@@ -160,17 +160,22 @@ ul.task-list li input[type="checkbox"] {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
+    <a class="nav-link" href="./#" target="_self"> <i class="bi bi-bell" role="img" aria-label="Updates">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/yiwei-lu78"> <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/lywww88"> <i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://www.kaggle.com/yiweilu"> <i class="bi bi-database" role="img" aria-label="Kaggle">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/in/yiwei-lu78"> <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -194,11 +199,6 @@ ul.task-list li input[type="checkbox"] {
 </i> 
 <span class="menu-text"><img class="w-logo" src="./images/W.PNG" alt="W Logo"></span></a>
   </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="./#" target="_self"> <i class="bi bi-bell" role="img" aria-label="Updates">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -218,143 +218,58 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="announcement-bar">
-<p>📢 <strong> News:</strong> Won <em>3rd Place</em> in SAP Integration Naming Contest! <a href="./news.html" target="_self">Read more →</a></p>
+<p>📢 <strong> News page is coming soon! </strong> <a href="news.html" target="_self">Preview Page →</a></p>
 </div>
-<!-- ✅ Release Notes (script template: safe, never rendered directly) -->
-<script type="text/x-template" id="release-template">
-  <p>Added two handy UI helpers to improve navigation:</p>
-  <ul>
-    <li><strong>Floating Search</strong> — open site-wide search from anywhere.</li>
-    <li><strong>Back-to-Top</strong> — jump back to the top smoothly.</li>
-  </ul>
-  <p>Keyboard shortcut:
-     <kbd>⌘/Ctrl</kbd> + <kbd>K</kbd> to search.</p>
-</script>
-<!-- Modal skeleton -->
-<div id="release-overlay" style="display:none;">
-
-</div>
-<div id="release-modal" role="dialog" aria-modal="true" aria-labelledby="release-title" style="display:none;">
-<button class="release-close" aria-label="Close">×</button>
-<h3 id="release-title" class="anchored">
-What’s new
-</h3>
-<div class="release-body">
-
-</div>
-<div class="release-actions">
-<pre><code>&lt;button class="release-primary" type="button"&gt;Got it&lt;/button&gt;</code></pre>
-</div>
-</div>
-<!-- Styles -->
+<!-- Styles announcement bar -->
 <style>
-  /* Overlay */
-  #release-overlay{
-    position: fixed; inset: 0; 
-    background: rgba(0,0,0,.35);
-    z-index: 1200;
-  }
-  /* Modal */
-  #release-modal{
-    position: fixed; 
-    left: 50%; top: 50%; transform: translate(-50%, -50%);
-    width: min(560px, 92vw);
-    background: #fff; color:#222;
-    border-radius: 12px;
-    box-shadow: 0 20px 60px rgba(0,0,0,.25);
-    padding: 1.2rem 1.2rem 1rem;
-    z-index: 1210;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  }
-  #release-modal h3{ margin: 0 0 .6rem; font-size: 1.25rem; }
-  #release-modal .release-body{ line-height: 1.6; color:#444; font-size: .98rem; }
-  #release-modal .release-actions{ display:flex; justify-content:flex-end; gap:.6rem; margin-top: 1rem; }
-  #release-modal .release-primary{
-    background:#0d6efd; color:#fff; border:none; border-radius:8px;
-    padding:.55rem 1rem; font-weight:600; cursor:pointer;
-    box-shadow: 0 6px 16px rgba(13,110,253,.35);
-  }
-  #release-modal .release-primary:hover{ filter: brightness(1.05); }
-  #release-modal .release-close{
-    position:absolute; right:10px; top:8px;
-    width:34px; height:34px; border:none; border-radius:50%;
-    background: transparent; font-size: 1.2rem; cursor:pointer;
-  }
-  #release-modal .release-close:hover{ background:#f3f5f7; }
-
-a.btn, .btn {
-  display: inline-flex; align-items: center; gap: .4em;
-  padding: .5em .9em; border-radius: .5em;
-  border: 1px solid #d0d7de; text-decoration: none;
-  font-weight: 600;
-}
-a.btn:hover, .btn:hover { background: #f6f8fa; }
-
-  /* Announcement Bar */
   .announcement-bar {
-    display: flex; justify-content: center; align-items: center; flex-wrap: nowrap;
-    white-space: nowrap; gap: .6em;
-    background: #e6f2ff; color: #003366; font-weight: 500; font-size: 0.95rem;
-    min-height: 40px; padding: 0.4em 1em; border-radius: 0.4em;
-    border: 1px solid #b3d7ff; box-shadow: 0 1px 5px rgba(0,0,0,0.05);
-    width: 100%; margin: 0.8em 0 1em 0; box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    gap: .6em;
+    background: #e6f2ff;
+    color: #003366;
+    font-weight: 500;
+    font-size: 0.95rem;
+    min-height: 40px;
+    padding: 0.4em 1em;
+    border-radius: 0.4em;
+    border: 1px solid #b3d7ff;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+    width: 100%;
+    margin: 0.8em 0 1em 0;
+    box-sizing: border-box;
   }
-  .announcement-bar strong, .announcement-bar a { display: inline-flex; align-items: center; line-height: 1; }
-  .announcement-bar a { color: #c76a00; font-weight: 600; text-decoration: none; }
-  .announcement-bar a:hover { text-decoration: underline; }
+  .announcement-bar strong,
+  .announcement-bar a {
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+  }
+  .announcement-bar a {
+    color: #c76a00;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .announcement-bar a:hover {
+    text-decoration: underline;
+  }
 </style>
-<!-- Logic -->
-<script>
-(function(){
-  const openBtns = document.querySelectorAll('a[aria-label="Updates"], .js-open-release');
-
-  const overlay = document.getElementById('release-overlay');
-  const modal   = document.getElementById('release-modal');
-  if (!overlay || !modal) return;
-
-  const bodyBox = modal.querySelector('.release-body');
-  const closeBtn= modal.querySelector('.release-close');
-  const okBtn   = modal.querySelector('.release-primary');
-  const tpl     = document.getElementById('release-template'); // text/x-template
-
-  if (tpl && bodyBox) {
-    bodyBox.textContent = '';
-    bodyBox.innerHTML = tpl.textContent.trim();
-  }
-
-  function openModal(e){
-    if(e) e.preventDefault(); // 阻止 href="#" 回到顶部
-    overlay.style.display = 'block';
-    modal.style.display   = 'block';
-    document.body.style.overflow = 'hidden';
-    if (closeBtn) closeBtn.focus();
-    document.addEventListener('keydown', onEsc);
-  }
-  function closeModal(){
-    overlay.style.display = 'none';
-    modal.style.display   = 'none';
-    document.body.style.overflow = '';
-    document.removeEventListener('keydown', onEsc);
-  }
-  function onEsc(e){ if(e.key === 'Escape') closeModal(); }
-
-  openBtns.forEach(btn => btn.addEventListener('click', openModal));
-
-  overlay.addEventListener('click', closeModal);
-  closeBtn.addEventListener('click', closeModal);
-  okBtn.addEventListener('click', closeModal);
-})();
-</script>
 <!-- Profile Section -->
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 2em; max-width: 900px; margin: 2em auto;">
-<p><!-- Avatar --> <a href="about.html" title="About Me"> <img src="images/Headshot.jpg" alt="Yiwei Lu Headshot" class="avatar"> </a></p>
-<!-- Name + Motto -->
-<div style="flex: 1;" data-markdown="1">
-<div style="text-align: center;">
-<p><span class="name">Yiwei Lu (David)</span><br>
-<br> <span class="motto">I believe clarity creates freedom — in data, design, and life.</span></p>
-</div>
-</div>
+<div style="display:flex; flex-wrap:wrap; align-items:center; gap:2em; max-width:900px; margin:2em auto;">
+  <div class="avatar-wrapper">
+    <a href="about.html" title="About Me">
+      <img src="images/Headshot.jpg" alt="Yiwei Lu Headshot" class="avatar">
+    </a>
+  </div>
+  <div style="flex:1;">
+    <div style="text-align:center;">
+      <span class="name" data-text="Yiwei Lu">Yiwei Lu</span><br>
+      <span class="motto">I believe clarity creates freedom — in data, design, and life.</span>
+    </div>
+  </div>
 </div>
 <div class="project-card" style="display: flex; flex-wrap: wrap; gap: 1.5em; align-items: flex-start;" data-markdown="1">
 <!-- Left Text -->
@@ -835,10 +750,11 @@ Let’s stay in touch — here’s where to find me online.
 
 <!-- ========== GLOBAL: Release Modal (bell) ========== -->
 <script type="text/x-template" id="release-template">
-  <p>Site updates & small improvements:</p>
+  <p>Site Updates — 2025-08-27</p>
   <ul>
-    <li>Floating Search & Back-to-Top added.</li>
-    <li>Navigation polish on mobile.</li>
+    <li>Added floating Search & Back-to-Top button.</li>
+    <li>Improved mobile navigation polish.</li>
+    <li>Profile section redesign with gradient text and glowing avatar.</li>
   </ul>
   <p>Keyboard: <kbd>⌘/Ctrl</kbd> + <kbd>K</kbd> to search.</p>
 </script>
