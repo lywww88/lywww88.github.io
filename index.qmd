@@ -6,9 +6,47 @@ format:
 ---
 
 <div class="announcement-bar">
-📢 <strong> News:</strong> Won <em>3rd Place</em> in SAP Integration Naming Contest! <a href="/news.html" target="_self">Read more →</a>
+📢 <strong> News:</strong> Won <em>3rd Place</em> in SAP Integration Naming Contest! 
+<a href="/news.html" target="_self">Read more →</a>
 </div>
 
+<!-- Styles announcement bar -->
+<style>
+  .announcement-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    gap: .6em;
+    background: #e6f2ff;
+    color: #003366;
+    font-weight: 500;
+    font-size: 0.95rem;
+    min-height: 40px;
+    padding: 0.4em 1em;
+    border-radius: 0.4em;
+    border: 1px solid #b3d7ff;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+    width: 100%;
+    margin: 0.8em 0 1em 0;
+    box-sizing: border-box;
+  }
+  .announcement-bar strong,
+  .announcement-bar a {
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+  }
+  .announcement-bar a {
+    color: #c76a00;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .announcement-bar a:hover {
+    text-decoration: underline;
+  }
+</style>
 
 <!-- Profile Section -->
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 2em; max-width: 900px; margin: 2em auto;">
