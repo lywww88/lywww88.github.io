@@ -207,7 +207,15 @@
   transition:all .5s ease;
   z-index:0;
 }
-.name::after{
+.name::after{ content:none; }
+.name:hover{
+  background:none;
+  -webkit-text-fill-color:#000;
+  color:#000;
+  animation:none;
+  transform:scale(1.05);
+}
+.name:hover::after{
   content:attr(data-text);
   position:absolute;
   inset:0;
@@ -219,18 +227,8 @@
     0 0 12px rgba(30,144,255,.45),
     0 0 20px rgba(0,191,255,.35),
     0 0 32px rgba(13,110,253,.30);
-  opacity:.9;
+  opacity:1;
   transition:filter .3s ease, opacity .3s ease;
-}
-.name:hover{
-  background:none;
-  -webkit-text-fill-color:#000;
-  color:#000;
-  animation:none;
-  transform:scale(1.05);
-}
-.name:hover::after{
-  filter:saturate(1.25) brightness(1.1);
 }
 @keyframes gradientScroll{
   0%{ background-position:0% center; }
