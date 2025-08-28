@@ -197,6 +197,8 @@
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
   font-size: 2.3em;
   font-weight: 800;
+
+  /* 初始蓝色渐变滚动 */
   background: linear-gradient(
     270deg,
     #0d6efd,   /* 深蓝 */
@@ -208,32 +210,29 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradientScroll 6s linear infinite;
-  transition: all .3s ease;
+
+  transition: all .5s ease; /* 过渡 */
   display: inline-block;
 }
 
 .name:hover {
-  background: linear-gradient(
-    270deg,
-    #d9d9d9,  /* 银灰 */
-    #a6a6a6,  /* 深灰 */
-    #000000   /* 纯黑 */
-  );
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  animation: gradientScroll 3s linear infinite;
+  /* 悬停时 → 黑色 + 蓝色光圈 */
+  background: none;
+  -webkit-text-fill-color: #000;
+  color: #000;
+  animation: none;
 
   text-shadow:
-    0 0 6px  rgba(30,144,255,.45),
+    0 0 6px rgba(30,144,255,.45),
     0 0 14px rgba(0,191,255,.35),
     0 0 22px rgba(13,110,253,.35);
 
   transform: scale(1.05);
 }
+
+/* 渐变滚动动画 */
 @keyframes gradientScroll {
-  0%   { background-position: 0%   center; }
+  0%   { background-position: 0% center; }
   100% { background-position: 300% center; }
 }
 
