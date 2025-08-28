@@ -221,10 +221,8 @@
     #ffe680 24%,
     #ffd700 32%,
     #ffb347 40%,
-    #ffd700 48%,
     #9adcfb 56%,
     #6ec9ff 64%,
-    #38bdf8 72%,
     #ffd700 80%,
     #ffdf6e 88%,
     #ffd700 100%
@@ -315,7 +313,7 @@
     #ffdf6e,   /* 浅金 */
     #ffd700    /* 金色收尾 */
   );
-  animation-duration:4s; /* hover 时加快旋转 */
+  animation-duration:3s; /* hover 时加快旋转 */
 }
 
 @keyframes avatarSpin{
