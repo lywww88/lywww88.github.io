@@ -253,6 +253,26 @@
   opacity: 0.85;
 }
 
+/* === Avatar (Headshot) === */
+.avatar {
+  width: 160px;             /* 控制头像大小 */
+  height: 160px;
+  border-radius: 50%;       /* 圆形 */
+  object-fit: cover;        /* 填满裁切 */
+  display: block;
+  margin: 0 auto;           /* 居中 */
+  box-shadow: 0 0 12px rgba(13,110,253,0.35),
+              0 0 24px rgba(30,144,255,0.25); /* 蓝色光圈 */
+  transition: box-shadow 0.3s ease;
+}
+
+.avatar:hover {
+  /* 鼠标悬停时光圈更亮，但不放大 */
+  box-shadow: 0 0 16px rgba(13,110,253,0.55),
+              0 0 32px rgba(30,144,255,0.4);
+  transform: none !important; /* 防止意外缩放 */
+}
+
 /* === Breathing animation === */
 @keyframes w-glow {
   0% {
