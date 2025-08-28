@@ -9,196 +9,133 @@ format:
     allow-html: true
 ---
 
+<script>
+  (function() {
+    var correct = "testnews";   // 
+    var input = prompt("🔒 This page is under testing.");
+    if (input !== correct) {
+      document.write("<h2 style='text-align:center;margin-top:20%;color:#c00;font-family:sans-serif;'>⛔ Access Denied</h2>");
+      document.close();
+    }
+  })();
+</script>
+
 <style>
-/* ===== Page Head ===== */
-.section-title{
-  text-align:center; font-size:1.8rem; font-weight:700;
-  margin-top:2.6em; margin-bottom:.6em; color:#2c3e50;
-}
-.page-intro{
-  max-width:920px; margin:.5em auto 1.0em; padding:0 1em;
-  font-size:1.05rem; line-height:1.8; color:#333;
-  font-family:'Segoe UI',system-ui,sans-serif;
-}
-/* 开发中公告条 */
-.dev-banner{
-  max-width:920px; margin:0 auto 1em; padding:.65em 1em;
-  background:#fff7e6; color:#8a5a00; border:1px solid #ffe0a3;
-  border-radius:10px; box-shadow:0 1px 6px rgba(0,0,0,.04);
-  display:flex; gap:.6em; align-items:center; font-weight:600;
-}
+/* ===== News page-only minimal styles ===== */
+.news-wrap{max-width:980px;margin:0 auto;padding:0 12px;}
+.news-intro{margin:22px auto 8px;font-size:1.05rem;line-height:1.8;color:#333;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;}
 
-/* ===== Top cards: Pinned & Most Recent ===== */
-.top-news{ max-width:920px; margin:1.2em auto 1.6em; padding:0 1em;
-  display:grid; grid-template-columns:1fr 1fr; gap:1em;
-}
-.top-card{
-  background:#fff; border:1px solid #e8ecf3; border-radius:12px;
-  box-shadow:0 2px 12px rgba(0,0,0,.04);
-  padding:1em 1.1em;
-}
-.top-meta{ display:flex; align-items:center; gap:.6em; margin-bottom:.35em; }
-.badge{
-  display:inline-block; font-size:.78rem; padding:.22em .6em;
-  border-radius:999px; background:#f5f9ff; border:1px solid #d8e2f1; color:#0b3d91;
-}
-.badge.gold{ background:#fff8db; border-color:#ffe28a; color:#9a6b00; }
-.top-title{ margin:.1rem 0 .25rem; font-weight:800; color:#243447; }
-.top-desc{ color:#667; line-height:1.65; margin:.25rem 0 .7rem; }
-.btn{
-  display:inline-flex; align-items:center; gap:.45em;
-  padding:.5em .85em; border-radius:10px; border:1px solid #d8e2f1;
-  text-decoration:none; font-weight:600; color:#0b3d91; background:#f5f9ff;
-  transition:transform .05s ease, box-shadow .15s ease;
-}
-.btn:hover{ box-shadow:0 2px 10px rgba(0,0,0,.06); text-decoration:none; }
-.btn:active{ transform:translateY(1px); }
+.news-badge{display:inline-block;font-size:.78rem;padding:.2em .6em;border-radius:999px;background:#f5f9ff;border:1px solid #d8e2f1;color:#0b3d91;}
 
-/* ===== Timeline (rail-based; 不会错位) ===== */
-.timeline{ --rail:140px; --line:#e6edf5; --dot:#0d6efd; --text:#2c3e50; --muted:#6b7a90;
-  max-width:920px; margin:1.5em auto 2.5em; padding:0 1em;
-}
-.timeline-year{ font-weight:800; font-size:1.4rem; color:var(--text); margin:1.6em 0 .6em; }
+/* Timeline */
+.news-tl{--datew:120px;--line:#e6edf5;--dot:#0d6efd;}
+.news-tl-year{font-weight:800;font-size:1.2rem;color:#2c3e50;margin:28px 0 10px;}
+.news-tl-list{display:grid;grid-template-columns:var(--datew) 24px 1fr;row-gap:16px;position:relative;}
+.news-tl-list::before{content:"";grid-column:2;grid-row:1/-1;width:2px;background:var(--line);justify-self:center;}
+.news-tl-item{display:contents;}
+.news-tl-date{grid-column:1;align-self:start;justify-self:end;text-align:right;padding-right:12px;font-weight:700;color:var(--dot);font-size:.95rem;}
+.news-tl-dot{grid-column:2;width:12px;height:12px;border-radius:50%;border:3px solid var(--dot);background:#fff;justify-self:center;align-self:center;box-shadow:0 0 0 3px rgba(13,110,253,.08);}
+.news-tl-card{grid-column:3;}
 
-.tl-list{ position:relative; padding-left:var(--rail); }
-.tl-list::before{
-  content:""; position:absolute; top:0; bottom:0;
-  left:calc(var(--rail) - 2px); width:2px; background:var(--line);
-}
-
-.tl-item{ position:relative; margin:1.1em 0 1.4em; }
-
-/* 左侧日期列（固定宽度，右对齐） */
-.tl-date{
-  position:absolute; left:0; top:.25rem; width:calc(var(--rail) - 18px);
-  text-align:right; padding-right:14px; font-weight:700; color:var(--dot); font-size:.95rem;
-}
-
-/* 竖线上的圆点，精确与 rail 对齐 */
-.tl-item::before{
-  content:""; position:absolute; top:.6rem; left:calc(var(--rail) - 7px);
-  width:12px; height:12px; border-radius:50%;
-  background:#fff; border:3px solid var(--dot);
-  box-shadow:0 0 0 3px rgba(13,110,253,.08);
-}
-
-.tl-card{
-  background:#fff; border:1px solid #e8ecf3; border-radius:12px;
-  padding:.9em 1em; box-shadow:0 2px 10px rgba(0,0,0,.03);
-}
-
-.tl-title{ margin:0 0 .25rem; font-weight:700; color:var(--text); font-size:1.05rem; }
-.tl-desc{ margin:.2rem 0 .6rem; color:var(--muted); line-height:1.65; }
-.tl-actions{ display:flex; gap:.5em; flex-wrap:wrap; }
-.tl-badge{ display:inline-block; font-size:.78rem; padding:.25em .55em;
-  border-radius:999px; background:#f5f9ff; border:1px solid #d8e2f1; color:#0b3d91; }
-.tl-item.is-new::before{ border-color:#ffc107; box-shadow:0 0 0 3px rgba(255,193,7,.18); }
-.tl-item.is-new .tl-date{ color:#b78100; }
-
-/* ===== Responsive ===== */
-@media (max-width: 740px){
-  .top-news{ grid-template-columns:1fr; }
-  .timeline{ --rail:110px; }
-  .tl-date{ font-size:.9rem; }
-}
-@media (max-width: 480px){
-  .timeline{ --rail:92px; }
-  .tl-date{ font-size:.85rem; }
-}
-.connect-container{ display:flex; flex-wrap:wrap; gap:1em; align-items:center; justify-content:center;
-  max-width:900px; margin:2em auto; }
+@media (max-width:740px){.news-tl{--datew:98px;}}
+@media (max-width:480px){.news-tl{--datew:86px;}.news-tl-date{font-size:.9rem;}}
 </style>
 
-<div class="section-title">📰 News & Updates</div>
+<div class="news-wrap">
+  <h2 style="text-align:center;">📰 News & Updates</h2>
 
-<div class="page-intro">
-  🚧 This page is currently <strong>under development and testing</strong>, which means its layout, design, and content may be refined or updated over time.  
-  In addition to ongoing improvements, this space is intended to highlight personal milestones, professional achievements, and project updates, serving as a living record of both progress and accomplishments.
-</div>
+  <p class="news-intro">
+    🚧 This page is currently <strong>under development and testing</strong>, so its layout, design, and content may evolve over time.  
+    Meanwhile, it highlights personal milestones, professional achievements, and project updates — a living record of progress and outcomes.
+  </p>
 
-<!-- ===== Top: Pinned + Most Recent ===== -->
-<div class="top-news">
-  <!-- Pinned -->
-  <div class="top-card">
-    <div class="top-meta"><span class="badge gold">Pinned</span><span class="badge">Award</span></div>
-    <h3 class="top-title">Won 3rd Place — SAP Integration Naming Contest</h3>
-    <p class="top-desc">Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.</p>
-    <a class="btn" href="#sap-award">Jump to entry →</a>
+  <!-- Top section: pinned + most recent（复用全站 .project-card / .btn） -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0 18px;">
+    <div class="project-card">
+      <div style="margin-bottom:.35rem;">
+        <span class="news-badge">Pinned</span> <span class="news-badge">Award</span>
+      </div>
+      <h3 style="margin:0 0 .35rem;">Won 3rd Place — SAP Integration Naming Contest</h3>
+      <p style="margin:.25rem 0 .65rem;color:#666;">Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.</p>
+      <a class="btn" href="#sap-award">Jump to entry →</a>
+    </div>
+
+    <div class="project-card">
+      <div style="margin-bottom:.35rem;">
+        <span class="news-badge">Most Recent</span> <span class="news-badge">Design</span>
+      </div>
+      <h3 style="margin:0 0 .35rem;">Profile Section Revamp</h3>
+      <p style="margin:.25rem 0 .65rem;color:#666;">Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.</p>
+      <a class="btn" href="#profile-revamp">Jump to entry →</a>
+    </div>
   </div>
-
-  <!-- Most Recent -->
-  <div class="top-card">
-    <div class="top-meta"><span class="badge">Most Recent</span><span class="badge">Design</span></div>
-    <h3 class="top-title">Profile Section Revamp</h3>
-    <p class="top-desc">Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.</p>
-    <a class="btn" href="#profile-revamp">Jump to entry →</a>
-  </div>
-</div>
 
 ```{=html}
-<!-- ===== Timeline ===== -->
-<div class="timeline" aria-label="Timeline of news and updates">
+  <!-- ===== Timeline ===== -->
+  <div class="news-tl" aria-label="Timeline of news and updates">
 
-  <!-- 2025 -->
-  <div class="timeline-year">2025</div>
-  <div class="tl-list">
-    <article class="tl-item is-new" id="sap-award">
-      <div class="tl-date">Aug 27, 2025</div>
-      <div class="tl-card">
-        <h4 class="tl-title">Won 3rd Place — SAP Integration Naming Contest</h4>
-        <p class="tl-desc">
-          Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.
-        </p>
-        <div class="tl-actions">
-          <span class="tl-badge">Award</span>
+    <!-- 2025 -->
+    <div class="news-tl-year">2025</div>
+    <div class="news-tl-list">
+
+      <div class="news-tl-item" id="sap-award">
+        <div class="news-tl-date">Aug 27, 2025</div>
+        <div class="news-tl-dot"></div>
+        <div class="news-tl-card project-card">
+          <strong>Won 3rd Place — SAP Integration Naming Contest</strong>
+          <p style="margin:.35rem 0 .6rem;color:#667;">
+            Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.
+          </p>
           <a class="btn" href="#sap-award">Permalink →</a>
         </div>
       </div>
-    </article>
 
-    <article class="tl-item" id="profile-revamp">
-      <div class="tl-date">Aug 20, 2025</div>
-      <div class="tl-card">
-        <h4 class="tl-title">Profile Section Revamp</h4>
-        <p class="tl-desc">
-          Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.
-        </p>
-        <div class="tl-actions"><span class="tl-badge">Design</span></div>
+      <div class="news-tl-item" id="profile-revamp">
+        <div class="news-tl-date">Aug 20, 2025</div>
+        <div class="news-tl-dot"></div>
+        <div class="news-tl-card project-card">
+          <strong>Profile Section Revamp</strong>
+          <p style="margin:.35rem 0 .6rem;color:#667;">
+            Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.
+          </p>
+          <span class="news-badge">Design</span>
+        </div>
       </div>
-    </article>
 
-    <article class="tl-item" id="quick-search">
-      <div class="tl-date">Aug 15, 2025</div>
-      <div class="tl-card">
-        <h4 class="tl-title">Floating Search & Back-to-Top</h4>
-        <p class="tl-desc">
-          Quick search (<kbd>⌘/Ctrl</kbd> + <kbd>K</kbd>) and a floating back-to-top button for long pages.
-        </p>
-        <div class="tl-actions"><span class="tl-badge">UX</span></div>
+      <div class="news-tl-item" id="quick-search">
+        <div class="news-tl-date">Aug 15, 2025</div>
+        <div class="news-tl-dot"></div>
+        <div class="news-tl-card project-card">
+          <strong>Floating Search & Back-to-Top</strong>
+          <p style="margin:.35rem 0 .6rem;color:#667;">
+            Quick search (<kbd>⌘/Ctrl</kbd> + <kbd>K</kbd>) and a floating back-to-top button for long pages.
+          </p>
+          <span class="news-badge">UX</span>
+        </div>
       </div>
-    </article>
-  </div>
 
-  <!-- 2024 -->
-  <div class="timeline-year">2024</div>
-  <div class="tl-list">
-    <article class="tl-item" id="gallery-launch">
-      <div class="tl-date">Dec 10, 2024</div>
-      <div class="tl-card">
-        <h4 class="tl-title">Launched Data Project Gallery</h4>
-        <p class="tl-desc">
-          Centralized ML dashboards, datathon work, and experiment logs with consistent previews.
-        </p>
-        <div class="tl-actions">
-          <span class="tl-badge">Launch</span>
+    </div>
+
+    <!-- 2024 -->
+    <div class="news-tl-year">2024</div>
+    <div class="news-tl-list">
+      <div class="news-tl-item" id="gallery-launch">
+        <div class="news-tl-date">Dec 10, 2024</div>
+        <div class="news-tl-dot"></div>
+        <div class="news-tl-card project-card">
+          <strong>Launched Data Project Gallery</strong>
+          <p style="margin:.35rem 0 .6rem;color:#667;">
+            Centralized ML dashboards, datathon work, and experiment logs with consistent previews.
+          </p>
           <a class="btn" href="https://lywww88.github.io/projects/" target="_blank">Open Projects →</a>
         </div>
       </div>
-    </article>
-  </div>
+    </div>
 
-</div>
+  </div>
 ```
+
+</div> <!-- /.news-wrap -->
 
 <div aria-hidden="true" style="border-top: 1px solid #ccc; margin: 1.5em 0;"></div>
 
