@@ -3,6 +3,7 @@ title: ""
 format:
   html: 
     toc: false
+    allow-html: true
 ---
 
 <div class="announcement-bar">
@@ -48,26 +49,25 @@ format:
   }
 </style>
 
-::: {=html}
 <!-- Profile Section -->
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 2em; max-width: 900px; margin: 2em auto;">
+<div style="display:flex; flex-wrap:wrap; align-items:center; gap:2em; max-width:900px; margin:2em auto;">
 
   <!-- Avatar -->
-  <a href="about.html" title="About Me">
-    <img src="images/Headshot.jpg" alt="Yiwei Lu Headshot" class="avatar"/>
-  </a>
+  <div class="avatar-wrapper">
+    <a href="about.html" title="About Me">
+      <img src="images/Headshot.jpg" alt="Yiwei Lu Headshot" class="avatar">
+    </a>
+  </div>
 
   <!-- Name + Motto -->
-  <div style="flex: 1;">
-    <div style="text-align: center;">
-      <span class="name" data-text="Yiwei Lu">Yiwei Lu</span>
-      <br/>
+  <div style="flex:1;">
+    <div style="text-align:center;">
+      <span class="name" data-text="Yiwei Lu">Yiwei Lu</span><br>
       <span class="motto">I believe clarity creates freedom — in data, design, and life.</span>
     </div>
   </div>
 
 </div>
-:::
 
 ::: { .project-card style="display: flex; flex-wrap: wrap; gap: 1.5em; align-items: flex-start;" markdown="1" }
 
