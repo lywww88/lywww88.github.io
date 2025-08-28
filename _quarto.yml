@@ -108,10 +108,11 @@ format:
 
         <!-- ========== GLOBAL: Release Modal (bell) ========== -->
         <script type="text/x-template" id="release-template">
-          <p>Site updates & small improvements:</p>
+          <p>Site Updates — 2025-08-27</p>
           <ul>
-            <li>Floating Search & Back-to-Top added.</li>
-            <li>Navigation polish on mobile.</li>
+            <li>Added floating Search & Back-to-Top button.</li>
+            <li>Improved mobile navigation polish.</li>
+            <li>Profile section redesign with gradient text and glowing avatar.</li>
           </ul>
           <p>Keyboard: <kbd>⌘/Ctrl</kbd> + <kbd>K</kbd> to search.</p>
         </script>
