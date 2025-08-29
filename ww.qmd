@@ -45,7 +45,7 @@ format:
 
     var ok = false;
     for (var i = 0; i < maxTries; i++) {
-      var input = prompt("🔒 ("+(maxTries - i)+" attempts left):");
+      var input = prompt("🔒 Please enter the password("+(maxTries - i)+" attempts left):");
       if (input === correct) { ok = true; break; }
       else { failData.count++; }
     }
