@@ -1,50 +1,64 @@
 <meta name="robots" content="noindex, nofollow">
-<style>html{visibility:hidden}</style>
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+
+<!-- 初始隐藏整页：仅当 data-gate 存在时才显示（ok 或 deny 都会显示） -->
+<style>
+  html:not([data-gate]) { visibility: hidden; }
+</style>
 
 <script>
 (function () {
   // ===== 配置 =====
-  var PASSWORD    = "mimacuowu";   // 正确密码
-  var TRIES       = 3;             // 尝试次数
-  var LOCK_MIN    = 0;             // 锁定分钟
-  var STORE_KEY   = "page_gate_v1";// localStorage key
-  var REDIRECT_TO = "/";           // 跳转地址
+  var PASSWORD    = "mimacuowu";    // 正确密码
+  var TRIES       = 3;              // 尝试次数
+  var LOCK_MIN    = 1;              // 失败后锁定分钟
+  var STORE_KEY   = "page_gate_v2"; // localStorage 键（版本号用于清缓存）
+  var REDIRECT_TO = "/";            // 错误时跳转地址
+
+  // 处理浏览器回退缓存（bfcache）
+  window.addEventListener("pageshow", function (e) {
+    if (e.persisted) location.reload();
+  });
 
   function denyAndRedirect(msg){
-    // 先显示 html，确保提示能出现
-    document.documentElement.style.visibility = "visible";
-    var html = `
-      <h2 style="text-align:center;margin-top:20%;color:#c00;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;">
-        ⛔ Access Denied ⛔<br>${msg}<br><br>
-        Redirecting to homepage in 3 seconds…
-      </h2>`;
+    // 标记为 deny，解除隐藏
+    document.documentElement.setAttribute('data-gate','deny');
+    // 直接写入提示内容，避免原 DOM 闪现
+    var html =
+      "<h2 style='text-align:center;margin-top:20%;color:#c00;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;'>"
+      + "⛔ Access Denied ⛔<br>" + msg + "<br><br>"
+      + "Redirecting to homepage in 3 seconds…</h2>";
     document.open(); document.write(html); document.close();
     setTimeout(function(){ location.href = REDIRECT_TO; }, 3000);
   }
 
+  // 读取/初始化失败状态
   var now = Date.now();
   var failData = { count: 0, lockedUntil: 0 };
   try { failData = JSON.parse(localStorage.getItem(STORE_KEY)) || failData; } catch(e){}
 
-  // 如果还在锁定期 → 直接拒绝
+  // 锁定期内：直接拒绝
   if (now < failData.lockedUntil) {
     denyAndRedirect("This page is temporarily locked. Please try again later.");
     return;
   }
 
-  // 重置失败计数
+  // 重置计数
   failData.count = 0;
   localStorage.setItem(STORE_KEY, JSON.stringify(failData));
 
-  // 密码尝试
+  // 口令尝试
   var ok = false;
   for (var i = 0; i < TRIES; i++) {
     var left = (TRIES - i);
     var input = prompt("🔒 This page is restricted. (" + left + " attempt" + (left>1?"s":"") + " left)");
-    if (input === null) break; // 用户点取消
+    if (input === null) break; // 用户取消
     if (input === PASSWORD) { ok = true; break; }
   }
 
+  // 失败 → 锁定 + 拒绝
   if (!ok) {
     failData.lockedUntil = now + LOCK_MIN * 60 * 1000;
     localStorage.setItem(STORE_KEY, JSON.stringify(failData));
@@ -52,7 +66,7 @@
     return;
   }
 
-  // ✅ 成功 → 页面内容显示
-  document.documentElement.style.visibility = "visible";
+  // ✅ 成功 → 允许显示页面
+  document.documentElement.setAttribute('data-gate','ok');
 })();
 </script>
