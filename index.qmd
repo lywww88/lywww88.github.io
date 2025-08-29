@@ -6,138 +6,113 @@ format:
     allow-html: true
 ---
 
-<!-- ===== Announcement Bar (full) ===== -->
-<div id="announce" class="announcement-bar" role="region" aria-label="Site announcement" hidden>
+<!-- ===== Announcement (overlay on navbar center) ===== -->
+<div id="announce" class="announce-on-nav" role="dialog" aria-label="Site announcement" hidden>
   <span class="emoji" aria-hidden="true">📢</span>
   <strong> News page is coming soon! </strong>
   <a href="news.html" target="_self">Preview Page →</a>
-  <button class="ann-close" type="button" aria-label="Dismiss announcement" title="Dismiss">×</button>
+  <button class="ann-close" type="button" aria-label="Dismiss">×</button>
 </div>
 
-<!-- ===== Minimized (reopen) bar ===== -->
-<div id="ann-toggle" class="announcement-bar minimized" hidden>
-  <span>腊📢</span>
-</div>
+<!-- Minimized (reopen) pill -->
+<div id="ann-toggle" class="announce-on-nav minimized" hidden>📢</div>
 
 <style>
-  :root { --ann-top: 56px; } /* JS 会覆盖为导航栏的真实高度 */
-
-  /* —— 大横幅：原样但始终贴在导航栏正下方且水平居中 —— */
-  .announcement-bar{
-    position: fixed;
+  .announce-on-nav{
+    position: fixed;               /* 以视口定位，覆盖在导航栏之上 */
     left: 50%;
-    transform: translateX(-50%);
-    top: var(--ann-top);
-    z-index: 1050;
+    top: var(--ann-center-y, 48px);/* JS 计算：导航栏中心 Y */
+    transform: translate(-50%, -50%);
+    z-index: 2000;
 
-    /* 你的原始样式（非紧凑） */
-    display: flex;
-    justify-content: center;           /* 内容居中 */
-    align-items: center;
-    gap: .6em;
-    background: #eaf3ff;
-    color: #07315c;
+    /* 原样式风格（非紧凑） */
+    display: inline-flex; align-items: center; justify-content: center; gap: .6em;
+    background: #eaf3ff; color: #07315c;
     font: 500 0.95rem/1.3 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-    min-height: 44px;
-    padding: .6em 1em;
-    border: 1px solid #bfd9ff;
-    border-radius: .5em;
-    box-shadow: 0 1px 6px rgba(0,0,0,.08);
-    max-width: 960px;
-    width: calc(100% - 32px);          /* 两侧留 16px 呼吸 */
+    min-height: 44px; padding: .6em 1em;
+    border: 1px solid #bfd9ff; border-radius: .5em;
+    box-shadow: 0 6px 18px rgba(0,0,0,.18);
+    pointer-events: auto;
   }
-  .announcement-bar a{
-    color: #c46800; font-weight: 600; text-decoration: none;
+  .announce-on-nav a{ color:#c46800; font-weight:600; text-decoration:none; }
+  .announce-on-nav a:hover{ text-decoration:underline; }
+  .announce-on-nav .ann-close{
+    margin-left:.25em; inline-size:28px; block-size:28px;
+    border:0; border-radius:50%; background:transparent; color:inherit;
+    font-size:1.2rem; line-height:1; cursor:pointer;
   }
-  .announcement-bar a:hover{ text-decoration: underline; }
-  .announcement-bar .emoji{ font-size: 1.05em; }
+  .announce-on-nav .ann-close:hover{ background:rgba(0,0,0,.08); }
 
-  .announcement-bar .ann-close{
-    position: absolute; right: 8px; top: 50%; transform: translateY(-50%);
-    inline-size: 28px; block-size: 28px;
-    border: 0; border-radius: 50%;
-    background: transparent; color: inherit;
-    font-size: 1.2rem; line-height: 1; cursor: pointer;
+  /* 最小化（关闭后显示的小条），仍然居中悬浮在 navbar 中 */
+  .announce-on-nav.minimized{
+    padding:.35em .8em; min-height:auto; font-weight:700;
+    box-shadow:0 4px 14px rgba(0,0,0,.16); cursor:pointer;
   }
-  .announcement-bar .ann-close:hover{ background: rgba(0,0,0,.08); }
-
-  /* —— 缩小版横条（关闭后显示），同样贴导航、居中 —— */
-  .announcement-bar.minimized{
-    cursor: pointer;
-    min-height: unset;
-    padding: .35em .8em;
-    width: auto;
-    max-width: 240px;
-    box-shadow: 0 1px 4px rgba(0,0,0,.10);
-    font-weight: 600;
-  }
-  .announcement-bar.minimized:hover{ background: #e0edff; }
 
   /* 深色模式 */
   @media (prefers-color-scheme: dark){
-    .announcement-bar{
-      background:#0e2742; color:#e6f0ff; border-color:#294b73;
-      box-shadow: 0 2px 12px rgba(0,0,0,.45);
-    }
-    .announcement-bar a{ color:#ffb662; }
-    .announcement-bar .ann-close:hover{ background: rgba(255,255,255,.10); }
-    .announcement-bar.minimized{ background:#12375d; }
-    .announcement-bar.minimized:hover{ background:#0e2742; }
+    .announce-on-nav{ background:#0e2742; color:#e6f0ff; border-color:#294b73; }
+    .announce-on-nav a{ color:#ffb662; }
+    .announce-on-nav .ann-close:hover{ background:rgba(255,255,255,.10); }
+    .announce-on-nav.minimized{ background:#12375d; }
   }
 
-  /* 过渡 */
+  /* 小动画（可尊重减少动效设置） */
   @media (prefers-reduced-motion: no-preference){
-    .announcement-bar{ transition: opacity .18s ease, transform .18s ease; }
+    .announce-on-nav{ transition: transform .16s ease, opacity .16s ease; }
   }
 </style>
 
 <script>
-  (function(){
-    const VERSION = '2025-08-28-v5';     // 文案更新时改版本号，所有用户会重新看到
-    const KEY = 'announce:dismissed';
-    const bar = document.getElementById('announce');
-    const mini = document.getElementById('ann-toggle');
+(() => {
+  const VERSION = '2025-08-28-overlay-v1';
+  const KEY = 'announce:dismissed';
+  const bar  = document.getElementById('announce');
+  const pill = document.getElementById('ann-toggle');
 
-    // 计算导航栏高度，写入 CSS 变量，保证永远贴在下方
-    function setAnnTop(){
-      const nav = document.getElementById('quarto-header')
-               || document.querySelector('header.navbar')
-               || document.querySelector('.navbar.navbar-expand')
-               || document.querySelector('header.site-header');
-      const h = nav ? Math.round(nav.getBoundingClientRect().height) : 56;
-      document.documentElement.style.setProperty('--ann-top', (h + 6) + 'px');
-    }
-    setAnnTop();
-    window.addEventListener('resize', setAnnTop);
+  // 找到你的 Quarto/Bootstrap 导航栏
+  function navEl(){
+    return document.getElementById('quarto-header')
+        || document.querySelector('header.navbar')
+        || document.querySelector('.navbar.navbar-expand')
+        || document.querySelector('header.site-header');
+  }
 
-    // 初始显示逻辑
-    try{
-      const dismissed = localStorage.getItem(KEY);
-      if (dismissed !== VERSION){ bar.hidden = false; mini.hidden = true; }
-      else { bar.hidden = true; mini.hidden = false; }
-    }catch(_){ bar.hidden = false; }
+  // 把公告条居中到导航栏「几何中心」
+  function positionOverNavbar(){
+    const nav = navEl();
+    const y = nav ? (nav.getBoundingClientRect().top + nav.getBoundingClientRect().height/2) : 48;
+    document.documentElement.style.setProperty('--ann-center-y', `${y}px`);
+  }
 
-    // 关闭 -> 显示缩小条
-    bar.querySelector('.ann-close').addEventListener('click', () => {
-      bar.hidden = true;
-      mini.hidden = false;
-      try{ localStorage.setItem(KEY, VERSION); }catch(_){}
-    });
+  // 初始化显示逻辑
+  try {
+    const dismissed = localStorage.getItem(KEY);
+    if (dismissed !== VERSION){ bar.hidden = false; pill.hidden = true; }
+    else { bar.hidden = true; pill.hidden = false; }
+  } catch { bar.hidden = false; }
 
-    // 点击缩小条 -> 重新打开
-    mini.addEventListener('click', () => {
-      bar.hidden = false;
-      mini.hidden = true;
-      try{ localStorage.removeItem(KEY); }catch(_){}
-    });
+  // 事件：关闭 -> 显示腊📢；点击腊📢 -> 重新打开
+  bar.querySelector('.ann-close').addEventListener('click', () => {
+    bar.hidden = true; pill.hidden = false;
+    try{ localStorage.setItem(KEY, VERSION);}catch{}
+    positionOverNavbar();
+  });
+  pill.addEventListener('click', () => {
+    bar.hidden = false; pill.hidden = true;
+    try{ localStorage.removeItem(KEY);}catch{}
+    positionOverNavbar();
+  });
 
-    // ESC 也能关闭
-    bar.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') bar.querySelector('.ann-close').click();
-    });
-  })();
+  // 初次定位 & 在滚动/尺寸变化时持续对齐
+  const ro = new ResizeObserver(positionOverNavbar);
+  const nav = navEl(); if (nav) ro.observe(nav);
+  window.addEventListener('scroll', positionOverNavbar, { passive:true });
+  window.addEventListener('resize', positionOverNavbar);
+  window.addEventListener('load', positionOverNavbar);
+  positionOverNavbar();
+})();
 </script>
-
 
 ```{=html}
 <!-- Profile Section -->
