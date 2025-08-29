@@ -1,1 +1,199 @@
+---
+title: ""
+format:
+  html: 
+    toc: false
+    allow-html: true
+---
 
+<div class="announcement-bar">
+📢 <strong> News page is coming soon! </strong> 
+<a href="news.html" target="_self">Preview Page →</a>
+</div>
+
+<!-- Styles announcement bar -->
+<style>
+  .announcement-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    gap: .6em;
+    background: #e6f2ff;
+    color: #003366;
+    font-weight: 500;
+    font-size: 0.95rem;
+    min-height: 40px;
+    padding: 0.4em 1em;
+    border-radius: 0.4em;
+    border: 1px solid #b3d7ff;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+    width: 100%;
+    margin: 0.8em 0 1em 0;
+    box-sizing: border-box;
+  }
+  .announcement-bar strong,
+  .announcement-bar a {
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+  }
+  .announcement-bar a {
+    color: #c76a00;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .announcement-bar a:hover {
+    text-decoration: underline;
+  }
+</style>
+
+
+```{=html}
+<!-- Profile Section -->
+<div style="display:flex; flex-wrap:wrap; align-items:center; gap:2em; max-width:900px; margin:2em auto;">
+  <!-- Avatar -->
+  <div class="avatar-wrapper" style="flex:0 0 200px; text-align:center;">
+    <a href="about.html" title="About Me">
+      <img src="images/Headshot.jpg" alt="Yiwei Lu Headshot" class="avatar" style="border-radius:50%; width:180px; height:auto;">
+    </a>
+  </div>
+
+  <!-- Right Side: Name + Motto + Buttons -->
+  <div style="flex:1; text-align:center;">
+    <span class="name" data-text="Yiwei Lu" style="font-size:1.8em; font-weight:600;">Yiwei Lu</span><br>
+    <span class="motto" style="display:block; margin:0.5em 0 1.2em; color:#555;">
+      I believe clarity creates freedom — in data, design, and life.
+    </span>
+
+    <!-- Buttons directly under motto -->
+    <div class="connect-container" style="display:flex; flex-wrap:wrap; gap:1em; justify-content:center; margin-top:1em;">
+      <a href="https://www.linkedin.com/in/yiwei-lu78" class="btn" target="_blank">
+        <i class="bi bi-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://wa.me/6266736276" class="btn" target="_blank">
+        <i class="bi bi-whatsapp"></i> WhatsApp
+      </a>
+      <a href="https://github.com/lywww88" class="btn" target="_blank">
+        <i class="bi bi-github"></i> GitHub
+      </a>
+      <span style="color:#ccc;">|</span>
+      <a href="mailto:yiweilu36@uci.edu" class="btn">
+        <i class="bi bi-envelope"></i> Email Me
+      </a>
+      <a href="https://lywww88.github.io/about.html" class="btn">
+        <i class="bi bi-person-circle"></i> About Me
+      </a>
+    </div>
+  </div>
+</div>
+```
+
+
+::: { .project-card style="display: flex; flex-wrap: wrap; gap: 1.5em; align-items: flex-start;" markdown="1" }
+
+<!-- Left Text -->
+<div style="flex: 1;" markdown="1">
+**Financial Chatbot for Stock Market**
+
+Built an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.
+
+<div style="margin-top: 1em;">
+  [Open Article →](https://medium.com/@dylankl_74733/revolutionizing-stock-market-insights-the-financial-chatbot-that-empowers-investors-d1d8197e6c13){.btn}
+</div>
+</div>
+
+<!-- Right Pic -->
+<div style="flex: 0 0 420px;">
+  <img src="images/financial-chatbot1.gif"
+       alt="Chatbot Image"
+       style="width: 100%; height: auto; border-radius: 0.5em;" />
+</div>
+
+:::
+
+::: {.project-card}
+<div style="display: flex; flex-wrap: wrap; gap: 1.5em; align-items: flex-start;" markdown="1">
+
+<!-- Left Contents -->
+<div style="flex: 1;" markdown="1">
+**Uber Driver Prediction Dashboard**  
+<small><em>Datathon 2025 Competition</em></small>  
+
+<small>🏆 “Best Use of StrataScratch DC” 🏆</small>
+
+
+Developed an interactive dashboard to predict Uber driver performance using machine learning models.  
+
+<div style="margin-top: 1em; display: flex; gap: 0.8em;">
+  <a href="https://syntax3rr0r1.netlify.app/" class="btn" target="_blank">Open Demo →</a>
+  <a href="https://devpost.com/software/uber-driver-conversion-analysis" class="btn" target="_blank">Open Article →</a>
+</div>
+</div>
+
+<!-- Right Pic -->
+<div style="flex: 0 0 420px;">
+  <img src="images/datathon.jpg"
+       alt="Uber Dashboard"
+       style="width: 100%; height: 250px; border-radius: 0.5em;" />
+</div>
+
+</div>
+::: 
+
+::: {.project-card}
+<div style="display: flex; flex-wrap: wrap; gap: 1.5em; align-items: flex-start;" markdown="1">
+
+<!-- Left Contents -->
+<div style="flex: 1;" markdown="1">
+**Explore More Projects**  
+
+Discover data-driven projects in machine learning, dashboard design, and analytics. Each showcasing practical solutions with visuals and links.
+
+<div style="margin-top: 1em; display: flex; gap: 0.8em;">
+  <a href="https://lywww88.github.io/projects/" class="btn">Project Page →</a>
+
+</div>
+</div>
+
+<!-- Right Pic -->
+<div style="flex: 0 0 420px;">
+  <img src="images/project.jpg"
+       alt="More Projects"
+       style="width: 100%; height: auto; border-radius: 0.5em;" />
+</div>
+
+</div>
+:::
+
+<div aria-hidden="true" style="border-top: 1px solid #ccc; margin: 1.5em 0;"></div>
+
+<p style="text-align: center; color: #aaa; font-size: 0.9em; margin-top: 2em;">
+  Let’s stay in touch — here’s where to find me online.
+</p>
+
+<div class="connect-container" style="display: flex; flex-wrap: wrap; gap: 1em; align-items: center;">
+  <a href="https://www.linkedin.com/in/yiwei-lu78" class="btn" target="_blank">
+    <i class="bi bi-linkedin"></i> LinkedIn
+  </a>
+  <a href="https://wa.me/6266736276" class="btn" target="_blank">
+    <i class="bi bi-whatsapp"></i> WhatsApp
+  </a>
+  <a href="https://github.com/lywww88" class="btn" target="_blank">
+    <i class="bi bi-github"></i> GitHub
+  </a>
+  <span style="color: #ccc;">|</span>
+  <a href="mailto:yiweilu36@uci.edu" class="btn">
+    <i class="bi bi-envelope"></i> Email Me
+  </a>
+  <a href="https://lywww88.github.io/about.html" class="btn">
+    <i class="bi bi-person-circle"></i> About Me
+  </a>
+</div>
+
+<div aria-hidden="true" style="border-top: 1px solid #ccc; margin: 1.5em 0;"></div>
+
+<p style="text-align: center; color: #888; font-size: 0.85em; margin-top: 3em;">
+  © 2025 Yiwei Lu. All rights reserved.
+</p>
