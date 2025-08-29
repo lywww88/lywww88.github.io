@@ -3,7 +3,7 @@ title: ""
 format:
   html: 
     toc: false
-    allow-html: true
+    allow-raw-html: true
 ---
 
 <!-- Thin announcement strip (sticks under navbar) -->
