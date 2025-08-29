@@ -15,7 +15,7 @@ format:
 </div>
 
 <!-- Minimized (reopen) pill -->
-<div id="ann-toggle" class="announce-on-nav minimized" hidden>腊📢</div>
+<div id="ann-toggle" class="announce-on-nav minimized" hidden>📢</div>
 
 <style>
   .announce-on-nav{
