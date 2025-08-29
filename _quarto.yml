@@ -74,7 +74,6 @@ website:
         aria-label: W
         icon: none
         target: _blank
-        
 
 format:
   html:
@@ -133,6 +132,7 @@ format:
           </div>
         </div>
 
+        
         <style>
           /* ===== Floating Search ===== */
           #floating-search{
