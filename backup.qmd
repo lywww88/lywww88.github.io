@@ -6,6 +6,12 @@ format:
     allow-html: true
 ---
 
+<script>
+  if (window.location.pathname.includes("backup.html")) {
+    window.location.href = "/404.html"; 
+  }
+</script>
+
 <div class="announcement-bar">
 📢 <strong> News page is coming soon! </strong> 
 <a href="news.html" target="_self">Preview Page →</a>
