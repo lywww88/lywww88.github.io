@@ -9,92 +9,86 @@ format:
 <!-- Announcement Bar -->
 <div id="announce" class="announcement-bar" role="region" aria-label="Site announcement" hidden>
   <span class="emoji" aria-hidden="true">📢</span>
-  <strong>News page is coming soon!</strong>
+  <strong> News page is coming soon! </strong>
   <a href="news.html" target="_self">Preview Page →</a>
   <button class="ann-close" type="button" aria-label="Dismiss announcement" title="Dismiss">×</button>
 </div>
 
+<!-- Toggle button (hidden when bar is visible) -->
+<button id="ann-toggle" class="ann-toggle" hidden>Announcement</button>
+
 <style>
-  .announcement-bar{
+  .announcement-bar {
     position: relative;
     display: flex;
+    justify-content: center;   /* 🔑 内容居中 */
     align-items: center;
     gap: .6em;
     background: #eaf3ff;
     color: #07315c;
-    font: 500 0.95rem/1.2 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-    min-height: 44px;
-    padding: .5em .85em;
+    font: 500 0.95rem/1.3 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    padding: .6em 1em;
     border: 1px solid #bfd9ff;
     border-radius: .5em;
-    box-shadow: 0 1px 6px rgba(0,0,0,.06);
+    box-shadow: 0 1px 6px rgba(0,0,0,.08);
     margin: .8em 0 1em;
   }
-  .announcement-bar .emoji{ font-size: 1.05em }
-  .announcement-bar a{
+  .announcement-bar a {
     color: #c46800; font-weight: 600; text-decoration: none;
   }
-  .announcement-bar a:hover{ text-decoration: underline }
-  .ann-close{
-    margin-left: auto;
-    inline-size: 32px; block-size: 32px;
+  .announcement-bar a:hover { text-decoration: underline }
+  .ann-close {
+    position: absolute; right: 8px; top: 50%; transform: translateY(-50%);
+    inline-size: 28px; block-size: 28px;
     border: 0; border-radius: 50%;
     background: transparent; color: inherit;
-    font-size: 1.25rem; line-height: 1; cursor: pointer;
+    font-size: 1.2rem; line-height: 1; cursor: pointer;
   }
-  .ann-close:hover{ background: rgba(0,0,0,.06) }
-  .ann-close:active{ transform: scale(.96) }
+  .ann-close:hover { background: rgba(0,0,0,.08) }
 
-  /* 小屏换行、压缩间距 */
-  @media (max-width: 520px){
-    .announcement-bar{
-      flex-wrap: wrap; gap: .45em;
-      font-size: .92rem; padding: .45em .7em;
-    }
-    .ann-close{ inline-size: 28px; block-size: 28px }
+  /* Toggle button */
+  .ann-toggle {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: .4em .9em;
+    font: 500 0.9rem/1.2 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    border: 1px solid #bfd9ff; border-radius: .5em;
+    background: #f5faff; color: #07315c;
+    cursor: pointer;
+    box-shadow: 0 1px 4px rgba(0,0,0,.06);
   }
-
-  /* 深色模式微调 */
-  @media (prefers-color-scheme: dark){
-    .announcement-bar{
-      background: #0e2742;
-      color: #e6f0ff;
-      border-color: #294b73;
-      box-shadow: 0 1px 6px rgba(0,0,0,.35);
-    }
-    .announcement-bar a{ color: #ffb662 }
-    .ann-close:hover{ background: rgba(255,255,255,.08) }
-  }
-
-  /* 减少动画环境不启用过多动效 */
-  @media (prefers-reduced-motion: reduce){
-    .ann-close:active{ transform: none }
-  }
+  .ann-toggle:hover { background: #eaf3ff }
 </style>
 
 <script>
   (function(){
-    // 每次内容改动请提升版本号，旧的“已关闭”记录就会失效，用户能看到新公告
-    const VERSION = '2025-08-28-newsbar-v1';
+    const VERSION = '2025-08-28-v3'; // 更新内容时改版本号
     const KEY = 'announce:dismissed';
-    const el = document.getElementById('announce');
-    if (!el) return;
+    const bar = document.getElementById('announce');
+    const toggle = document.getElementById('ann-toggle');
 
+    // 初始化显示逻辑
     try {
       const dismissed = localStorage.getItem(KEY);
-      if (dismissed === VERSION) return;    // 之前关闭过这条版本
-      el.hidden = false;                    // 显示公告
-    } catch (_) { el.hidden = false; }      // localStorage 不可用时仍显示
+      if (dismissed !== VERSION) {
+        bar.hidden = false; toggle.hidden = true;
+      } else {
+        bar.hidden = true; toggle.hidden = false;
+      }
+    } catch(_) { bar.hidden = false; }
 
-    const closeBtn = el.querySelector('.ann-close');
-    closeBtn?.addEventListener('click', () => {
-      el.remove();                          // 从 DOM 移除
+    // 关闭事件
+    const closeBtn = bar.querySelector('.ann-close');
+    closeBtn.addEventListener('click', () => {
+      bar.hidden = true;
+      toggle.hidden = false;
       try { localStorage.setItem(KEY, VERSION); } catch(_) {}
     });
 
-    // ESC 快捷关闭（可访问性）
-    el.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeBtn?.click();
+    // 打开事件
+    toggle.addEventListener('click', () => {
+      bar.hidden = false;
+      toggle.hidden = true;
+      try { localStorage.removeItem(KEY); } catch(_) {}
     });
   })();
 </script>
