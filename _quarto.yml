@@ -19,7 +19,7 @@ website:
         text: '<span class="nav-text">News</span>'
       - text: '<span class="nav-text">Projects</span>'
         menu:
-          - href: projects/index.qmd
+          - href: projects/project.qmd
             text: '<span class="nav-text">Projects</span>'
           - href: projects/Capstone.qmd
             text: '<span class="nav-text">Capstone Project</span>'
