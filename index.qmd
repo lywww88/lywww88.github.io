@@ -145,7 +145,7 @@ Developed an interactive dashboard to predict Uber driver performance using mach
 Discover data-driven projects in machine learning, dashboard design, and analytics. Each showcasing practical solutions with visuals and links.
 
 <div style="margin-top: 1em; display: flex; gap: 0.8em;">
-  <a href="https://lywww88.github.io/projects/" class="btn">Project Page →</a>
+  <a href="https://lywww88.github.io/projects/project.qmd" class="btn">Project Page →</a>
 
 </div>
 </div>
