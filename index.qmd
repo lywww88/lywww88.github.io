@@ -8,31 +8,41 @@ format:
 
 <!-- ===== Announcement (overlay on navbar center) ===== -->
 <div id="announce" class="announce-on-nav" role="dialog" aria-label="Site announcement" hidden>
-  <span class="emoji" aria-hidden="true">📢</span>
+  <!-- 内联 SVG 图标 -->
+  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+    <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
+    <line x1="12" y1="8"  x2="12" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="12" cy="16" r="1.5" fill="currentColor"/>
+  </svg>
   <strong> News page is coming soon! </strong>
   <a href="news.html" target="_self">Preview Page →</a>
   <button class="ann-close" type="button" aria-label="Dismiss">×</button>
 </div>
 
 <!-- Minimized (reopen) pill -->
-<div id="ann-toggle" class="announce-on-nav minimized" hidden>📢</div>
+<div id="ann-toggle" class="announce-on-nav minimized" hidden>腊📢</div>
 
 <style>
   .announce-on-nav{
-    position: fixed;               /* 以视口定位，覆盖在导航栏之上 */
+    position: fixed;               /* 悬浮覆盖在导航栏之上 */
     left: 50%;
     top: var(--ann-center-y, 48px);/* JS 计算：导航栏中心 Y */
     transform: translate(-50%, -50%);
-    z-index: 2000;
+    z-index: 9999;                 /* 提高层级，确保盖住 navbar */
 
-    /* 原样式风格（非紧凑） */
+    /* 原样式风格（非紧凑） + 顶部彩带（背景多图层实现） */
     display: inline-flex; align-items: center; justify-content: center; gap: .6em;
-    background: #eaf3ff; color: #07315c;
+    color: #07315c;
     font: 500 0.95rem/1.3 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
     min-height: 44px; padding: .6em 1em;
     border: 1px solid #bfd9ff; border-radius: .5em;
     box-shadow: 0 6px 18px rgba(0,0,0,.18);
-    pointer-events: auto;
+    white-space: nowrap; pointer-events: auto;
+
+    /* ⬇️ 顶部 4px 渐变条 + 主体底色 */
+    background:
+      linear-gradient(90deg,#0061ff 0%,#60efff 45%,#00f5a0 100%) top/100% 4px no-repeat,
+      #eaf3ff;
   }
   .announce-on-nav a{ color:#c46800; font-weight:600; text-decoration:none; }
   .announce-on-nav a:hover{ text-decoration:underline; }
@@ -42,22 +52,31 @@ format:
     font-size:1.2rem; line-height:1; cursor:pointer;
   }
   .announce-on-nav .ann-close:hover{ background:rgba(0,0,0,.08); }
+  .announce-on-nav .icon{ width:20px; height:20px; flex:0 0 20px; }
 
-  /* 最小化（关闭后显示的小条），仍然居中悬浮在 navbar 中 */
+  /* 最小化（关闭后的小条），仍然居中悬浮 */
   .announce-on-nav.minimized{
     padding:.35em .8em; min-height:auto; font-weight:700;
     box-shadow:0 4px 14px rgba(0,0,0,.16); cursor:pointer;
+    background:
+      linear-gradient(90deg,#0061ff 0%,#60efff 45%,#00f5a0 100%) top/100% 4px no-repeat,
+      #eaf3ff;
   }
 
   /* 深色模式 */
   @media (prefers-color-scheme: dark){
-    .announce-on-nav{ background:#0e2742; color:#e6f0ff; border-color:#294b73; }
+    .announce-on-nav{
+      border-color:#294b73;
+      background:
+        linear-gradient(90deg,#3aa0ff 0%,#60efff 45%,#00f5a0 100%) top/100% 4px no-repeat,
+        #0e2742;
+      color:#e6f0ff;
+    }
     .announce-on-nav a{ color:#ffb662; }
     .announce-on-nav .ann-close:hover{ background:rgba(255,255,255,.10); }
-    .announce-on-nav.minimized{ background:#12375d; }
   }
 
-  /* 小动画（可尊重减少动效设置） */
+  /* 小动画（尊重减少动效设置） */
   @media (prefers-reduced-motion: no-preference){
     .announce-on-nav{ transition: transform .16s ease, opacity .16s ease; }
   }
@@ -65,12 +84,12 @@ format:
 
 <script>
 (() => {
-  const VERSION = '2025-08-28-overlay-v1';
+  const VERSION = '2025-08-28-overlay-v1-svg-bgstrip';
   const KEY = 'announce:dismissed';
   const bar  = document.getElementById('announce');
   const pill = document.getElementById('ann-toggle');
 
-  // 找到你的 Quarto/Bootstrap 导航栏
+  // 找到 Quarto/Bootstrap 导航栏
   function navEl(){
     return document.getElementById('quarto-header')
         || document.querySelector('header.navbar')
@@ -81,7 +100,8 @@ format:
   // 把公告条居中到导航栏「几何中心」
   function positionOverNavbar(){
     const nav = navEl();
-    const y = nav ? (nav.getBoundingClientRect().top + nav.getBoundingClientRect().height/2) : 48;
+    const rect = nav ? nav.getBoundingClientRect() : { top: 0, height: 96 };
+    const y = rect.top + rect.height / 2;
     document.documentElement.style.setProperty('--ann-center-y', `${y}px`);
   }
 
@@ -92,7 +112,7 @@ format:
     else { bar.hidden = true; pill.hidden = false; }
   } catch { bar.hidden = false; }
 
-  // 事件：关闭 -> 显示腊📢；点击腊📢 -> 重新打开
+  // 关闭 -> 显示腊📢；打开 -> 展开
   bar.querySelector('.ann-close').addEventListener('click', () => {
     bar.hidden = true; pill.hidden = false;
     try{ localStorage.setItem(KEY, VERSION);}catch{}
@@ -104,16 +124,15 @@ format:
     positionOverNavbar();
   });
 
-  // 初次定位 & 在滚动/尺寸变化时持续对齐
-  const ro = new ResizeObserver(positionOverNavbar);
-  const nav = navEl(); if (nav) ro.observe(nav);
+  // 持续对齐
+  const nav = navEl();
+  if (nav && 'ResizeObserver' in window) new ResizeObserver(positionOverNavbar).observe(nav);
   window.addEventListener('scroll', positionOverNavbar, { passive:true });
   window.addEventListener('resize', positionOverNavbar);
   window.addEventListener('load', positionOverNavbar);
   positionOverNavbar();
 })();
 </script>
-
 
 
 ```{=html}
