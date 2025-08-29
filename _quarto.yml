@@ -28,22 +28,14 @@ website:
             text: '<span class="nav-text">Capstone Project</span>'
       - text: '<span class="nav-text">Startup</span>'
         menu:
-          - text: '<span style="font-size: 0.7rem; font-weight: 300; color: gray;">BETA LAUNCH</span>'
-          - text: '<strong>Klug Forecast AI</strong>'
-            href: "https://forecastai-poc.netlify.app/"
-            target: "_blank"
-          - text: '<span style="font-size: 0.7rem; font-weight: 300; color: gray;">CONCEPT STAGE</span>'
-          - text: '<strong>Platemate</strong>'
-            href: "https://platemateofficial.netlify.app/"
-            target: "_blank"
-          - text: '<strong>Skill Forge</strong>'
-            href: "https://skillforgeofficial.netlify.app/"
-            target: "_blank"
-          - text: '<hr style="border: none; border-top: 1px solid #ccc; margin: 0.8em 0;">'
-          - text: '<span style="font-size: 0.7rem; font-weight: 300; color: gray;">ABOUT</span>'
-          - text: '<strong>Startup Journey</strong>'
-            href: startup/journey.qmd
-            target: "_self"
+          - { text: '<span style="font-size: 0.7rem; font-weight: 300; color: gray;">BETA LAUNCH</span>' }
+          - { text: '<strong>Klug Forecast AI</strong>', href: "https://forecastai-poc.netlify.app/", target: "_blank" }
+          - { text: '<span style="font-size: 0.7rem; font-weight: 300; color: gray;">CONCEPT STAGE</span>' }
+          - { text: '<strong>Platemate</strong>', href: "https://platemateofficial.netlify.app/", target: "_blank" }
+          - { text: '<strong>Skill Forge</strong>', href: "https://skillforgeofficial.netlify.app/", target: "_blank" }
+          - { text: '<hr style="border: none; border-top: 1px solid #ccc; margin: 0.8em 0;">' }
+          - { text: '<span style="font-size: 0.7rem; font-weight: 300; color: gray;">ABOUT</span>' }
+          - { text: '<strong>Startup Journey</strong>', href: "startup/journey.qmd", target: "_self" }
       - href: about.qmd
         text: '<span class="nav-text">About</span>'
 
@@ -132,7 +124,6 @@ format:
           </div>
         </div>
 
-        
         <style>
           /* ===== Floating Search ===== */
           #floating-search{
@@ -149,11 +140,11 @@ format:
             display: flex;
             align-items: center;
             gap: 0.55em;
-            cursor: pointer;                 /* 点击为主 */
+            cursor: pointer;
             box-shadow: 0 10px 24px rgba(13,110,253,.35);
             z-index: 1100;
             transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
-            touch-action: manipulation;      /* 移动端优先点击 */
+            touch-action: manipulation;
           }
           #floating-search:hover{ transform: translateY(-2px); box-shadow: 0 14px 30px rgba(13,110,253,.45); }
           #floating-search i{ font-size: 1.1rem; }
@@ -167,7 +158,7 @@ format:
             justify-content: center;
             margin-right: 2px;
             cursor: grab;
-            touch-action: none;              
+            touch-action: none;
             user-select: none;
             -webkit-user-select: none;
             opacity: .85;
@@ -209,16 +200,15 @@ format:
           #back-to-top:hover{ transform: translateY(-2px); box-shadow: 0 14px 30px rgba(13,110,253,.45); }
           #back-to-top:active{ transform: translateY(0) scale(.96); }
           #back-to-top i{ font-size: 1.25rem; line-height: 1; }
-          @media (max-width: 480px){ #back-to-top{ right: 16px; bottom: 80px; } }
 
           /* ===== Modal ===== */
           #release-overlay{
-            position: fixed; inset: 0; 
+            position: fixed; inset: 0;
             background: rgba(0,0,0,.35);
             z-index: 1200;
           }
           #release-modal{
-            position: fixed; 
+            position: fixed;
             left: 50%; top: 50%; transform: translate(-50%, -50%);
             width: min(560px, 92vw);
             background: #fff; color:#222;
