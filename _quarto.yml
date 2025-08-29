@@ -30,20 +30,20 @@ website:
       - text: '<span class="nav-text">Startup</span>'
         menu:
           - text: '<span style="font-size: 0.7rem; font-weight: 300; color: gray;">BETA LAUNCH</span>'
-          - href: https://forecastai-poc.netlify.app/
-            text: '<strong>Klug Forecast AI</strong>'
+          - text: '<strong>Klug Forecast AI</strong>'
+            href: https://forecastai-poc.netlify.app/
             target: _blank
           - text: '<span style="font-size: 0.7rem; font-weight: 300; color: gray;">CONCEPT STAGE</span>'
-          - href: https://platemateofficial.netlify.app/
-            text: '<strong>Platemate</strong>'
+          - text: '<strong>Platemate</strong>'
+            href: https://platemateofficial.netlify.app/
             target: _blank
-          - href: https://skillforgeofficial.netlify.app/
-            text: '<strong>Skill Forge</strong>'
+          - text: '<strong>Skill Forge</strong>'
+            href: https://skillforgeofficial.netlify.app/
             target: _blank
           - text: '<hr style="border: none; border-top: 1px solid #ccc; margin: 0.8em 0;">'
           - text: '<span style="font-size: 0.7rem; font-weight: 300; color: gray;">ABOUT</span>'
-          - href: startup/journey.qmd
-            text: '<strong>Startup Journey</strong>'
+          - text: '<strong>Startup Journey</strong>'
+            href: startup/journey.qmd
             target: _self
       - href: about.qmd
         text: '<span class="nav-text">About</span>'
