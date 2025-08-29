@@ -16,99 +16,51 @@ format:
   <button class="ann-toggle" aria-label="Collapse announcement" title="Collapse">▾</button>
 </div>
 
-<!-- Reopen tab (appears when collapsed) -->
 <button class="ann-tab" aria-label="Show announcement" hidden>📣 News</button>
 
 <style>
-/* ===== thin strip ===== */
 .ann-strip{
-  /* 放在导航栏正下方：把这一块紧贴导航，无额外大间距 */
-  margin: 6px 0 14px;
-  padding: .38rem .75rem;
-  display:flex; align-items:center; justify-content:center; gap:.8rem;
-  background:#f7faff;
-  border-bottom:1px solid #e6eefc;
-  box-shadow: 0 1px 0 rgba(13,110,253,.04);
-  color:#0b2e66;
-  font:500 .95rem/1.25 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  overflow:hidden;              /* 为动画裁剪 */
-  max-height: 44px;             /* 展开高度 */
-  transition: max-height .28s ease, opacity .28s ease;
-  opacity:1;
-  position:relative;
-  z-index: 5;
+  margin:6px 0 14px;padding:.38rem .75rem;
+  display:flex;align-items:center;justify-content:center;gap:.8rem;
+  background:#f7faff;border-bottom:1px solid #e6eefc;
+  color:#0b2e66;font:500 .95rem/1.25 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  overflow:hidden;max-height:44px;transition:max-height .28s ease,opacity .28s ease;opacity:1;position:relative;z-index:5;
 }
-.ann-inner{display:flex; align-items:center; gap:.6rem;}
+.ann-inner{display:flex;align-items:center;gap:.6rem}
 .ann-dot{width:.5rem;height:.5rem;border-radius:50%;background:#0d6efd;box-shadow:0 0 0 4px rgba(13,110,253,.12)}
 .ann-link{font-weight:600;text-decoration:none;border-bottom:1px dashed #7aa4ff}
 .ann-link:hover{border-bottom-color:transparent}
-
-/* 收起时的样式（通过 JS 加 .is-collapsed） */
-.ann-strip.is-collapsed{max-height:0; opacity:0; border-bottom-color:transparent; margin-bottom:0}
-
-/* 右侧收缩按钮（小三角） */
-.ann-toggle{
-  position:absolute; right:10px; top:50%; transform:translateY(-50%);
-  border:0; background:transparent; cursor:pointer;
-  font-size:1rem; line-height:1; color:#5c728a; opacity:.7;
-}
+.ann-strip.is-collapsed{max-height:0;opacity:0;border-bottom-color:transparent;margin-bottom:0}
+.ann-toggle{position:absolute;right:10px;top:50%;transform:translateY(-50%);border:0;background:transparent;cursor:pointer;font-size:1rem;line-height:1;color:#5c728a;opacity:.7}
 .ann-toggle:hover{opacity:1}
-
-/* 重新打开的小标签（贴近右上角，和导航接近） */
-.ann-tab{
-  position: sticky; top: 8px; /* 导航栏下方“钉住” */
-  margin-left: auto; float: right;
-  padding:.3rem .55rem; border-radius:999px; border:1px solid #e0e8ff;
-  background:#f6f9ff; color:#0b2e66;
-  font:600 .88rem/1 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  box-shadow:0 6px 18px rgba(13,110,253,.12);
-}
-.ann-tab:hover{background:#ffffff}
-
-/* 暗色自适配（可选） */
+.ann-tab{position:sticky;top:8px;margin-left:auto;float:right;padding:.3rem .55rem;border-radius:999px;border:1px solid #e0e8ff;background:#f6f9ff;color:#0b2e66;font:600 .88rem/1 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;box-shadow:0 6px 18px rgba(13,110,253,.12)}
+.ann-tab:hover{background:#fff}
 @media (prefers-color-scheme: dark){
-  .ann-strip{background:#0f2340;border-bottom-color:#213a66;color:#d7e6ff;box-shadow:none}
+  .ann-strip{background:#0f2340;border-bottom-color:#213a66;color:#d7e6ff}
   .ann-link{border-bottom-color:#5b86ff}
   .ann-toggle{color:#b8c9ff}
   .ann-tab{background:#0f2340;color:#d7e6ff;border-color:#2b4875}
-}
-
-/* 小屏收紧 */
-@media (max-width:640px){
-  .ann-strip{padding:.32rem .6rem; gap:.6rem}
-  .ann-inner{gap:.5rem}
 }
 </style>
 
 <script>
 (function(){
-  const KEY='ann_strip_collapsed_v1'; // 记忆是否收起
-  const strip = document.querySelector('.ann-strip');
-  const toggleBtn = strip.querySelector('.ann-toggle');
-  const tab = document.querySelector('.ann-tab');
+  const KEY='ann_strip_collapsed_v1';
+  const strip=document.querySelector('.ann-strip');
+  const toggleBtn=strip.querySelector('.ann-toggle');
+  const tab=document.querySelector('.ann-tab');
 
-  function collapse(persist=true){
-    strip.classList.add('is-collapsed');
-    tab.hidden = false;
-    persist && localStorage.setItem(KEY,'1');
-  }
-  function expand(persist=true){
-    strip.classList.remove('is-collapsed');
-    tab.hidden = true;
-    persist && localStorage.setItem(KEY,'0');
-  }
+  function collapse(persist=true){ strip.classList.add('is-collapsed'); tab.hidden=false; persist&&localStorage.setItem(KEY,'1'); }
+  function expand(persist=true){ strip.classList.remove('is-collapsed'); tab.hidden=true; persist&&localStorage.setItem(KEY,'0'); }
 
-  // 初始状态（支持 ?showAnn=1 强制展开）
-  const forceShow = new URLSearchParams(location.search).get('showAnn')==='1';
-  const saved = localStorage.getItem(KEY);
-  if (forceShow || saved !== '1'){ expand(false); } else { collapse(false); }
+  const forceShow=new URLSearchParams(location.search).get('showAnn')==='1';
+  const saved=localStorage.getItem(KEY);
+  if (forceShow || saved!=='1'){ expand(false); } else { collapse(false); }
 
-  // 按钮交互
-  toggleBtn.addEventListener('click', ()=> collapse(true));
-  tab.addEventListener('click', ()=> expand(true));
+  toggleBtn.addEventListener('click',()=>collapse(true));
+  tab.addEventListener('click',()=>expand(true));
 })();
 </script>
-
 
 ```{=html}
 <!-- Profile Section -->
