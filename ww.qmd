@@ -38,7 +38,7 @@ format:
   }
 
   if (now < failData.lockedUntil) {
-    denyAndRedirect("Please try again later.");
+    denyAndRedirect("<br>Please try again later.");
   } else {
     failData.count = 0;
     localStorage.setItem("news_fail", JSON.stringify(failData));
