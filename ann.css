@@ -1,0 +1,95 @@
+:root { --navbar-h: 80px; }   /* 你的 navbar 最小高是 80px */
+
+.ann-strip{
+  position: sticky;
+  top: var(--navbar-h);     /* 紧贴导航吸顶 */
+  z-index: 900;             /* 低于 .navbar 的 1000 */
+  margin: 0;
+  padding: .38rem .75rem;
+  display: flex; align-items: center; justify-content: center; gap: .8rem;
+  background: #f7faff;
+  border-bottom: 1px solid #e6eefc;
+  color: #0b2e66;
+  font: 500 .95rem/1.25 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  overflow: hidden;
+  max-height: 44px;
+  transition: max-height .28s ease, opacity .28s ease;
+  opacity: 1;
+}
+
+/* 底部小三角（指示“往下”） */
+.ann-strip::after{
+  content:"";
+  position:absolute; left:50%; transform:translateX(-50%);
+  bottom:-6px; width:0; height:0;
+  border-left:6px solid transparent; border-right:6px solid transparent;
+  border-top:6px solid #e6eefc;
+}
+.ann-strip::before{
+  content:"";
+  position:absolute; left:50%; transform:translateX(-50%);
+  bottom:-5px; width:0; height:0;
+  border-left:5px solid transparent; border-right:5px solid transparent;
+  border-top:5px solid #f7faff;
+}
+
+.ann-inner{display:flex; align-items:center; gap:.6rem;}
+.ann-dot{width:.5rem; height:.5rem; border-radius:50%; background:#0d6efd; box-shadow:0 0 0 4px rgba(13,110,253,.12);}
+.ann-link{font-weight:600; text-decoration:none; border-bottom:1px dashed #7aa4ff;}
+.ann-link:hover{border-bottom-color:transparent}
+
+/* 收起状态 */
+.ann-strip.is-collapsed{
+  max-height: 0;
+  opacity: 0;
+  border-bottom-color: transparent;
+}
+
+/* 右侧小尖头按钮（三角形） */
+.ann-toggle{
+  position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+  border: 0; background: transparent; cursor: pointer;
+  width: 20px; height: 20px; padding: 0;
+}
+.ann-toggle .chev{
+  display:inline-block; width:0; height:0;
+  border-left:6px solid transparent; border-right:6px solid transparent;
+  border-top:7px solid #5c728a;
+  opacity:.75; transition: transform .2s ease, opacity .2s ease;
+}
+.ann-toggle:hover .chev{ opacity:1; }
+
+/* 收起时，让三角翻转 */
+.ann-strip.is-collapsed .ann-toggle .chev{ transform: rotate(180deg); }
+
+/* 收起后的“再打开”标签（与导航同层） */
+.ann-tab{
+  position: sticky;
+  top: var(--navbar-h);
+  margin-left: auto; float: right;
+  transform: translateY(2px);
+  padding:.28rem .55rem;
+  border-radius:999px;
+  border:1px solid #e0e8ff;
+  background:#f6f9ff; color:#0b2e66;
+  font:600 .86rem/1 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  box-shadow:0 6px 18px rgba(13,110,253,.12);
+  z-index: 900;
+}
+.ann-tab:hover{background:#fff}
+
+/* 暗色模式 */
+@media (prefers-color-scheme: dark){
+  .ann-strip{background:#0f2340; border-bottom-color:#213a66; color:#d7e6ff;}
+  .ann-strip::after{ border-top-color:#213a66; }
+  .ann-strip::before{ border-top-color:#0f2340; }
+  .ann-link{border-bottom-color:#5b86ff;}
+  .ann-toggle .chev{ border-top-color:#b8c9ff; }
+  .ann-tab{background:#0f2340; color:#d7e6ff; border-color:#2b4875;}
+}
+
+/* 小屏 */
+@media (max-width:640px){
+  .ann-strip{padding:.32rem .6rem;}
+  .ann-inner{gap:.5rem;}
+}
