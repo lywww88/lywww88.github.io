@@ -1,5 +1,5 @@
 ---
-title: "Projects - Yiwei Lu"
+title: ""
 page-title: "Projects - Yiwei Lu"      
 page-layout: full
 format:
