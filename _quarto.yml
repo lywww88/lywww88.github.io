@@ -78,7 +78,7 @@ format:
   html:
     theme: cosmo
     toc: true
-    allow-raw-html: true
+    allow-html: true
     css: styles.css
     include-in-header:
       text: |
