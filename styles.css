@@ -332,7 +332,6 @@
   }
 }
 
-
 /* Hide arrow ONLY for Resume dropdown */
 .navbar-nav .dropdown:has(.resume-tab) > .dropdown-toggle::before {
   display: none !important;

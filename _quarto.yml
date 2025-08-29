@@ -3,9 +3,6 @@ project:
   resources:
     - images/**
     - projects/*.pdf
-    - ann.html
-    - ann.css
-    - ann.js
 
 website:
   title: "Yiwei Lu"
@@ -22,27 +19,27 @@ website:
         text: '<span class="nav-text">News</span>'
       - text: '<span class="nav-text">Projects</span>'
         menu:
-          - href: projects/project.qmd
+          - href: projects/index.qmd
             text: '<span class="nav-text">Projects</span>'
           - href: projects/Capstone.qmd
             text: '<span class="nav-text">Capstone Project</span>'
       - text: '<span class="nav-text">Startup</span>'
         menu:
           - text: '<span style="font-size: 0.7rem; font-weight: 300; color: gray;">BETA LAUNCH</span>'
-          - text: '<strong>Klug Forecast AI</strong>'
-            href: https://forecastai-poc.netlify.app/
+          - href: https://forecastai-poc.netlify.app/
+            text: '<strong>Klug Forecast AI</strong>'
             target: _blank
           - text: '<span style="font-size: 0.7rem; font-weight: 300; color: gray;">CONCEPT STAGE</span>'
-          - text: '<strong>Platemate</strong>'
-            href: https://platemateofficial.netlify.app/
+          - href: https://platemateofficial.netlify.app/
+            text: '<strong>Platemate</strong>'
             target: _blank
-          - text: '<strong>Skill Forge</strong>'
-            href: https://skillforgeofficial.netlify.app/
+          - href: https://skillforgeofficial.netlify.app/
+            text: '<strong>Skill Forge</strong>'
             target: _blank
           - text: '<hr style="border: none; border-top: 1px solid #ccc; margin: 0.8em 0;">'
           - text: '<span style="font-size: 0.7rem; font-weight: 300; color: gray;">ABOUT</span>'
-          - text: '<strong>Startup Journey</strong>'
-            href: startup/journey.qmd
+          - href: startup/journey.qmd
+            text: '<strong>Startup Journey</strong>'
             target: _self
       - href: about.qmd
         text: '<span class="nav-text">About</span>'
@@ -74,16 +71,15 @@ website:
         aria-label: W
         icon: none
         target: _blank
-        
+
+
 
 format:
   html:
     theme: cosmo
     toc: true
-    allow-html: true
-    css: 
-      - styles.css
-      - ann.css
+    allow-raw-html: true
+    css: styles.css
     include-in-header:
       text: |
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
@@ -98,10 +94,8 @@ format:
             left: -9999px !important;
           }
         </style>
-    include-before-body: ann.html
     include-after-body:
-      - ann.js
-      - text: |
+      text: |
         <!-- ========== GLOBAL: Floating Search & Back-to-Top ========== -->
         <button id="floating-search" aria-label="Search" title="Search (⌘/Ctrl + K)">
           <span id="fs-handle" aria-label="Drag" title="Drag" role="button"></span>

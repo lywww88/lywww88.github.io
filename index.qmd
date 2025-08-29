@@ -4,9 +4,50 @@ format:
   html: 
     toc: false
     allow-html: true
-    css: styles.css
-    include-before-body: ann.html
 ---
+
+<div class="announcement-bar">
+📢 <strong> News page is coming soon! </strong> 
+<a href="news.html" target="_self">Preview Page →</a>
+</div>
+
+<!-- Styles announcement bar -->
+<style>
+  .announcement-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    gap: .6em;
+    background: #e6f2ff;
+    color: #003366;
+    font-weight: 500;
+    font-size: 0.95rem;
+    min-height: 40px;
+    padding: 0.4em 1em;
+    border-radius: 0.4em;
+    border: 1px solid #b3d7ff;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+    width: 100%;
+    margin: 0.8em 0 1em 0;
+    box-sizing: border-box;
+  }
+  .announcement-bar strong,
+  .announcement-bar a {
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+  }
+  .announcement-bar a {
+    color: #c76a00;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .announcement-bar a:hover {
+    text-decoration: underline;
+  }
+</style>
 
 
 ```{=html}
@@ -21,7 +62,7 @@ format:
 
   <!-- Right Side: Name + Motto + Buttons -->
   <div style="flex:1; text-align:center;">
-    <span class="name" data-text="Yiwei Lu" style="font-size:2.0em; font-weight:800;">Yiwei Lu</span><br>
+    <span class="name" data-text="Yiwei Lu" style="font-size:1.8em; font-weight:600;">Yiwei Lu</span><br>
     <span class="motto" style="display:block; margin:0.5em 0 1.2em; color:#555;">
       I believe clarity creates freedom — in data, design, and life.
     </span>
@@ -118,7 +159,6 @@ Discover data-driven projects in machine learning, dashboard design, and analyti
 
 </div>
 :::
-
 
 <div aria-hidden="true" style="border-top: 1px solid #ccc; margin: 1.5em 0;"></div>
 
