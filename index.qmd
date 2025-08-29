@@ -6,48 +6,98 @@ format:
     allow-html: true
 ---
 
-<div class="announcement-bar">
-📢 <strong> News page is coming soon! </strong> 
-<a href="news.html" target="_self">Preview Page →</a>
+<!-- Announcement Bar -->
+<div id="announce" class="announcement-bar" role="region" aria-label="Site announcement" hidden>
+  <span class="emoji" aria-hidden="true">📢</span>
+  <strong>News page is coming soon!</strong>
+  <a href="news.html" target="_self">Preview Page →</a>
+  <button class="ann-close" type="button" aria-label="Dismiss announcement" title="Dismiss">×</button>
 </div>
 
-<!-- Styles announcement bar -->
 <style>
-  .announcement-bar {
+  .announcement-bar{
+    position: relative;
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-wrap: nowrap;
-    white-space: nowrap;
     gap: .6em;
-    background: #e6f2ff;
-    color: #003366;
-    font-weight: 500;
-    font-size: 0.95rem;
-    min-height: 40px;
-    padding: 0.4em 1em;
-    border-radius: 0.4em;
-    border: 1px solid #b3d7ff;
-    box-shadow: 0 1px 5px rgba(0,0,0,0.05);
-    width: 100%;
-    margin: 0.8em 0 1em 0;
-    box-sizing: border-box;
+    background: #eaf3ff;
+    color: #07315c;
+    font: 500 0.95rem/1.2 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    min-height: 44px;
+    padding: .5em .85em;
+    border: 1px solid #bfd9ff;
+    border-radius: .5em;
+    box-shadow: 0 1px 6px rgba(0,0,0,.06);
+    margin: .8em 0 1em;
   }
-  .announcement-bar strong,
-  .announcement-bar a {
-    display: inline-flex;
-    align-items: center;
-    line-height: 1;
+  .announcement-bar .emoji{ font-size: 1.05em }
+  .announcement-bar a{
+    color: #c46800; font-weight: 600; text-decoration: none;
   }
-  .announcement-bar a {
-    color: #c76a00;
-    font-weight: 600;
-    text-decoration: none;
+  .announcement-bar a:hover{ text-decoration: underline }
+  .ann-close{
+    margin-left: auto;
+    inline-size: 32px; block-size: 32px;
+    border: 0; border-radius: 50%;
+    background: transparent; color: inherit;
+    font-size: 1.25rem; line-height: 1; cursor: pointer;
   }
-  .announcement-bar a:hover {
-    text-decoration: underline;
+  .ann-close:hover{ background: rgba(0,0,0,.06) }
+  .ann-close:active{ transform: scale(.96) }
+
+  /* 小屏换行、压缩间距 */
+  @media (max-width: 520px){
+    .announcement-bar{
+      flex-wrap: wrap; gap: .45em;
+      font-size: .92rem; padding: .45em .7em;
+    }
+    .ann-close{ inline-size: 28px; block-size: 28px }
+  }
+
+  /* 深色模式微调 */
+  @media (prefers-color-scheme: dark){
+    .announcement-bar{
+      background: #0e2742;
+      color: #e6f0ff;
+      border-color: #294b73;
+      box-shadow: 0 1px 6px rgba(0,0,0,.35);
+    }
+    .announcement-bar a{ color: #ffb662 }
+    .ann-close:hover{ background: rgba(255,255,255,.08) }
+  }
+
+  /* 减少动画环境不启用过多动效 */
+  @media (prefers-reduced-motion: reduce){
+    .ann-close:active{ transform: none }
   }
 </style>
+
+<script>
+  (function(){
+    // 每次内容改动请提升版本号，旧的“已关闭”记录就会失效，用户能看到新公告
+    const VERSION = '2025-08-28-newsbar-v1';
+    const KEY = 'announce:dismissed';
+    const el = document.getElementById('announce');
+    if (!el) return;
+
+    try {
+      const dismissed = localStorage.getItem(KEY);
+      if (dismissed === VERSION) return;    // 之前关闭过这条版本
+      el.hidden = false;                    // 显示公告
+    } catch (_) { el.hidden = false; }      // localStorage 不可用时仍显示
+
+    const closeBtn = el.querySelector('.ann-close');
+    closeBtn?.addEventListener('click', () => {
+      el.remove();                          // 从 DOM 移除
+      try { localStorage.setItem(KEY, VERSION); } catch(_) {}
+    });
+
+    // ESC 快捷关闭（可访问性）
+    el.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeBtn?.click();
+    });
+  })();
+</script>
 
 
 ```{=html}
