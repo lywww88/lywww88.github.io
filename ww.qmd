@@ -7,20 +7,56 @@ format:
     page-layout: full
 ---
 
-<!-- lock -->
 <script>
-  (function () {
-    const PASSWORD = "mimacuowu";   
+(function() {
+  var correct = "test123"; 
+  var maxTries = 1;
+  var lockMinutes = 10;
+  var now = Date.now();
 
-    const input = prompt("🔒 Access Restricted\nEnter access code:");
-    if (input === PASSWORD) {
-      return; // ✅ 正确 → 显示页面内容
+  var failData = JSON.parse(localStorage.getItem("news_fail")) || {count:0, lockedUntil:0};
+
+  function denyAndRedirect(msg){
+    document.addEventListener("DOMContentLoaded", function() {
+      var seconds = 3;
+      document.body.innerHTML =
+        "<h2 id='deny-msg' style='text-align:center;margin-top:20%;color:#c00;font-family:sans-serif;'>"
+        + "⛔ Access Denied ⛔<br>" + msg + "<br><br>"
+        + "Redirecting to homepage in <span id='countdown'>" + seconds + "</span> seconds…</h2>";
+
+      var countdownEl = document.getElementById("countdown");
+      var timer = setInterval(function(){
+        seconds--;
+        if (seconds <= 0) {
+          clearInterval(timer);
+          location.href = "/";
+        } else {
+          countdownEl.textContent = seconds;
+        }
+      }, 1000);
+    });
+  }
+
+  if (now < failData.lockedUntil) {
+    denyAndRedirect("Please try again later.");
+  } else {
+    failData.count = 0;
+    localStorage.setItem("news_fail", JSON.stringify(failData));
+
+    var ok = false;
+    for (var i = 0; i < maxTries; i++) {
+      var input = prompt("🔒 ("+(maxTries - i)+" attempts left):");
+      if (input === correct) { ok = true; break; }
+      else { failData.count++; }
     }
-    // ❌ 错误 → 清空并跳转
-    alert("❌ Access denied.");
-    location.href = "/";  
-    document.write("");   
-  })();
+
+    if (!ok) {
+      failData.lockedUntil = now + lockMinutes * 60 * 1000;
+      localStorage.setItem("news_fail", JSON.stringify(failData));
+      denyAndRedirect("<br>Please try again in "+lockMinutes+" minutes.");
+    }
+  }
+})();
 </script>
 
 
