@@ -58,9 +58,6 @@ format:
       #eaf3ff;
 
     position: relative;
-    opacity: 0; transform-origin: center;
-    /* 初始用 scale(.92) + 透明，配合 JS 切换类触发展开动画 */
-    transform: translate(-50%, -50%) scale(.92);
   }
 
   .announce-on-nav .icon{ width:22px; height:22px; margin-bottom:.3em; }
@@ -79,28 +76,13 @@ format:
   }
   .announce-on-nav .ann-close:hover{ background:rgba(0,0,0,.08); }
 
-  /* —— 动画状态 —— */
-  .announce-on-nav.is-open{
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-  }
-  .announce-on-nav.is-closing{
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(.92);
-  }
-
-  /* 最小化状态：无外框，只显示感叹号图标 */
+  /* 最小化状态：无外框，只显示图标 */
   .announce-on-nav.minimized.noframe{
     background: transparent; border: 0; box-shadow: none; padding: 0;
     inline-size: 36px; block-size: 36px; border-radius: 50%;
     display: inline-flex; align-items: center; justify-content: center; cursor: pointer;
-    opacity: 0; transform-origin: center;
-    transform: translate(-50%, -50%) scale(.86);
   }
   .announce-on-nav.minimized.noframe .icon{ width:22px; height:22px; }
-  .announce-on-nav.minimized.noframe.is-open{
-    opacity: 1; transform: translate(-50%, -50%) scale(1);
-  }
   .announce-on-nav.minimized.noframe:hover .icon{ transform: scale(1.06); opacity: .95; }
 
   /* 深色模式 */
@@ -117,27 +99,18 @@ format:
     .announce-on-nav.minimized.noframe{ background: transparent; }
   }
 
-  /* 统一的动效时长/曲线（尊重“减少动效”） */
   @media (prefers-reduced-motion: no-preference){
-    .announce-on-nav,
-    .announce-on-nav.minimized.noframe{
-      transition: transform .18s ease, opacity .18s ease;
-    }
+    .announce-on-nav{ transition: transform .16s ease, opacity .16s ease; }
   }
-
-  /* 展开时，去掉正文第一个块的顶部外边距（避免看起来“空一截”） */
-  .ann-open #quarto-document-content > *:first-child,
-  .ann-open main.content > *:first-child { margin-top: 0 !important; }
 </style>
 
 <script>
 (() => {
-  const VERSION = '2025-08-28-overlay-v3-anim';
+  const VERSION = '2025-08-28-overlay-v2-two-lines';
   const KEY = 'announce:dismissed';
   const bar  = document.getElementById('announce');
   const pill = document.getElementById('ann-toggle');
 
-  // 定位到导航栏几何中心
   function navEl(){
     return document.getElementById('quarto-header')
         || document.querySelector('header.navbar')
@@ -151,72 +124,31 @@ format:
     document.documentElement.style.setProperty('--ann-center-y', `${y}px`);
   }
 
-  // —— 动画辅助 —— //
-  function fadeIn(el){
-    el.hidden = false;
-    // 强制回流，确保过渡从初始态开始
-    void el.offsetWidth;
-    el.classList.remove('is-closing');
-    el.classList.add('is-open');
-  }
-  function fadeOut(el, after){
-    el.classList.remove('is-open');
-    el.classList.add('is-closing');
-    // 等待过渡结束再 hidden
-    const done = () => {
-      el.hidden = true;
-      el.removeEventListener('transitionend', done);
-      el.classList.remove('is-closing');
-      if (after) after();
-    };
-    // 若用户设置“减少动效”，transition 可能为 0，此时直接执行
-    if (getComputedStyle(el).transitionDuration === '0s') {
-      done();
-    } else {
-      el.addEventListener('transitionend', done);
-    }
-  }
-
-  // 初始显示逻辑
   try {
     const dismissed = localStorage.getItem(KEY);
     if (dismissed !== VERSION){
+      bar.hidden = false; pill.hidden = true;
       document.documentElement.classList.add('ann-open');
-      positionOverNavbar();
-      fadeIn(bar);
-      pill.hidden = true; // 最小化隐藏
-    } else {
-      document.documentElement.classList.remove('ann-open');
-      bar.hidden = true;
-      positionOverNavbar();
-      fadeIn(pill);
     }
-  } catch {
-    positionOverNavbar();
-    fadeIn(bar);
-  }
+    else {
+      bar.hidden = true; pill.hidden = false;
+      document.documentElement.classList.remove('ann-open');
+    }
+  } catch { bar.hidden = false; }
 
-  // 关闭 -> 显示最小化图标（带缩小动画）
   bar.querySelector('.ann-close').addEventListener('click', () => {
+    bar.hidden = true; pill.hidden = false;
     document.documentElement.classList.remove('ann-open');
-    fadeOut(bar, () => {
-      localStorage.setItem(KEY, VERSION);
-      positionOverNavbar();
-      fadeIn(pill);
-    });
+    try{ localStorage.setItem(KEY, VERSION);}catch{}
+    positionOverNavbar();
   });
-
-  // 点击最小化图标 -> 展开（带放大动画）
   pill.addEventListener('click', () => {
+    bar.hidden = false; pill.hidden = true;
     document.documentElement.classList.add('ann-open');
-    fadeOut(pill, () => {
-      localStorage.removeItem(KEY);
-      positionOverNavbar();
-      fadeIn(bar);
-    });
+    try{ localStorage.removeItem(KEY);}catch{}
+    positionOverNavbar();
   });
 
-  // 保持对齐
   const nav = navEl();
   if (nav && 'ResizeObserver' in window) new ResizeObserver(positionOverNavbar).observe(nav);
   window.addEventListener('scroll', positionOverNavbar, { passive:true });
