@@ -6,7 +6,7 @@ format:
     allow-html: true
 ---
 
-<!-- Announcement Bar -->
+<!-- ===== Announcement Bar (full) ===== -->
 <div id="announce" class="announcement-bar" role="region" aria-label="Site announcement" hidden>
   <span class="emoji" aria-hidden="true">📢</span>
   <strong> News page is coming soon! </strong>
@@ -14,17 +14,25 @@ format:
   <button class="ann-close" type="button" aria-label="Dismiss announcement" title="Dismiss">×</button>
 </div>
 
-<!-- Minimized bar shown after dismiss -->
+<!-- ===== Minimized (reopen) bar ===== -->
 <div id="ann-toggle" class="announcement-bar minimized" hidden>
-  <span>Announcement</span>
+  <span>腊📢</span>
 </div>
 
 <style>
-  /* --- 原始大横幅样式 --- */
-  .announcement-bar {
-    position: relative;
+  :root { --ann-top: 56px; } /* JS 会覆盖为导航栏的真实高度 */
+
+  /* —— 大横幅：原样但始终贴在导航栏正下方且水平居中 —— */
+  .announcement-bar{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: var(--ann-top);
+    z-index: 1050;
+
+    /* 你的原始样式（非紧凑） */
     display: flex;
-    justify-content: center; /* 内容剧中 */
+    justify-content: center;           /* 内容居中 */
     align-items: center;
     gap: .6em;
     background: #eaf3ff;
@@ -35,67 +43,97 @@ format:
     border: 1px solid #bfd9ff;
     border-radius: .5em;
     box-shadow: 0 1px 6px rgba(0,0,0,.08);
-    margin: .8em auto 1em;  /* 水平居中 */
     max-width: 960px;
+    width: calc(100% - 32px);          /* 两侧留 16px 呼吸 */
   }
-  .announcement-bar a {
+  .announcement-bar a{
     color: #c46800; font-weight: 600; text-decoration: none;
   }
-  .announcement-bar a:hover { text-decoration: underline }
+  .announcement-bar a:hover{ text-decoration: underline; }
+  .announcement-bar .emoji{ font-size: 1.05em; }
 
-  .ann-close {
+  .announcement-bar .ann-close{
     position: absolute; right: 8px; top: 50%; transform: translateY(-50%);
     inline-size: 28px; block-size: 28px;
     border: 0; border-radius: 50%;
     background: transparent; color: inherit;
     font-size: 1.2rem; line-height: 1; cursor: pointer;
   }
-  .ann-close:hover { background: rgba(0,0,0,.08) }
+  .announcement-bar .ann-close:hover{ background: rgba(0,0,0,.08); }
 
-  /* --- 缩小后的样式 --- */
-  .announcement-bar.minimized {
+  /* —— 缩小版横条（关闭后显示），同样贴导航、居中 —— */
+  .announcement-bar.minimized{
     cursor: pointer;
-    justify-content: center;
-    font-weight: 600;
+    min-height: unset;
     padding: .35em .8em;
-    min-height: auto;
-    max-width: 220px;   /* 缩小宽度 */
-    box-shadow: 0 1px 4px rgba(0,0,0,.1);
+    width: auto;
+    max-width: 240px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.10);
+    font-weight: 600;
   }
-  .announcement-bar.minimized:hover {
-    background: #e0edff;
+  .announcement-bar.minimized:hover{ background: #e0edff; }
+
+  /* 深色模式 */
+  @media (prefers-color-scheme: dark){
+    .announcement-bar{
+      background:#0e2742; color:#e6f0ff; border-color:#294b73;
+      box-shadow: 0 2px 12px rgba(0,0,0,.45);
+    }
+    .announcement-bar a{ color:#ffb662; }
+    .announcement-bar .ann-close:hover{ background: rgba(255,255,255,.10); }
+    .announcement-bar.minimized{ background:#12375d; }
+    .announcement-bar.minimized:hover{ background:#0e2742; }
+  }
+
+  /* 过渡 */
+  @media (prefers-reduced-motion: no-preference){
+    .announcement-bar{ transition: opacity .18s ease, transform .18s ease; }
   }
 </style>
 
 <script>
   (function(){
-    const VERSION = '2025-08-28-v4'; // 更新文案时改这个
+    const VERSION = '2025-08-28-v5';     // 文案更新时改版本号，所有用户会重新看到
     const KEY = 'announce:dismissed';
     const bar = document.getElementById('announce');
-    const toggle = document.getElementById('ann-toggle');
+    const mini = document.getElementById('ann-toggle');
 
-    // 初始化显示逻辑
-    try {
+    // 计算导航栏高度，写入 CSS 变量，保证永远贴在下方
+    function setAnnTop(){
+      const nav = document.getElementById('quarto-header')
+               || document.querySelector('header.navbar')
+               || document.querySelector('.navbar.navbar-expand')
+               || document.querySelector('header.site-header');
+      const h = nav ? Math.round(nav.getBoundingClientRect().height) : 56;
+      document.documentElement.style.setProperty('--ann-top', (h + 6) + 'px');
+    }
+    setAnnTop();
+    window.addEventListener('resize', setAnnTop);
+
+    // 初始显示逻辑
+    try{
       const dismissed = localStorage.getItem(KEY);
-      if (dismissed !== VERSION) {
-        bar.hidden = false; toggle.hidden = true;
-      } else {
-        bar.hidden = true; toggle.hidden = false;
-      }
-    } catch(_) { bar.hidden = false; }
+      if (dismissed !== VERSION){ bar.hidden = false; mini.hidden = true; }
+      else { bar.hidden = true; mini.hidden = false; }
+    }catch(_){ bar.hidden = false; }
 
-    // 关闭事件
+    // 关闭 -> 显示缩小条
     bar.querySelector('.ann-close').addEventListener('click', () => {
       bar.hidden = true;
-      toggle.hidden = false;
-      try { localStorage.setItem(KEY, VERSION); } catch(_) {}
+      mini.hidden = false;
+      try{ localStorage.setItem(KEY, VERSION); }catch(_){}
     });
 
-    // 打开事件
-    toggle.addEventListener('click', () => {
+    // 点击缩小条 -> 重新打开
+    mini.addEventListener('click', () => {
       bar.hidden = false;
-      toggle.hidden = true;
-      try { localStorage.removeItem(KEY); } catch(_) {}
+      mini.hidden = true;
+      try{ localStorage.removeItem(KEY); }catch(_){}
+    });
+
+    // ESC 也能关闭
+    bar.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') bar.querySelector('.ann-close').click();
     });
   })();
 </script>
