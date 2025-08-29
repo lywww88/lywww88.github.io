@@ -5,10 +5,24 @@ format:
     allow-raw-html: true
     title-block: false
     page-layout: full
-    include-in-header: gate.html
 ---
 
-<style>html:not([data-gate]){visibility:hidden!important}</style>
+<!-- lock -->
+<script>
+  (function () {
+    const PASSWORD = "mimacuowu";   
+
+    const input = prompt("🔒 Access Restricted\nEnter access code:");
+    if (input === PASSWORD) {
+      return; // ✅ 正确 → 显示页面内容
+    }
+    // ❌ 错误 → 清空并跳转
+    alert("❌ Access denied.");
+    location.href = "/";  
+    document.write("");   
+  })();
+</script>
+
 
 <style>
   .ww-card {
