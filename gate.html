@@ -1,11 +1,12 @@
+<!-- 防爬 + 缓存控制 -->
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
 
-<!-- 初始隐藏整页：仅当 data-gate 存在时才显示（ok 或 deny 都会显示） -->
+<!-- 初始：无 data-gate 属性时，一律隐藏（包含 deny/ok 之外的所有情况） -->
 <style>
-  html:not([data-gate]) { visibility: hidden; }
+  html:not([data-gate]) { visibility: hidden !important; }
 </style>
 
 <script>
@@ -14,18 +15,18 @@
   var PASSWORD    = "mimacuowu";    // 正确密码
   var TRIES       = 3;              // 尝试次数
   var LOCK_MIN    = 0;              // 失败后锁定分钟
-  var STORE_KEY   = "page_gate_v2"; // localStorage 键（版本号用于清缓存）
+  var STORE_KEY   = "page_gate_v3"; // 存储key（版本号更新，避免旧数据干扰）
   var REDIRECT_TO = "/";            // 错误时跳转地址
 
-  // 处理浏览器回退缓存（bfcache）
+  // 处理浏览器回退缓存：从历史返回时强制刷新，确保重新执行 gate
   window.addEventListener("pageshow", function (e) {
     if (e.persisted) location.reload();
   });
 
   function denyAndRedirect(msg){
-    // 标记为 deny，解除隐藏
+    // 标记为 deny，解除隐藏（让提示可见）
     document.documentElement.setAttribute('data-gate','deny');
-    // 直接写入提示内容，避免原 DOM 闪现
+    // 用 document.open/write 覆盖原 DOM，杜绝任何已渲染的内容残留
     var html =
       "<h2 style='text-align:center;margin-top:20%;color:#c00;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;'>"
       + "⛔ Access Denied ⛔<br>" + msg + "<br><br>"
@@ -34,12 +35,12 @@
     setTimeout(function(){ location.href = REDIRECT_TO; }, 3000);
   }
 
-  // 读取/初始化失败状态
+  // 读取失败状态
   var now = Date.now();
   var failData = { count: 0, lockedUntil: 0 };
   try { failData = JSON.parse(localStorage.getItem(STORE_KEY)) || failData; } catch(e){}
 
-  // 锁定期内：直接拒绝
+  // 锁定期：直接拒绝
   if (now < failData.lockedUntil) {
     denyAndRedirect("This page is temporarily locked. Please try again later.");
     return;
@@ -54,19 +55,19 @@
   for (var i = 0; i < TRIES; i++) {
     var left = (TRIES - i);
     var input = prompt("🔒 This page is restricted. (" + left + " attempt" + (left>1?"s":"") + " left)");
-    if (input === null) break; // 用户取消
+    if (input === null) break; // 取消
     if (input === PASSWORD) { ok = true; break; }
   }
 
-  // 失败 → 锁定 + 拒绝
   if (!ok) {
+    // 记锁定并拒绝
     failData.lockedUntil = now + LOCK_MIN * 60 * 1000;
     localStorage.setItem(STORE_KEY, JSON.stringify(failData));
     denyAndRedirect("Access denied.");
     return;
   }
 
-  // ✅ 成功 → 允许显示页面
+  // ✅ 成功：允许显示页面
   document.documentElement.setAttribute('data-gate','ok');
 })();
 </script>
