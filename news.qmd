@@ -13,15 +13,23 @@ format:
 (function() {
   var correct = "test123"; 
   var maxTries = 1;
-  var lockMinutes = 10;
+  var lockMinutes = 0;
   var now = Date.now();
 
   var failData = JSON.parse(localStorage.getItem("news_fail")) || {count:0, lockedUntil:0};
 
-  if (now < failData.lockedUntil) {
+  function denyAndRedirect(msg){
     document.addEventListener("DOMContentLoaded", function() {
-      document.body.innerHTML = "<h2 style='text-align:center;margin-top:20%;color:#c00;font-family:sans-serif;'>⛔ Access Denied ⛔<br>This page is currently under development and testing<br>Please try again later.</h2>";
+      document.body.innerHTML =
+        "<h2 style='text-align:center;margin-top:20%;color:#c00;font-family:sans-serif;'>"
+        + "⛔ Access Denied ⛔<br>" + msg + "<br><br>"
+        + "Redirecting to homepage in 3 seconds…</h2>";
+      setTimeout(function(){ location.href = "/"; }, 3000);
     });
+  }
+
+  if (now < failData.lockedUntil) {
+    denyAndRedirect("This page is currently under development and testing<br>Please try again later.");
   } else {
     failData.count = 0;
     localStorage.setItem("news_fail", JSON.stringify(failData));
@@ -36,9 +44,7 @@ format:
     if (!ok) {
       failData.lockedUntil = now + lockMinutes * 60 * 1000;
       localStorage.setItem("news_fail", JSON.stringify(failData));
-      document.addEventListener("DOMContentLoaded", function() {
-        document.body.innerHTML = "<h2 style='text-align:center;margin-top:20%;color:#c00;font-family:sans-serif;'>⛔ Access Denied ⛔<br>This page is currently under development and testing<br>Please try again in "+lockMinutes+" minutes.</h2>";
-      });
+      denyAndRedirect("This page is currently under development and testing<br>Please try again in "+lockMinutes+" minutes.");
     }
   }
 })();
