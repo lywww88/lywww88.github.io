@@ -119,32 +119,6 @@ Discover data-driven projects in machine learning, dashboard design, and analyti
 </div>
 :::
 
-<script>
-(function(){
-  const KEY='ann_strip_collapsed_v1';
-  const strip=document.querySelector('.ann-strip');
-  const toggle=document.querySelector('.ann-toggle');
-  const tab=document.querySelector('.ann-tab');
-
-  function collapse(persist=true){
-    strip.classList.add('is-collapsed');
-    tab.hidden=false;
-    if(persist) localStorage.setItem(KEY,'1');
-  }
-  function expand(persist=true){
-    strip.classList.remove('is-collapsed');
-    tab.hidden=true;
-    if(persist) localStorage.setItem(KEY,'0');
-  }
-
-  const forceShow=new URLSearchParams(location.search).get('showAnn')==='1';
-  const saved=localStorage.getItem(KEY);
-  if (forceShow || saved!=='1') { expand(false); } else { collapse(false); }
-
-  toggle.addEventListener('click',()=>collapse(true));
-  tab.addEventListener('click',()=>expand(true));
-})();
-</script>
 
 <div aria-hidden="true" style="border-top: 1px solid #ccc; margin: 1.5em 0;"></div>
 
