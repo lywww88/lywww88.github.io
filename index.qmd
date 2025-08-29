@@ -6,99 +6,109 @@ format:
     allow-html: true
 ---
 
-<!-- Announcement (pill) -->
-<div class="ann" role="status" aria-live="polite">
-  <span class="ann__dot" aria-hidden="true"></span>
-  <span class="ann__text">News page is coming soon!</span>
-  <a class="ann__link" href="news.html">Preview Page →</a>
-  <button class="ann__close" aria-label="Dismiss">×</button>
+<!-- Thin announcement strip (sticks under navbar) -->
+<div class="ann-strip" role="status" aria-live="polite">
+  <div class="ann-inner">
+    <span class="ann-dot" aria-hidden="true"></span>
+    <span class="ann-text">News page is coming soon!</span>
+    <a class="ann-link" href="news.html">Preview Page →</a>
+  </div>
+  <button class="ann-toggle" aria-label="Collapse announcement" title="Collapse">▾</button>
 </div>
 
-<!-- Reopen toggle -->
-<button class="ann-toggle" aria-label="Show announcement" hidden>🔔 News</button>
+<!-- Reopen tab (appears when collapsed) -->
+<button class="ann-tab" aria-label="Show announcement" hidden>📣 News</button>
 
 <style>
-/* pill */
-.ann{
-  position:relative;display:flex;align-items:center;justify-content:center;gap:.6rem;
-  max-width:820px;margin:14px auto 6px;padding:.45rem .75rem;
-  font:500 .92rem/1.2 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  border-radius:999px;border:1px solid #dbe7ff;
-  background:linear-gradient(180deg,#f4f8ff 0%,#eef5ff 100%);
-  box-shadow:0 1px 4px rgba(0,0,0,.04);
+/* ===== thin strip ===== */
+.ann-strip{
+  /* 放在导航栏正下方：把这一块紧贴导航，无额外大间距 */
+  margin: 6px 0 14px;
+  padding: .38rem .75rem;
+  display:flex; align-items:center; justify-content:center; gap:.8rem;
+  background:#f7faff;
+  border-bottom:1px solid #e6eefc;
+  box-shadow: 0 1px 0 rgba(13,110,253,.04);
+  color:#0b2e66;
+  font:500 .95rem/1.25 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  overflow:hidden;              /* 为动画裁剪 */
+  max-height: 44px;             /* 展开高度 */
+  transition: max-height .28s ease, opacity .28s ease;
+  opacity:1;
+  position:relative;
+  z-index: 5;
 }
-.ann__dot{width:.5rem;height:.5rem;border-radius:50%;background:#0d6efd;box-shadow:0 0 0 4px rgba(13,110,253,.12)}
-.ann__text{color:#0b2e66}
-.ann__link{padding:.2rem .55rem;border-radius:.5rem;border:1px solid #cfe0ff;text-decoration:none;font-weight:600}
-.ann__link:hover{background:#fff;border-color:#b9d1ff}
-.ann__close{margin-left:.4rem;border:0;background:transparent;font-size:1.05rem;line-height:1;cursor:pointer;color:#5c728a;opacity:.75}
-.ann__close:hover{opacity:1}
+.ann-inner{display:flex; align-items:center; gap:.6rem;}
+.ann-dot{width:.5rem;height:.5rem;border-radius:50%;background:#0d6efd;box-shadow:0 0 0 4px rgba(13,110,253,.12)}
+.ann-link{font-weight:600;text-decoration:none;border-bottom:1px dashed #7aa4ff}
+.ann-link:hover{border-bottom-color:transparent}
 
-/* reopen toggle */
+/* 收起时的样式（通过 JS 加 .is-collapsed） */
+.ann-strip.is-collapsed{max-height:0; opacity:0; border-bottom-color:transparent; margin-bottom:0}
+
+/* 右侧收缩按钮（小三角） */
 .ann-toggle{
-  position:fixed;right:16px;bottom:18px;z-index:9999;
-  padding:.35rem .6rem;border-radius:999px;border:1px solid #e0e8ff;
-  background:#f6f9ff;color:#0b2e66;font:600 .88rem/1 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  position:absolute; right:10px; top:50%; transform:translateY(-50%);
+  border:0; background:transparent; cursor:pointer;
+  font-size:1rem; line-height:1; color:#5c728a; opacity:.7;
+}
+.ann-toggle:hover{opacity:1}
+
+/* 重新打开的小标签（贴近右上角，和导航接近） */
+.ann-tab{
+  position: sticky; top: 8px; /* 导航栏下方“钉住” */
+  margin-left: auto; float: right;
+  padding:.3rem .55rem; border-radius:999px; border:1px solid #e0e8ff;
+  background:#f6f9ff; color:#0b2e66;
+  font:600 .88rem/1 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   box-shadow:0 6px 18px rgba(13,110,253,.12);
 }
-.ann-toggle:hover{background:#ffffff}
-@media (max-width:640px){ .ann{max-width:92vw} }
+.ann-tab:hover{background:#ffffff}
+
+/* 暗色自适配（可选） */
 @media (prefers-color-scheme: dark){
-  .ann{border-color:#2b4875;background:linear-gradient(180deg,#0e2138,#102847)}
-  .ann__text{color:#cfe0ff}
-  .ann__link{border-color:#3b5d8f}
-  .ann-toggle{background:#0f2340;color:#d7e6ff;border-color:#2b4875}
+  .ann-strip{background:#0f2340;border-bottom-color:#213a66;color:#d7e6ff;box-shadow:none}
+  .ann-link{border-bottom-color:#5b86ff}
+  .ann-toggle{color:#b8c9ff}
+  .ann-tab{background:#0f2340;color:#d7e6ff;border-color:#2b4875}
+}
+
+/* 小屏收紧 */
+@media (max-width:640px){
+  .ann-strip{padding:.32rem .6rem; gap:.6rem}
+  .ann-inner{gap:.5rem}
 }
 </style>
 
 <script>
 (function(){
-  const KEY='ann_state_v2'; // {dismissed: "0|1"}
-  const AUTO_HIDE_MS=6000;
+  const KEY='ann_strip_collapsed_v1'; // 记忆是否收起
+  const strip = document.querySelector('.ann-strip');
+  const toggleBtn = strip.querySelector('.ann-toggle');
+  const tab = document.querySelector('.ann-tab');
 
-  const ann = document.querySelector('.ann');
-  const toggle = document.querySelector('.ann-toggle');
-
-  // helpers
-  const qs = new URLSearchParams(location.search);
-  const forceShow = qs.get('showAnn')==='1';
-  const state = JSON.parse(localStorage.getItem(KEY) || '{"dismissed":"0"}');
-
-  function showAnn(){
-    ann.style.display='flex';
-    toggle.hidden = true;
-    localStorage.setItem(KEY, JSON.stringify({dismissed:"0"}));
+  function collapse(persist=true){
+    strip.classList.add('is-collapsed');
+    tab.hidden = false;
+    persist && localStorage.setItem(KEY,'1');
   }
-  function hideAnn(persist=true){
-    ann.style.display='none';
-    toggle.hidden = false;
-    if(persist) localStorage.setItem(KEY, JSON.stringify({dismissed:"1"}));
+  function expand(persist=true){
+    strip.classList.remove('is-collapsed');
+    tab.hidden = true;
+    persist && localStorage.setItem(KEY,'0');
   }
 
-  // init
-  if (forceShow || state.dismissed!=="1") {
-    showAnn();
-  } else {
-    hideAnn(false);
-  }
+  // 初始状态（支持 ?showAnn=1 强制展开）
+  const forceShow = new URLSearchParams(location.search).get('showAnn')==='1';
+  const saved = localStorage.getItem(KEY);
+  if (forceShow || saved !== '1'){ expand(false); } else { collapse(false); }
 
-  // close button
-  ann.querySelector('.ann__close')?.addEventListener('click', ()=> hideAnn(true));
-  // reopen
-  toggle.addEventListener('click', ()=> showAnn());
-
-  // auto hide with hover pause
-  let timer;
-  function startTimer(){
-    clearTimeout(timer);
-    timer = setTimeout(()=> hideAnn(true), AUTO_HIDE_MS);
-  }
-  function stopTimer(){ clearTimeout(timer); }
-  if (ann.style.display!=='none') startTimer();
-  ann.addEventListener('mouseenter', stopTimer);
-  ann.addEventListener('mouseleave', startTimer);
+  // 按钮交互
+  toggleBtn.addEventListener('click', ()=> collapse(true));
+  tab.addEventListener('click', ()=> expand(true));
 })();
 </script>
+
 
 ```{=html}
 <!-- Profile Section -->
