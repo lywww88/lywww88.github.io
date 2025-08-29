@@ -3,13 +3,16 @@
 
 <script>
 (function () {
-  var PASSWORD    = "mimacuowu";   
-  var TRIES       = 3;            
-  var LOCK_MIN    = 1;           
-  var STORE_KEY   = "page_gate_v1";
-  var REDIRECT_TO = "/";           
+  // ===== 配置 =====
+  var PASSWORD    = "mimacuowu";   // 正确密码
+  var TRIES       = 3;             // 尝试次数
+  var LOCK_MIN    = 0;             // 锁定分钟
+  var STORE_KEY   = "page_gate_v1";// localStorage key
+  var REDIRECT_TO = "/";           // 跳转地址
 
   function denyAndRedirect(msg){
+    // 先显示 html，确保提示能出现
+    document.documentElement.style.visibility = "visible";
     var html = `
       <h2 style="text-align:center;margin-top:20%;color:#c00;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;">
         ⛔ Access Denied ⛔<br>${msg}<br><br>
@@ -23,19 +26,22 @@
   var failData = { count: 0, lockedUntil: 0 };
   try { failData = JSON.parse(localStorage.getItem(STORE_KEY)) || failData; } catch(e){}
 
+  // 如果还在锁定期 → 直接拒绝
   if (now < failData.lockedUntil) {
     denyAndRedirect("This page is temporarily locked. Please try again later.");
     return;
   }
-  
+
+  // 重置失败计数
   failData.count = 0;
   localStorage.setItem(STORE_KEY, JSON.stringify(failData));
 
+  // 密码尝试
   var ok = false;
   for (var i = 0; i < TRIES; i++) {
     var left = (TRIES - i);
     var input = prompt("🔒 This page is restricted. (" + left + " attempt" + (left>1?"s":"") + " left)");
-    if (input === null) break; 
+    if (input === null) break; // 用户点取消
     if (input === PASSWORD) { ok = true; break; }
   }
 
@@ -46,6 +52,7 @@
     return;
   }
 
+  // ✅ 成功 → 页面内容显示
   document.documentElement.style.visibility = "visible";
 })();
 </script>
