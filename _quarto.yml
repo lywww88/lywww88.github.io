@@ -17,52 +17,71 @@ website:
     logo: images/logo1.png
     left:
       - href: index.qmd
-        text: "<span class='nav-text'>Home</span>"
+        text: '<span class="nav-text">Home</span>'
       - href: news.qmd
-        text: "<span class='nav-text'>News</span>"
-      - text: "<span class='nav-text'>Projects</span>"
+        text: '<span class="nav-text">News</span>'
+      - text: '<span class="nav-text">Projects</span>'
         menu:
           - href: projects/project.qmd
-            text: "<span class='nav-text'>Projects</span>"
+            text: '<span class="nav-text">Projects</span>'
           - href: projects/Capstone.qmd
-            text: "<span class='nav-text'>Capstone Project</span>"
+            text: '<span class="nav-text">Capstone Project</span>'
+      - text: '<span class="nav-text">Startup</span>'
+        menu:
+          - text: '<span style="font-size: 0.7rem; font-weight: 300; color: gray;">BETA LAUNCH</span>'
+          - text: '<strong>Klug Forecast AI</strong>'
+            href: https://forecastai-poc.netlify.app/
+            target: _blank
+          - text: '<span style="font-size: 0.7rem; font-weight: 300; color: gray;">CONCEPT STAGE</span>'
+          - text: '<strong>Platemate</strong>'
+            href: https://platemateofficial.netlify.app/
+            target: _blank
+          - text: '<strong>Skill Forge</strong>'
+            href: https://skillforgeofficial.netlify.app/
+            target: _blank
+          - text: '<hr style="border: none; border-top: 1px solid #ccc; margin: 0.8em 0;">'
+          - text: '<span style="font-size: 0.7rem; font-weight: 300; color: gray;">ABOUT</span>'
+          - text: '<strong>Startup Journey</strong>'
+            href: startup/journey.qmd
+            target: _self
       - href: about.qmd
-        text: "<span class='nav-text'>About</span>"
+        text: '<span class="nav-text">About</span>'
 
     right:
       - icon: bell
         aria-label: Updates
         href: "#"
-        target: "_self"
+        target: _self
       - icon: linkedin
-        href: "https://www.linkedin.com/in/yiwei-lu78"
+        href: https://www.linkedin.com/in/yiwei-lu78
         aria-label: LinkedIn
       - icon: github
-        href: "https://github.com/lywww88"
+        href: https://github.com/lywww88
         aria-label: GitHub
       - icon: database
-        href: "https://www.kaggle.com/yiweilu"
+        href: https://www.kaggle.com/yiweilu
         aria-label: Kaggle
-      - text: "<span class='nav-text resume-tab'><i class='bi bi-download'></i> Resume</span>"
+      - text: '<span class="nav-text resume-tab"><i class="bi bi-download"></i> Resume</span>'
         menu:
           - href: resume.qmd
-            text: "<span class='nav-text'><i class='bi bi-eye'></i> View Resume</span>"
-            target: "_self"
+            text: '<span class="nav-text"><i class="bi bi-eye"></i> View Resume</span>'
+            target: _self
           - href: Resume_YL_2025_D1.pdf
-            text: "<span class='nav-text'><i class='bi bi-file-earmark-arrow-down'></i> Download PDF</span>"
-            target: "_blank"
+            text: '<span class="nav-text"><i class="bi bi-file-earmark-arrow-down"></i> Download PDF</span>'
+            target: _blank
       - href: ww.html
-        text: "<img class='w-logo' src='/images/W.PNG' alt='W Logo'>"
+        text: '<img class="w-logo" src="/images/W.PNG" alt="W Logo">'
         aria-label: W
         icon: none
-        target: "_blank"
+        target: _blank
+        
 
 format:
   html:
     theme: cosmo
     toc: true
     allow-html: true
-    css:
+    css: 
       - styles.css
       - ann.css
     include-in-header:
@@ -130,11 +149,11 @@ format:
             display: flex;
             align-items: center;
             gap: 0.55em;
-            cursor: pointer;
+            cursor: pointer;                 /* 点击为主 */
             box-shadow: 0 10px 24px rgba(13,110,253,.35);
             z-index: 1100;
             transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
-            touch-action: manipulation;
+            touch-action: manipulation;      /* 移动端优先点击 */
           }
           #floating-search:hover{ transform: translateY(-2px); box-shadow: 0 14px 30px rgba(13,110,253,.45); }
           #floating-search i{ font-size: 1.1rem; }
@@ -148,7 +167,7 @@ format:
             justify-content: center;
             margin-right: 2px;
             cursor: grab;
-            touch-action: none;
+            touch-action: none;              
             user-select: none;
             -webkit-user-select: none;
             opacity: .85;
@@ -190,15 +209,16 @@ format:
           #back-to-top:hover{ transform: translateY(-2px); box-shadow: 0 14px 30px rgba(13,110,253,.45); }
           #back-to-top:active{ transform: translateY(0) scale(.96); }
           #back-to-top i{ font-size: 1.25rem; line-height: 1; }
+          @media (max-width: 480px){ #back-to-top{ right: 16px; bottom: 80px; } }
 
           /* ===== Modal ===== */
           #release-overlay{
-            position: fixed; inset: 0;
+            position: fixed; inset: 0; 
             background: rgba(0,0,0,.35);
             z-index: 1200;
           }
           #release-modal{
-            position: fixed;
+            position: fixed; 
             left: 50%; top: 50%; transform: translate(-50%, -50%);
             width: min(560px, 92vw);
             background: #fff; color:#222;
@@ -347,7 +367,7 @@ format:
             }
             function onEsc(e){ if (e.key === 'Escape') closeModal(); }
 
-            // 命中右上角铃铛（多选择器兜底）
+            // 事件委托：命中右上角铃铛（多选择器兜底）
             const BELL_SELECTORS = [
               'a[aria-label="Updates"]',
               '.open-release-log',
