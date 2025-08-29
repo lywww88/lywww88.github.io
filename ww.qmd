@@ -9,7 +9,7 @@ format:
 
 <script>
 (function() {
-  var correct = "test123"; 
+  var correct = "mimacuowu123"; 
   var maxTries = 1;
   var lockMinutes = 10;
   var now = Date.now();
