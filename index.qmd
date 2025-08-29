@@ -6,42 +6,39 @@ format:
     allow-html: true
 ---
 
-<!-- ===== Announcement (overlay centered on navbar) ===== -->
+<!-- ===== Announcement (overlay on navbar center) ===== -->
 <div id="announce" class="announce-on-nav theme-colored-strip" role="dialog" aria-label="Site announcement" hidden>
-  <!-- 内联 SVG 图标 -->
+  <!-- 内联 SVG 图标（信息圆圈） -->
   <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
     <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
-    <line x1="12" y1="8" x2="12" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    <line x1="12" y1="8"  x2="12" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
     <circle cx="12" cy="16" r="1.5" fill="currentColor"/>
   </svg>
 
-  <strong>News page is coming soon!</strong>
+  <strong> News page is coming soon! </strong>
   <a href="news.html" target="_self">Preview Page →</a>
-
   <button class="ann-close" type="button" aria-label="Dismiss">×</button>
 </div>
 
-<!-- Minimized pill (reopen) -->
-<div id="ann-toggle" class="announce-on-nav minimized theme-colored-strip" hidden>Announcement</div>
+<!-- Minimized (reopen) pill -->
+<div id="ann-toggle" class="announce-on-nav minimized theme-colored-strip" hidden>腊📢</div>
 
 <style>
-  /* 悬浮在导航栏中心：fixed + 计算中心Y；高 z-index 确保覆盖 */
   .announce-on-nav{
-    position: fixed;
+    position: fixed;               /* 覆盖在导航栏之上 */
     left: 50%;
-    top: var(--ann-center-y, 48px);    /* JS 写入：navbar 几何中心 Y */
+    top: var(--ann-center-y, 48px);/* JS 写入：导航栏中心 Y */
     transform: translate(-50%, -50%);
-    z-index: 9999;                     /* ⬅ 提高叠放层级，确保盖在导航栏之上 */
+    z-index: 2000;
+
+    /* 原样式（非紧凑） */
     display: inline-flex; align-items: center; justify-content: center; gap: .6em;
-    background: #f6f9ff;
-    color: #0b2a4a;
+    background: #f6f9ff; color: #0b2a4a;
     font: 500 0.95rem/1.3 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-    padding: .62em 1em;
-    border: 1px solid #cfe0ff;
-    border-radius: .55em;
-    box-shadow: 0 8px 22px rgba(0,0,0,.18);
-    white-space: nowrap;
-    pointer-events: auto;
+    min-height: 44px; padding: .62em 1em;
+    border: 1px solid #cfe0ff; border-radius: .55em;
+    box-shadow: 0 6px 18px rgba(0,0,0,.18);
+    white-space: nowrap; pointer-events: auto;
   }
   .announce-on-nav a{ color:#c46800; font-weight:600; text-decoration:none; }
   .announce-on-nav a:hover{ text-decoration:underline; }
@@ -53,13 +50,13 @@ format:
   .announce-on-nav .ann-close:hover{ background:rgba(0,0,0,.08); }
   .announce-on-nav .icon{ width:20px; height:20px; flex:0 0 20px; }
 
-  /* 关闭后的缩小横条：同样居中悬浮在 navbar 上 */
+  /* 关闭后的小条，仍居中悬浮 */
   .announce-on-nav.minimized{
     padding:.35em .8em; min-height:auto; font-weight:700;
-    box-shadow:0 6px 18px rgba(0,0,0,.16); cursor:pointer;
+    box-shadow:0 4px 14px rgba(0,0,0,.16); cursor:pointer;
   }
 
-  /* 彩色条带（顶部渐变） */
+  /* —— 彩色条带（顶部渐变） —— */
   .theme-colored-strip{ position: relative; overflow: visible; }
   .theme-colored-strip::before{
     content:""; position:absolute; left:0; right:0; top:0; height:4px;
@@ -75,6 +72,7 @@ format:
     .announce-on-nav.minimized{ background:#12375d; }
   }
 
+  /* 小动画 */
   @media (prefers-reduced-motion: no-preference){
     .announce-on-nav{ transition: transform .16s ease, opacity .16s ease; }
   }
@@ -82,35 +80,29 @@ format:
 
 <script>
 (() => {
-  const VERSION = '2025-08-28-overlay-v2';
+  const VERSION = '2025-08-28-overlay-v1-svg-strip';
   const KEY = 'announce:dismissed';
   const bar  = document.getElementById('announce');
   const pill = document.getElementById('ann-toggle');
 
-  // 找到导航栏（Quarto/Bootstrap 常见选择器）
   function navEl(){
     return document.getElementById('quarto-header')
         || document.querySelector('header.navbar')
         || document.querySelector('.navbar.navbar-expand')
         || document.querySelector('header.site-header');
   }
-
-  // 把公告条居中到导航栏几何中心（相对视口）
   function positionOverNavbar(){
     const nav = navEl();
-    const rect = nav ? nav.getBoundingClientRect() : {top:0, height:96};
-    const y = rect.top + rect.height / 2;       // 导航栏中心 Y
+    const y = nav ? (nav.getBoundingClientRect().top + nav.getBoundingClientRect().height/2) : 48;
     document.documentElement.style.setProperty('--ann-center-y', `${y}px`);
   }
 
-  // 显示逻辑
   try {
     const dismissed = localStorage.getItem(KEY);
     if (dismissed !== VERSION){ bar.hidden = false; pill.hidden = true; }
     else { bar.hidden = true; pill.hidden = false; }
   } catch { bar.hidden = false; }
 
-  // 关闭/打开
   bar.querySelector('.ann-close').addEventListener('click', () => {
     bar.hidden = true; pill.hidden = false;
     try{ localStorage.setItem(KEY, VERSION);}catch{}
@@ -122,18 +114,13 @@ format:
     positionOverNavbar();
   });
 
-  // 保持对齐：初次、滚动、尺寸变化、导航栏尺寸变化
-  const nav = navEl();
-  if (nav && 'ResizeObserver' in window) {
-    new ResizeObserver(positionOverNavbar).observe(nav);
-  }
+  const nav = navEl(); if (nav && 'ResizeObserver' in window) new ResizeObserver(positionOverNavbar).observe(nav);
   window.addEventListener('scroll', positionOverNavbar, { passive:true });
   window.addEventListener('resize', positionOverNavbar);
   window.addEventListener('load', positionOverNavbar);
   positionOverNavbar();
 })();
 </script>
-
 
 ```{=html}
 <!-- Profile Section -->
