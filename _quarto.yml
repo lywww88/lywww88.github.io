@@ -26,25 +26,6 @@ website:
             text: "<span class='nav-text'>Projects</span>"
           - href: projects/Capstone.qmd
             text: "<span class='nav-text'>Capstone Project</span>"
-      - text: "<span class='nav-text'>Startup</span>"
-        menu:
-          - text: "<span style='font-size: 0.7rem; font-weight: 300; color: gray;'>BETA LAUNCH</span>"
-          - text: "<strong>Klug Forecast AI</strong>"
-            href: "https://forecastai-poc.netlify.app/"
-            target: "_blank"
-          - text: "<span style='font-size: 0.7rem; font-weight: 300; color: gray;'>CONCEPT STAGE</span>"
-          - text: "<strong>Platemate</strong>"
-            href: "https://platemateofficial.netlify.app/"
-            target: "_blank"
-          - text: "<strong>Skill Forge</strong>"
-            href: "https://skillforgeofficial.netlify.app/"
-            target: "_blank"
-          - text: |
-              <hr style="border: none; border-top: 1px solid #ccc; margin: 0.8em 0;">
-          - text: "<span style='font-size: 0.7rem; font-weight: 300; color: gray;'>ABOUT</span>"
-          - text: "<strong>Startup Journey</strong>"
-            href: "startup/journey.qmd"
-            target: "_self"
       - href: about.qmd
         text: "<span class='nav-text'>About</span>"
 
