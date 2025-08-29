@@ -197,8 +197,8 @@
   position:relative;
   display:inline-block;
   font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
-  font-size:2.3em;
-  font-weight:800;
+  font-size:2.4em;
+  font-weight:900;
   background:linear-gradient(270deg,#0d6efd,#1e90ff,#00bfff,#0d6efd);
   background-size:320% auto;
   -webkit-background-clip:text;
@@ -223,7 +223,7 @@
     #ffb347 40%,
     #9adcfb 56%,
     #6ec9ff 64%,
-    #ffd700 80%,
+    #ffd700 75%,
     #ffdf6e 88%,
     #ffd700 100%
   );
