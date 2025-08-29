@@ -8,6 +8,7 @@ format:
     include-in-header: gate.html
 ---
 
+<style>html:not([data-gate]){visibility:hidden!important}</style>
 
 <style>
   .ww-card {
