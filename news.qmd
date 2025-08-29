@@ -13,18 +13,29 @@ format:
 (function() {
   var correct = "test123"; 
   var maxTries = 1;
-  var lockMinutes = 0;
+  var lockMinutes = 1;
   var now = Date.now();
 
   var failData = JSON.parse(localStorage.getItem("news_fail")) || {count:0, lockedUntil:0};
 
   function denyAndRedirect(msg){
     document.addEventListener("DOMContentLoaded", function() {
+      var seconds = 3;
       document.body.innerHTML =
-        "<h2 style='text-align:center;margin-top:20%;color:#c00;font-family:sans-serif;'>"
+        "<h2 id='deny-msg' style='text-align:center;margin-top:20%;color:#c00;font-family:sans-serif;'>"
         + "⛔ Access Denied ⛔<br>" + msg + "<br><br>"
-        + "Redirecting to homepage in 3 seconds…</h2>";
-      setTimeout(function(){ location.href = "/"; }, 3000);
+        + "Redirecting to homepage in <span id='countdown'>" + seconds + "</span> seconds…</h2>";
+
+      var countdownEl = document.getElementById("countdown");
+      var timer = setInterval(function(){
+        seconds--;
+        if (seconds <= 0) {
+          clearInterval(timer);
+          location.href = "/";
+        } else {
+          countdownEl.textContent = seconds;
+        }
+      }, 1000);
     });
   }
 
