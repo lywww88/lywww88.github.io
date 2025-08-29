@@ -17,27 +17,36 @@ website:
     logo: images/logo1.png
     left:
       - href: index.qmd
-        text: '<span class="nav-text">Home</span>'
+        text: "<span class='nav-text'>Home</span>"
       - href: news.qmd
-        text: '<span class="nav-text">News</span>'
-      - text: '<span class="nav-text">Projects</span>'
+        text: "<span class='nav-text'>News</span>"
+      - text: "<span class='nav-text'>Projects</span>"
         menu:
           - href: projects/project.qmd
-            text: '<span class="nav-text">Projects</span>'
+            text: "<span class='nav-text'>Projects</span>"
           - href: projects/Capstone.qmd
-            text: '<span class="nav-text">Capstone Project</span>'
-      - text: '<span class="nav-text">Startup</span>'
+            text: "<span class='nav-text'>Capstone Project</span>"
+      - text: "<span class='nav-text'>Startup</span>"
         menu:
-          - { text: '<span style="font-size: 0.7rem; font-weight: 300; color: gray;">BETA LAUNCH</span>' }
-          - { text: '<strong>Klug Forecast AI</strong>', href: "https://forecastai-poc.netlify.app/", target: "_blank" }
-          - { text: '<span style="font-size: 0.7rem; font-weight: 300; color: gray;">CONCEPT STAGE</span>' }
-          - { text: '<strong>Platemate</strong>', href: "https://platemateofficial.netlify.app/", target: "_blank" }
-          - { text: '<strong>Skill Forge</strong>', href: "https://skillforgeofficial.netlify.app/", target: "_blank" }
-          - { text: '<hr style="border: none; border-top: 1px solid #ccc; margin: 0.8em 0;">' }
-          - { text: '<span style="font-size: 0.7rem; font-weight: 300; color: gray;">ABOUT</span>' }
-          - { text: '<strong>Startup Journey</strong>', href: "startup/journey.qmd", target: "_self" }
+          - text: "<span style='font-size: 0.7rem; font-weight: 300; color: gray;'>BETA LAUNCH</span>"
+          - text: "<strong>Klug Forecast AI</strong>"
+            href: "https://forecastai-poc.netlify.app/"
+            target: "_blank"
+          - text: "<span style='font-size: 0.7rem; font-weight: 300; color: gray;'>CONCEPT STAGE</span>"
+          - text: "<strong>Platemate</strong>"
+            href: "https://platemateofficial.netlify.app/"
+            target: "_blank"
+          - text: "<strong>Skill Forge</strong>"
+            href: "https://skillforgeofficial.netlify.app/"
+            target: "_blank"
+          - text: |
+              <hr style="border: none; border-top: 1px solid #ccc; margin: 0.8em 0;">
+          - text: "<span style='font-size: 0.7rem; font-weight: 300; color: gray;'>ABOUT</span>"
+          - text: "<strong>Startup Journey</strong>"
+            href: "startup/journey.qmd"
+            target: "_self"
       - href: about.qmd
-        text: '<span class="nav-text">About</span>'
+        text: "<span class='nav-text'>About</span>"
 
     right:
       - icon: bell
@@ -53,16 +62,16 @@ website:
       - icon: database
         href: "https://www.kaggle.com/yiweilu"
         aria-label: Kaggle
-      - text: '<span class="nav-text resume-tab"><i class="bi bi-download"></i> Resume</span>'
+      - text: "<span class='nav-text resume-tab'><i class='bi bi-download'></i> Resume</span>"
         menu:
           - href: resume.qmd
-            text: '<span class="nav-text"><i class="bi bi-eye"></i> View Resume</span>'
+            text: "<span class='nav-text'><i class='bi bi-eye'></i> View Resume</span>"
             target: "_self"
           - href: Resume_YL_2025_D1.pdf
-            text: '<span class="nav-text"><i class="bi bi-file-earmark-arrow-down"></i> Download PDF</span>'
+            text: "<span class='nav-text'><i class='bi bi-file-earmark-arrow-down'></i> Download PDF</span>"
             target: "_blank"
       - href: ww.html
-        text: '<img class="w-logo" src="/images/W.PNG" alt="W Logo">'
+        text: "<img class='w-logo' src='/images/W.PNG' alt='W Logo'>"
         aria-label: W
         icon: none
         target: "_blank"
@@ -72,7 +81,7 @@ format:
     theme: cosmo
     toc: true
     allow-html: true
-    css: 
+    css:
       - styles.css
       - ann.css
     include-in-header:
@@ -357,7 +366,7 @@ format:
             }
             function onEsc(e){ if (e.key === 'Escape') closeModal(); }
 
-            // 事件委托：命中右上角铃铛（多选择器兜底）
+            // 命中右上角铃铛（多选择器兜底）
             const BELL_SELECTORS = [
               'a[aria-label="Updates"]',
               '.open-release-log',
