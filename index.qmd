@@ -112,7 +112,7 @@ format:
 
   <!-- Right Side: Name + Motto + Buttons -->
   <div style="flex:1; text-align:center;">
-    <span class="name" data-text="Yiwei Lu" style="font-size:1.8em; font-weight:600;">Yiwei Lu</span><br>
+    <span class="name" data-text="Yiwei Lu" style="font-size:2.0em; font-weight:800;">Yiwei Lu</span><br>
     <span class="motto" style="display:block; margin:0.5em 0 1.2em; color:#555;">
       I believe clarity creates freedom — in data, design, and life.
     </span>
