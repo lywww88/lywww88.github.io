@@ -6,90 +6,132 @@ format:
     allow-html: true
 ---
 
-<!-- Announcement Bar -->
-<div id="announce" class="announcement-bar" role="region" aria-label="Site announcement" hidden>
+<!-- Announcement Bar (compact, centered under navbar) -->
+<div id="announce" class="announcement-bar compact" role="region" aria-label="Site announcement" hidden>
   <span class="emoji" aria-hidden="true">📢</span>
   <strong> News page is coming soon! </strong>
   <a href="news.html" target="_self">Preview Page →</a>
   <button class="ann-close" type="button" aria-label="Dismiss announcement" title="Dismiss">×</button>
 </div>
 
-<!-- Toggle button (hidden when bar is visible) -->
+<!-- Toggle button shown after dismiss -->
 <button id="ann-toggle" class="ann-toggle" hidden>Announcement</button>
 
 <style>
-  .announcement-bar {
-    position: relative;
-    display: flex;
-    justify-content: center;   /* 🔑 内容居中 */
-    align-items: center;
-    gap: .6em;
+  /* --- Compact, centered, stuck under navbar --- */
+  .announcement-bar{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: var(--ann-top, 56px);          /* 由 JS 计算导航栏高度后写入 */
+    z-index: 1050;                      /* 高过内容，低于你可能的浮动搜索按钮 */
+    display: flex; align-items: center; justify-content: center;
+    gap: .55em;
     background: #eaf3ff;
     color: #07315c;
-    font: 500 0.95rem/1.3 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-    padding: .6em 1em;
     border: 1px solid #bfd9ff;
-    border-radius: .5em;
-    box-shadow: 0 1px 6px rgba(0,0,0,.08);
-    margin: .8em 0 1em;
+    border-radius: 999px;               /* 胶囊形 */
+    box-shadow: 0 4px 14px rgba(0,0,0,.12);
+    padding: .38em .8em;                /* 紧凑 */
+    font: 600 0.9rem/1.2 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    white-space: nowrap;
+    max-width: min(92vw, 900px);
   }
-  .announcement-bar a {
-    color: #c46800; font-weight: 600; text-decoration: none;
+  .announcement-bar.compact strong{ font-weight: 700 }
+  .announcement-bar a{
+    color: #c46800; font-weight: 700; text-decoration: none;
   }
-  .announcement-bar a:hover { text-decoration: underline }
-  .ann-close {
-    position: absolute; right: 8px; top: 50%; transform: translateY(-50%);
+  .announcement-bar a:hover{ text-decoration: underline }
+
+  .announcement-bar .ann-close{
+    margin-left: .25em;
     inline-size: 28px; block-size: 28px;
     border: 0; border-radius: 50%;
     background: transparent; color: inherit;
-    font-size: 1.2rem; line-height: 1; cursor: pointer;
+    font-size: 1.05rem; line-height: 1; cursor: pointer;
   }
-  .ann-close:hover { background: rgba(0,0,0,.08) }
+  .announcement-bar .ann-close:hover{ background: rgba(0,0,0,.08) }
+  .announcement-bar .emoji{ font-size: 1.05em }
 
-  /* Toggle button */
-  .ann-toggle {
-    display: inline-flex; align-items: center; justify-content: center;
-    padding: .4em .9em;
-    font: 500 0.9rem/1.2 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-    border: 1px solid #bfd9ff; border-radius: .5em;
+  /* Toggle button: fixed at same top,靠右，不遮挡内容 */
+  .ann-toggle{
+    position: fixed;
+    right: 14px;
+    top: calc(var(--ann-top, 56px) + 2px);
+    z-index: 1049;
+    padding: .35em .7em;
+    border: 1px solid #bfd9ff;
+    border-radius: 999px;
     background: #f5faff; color: #07315c;
+    font: 600 .88rem/1.1 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
     cursor: pointer;
-    box-shadow: 0 1px 4px rgba(0,0,0,.06);
+    box-shadow: 0 3px 10px rgba(0,0,0,.08);
   }
-  .ann-toggle:hover { background: #eaf3ff }
+  .ann-toggle:hover{ background: #eaf3ff }
+
+  /* Dark mode */
+  @media (prefers-color-scheme: dark){
+    .announcement-bar{
+      background: #0e2742; color:#e6f0ff; border-color:#294b73;
+      box-shadow: 0 4px 18px rgba(0,0,0,.45);
+    }
+    .announcement-bar a{ color:#ffb662 }
+    .ann-toggle{ background:#12375d; color:#e6f0ff; border-color:#294b73 }
+    .ann-toggle:hover{ background:#0e2742 }
+    .announcement-bar .ann-close:hover{ background: rgba(255,255,255,.08) }
+  }
+
+  /* Reduce motion */
+  @media (prefers-reduced-motion: no-preference){
+    .announcement-bar, .ann-toggle { transition: opacity .18s ease, transform .18s ease; }
+  }
 </style>
 
 <script>
   (function(){
-    const VERSION = '2025-08-28-v3'; // 更新内容时改版本号
+    const VERSION = '2025-08-28-topbar-v1';
     const KEY = 'announce:dismissed';
     const bar = document.getElementById('announce');
     const toggle = document.getElementById('ann-toggle');
 
-    // 初始化显示逻辑
+    // 计算导航栏高度，贴紧其下方
+    function computeTop(){
+      const candidates = [
+        document.getElementById('quarto-header'),
+        document.querySelector('header.navbar'),
+        document.querySelector('.navbar.navbar-expand'),
+        document.querySelector('header.site-header'),
+      ].filter(Boolean);
+      const nav = candidates[0];
+      const h = nav ? nav.getBoundingClientRect().height : 56;
+      document.documentElement.style.setProperty('--ann-top', (Math.round(h) + 6) + 'px');
+    }
+    computeTop();
+    window.addEventListener('resize', computeTop);
+
+    // 初始化显示：若没被关闭过，则显示条，隐藏按钮
     try {
       const dismissed = localStorage.getItem(KEY);
-      if (dismissed !== VERSION) {
-        bar.hidden = false; toggle.hidden = true;
-      } else {
-        bar.hidden = true; toggle.hidden = false;
-      }
-    } catch(_) { bar.hidden = false; }
+      if (dismissed !== VERSION) { bar.hidden = false; toggle.hidden = true; }
+      else { bar.hidden = true; toggle.hidden = false; }
+    } catch (_) { bar.hidden = false; }
 
-    // 关闭事件
-    const closeBtn = bar.querySelector('.ann-close');
-    closeBtn.addEventListener('click', () => {
+    // 关闭
+    bar.querySelector('.ann-close').addEventListener('click', () => {
       bar.hidden = true;
       toggle.hidden = false;
       try { localStorage.setItem(KEY, VERSION); } catch(_) {}
     });
 
-    // 打开事件
+    // 打开
     toggle.addEventListener('click', () => {
       bar.hidden = false;
       toggle.hidden = true;
       try { localStorage.removeItem(KEY); } catch(_) {}
     });
+
+    // Esc 快速关闭
+    bar.addEventListener('keydown', (e) => { if (e.key === 'Escape') bar.querySelector('.ann-close').click(); });
   })();
 </script>
 
