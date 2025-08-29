@@ -3,10 +3,9 @@ project:
   resources:
     - images/**
     - projects/*.pdf
-    - ann.html      
-    - ann.css           
-    - ann.js          
-
+    - ann.html
+    - ann.css
+    - ann.js
 
 website:
   title: "Yiwei Lu"
@@ -75,8 +74,7 @@ website:
         aria-label: W
         icon: none
         target: _blank
-
-
+        
 
 format:
   html:
