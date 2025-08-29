@@ -30,20 +30,20 @@ website:
         menu:
           - text: '<span style="font-size: 0.7rem; font-weight: 300; color: gray;">BETA LAUNCH</span>'
           - text: '<strong>Klug Forecast AI</strong>'
-            href: https://forecastai-poc.netlify.app/
-            target: _blank
+            href: "https://forecastai-poc.netlify.app/"
+            target: "_blank"
           - text: '<span style="font-size: 0.7rem; font-weight: 300; color: gray;">CONCEPT STAGE</span>'
           - text: '<strong>Platemate</strong>'
-            href: https://platemateofficial.netlify.app/
-            target: _blank
+            href: "https://platemateofficial.netlify.app/"
+            target: "_blank"
           - text: '<strong>Skill Forge</strong>'
-            href: https://skillforgeofficial.netlify.app/
-            target: _blank
+            href: "https://skillforgeofficial.netlify.app/"
+            target: "_blank"
           - text: '<hr style="border: none; border-top: 1px solid #ccc; margin: 0.8em 0;">'
           - text: '<span style="font-size: 0.7rem; font-weight: 300; color: gray;">ABOUT</span>'
           - text: '<strong>Startup Journey</strong>'
             href: startup/journey.qmd
-            target: _self
+            target: "_self"
       - href: about.qmd
         text: '<span class="nav-text">About</span>'
 
@@ -51,29 +51,29 @@ website:
       - icon: bell
         aria-label: Updates
         href: "#"
-        target: _self
+        target: "_self"
       - icon: linkedin
-        href: https://www.linkedin.com/in/yiwei-lu78
+        href: "https://www.linkedin.com/in/yiwei-lu78"
         aria-label: LinkedIn
       - icon: github
-        href: https://github.com/lywww88
+        href: "https://github.com/lywww88"
         aria-label: GitHub
       - icon: database
-        href: https://www.kaggle.com/yiweilu
+        href: "https://www.kaggle.com/yiweilu"
         aria-label: Kaggle
       - text: '<span class="nav-text resume-tab"><i class="bi bi-download"></i> Resume</span>'
         menu:
           - href: resume.qmd
             text: '<span class="nav-text"><i class="bi bi-eye"></i> View Resume</span>'
-            target: _self
+            target: "_self"
           - href: Resume_YL_2025_D1.pdf
             text: '<span class="nav-text"><i class="bi bi-file-earmark-arrow-down"></i> Download PDF</span>'
-            target: _blank
+            target: "_blank"
       - href: ww.html
         text: '<img class="w-logo" src="/images/W.PNG" alt="W Logo">'
         aria-label: W
         icon: none
-        target: _blank
+        target: "_blank"
 
 format:
   html:
