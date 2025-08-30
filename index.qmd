@@ -8,7 +8,6 @@ format:
 
 <!-- ===== Announcement (overlay on navbar center) ===== -->
 <div id="announce" class="announce-on-nav" role="dialog" aria-label="Site announcement" hidden>
-  <!-- 内联 SVG 图标（信息提示） -->
   <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
     <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
     <line x1="12" y1="8"  x2="12" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
