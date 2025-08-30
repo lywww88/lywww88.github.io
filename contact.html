@@ -12,11 +12,21 @@ format:
     display:flex; align-items:center; gap:.6rem; margin:1.2rem 0 1.6rem;
   }
   .contact-hero .bi { font-size:1.6rem; }
+
+  /* 居中卡片 */
+  .contact-wrapper {
+    display:flex;
+    justify-content:center;
+    margin-top:2rem;
+  }
+
   .contact-card {
-    max-width: 720px; margin: 0 auto; padding: 1.25rem 1.25rem 1.6rem;
+    max-width: 720px; width:100%;
+    padding: 1.25rem 1.25rem 1.6rem;
     border: 1px solid #e9ecef; border-radius: 14px; box-shadow: 0 2px 10px rgba(0,0,0,.03);
     background: #fff;
   }
+
   .form-row { display:grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
   .form-row + .form-row, .form-row + .form-group { margin-top: 1rem; }
   .form-group { display:flex; flex-direction:column; }
@@ -30,9 +40,14 @@ format:
   .btn-primary {
     display:inline-flex; align-items:center; gap:.5rem; padding:.6rem 1rem; border-radius:999px;
     border: none; background:#0d6efd; color:#fff; font-weight:600; cursor:pointer;
+    text-decoration:none;
   }
   .btn-primary:hover { background:#0b5ed7; }
-  .btn-ghost { background:transparent; border:1px solid #ced4da; border-radius:999px; padding:.55rem .9rem; cursor:pointer; }
+  .btn-ghost {
+    background:transparent; border:1px solid #ced4da; border-radius:999px; padding:.55rem .9rem;
+    cursor:pointer; font-weight:600; color:#333; text-decoration:none;
+  }
+  .btn-ghost:hover { background:#f8f9fa; }
   .status { margin-top: .8rem; font-weight:600; }
   .status.ok { color:#198754; }     /* success */
   .status.err { color:#dc3545; }    /* error */
@@ -45,73 +60,80 @@ format:
   <h1 style="margin:0;">Contact</h1>
 </div>
 
-<div class="contact-card">
-  <p style="margin-top:0; color:#555;">
-    Have a question or a project in mind? Send me a message and I'll get back to you soon.
-  </p>
+<div class="contact-wrapper">
+  <div class="contact-card">
+    <p style="margin-top:0; color:#555;">
+      Have a question or a project in mind? Send me a message and I'll get back to you soon.
+    </p>
 
-  <!-- ✅ 替换成你的 Formspree 端点；示例：https://formspree.io/f/abcdwxyz -->
-  <form id="contact-form" action="https://formspree.io/f/xldwjnqg" method="POST" novalidate>
-    <!-- 防垃圾字段（蜜罐） -->
-    <div class="visually-hidden">
-      <label>Do not fill this out if you are human:
-        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
-      </label>
-    </div>
-
-    <div class="form-row">
-      <div class="form-group">
-        <label for="name">Name <span aria-hidden="true">*</span></label>
-        <input id="name" name="name" type="text" required placeholder="Your name">
+    <!-- ✅ 替换成你的 Formspree 端点；示例：https://formspree.io/f/abcdwxyz -->
+    <form id="contact-form" action="https://formspree.io/f/xldwjnqg" method="POST" novalidate>
+      <!-- 防垃圾字段（蜜罐） -->
+      <div class="visually-hidden">
+        <label>Do not fill this out if you are human:
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+        </label>
       </div>
-      <div class="form-group">
-        <label for="email">Email <span aria-hidden="true">*</span></label>
-        <input id="email" name="email" type="email" required placeholder="you@example.com">
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Name <span aria-hidden="true">*</span></label>
+          <input id="name" name="name" type="text" required placeholder="Your name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email <span aria-hidden="true">*</span></label>
+          <input id="email" name="email" type="email" required placeholder="you@example.com">
+        </div>
       </div>
-    </div>
 
-    <div class="form-row">
-      <div class="form-group">
-        <label for="topic">Topic</label>
-        <select id="topic" name="topic">
-          <option value="General">General</option>
-          <option value="Collaboration">Collaboration</option>
-          <option value="Project Inquiry">Project Inquiry</option>
-          <option value="Speaking/Workshop">Speaking / Workshop</option>
-        </select>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="topic">Topic</label>
+          <select id="topic" name="topic">
+            <option value="General">General</option>
+            <option value="Collaboration">Collaboration</option>
+            <option value="Project Inquiry">Project Inquiry</option>
+            <option value="Speaking/Workshop">Speaking / Workshop</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject <span aria-hidden="true">*</span></label>
+          <input id="subject" name="subject" type="text" required placeholder="Short summary">
+        </div>
       </div>
+
       <div class="form-group">
-        <label for="subject">Subject <span aria-hidden="true">*</span></label>
-        <input id="subject" name="subject" type="text" required placeholder="Short summary">
+        <label for="message">Message <span aria-hidden="true">*</span></label>
+        <textarea id="message" name="message" required placeholder="Tell me a bit more..."></textarea>
+        <div class="hint">I usually reply within 1&ndash;2 business days.</div>
       </div>
+
+      <div class="form-group" style="margin-top:.6rem;">
+        <label style="font-weight:500;">
+          <input type="checkbox" name="consent" required>
+          I consent to be contacted about my inquiry.
+        </label>
+      </div>
+
+      <!-- 你的网站页来源（可选） -->
+      <input type="hidden" name="source" value="contact.html">
+
+      <div class="actions">
+        <button class="btn-primary" type="submit">
+          <i class="bi bi-send" aria-hidden="true"></i> Send Message
+        </button>
+        <!-- 兜底：如果网络出错，或者你暂时没开 Formspree -->
+        <a class="btn-ghost" href="mailto:yiweilu36@uci.edu?subject=Website%20Contact">Use Email Instead</a>
+      </div>
+
+      <div id="status" class="status" role="status" aria-live="polite"></div>
+    </form>
+
+    <!-- ✅ Home Page 按钮 -->
+    <div style="text-align:right; margin-top:1.5rem;">
+      <a href="index.html" class="btn-ghost">🏠 Home Page</a>
     </div>
-
-    <div class="form-group">
-      <label for="message">Message <span aria-hidden="true">*</span></label>
-      <textarea id="message" name="message" required placeholder="Tell me a bit more..."></textarea>
-      <div class="hint">I usually reply within 1&ndash;2 business days.</div>
-    </div>
-
-    <div class="form-group" style="margin-top:.6rem;">
-      <label style="font-weight:500;">
-        <input type="checkbox" name="consent" required>
-        I consent to be contacted about my inquiry.
-      </label>
-    </div>
-
-    <!-- 你的网站页来源（可选） -->
-    <input type="hidden" name="source" value="contact.html">
-
-    <div class="actions">
-      <button class="btn-primary" type="submit">
-        <i class="bi bi-send" aria-hidden="true"></i> Send Message
-      </button>
-      <!-- 兜底：如果网络出错，或者你暂时没开 Formspree -->
-      <a class="btn-ghost" href="mailto:yiweilu36@uci.edu?subject=Website%20Contact">Use Email Instead</a>
-    </div>
-
-    <div id="status" class="status" role="status" aria-live="polite"></div>
-  </form>
+  </div>
 </div>
 
 <script>
@@ -129,7 +151,6 @@ format:
     form.addEventListener('submit', async function(e){
       e.preventDefault();
 
-      // HTML5 原生校验
       if (!form.checkValidity()){
         form.reportValidity();
         return;
@@ -141,7 +162,6 @@ format:
 
       try {
         const data = new FormData(form);
-        // 若未替换 Formspree 端点，直接 fallback 到 mailto
         if (endpoint.includes('FORM_ENDPOINT')) {
           window.location.href = 'mailto:yiweilu36@uci.edu?subject=' + encodeURIComponent(data.get('subject') || 'Website Contact') +
             '&body=' + encodeURIComponent(
