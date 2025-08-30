@@ -9,9 +9,10 @@ format:
 
 <script>
 (function() {
-  var correct = "mimacuowu123"; 
-  var maxTries = 1;
-  var lockMinutes = 10;
+  var correctUser = "yiwei";       
+  var correctPass = "mimacuowu123";
+  var maxTries = 2;
+  var lockMinutes = 15;
   var now = Date.now();
 
   var failData = JSON.parse(localStorage.getItem("news_fail")) || {count:0, lockedUntil:0};
@@ -20,7 +21,7 @@ format:
     document.addEventListener("DOMContentLoaded", function() {
       var seconds = 3;
       document.body.innerHTML =
-        "<h2 id='deny-msg' style='text-align:center;margin-top:20%;color:#c00;font-family:sans-serif;'>"
+        "<h2 id='deny-msg' style='text-align:center;margin-top:20%;color:#333;font-family:sans-serif;'>"
         + "⛔ Access Denied ⛔<br>" + msg + "<br><br>"
         + "Redirecting to homepage in <span id='countdown'>" + seconds + "</span> seconds…</h2>";
 
@@ -45,9 +46,15 @@ format:
 
     var ok = false;
     for (var i = 0; i < maxTries; i++) {
-      var input = prompt("🔒 Please enter the password("+(maxTries - i)+" attempts left):");
-      if (input === correct) { ok = true; break; }
-      else { failData.count++; }
+      var user = prompt("Username ("+(maxTries - i)+" attempts left):");
+      var pass = prompt("Password ("+(maxTries - i)+" attempts left):");
+
+      if (user === correctUser && pass === correctPass) { 
+        ok = true; 
+        break; 
+      } else { 
+        failData.count++; 
+      }
     }
 
     if (!ok) {
