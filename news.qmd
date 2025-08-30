@@ -22,7 +22,7 @@ format:
     document.addEventListener("DOMContentLoaded", function() {
       var seconds = 3;
       document.body.innerHTML =
-        "<h2 id='deny-msg' style='text-align:center;margin-top:20%;color:#c00;font-family:sans-serif;'>"
+        "<h2 id='deny-msg' style='text-align:center;margin-top:30%;color:#0061ff;font-family:sans-serif;'>"
         + "⛔ Access Denied ⛔<br>" + msg + "<br><br>"
         + "Redirecting to homepage in <span id='countdown'>" + seconds + "</span> seconds…</h2>";
 
@@ -75,7 +75,7 @@ format:
 
 .news-tl-list{
   display:grid;
-  grid-template-columns: var(--datew) 28px 1fr; /* 中列更宽以容纳更粗竖线 */
+  grid-template-columns: var(--datew) 28px 1fr; 
   row-gap:16px;
   position:relative;
 }
