@@ -4,6 +4,7 @@ format:
   html:
     toc: false
     page-layout: article
+    allow-html: true 
 ---
 
 <!-- Bootstrap Icons（全站已引入可删） -->
