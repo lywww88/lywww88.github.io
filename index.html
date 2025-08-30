@@ -219,7 +219,7 @@ ul.task-list li input[type="checkbox"] {
 
 <!-- ===== Announcement (overlay on navbar center) ===== -->
 <div id="announce" class="announce-on-nav" role="dialog" aria-label="Site announcement" hidden="">
-<p><!-- 内联 SVG 图标（信息提示） --> <svg class="icon" viewbox="0 0 24 24" aria-hidden="true"> <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"></circle> <line x1="12" y1="8" x2="12" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line> <circle cx="12" cy="16" r="1.5" fill="currentColor"></circle> </svg> <strong> News page is coming soon! </strong> <a href="news.html" target="_self">Preview Page →</a> <button class="ann-close" type="button" aria-label="Dismiss">×</button></p>
+<p><svg class="icon" viewbox="0 0 24 24" aria-hidden="true"> <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"></circle> <line x1="12" y1="8" x2="12" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line> <circle cx="12" cy="16" r="1.5" fill="currentColor"></circle> </svg> <strong>Notice:</strong>Capstone Project and Startup Journal pages are still under development. <a href="news.html" target="_self">Explore News →</a> <button class="ann-close" type="button" aria-label="Dismiss">×</button></p>
 </div>
 <!-- Minimized (reopen) icon only -->
 <div id="ann-toggle" class="announce-on-nav minimized noframe" role="button" aria-label="Open announcement" title="Open announcement" hidden="">
@@ -255,7 +255,6 @@ ul.task-list li input[type="checkbox"] {
   .announce-on-nav .ann-close:hover{ background:rgba(0,0,0,.08); }
   .announce-on-nav .icon{ width:20px; height:20px; flex:0 0 20px; }
 
-  /* 最小化状态：无外框，只显示图标 */
   .announce-on-nav.minimized.noframe{
     background: transparent;
     border: 0;
@@ -293,6 +292,14 @@ ul.task-list li input[type="checkbox"] {
     .announce-on-nav .ann-close:hover{ background:rgba(255,255,255,.10); }
     .announce-on-nav.minimized.noframe{ background: transparent; }
   }
+
+/* 收起时 pill 吸附在 Yiwei Lu 右侧 */
+#name-anchor > #ann-toggle.announce-on-nav.minimized.noframe {
+  position: absolute;
+  left: calc(100% + 0.5em);
+  top: 0.15em;
+  transform: none;
+}
 </style>
 <script>
 (() => {
@@ -346,6 +353,16 @@ ul.task-list li input[type="checkbox"] {
   window.addEventListener('load', positionOverNavbar);
   positionOverNavbar();
 })();
+
+
+window.addEventListener('load', () => {
+  const anchor = document.getElementById('name-anchor');
+  const pill   = document.getElementById('ann-toggle');
+  if (anchor && pill && pill.parentElement !== anchor) {
+    anchor.appendChild(pill);
+  }
+});
+
 </script>
 <!-- Profile Section -->
 <div style="display:flex; flex-wrap:wrap; align-items:center; gap:2em; max-width:900px; margin:2em auto;">
@@ -358,7 +375,9 @@ ul.task-list li input[type="checkbox"] {
 
   <!-- Right Side: Name + Motto + Buttons -->
   <div style="flex:1; text-align:center;">
-    <span class="name" data-text="Yiwei Lu" style="font-size:1.8em; font-weight:600;">Yiwei Lu</span><br>
+    <div id="name-anchor" style="position:relative; display:inline-block;">
+      <span class="name" data-text="Yiwei Lu" style="font-size:2.4em; font-weight:700;">Yiwei Lu</span>
+    </div><br>
     <span class="motto" style="display:block; margin:0.5em 0 1.2em; color:#555;">
       I believe clarity creates freedom — in data, design, and life.
     </span>
@@ -366,7 +385,7 @@ ul.task-list li input[type="checkbox"] {
     <!-- Buttons directly under motto -->
     <div class="connect-container" style="display:flex; flex-wrap:wrap; gap:1em; justify-content:center; margin-top:1em;">
       <a href="https://www.linkedin.com/in/yiwei-lu78" class="btn" target="_blank">
-        <i class="bi bi-linkedin"></i> LinkedIn
+        <i class="bi bi-linkedin"></i> Linkedin
       </a>
       <a href="https://wa.me/6266736276" class="btn" target="_blank">
         <i class="bi bi-whatsapp"></i> WhatsApp
@@ -424,9 +443,6 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="images/project.jpg" alt="More Projects" style="width: 100%; height: auto; border-radius: 0.5em;"></p>
 </div>
 </div>
-</div>
-<div aria-hidden="true" style="border-top: 1px solid #ccc; margin: 1.5em 0;">
-
 </div>
 <p style="text-align: center; color: #888; font-size: 0.85em; margin-top: 3em;">
 © 2025 Yiwei Lu. All rights reserved.
@@ -847,10 +863,11 @@ ul.task-list li input[type="checkbox"] {
 
 <!-- ========== GLOBAL: Release Modal (bell) ========== -->
 <script type="text/x-template" id="release-template">
-  <p>Site Updates — 08.28.2025</p>
+  <p>Site Updates — 08.29.2025</p>
   <ul>
-    <li>Updated Announcement Bar.</li>
-    <li>Added floating Search & Back-to-Top button.</li>
+    <li>Contact Form (Beta) launched</li>
+    <li>Updated Announcement Bar. (0828)</li>
+    <li>Added floating Search & Back-to-Top button. (0827)</li>
     <li>Improved mobile navigation polish.</li>
     <li>Profile section redesign with gradient text and glowing avatar.</li>
   </ul>

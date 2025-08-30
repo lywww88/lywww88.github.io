@@ -230,9 +230,9 @@ ul.task-list li input[type="checkbox"] {
     document.addEventListener("DOMContentLoaded", function() {
       var seconds = 3;
       document.body.innerHTML =
-        "<h2 id='deny-msg' style='text-align:center;margin-top:20%;color:#c00;font-family:sans-serif;'>"
-        + "⛔ Access Denied ⛔<br>" + msg + "<br><br>"
-        + "Redirecting to homepage in <span id='countdown'>" + seconds + "</span> seconds…</h2>";
+        "<h2 id='deny-msg' style='text-align:center;margin-top:15%;color:#00aeff;font-family:sans-serif;'>"
+        + "🚧 " + msg + "<br><br>"
+        + "<br>" +"Redirecting to homepage in <span id='countdown'>" + seconds + "</span> seconds…</h2>";
 
       var countdownEl = document.getElementById("countdown");
       var timer = setInterval(function(){
@@ -248,7 +248,7 @@ ul.task-list li input[type="checkbox"] {
   }
 
   if (now < failData.lockedUntil) {
-    denyAndRedirect("This page is currently under development and testing<br>Please try again later.");
+    denyAndRedirect("This page is currently under development and testing<br><br>Please try again later.");
   } else {
     failData.count = 0;
     localStorage.setItem("news_fail", JSON.stringify(failData));
@@ -263,7 +263,7 @@ ul.task-list li input[type="checkbox"] {
     if (!ok) {
       failData.lockedUntil = now + lockMinutes * 60 * 1000;
       localStorage.setItem("news_fail", JSON.stringify(failData));
-      denyAndRedirect("This page is currently under development and testing<br>Please try again in "+lockMinutes+" minutes.");
+      denyAndRedirect("This page is currently under development and testing<br><br>Please try again in "+lockMinutes+" minutes.");
     }
   }
 })();
@@ -274,7 +274,6 @@ ul.task-list li input[type="checkbox"] {
 .news-intro{margin:22px auto 8px;font-size:1.05rem;line-height:1.8;color:#333;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;}
 .news-badge{display:inline-block;font-size:.78rem;padding:.2em .6em;border-radius:999px;background:#f5f9ff;border:1px solid #d8e2f1;color:#0b3d91;}
 
-/* ===== Timeline (合并后的最终版本：线更明显、圆点对齐且不被覆盖) ===== */
 .news-tl{ --datew:120px; --line:#cbd5e1; --dot:#0d6efd; }
 
 .news-tl-year{
@@ -283,7 +282,7 @@ ul.task-list li input[type="checkbox"] {
 
 .news-tl-list{
   display:grid;
-  grid-template-columns: var(--datew) 28px 1fr; /* 中列更宽以容纳更粗竖线 */
+  grid-template-columns: var(--datew) 28px 1fr; 
   row-gap:16px;
   position:relative;
 }
@@ -873,10 +872,11 @@ Let’s stay in touch — here’s where to find me online.
 
 <!-- ========== GLOBAL: Release Modal (bell) ========== -->
 <script type="text/x-template" id="release-template">
-  <p>Site Updates — 08.28.2025</p>
+  <p>Site Updates — 08.29.2025</p>
   <ul>
-    <li>Updated Announcement Bar.</li>
-    <li>Added floating Search & Back-to-Top button.</li>
+    <li>Contact Form (Beta) launched</li>
+    <li>Updated Announcement Bar. (0828)</li>
+    <li>Added floating Search & Back-to-Top button. (0827)</li>
     <li>Improved mobile navigation polish.</li>
     <li>Profile section redesign with gradient text and glowing avatar.</li>
   </ul>
