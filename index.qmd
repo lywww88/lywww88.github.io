@@ -192,7 +192,7 @@ window.addEventListener('load', () => {
     <!-- Buttons directly under motto -->
     <div class="connect-container" style="display:flex; flex-wrap:wrap; gap:1em; justify-content:center; margin-top:1em;">
       <a href="https://www.linkedin.com/in/yiwei-lu78" class="btn" target="_blank">
-        <i class="bi bi-linkedin"></i> LinkedIn
+        <i class="bi bi-linkedin"></i> Linkedin
       </a>
       <a href="https://wa.me/6266736276" class="btn" target="_blank">
         <i class="bi bi-whatsapp"></i> WhatsApp
