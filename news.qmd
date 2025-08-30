@@ -55,7 +55,7 @@ format:
     if (!ok) {
       failData.lockedUntil = now + lockMinutes * 60 * 1000;
       localStorage.setItem("news_fail", JSON.stringify(failData));
-      denyAndRedirect("This page is currently under development and testing<br>Please try again in "+lockMinutes+" minutes.");
+      denyAndRedirect("This page is currently under development and testing<br><br>Please try again in "+lockMinutes+" minutes.");
     }
   }
 })();
