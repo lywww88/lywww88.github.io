@@ -94,7 +94,7 @@ Outside of work, I’m a curious learner who enjoys exploring tech trends, visua
     <i class="bi bi-person-circle"></i> Contact
   </a>
   <a href="https://lywww88.github.io/startup/journey.html" class="btn">
-    <i class="bi bi-person-circle"></i> My Journey
+    <i class="bi bi-envelope"></i> My Journey
   </a>
 </div>
 
