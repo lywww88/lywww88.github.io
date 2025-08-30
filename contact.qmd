@@ -4,30 +4,43 @@ format:
   html:
     toc: false
     page-layout: article
-    sanitize: false   # 保留原生 <form>/<input>，导航栏仍由 Quarto 注入
+    sanitize: false
 ---
 
+<!-- Bootstrap Icons (如全站已引入可删除这一行) -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 <style>
-  .contact-hero{display:flex;align-items:center;gap:.6rem;margin:1.2rem 0 1.6rem}
-  .contact-hero .bi{font-size:1.6rem}
-  .contact-card{max-width:720px;margin:0 auto;padding:1.25rem 1.25rem 1.6rem;border:1px solid #e9ecef;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.03);background:#fff}
-  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-  .form-row + .form-row,.form-row + .form-group{margin-top:1rem}
-  .form-group{display:flex;flex-direction:column}
-  label{font-weight:600;margin-bottom:.35rem}
-  input,textarea,select{padding:.65rem .75rem;border:1px solid #ced4da;border-radius:10px;font-size:1rem}
-  textarea{min-height:160px;resize:vertical}
-  .hint{color:#6c757d;font-size:.9rem;margin-top:.25rem}
-  .actions{display:flex;gap:.75rem;align-items:center;margin-top:1.2rem;flex-wrap:wrap}
-  .btn-primary{display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1rem;border-radius:999px;border:none;background:#0d6efd;color:#fff;font-weight:600;cursor:pointer}
-  .btn-primary:hover{background:#0b5ed7}
-  .btn-ghost{background:transparent;border:1px solid #ced4da;border-radius:999px;padding:.55rem .9rem;cursor:pointer}
-  .status{margin-top:.8rem;font-weight:600;min-height:1.2em}
-  .status.ok{color:#198754}.status.err{color:#dc3545}
-  .visually-hidden{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
-  @media (max-width:640px){.form-row{grid-template-columns:1fr}}
+  .contact-hero {
+    display:flex; align-items:center; gap:.6rem; margin:1.2rem 0 1.6rem;
+  }
+  .contact-hero .bi { font-size:1.6rem; }
+  .contact-card {
+    max-width: 720px; margin: 0 auto; padding: 1.25rem 1.25rem 1.6rem;
+    border: 1px solid #e9ecef; border-radius: 14px; box-shadow: 0 2px 10px rgba(0,0,0,.03);
+    background: #fff;
+  }
+  .form-row { display:grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .form-row + .form-row, .form-row + .form-group { margin-top: 1rem; }
+  .form-group { display:flex; flex-direction:column; }
+  label { font-weight: 600; margin-bottom:.35rem; }
+  input, textarea, select {
+    padding:.65rem .75rem; border:1px solid #ced4da; border-radius:10px; font-size:1rem;
+  }
+  textarea { min-height: 160px; resize: vertical; }
+  .hint { color:#6c757d; font-size:.9rem; margin-top:.25rem; }
+  .actions { display:flex; gap:.75rem; align-items:center; margin-top:1.2rem; }
+  .btn-primary {
+    display:inline-flex; align-items:center; gap:.5rem; padding:.6rem 1rem; border-radius:999px;
+    border: none; background:#0d6efd; color:#fff; font-weight:600; cursor:pointer;
+  }
+  .btn-primary:hover { background:#0b5ed7; }
+  .btn-ghost { background:transparent; border:1px solid #ced4da; border-radius:999px; padding:.55rem .9rem; cursor:pointer; }
+  .status { margin-top: .8rem; font-weight:600; }
+  .status.ok { color:#198754; }     /* success */
+  .status.err { color:#dc3545; }    /* error */
+  .visually-hidden { position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden; }
+  @media (max-width: 640px) { .form-row { grid-template-columns: 1fr; } }
 </style>
 
 <div class="contact-hero">
@@ -36,14 +49,14 @@ format:
 </div>
 
 <div class="contact-card">
-  <p style="margin-top:0;color:#555;">
+  <p style="margin-top:0; color:#555;">
     Have a question or a project in mind? Send me a message and I'll get back to you soon.
   </p>
 
-  <!-- 使用你已配置的 Formspree 端点 -->
-  <form id="contact-form" action="https://formspree.io/f/xldwjnqg" method="POST" novalidate accept-charset="UTF-8" autocomplete="on">
-    <!-- anti spam 蜜罐 -->
-    <div class="visually-hidden" aria-hidden="true">
+  <!-- ✅ 替换成你的 Formspree 端点；示例：https://formspree.io/f/abcdwxyz -->
+  <form id="contact-form" action="https://formspree.io/f/xldwjnqg" method="POST" novalidate>
+    <!-- 防垃圾字段（蜜罐） -->
+    <div class="visually-hidden">
       <label>Do not fill this out if you are human:
         <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
       </label>
@@ -52,11 +65,11 @@ format:
     <div class="form-row">
       <div class="form-group">
         <label for="name">Name <span aria-hidden="true">*</span></label>
-        <input id="name" name="name" type="text" required placeholder="Your name" autocomplete="name" maxlength="80">
+        <input id="name" name="name" type="text" required placeholder="Your name">
       </div>
       <div class="form-group">
         <label for="email">Email <span aria-hidden="true">*</span></label>
-        <input id="email" name="email" type="email" required placeholder="you@example.com" autocomplete="email" inputmode="email">
+        <input id="email" name="email" type="email" required placeholder="you@example.com">
       </div>
     </div>
 
@@ -72,13 +85,13 @@ format:
       </div>
       <div class="form-group">
         <label for="subject">Subject <span aria-hidden="true">*</span></label>
-        <input id="subject" name="subject" type="text" required placeholder="Short summary" maxlength="120">
+        <input id="subject" name="subject" type="text" required placeholder="Short summary">
       </div>
     </div>
 
     <div class="form-group">
       <label for="message">Message <span aria-hidden="true">*</span></label>
-      <textarea id="message" name="message" required placeholder="Tell me a bit more..." spellcheck="true" maxlength="3000"></textarea>
+      <textarea id="message" name="message" required placeholder="Tell me a bit more..."></textarea>
       <div class="hint">I usually reply within 1&ndash;2 business days.</div>
     </div>
 
@@ -89,15 +102,18 @@ format:
       </label>
     </div>
 
+    <!-- 你的网站页来源（可选） -->
     <input type="hidden" name="source" value="contact.html">
 
     <div class="actions">
       <button class="btn-primary" type="submit">
         <i class="bi bi-send" aria-hidden="true"></i> Send Message
       </button>
+      <!-- 兜底：如果网络出错，或者你暂时没开 Formspree -->
       <a class="btn-ghost" href="mailto:yiweilu36@uci.edu?subject=Website%20Contact">Use Email Instead</a>
-      <div id="status" class="status" role="status" aria-live="polite"></div>
     </div>
+
+    <div id="status" class="status" role="status" aria-live="polite"></div>
   </form>
 </div>
 
@@ -115,27 +131,48 @@ format:
 
     form.addEventListener('submit', async function(e){
       e.preventDefault();
-      if (!form.checkValidity()){ form.reportValidity(); return; }
+
+      // HTML5 原生校验
+      if (!form.checkValidity()){
+        form.reportValidity();
+        return;
+      }
 
       submitBtn.disabled = true;
-      const orig = submitBtn.innerHTML;
       submitBtn.innerHTML = '<i class="bi bi-hourglass-split" aria-hidden="true"></i> Sending...';
       show('');
 
       try {
         const data = new FormData(form);
-        const res = await fetch(endpoint, { method:'POST', body:data, headers:{'Accept':'application/json'} });
+        // 若未替换 Formspree 端点，直接 fallback 到 mailto
+        if (endpoint.includes('FORM_ENDPOINT')) {
+          window.location.href = 'mailto:yiweilu36@uci.edu?subject=' + encodeURIComponent(data.get('subject') || 'Website Contact') +
+            '&body=' + encodeURIComponent(
+              `Name: ${data.get('name')}\nEmail: ${data.get('email')}\nTopic: ${data.get('topic')}\n\n${data.get('message')}`
+            );
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '<i class="bi bi-send" aria-hidden="true"></i> Send Message';
+          return;
+        }
 
-        if (res.ok) { form.reset(); show('Thanks! Your message has been sent.', true); }
-        else {
+        const res = await fetch(endpoint, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (res.ok) {
+          form.reset();
+          show('Thanks! Your message has been sent. ✅', true);
+        } else {
           const err = await res.json().catch(()=>({}));
           show(err?.error || 'Something went wrong. Please try again or use email instead.', false);
         }
-      } catch {
+      } catch (err) {
         show('Network error. Please try again or use email instead.', false);
       } finally {
         submitBtn.disabled = false;
-        submitBtn.innerHTML = orig;
+        submitBtn.innerHTML = '<i class="bi bi-send" aria-hidden="true"></i> Send Message';
       }
     });
   })();
