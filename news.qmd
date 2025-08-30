@@ -23,8 +23,8 @@ format:
       var seconds = 3;
       document.body.innerHTML =
         "<h2 id='deny-msg' style='text-align:center;margin-top:15%;color:#00aeff;font-family:sans-serif;'>"
-        + "❌" + msg + "<br><br>"
-        + "Redirecting to homepage in <span id='countdown'>" + seconds + "</span> seconds…</h2>";
+        + "🚧 " + msg + "<br><br>"
+        + "<br>" +"Redirecting to homepage in <span id='countdown'>" + seconds + "</span> seconds…</h2>";
 
       var countdownEl = document.getElementById("countdown");
       var timer = setInterval(function(){
