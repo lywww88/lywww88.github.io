@@ -43,9 +43,6 @@ website:
             target: _self
       - href: about.qmd
         text: '<span class="nav-text">About</span>'
-      - href: contact.html
-        text: '<span class="nav-text">Contact</span>'
-        target: _blank
 
     right:
       - icon: bell
