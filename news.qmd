@@ -40,7 +40,7 @@ format:
   }
 
   if (now < failData.lockedUntil) {
-    denyAndRedirect("This page is currently under development and testing<br>Please try again later.");
+    denyAndRedirect("This page is currently under development and testing<br><br>Please try again later.");
   } else {
     failData.count = 0;
     localStorage.setItem("news_fail", JSON.stringify(failData));
