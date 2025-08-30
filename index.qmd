@@ -95,6 +95,14 @@ format:
     .announce-on-nav .ann-close:hover{ background:rgba(255,255,255,.10); }
     .announce-on-nav.minimized.noframe{ background: transparent; }
   }
+
+/* 收起时 pill 吸附在 Yiwei Lu 右侧 */
+#name-anchor > #ann-toggle.announce-on-nav.minimized.noframe {
+  position: absolute;
+  left: calc(100% + 0.5em);
+  top: 0.15em;
+  transform: none;
+}
 </style>
 
 <script>
@@ -149,6 +157,16 @@ format:
   window.addEventListener('load', positionOverNavbar);
   positionOverNavbar();
 })();
+
+
+window.addEventListener('load', () => {
+  const anchor = document.getElementById('name-anchor');
+  const pill   = document.getElementById('ann-toggle');
+  if (anchor && pill && pill.parentElement !== anchor) {
+    anchor.appendChild(pill);
+  }
+});
+
 </script>
 
 
@@ -164,7 +182,9 @@ format:
 
   <!-- Right Side: Name + Motto + Buttons -->
   <div style="flex:1; text-align:center;">
-    <span class="name" data-text="Yiwei Lu" style="font-size:2.4em; font-weight:700;">Yiwei Lu</span><br>
+    <div id="name-anchor" style="position:relative; display:inline-block;">
+      <span class="name" data-text="Yiwei Lu" style="font-size:2.4em; font-weight:700;">Yiwei Lu</span>
+    </div><br>
     <span class="motto" style="display:block; margin:0.5em 0 1.2em; color:#555;">
       I believe clarity creates freedom — in data, design, and life.
     </span>
@@ -175,13 +195,10 @@ format:
         <i class="bi bi-linkedin"></i> LinkedIn
       </a>
       <a href="https://wa.me/6266736276" class="btn" target="_blank">
-        <i class="bi bi-whatsapp"></i> Whatsapp
+        <i class="bi bi-whatsapp"></i> WhatsApp
       </a>
       <a href="mailto:yiweilu36@uci.edu" class="btn">
-        <i class="bi bi-envelope"></i> Email
-      </a>
-      <a href="contact.html" class="btn">
-        <i class="bi bi-card-text"></i> Contact
+        <i class="bi bi-envelope"></i> Email Me
       </a>
     </div>
   </div>
