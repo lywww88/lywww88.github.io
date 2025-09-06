@@ -1,141 +1,191 @@
----
-title: ""
-format:
-  html:
-    toc: false
-    page-layout: article
-    sanitize: false
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Form</title>
 
-<style>
-  .contact-hero {
-    display:flex; align-items:center; gap:.6rem; margin:1.2rem 0 1.6rem;
-  }
-  .contact-hero .bi { font-size:1.6rem; }
+  <!-- 全局样式 -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-  /* 居中卡片 */
-  .contact-wrapper {
-    display:flex;
-    justify-content:center;
-    margin-top:2rem;
-  }
+  <style>
+    /* 页面容器：限制整体宽度并居中 */
+    .contact-page{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0 16px;
+      box-sizing: border-box;
+    }
 
-  .contact-card {
-    max-width: 720px; width:100%;
-    padding: 1.25rem 1.25rem 1.6rem;
-    border: 1px solid #e9ecef; border-radius: 14px; box-shadow: 0 2px 10px rgba(0,0,0,.03);
-    background: #fff;
-  }
+    /* 标题区 */
+    .contact-page .contact-hero{
+      display:flex; align-items:center; gap:.6rem;
+      margin:1.2rem 0 1.2rem; justify-content:center;
+    }
+    .contact-page .contact-hero .bi{ font-size:1.6rem; line-height:1; }
 
-  .form-row { display:grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-  .form-row + .form-row, .form-row + .form-group { margin-top: 1rem; }
-  .form-group { display:flex; flex-direction:column; }
-  label { font-weight: 600; margin-bottom:.35rem; }
-  input, textarea, select {
-    padding:.65rem .75rem; border:1px solid #ced4da; border-radius:10px; font-size:1rem;
-  }
-  textarea { min-height: 160px; resize: vertical; }
-  .hint { color:#6c757d; font-size:.9rem; margin-top:.25rem; }
-  .actions { display:flex; gap:.75rem; align-items:center; margin-top:1.2rem; }
-  .btn-primary {
-    display:inline-flex; align-items:center; gap:.5rem; padding:.6rem 1rem; border-radius:999px;
-    border: none; background:#0d6efd; color:#fff; font-weight:600; cursor:pointer;
-    text-decoration:none;
-  }
-  .btn-primary:hover { background:#0b5ed7; }
-  .btn-ghost {
-    background:transparent; border:1px solid #ced4da; border-radius:999px; padding:.55rem .9rem;
-    cursor:pointer; font-weight:600; color:#333; text-decoration:none;
-  }
-  .btn-ghost:hover { background:#f8f9fa; }
-  .status { margin-top: .8rem; font-weight:600; }
-  .status.ok { color:#198754; }     /* success */
-  .status.err { color:#dc3545; }    /* error */
-  .visually-hidden { position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden; }
-  @media (max-width: 640px) { .form-row { grid-template-columns: 1fr; } }
-</style>
+    /* 表单卡片 */
+    .contact-page .contact-card{
+      max-width: 720px;
+      margin: 1.5rem auto;
+      padding: 2rem 2rem 2.25rem;
+      box-sizing: border-box;
+    }
 
-<div class="contact-hero">
-  <i class="bi bi-card-text" aria-hidden="true"></i>
-  <h1 style="margin:0;">Contact</h1>
-</div>
+    /* 表单控件统一高度与样式 */
+    .contact-page form input,
+    .contact-page form select{ height:44px; }
 
-<div class="contact-wrapper">
-  <div class="contact-card">
-    <p style="margin-top:0; color:#555;">
-      Have a question or a project in mind? Send me a message and I'll get back to you soon.
-    </p>
+    .contact-page form input,
+    .contact-page form textarea,
+    .contact-page form select{
+      width:100%;
+      padding:.65rem .75rem;
+      border:1px solid #ced4da;
+      border-radius:10px;
+      font-size:1rem; line-height:1.2;
+      background:#fff;
+      box-sizing: border-box;
+    }
+    .contact-page form textarea{ min-height:160px; resize:vertical; }
 
-    <!-- ✅ 替换成你的 Formspree 端点；示例：https://formspree.io/f/abcdwxyz -->
-    <form id="contact-form" action="https://formspree.io/f/xldwjnqg" method="POST" novalidate>
-      <!-- 防垃圾字段（蜜罐） -->
-      <div class="visually-hidden">
-        <label>Do not fill this out if you are human:
-          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
-        </label>
-      </div>
+    .contact-page form label{ font-weight:600; margin:0 0 .4rem; }
+    .contact-page .form-group{ display:flex; flex-direction:column; margin-bottom:1rem; }
 
-      <div class="form-row">
-        <div class="form-group">
-          <label for="name">Name <span aria-hidden="true">*</span></label>
-          <input id="name" name="name" type="text" required placeholder="Your name">
-        </div>
-        <div class="form-group">
-          <label for="email">Email <span aria-hidden="true">*</span></label>
-          <input id="email" name="email" type="email" required placeholder="you@example.com">
-        </div>
-      </div>
+    /* 两列布局 */
+    .contact-page .form-row{
+      display:grid; grid-template-columns:1fr 1fr; gap:1.1rem;
+    }
+    .contact-page .form-row + .form-row{ margin-top:1.1rem; }
+    @media (max-width:640px){
+      .contact-page .form-row{ grid-template-columns:1fr; }
+    }
 
-      <div class="form-row">
-        <div class="form-group">
-          <label for="topic">Topic</label>
-          <select id="topic" name="topic">
-            <option value="General">General</option>
-            <option value="Collaboration">Collaboration</option>
-            <option value="Project Inquiry">Project Inquiry</option>
-            <option value="Speaking/Workshop">Speaking / Workshop</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="subject">Subject <span aria-hidden="true">*</span></label>
-          <input id="subject" name="subject" type="text" required placeholder="Short summary">
-        </div>
-      </div>
+    /* 辅助与状态 */
+    .contact-page .hint{ color:#6c757d; font-size:.9rem; margin-top:.35rem; }
+    .contact-page .status{ margin-top:.8rem; font-weight:600; }
+    .contact-page .status.ok{ color:#198754; }
+    .contact-page .status.err{ color:#dc3545; }
+    .contact-page .visually-hidden{ position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden; }
 
-      <div class="form-group">
-        <label for="message">Message <span aria-hidden="true">*</span></label>
-        <textarea id="message" name="message" required placeholder="Tell me a bit more..."></textarea>
-        <div class="hint">I usually reply within 1&ndash;2 business days.</div>
-      </div>
+    /* 勾选框水平对齐 */
+    .contact-page .checkbox-group{
+      display:flex; align-items:center; gap:.5rem;
+      margin-top:.6rem; font-weight:500;
+    }
+    .contact-page .checkbox-group input[type="checkbox"]{ width:18px; height:18px; margin:0; }
 
-      <div class="form-group" style="margin-top:.6rem;">
-        <label style="font-weight:500;">
-          <input type="checkbox" name="consent" required>
-          I consent to be contacted about my inquiry.
-        </label>
-      </div>
+    /* 按钮区：三颗按钮同宽同高，强制同一行 */
+    .contact-page .actions{
+      display:flex; align-items:center; gap:.9rem;
+      justify-content:flex-start; margin-top:1.25rem;
+      flex-wrap: nowrap;         /* 关键：不换行 */
+    }
+    .contact-page .actions .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:.45rem;
+      height:44px;               /* 等高 */
+      width:200px;               /* 等宽 */
+      border-radius:12px; padding:0 1rem;
+      font-weight:600; line-height:1; text-decoration:none; white-space:nowrap;
+    }
+    /* Home Page 绿色（不再右推） */
+    .contact-page .actions .btn-home{
+      background:#198754; color:#fff; border:none;
+    }
+    .contact-page .actions .btn-home:hover{ background:#157347; color:#fff; }
 
-      <!-- 你的网站页来源（可选） -->
-      <input type="hidden" name="source" value="contact.html">
+    /* 小屏：按钮堆叠满宽 */
+    @media (max-width: 640px){
+      .contact-page .actions{ flex-wrap:wrap; }
+      .contact-page .actions .btn{ width:100%; }
+    }
 
-      <div class="actions">
-        <button class="btn-primary" type="submit">
-          <i class="bi bi-send" aria-hidden="true"></i> Send Message
-        </button>
-        <!-- 兜底：如果网络出错，或者你暂时没开 Formspree -->
-        <a class="btn-ghost" href="mailto:yiweilu36@uci.edu?subject=Website%20Contact">Use Email Instead</a>
-      </div>
+    /* 深色模式 */
+    @media (prefers-color-scheme: dark){
+      .contact-page form input,
+      .contact-page form textarea,
+      .contact-page form select{ background:#0e1320; color:#e6e9ef; border-color:#3a4466; }
+    }
+  </style>
+</head>
+<body>
 
-      <div id="status" class="status" role="status" aria-live="polite"></div>
-    </form>
-
-    <div style="text-align:right; margin-top:1.5rem;">
-      <a href="index.html" class="btn-ghost">Home Page</a>
+  <main class="contact-page">
+    <div class="contact-hero">
+      <i class="bi bi-card-text" aria-hidden="true"></i>
+      <h1 style="margin:0;">Contact Form</h1>
     </div>
-  </div>
-</div>
 
-<script>
+    <div class="project-card contact-card">
+      <p style="margin-top:0; color:#555;">
+        Have a question or a project in mind? Send me a message and I'll get back to you soon.
+      </p>
+
+      <form id="contact-form" action="https://formspree.io/f/xldwjnqg" method="POST" novalidate>
+        <!-- 蜜罐 -->
+        <div class="visually-hidden">
+          <label>Do not fill this out if you are human:
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+          </label>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name *</label>
+            <input id="name" name="name" type="text" required placeholder="Your name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input id="email" name="email" type="email" required placeholder="you@example.com">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="topic">Topic</label>
+            <select id="topic" name="topic">
+              <option value="General">General</option>
+              <option value="Collaboration">Collaboration</option>
+              <option value="Project Inquiry">Project Inquiry</option>
+              <option value="Speaking/Workshop">Speaking / Workshop</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject *</label>
+            <input id="subject" name="subject" type="text" required placeholder="Short summary">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" required placeholder="Tell me a bit more..."></textarea>
+          <div class="hint">Reply within 1–2 business days.</div>
+        </div>
+
+        <div class="checkbox-group">
+          <input id="consent" type="checkbox" name="consent" required>
+          <label for="consent">I consent to be contacted about my inquiry.</label>
+        </div>
+
+        <input type="hidden" name="source" value="contact.html">
+
+        <div class="actions">
+          <button class="btn" type="submit">
+            <i class="bi bi-send" aria-hidden="true"></i> Send Message
+          </button>
+          <a class="btn" href="mailto:yiweilu36@uci.edu?subject=Website%20Contact">
+            <i class="bi bi-envelope"></i> Use Email Instead
+          </a>
+          <a class="btn btn-home" href="index.html">Home Page</a>
+        </div>
+
+        <div id="status" class="status" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </main>
+
+  <script>
   (function(){
     const form = document.getElementById('contact-form');
     const statusEl = document.getElementById('status');
@@ -149,28 +199,16 @@ format:
 
     form.addEventListener('submit', async function(e){
       e.preventDefault();
-
       if (!form.checkValidity()){
         form.reportValidity();
         return;
       }
-
       submitBtn.disabled = true;
       submitBtn.innerHTML = '<i class="bi bi-hourglass-split" aria-hidden="true"></i> Sending...';
       show('');
 
       try {
         const data = new FormData(form);
-        if (endpoint.includes('FORM_ENDPOINT')) {
-          window.location.href = 'mailto:yiweilu36@uci.edu?subject=' + encodeURIComponent(data.get('subject') || 'Website Contact') +
-            '&body=' + encodeURIComponent(
-              `Name: ${data.get('name')}\nEmail: ${data.get('email')}\nTopic: ${data.get('topic')}\n\n${data.get('message')}`
-            );
-          submitBtn.disabled = false;
-          submitBtn.innerHTML = '<i class="bi bi-send" aria-hidden="true"></i> Send Message';
-          return;
-        }
-
         const res = await fetch(endpoint, {
           method: 'POST',
           body: data,
@@ -182,7 +220,7 @@ format:
           show('Thanks! Your message has been sent. ✅', true);
         } else {
           const err = await res.json().catch(()=>({}));
-          show(err?.error || 'Something went wrong. Please try again or use email instead.', false);
+          show(err?.error || 'Something went wrong. Please try again.', false);
         }
       } catch (err) {
         show('Network error. Please try again or use email instead.', false);
@@ -192,4 +230,6 @@ format:
       }
     });
   })();
-</script>
+  </script>
+</body>
+</html>
