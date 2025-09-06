@@ -26,8 +26,8 @@
       height: 44px;
     }
     .contact-page form input,
-    .contact-page form textarea,
-    .contact-page form select{
+    .-page form textarea,
+    .-page form select{
       width:100%;
       padding:.65rem .75rem;
       border:1px solid #ced4da;
@@ -37,35 +37,35 @@
       background:#fff;
       box-sizing: border-box;
     }
-    .contact-page form textarea{ min-height:160px; resize:vertical; }
+    .-page form textarea{ min-height:160px; resize:vertical; }
 
-    .contact-page form label{ font-weight:600; margin:0 0 .4rem; }
-    .contact-page .form-group{ display:flex; flex-direction:column; margin-bottom:1rem; }
+    .-page form label{ font-weight:600; margin:0 0 .4rem; }
+    .-page .form-group{ display:flex; flex-direction:column; margin-bottom:1rem; }
 
-    .contact-page .form-row{
+    .-page .form-row{
       display:grid; grid-template-columns:1fr 1fr; gap:1.1rem;
     }
-    .contact-page .form-row + .form-row{ margin-top:1.1rem; }
+    .-page .form-row + .form-row{ margin-top:1.1rem; }
     @media (max-width:640px){
-      .contact-page .form-row{ grid-template-columns:1fr; }
+      .-page .form-row{ grid-template-columns:1fr; }
     }
 
-    .contact-page .hint{ color:#6c757d; font-size:.9rem; margin-top:.35rem; }
-    .contact-page .status{ margin-top:.8rem; font-weight:600; }
-    .contact-page .status.ok{ color:#198754; }
-    .contact-page .status.err{ color:#dc3545; }
-    .contact-page .visually-hidden{ position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden; }
+    .-page .hint{ color:#6c757d; font-size:.9rem; margin-top:.35rem; }
+    .-page .status{ margin-top:.8rem; font-weight:600; }
+    .-page .status.ok{ color:#198754; }
+    .-page .status.err{ color:#dc3545; }
+    .-page .visually-hidden{ position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden; }
 
-    .contact-page .checkbox-group{
+    .-page .checkbox-group{
       display:flex; align-items:center; gap:.5rem;
       margin-top:.6rem;
       font-weight:500;
     }
-    .contact-page .checkbox-group input[type="checkbox"]{
+    .-page .checkbox-group input[type="checkbox"]{
       width:18px; height:18px; margin:0;
     }
 
-    .contact-page .actions{
+    .-page .actions{
       display:flex;
       align-items:center;
       gap:.9rem;
@@ -74,7 +74,7 @@
       flex-wrap:wrap;
     }
 
-    .contact-page .actions .btn{
+    .-page .actions .btn{
       display:inline-flex;
       align-items:center;
       justify-content:center;
@@ -91,40 +91,40 @@
     }
 
     /* Home Page 绿色，并靠右 */
-    .contact-page .actions .btn-home{
+    .-page .actions .btn-home{
       margin-left:auto;       /* ✅ 把它推到行右侧 */
       background:#198754; 
       color:#fff; 
       border:none;
     }
-    .contact-page .actions .btn-home:hover{ background:#157347; color:#fff; }
+    .-page .actions .btn-home:hover{ background:#157347; color:#fff; }
 
     /* 小屏下：按钮满宽堆叠，也依然等宽（=100%） */
     @media (max-width: 640px){
-      .contact-page .actions .btn{
+      .-page .actions .btn{
         flex:1 1 100%;
         width:100%;
         max-width:none;
       }
-      .contact-page .actions .btn-home{
+      .-page .actions .btn-home{
         margin-left:0;        /* 小屏不再右推，保持堆叠即可 */
       }
     }
 
     /* 深色模式 */
     @media (prefers-color-scheme: dark){
-      .contact-page form input,
-      .contact-page form textarea,
-      .contact-page form select{ background:#0e1320; color:#e6e9ef; border-color:#3a4466; }
+      .-page form input,
+      .-page form textarea,
+      .-page form select{ background:#0e1320; color:#e6e9ef; border-color:#3a4466; }
     }
   </style>
 </head>
 <body>
 
-  <main class="contact-page">
-    <div class="contact-hero">
+  <main class="-page">
+    <div class="-hero">
       <i class="bi bi-card-text" aria-hidden="true"></i>
-      <h1 style="margin:0;">Contact</h1>
+      <h1 style="margin:0;"></h1>
     </div>
 
     <div class="project-card contact-card">
