@@ -46,7 +46,7 @@ format:
 
 <div class="page-intro">
   Over the past year, I’ve taken ideas from early-stage concepts to functional prototypes—exploring how data, design, and human behavior intersect in the startup world.
-  This page documents my journey across projects like <strong>Klug Forecast AI</strong>, <strong>Platemate</strong>, and <strong>Skill Forge</strong>:
+  This page documents my journey across projects like <strong>Klug Forecast AI</strong>, <strong>Platemate</strong>:
   from scribbled wireframes to live web apps, and everything in between.I’m working on detailed write-ups, behind-the-scenes insights, and lessons learned from each startup. These    will include ideation process, stack choices, user research,
   and what failed along the way (yes, that too). Full story launching soon. Stay tuned!
 </div>
