@@ -5,126 +5,116 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact Form</title>
 
+  <!-- 全局样式 -->
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
   <style>
+    /* ===== 页面容器：限制整体宽度并居中 ===== */
+    .contact-page{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0 16px;
+      box-sizing: border-box;
+    }
+
+    /* 标题区 */
     .contact-page .contact-hero{
       display:flex; align-items:center; gap:.6rem;
       margin:1.2rem 0 1.2rem; justify-content:center;
     }
     .contact-page .contact-hero .bi{ font-size:1.6rem; line-height:1; }
 
+    /* 表单卡片 */
     .contact-page .contact-card{
       max-width: 720px;
       margin: 1.5rem auto;
       padding: 2rem 2rem 2.25rem;
+      box-sizing: border-box;
     }
 
+    /* 表单控件统一高度与样式 */
     .contact-page form input,
+    .contact-page form select{ height:44px; }
+
+    .contact-page form input,
+    .contact-page form textarea,
     .contact-page form select{
-      height: 44px;
-    }
-    .contact-page form input,
-    .-page form textarea,
-    .-page form select{
       width:100%;
       padding:.65rem .75rem;
       border:1px solid #ced4da;
       border-radius:10px;
-      font-size:1rem;
-      line-height:1.2;
+      font-size:1rem; line-height:1.2;
       background:#fff;
       box-sizing: border-box;
     }
-    .-page form textarea{ min-height:160px; resize:vertical; }
+    .contact-page form textarea{ min-height:160px; resize:vertical; }
 
-    .-page form label{ font-weight:600; margin:0 0 .4rem; }
-    .-page .form-group{ display:flex; flex-direction:column; margin-bottom:1rem; }
+    .contact-page form label{ font-weight:600; margin:0 0 .4rem; }
+    .contact-page .form-group{ display:flex; flex-direction:column; margin-bottom:1rem; }
 
-    .-page .form-row{
+    /* 两列表单 */
+    .contact-page .form-row{
       display:grid; grid-template-columns:1fr 1fr; gap:1.1rem;
     }
-    .-page .form-row + .form-row{ margin-top:1.1rem; }
+    .contact-page .form-row + .form-row{ margin-top:1.1rem; }
     @media (max-width:640px){
-      .-page .form-row{ grid-template-columns:1fr; }
+      .contact-page .form-row{ grid-template-columns:1fr; }
     }
 
-    .-page .hint{ color:#6c757d; font-size:.9rem; margin-top:.35rem; }
-    .-page .status{ margin-top:.8rem; font-weight:600; }
-    .-page .status.ok{ color:#198754; }
-    .-page .status.err{ color:#dc3545; }
-    .-page .visually-hidden{ position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden; }
+    /* 提示与状态 */
+    .contact-page .hint{ color:#6c757d; font-size:.9rem; margin-top:.35rem; }
+    .contact-page .status{ margin-top:.8rem; font-weight:600; }
+    .contact-page .status.ok{ color:#198754; }
+    .contact-page .status.err{ color:#dc3545; }
+    .contact-page .visually-hidden{ position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden; }
 
-    .-page .checkbox-group{
+    /* 勾选框水平对齐 */
+    .contact-page .checkbox-group{
       display:flex; align-items:center; gap:.5rem;
-      margin-top:.6rem;
-      font-weight:500;
+      margin-top:.6rem; font-weight:500;
     }
-    .-page .checkbox-group input[type="checkbox"]{
-      width:18px; height:18px; margin:0;
-    }
+    .contact-page .checkbox-group input[type="checkbox"]{ width:18px; height:18px; margin:0; }
 
-    .-page .actions{
-      display:flex;
-      align-items:center;
-      gap:.9rem;
-      justify-content:flex-start;
-      margin-top:1.25rem;
+    /* 按钮区：左对齐，允许换行 */
+    .contact-page .actions{
+      display:flex; align-items:center; gap:.9rem;
+      justify-content:flex-start; margin-top:1.25rem;
       flex-wrap:wrap;
     }
-
-    .-page .actions .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:.45rem;
-      height:44px;            /* 等高 */
-      flex:0 0 200px;         /* ✅ 等宽：每个占 200px */
-      width:200px;            /* （防外部样式覆盖，再强调一次） */
-      border-radius:12px;
-      padding:0 1rem;         /* 水平内边距只影响文本间距，不影响总宽度 */
-      font-weight:600;
-      line-height:1;
-      text-decoration:none;
-      white-space:nowrap;     /* 文案不换行 */
+    /* 按钮统一尺寸（等高等宽） */
+    .contact-page .actions .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:.45rem;
+      height:44px; flex:0 0 200px; width:200px;
+      border-radius:12px; padding:0 1rem;
+      font-weight:600; line-height:1; text-decoration:none; white-space:nowrap;
     }
-
-    /* Home Page 绿色，并靠右 */
-    .-page .actions .btn-home{
-      margin-left:auto;       /* ✅ 把它推到行右侧 */
-      background:#198754; 
-      color:#fff; 
-      border:none;
+    /* Home Page 绿色并靠右 */
+    .contact-page .actions .btn-home{
+      margin-left:auto; background:#198754; color:#fff; border:none;
     }
-    .-page .actions .btn-home:hover{ background:#157347; color:#fff; }
+    .contact-page .actions .btn-home:hover{ background:#157347; color:#fff; }
 
-    /* 小屏下：按钮满宽堆叠，也依然等宽（=100%） */
+    /* 小屏：按钮满宽堆叠 */
     @media (max-width: 640px){
-      .-page .actions .btn{
-        flex:1 1 100%;
-        width:100%;
-        max-width:none;
-      }
-      .-page .actions .btn-home{
-        margin-left:0;        /* 小屏不再右推，保持堆叠即可 */
-      }
+      .contact-page .actions .btn{ flex:1 1 100%; width:100%; max-width:none; }
+      .contact-page .actions .btn-home{ margin-left:0; }
     }
 
     /* 深色模式 */
     @media (prefers-color-scheme: dark){
-      .-page form input,
-      .-page form textarea,
-      .-page form select{ background:#0e1320; color:#e6e9ef; border-color:#3a4466; }
+      .contact-page form input,
+      .contact-page form textarea,
+      .contact-page form select{ background:#0e1320; color:#e6e9ef; border-color:#3a4466; }
     }
   </style>
 </head>
 <body>
 
-  <main class="-page">
-    <div class="-hero">
+  <main class="contact-page">
+    <div class="contact-hero">
       <i class="bi bi-card-text" aria-hidden="true"></i>
-      <h1 style="margin:0;"></h1>
+      <h1 style="margin:0;">Contact</h1>
     </div>
 
     <div class="project-card contact-card">
@@ -133,6 +123,7 @@
       </p>
 
       <form id="contact-form" action="https://formspree.io/f/xldwjnqg" method="POST" novalidate>
+        <!-- 蜜罐 -->
         <div class="visually-hidden">
           <label>Do not fill this out if you are human:
             <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
@@ -183,7 +174,9 @@
           <button class="btn" type="submit">
             <i class="bi bi-send" aria-hidden="true"></i> Send Message
           </button>
-          <a class="btn" href="mailto:yiweilu36@uci.edu?subject=Website%20Contact"><i class="bi bi-envelope"></i>Use Email Instead</a>
+          <a class="btn" href="mailto:yiweilu36@uci.edu?subject=Website%20Contact">
+            <i class="bi bi-envelope"></i> Use Email Instead
+          </a>
           <a class="btn btn-home" href="index.html">Home Page</a>
         </div>
 
