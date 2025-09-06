@@ -70,42 +70,52 @@
     }
 
     /* ===== 按钮区 ===== */
+    /* 按钮容器：左对齐，允许换行 */
     .contact-page .actions{
       display:flex;
       align-items:center;
       gap:.9rem;
+      justify-content:flex-start;
       margin-top:1.25rem;
-      justify-content:flex-start; /* 默认左对齐 */
+      flex-wrap:wrap;
     }
 
+    /* 统一按钮尺寸（等宽等高） */
     .contact-page .actions .btn{
-      min-height:38px;
-      padding:.45rem 1rem;
-      border-radius:8px;
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      gap:.5rem;
-      line-height:1;
+      gap:.45rem;
+      height:44px;            /* 等高 */
+      flex:0 0 200px;         /* ✅ 等宽：每个占 200px */
+      width:200px;            /* （防外部样式覆盖，再强调一次） */
+      border-radius:12px;
+      padding:0 1rem;         /* 水平内边距只影响文本间距，不影响总宽度 */
       font-weight:600;
+      line-height:1;
       text-decoration:none;
-      font-size:0.95rem;
-
-      flex: 0 0 auto;           
-      width: auto;              
-      max-width: 200px;         /* 再保险，防止过长 */
+      white-space:nowrap;     /* 文案不换行 */
     }
 
-    /* Home Page 单独推到右边 + 绿色 */
+    /* Home Page 绿色，并靠右 */
     .contact-page .actions .btn-home{
-      margin-left:auto;  
-      background:#198754;
-      color:#fff;
+      margin-left:auto;       /* ✅ 把它推到行右侧 */
+      background:#198754; 
+      color:#fff; 
       border:none;
     }
-    .contact-page .actions .btn-home:hover{
-      background:#157347;
-      color:#fff;
+    .contact-page .actions .btn-home:hover{ background:#157347; color:#fff; }
+
+    /* 小屏下：按钮满宽堆叠，也依然等宽（=100%） */
+    @media (max-width: 640px){
+      .contact-page .actions .btn{
+        flex:1 1 100%;
+        width:100%;
+        max-width:none;
+      }
+      .contact-page .actions .btn-home{
+        margin-left:0;        /* 小屏不再右推，保持堆叠即可 */
+      }
     }
 
     /* 深色模式 */
