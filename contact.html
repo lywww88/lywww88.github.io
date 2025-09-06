@@ -26,7 +26,7 @@
     /* 表单控件：统一高度 + 对齐 */
     .contact-page form input,
     .contact-page form select{
-      height: 44px; /* 统一高度 */
+      height: 44px;
     }
     .contact-page form input,
     .contact-page form textarea,
@@ -69,24 +69,39 @@
       width:18px; height:18px; margin:0;
     }
 
-    /* 按钮统一 */
+    /* ===== 按钮区 ===== */
     .contact-page .actions{
-      display:flex; flex-wrap:wrap;
-      gap:.9rem; align-items:center; margin-top:1.25rem;
+      display:flex;
+      align-items:center;
+      gap:.9rem;
+      margin-top:1.25rem;
+      justify-content:flex-start; /* 默认左对齐 */
     }
+
     .contact-page .actions .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      gap:.5rem;
-      min-height:44px; /* 保持一致高度 */
+      min-height:44px;
       padding:.58rem 1.2rem;
       border-radius:999px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:.5rem;
       line-height:1;
       font-weight:600;
       text-decoration:none;
     }
-    /* Home Page 按钮绿色 */
-    .contact-page .actions .btn-home{ background:#198754; color:#fff; border:none; }
-    .contact-page .actions .btn-home:hover{ background:#157347; color:#fff; }
+
+    /* Home Page 单独推到右边 + 绿色 */
+    .contact-page .actions .btn-home{
+      margin-left:auto;  
+      background:#198754;
+      color:#fff;
+      border:none;
+    }
+    .contact-page .actions .btn-home:hover{
+      background:#157347;
+      color:#fff;
+    }
 
     /* 深色模式 */
     @media (prefers-color-scheme: dark){
