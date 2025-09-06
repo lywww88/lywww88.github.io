@@ -112,6 +112,26 @@ format:
   const bar  = document.getElementById('announce');
   const pill = document.getElementById('ann-toggle');
 
+  if (pill) pill.style.visibility = 'hidden';
+  // ✅ 提前挂载到 name-anchor
+  function mountPill() {
+    const anchor = document.getElementById('name-anchor');
+    if (!anchor || !pill) return false;
+    if (pill.parentElement !== anchor) anchor.appendChild(pill);
+
+    anchor.style.position = anchor.style.position || 'relative';
+    return true;
+  }
+
+  if (!mountPill()) {
+    const obs = new MutationObserver(() => {
+      if (mountPill()) obs.disconnect();
+    });
+    obs.observe(document.documentElement, { childList: true, subtree: true });
+    window.addEventListener('load', mountPill);
+  }
+
+
   function navEl(){
     return document.getElementById('quarto-header')
         || document.querySelector('header.navbar')
@@ -156,16 +176,11 @@ format:
   window.addEventListener('resize', positionOverNavbar);
   window.addEventListener('load', positionOverNavbar);
   positionOverNavbar();
+
+  requestAnimationFrame(() => {
+    if (pill) pill.style.visibility = '';  
+  });
 })();
-
-
-window.addEventListener('load', () => {
-  const anchor = document.getElementById('name-anchor');
-  const pill   = document.getElementById('ann-toggle');
-  if (anchor && pill && pill.parentElement !== anchor) {
-    anchor.appendChild(pill);
-  }
-});
 
 </script>
 
