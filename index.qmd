@@ -212,8 +212,8 @@ format:
       <a href="https://wa.me/6266736276" class="btn" target="_blank">
         <i class="bi bi-whatsapp"></i> WhatsApp
       </a>
-      <a href="mailto:yiweilu36@uci.edu" class="btn">
-        <i class="bi bi-envelope"></i> Email Me
+      <a href="/contact.html" class="btn" target="_blank">
+        <i class="bi bi-envelope"></i> Contact Me
       </a>
     </div>
   </div>
