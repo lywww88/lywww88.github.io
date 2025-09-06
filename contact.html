@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
   <style>
-    /* ===== 页面容器：限制整体宽度并居中 ===== */
+    /* 页面容器：限制整体宽度并居中 */
     .contact-page{
       max-width: 980px;
       margin: 0 auto;
@@ -53,7 +53,7 @@
     .contact-page form label{ font-weight:600; margin:0 0 .4rem; }
     .contact-page .form-group{ display:flex; flex-direction:column; margin-bottom:1rem; }
 
-    /* 两列表单 */
+    /* 两列布局 */
     .contact-page .form-row{
       display:grid; grid-template-columns:1fr 1fr; gap:1.1rem;
     }
@@ -62,7 +62,7 @@
       .contact-page .form-row{ grid-template-columns:1fr; }
     }
 
-    /* 提示与状态 */
+    /* 辅助与状态 */
     .contact-page .hint{ color:#6c757d; font-size:.9rem; margin-top:.35rem; }
     .contact-page .status{ margin-top:.8rem; font-weight:600; }
     .contact-page .status.ok{ color:#198754; }
@@ -76,29 +76,29 @@
     }
     .contact-page .checkbox-group input[type="checkbox"]{ width:18px; height:18px; margin:0; }
 
-    /* 按钮区：左对齐，允许换行 */
+    /* 按钮区：三颗按钮同宽同高，强制同一行 */
     .contact-page .actions{
       display:flex; align-items:center; gap:.9rem;
       justify-content:flex-start; margin-top:1.25rem;
-      flex-wrap:wrap;
+      flex-wrap: nowrap;         /* 关键：不换行 */
     }
-    /* 按钮统一尺寸（等高等宽） */
     .contact-page .actions .btn{
       display:inline-flex; align-items:center; justify-content:center; gap:.45rem;
-      height:44px; flex:0 0 200px; width:200px;
+      height:44px;               /* 等高 */
+      width:200px;               /* 等宽 */
       border-radius:12px; padding:0 1rem;
       font-weight:600; line-height:1; text-decoration:none; white-space:nowrap;
     }
-    /* Home Page 绿色并靠右 */
+    /* Home Page 绿色（不再右推） */
     .contact-page .actions .btn-home{
-      margin-left:auto; background:#198754; color:#fff; border:none;
+      background:#198754; color:#fff; border:none;
     }
     .contact-page .actions .btn-home:hover{ background:#157347; color:#fff; }
 
-    /* 小屏：按钮满宽堆叠 */
+    /* 小屏：按钮堆叠满宽 */
     @media (max-width: 640px){
-      .contact-page .actions .btn{ flex:1 1 100%; width:100%; max-width:none; }
-      .contact-page .actions .btn-home{ margin-left:0; }
+      .contact-page .actions{ flex-wrap:wrap; }
+      .contact-page .actions .btn{ width:100%; }
     }
 
     /* 深色模式 */
@@ -114,7 +114,7 @@
   <main class="contact-page">
     <div class="contact-hero">
       <i class="bi bi-card-text" aria-hidden="true"></i>
-      <h1 style="margin:0;">Contact</h1>
+      <h1 style="margin:0;">Contact Form</h1>
     </div>
 
     <div class="project-card contact-card">
