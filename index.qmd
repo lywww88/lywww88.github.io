@@ -286,7 +286,7 @@ Developed an interactive dashboard to predict Uber driver performance using mach
 Discover data-driven projects in machine learning, dashboard design, and analytics. Each showcasing practical solutions with visuals and links.
 
 <div style="margin-top: 1em; display: flex; gap: 0.8em;">
-  <a href="/projects/project.html" class="btn" target="_blank">
+  <a href="/projects/project.html" class="btn" target="_self">
   <i class="bi bi-folder2-open"></i> Project Page
 </a>
 </div>
