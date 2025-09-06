@@ -25,11 +25,15 @@ website:
             text: '<span class="nav-text">Capstone Project</span>'
       - text: '<span class="nav-text">Startup</span>'
         menu:
-          - text: '<span style="font-size: 0.7rem; font-weight: 300; color: gray;">BETA LAUNCH</span>'
+          - text: '<span style="font-size: 0.7rem; font-weight: 300; color: gray;">STEALTH STAGE</span>'
+          - href: lywww88.github.io
+            text: '<strong>YPS AI Tech Consulting</strong>'
+            target: _blank
+          - text: '<span style="font-size: 0.7rem; font-weight: 300; color: gray;">DEMO STAGE</span>'
           - href: https://forecastai-poc.netlify.app/
             text: '<strong>Klug Forecast AI</strong>'
             target: _blank
-          - text: '<span style="font-size: 0.7rem; font-weight: 300; color: gray;">CONCEPT STAGE</span>'
+          - text: '<span style="font-size: 0.7rem; font-weight: 300; color: gray;">Concept Stage (Discontinued)</span>'
           - href: https://platemateofficial.netlify.app/
             text: '<strong>Platemate</strong>'
             target: _blank
