@@ -230,7 +230,7 @@ format:
 Built an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.
 
 <div style="margin-top: 1em;">
-  [<i class="bi bi-journal-text"></i> Open Article →](https://medium.com/@dylankl_74733/revolutionizing-stock-market-insights-the-financial-chatbot-that-empowers-investors-d1d8197e6c13){.btn target="_blank"}
+  [<i class="bi bi-journal-text"></i> Open Article](https://medium.com/@dylankl_74733/revolutionizing-stock-market-insights-the-financial-chatbot-that-empowers-investors-d1d8197e6c13){.btn target="_blank"}
 </div>
 </div>
 
@@ -257,8 +257,12 @@ Built an AI chatbot that delivers real-time stock analysis by integrating LLMs w
 Developed an interactive dashboard to predict Uber driver performance using machine learning models.  
 
 <div style="margin-top: 1em; display: flex; gap: 0.8em;">
-  <a href="https://syntax3rr0r1.netlify.app/" class="btn" target="_blank">Open Demo →</a>
-  <a href="https://devpost.com/software/uber-driver-conversion-analysis" class="btn" target="_blank">Open Article →</a>
+  <a href="https://syntax3rr0r1.netlify.app/" class="btn" target="_blank">
+    <i class="bi bi-play-circle"></i> Open Demo
+  </a>
+  <a href="https://devpost.com/software/uber-driver-conversion-analysis" class="btn" target="_blank">
+    <i class="bi bi-journal-text"></i> Open Article
+  </a>
 </div>
 </div>
 
@@ -282,8 +286,9 @@ Developed an interactive dashboard to predict Uber driver performance using mach
 Discover data-driven projects in machine learning, dashboard design, and analytics. Each showcasing practical solutions with visuals and links.
 
 <div style="margin-top: 1em; display: flex; gap: 0.8em;">
-  <a href="https://lywww88.github.io/projects/project.qmd" class="btn">Project Page →</a>
-
+  <a href="https://lywww88.github.io/projects/project.qmd" class="btn" target="_blank">
+  <i class="bi bi-folder2-open"></i> Project Page
+</a>
 </div>
 </div>
 
