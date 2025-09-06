@@ -5,66 +5,73 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact</title>
 
-  <!-- 全局样式：确保路径正确，如果在根目录改成 /styles.css -->
+  <!-- 全局样式：路径按你的项目实际调整 -->
   <link rel="stylesheet" href="styles.css">
-
-  <!-- 仅用于图标；如果全局已引入可删 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
   <style>
-    /* ========== 仅本页生效 ========== */
+    /* ===== 仅本页生效 ===== */
     .contact-page .contact-hero{
       display:flex; align-items:center; gap:.6rem;
       margin:1.2rem 0 1.2rem; justify-content:center; /* 标题居中 */
     }
     .contact-page .contact-hero .bi{ font-size:1.6rem; line-height:1; }
 
-    /* 复用你的 .project-card 外观，只控制宽度/居中/留白 */
+    /* 卡片更舒适的留白 */
     .contact-page .contact-card{
-      max-width: 720px; margin: 1.5rem auto;
-      padding: 1.75rem 1.75rem 2rem; /* 增加内边距，避免贴边 */
+      max-width: 720px;
+      margin: 1.5rem auto;
+      padding: 2rem 2rem 2.25rem; /* ↑ 加大内边距，避免贴边 */
     }
 
-    /* 表单基础（作用域到本页，不影响别处） */
+    /* 表单控件（仅作用于本页） */
     .contact-page form input,
     .contact-page form textarea,
     .contact-page form select{
-      width:100%; padding:.65rem .75rem;
-      border:1px solid #ced4da; border-radius:10px;
-      font-size:1rem; line-height:1.2; background:#fff;
+      width:100%;
+      padding:.65rem .75rem;
+      border:1px solid #ced4da;
+      border-radius:10px;
+      font-size:1rem; line-height:1.2;
+      background:#fff;
     }
     .contact-page form textarea{ min-height:160px; resize:vertical; }
-    .contact-page form label{ font-weight:600; margin-bottom:.35rem; }
 
-    /* 两列自适应 */
-    .contact-page .form-row{ display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
-    .contact-page .form-row + .form-row,
-    .contact-page .form-row + .form-group{ margin-top:1rem; }
-    .contact-page .form-group{ display:flex; flex-direction:column; }
-    @media (max-width:640px){ .contact-page .form-row{ grid-template-columns:1fr; } }
+    /* label 与控件的距离 + 每个块之间的距离 */
+    .contact-page form label{ font-weight:600; margin:0 0 .4rem; }
+    .contact-page .form-group{ display:flex; flex-direction:column; margin-bottom:1rem; }
 
-    /* 状态文本/辅助 */
-    .contact-page .hint{ color:#6c757d; font-size:.9rem; margin-top:.25rem; }
+    /* 两列栅格 & 行间距 */
+    .contact-page .form-row{
+      display:grid; grid-template-columns:1fr 1fr; gap:1.1rem;
+    }
+    .contact-page .form-row + .form-row{ margin-top:1.1rem; }
+    @media (max-width:640px){
+      .contact-page .form-row{ grid-template-columns:1fr; }
+    }
+
+    /* 辅助文字与状态 */
+    .contact-page .hint{ color:#6c757d; font-size:.9rem; margin-top:.35rem; }
     .contact-page .status{ margin-top:.8rem; font-weight:600; }
     .contact-page .status.ok{ color:#198754; }
     .contact-page .status.err{ color:#dc3545; }
     .contact-page .visually-hidden{ position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden; }
 
-    /* 按钮统一（用你全局 .btn，再做细微对齐） */
+    /* 按钮统一（复用你的 .btn 外观，再做细节对齐） */
     .contact-page .actions{
-      display:flex; gap:.75rem; align-items:center; margin-top:1.2rem;
-      flex-wrap:wrap;
+      display:flex; flex-wrap:wrap;
+      gap:.9rem; align-items:center; margin-top:1.25rem;
     }
     .contact-page .actions .btn{
       display:inline-flex; align-items:center; gap:.5rem;
-      padding:.55rem 1rem; border-radius:999px; line-height:1;
+      padding:.58rem 1rem; border-radius:999px; line-height:1;
       text-decoration:none;
     }
 
-    /* 复选框对齐 */
+    /* 复选框微调垂直对齐 */
     .contact-page input[type="checkbox"]{ transform: translateY(1px); margin-right:.5rem; }
 
-    /* 暗色模式（可选） */
+    /* 深色模式（可选） */
     @media (prefers-color-scheme: dark){
       .contact-page form input,
       .contact-page form textarea,
@@ -81,7 +88,7 @@
       <h1 style="margin:0;">Contact</h1>
     </div>
 
-    <!-- 复用你的全局卡片样式：project-card -->
+    <!-- 复用全局卡片样式：project-card -->
     <div class="project-card contact-card">
       <p style="margin-top:0; color:#555;">
         Have a question or a project in mind? Send me a message and I'll get back to you soon.
@@ -138,7 +145,6 @@
         <input type="hidden" name="source" value="contact.html">
 
         <div class="actions">
-          <!-- 三个按钮统一使用你全局 .btn（蓝底白字） -->
           <button class="btn" type="submit">
             <i class="bi bi-send" aria-hidden="true"></i> Send Message
           </button>
