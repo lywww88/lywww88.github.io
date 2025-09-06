@@ -33,12 +33,9 @@ website:
           - href: https://forecastai-poc.netlify.app/
             text: '<strong>Klug Forecast AI</strong>'
             target: _blank
-          - text: '<span style="font-size: 0.7rem; font-weight: 300; color: gray;">Concept Stage (Discontinued)</span>'
+          - text: '<span style="font-size: 0.7rem; font-weight: 300; color: gray;">Concept Stage (Paused)</span>'
           - href: https://platemateofficial.netlify.app/
             text: '<strong>Platemate</strong>'
-            target: _blank
-          - href: https://skillforgeofficial.netlify.app/
-            text: '<strong>Skill Forge</strong>'
             target: _blank
           - text: '<hr style="border: none; border-top: 1px solid #ccc; margin: 0.8em 0;">'
           - text: '<span style="font-size: 0.7rem; font-weight: 300; color: gray;">ABOUT</span>'
