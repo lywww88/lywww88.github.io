@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Form - Yiwei Lu</title>
+  <title>Contact Form</title>
 
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
   <style>
-    /* ===== 仅本页生效 ===== */
     .contact-page .contact-hero{
       display:flex; align-items:center; gap:.6rem;
       margin:1.2rem 0 1.2rem; justify-content:center;
@@ -22,7 +21,6 @@
       padding: 2rem 2rem 2.25rem;
     }
 
-    /* 表单控件：统一高度 + 对齐 */
     .contact-page form input,
     .contact-page form select{
       height: 44px;
@@ -58,7 +56,6 @@
     .contact-page .status.err{ color:#dc3545; }
     .contact-page .visually-hidden{ position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden; }
 
-    /* 勾选框水平对齐 */
     .contact-page .checkbox-group{
       display:flex; align-items:center; gap:.5rem;
       margin-top:.6rem;
@@ -68,8 +65,6 @@
       width:18px; height:18px; margin:0;
     }
 
-    /* ===== 按钮区 ===== */
-    /* 按钮容器：左对齐，允许换行 */
     .contact-page .actions{
       display:flex;
       align-items:center;
@@ -79,7 +74,6 @@
       flex-wrap:wrap;
     }
 
-    /* 统一按钮尺寸（等宽等高） */
     .contact-page .actions .btn{
       display:inline-flex;
       align-items:center;
