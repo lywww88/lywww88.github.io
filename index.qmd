@@ -13,7 +13,7 @@ format:
     <line x1="12" y1="8"  x2="12" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
     <circle cx="12" cy="16" r="1.5" fill="currentColor"/>
   </svg>
-  <strong>Notice:</strong>Capstone Project and Startup Journal pages are still under development.
+  <strong>Notice:</strong> Some pages are still under development.
   <a href="news.html" target="_self">Explore News →</a>
   <button class="ann-close" type="button" aria-label="Dismiss">×</button>
 </div>
