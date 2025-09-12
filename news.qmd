@@ -120,37 +120,43 @@ Most Recent Update
 ::: {.timeline}
 
 ::: {.timeline-item}
-### <span id="sep-01-2025">Sep 01, 2025</span>  
+<div id="sep-01-2025" style="position:relative; top:-60px;"></div>
+### Sep 01, 2025  
 **Landing Page Polish**  
 <p>Reworked headline spacing, CTA button glow animation, and improved mobile layout for initial site entry.</p>
 :::
 
 ::: {.timeline-item}
-### <span id="aug-27-2025">Aug 27, 2025</span>  
+<div id="aug-27-2025" style="position:relative; top:-60px;"></div>
+### Aug 27, 2025  
 **Won 3rd Place – SAP Integration Naming Contest**  
 <p>Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.</p>
 :::
 
 ::: {.timeline-item}
-### <span id="aug-20-2025">Aug 20, 2025</span>  
+<div id="aug-20-2025" style="position:relative; top:-60px;"></div>
+### Aug 20, 2025  
 **Profile Section Revamp**  
 <p>Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.</p>
 :::
 
 ::: {.timeline-item}
-### <span id="aug-01-2025">Aug 01, 2025</span>  
+<div id="aug-01-2025" style="position:relative; top:-60px;"></div>
+### Aug 01, 2025  
 **Announcement Overlay**  
 <p>Added animated announcement bar and dismissable overlay on homepage for product updates.</p>
 :::
 
 ::: {.timeline-item}
-### <span id="jul-20-2025">Jul 20, 2025</span>  
+<div id="jul-20-2025" style="position:relative; top:-60px;"></div>
+### Jul 20, 2025  
 **Modal Pop-up Integration**  
 <p>Launched project release modals with cookie-based dismiss memory and overlay blur effects.</p>
 :::
 
 ::: {.timeline-item}
-### <span id="jul-05-2025">Jul 05, 2025</span>  
+<div id="jul-05-2025" style="position:relative; top:-60px;"></div>
+### Jul 05, 2025  
 **GitHub Stats Panel**  
 <p>Pulls in real-time repo stats for forks, stars, commits using GitHub API integration.</p>
 :::
