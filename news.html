@@ -34,7 +34,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
@@ -66,17 +65,73 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 <style>
-  /* hide built-in navbar search trigger, keep API available */
-  #quarto-search {
-    display: none !important;
-    width: 0 !important;
-    height: 0 !important;
-    overflow: hidden !important;
-    position: absolute !important;
-    left: -9999px !important;
+  /* ---------- Page width ---------- */
+  .page-full .content{max-width:1100px;margin-inline:auto;}
+
+  /* ---------- Top cards (2 only) ---------- */
+  .news-boxes{display:flex;flex-wrap:wrap;gap:1.25rem;margin:0 0 2.2rem 0;}
+  .news-card{
+    flex:1 1 360px;padding:1.25rem 1.5rem;background:#fff;border:1px solid #e6e6e6;border-radius:14px;
+    box-shadow:0 2px 6px rgba(0,0,0,.05);display:flex;flex-direction:column;justify-content:space-between
   }
+  .news-card h4{margin:0 0 .35rem 0;font-size:1.05rem;font-weight:700}
+  .news-card p{margin:.2rem 0;color:#333;line-height:1.55}
+  .btn{
+    display:inline-block;margin-top:.8rem;padding:.45rem .95rem;background:#2986cc;color:#fff;border-radius:8px;
+    text-decoration:none;font-weight:700;border:none;cursor:pointer;transition:background .15s ease-in-out
+  }
+  .btn:hover{background:#1f6db3}
+
+  /* ---------- Timeline: rail = left grid column ---------- */
+  .timeline{
+    --rail: 28px;                 /* 轨道列宽：点将永远在这列正中 */
+    position:relative;
+    margin-left:0; padding-left:0;
+  }
+  /* 画整条竖线，与轨道列中心严格同心 */
+  .timeline::before{
+    content:""; position:absolute;
+    left: calc(var(--rail)/2 - 1.5px);   /* 1.5px = 3px 线宽的一半 */
+    top:0; bottom:0; width:3px; background:#2986cc;
+  }
+
+  .timeline-item{
+    display:grid; grid-template-columns: var(--rail) 1fr; column-gap:1rem;
+    margin:0 0 1.8rem 0; border-radius:8px;
+  }
+  .timeline-item > *{ grid-column:2; }
+
+  .timeline-item::before{
+    content:"";
+    grid-column:1; justify-self:center; align-self:center;
+    width:.8rem; height:.8rem; border-radius:50%;
+    background:#2986cc; border:2px solid #fff; box-shadow:0 0 0 3px #2986cc55;
+  }
+
+  .timeline-item :is(h3,h4){ margin:0 0 .35rem 0; font-weight:800; line-height:1.25; }
+  .timeline-item strong{ display:block; margin:.15rem 0 .15rem; font-weight:700; }
+  .timeline-item p{ margin:0; color:#555; }
+
+  /* ---------- Highlight (no jump) ---------- */
+  .timeline-item.is-highlight{
+    background:#e9f3ff;
+    box-shadow:0 0 0 0 rgba(0,0,0,0);
+    transition: background .2s ease-out;
+  }
+  .timeline-item.is-highlight :is(h3,h4),
+  .timeline-item.is-highlight strong{ color:#0b61c3; }
+  .timeline-item.is-highlight::before{
+    background:#0b61c3; box-shadow:0 0 0 5px rgba(41,134,204,.28);
+    animation:pulse 1.2s ease-out 2;
+  }
+  @keyframes pulse{
+    0%{transform:scale(1)}
+    50%{transform:scale(1.25)}
+    100%{transform:scale(1)}
+  }
+
+  a.anchorjs-link, .anchorjs-link, .quarto-anchorjs-link, .heading-anchor { display:none !important; }
 </style>
 
 
@@ -133,13 +188,8 @@ ul.task-list li input[type="checkbox"] {
     <ul class="dropdown-menu" aria-labelledby="nav-menu-span-classnav-textstartupspan">    
         <li class="dropdown-header"><span style="font-size: 0.7rem; font-weight: 300; color: gray;">STEALTH STAGE</span></li>
         <li>
-    <a class="dropdown-item" href="./lywww88.github.io" target="_self">
- <span class="dropdown-text"><strong>YPS AI Tech Consulting</strong></span></a>
-  </li>  
-        <li class="dropdown-header"><span style="font-size: 0.7rem; font-weight: 300; color: gray;">DEMO STAGE</span></li>
-        <li>
-    <a class="dropdown-item" href="https://forecastai-poc.netlify.app/" target="_blank">
- <span class="dropdown-text"><strong>Klug Forecast AI</strong></span></a>
+    <a class="dropdown-item" href="./contact.yiweilu.me" target="_self">
+ <span class="dropdown-text"><strong>YPS Tech</strong></span></a>
   </li>  
         <li class="dropdown-header"><span style="font-size: 0.7rem; font-weight: 300; color: gray;">Concept Stage (Paused)</span></li>
         <li>
@@ -208,239 +258,108 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<script>
-(function() {
-  var correct = "test123"; 
-  var maxTries = 1;
-  var lockMinutes = 1;
-  var now = Date.now();
-
-  var failData = JSON.parse(localStorage.getItem("news_fail")) || {count:0, lockedUntil:0};
-
-  function denyAndRedirect(msg){
-    document.addEventListener("DOMContentLoaded", function() {
-      var seconds = 3;
-      document.body.innerHTML =
-        "<h2 id='deny-msg' style='text-align:center;margin-top:15%;color:#00aeff;font-family:sans-serif;'>"
-        + "🚧 " + msg + "<br><br>"
-        + "<br>" +"Redirecting to homepage in <span id='countdown'>" + seconds + "</span> seconds…</h2>";
-
-      var countdownEl = document.getElementById("countdown");
-      var timer = setInterval(function(){
-        seconds--;
-        if (seconds <= 0) {
-          clearInterval(timer);
-          location.href = "/";
-        } else {
-          countdownEl.textContent = seconds;
-        }
-      }, 1000);
-    });
-  }
-
-  if (now < failData.lockedUntil) {
-    denyAndRedirect("This page is currently under development and testing<br><br>Please try again later.");
-  } else {
-    failData.count = 0;
-    localStorage.setItem("news_fail", JSON.stringify(failData));
-
-    var ok = false;
-    for (var i = 0; i < maxTries; i++) {
-      var input = prompt("🔒 This page is under testing. ("+(maxTries - i)+" attempts left):");
-      if (input === correct) { ok = true; break; }
-      else { failData.count++; }
-    }
-
-    if (!ok) {
-      failData.lockedUntil = now + lockMinutes * 60 * 1000;
-      localStorage.setItem("news_fail", JSON.stringify(failData));
-      denyAndRedirect("This page is currently under development and testing<br><br>Please try again in "+lockMinutes+" minutes.");
-    }
-  }
-})();
-</script>
-<style>
-/* ===== News page-only minimal styles ===== */
-.news-wrap{max-width:980px;margin:0 auto;padding:0 12px;}
-.news-intro{margin:22px auto 8px;font-size:1.05rem;line-height:1.8;color:#333;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;}
-.news-badge{display:inline-block;font-size:.78rem;padding:.2em .6em;border-radius:999px;background:#f5f9ff;border:1px solid #d8e2f1;color:#0b3d91;}
-
-.news-tl{ --datew:120px; --line:#cbd5e1; --dot:#0d6efd; }
-
-.news-tl-year{
-  font-weight:800; font-size:1.2rem; color:#2c3e50; margin:28px 0 10px;
-}
-
-.news-tl-list{
-  display:grid;
-  grid-template-columns: var(--datew) 28px 1fr; 
-  row-gap:16px;
-  position:relative;
-}
-
-.news-tl-list::before{
-  content:"";
-  grid-column:2; grid-row:1 / -1;
-  width:3px; /* 更粗 */
-  background:linear-gradient(
-    180deg,
-    rgba(13,110,253,.18) 0%,
-    rgba(13,110,253,.28) 20%,
-    rgba(13,110,253,.28) 80%,
-    rgba(13,110,253,.18) 100%
-  );
-  justify-self:center;
-  border-radius:2px;
-  box-shadow:0 0 0 1px rgba(13,110,253,.08);
-}
-
-.news-tl-item{ display:contents; }
-
-.news-tl-date{
-  grid-column:1;
-  align-self:start;
-  justify-self:end;
-  text-align:right;
-  padding-right:12px;
-  font-weight:700;
-  color:var(--dot);
-  font-size:.95rem;
-}
-
-.news-tl-dot{
-  grid-column:2;
-  width:14px; height:14px;
-  border-radius:50%;
-  border:3px solid var(--dot);
-  background:#fff;
-  justify-self:center;
-  align-self:start;      /* 顶部对齐 */
-  margin-top:.6rem;      /* 与卡片标题行对齐；可微调 .5~.7rem */
-  box-shadow:0 0 0 3px rgba(13,110,253,.12);
-  transform:translateZ(0);
-}
-
-.news-tl-card{ grid-column:3; }
-
-@media (max-width:740px){
-  .news-tl{ --datew:98px; }
-  .news-tl-list{ grid-template-columns: var(--datew) 26px 1fr; }
-}
-@media (max-width:480px){
-  .news-tl{ --datew:86px; }
-  .news-tl-date{ font-size:.9rem; }
-  .news-tl-list{ grid-template-columns: var(--datew) 24px 1fr; }
-}
-</style>
-<div class="news-wrap">
-<h2 style="text-align:center;" class="anchored">
-📰 News &amp; Updates
-</h2>
-<p class="news-intro">
-🚧 This page is currently <strong>under development and testing</strong>, so its layout, design, and content may evolve over time.<br>
-Meanwhile, it highlights personal milestones, professional achievements, and project updates — a living record of progress and outcomes.
-</p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="project-card">
-<div style="margin-bottom:.35rem;">
-<pre><code>&lt;span class="news-badge"&gt;Pinned&lt;/span&gt; &lt;span class="news-badge"&gt;Award&lt;/span&gt;</code></pre>
+<div class="news-boxes">
+<div class="news-card" style="border:2px solid #0d6efd; background:#eaf2ff;">
+<p><span style="display:inline-block; background:#0d6efd; color:#fff; font-size:0.75rem; padding:0.2em 0.6em; border-radius:12px; font-weight:600; margin-bottom:0.5em;"> Pinned </span></p>
+<section id="new-domain-released" class="level4">
+<h4 data-anchor-id="new-domain-released">New Domain Released</h4>
+<p><strong>www.yiweilu.me is Live!</strong><br>
+My new personal domain is now officially online.</p>
+<button type="button" class="btn js-mark" data-target="sep-11-2025" style="background:#0d6efd; color:#fff; font-weight:700; border:none; padding:.5em 1em; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,.15);">
+Highlight in Timeline
+</button>
+</section>
 </div>
-<h3 style="margin:0 0 .35rem;" class="anchored">
-Won 3rd Place — SAP Integration Naming Contest
-</h3>
-<p style="margin:.25rem 0 .65rem;color:#666;">
+<div class="news-card" style="border:1.5px solid #6ca0dc; background:#f5f9ff;">
+<p><span style="display:inline-block; background:#6ca0dc; color:#fff; font-size:0.75rem; padding:0.2em 0.6em; border-radius:12px; font-weight:600; margin-bottom:0.5em;"> Award </span></p>
+<section id="sap-integration-naming-contest" class="level4">
+<h4 data-anchor-id="sap-integration-naming-contest">SAP Integration Naming Contest</h4>
+<p><strong>Won 3rd Place</strong><br>
+“Golden Sync” Recognized out of 300+ submissions.</p>
+<button type="button" class="btn js-mark" data-target="aug-27-2025" style="background:#6ca0dc; color:#fff; font-weight:600; border:none; padding:.45em 1em; border-radius:8px; box-shadow:0 2px 4px rgba(0,0,0,.1);">
+Highlight in Timeline
+</button>
+</section>
+</div>
+</div>
+<section id="timeline-this-page-is-still-under-testing" class="level2">
+<h2 data-anchor-id="timeline-this-page-is-still-under-testing">Timeline (This page is still under testing)</h2>
+<div class="timeline">
+<section id="sep-11-2025" class="level3 timeline-item">
+<h3 data-anchor-id="sep-11-2025"><span id="sep-11-2025">Sep 11, 2025</span></h3>
+<strong>New Domain Released — www.yiweilu.me</strong><br>
+
+<p>
+Announcing that my new personal domain is now active and accessible.
+</p>
+</section>
+<section id="aug-29-2025" class="level3 timeline-item">
+<h3 data-anchor-id="aug-29-2025"><span id="aug-29-2025">Aug 29, 2025</span></h3>
+<strong>Contact Form (Beta) Launched</strong><br>
+
+<p>
+First version of a working contact form integrated on site.
+</p>
+</section>
+<section id="aug-27-2025" class="level3 timeline-item">
+<h3 data-anchor-id="aug-27-2025"><span id="aug-27-2025">Aug 27, 2025</span></h3>
+<strong>Won 3rd Place – SAP Integration Naming Contest</strong><br>
+
+<p>
 Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.
 </p>
-<p><a class="btn" href="#sap-award">Jump to entry →</a></p>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="project-card">
-<div style="margin-bottom:.35rem;">
-<pre><code>&lt;span class="news-badge"&gt;Most Recent&lt;/span&gt; &lt;span class="news-badge"&gt;Design&lt;/span&gt;</code></pre>
-</div>
-<h3 style="margin:0 0 .35rem;" class="anchored">
-Profile Section Revamp
-</h3>
-<p style="margin:.25rem 0 .65rem;color:#666;">
+</section>
+<section id="aug-20-2025" class="level3 timeline-item">
+<h3 data-anchor-id="aug-20-2025"><span id="aug-20-2025">Aug 20, 2025</span></h3>
+<strong>Profile Section Revamp</strong><br>
+
+<p>
 Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.
 </p>
-<p><a class="btn" href="#profile-revamp">Jump to entry →</a></p>
-</div>
-</div>
-</div>
-<!-- ===== Timeline ===== -->
-<div class="news-tl" aria-label="Timeline of news and updates">
-<!-- 2025 -->
-<div class="news-tl-year">
-2025
-</div>
-<div class="news-tl-list">
-<pre><code>&lt;div class="news-tl-item" id="sap-award"&gt;
-  &lt;div class="news-tl-date"&gt;Aug 27, 2025&lt;/div&gt;
-  &lt;div class="news-tl-dot"&gt;&lt;/div&gt;
-  &lt;div class="news-tl-card project-card"&gt;
-    &lt;strong&gt;Won 3rd Place — SAP Integration Naming Contest&lt;/strong&gt;
-    &lt;p style="margin:.35rem 0 .6rem;color:#667;"&gt;
-      Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.
-    &lt;/p&gt;
-    &lt;a class="btn" href="#sap-award"&gt;Permalink →&lt;/a&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
+</section>
+<section id="aug-10-2025" class="level3 timeline-item">
+<h3 data-anchor-id="aug-10-2025"><span id="aug-10-2025">Aug 10, 2025</span></h3>
+<strong>Testing Entry A</strong><br>
 
-&lt;div class="news-tl-item" id="profile-revamp"&gt;
-  &lt;div class="news-tl-date"&gt;Aug 20, 2025&lt;/div&gt;
-  &lt;div class="news-tl-dot"&gt;&lt;/div&gt;
-  &lt;div class="news-tl-card project-card"&gt;
-    &lt;strong&gt;Profile Section Revamp&lt;/strong&gt;
-    &lt;p style="margin:.35rem 0 .6rem;color:#667;"&gt;
-      Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.
-    &lt;/p&gt;
-    &lt;span class="news-badge"&gt;Design&lt;/span&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="news-tl-item" id="quick-search"&gt;
-  &lt;div class="news-tl-date"&gt;Aug 15, 2025&lt;/div&gt;
-  &lt;div class="news-tl-dot"&gt;&lt;/div&gt;
-  &lt;div class="news-tl-card project-card"&gt;
-    &lt;strong&gt;Floating Search &amp; Back-to-Top&lt;/strong&gt;
-    &lt;p style="margin:.35rem 0 .6rem;color:#667;"&gt;
-      Quick search (&lt;kbd&gt;⌘/Ctrl&lt;/kbd&gt; + &lt;kbd&gt;K&lt;/kbd&gt;) and a floating back-to-top button for long pages.
-    &lt;/p&gt;
-    &lt;span class="news-badge"&gt;UX&lt;/span&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-</div>
-<!-- 2024 -->
-<div class="news-tl-year">
-2024
-</div>
-<div class="news-tl-list">
-<pre><code>&lt;div class="news-tl-item" id="gallery-launch"&gt;
-  &lt;div class="news-tl-date"&gt;Dec 10, 2024&lt;/div&gt;
-  &lt;div class="news-tl-dot"&gt;&lt;/div&gt;
-  &lt;div class="news-tl-card project-card"&gt;
-    &lt;strong&gt;Launched Data Project Gallery&lt;/strong&gt;
-    &lt;p style="margin:.35rem 0 .6rem;color:#667;"&gt;
-      Centralized ML dashboards, datathon work, and experiment logs with consistent previews.
-    &lt;/p&gt;
-    &lt;a class="btn" href="https://lywww88.github.io/projects/" target="_blank"&gt;Open Projects →&lt;/a&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-</div>
-</div>
-</div>
-<p><!-- /.news-wrap --></p>
-<div aria-hidden="true" style="border-top: 1px solid #ccc; margin: 1.5em 0;">
-
-</div>
-<p style="text-align: center; color: #aaa; font-size: 0.9em; margin-top: 2em;">
-Let’s stay in touch — here’s where to find me online.
+<p>
+Dummy event, extending the list for scrolling tests.
 </p>
-<div class="connect-container">
-<p><a href="https://www.linkedin.com/in/yiwei-lu78" class="btn" target="_blank"><i class="bi bi-linkedin"></i> LinkedIn</a> <a href="https://wa.me/6266736276" class="btn" target="_blank"><i class="bi bi-whatsapp"></i> WhatsApp</a> <a href="https://github.com/lywww88" class="btn" target="_blank"><i class="bi bi-github"></i> GitHub</a> <span style="color: #ccc;">|</span> <a href="mailto:yiweilu36@uci.edu" class="btn"><i class="bi bi-envelope"></i> Email Me</a> <a href="https://lywww88.github.io/about.html" class="btn"><i class="bi bi-person-circle"></i> About Me</a></p>
+</section>
+<section id="jun-15-2025" class="level3 timeline-item">
+<h3 data-anchor-id="jun-15-2025"><span id="jun-15-2025">Jun 15, 2025</span></h3>
+<strong>Graduated from UCI</strong><br>
+
+<p>
+Completed Master of Science in Busines Analytics at the University of California, Irvine.
+</p>
+</section>
+<section id="may-2021" class="level3 timeline-item">
+<h3 data-anchor-id="may-2021"><span id="may-15-2021">May 2021</span></h3>
+<strong>Graduated from CPP</strong><br>
+
+<p>
+Completed Bachelor of Computer Information Systems at the California State Polytechnic University, Pomona.
+</p>
+</section>
 </div>
+<script>
+  const clearHi = () =>
+    document.querySelectorAll('.timeline-item.is-highlight')
+      .forEach(el => el.classList.remove('is-highlight'));
+
+  document.querySelectorAll('.js-mark').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.getAttribute('data-target');
+      const span = document.getElementById(id);
+      if(!span) return;
+      const item = span.closest('.timeline-item');
+      if(!item) return;
+      clearHi();
+      item.classList.add('is-highlight');
+      setTimeout(()=> item.classList.remove('is-highlight'), 2500); // 想常驻高亮，可删这行
+    });
+  });
+</script>
 <div aria-hidden="true" style="border-top: 1px solid #ccc; margin: 1.5em 0;">
 
 </div>
@@ -449,17 +368,11 @@ Let’s stay in touch — here’s where to find me online.
 </p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     
