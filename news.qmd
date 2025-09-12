@@ -82,7 +82,7 @@ format:
 ::: {.news-card}
 #### SAP Integration Naming Contest
 **Won 3rd Place**  
-Recognized out of 300+ submissions. 
+“Golden Sync" Recognized out of 300+ submissions. 
 <button type="button" class="btn js-mark" data-target="aug-27-2025">Highlight in Timeline</button>
 :::
 
