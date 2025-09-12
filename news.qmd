@@ -38,15 +38,12 @@ format:
             top:0; bottom:0; width:3px; background:#2986cc;
           }
 
-          /* 每条目做成两列网格：左=轨道列，右=内容列 */
           .timeline-item{
             display:grid; grid-template-columns: var(--rail) 1fr; column-gap:1rem;
             margin:0 0 1.8rem 0; border-radius:8px;
           }
-          /* 所有实际内容放到右列 */
           .timeline-item > *{ grid-column:2; }
 
-          /* 圆点是伪元素，作为网格项放在“左列”的正中 */
           .timeline-item::before{
             content:"";
             grid-column:1; justify-self:center; align-self:center;
@@ -76,18 +73,16 @@ format:
             100%{transform:scale(1)}
           }
 
-          /* --- 保险：隐藏不同版本 Quarto 可能生成的标题锚点小链接 --- */
           a.anchorjs-link, .anchorjs-link, .quarto-anchorjs-link, .heading-anchor { display:none !important; }
         </style>
 ---
 
-<!-- ===== 顶部仅两张卡片 ===== -->
 ::: {.news-boxes}
 
 ::: {.news-card}
 #### SAP Integration Naming Contest
 **Won 3rd Place**  
-Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.  
+Recognized out of 300+ submissions. 
 <button type="button" class="btn js-mark" data-target="aug-27-2025">Highlight in Timeline</button>
 :::
 
