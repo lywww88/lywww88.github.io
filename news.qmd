@@ -9,138 +9,65 @@ format:
     allow-html: true
 ---
 
-<script>
-(function() {
-  var correct = "test123"; 
-  var maxTries = 1;
-  var lockMinutes = 1;
-  var now = Date.now();
-
-  var failData = JSON.parse(localStorage.getItem("news_fail")) || {count:0, lockedUntil:0};
-
-  function denyAndRedirect(msg){
-    document.addEventListener("DOMContentLoaded", function() {
-      var seconds = 3;
-      document.body.innerHTML =
-        "<h2 id='deny-msg' style='text-align:center;margin-top:15%;color:#00aeff;font-family:sans-serif;'>"
-        + "🚧 " + msg + "<br><br>"
-        + "<br>" +"Redirecting to homepage in <span id='countdown'>" + seconds + "</span> seconds…</h2>";
-
-      var countdownEl = document.getElementById("countdown");
-      var timer = setInterval(function(){
-        seconds--;
-        if (seconds <= 0) {
-          clearInterval(timer);
-          location.href = "/";
-        } else {
-          countdownEl.textContent = seconds;
-        }
-      }, 1000);
-    });
-  }
-
-  if (now < failData.lockedUntil) {
-    denyAndRedirect("This page is currently under development and testing<br><br>Please try again later.");
-  } else {
-    failData.count = 0;
-    localStorage.setItem("news_fail", JSON.stringify(failData));
-
-    var ok = false;
-    for (var i = 0; i < maxTries; i++) {
-      var input = prompt("🔒 This page is under testing. ("+(maxTries - i)+" attempts left):");
-      if (input === correct) { ok = true; break; }
-      else { failData.count++; }
-    }
-
-    if (!ok) {
-      failData.lockedUntil = now + lockMinutes * 60 * 1000;
-      localStorage.setItem("news_fail", JSON.stringify(failData));
-      denyAndRedirect("This page is currently under development and testing<br><br>Please try again in "+lockMinutes+" minutes.");
-    }
-  }
-})();
-</script>
-
 <style>
-/* ===== News page-only minimal styles ===== */
+/* ===== News page styles ===== */
+:root { --news-blue:#0d6efd; --news-line:#cbd5e1; }
+
 .news-wrap{max-width:980px;margin:0 auto;padding:0 12px;}
 .news-intro{margin:22px auto 8px;font-size:1.05rem;line-height:1.8;color:#333;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;}
 .news-badge{display:inline-block;font-size:.78rem;padding:.2em .6em;border-radius:999px;background:#f5f9ff;border:1px solid #d8e2f1;color:#0b3d91;}
 
-.news-tl{ --datew:120px; --line:#cbd5e1; --dot:#0d6efd; }
-
-.news-tl-year{
-  font-weight:800; font-size:1.2rem; color:#2c3e50; margin:28px 0 10px;
+.project-card{
+  border:1px solid #e7ebf3;border-radius:14px;padding:1rem 1.1rem;background:#fff;
+  box-shadow:0 4px 18px rgba(0,0,0,.04);
 }
+.project-card .btn{margin-top:.25rem;}
+
+.btn{
+  display:inline-flex;align-items:center;gap:.42em;padding:.52rem .9rem;border-radius:10px;
+  border:1px solid #d6e4ff;text-decoration:none;background:#f5f9ff;color:#0b3d91;font-weight:600;
+}
+.btn:hover{background:#eef5ff;border-color:#c8dafc;color:#08347a;text-decoration:none;}
+
+/* Timeline */
+.news-tl{ --datew:120px; --dot: var(--news-blue); }
+.news-tl-year{ font-weight:800; font-size:1.2rem; color:#2c3e50; margin:28px 0 10px; }
 
 .news-tl-list{
   display:grid;
-  grid-template-columns: var(--datew) 28px 1fr; 
+  grid-template-columns: var(--datew) 28px 1fr;
   row-gap:16px;
   position:relative;
 }
-
 .news-tl-list::before{
   content:"";
   grid-column:2; grid-row:1 / -1;
-  width:3px; /* 更粗 */
-  background:linear-gradient(
-    180deg,
-    rgba(13,110,253,.18) 0%,
-    rgba(13,110,253,.28) 20%,
-    rgba(13,110,253,.28) 80%,
-    rgba(13,110,253,.18) 100%
-  );
+  width:3px;
+  background:linear-gradient(180deg, rgba(13,110,253,.18) 0%, rgba(13,110,253,.28) 20%, rgba(13,110,253,.28) 80%, rgba(13,110,253,.18) 100%);
   justify-self:center;
   border-radius:2px;
   box-shadow:0 0 0 1px rgba(13,110,253,.08);
 }
-
 .news-tl-item{ display:contents; }
-
 .news-tl-date{
-  grid-column:1;
-  align-self:start;
-  justify-self:end;
-  text-align:right;
-  padding-right:12px;
-  font-weight:700;
-  color:var(--dot);
-  font-size:.95rem;
+  grid-column:1; align-self:start; justify-self:end; text-align:right; padding-right:12px;
+  font-weight:700; color:var(--dot); font-size:.95rem;
 }
-
 .news-tl-dot{
-  grid-column:2;
-  width:14px; height:14px;
-  border-radius:50%;
-  border:3px solid var(--dot);
-  background:#fff;
-  justify-self:center;
-  align-self:start;      /* 顶部对齐 */
-  margin-top:.6rem;      /* 与卡片标题行对齐；可微调 .5~.7rem */
-  box-shadow:0 0 0 3px rgba(13,110,253,.12);
-  transform:translateZ(0);
+  grid-column:2; width:14px; height:14px; border-radius:50%; border:3px solid var(--dot); background:#fff;
+  justify-self:center; align-self:start; margin-top:.6rem; box-shadow:0 0 0 3px rgba(13,110,253,.12);
 }
-
 .news-tl-card{ grid-column:3; }
 
-@media (max-width:740px){
-  .news-tl{ --datew:98px; }
-  .news-tl-list{ grid-template-columns: var(--datew) 26px 1fr; }
-}
-@media (max-width:480px){
-  .news-tl{ --datew:86px; }
-  .news-tl-date{ font-size:.9rem; }
-  .news-tl-list{ grid-template-columns: var(--datew) 24px 1fr; }
-}
+@media (max-width:740px){ .news-tl{ --datew:98px; } .news-tl-list{ grid-template-columns: var(--datew) 26px 1fr; } }
+@media (max-width:480px){ .news-tl{ --datew:86px; } .news-tl-date{ font-size:.9rem; } .news-tl-list{ grid-template-columns: var(--datew) 24px 1fr; } }
 </style>
 
 <div class="news-wrap">
   <h2 style="text-align:center;">📰 News & Updates</h2>
 
   <p class="news-intro">
-    🚧 This page is currently <strong>under development and testing</strong>, so its layout, design, and content may evolve over time.  
-    Meanwhile, it highlights personal milestones, professional achievements, and project updates — a living record of progress and outcomes.
+    Highlights of personal milestones, professional achievements, and project updates — a living record of progress and outcomes.
   </p>
 
 ::: {.columns}
@@ -170,85 +97,56 @@ format:
 <!-- ===== Timeline ===== -->
 <div class="news-tl" aria-label="Timeline of news and updates">
 
-  <!-- 2025 -->
-  <div class="news-tl-year">2025</div>
-  <div class="news-tl-list">
+<div class="news-tl-year">2025</div>
+<div class="news-tl-list">
 
-    <div class="news-tl-item" id="sap-award">
-      <div class="news-tl-date">Aug 27, 2025</div>
-      <div class="news-tl-dot"></div>
-      <div class="news-tl-card project-card">
-        <strong>Won 3rd Place — SAP Integration Naming Contest</strong>
-        <p style="margin:.35rem 0 .6rem;color:#667;">
-          Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.
-        </p>
-        <a class="btn" href="#sap-award">Permalink →</a>
-      </div>
-    </div>
-
-    <div class="news-tl-item" id="profile-revamp">
-      <div class="news-tl-date">Aug 20, 2025</div>
-      <div class="news-tl-dot"></div>
-      <div class="news-tl-card project-card">
-        <strong>Profile Section Revamp</strong>
-        <p style="margin:.35rem 0 .6rem;color:#667;">
-          Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.
-        </p>
-        <span class="news-badge">Design</span>
-      </div>
-    </div>
-
-    <div class="news-tl-item" id="quick-search">
-      <div class="news-tl-date">Aug 15, 2025</div>
-      <div class="news-tl-dot"></div>
-      <div class="news-tl-card project-card">
-        <strong>Floating Search & Back-to-Top</strong>
-        <p style="margin:.35rem 0 .6rem;color:#667;">
-          Quick search (<kbd>⌘/Ctrl</kbd> + <kbd>K</kbd>) and a floating back-to-top button for long pages.
-        </p>
-        <span class="news-badge">UX</span>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- 2024 -->
-  <div class="news-tl-year">2024</div>
-  <div class="news-tl-list">
-    <div class="news-tl-item" id="gallery-launch">
-      <div class="news-tl-date">Dec 10, 2024</div>
-      <div class="news-tl-dot"></div>
-      <div class="news-tl-card project-card">
-        <strong>Launched Data Project Gallery</strong>
-        <p style="margin:.35rem 0 .6rem;color:#667;">
-          Centralized ML dashboards, datathon work, and experiment logs with consistent previews.
-        </p>
-        <a class="btn" href="https://lywww88.github.io/projects/" target="_blank">Open Projects →</a>
-      </div>
-    </div>
-  </div>
-
+<div class="news-tl-item" id="sap-award">
+<div class="news-tl-date">Aug 27, 2025</div>
+<div class="news-tl-dot"></div>
+<div class="news-tl-card project-card">
+<strong>Won 3rd Place — SAP Integration Naming Contest</strong>
+<p style="margin:.35rem 0 .6rem;color:#667;">Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.</p>
+<a class="btn" href="#sap-award">Permalink →</a>
 </div>
+</div>
+
+<div class="news-tl-item" id="profile-revamp">
+<div class="news-tl-date">Aug 20, 2025</div>
+<div class="news-tl-dot"></div>
+<div class="news-tl-card project-card">
+<strong>Profile Section Revamp</strong>
+<p style="margin:.35rem 0 .6rem;color:#667;">Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.</p>
+<span class="news-badge">Design</span>
+</div>
+</div>
+
+<div class="news-tl-item" id="quick-search">
+<div class="news-tl-date">Aug 15, 2025</div>
+<div class="news-tl-dot"></div>
+<div class="news-tl-card project-card">
+<strong>Floating Search &amp; Back-to-Top</strong>
+<p style="margin:.35rem 0 .6rem;color:#667;">Quick search (<kbd>⌘/Ctrl</kbd> + <kbd>K</kbd>) and a floating back-to-top button for long pages.</p>
+<span class="news-badge">UX</span>
+</div>
+</div>
+
+</div> <!-- /2025 list -->
+
+<div class="news-tl-year">2024</div>
+<div class="news-tl-list">
+
+<div class="news-tl-item" id="gallery-launch">
+<div class="news-tl-date">Dec 10, 2024</div>
+<div class="news-tl-dot"></div>
+<div class="news-tl-card project-card">
+<strong>Launched Data Project Gallery</strong>
+<p style="margin:.35rem 0 .6rem;color:#667;">Centralized ML dashboards, datathon work, and experiment logs with consistent previews.</p>
+<a class="btn" href="https://lywww88.github.io/projects/" target="_blank" rel="noopener">Open Projects →</a>
+</div>
+</div>
+
+</div> <!-- /2024 list -->
+
+</div> <!-- /.news-tl -->
 
 </div> <!-- /.news-wrap -->
-
-<div aria-hidden="true" style="border-top: 1px solid #ccc; margin: 1.5em 0;"></div>
-
-<p style="text-align: center; color: #aaa; font-size: 0.9em; margin-top: 2em;">
-  Let’s stay in touch — here’s where to find me online.
-</p>
-
-<div class="connect-container">
-  <a href="https://www.linkedin.com/in/yiwei-lu78" class="btn" target="_blank"><i class="bi bi-linkedin"></i> LinkedIn</a>
-  <a href="https://wa.me/6266736276" class="btn" target="_blank"><i class="bi bi-whatsapp"></i> WhatsApp</a>
-  <a href="https://github.com/lywww88" class="btn" target="_blank"><i class="bi bi-github"></i> GitHub</a>
-  <span style="color: #ccc;">|</span>
-  <a href="mailto:yiweilu36@uci.edu" class="btn"><i class="bi bi-envelope"></i> Email Me</a>
-  <a href="https://lywww88.github.io/about.html" class="btn"><i class="bi bi-person-circle"></i> About Me</a>
-</div>
-
-<div aria-hidden="true" style="border-top: 1px solid #ccc; margin: 1.5em 0;"></div>
-
-<p style="text-align: center; color: #888; font-size: 0.85em; margin-top: 3em;">
-  © 2025 Yiwei Lu. All rights reserved.
-</p>
