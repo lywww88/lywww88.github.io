@@ -66,14 +66,14 @@ format:
 
           .timeline-item {
             position: relative;
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
           }
 
           .timeline-item::before {
             content: "";
             position: absolute;
             left: -1.6rem;
-            top: 0.3rem;
+            top: 0.35rem;
             width: 0.75rem;
             height: 0.75rem;
             background-color: #2986cc;
@@ -120,58 +120,52 @@ Most Recent Update
 ::: {.timeline}
 
 ::: {.timeline-item}
-<div id="sep-01-2025" style="position:relative; top:-60px;"></div>
+<div id="sep-01-2025" style="display:block; height:1px; margin-top:-60px; padding-top:60px;"></div>
 ### Sep 01, 2025  
 **Landing Page Polish**  
-<p>Reworked headline spacing, CTA button glow animation, and improved mobile layout for initial site entry.</p>
+<p>Reworked headline spacing and refined mobile styles.</p>
 :::
 
 ::: {.timeline-item}
-<div id="aug-27-2025" style="position:relative; top:-60px;"></div>
+<div id="aug-27-2025" style="display:block; height:1px; margin-top:-60px; padding-top:60px;"></div>
 ### Aug 27, 2025  
 **Won 3rd Place – SAP Integration Naming Contest**  
 <p>Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.</p>
 :::
 
 ::: {.timeline-item}
-<div id="aug-20-2025" style="position:relative; top:-60px;"></div>
+<div id="aug-20-2025" style="display:block; height:1px; margin-top:-60px; padding-top:60px;"></div>
 ### Aug 20, 2025  
 **Profile Section Revamp**  
-<p>Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.</p>
+<p>Animated gradient name, glowing avatar ring, and smoother hover states for cards.</p>
 :::
 
 ::: {.timeline-item}
-<div id="aug-01-2025" style="position:relative; top:-60px;"></div>
-### Aug 01, 2025  
-**Announcement Overlay**  
-<p>Added animated announcement bar and dismissable overlay on homepage for product updates.</p>
-:::
-
-::: {.timeline-item}
-<div id="jul-20-2025" style="position:relative; top:-60px;"></div>
-### Jul 20, 2025  
-**Modal Pop-up Integration**  
-<p>Launched project release modals with cookie-based dismiss memory and overlay blur effects.</p>
-:::
-
-::: {.timeline-item}
-<div id="jul-05-2025" style="position:relative; top:-60px;"></div>
-### Jul 05, 2025  
-**GitHub Stats Panel**  
-<p>Pulls in real-time repo stats for forks, stars, commits using GitHub API integration.</p>
-:::
-
-::: {.timeline-item}
+<div id="aug-15-2025" style="display:block; height:1px; margin-top:-60px; padding-top:60px;"></div>
 ### Aug 15, 2025  
 **Floating Search & Back-to-Top**  
-<p>Quick search (<kbd>/</kbd> or <kbd>Ctrl+K</kbd>) and floating back-to-top button for long pages.</p>
+<p>Quick search (<kbd>/</kbd> or <kbd>Ctrl+K</kbd>) and floating back-to-top button.</p>
 :::
 
 ::: {.timeline-item}
+<div id="dec-10-2024" style="display:block; height:1px; margin-top:-60px; padding-top:60px;"></div>
 ### Dec 10, 2024  
 **Launched Data Project Gallery**  
-<p>Centralized ML dashboards, datathon work, and experiment logs.</p>  
-<a class="btn" href="https://lywww88.github.io/projects/" target="_blank">Open Projects →</a>
+<p>Centralized ML dashboards, datathon work, and experiment logs.</p>
+:::
+
+::: {.timeline-item}
+<div id="jul-15-2024" style="display:block; height:1px; margin-top:-60px; padding-top:60px;"></div>
+### Jul 15, 2024  
+**Added Team Pages**  
+<p>Team bios, profile links, and attributions for collaborators.</p>
+:::
+
+::: {.timeline-item}
+<div id="jul-01-2024" style="display:block; height:1px; margin-top:-60px; padding-top:60px;"></div>
+### Jul 01, 2024  
+**Internal Alpha Launch**  
+<p>First working MVP deployed for internal testing and feedback.</p>
 :::
 
 :::
