@@ -1,8 +1,8 @@
 ---
 title: ""
 format:
-page-layout: full
   html: 
+    page-layout: full
     toc: false
     allow-html: true
 ---
