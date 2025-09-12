@@ -87,7 +87,7 @@ Outside of work, I’m a curious learner who enjoys exploring tech trends, visua
   <a href="https://wa.me/6266736276" class="btn" target="_blank">
     <i class="bi bi-whatsapp"></i> WhatsApp
   </a>
-  <a href="https://www.yiweilu.me/contact.html" class="_blank">
+  <a href="https://www.yiweilu.me/contact.html" class="btn" target="_blank">
     <i class="bi bi-envelope"></i> Contact
   </a>
 </div>
