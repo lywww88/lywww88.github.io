@@ -79,18 +79,26 @@ format:
 
 ::: {.news-boxes}
 
+::: {.news-card style="border:2px solid #ff9800; background:#fff8e1;"}
+<span style="display:inline-block; background:#ff9800; color:#fff; font-size:0.75rem; padding:0.2em 0.6em; border-radius:12px; font-weight:600; margin-bottom:0.5em;">
+Pinned
+</span>
+
+#### New Domain Released
+**www.yiweilu.me is Live!**  
+My new personal domain is now officially online.  
+
+<button type="button" class="btn js-mark" data-target="sep-11-2025"
+        style="background:#ff9800; color:#fff; font-weight:700; border:none; padding:.5em 1em; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,.15);">
+  Highlight in Timeline
+</button>
+:::
+
 ::: {.news-card}
 #### SAP Integration Naming Contest
 **Won 3rd Place**  
 “Golden Sync" Recognized out of 300+ submissions. 
 <button type="button" class="btn js-mark" data-target="aug-27-2025">Highlight in Timeline</button>
-:::
-
-::: {.news-card}
-#### New Domain Released
-**www.yiweilu.me is Live!**  
-My new personal domain is now officially online.  
-<button type="button" class="btn js-mark" data-target="sep-11-2025">Highlight in Timeline</button>
 :::
 
 :::
