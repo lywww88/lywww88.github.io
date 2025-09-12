@@ -26,8 +26,8 @@ website:
       - text: '<span class="nav-text">Startup</span>'
         menu:
           - text: '<span style="font-size: 0.7rem; font-weight: 300; color: gray;">STEALTH STAGE</span>'
-          - href: lywww88.github.io
-            text: '<strong>YPS AI Tech Consulting</strong>'
+          - href: contact.yiweilu.me
+            text: '<strong>YPS Tech</strong>'
             target: _self
           - text: '<span style="font-size: 0.7rem; font-weight: 300; color: gray;">DEMO STAGE</span>'
           - href: https://forecastai-poc.netlify.app/
