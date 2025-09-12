@@ -4,54 +4,111 @@ format:
   html:
     toc: false
     page-layout: article
+    include-in-header: 
+      text: |
+        <style>
+          .news-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 1rem 1.25rem;
+            margin-bottom: 1.5rem;
+            background: #fdfdfd;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+          }
+
+          .timeline {
+            position: relative;
+            border-left: 3px solid #d0d0d0;
+            margin-left: 1rem;
+            padding-left: 1.5rem;
+          }
+
+          .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-left: 0.5rem;
+          }
+
+          .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -1.63rem;
+            top: 0.35rem;
+            width: 0.75rem;
+            height: 0.75rem;
+            background-color: #333;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            box-shadow: 0 0 0 3px #d0d0d0;
+          }
+
+          .timeline-item h4 {
+            margin: 0 0 0.3rem 0;
+            font-size: 1.05rem;
+          }
+
+          .timeline-item p {
+            margin: 0;
+            color: #555;
+          }
+        </style>
 ---
 
-## 📰 News & Updates
+## 🗞️ News & Updates
 
-Highlights of personal milestones, achievements, and site updates — a living record of progress.
-
----
-
-### 🔹 Highlight: SAP Award
-📌 **Pinned** 🏆 **Award**
-
-**Won 3rd Place – SAP Integration Naming Contest**  
-Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.  
-[Jump to entry ↓](#aug-27-2025)
+Highlights of personal milestones, professional achievements, and project updates — a living record of progress and outcomes.
 
 ---
 
-### 🔹 Highlight: Profile Revamp
-⭐ **Most Recent** 🎨 **Design**
+### Featured Updates
 
-**Profile Section Revamp**  
-Animated gradient name, glowing avatar ring, and polished project cards.  
-[Jump to entry ↓](#aug-20-2025)
+::: {.news-card}
+**📌 Pinned • 🏆 Award**
+
+#### Won 3rd Place – SAP Integration Naming Contest
+Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.
+
+[Jump to timeline](#aug-27-2025)
+:::
+
+::: {.news-card}
+**⭐ Most Recent • 🎨 Design**
+
+#### Profile Section Revamp
+Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.
+
+[Jump to timeline](#aug-20-2025)
+:::
 
 ---
 
 ## 📅 Timeline
 
-### 2025
+::: {.timeline}
 
-#### 🔹 <span id="aug-27-2025">Aug 27, 2025</span> – SAP Integration Naming Contest
-🏆 Recognized out of 300+ submissions.  
-📌 Focused on clarity, memorability, and product fit.
+::: {.timeline-item}
+### <span id="aug-27-2025">Aug 27, 2025</span>
+#### Won 3rd Place – SAP Integration Naming Contest  
+<p>Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.</p>
+:::
 
----
+::: {.timeline-item}
+### <span id="aug-20-2025">Aug 20, 2025</span>
+#### Profile Section Revamp  
+<p>Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.</p>
+:::
 
-#### 🔹 <span id="aug-20-2025">Aug 20, 2025</span> – Profile Section Revamp  
-🎨 Animated gradient name, glowing avatar ring, and smoother hover states.
+::: {.timeline-item}
+### Aug 15, 2025
+#### Floating Search & Back-to-Top  
+<p>Quick search (<kbd>/</kbd> or <kbd>Ctrl+K</kbd>) and floating back-to-top button for long pages.</p>
+:::
 
----
-
-#### 🔹 Aug 15, 2025 – Floating Search & Back-to-Top  
-🧭 Added keyboard search (<kbd>/</kbd>) and floating back-to-top button.
-
----
-
-### 2024
-
-#### 🔹 Dec 10, 2024 – Launched Data Project Gallery  
-📊 Centralized ML dashboards, datathon work, and experiment logs.  
+::: {.timeline-item}
+### Dec 10, 2024
+#### Launched Data Project Gallery  
+<p>Centralized ML dashboards, datathon work, and experiment logs.</p>  
 [Open Projects →](https://lywww88.github.io/projects/)
+:::
+
+:::
