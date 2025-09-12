@@ -1,132 +1,73 @@
 ---
 title: "News"
-page-layout: article
+page-layout: full
 format:
   html:
     toc: false
-    theme: default
-    css: styles.css
     include-in-header:
       text: |
         <style>
-          .page-full .content { max-width: 100% !important; }
-          .news-boxes {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.25rem;
-            margin-bottom: 2.5rem;
+          /* ====== Layout: two feature boxes ====== */
+          .news-boxes{
+            display:flex; flex-wrap:wrap; gap:1.25rem; margin:0 0 2.2rem 0;
           }
-          .news-card {
-            flex: 1 1 320px;
-            padding: 1.25rem 1.5rem;
-            background: #fdfdfd;
-            border: 1px solid #e0e0e0;
-            border-radius: 14px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+          .news-card{
+            flex:1 1 360px;
+            padding:1.25rem 1.5rem;
+            background:#fff; border:1px solid #e6e6e6; border-radius:14px;
+            box-shadow:0 2px 6px rgba(0,0,0,.05);
+            display:flex; flex-direction:column; justify-content:space-between;
           }
-          .news-card h4 {
-            margin: 0 0 0.4rem 0;
-            font-size: 1rem;
-            font-weight: 600;
+          .news-card h4{ margin:0 0 .35rem 0; font-size:1.05rem; font-weight:700; }
+          .news-card p{ margin:.2rem 0; color:#333; line-height:1.55; }
+          .btn{
+            display:inline-block; margin-top:.8rem; padding:.45rem .95rem;
+            background:#2986cc; color:#fff; border-radius:8px; text-decoration:none; font-weight:600;
+            transition:background .15s ease-in-out;
           }
-          .news-card p {
-            margin: 0 0 1rem 0;
-            font-size: 0.95rem;
-            color: #444;
-            line-height: 1.5;
+          .btn:hover{ background:#1f6db3; }
+          .btn:focus{ outline:none; box-shadow:0 0 0 3px rgba(41,134,204,.35); }
+
+          /* ====== Timeline ====== */
+          .timeline{ position:relative; border-left:3px solid #2986cc; padding-left:1.5rem; margin-left:1rem; }
+          .timeline-item{ position:relative; margin:0 0 2rem 0; }
+          .timeline-item::before{
+            content:""; position:absolute; left:-1.63rem; top:.35rem;
+            width:.8rem; height:.8rem; background:#2986cc; border-radius:50%;
+            border:2px solid #fff; box-shadow:0 0 0 3px #2986cc55;
           }
-          .btn {
-            display: inline-block;
-            background: #2986cc;
-            color: #fff;
-            font-size: 0.9rem;
-            padding: 0.4em 0.9em;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: background 0.2s ease-in-out;
-            text-align: center;
-            width: fit-content;
-          }
-          .btn:hover {
-            background: #1f6db3;
-          }
-          .timeline {
-            position: relative;
-            border-left: 3px solid #2986cc;
-            margin-left: 1rem;
-            padding-left: 1.5rem;
-          }
-          .timeline-item {
-            position: relative;
-            margin-bottom: 2rem;
-          }
-          .timeline-item::before {
-            content: "";
-            position: absolute;
-            left: -1.6rem;
-            top: 0.3rem;
-            width: 0.75rem;
-            height: 0.75rem;
-            background-color: #2986cc;
-            border-radius: 50%;
-            border: 2px solid #fff;
-            box-shadow: 0 0 0 3px #2986cc55;
-          }
-          .timeline-item h4 {
-            margin: 0 0 0.4rem 0;
-            font-size: 1.05rem;
-            font-weight: 600;
-          }
-          .timeline-item p {
-            margin: 0;
-            color: #555;
-            font-size: 0.95rem;
-            line-height: 1.5;
-          }
+          .timeline-item h4{ margin:0 0 .35rem 0; font-size:1.15rem; font-weight:800; }
+          .timeline-item strong{ display:block; font-weight:700; margin:.15rem 0 .15rem; }
+          .timeline-item p{ margin:0; color:#555; }
+
+          /* anchor offset: make heading-id stop below the top safely */
+          .timeline-item span[id]{ scroll-margin-top:110px; }
+
+          /* kill browser default target/focus rings that can look weird near the left line */
+          span[id]:target{ outline:0 !important; }
+          a:focus, span:focus{ outline:none !important; }
+          a{ -webkit-tap-highlight-color: transparent; }
+
+          /* make the section breathe more on wide pages */
+          .page-full .content{ max-width:1100px; margin-inline:auto; }
         </style>
 ---
 
+<!-- ===== Top: two cards (only two, per your request) ===== -->
 ::: {.news-boxes}
-
 ::: {.news-card}
-#### SAP Integration Naming Contest  
-Won 3rd Place  
-<p>Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.</p>  
-<a class="btn" href="#aug-27-2025">Jump to Timeline</a>
+#### SAP Integration Naming Contest
+**Won 3rd Place**  
+Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.  
+<a class="btn js-jump" href="#aug-27-2025">Jump to Timeline</a>
 :::
 
 ::: {.news-card}
-#### Profile Section Revamp  
-Most Recent Update  
-<p>Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.</p>  
-<a class="btn" href="#aug-20-2025">Jump to Timeline</a>
+#### Profile Section Revamp
+**Most Recent Update**  
+Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.  
+<a class="btn js-jump" href="#aug-20-2025">Jump to Timeline</a>
 :::
-
-::: {.news-card}
-#### Landing Page Polish  
-New Entry  
-<p>Reworked headline spacing and refined mobile styles.</p>  
-<a class="btn" href="#sep-01-2025">Jump to Timeline</a>
-:::
-
-::: {.news-card}
-#### Cluster Insights Charts  
-Testing Jump  
-<p>New charts added to visualize customer cluster behavior across platforms.</p>  
-<a class="btn" href="#sep-02-2025">Jump to Timeline</a>
-:::
-
-::: {.news-card}
-#### Forecast Page Animation  
-Testing Jump  
-<p>Replaced static KPIs with animated transitions and chart overlays.</p>  
-<a class="btn" href="#sep-03-2025">Jump to Timeline</a>
-:::
-
 :::
 
 ## Timeline
@@ -134,46 +75,61 @@ Testing Jump
 ::: {.timeline}
 
 ::: {.timeline-item}
-### <span id="sep-03-2025">Sep 03, 2025</span>  
-**Forecast Page Animation**  
-<p>Replaced static KPIs with animated transitions and chart overlays.</p>
-:::
-
-::: {.timeline-item}
-### <span id="sep-02-2025">Sep 02, 2025</span>  
-**Cluster Insights Charts**  
-<p>New charts added to visualize customer cluster behavior across platforms.</p>
-:::
-
-::: {.timeline-item}
-### <span id="sep-01-2025">Sep 01, 2025</span>  
+### <span id="sep-01-2025">Sep 01, 2025</span>
 **Landing Page Polish**  
 <p>Reworked headline spacing and refined mobile styles.</p>
 :::
 
 ::: {.timeline-item}
-### <span id="aug-27-2025">Aug 27, 2025</span>  
+### <span id="aug-27-2025">Aug 27, 2025</span>
 **Won 3rd Place – SAP Integration Naming Contest**  
 <p>Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.</p>
 :::
 
 ::: {.timeline-item}
-### <span id="aug-20-2025">Aug 20, 2025</span>  
+### <span id="aug-20-2025">Aug 20, 2025</span>
 **Profile Section Revamp**  
 <p>Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.</p>
 :::
 
 ::: {.timeline-item}
-### <span id="aug-15-2025">Aug 15, 2025</span>  
+### <span id="aug-15-2025">Aug 15, 2025</span>
 **Floating Search & Back-to-Top**  
-<p>Quick search (<kbd>/</kbd> or <kbd>Ctrl+K</kbd>) and floating back-to-top button for long pages.</p>
+<p>Quick search (<kbd>/</kbd> or <kbd>Ctrl+K</kbd>) and a floating back-to-top button for long pages.</p>
 :::
 
 ::: {.timeline-item}
-### <span id="dec-10-2024">Dec 10, 2024</span>  
+### <span id="dec-10-2024">Dec 10, 2024</span>
 **Launched Data Project Gallery**  
-<p>Centralized ML dashboards, datathon work, and experiment logs.</p>  
-<a class="btn" href="https://lywww88.github.io/projects/" target="_blank">Open Projects →</a>
+<p>Centralized ML dashboards, datathon work, and experiment logs.</p>
+:::
 :::
 
-:::
+<script>
+  // Smooth scroll WITHOUT changing the hash (avoids browser target highlight artefacts)
+  document.querySelectorAll('.js-jump').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const sel = btn.getAttribute('href');
+      const targetSpan = document.querySelector(sel);
+      if(!targetSpan) return;
+
+      // scroll to the span (offset handled by CSS scroll-margin-top)
+      targetSpan.scrollIntoView({behavior:'smooth', block:'start'});
+
+      // optional: subtle highlight on the parent item
+      const item = targetSpan.closest('.timeline-item');
+      if(item){
+        item.classList.add('js-hi');
+        setTimeout(()=>item.classList.remove('js-hi'), 1600);
+      }
+    });
+  });
+
+  // tiny highlight style injected here (kept inline to avoid raw css blocks)
+  (function(){
+    const s = document.createElement('style');
+    s.textContent = `.timeline-item.js-hi{ background:#e9f3ff; border-radius:8px; padding-left:.6rem; }`;
+    document.head.appendChild(s);
+  })();
+</script>
