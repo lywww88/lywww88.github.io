@@ -8,33 +8,50 @@ format:
 
 ## 📰 News & Updates
 
-Highlights of personal milestones, achievements, and site updates.
+Highlights of personal milestones, achievements, and site updates — a living record of progress.
 
 ---
 
-### 🏆 Won 3rd Place – SAP Integration Naming Contest
-**Date:** August 27, 2025  
-**Tags:** 📌 Pinned, 🏆 Award  
-Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.
+### 🔹 Highlight: SAP Award
+📌 **Pinned** 🏆 **Award**
+
+**Won 3rd Place – SAP Integration Naming Contest**  
+Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.  
+[Jump to entry ↓](#aug-27-2025)
 
 ---
 
-### 🎨 Profile Section Revamp  
-**Date:** August 20, 2025  
-**Tags:** ⭐ Most Recent, 🎨 Design  
-Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.
+### 🔹 Highlight: Profile Revamp
+⭐ **Most Recent** 🎨 **Design**
+
+**Profile Section Revamp**  
+Animated gradient name, glowing avatar ring, and polished project cards.  
+[Jump to entry ↓](#aug-20-2025)
 
 ---
 
-### 🧭 Floating Search & Back-to-Top  
-**Date:** August 15, 2025  
-**Tags:** 🧭 UX  
-Quick search shortcut (<kbd>/</kbd> or <kbd>Ctrl+K</kbd>) and floating back-to-top button for long pages.
+## 📅 Timeline
+
+### 2025
+
+#### 🔹 <span id="aug-27-2025">Aug 27, 2025</span> – SAP Integration Naming Contest
+🏆 Recognized out of 300+ submissions.  
+📌 Focused on clarity, memorability, and product fit.
 
 ---
 
-### 📂 Launched Data Project Gallery  
-**Date:** December 10, 2024  
-**Tags:** 📊 Projects  
-Centralized ML dashboards, datathon work, and experiment logs with consistent previews.  
-👉 [Open Projects →](https://lywww88.github.io/projects/)
+#### 🔹 <span id="aug-20-2025">Aug 20, 2025</span> – Profile Section Revamp  
+🎨 Animated gradient name, glowing avatar ring, and smoother hover states.
+
+---
+
+#### 🔹 Aug 15, 2025 – Floating Search & Back-to-Top  
+🧭 Added keyboard search (<kbd>/</kbd>) and floating back-to-top button.
+
+---
+
+### 2024
+
+#### 🔹 Dec 10, 2024 – Launched Data Project Gallery  
+📊 Centralized ML dashboards, datathon work, and experiment logs.  
+[Open Projects →](https://lywww88.github.io/projects/)
