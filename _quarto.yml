@@ -109,9 +109,10 @@ format:
 
         <!-- ========== GLOBAL: Release Modal (bell) ========== -->
         <script type="text/x-template" id="release-template">
-          <p>Site Updates — 08.29.2025</p>
+          <p>Site Updates — 09.11.2025</p>
           <ul>
-            <li>Contact Form (Beta) launched</li>
+            <li>www.yiweilu.me alive</li>
+            <li>Contact Form (Beta) launched (0829)</li>
             <li>Updated Announcement Bar. (0828)</li>
             <li>Added floating Search & Back-to-Top button. (0827)</li>
             <li>Improved mobile navigation polish.</li>
