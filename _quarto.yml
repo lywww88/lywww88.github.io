@@ -53,12 +53,6 @@ website:
       - icon: linkedin
         href: https://www.linkedin.com/in/yiwei-lu78
         aria-label: LinkedIn
-      - icon: github
-        href: https://github.com/lywww88
-        aria-label: GitHub
-      - icon: database
-        href: https://www.kaggle.com/yiweilu
-        aria-label: Kaggle
       - text: '<span class="nav-text resume-tab"><i class="bi bi-download"></i> Resume</span>'
         menu:
           - href: resume.qmd
