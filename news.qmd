@@ -24,43 +24,55 @@ format:
           }
           .btn:hover{background:#1f6db3}
 
-          /* ---------- Timeline base ---------- */
-          .timeline{position:relative;border-left:3px solid #2986cc;padding-left:1.5rem;margin-left:1rem}
-          .timeline-item{position:relative;margin:0 0 2rem 0}
-          .timeline-item p{margin:0;color:#555}
-          .timeline-item strong{display:block;margin:.15rem 0 .15rem;font-weight:700}
+          /* ---------- Timeline: rail = left grid column ---------- */
+          .timeline{
+            --rail: 28px;                 /* 轨道列宽：点将永远在这列正中 */
+            position:relative;
+            margin-left:0; padding-left:0;
+          }
+          /* 画整条竖线，与轨道列中心严格同心 */
+          .timeline::before{
+            content:""; position:absolute;
+            left: calc(var(--rail)/2 - 1.5px);   /* 1.5px = 3px 线宽的一半 */
+            top:0; bottom:0; width:3px; background:#2986cc;
+          }
 
-          /* 关闭旧的“挂在 .timeline-item 上的”小圆点 */
-          .timeline-item::before{ display:none; }
+          /* 每条目做成两列网格：左=轨道列，右=内容列 */
+          .timeline-item{
+            display:grid; grid-template-columns: var(--rail) 1fr; column-gap:1rem;
+            margin:0 0 1.8rem 0; border-radius:8px;
+          }
+          /* 所有实际内容放到右列 */
+          .timeline-item > *{ grid-column:2; }
 
-          /* 将小圆点挂在标题本身，并与标题垂直居中；同时支持 h3 / h4 */
-          .timeline-item :is(h3,h4){ margin:0 0 .35rem 0; font-weight:800; position:relative; line-height:1.25; }
-          .timeline-item :is(h3,h4)::before{
+          /* 圆点是伪元素，作为网格项放在“左列”的正中 */
+          .timeline-item::before{
             content:"";
-            position:absolute;
-            left:-1.63rem;            /* 若与左侧竖线轻微偏差，可在 -1.55rem ~ -1.85rem 之间微调 */
-            top:50%; transform:translateY(-50%);
+            grid-column:1; justify-self:center; align-self:center;
             width:.8rem; height:.8rem; border-radius:50%;
             background:#2986cc; border:2px solid #fff; box-shadow:0 0 0 3px #2986cc55;
           }
 
-          /* ---------- Highlight effect (no jump) ---------- */
+          .timeline-item :is(h3,h4){ margin:0 0 .35rem 0; font-weight:800; line-height:1.25; }
+          .timeline-item strong{ display:block; margin:.15rem 0 .15rem; font-weight:700; }
+          .timeline-item p{ margin:0; color:#555; }
+
+          /* ---------- Highlight (no jump) ---------- */
           .timeline-item.is-highlight{
-            background:#e9f3ff;border-radius:8px;padding-left:.6rem;
-            animation: hi-bg .25s ease-out 1
+            background:#e9f3ff;
+            box-shadow:0 0 0 0 rgba(0,0,0,0);
+            transition: background .2s ease-out;
           }
-          .timeline-item.is-highlight :is(h3,h4),
-          .timeline-item.is-highlight strong{color:#0b61c3}
-          .timeline-item.is-highlight :is(h3,h4)::before{
-            background:#0b61c3;box-shadow:0 0 0 5px rgba(41,134,204,.28);animation:pulse 1.2s ease-out 2
+          .timeline-item.is-highlight :is(h3,h4), 
+          .timeline-item.is-highlight strong{ color:#0b61c3; }
+          .timeline-item.is-highlight::before{
+            background:#0b61c3; box-shadow:0 0 0 5px rgba(41,134,204,.28);
+            animation:pulse 1.2s ease-out 2;
           }
           @keyframes pulse{
-            0%{transform:translateY(-50%) scale(1)}
-            50%{transform:translateY(-50%) scale(1.25)}
-            100%{transform:translateY(-50%) scale(1)}
-          }
-          @keyframes hi-bg{
-            from{background:#dff0ff} to{background:#e9f3ff}
+            0%{transform:scale(1)}
+            50%{transform:scale(1.25)}
+            100%{transform:scale(1)}
           }
         </style>
 ---
@@ -135,7 +147,7 @@ Animated gradient name, glowing avatar ring, and polished project cards with smo
       if(!item) return;
       clearHi();
       item.classList.add('is-highlight');
-      setTimeout(()=> item.classList.remove('is-highlight'), 2500); // 想常驻高亮可删掉这一行
+      setTimeout(()=> item.classList.remove('is-highlight'), 2500); // 想常驻高亮，可删这行
     });
   });
 </script>
