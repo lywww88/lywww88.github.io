@@ -10,7 +10,171 @@ format:
 ---
 
 <style>
-/* [same CSS as before — keep it intact] */
+:root { --news-blue:#0d6efd; }
+
+.news-wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+.news-intro {
+  margin: 22px auto 8px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #333;
+  font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+}
+
+.news-badge {
+  display: inline-block;
+  font-size: 0.78rem;
+  padding: 0.2em 0.6em;
+  border-radius: 999px;
+  background: #f5f9ff;
+  border: 1px solid #d8e2f1;
+  color: #0b3d91;
+}
+
+.project-card {
+  border: 1px solid #e7ebf3;
+  border-radius: 14px;
+  padding: 1rem 1.1rem;
+  background: #fff;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+}
+
+.project-card .btn {
+  margin-top: 0.25rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.42em;
+  padding: 0.52rem 0.9rem;
+  border-radius: 10px;
+  border: 1px solid #d6e4ff;
+  text-decoration: none;
+  background: #f5f9ff;
+  color: #0b3d91;
+  font-weight: 600;
+}
+.btn:hover {
+  background: #eef5ff;
+  border-color: #c8dafc;
+  color: #08347a;
+  text-decoration: none;
+}
+
+/* Equal height for top columns */
+.columns > .column {
+  display: flex;
+}
+.columns > .column > .project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Timeline styles */
+.news-tl {
+  --datew: 120px;
+  --dot: var(--news-blue);
+  position: relative;
+}
+
+.news-tl-year {
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: #2c3e50;
+  margin: 28px 0 10px;
+}
+
+.news-tl-list {
+  display: grid;
+  grid-template-columns: var(--datew) 28px 1fr;
+  row-gap: 16px;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.news-tl-list::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(var(--datew) + 14px);
+  width: 3px;
+  background: linear-gradient(
+    180deg,
+    rgba(13,110,253,0.35) 0%,
+    rgba(13,110,253,0.45) 20%,
+    rgba(13,110,253,0.45) 80%,
+    rgba(13,110,253,0.35) 100%
+  );
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(13,110,253,0.08);
+}
+
+.news-tl-item {
+  display: contents;
+}
+
+.news-tl-date {
+  grid-column: 1;
+  align-self: start;
+  justify-self: end;
+  text-align: right;
+  padding-right: 12px;
+  font-weight: 700;
+  color: var(--dot);
+  font-size: 0.95rem;
+}
+
+.news-tl-dot {
+  grid-column: 2;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 3px solid var(--dot);
+  background: #fff;
+  justify-self: center;
+  align-self: start;
+  margin-top: 0.6rem;
+  box-shadow: 0 0 0 3px rgba(13,110,253,0.12);
+}
+
+.news-tl-card {
+  grid-column: 3;
+}
+
+/* Responsive tweaks */
+@media (max-width:740px) {
+  .news-tl {
+    --datew: 98px;
+  }
+  .news-tl-list {
+    grid-template-columns: var(--datew) 26px 1fr;
+  }
+}
+
+@media (max-width:480px) {
+  .news-tl {
+    --datew: 86px;
+  }
+  .news-tl-date {
+    font-size: 0.9rem;
+  }
+  .news-tl-list {
+    grid-template-columns: var(--datew) 24px 1fr;
+  }
+}
 </style>
 
 <div class="news-wrap">
