@@ -38,7 +38,7 @@ Outside of work, I’m a curious learner who enjoys exploring tech trends, visua
   CalHome Inc, Pomona, CA&nbsp;&nbsp;&nbsp;*(October 2021 – July 2024)*  
 
 - **Business Consultant (Intern)**  
-  Fly Media, Shanghai, China&nbsp;&nbsp;&nbsp;*(May 2019 – Auguest 2019)*
+  Fly Media, Shanghai, China&nbsp;&nbsp;&nbsp;*(May 2019 – August 2019)*
 
 ---
 
@@ -76,28 +76,60 @@ Outside of work, I’m a curious learner who enjoys exploring tech trends, visua
 
 ---
 
-<p style="text-align: center; color: #aaa; font-size: 0.9em; margin-top: 2em;">
-  Let’s stay in touch — here’s where to find me online.
-</p>
+<section class="connect" style="text-align:center; margin-top:2rem;">
+  <p class="connect-lead" style="color:#777; font-size:.95rem; margin:0 0 1rem;">
+    Let’s stay in touch — here’s where to find me online.
+  </p>
 
-<div class="connect-container" style="display: flex; flex-wrap: wrap; gap: 1em; align-items: center;">
-  <a href="https://www.linkedin.com/in/yiwei-lu78" class="btn" target="_blank">
-    <i class="bi bi-linkedin"></i> LinkedIn
-  </a>
-  <a href="https://wa.me/6266736276" class="btn" target="_blank">
-    <i class="bi bi-whatsapp"></i> WhatsApp
-  </a>
-  <a href="https://github.com/lywww88" class="btn" target="_blank">
-    <i class="bi bi-github"></i> GitHub
-  </a>
-  <span style="color: #ccc;">|</span>
-  <a href="contact.html" class="btn">
-    <i class="bi bi-envelope"></i> Contact
-  </a>
-  <a href="https://lywww88.github.io/startup/journey.html" class="btn">
-    <i class="bi bi-person-circle"></i> My Journey
-  </a>
-</div>
+  <nav class="connect-links" aria-label="Social & contact"
+       style="display:flex; flex-wrap:wrap; gap:.75rem 1rem; justify-content:center; align-items:center;">
+    <a class="social-btn linkedin" href="https://www.linkedin.com/in/yiwei-lu78" target="_blank" rel="noopener"
+       style="display:inline-flex; align-items:center; gap:.45rem; padding:.5rem .9rem; border:1px solid #e6e6e6; border-radius:10px; background:#fff; color:#0b2239; text-decoration:none; font-weight:600; line-height:1; box-shadow:0 1px 0 rgba(0,0,0,.02); transition:transform .15s ease, box-shadow .15s ease, background .15s ease, border-color .15s ease;">
+      <i class="bi bi-linkedin" aria-hidden="true" style="font-size:1rem;"></i><span>LinkedIn</span>
+    </a>
+
+    <a class="social-btn whatsapp" href="https://wa.me/6266736276" target="_blank" rel="noopener"
+       style="display:inline-flex; align-items:center; gap:.45rem; padding:.5rem .9rem; border:1px solid #e6e6e6; border-radius:10px; background:#fff; color:#0b2239; text-decoration:none; font-weight:600; line-height:1; box-shadow:0 1px 0 rgba(0,0,0,.02); transition:transform .15s ease, box-shadow .15s ease, background .15s ease, border-color .15s ease;">
+      <i class="bi bi-whatsapp" aria-hidden="true" style="font-size:1rem;"></i><span>WhatsApp</span>
+    </a>
+
+    <a class="social-btn github" href="https://github.com/lywww88" target="_blank" rel="noopener"
+       style="display:inline-flex; align-items:center; gap:.45rem; padding:.5rem .9rem; border:1px solid #e6e6e6; border-radius:10px; background:#fff; color:#0b2239; text-decoration:none; font-weight:600; line-height:1; box-shadow:0 1px 0 rgba(0,0,0,.02); transition:transform .15s ease, box-shadow .15s ease, background .15s ease, border-color .15s ease;">
+      <i class="bi bi-github" aria-hidden="true" style="font-size:1rem;"></i><span>GitHub</span>
+    </a>
+
+    <span class="social-divider" aria-hidden="true" style="width:1px; height:22px; background:#ddd; margin:0 .25rem;"></span>
+
+    <a class="social-btn contact" href="contact.html"
+       style="display:inline-flex; align-items:center; gap:.45rem; padding:.5rem .9rem; border:1px solid #e6e6e6; border-radius:10px; background:#fff; color:#0b2239; text-decoration:none; font-weight:600; line-height:1; box-shadow:0 1px 0 rgba(0,0,0,.02); transition:transform .15s ease, box-shadow .15s ease, background .15s ease, border-color .15s ease;">
+      <i class="bi bi-envelope" aria-hidden="true" style="font-size:1rem;"></i><span>Contact</span>
+    </a>
+
+    <a class="social-btn journey" href="https://lywww88.github.io/startup/journey.html" target="_blank" rel="noopener"
+       style="display:inline-flex; align-items:center; gap:.45rem; padding:.5rem .9rem; border:1px solid #e6e6e6; border-radius:10px; background:#fff; color:#0b2239; text-decoration:none; font-weight:600; line-height:1; box-shadow:0 1px 0 rgba(0,0,0,.02); transition:transform .15s ease, box-shadow .15s ease, background .15s ease, border-color .15s ease;">
+      <i class="bi bi-person-circle" aria-hidden="true" style="font-size:1rem;"></i><span>My Journey</span>
+    </a>
+  </nav>
+</section>
+
+<script>
+  // 统一 hover / focus 效果（避免重复写样式）
+  (function(){
+    const btns = document.querySelectorAll('.social-btn');
+    btns.forEach(b=>{
+      b.addEventListener('mouseenter', ()=>{ b.style.transform='translateY(-1px)'; b.style.boxShadow='0 6px 16px rgba(0,0,0,.06)'; b.style.background='#f7fbff'; b.style.borderColor='#bcd9f1'; });
+      b.addEventListener('mouseleave', ()=>{ b.style.transform=''; b.style.boxShadow='0 1px 0 rgba(0,0,0,.02)'; b.style.background='#fff'; b.style.borderColor='#e6e6e6'; });
+      b.addEventListener('focus', ()=>{ b.style.boxShadow='0 0 0 3px rgba(0,174,255,.35)'; });
+      b.addEventListener('blur',  ()=>{ b.style.boxShadow='0 1px 0 rgba(0,0,0,.02)'; });
+    });
+
+    // 小屏移除分隔线，避免拥挤
+    const divider = document.querySelector('.social-divider');
+    const mq = window.matchMedia('(max-width: 480px)');
+    const toggleDivider = () => divider && (divider.style.display = mq.matches ? 'none' : 'inline-block');
+    toggleDivider(); mq.addEventListener('change', toggleDivider);
+  })();
+</script>
 
 <div aria-hidden="true" style="border-top: 1px solid #ccc; margin: 1.5em 0;"></div>
 
