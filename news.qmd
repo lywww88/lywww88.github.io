@@ -7,18 +7,25 @@ format:
     include-in-header: 
       text: |
         <style>
+          .news-boxes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+          }
+
           .news-card {
+            flex: 1 1 300px;
             border: 1px solid #e0e0e0;
             border-radius: 12px;
             padding: 1rem 1.25rem;
-            margin-bottom: 1.5rem;
             background: #fdfdfd;
             box-shadow: 0 2px 6px rgba(0,0,0,0.05);
           }
 
           .timeline {
             position: relative;
-            border-left: 3px solid #d0d0d0;
+            border-left: 3px solid #2986cc;
             margin-left: 1rem;
             padding-left: 1.5rem;
           }
@@ -36,10 +43,10 @@ format:
             top: 0.35rem;
             width: 0.75rem;
             height: 0.75rem;
-            background-color: #333;
+            background-color: #2986cc;
             border-radius: 50%;
             border: 2px solid #fff;
-            box-shadow: 0 0 0 3px #d0d0d0;
+            box-shadow: 0 0 0 3px #2986cc55;
           }
 
           .timeline-item h4 {
@@ -54,35 +61,29 @@ format:
         </style>
 ---
 
-## 🗞️ News & Updates
-
-Highlights of personal milestones, professional achievements, and project updates — a living record of progress and outcomes.
-
----
-
-### Featured Updates
+::: {.news-boxes}
 
 ::: {.news-card}
-**📌 Pinned • 🏆 Award**
+**🏆 SAP Integration Naming Contest**
 
-#### Won 3rd Place – SAP Integration Naming Contest
+#### Won 3rd Place  
 Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.
 
 [Jump to timeline](#aug-27-2025)
 :::
 
 ::: {.news-card}
-**⭐ Most Recent • 🎨 Design**
+**🎨 Profile Section Revamp**
 
-#### Profile Section Revamp
+#### Most Recent Update  
 Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.
 
 [Jump to timeline](#aug-20-2025)
 :::
 
----
+:::
 
-## 📅 Timeline
+## Timeline
 
 ::: {.timeline}
 
