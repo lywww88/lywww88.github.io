@@ -8,7 +8,7 @@ format:
     allow-raw-html: true
     include-in-header:
       text: |
-        <!-- 如已在 _quarto.yml 全局引入 Bootstrap Icons，可删掉这一行 -->
+        <!-- Bootstrap Icons（若已在 _quarto.yml 全局引入，可删掉） -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
         <style>
@@ -16,14 +16,11 @@ format:
           .contact-page{ max-width:980px; margin:0 auto; padding:0 16px; box-sizing:border-box; }
 
           /* 标题区 */
-          .contact-page .contact-hero{
-            display:flex; align-items:center; gap:.6rem;
-            margin:1.2rem 0 1.2rem; justify-content:center;
-          }
-          .contact-page .contact-hero .bi{ font-size:1.6rem; line-height:1; }
+          .contact-hero{ display:flex; align-items:center; gap:.6rem; margin:1.2rem 0 1.2rem; justify-content:center; }
+          .contact-hero .bi{ font-size:1.6rem; line-height:1; }
 
           /* 表单卡片 */
-          .contact-page .contact-card{ max-width:720px; margin:1.5rem auto; padding:2rem 2rem 2.25rem; box-sizing:border-box; }
+          .contact-card{ max-width:720px; margin:1.5rem auto; padding:2rem 2rem 2.25rem; box-sizing:border-box; }
 
           /* 表单控件 */
           .contact-page form input, .contact-page form select{ height:44px; }
@@ -33,34 +30,33 @@ format:
           }
           .contact-page form textarea{ min-height:160px; resize:vertical; }
           .contact-page form label{ font-weight:600; margin:0 0 .4rem; }
-          .contact-page .form-group{ display:flex; flex-direction:column; margin-bottom:1rem; }
+          .form-group{ display:flex; flex-direction:column; margin-bottom:1rem; }
 
           /* 两列布局 */
-          .contact-page .form-row{ display:grid; grid-template-columns:1fr 1fr; gap:1.1rem; }
-          .contact-page .form-row + .form-row{ margin-top:1.1rem; }
-          @media (max-width:640px){ .contact-page .form-row{ grid-template-columns:1fr; } }
+          .form-row{ display:grid; grid-template-columns:1fr 1fr; gap:1.1rem; }
+          .form-row + .form-row{ margin-top:1.1rem; }
+          @media (max-width:640px){ .form-row{ grid-template-columns:1fr; } }
 
           /* 辅助与状态 */
-          .contact-page .hint{ color:#6c757d; font-size:.9rem; margin-top:.35rem; }
-          .contact-page .status{ margin-top:.8rem; font-weight:600; }
-          .contact-page .status.ok{ color:#198754; }
-          .contact-page .status.err{ color:#dc3545; }
-          .contact-page .visually-hidden{ position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden; }
+          .hint{ color:#6c757d; font-size:.9rem; margin-top:.35rem; }
+          .status{ margin-top:.8rem; font-weight:600; }
+          .status.ok{ color:#198754; } .status.err{ color:#dc3545; }
+          .visually-hidden{ position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden; }
 
           /* 勾选框水平对齐 */
-          .contact-page .checkbox-group{ display:flex; align-items:center; gap:.5rem; margin-top:.6rem; font-weight:500; }
-          .contact-page .checkbox-group input[type="checkbox"]{ width:18px; height:18px; margin:0; }
+          .checkbox-group{ display:flex; align-items:center; gap:.5rem; margin-top:.6rem; font-weight:500; }
+          .checkbox-group input[type="checkbox"]{ width:18px; height:18px; margin:0; }
 
           /* 按钮区：三颗按钮同宽同高，桌面不换行 */
-          .contact-page .actions{ display:flex; align-items:center; gap:.9rem; justify-content:flex-start; margin-top:1.25rem; flex-wrap:nowrap; }
-          .contact-page .actions .btn{
+          .actions{ display:flex; align-items:center; gap:.9rem; justify-content:flex-start; margin-top:1.25rem; flex-wrap:nowrap; }
+          .actions .btn{
             display:inline-flex; align-items:center; justify-content:center; gap:.45rem;
             height:44px; width:200px; border-radius:12px; padding:0 1rem;
             font-weight:600; line-height:1; text-decoration:none; white-space:nowrap;
           }
-          .contact-page .actions .btn-home{ background:#198754; color:#fff; border:none; }
-          .contact-page .actions .btn-home:hover{ background:#157347; color:#fff; }
-          @media (max-width:640px){ .contact-page .actions{ flex-wrap:wrap; } .contact-page .actions .btn{ width:100%; } }
+          .actions .btn-home{ background:#198754; color:#fff; border:none; }
+          .actions .btn-home:hover{ background:#157347; color:#fff; }
+          @media (max-width:640px){ .actions{ flex-wrap:wrap; } .actions .btn{ width:100%; } }
 
           /* 深色模式 */
           @media (prefers-color-scheme: dark){
