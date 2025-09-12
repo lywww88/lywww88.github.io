@@ -119,30 +119,6 @@ My new personal domain is now officially online.
 :::
 
 ::: {.timeline-item}
-### <span id="sep-05-2025">Sep 05, 2025</span>
-**Testing Entry A**  
-<p>Placeholder text for timeline testing purposes. Ensures longer scroll distance.</p>
-:::
-
-::: {.timeline-item}
-### <span id="sep-03-2025">Sep 03, 2025</span>
-**Testing Entry B**  
-<p>Another dummy entry to simulate more timeline events.</p>
-:::
-
-::: {.timeline-item}
-### <span id="sep-01-2025">Sep 01, 2025</span>
-**Landing Page Polish**  
-<p>Reworked headline spacing and refined mobile styles.</p>
-:::
-
-::: {.timeline-item}
-### <span id="aug-30-2025">Aug 30, 2025</span>
-**Testing Entry C**  
-<p>Dummy content for scroll testing. Add more length to the timeline.</p>
-:::
-
-::: {.timeline-item}
 ### <span id="aug-29-2025">Aug 29, 2025</span>
 **Contact Form (Beta) Launched**  
 <p>First version of a working contact form integrated on site.</p>
@@ -161,27 +137,9 @@ My new personal domain is now officially online.
 :::
 
 ::: {.timeline-item}
-### <span id="aug-26-2025">Aug 26, 2025</span>
-**Improved Mobile Navigation**  
-<p>Navigation bar polished for better mobile responsiveness.</p>
-:::
-
-::: {.timeline-item}
-### <span id="aug-23-2025">Aug 23, 2025</span>
-**Testing Entry D**  
-<p>Extra test entry to stretch the timeline for visual testing.</p>
-:::
-
-::: {.timeline-item}
 ### <span id="aug-20-2025">Aug 20, 2025</span>
 **Profile Section Revamp**  
 <p>Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.</p>
-:::
-
-::: {.timeline-item}
-### <span id="aug-18-2025">Aug 18, 2025</span>
-**Testing Entry E**  
-<p>Another timeline placeholder entry for testing highlight and scrolling.</p>
 :::
 
 ::: {.timeline-item}
@@ -192,20 +150,20 @@ My new personal domain is now officially online.
 
 ::: {.timeline-item}
 ### <span id="aug-10-2025">Aug 10, 2025</span>
-**Testing Entry F**  
+**Testing Entry A**  
 <p>Dummy event, extending the list for scrolling tests.</p>
 :::
 
 ::: {.timeline-item}
-### <span id="jun-15-2024">Jun 15, 2024</span>
+### <span id="jun-15-2024">Jun 15, 2025</span>
 **Graduated from UCI**  
 <p>Completed Bachelor of Arts in Education Sciences at the University of California, Irvine.</p>
 :::
 
 ::: {.timeline-item}
-### <span id="dec-10-2024">Dec 10, 2024</span>
-**Launched Data Project Gallery**  
-<p>Centralized ML dashboards, datathon work, and experiment logs.</p>
+### <span id="Testing">xx xx, 2024</span>
+**Testing Entry B**  
+<p>Dummy event, extending the list for scrolling tests.</p>
 :::
 
 :::
