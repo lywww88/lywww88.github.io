@@ -88,22 +88,70 @@ Recognized out of 300+ submissions. Focused on clarity, memorability, and produc
 :::
 
 ::: {.news-card}
-#### Profile Section Revamp
-**Most Recent Update**  
-Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.  
-<button type="button" class="btn js-mark" data-target="aug-20-2025">Highlight in Timeline</button>
+#### New Domain Released
+**www.yiweilu.me is Live!**  
+My new personal domain is now officially online.  
+<button type="button" class="btn js-mark" data-target="sep-11-2025">Highlight in Timeline</button>
 :::
 
 :::
+
 
 ## Timeline
 
 ::: {.timeline}
 
 ::: {.timeline-item}
+### <span id="sep-11-2025">Sep 11, 2025</span>
+**New Domain Released — www.yiweilu.me**  
+<p>Announcing that my new personal domain is now active and accessible.</p>
+:::
+
+::: {.timeline-item}
+### <span id="sep-11b-2025">Sep 11, 2025</span>
+**What’s New — Site Updates**  
+<p>• www.yiweilu.me alive<br>
+• Contact Form (Beta) launched (Aug 29)<br>
+• Updated Announcement Bar (Aug 28)<br>
+• Added floating Search & Back-to-Top (Aug 27)<br>
+• Improved mobile navigation polish<br>
+• Profile section redesign with gradient text and glowing avatar</p>
+:::
+
+::: {.timeline-item}
+### <span id="sep-05-2025">Sep 05, 2025</span>
+**Testing Entry A**  
+<p>Placeholder text for timeline testing purposes. Ensures longer scroll distance.</p>
+:::
+
+::: {.timeline-item}
+### <span id="sep-03-2025">Sep 03, 2025</span>
+**Testing Entry B**  
+<p>Another dummy entry to simulate more timeline events.</p>
+:::
+
+::: {.timeline-item}
 ### <span id="sep-01-2025">Sep 01, 2025</span>
 **Landing Page Polish**  
 <p>Reworked headline spacing and refined mobile styles.</p>
+:::
+
+::: {.timeline-item}
+### <span id="aug-30-2025">Aug 30, 2025</span>
+**Testing Entry C**  
+<p>Dummy content for scroll testing. Add more length to the timeline.</p>
+:::
+
+::: {.timeline-item}
+### <span id="aug-29-2025">Aug 29, 2025</span>
+**Contact Form (Beta) Launched**  
+<p>First version of a working contact form integrated on site.</p>
+:::
+
+::: {.timeline-item}
+### <span id="aug-28-2025">Aug 28, 2025</span>
+**Announcement Bar Updated**  
+<p>Refreshed design and animation for top-of-page announcements.</p>
 :::
 
 ::: {.timeline-item}
@@ -113,15 +161,45 @@ Animated gradient name, glowing avatar ring, and polished project cards with smo
 :::
 
 ::: {.timeline-item}
+### <span id="aug-26-2025">Aug 26, 2025</span>
+**Improved Mobile Navigation**  
+<p>Navigation bar polished for better mobile responsiveness.</p>
+:::
+
+::: {.timeline-item}
+### <span id="aug-23-2025">Aug 23, 2025</span>
+**Testing Entry D**  
+<p>Extra test entry to stretch the timeline for visual testing.</p>
+:::
+
+::: {.timeline-item}
 ### <span id="aug-20-2025">Aug 20, 2025</span>
 **Profile Section Revamp**  
 <p>Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.</p>
 :::
 
 ::: {.timeline-item}
+### <span id="aug-18-2025">Aug 18, 2025</span>
+**Testing Entry E**  
+<p>Another timeline placeholder entry for testing highlight and scrolling.</p>
+:::
+
+::: {.timeline-item}
 ### <span id="aug-15-2025">Aug 15, 2025</span>
 **Floating Search & Back-to-Top**  
 <p>Quick search (<kbd>/</kbd> or <kbd>Ctrl+K</kbd>) and a floating back-to-top button for long pages.</p>
+:::
+
+::: {.timeline-item}
+### <span id="aug-10-2025">Aug 10, 2025</span>
+**Testing Entry F**  
+<p>Dummy event, extending the list for scrolling tests.</p>
+:::
+
+::: {.timeline-item}
+### <span id="jun-15-2024">Jun 15, 2024</span>
+**Graduated from UCI**  
+<p>Completed Bachelor of Arts in Education Sciences at the University of California, Irvine.</p>
 :::
 
 ::: {.timeline-item}
