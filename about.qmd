@@ -7,6 +7,7 @@ format:
     toc-title: " "    
     title-block: false
     page-layout: full
+    anchor-sections: false 
 ---
 
 ## About Me
