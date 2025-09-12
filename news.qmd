@@ -7,13 +7,13 @@ format:
     include-in-header:
       text: |
         <style>
+          /* ✅ General layout */
           .news-boxes {
             display: flex;
             flex-wrap: wrap;
             gap: 1.25rem;
             margin-bottom: 2.5rem;
           }
-
           .news-card {
             flex: 1 1 320px;
             padding: 1.25rem 1.5rem;
@@ -25,20 +25,17 @@ format:
             flex-direction: column;
             justify-content: space-between;
           }
-
           .news-card h4 {
             margin: 0 0 0.4rem 0;
             font-size: 1rem;
             font-weight: 600;
           }
-
           .news-card p {
             margin: 0 0 1rem 0;
             font-size: 0.95rem;
             color: #444;
             line-height: 1.5;
           }
-
           .btn {
             display: inline-block;
             background: #2986cc;
@@ -52,23 +49,22 @@ format:
             text-align: center;
             width: fit-content;
           }
-
           .btn:hover {
             background: #1f6db3;
           }
 
+          /* ✅ Timeline styles */
           .timeline {
             position: relative;
             border-left: 3px solid #2986cc;
             margin-left: 1rem;
             padding-left: 1.5rem;
           }
-
           .timeline-item {
             position: relative;
             margin-bottom: 2rem;
+            scroll-margin-top: 80px; /* ✅ Prevents scroll from going under navbar */
           }
-
           .timeline-item::before {
             content: "";
             position: absolute;
@@ -81,18 +77,28 @@ format:
             border: 2px solid #fff;
             box-shadow: 0 0 0 3px #2986cc55;
           }
-
           .timeline-item h4 {
             margin: 0 0 0.4rem 0;
             font-size: 1.05rem;
             font-weight: 600;
           }
-
           .timeline-item p {
             margin: 0;
             color: #555;
             font-size: 0.95rem;
             line-height: 1.5;
+          }
+
+          /* ✅ Smooth target highlight when jump */
+          .timeline-item:target {
+            background: #eef6ff;
+            padding: 0.8rem 1rem;
+            border-radius: 8px;
+            animation: fade-highlight 1.5s ease-out;
+          }
+          @keyframes fade-highlight {
+            0% { background-color: #d6ecff; }
+            100% { background-color: #eef6ff; }
           }
         </style>
 ---
@@ -132,16 +138,17 @@ Most Recent Update
 :::
 
 ::: {.timeline-item}
-### Aug 15, 2025  
+### <span id="aug-15-2025">Aug 15, 2025</span>  
 **Floating Search & Back-to-Top**  
-<p>Quick search (<kbd>/</kbd> or <kbd>Ctrl+K</kbd>) and floating back-to-top button for long pages.</p>
+<p>Quick search (<kbd>/</kbd> or <kbd>Ctrl+K</kbd>) and floating back-to-top button for long pages.</p>  
+<a class="btn" href="#aug-15-2025">Test This Jump →</a>
 :::
 
 ::: {.timeline-item}
-### Dec 10, 2024  
+### <span id="dec-10-2024">Dec 10, 2024</span>  
 **Launched Data Project Gallery**  
 <p>Centralized ML dashboards, datathon work, and experiment logs.</p>  
-<a class="btn" href="https://lywww88.github.io/projects/" target="_blank">Open Projects →</a>
+<a class="btn" href="#dec-10-2024">Test Timeline Jump</a>
 :::
 
 :::
