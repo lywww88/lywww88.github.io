@@ -29,10 +29,6 @@ website:
           - href: contact.yiweilu.me
             text: '<strong>YPS Tech</strong>'
             target: _self
-          - text: '<span style="font-size: 0.7rem; font-weight: 300; color: gray;">DEMO STAGE</span>'
-          - href: https://forecastai-poc.netlify.app/
-            text: '<strong>Klug Forecast AI</strong>'
-            target: _blank
           - text: '<span style="font-size: 0.7rem; font-weight: 300; color: gray;">Concept Stage (Paused)</span>'
           - href: https://platemateofficial.netlify.app/
             text: '<strong>Platemate</strong>'
