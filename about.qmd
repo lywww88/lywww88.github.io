@@ -76,6 +76,24 @@ Outside of work, I’m a curious learner who enjoys exploring tech trends, visua
 
 ---
 
+<p style="text-align: center; color: #aaa; font-size: 0.9em; margin-top: 2em;">
+  Let’s stay in touch — here’s where to find me online.
+</p>
+
+<div class="connect-container" style="display: flex; flex-wrap: wrap; gap: 1em; align-items: center;">
+  <a href="https://www.linkedin.com/in/yiwei-lu78" class="btn" target="_blank">
+    <i class="bi bi-linkedin"></i> LinkedIn
+  </a>
+  <a href="https://wa.me/6266736276" class="btn" target="_blank">
+    <i class="bi bi-whatsapp"></i> WhatsApp
+  </a>
+  <a href="https://www.yiweilu.me/contact.html" class="_blank">
+    <i class="bi bi-envelope"></i> Contact
+  </a>
+</div>
+
+<div aria-hidden="true" style="border-top: 1px solid #ccc; margin: 1.5em 0;"></div>
+
 <p style="text-align: center; color: #888; font-size: 0.85em; margin-top: 3em;">
   © 2025 Yiwei Lu. All rights reserved.
 </p>
