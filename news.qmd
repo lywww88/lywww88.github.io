@@ -81,7 +81,7 @@ format:
 
 ::: {.news-card style="border:2px solid #0d6efd; background:#eaf2ff;"}
 <span style="display:inline-block; background:#0d6efd; color:#fff; font-size:0.75rem; padding:0.2em 0.6em; border-radius:12px; font-weight:600; margin-bottom:0.5em;">
-📌 Pinned
+Pinned
 </span>
 
 #### New Domain Released
@@ -94,11 +94,15 @@ My new personal domain is now officially online.
 </button>
 :::
 
-::: {.news-card}
+::: {.news-card style="border:1.5px solid #6ca0dc; background:#f5f9ff;"}
 #### SAP Integration Naming Contest
 **Won 3rd Place**  
-“Golden Sync" Recognized out of 300+ submissions. 
-<button type="button" class="btn js-mark" data-target="aug-27-2025">Highlight in Timeline</button>
+“Golden Sync" Recognized out of 300+ submissions.  
+
+<button type="button" class="btn js-mark" data-target="aug-27-2025"
+        style="background:#6ca0dc; color:#fff; font-weight:600; border:none; padding:.45em 1em; border-radius:8px; box-shadow:0 2px 4px rgba(0,0,0,.1);">
+  Highlight in Timeline
+</button>
 :::
 
 :::
