@@ -33,7 +33,7 @@ format:
 .columns > .column > .project-card{ display:flex; flex-direction:column; height:100%; }
 
 /* Timeline */
-.news-tl{ --datew:120px; --dot: var(--news-blue); position:relative; }
+.news-tl{ --datew:120px; --dot: var(--news-blue); }
 .news-tl-year{ font-weight:800; font-size:1.2rem; color:#2c3e50; margin:28px 0 10px; }
 
 .news-tl-list{
@@ -41,7 +41,6 @@ format:
   grid-template-columns: var(--datew) 28px 1fr;
   row-gap:16px;
   position:relative;
-  margin-bottom:2rem;
 }
 
 /* Strong, always-visible vertical line */
@@ -49,7 +48,7 @@ format:
   content:"";
   position:absolute;
   top:0; bottom:0;
-  left: calc(var(--datew) + 14px);
+  left: calc(var(--datew) + 14px); /* center of the 28px dot column */
   width:3px;
   background: linear-gradient(180deg,
     rgba(13,110,253,.35) 0%,
