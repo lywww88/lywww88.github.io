@@ -4,7 +4,7 @@ format:
   html:
     toc: false
     page-layout: article
-    include-in-header: false
+    include-in-header: styles.css
 ---
 
 <style>
