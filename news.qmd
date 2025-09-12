@@ -1,19 +1,21 @@
 ---
 title: "News"
+page-layout: article
 format:
   html:
     toc: false
-    page-layout: article
+    theme: default
+    css: styles.css
     include-in-header:
       text: |
         <style>
+          .page-full .content { max-width: 100% !important; }
           .news-boxes {
             display: flex;
             flex-wrap: wrap;
             gap: 1.25rem;
             margin-bottom: 2.5rem;
           }
-
           .news-card {
             flex: 1 1 320px;
             padding: 1.25rem 1.5rem;
@@ -25,20 +27,17 @@ format:
             flex-direction: column;
             justify-content: space-between;
           }
-
           .news-card h4 {
             margin: 0 0 0.4rem 0;
             font-size: 1rem;
             font-weight: 600;
           }
-
           .news-card p {
             margin: 0 0 1rem 0;
             font-size: 0.95rem;
             color: #444;
             line-height: 1.5;
           }
-
           .btn {
             display: inline-block;
             background: #2986cc;
@@ -52,28 +51,24 @@ format:
             text-align: center;
             width: fit-content;
           }
-
           .btn:hover {
             background: #1f6db3;
           }
-
           .timeline {
             position: relative;
             border-left: 3px solid #2986cc;
             margin-left: 1rem;
             padding-left: 1.5rem;
           }
-
           .timeline-item {
             position: relative;
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem;
           }
-
           .timeline-item::before {
             content: "";
             position: absolute;
             left: -1.6rem;
-            top: 0.35rem;
+            top: 0.3rem;
             width: 0.75rem;
             height: 0.75rem;
             background-color: #2986cc;
@@ -81,13 +76,11 @@ format:
             border: 2px solid #fff;
             box-shadow: 0 0 0 3px #2986cc55;
           }
-
           .timeline-item h4 {
             margin: 0 0 0.4rem 0;
             font-size: 1.05rem;
             font-weight: 600;
           }
-
           .timeline-item p {
             margin: 0;
             color: #555;
@@ -113,6 +106,27 @@ Most Recent Update
 <a class="btn" href="#aug-20-2025">Jump to Timeline</a>
 :::
 
+::: {.news-card}
+#### Landing Page Polish  
+New Entry  
+<p>Reworked headline spacing and refined mobile styles.</p>  
+<a class="btn" href="#sep-01-2025">Jump to Timeline</a>
+:::
+
+::: {.news-card}
+#### Cluster Insights Charts  
+Testing Jump  
+<p>New charts added to visualize customer cluster behavior across platforms.</p>  
+<a class="btn" href="#sep-02-2025">Jump to Timeline</a>
+:::
+
+::: {.news-card}
+#### Forecast Page Animation  
+Testing Jump  
+<p>Replaced static KPIs with animated transitions and chart overlays.</p>  
+<a class="btn" href="#sep-03-2025">Jump to Timeline</a>
+:::
+
 :::
 
 ## Timeline
@@ -120,52 +134,46 @@ Most Recent Update
 ::: {.timeline}
 
 ::: {.timeline-item}
-<div id="sep-01-2025" style="display:block; height:1px; margin-top:-60px; padding-top:60px;"></div>
-### Sep 01, 2025  
+### <span id="sep-03-2025">Sep 03, 2025</span>  
+**Forecast Page Animation**  
+<p>Replaced static KPIs with animated transitions and chart overlays.</p>
+:::
+
+::: {.timeline-item}
+### <span id="sep-02-2025">Sep 02, 2025</span>  
+**Cluster Insights Charts**  
+<p>New charts added to visualize customer cluster behavior across platforms.</p>
+:::
+
+::: {.timeline-item}
+### <span id="sep-01-2025">Sep 01, 2025</span>  
 **Landing Page Polish**  
 <p>Reworked headline spacing and refined mobile styles.</p>
 :::
 
 ::: {.timeline-item}
-<div id="aug-27-2025" style="display:block; height:1px; margin-top:-60px; padding-top:60px;"></div>
-### Aug 27, 2025  
+### <span id="aug-27-2025">Aug 27, 2025</span>  
 **Won 3rd Place – SAP Integration Naming Contest**  
 <p>Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.</p>
 :::
 
 ::: {.timeline-item}
-<div id="aug-20-2025" style="display:block; height:1px; margin-top:-60px; padding-top:60px;"></div>
-### Aug 20, 2025  
+### <span id="aug-20-2025">Aug 20, 2025</span>  
 **Profile Section Revamp**  
-<p>Animated gradient name, glowing avatar ring, and smoother hover states for cards.</p>
+<p>Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.</p>
 :::
 
 ::: {.timeline-item}
-<div id="aug-15-2025" style="display:block; height:1px; margin-top:-60px; padding-top:60px;"></div>
-### Aug 15, 2025  
+### <span id="aug-15-2025">Aug 15, 2025</span>  
 **Floating Search & Back-to-Top**  
-<p>Quick search (<kbd>/</kbd> or <kbd>Ctrl+K</kbd>) and floating back-to-top button.</p>
+<p>Quick search (<kbd>/</kbd> or <kbd>Ctrl+K</kbd>) and floating back-to-top button for long pages.</p>
 :::
 
 ::: {.timeline-item}
-<div id="dec-10-2024" style="display:block; height:1px; margin-top:-60px; padding-top:60px;"></div>
-### Dec 10, 2024  
+### <span id="dec-10-2024">Dec 10, 2024</span>  
 **Launched Data Project Gallery**  
-<p>Centralized ML dashboards, datathon work, and experiment logs.</p>
-:::
-
-::: {.timeline-item}
-<div id="jul-15-2024" style="display:block; height:1px; margin-top:-60px; padding-top:60px;"></div>
-### Jul 15, 2024  
-**Added Team Pages**  
-<p>Team bios, profile links, and attributions for collaborators.</p>
-:::
-
-::: {.timeline-item}
-<div id="jul-01-2024" style="display:block; height:1px; margin-top:-60px; padding-top:60px;"></div>
-### Jul 01, 2024  
-**Internal Alpha Launch**  
-<p>First working MVP deployed for internal testing and feedback.</p>
+<p>Centralized ML dashboards, datathon work, and experiment logs.</p>  
+<a class="btn" href="https://lywww88.github.io/projects/" target="_blank">Open Projects →</a>
 :::
 
 :::
