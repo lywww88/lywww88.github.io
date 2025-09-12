@@ -209,11 +209,11 @@ format:
       <a href="https://www.linkedin.com/in/yiwei-lu78" class="btn" target="_blank">
         <i class="bi bi-linkedin"></i> Linkedin
       </a>
+      <a href="/contact.html" class="btn" target="_blank">
+        <i class="bi bi-envelope"></i> Contact
+      </a>
       <a href="https://wa.me/6266736276" class="btn" target="_blank">
         <i class="bi bi-whatsapp"></i> WhatsApp
-      </a>
-      <a href="/contact.html" class="btn" target="_blank">
-        <i class="bi bi-envelope"></i> Contact Me
       </a>
     </div>
   </div>
