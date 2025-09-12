@@ -4,6 +4,7 @@ page-layout: full
 format:
   html:
     toc: false
+    anchor-sections: false
     include-in-header:
       text: |
         <style>
@@ -74,6 +75,9 @@ format:
             50%{transform:scale(1.25)}
             100%{transform:scale(1)}
           }
+
+          /* --- 保险：隐藏不同版本 Quarto 可能生成的标题锚点小链接 --- */
+          a.anchorjs-link, .anchorjs-link, .quarto-anchorjs-link, .heading-anchor { display:none !important; }
         </style>
 ---
 
