@@ -7,67 +7,72 @@ format:
     include-in-header:
       text: |
         <style>
-          /* ====== Layout: two feature boxes ====== */
-          .news-boxes{
-            display:flex; flex-wrap:wrap; gap:1.25rem; margin:0 0 2.2rem 0;
-          }
+          /* ---------- Page width ---------- */
+          .page-full .content{max-width:1100px;margin-inline:auto;}
+
+          /* ---------- Top cards ---------- */
+          .news-boxes{display:flex;flex-wrap:wrap;gap:1.25rem;margin:0 0 2.2rem 0;}
           .news-card{
-            flex:1 1 360px;
-            padding:1.25rem 1.5rem;
-            background:#fff; border:1px solid #e6e6e6; border-radius:14px;
-            box-shadow:0 2px 6px rgba(0,0,0,.05);
-            display:flex; flex-direction:column; justify-content:space-between;
+            flex:1 1 360px;padding:1.25rem 1.5rem;background:#fff;border:1px solid #e6e6e6;border-radius:14px;
+            box-shadow:0 2px 6px rgba(0,0,0,.05);display:flex;flex-direction:column;justify-content:space-between
           }
-          .news-card h4{ margin:0 0 .35rem 0; font-size:1.05rem; font-weight:700; }
-          .news-card p{ margin:.2rem 0; color:#333; line-height:1.55; }
+          .news-card h4{margin:0 0 .35rem 0;font-size:1.05rem;font-weight:700}
+          .news-card p{margin:.2rem 0;color:#333;line-height:1.55}
           .btn{
-            display:inline-block; margin-top:.8rem; padding:.45rem .95rem;
-            background:#2986cc; color:#fff; border-radius:8px; text-decoration:none; font-weight:600;
-            transition:background .15s ease-in-out;
+            display:inline-block;margin-top:.8rem;padding:.45rem .95rem;background:#2986cc;color:#fff;border-radius:8px;
+            text-decoration:none;font-weight:700;border:none;cursor:pointer;transition:background .15s ease-in-out
           }
-          .btn:hover{ background:#1f6db3; }
-          .btn:focus{ outline:none; box-shadow:0 0 0 3px rgba(41,134,204,.35); }
+          .btn:hover{background:#1f6db3}
 
-          /* ====== Timeline ====== */
-          .timeline{ position:relative; border-left:3px solid #2986cc; padding-left:1.5rem; margin-left:1rem; }
-          .timeline-item{ position:relative; margin:0 0 2rem 0; }
+          /* ---------- Timeline ---------- */
+          .timeline{position:relative;border-left:3px solid #2986cc;padding-left:1.5rem;margin-left:1rem}
+          .timeline-item{position:relative;margin:0 0 2rem 0}
           .timeline-item::before{
-            content:""; position:absolute; left:-1.63rem; top:.35rem;
-            width:.8rem; height:.8rem; background:#2986cc; border-radius:50%;
-            border:2px solid #fff; box-shadow:0 0 0 3px #2986cc55;
+            content:"";position:absolute;left:-1.63rem;top:.35rem;width:.8rem;height:.8rem;background:#2986cc;border-radius:50%;
+            border:2px solid #fff;box-shadow:0 0 0 3px #2986cc55
           }
-          .timeline-item h4{ margin:0 0 .35rem 0; font-size:1.15rem; font-weight:800; }
-          .timeline-item strong{ display:block; font-weight:700; margin:.15rem 0 .15rem; }
-          .timeline-item p{ margin:0; color:#555; }
+          .timeline-item h4{margin:0 0 .35rem 0;font-size:1.15rem;font-weight:800}
+          .timeline-item strong{display:block;margin:.15rem 0 .15rem;font-weight:700}
+          .timeline-item p{margin:0;color:#555}
 
-          /* anchor offset: make heading-id stop below the top safely */
-          .timeline-item span[id]{ scroll-margin-top:110px; }
-
-          /* kill browser default target/focus rings that can look weird near the left line */
-          span[id]:target{ outline:0 !important; }
-          a:focus, span:focus{ outline:none !important; }
-          a{ -webkit-tap-highlight-color: transparent; }
-
-          /* make the section breathe more on wide pages */
-          .page-full .content{ max-width:1100px; margin-inline:auto; }
+          /* ---------- Highlight effect (no jump) ---------- */
+          .timeline-item.is-highlight{
+            background:#e9f3ff;border-radius:8px;padding-left:.6rem;
+            animation: hi-bg .25s ease-out 1
+          }
+          .timeline-item.is-highlight h4,
+          .timeline-item.is-highlight strong{color:#0b61c3}
+          .timeline-item.is-highlight::before{
+            background:#0b61c3;box-shadow:0 0 0 5px rgba(41,134,204,.28);animation:pulse 1.2s ease-out 2
+          }
+          @keyframes pulse{
+            0%{transform:scale(1)}
+            50%{transform:scale(1.25)}
+            100%{transform:scale(1)}
+          }
+          @keyframes hi-bg{
+            from{background:#dff0ff} to{background:#e9f3ff}
+          }
         </style>
 ---
 
-<!-- ===== Top: two cards (only two, per your request) ===== -->
+<!-- ============= Top: only TWO cards ============= -->
 ::: {.news-boxes}
+
 ::: {.news-card}
 #### SAP Integration Naming Contest
 **Won 3rd Place**  
 Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.  
-<a class="btn js-jump" href="#aug-27-2025">Jump to Timeline</a>
+<button type="button" class="btn js-mark" data-target="aug-27-2025">Highlight in Timeline</button>
 :::
 
 ::: {.news-card}
 #### Profile Section Revamp
 **Most Recent Update**  
 Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.  
-<a class="btn js-jump" href="#aug-20-2025">Jump to Timeline</a>
+<button type="button" class="btn js-mark" data-target="aug-20-2025">Highlight in Timeline</button>
 :::
+
 :::
 
 ## Timeline
@@ -103,33 +108,24 @@ Animated gradient name, glowing avatar ring, and polished project cards with smo
 **Launched Data Project Gallery**  
 <p>Centralized ML dashboards, datathon work, and experiment logs.</p>
 :::
+
 :::
 
 <script>
-  // Smooth scroll WITHOUT changing the hash (avoids browser target highlight artefacts)
-  document.querySelectorAll('.js-jump').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const sel = btn.getAttribute('href');
-      const targetSpan = document.querySelector(sel);
-      if(!targetSpan) return;
+  // 点击卡片按钮，只给对应条目加高亮；不跳转、不滚动
+  const clearHi = () => document.querySelectorAll('.timeline-item.is-highlight')
+                             .forEach(el => el.classList.remove('is-highlight'));
 
-      // scroll to the span (offset handled by CSS scroll-margin-top)
-      targetSpan.scrollIntoView({behavior:'smooth', block:'start'});
-
-      // optional: subtle highlight on the parent item
-      const item = targetSpan.closest('.timeline-item');
-      if(item){
-        item.classList.add('js-hi');
-        setTimeout(()=>item.classList.remove('js-hi'), 1600);
-      }
+  document.querySelectorAll('.js-mark').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.getAttribute('data-target');
+      const span = document.getElementById(id);
+      if(!span) return;
+      const item = span.closest('.timeline-item');
+      if(!item) return;
+      clearHi();
+      item.classList.add('is-highlight');
+      setTimeout(() => item.classList.remove('is-highlight'), 2500);
     });
   });
-
-  // tiny highlight style injected here (kept inline to avoid raw css blocks)
-  (function(){
-    const s = document.createElement('style');
-    s.textContent = `.timeline-item.js-hi{ background:#e9f3ff; border-radius:8px; padding-left:.6rem; }`;
-    document.head.appendChild(s);
-  })();
 </script>
