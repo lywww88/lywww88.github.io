@@ -95,6 +95,10 @@ My new personal domain is now officially online.
 :::
 
 ::: {.news-card style="border:1.5px solid #6ca0dc; background:#f5f9ff;"}
+<span style="display:inline-block; background:#6ca0dc; color:#fff; font-size:0.75rem; padding:0.2em 0.6em; border-radius:12px; font-weight:600; margin-bottom:0.5em;">
+Award
+</span>
+
 #### SAP Integration Naming Contest
 **Won 3rd Place**  
 “Golden Sync" Recognized out of 300+ submissions.  
