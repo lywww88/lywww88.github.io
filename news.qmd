@@ -4,23 +4,57 @@ format:
   html:
     toc: false
     page-layout: article
-    include-in-header: 
+    include-in-header:
       text: |
         <style>
           .news-boxes {
             display: flex;
             flex-wrap: wrap;
-            gap: 1rem;
-            margin-bottom: 2rem;
+            gap: 1.25rem;
+            margin-bottom: 2.5rem;
           }
 
           .news-card {
-            flex: 1 1 300px;
-            border: 1px solid #e0e0e0;
-            border-radius: 12px;
-            padding: 1rem 1.25rem;
+            flex: 1 1 320px;
+            padding: 1.25rem 1.5rem;
             background: #fdfdfd;
+            border: 1px solid #e0e0e0;
+            border-radius: 14px;
             box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+
+          .news-card h4 {
+            margin: 0 0 0.4rem 0;
+            font-size: 1rem;
+            font-weight: 600;
+          }
+
+          .news-card p {
+            margin: 0 0 1rem 0;
+            font-size: 0.95rem;
+            color: #444;
+            line-height: 1.5;
+          }
+
+          .btn {
+            display: inline-block;
+            background: #2986cc;
+            color: #fff;
+            font-size: 0.9rem;
+            padding: 0.4em 0.9em;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.2s ease-in-out;
+            text-align: center;
+            width: fit-content;
+          }
+
+          .btn:hover {
+            background: #1f6db3;
           }
 
           .timeline {
@@ -33,14 +67,13 @@ format:
           .timeline-item {
             position: relative;
             margin-bottom: 2rem;
-            padding-left: 0.5rem;
           }
 
           .timeline-item::before {
             content: "";
             position: absolute;
-            left: -1.63rem;
-            top: 0.35rem;
+            left: -1.6rem;
+            top: 0.3rem;
             width: 0.75rem;
             height: 0.75rem;
             background-color: #2986cc;
@@ -50,13 +83,16 @@ format:
           }
 
           .timeline-item h4 {
-            margin: 0 0 0.3rem 0;
+            margin: 0 0 0.4rem 0;
             font-size: 1.05rem;
+            font-weight: 600;
           }
 
           .timeline-item p {
             margin: 0;
             color: #555;
+            font-size: 0.95rem;
+            line-height: 1.5;
           }
         </style>
 ---
@@ -64,21 +100,17 @@ format:
 ::: {.news-boxes}
 
 ::: {.news-card}
-**🏆 SAP Integration Naming Contest**
-
-#### Won 3rd Place  
-Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.
-
-[Jump to timeline](#aug-27-2025)
+#### SAP Integration Naming Contest  
+Won 3rd Place  
+<p>Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.</p>  
+<a class="btn" href="#aug-27-2025">Jump to Timeline</a>
 :::
 
 ::: {.news-card}
-**🎨 Profile Section Revamp**
-
-#### Most Recent Update  
-Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.
-
-[Jump to timeline](#aug-20-2025)
+#### Profile Section Revamp  
+Most Recent Update  
+<p>Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.</p>  
+<a class="btn" href="#aug-20-2025">Jump to Timeline</a>
 :::
 
 :::
@@ -88,28 +120,28 @@ Animated gradient name, glowing avatar ring, and polished project cards with smo
 ::: {.timeline}
 
 ::: {.timeline-item}
-### <span id="aug-27-2025">Aug 27, 2025</span>
-#### Won 3rd Place – SAP Integration Naming Contest  
+### <span id="aug-27-2025">Aug 27, 2025</span>  
+**Won 3rd Place – SAP Integration Naming Contest**  
 <p>Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.</p>
 :::
 
 ::: {.timeline-item}
-### <span id="aug-20-2025">Aug 20, 2025</span>
-#### Profile Section Revamp  
+### <span id="aug-20-2025">Aug 20, 2025</span>  
+**Profile Section Revamp**  
 <p>Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.</p>
 :::
 
 ::: {.timeline-item}
-### Aug 15, 2025
-#### Floating Search & Back-to-Top  
+### Aug 15, 2025  
+**Floating Search & Back-to-Top**  
 <p>Quick search (<kbd>/</kbd> or <kbd>Ctrl+K</kbd>) and floating back-to-top button for long pages.</p>
 :::
 
 ::: {.timeline-item}
-### Dec 10, 2024
-#### Launched Data Project Gallery  
+### Dec 10, 2024  
+**Launched Data Project Gallery**  
 <p>Centralized ML dashboards, datathon work, and experiment logs.</p>  
-[Open Projects →](https://lywww88.github.io/projects/)
+<a class="btn" href="https://lywww88.github.io/projects/" target="_blank">Open Projects →</a>
 :::
 
 :::
