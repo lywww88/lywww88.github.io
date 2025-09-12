@@ -10,7 +10,7 @@ format:
           /* ---------- Page width ---------- */
           .page-full .content{max-width:1100px;margin-inline:auto;}
 
-          /* ---------- Top cards ---------- */
+          /* ---------- Top cards (2 only) ---------- */
           .news-boxes{display:flex;flex-wrap:wrap;gap:1.25rem;margin:0 0 2.2rem 0;}
           .news-card{
             flex:1 1 360px;padding:1.25rem 1.5rem;background:#fff;border:1px solid #e6e6e6;border-radius:14px;
@@ -24,16 +24,26 @@ format:
           }
           .btn:hover{background:#1f6db3}
 
-          /* ---------- Timeline ---------- */
+          /* ---------- Timeline base ---------- */
           .timeline{position:relative;border-left:3px solid #2986cc;padding-left:1.5rem;margin-left:1rem}
           .timeline-item{position:relative;margin:0 0 2rem 0}
-          .timeline-item::before{
-            content:"";position:absolute;left:-1.63rem;top:.35rem;width:.8rem;height:.8rem;background:#2986cc;border-radius:50%;
-            border:2px solid #fff;box-shadow:0 0 0 3px #2986cc55
-          }
-          .timeline-item h4{margin:0 0 .35rem 0;font-size:1.15rem;font-weight:800}
+          .timeline-item h4{margin:0 0 .35rem 0;font-size:1.15rem;font-weight:800; position:relative; line-height:1.25}
           .timeline-item strong{display:block;margin:.15rem 0 .15rem;font-weight:700}
           .timeline-item p{margin:0;color:#555}
+
+          /* 旧的点禁用，避免与标题不对齐 */
+          .timeline-item::before{ display:none; }
+
+          /* 将圆点固定在 h4 中线，始终与标题对齐 */
+          .timeline-item h4::before{
+            content:"";
+            position:absolute;
+            left:-1.63rem;         /* 若与左侧竖线轻微偏差，可微调 -1.55rem ~ -1.85rem */
+            top:50%;
+            transform:translateY(-50%);
+            width:.8rem;height:.8rem;border-radius:50%;
+            background:#2986cc;border:2px solid #fff;box-shadow:0 0 0 3px #2986cc55;
+          }
 
           /* ---------- Highlight effect (no jump) ---------- */
           .timeline-item.is-highlight{
@@ -42,13 +52,13 @@ format:
           }
           .timeline-item.is-highlight h4,
           .timeline-item.is-highlight strong{color:#0b61c3}
-          .timeline-item.is-highlight::before{
+          .timeline-item.is-highlight h4::before{
             background:#0b61c3;box-shadow:0 0 0 5px rgba(41,134,204,.28);animation:pulse 1.2s ease-out 2
           }
           @keyframes pulse{
-            0%{transform:scale(1)}
-            50%{transform:scale(1.25)}
-            100%{transform:scale(1)}
+            0%{transform:translateY(-50%) scale(1)}
+            50%{transform:translateY(-50%) scale(1.25)}
+            100%{transform:translateY(-50%) scale(1)}
           }
           @keyframes hi-bg{
             from{background:#dff0ff} to{background:#e9f3ff}
@@ -56,7 +66,7 @@ format:
         </style>
 ---
 
-<!-- ============= Top: only TWO cards ============= -->
+<!-- ===== 顶部仅两张卡片 ===== -->
 ::: {.news-boxes}
 
 ::: {.news-card}
@@ -112,9 +122,10 @@ Animated gradient name, glowing avatar ring, and polished project cards with smo
 :::
 
 <script>
-  // 点击卡片按钮，只给对应条目加高亮；不跳转、不滚动
-  const clearHi = () => document.querySelectorAll('.timeline-item.is-highlight')
-                             .forEach(el => el.classList.remove('is-highlight'));
+  // 仅高亮，不跳转
+  const clearHi = () =>
+    document.querySelectorAll('.timeline-item.is-highlight')
+      .forEach(el => el.classList.remove('is-highlight'));
 
   document.querySelectorAll('.js-mark').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -125,7 +136,7 @@ Animated gradient name, glowing avatar ring, and polished project cards with smo
       if(!item) return;
       clearHi();
       item.classList.add('is-highlight');
-      setTimeout(() => item.classList.remove('is-highlight'), 2500);
+      setTimeout(()=> item.classList.remove('is-highlight'), 2500); // 想保持高亮可删掉这一行
     });
   });
 </script>
