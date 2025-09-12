@@ -1,151 +1,40 @@
 ---
 title: "News"
-page-layout: full
 format:
   html:
-    theme: cosmo
     toc: false
-    include-after-body: ../scripts/scroll-top.html
+    page-layout: article
 ---
 
-<!-- 🌟 News & Updates Page -->
+## 📰 News & Updates
 
-<section style="max-width: 860px; margin: 0 auto; padding: 2rem 1.2rem;">
+Highlights of personal milestones, achievements, and site updates.
 
-  <!-- Section Title -->
-  <h2 style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: .5rem;">
-    <i class="bi bi-newspaper" style="font-size: 1.6rem;"></i> News & Updates
-  </h2>
-  <p style="margin-bottom: 2rem; color: #444;">
-    Highlights of personal milestones, professional achievements, and project updates — a living record of progress and outcomes.
-  </p>
+---
 
-  <!-- 🔖 Highlights Section -->
-  <div class="project-card">
-    <div style="margin-bottom:.35rem;">
-      <span class="news-badge">📌 Pinned</span>
-      <span class="news-badge">🏆 Award</span>
-    </div>
-    <h3 style="margin:0 0 .35rem;">Won 3rd Place – SAP Integration Naming Contest</h3>
-    <p style="margin:.25rem 0 .65rem; color:#666;">
-      Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.
-    </p>
-    <a class="btn" href="#sap-award">Jump to entry →</a>
-  </div>
+### 🏆 Won 3rd Place – SAP Integration Naming Contest
+**Date:** August 27, 2025  
+**Tags:** 📌 Pinned, 🏆 Award  
+Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.
 
-  <div class="project-card">
-    <div style="margin-bottom:.35rem;">
-      <span class="news-badge">⭐ Most Recent</span>
-      <span class="news-badge">🎨 Design</span>
-    </div>
-    <h3 style="margin:0 0 .35rem;">Profile Section Revamp</h3>
-    <p style="margin:.25rem 0 .65rem; color:#666;">
-      Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.
-    </p>
-    <a class="btn" href="#profile-revamp">Jump to entry →</a>
-  </div>
+---
 
-  <!-- 📅 Timeline -->
-  <div class="timeline">
+### 🎨 Profile Section Revamp  
+**Date:** August 20, 2025  
+**Tags:** ⭐ Most Recent, 🎨 Design  
+Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.
 
-    <!-- 2025 -->
-    <h4 style="margin-top:2rem; font-weight:600;">2025</h4>
+---
 
-    <div class="timeline-item">
-      <div class="timeline-date">Aug 27, 2025</div>
-      <div class="timeline-content" id="sap-award">
-        <strong>Won 3rd Place – SAP Integration Naming Contest</strong>
-        <p style="margin:.35rem 0 .6rem;color:#666;">
-          Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.
-        </p>
-        <a class="btn" href="#sap-award">Permalink →</a>
-      </div>
-    </div>
+### 🧭 Floating Search & Back-to-Top  
+**Date:** August 15, 2025  
+**Tags:** 🧭 UX  
+Quick search shortcut (<kbd>/</kbd> or <kbd>Ctrl+K</kbd>) and floating back-to-top button for long pages.
 
-    <div class="timeline-item">
-      <div class="timeline-date">Aug 20, 2025</div>
-      <div class="timeline-content" id="profile-revamp">
-        <strong>Profile Section Revamp</strong>
-        <p style="margin:.35rem 0 .6rem;color:#666;">
-          Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.
-        </p>
-        <span class="news-badge">🎨 Design</span>
-      </div>
-    </div>
+---
 
-    <div class="timeline-item">
-      <div class="timeline-date">Aug 15, 2025</div>
-      <div class="timeline-content">
-        <strong>Floating Search &amp; Back-to-Top</strong>
-        <p style="margin:.35rem 0 .6rem;color:#666;">
-          Quick search (<kbd>/</kbd> or <kbd>Ctrl+K</kbd>) and a floating back-to-top button for long pages.
-        </p>
-        <span class="news-badge">🧭 UX</span>
-      </div>
-    </div>
-
-    <!-- 2024 -->
-    <h4 style="margin-top:2rem; font-weight:600;">2024</h4>
-
-    <div class="timeline-item">
-      <div class="timeline-date">Dec 10, 2024</div>
-      <div class="timeline-content">
-        <strong>Launched Data Project Gallery</strong>
-        <p style="margin:.35rem 0 .6rem;color:#666;">
-          Centralized ML dashboards, datathon work, and experiment logs with consistent previews.
-        </p>
-        <a class="btn" href="https://lywww88.github.io/projects/" target="_blank" rel="noopener">Open Projects →</a>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- Optional: Add scoped CSS below if not defined globally -->
-<style>
-  .project-card {
-    border: 1px solid #eee;
-    border-radius: 10px;
-    padding: 1rem 1.2rem;
-    margin-bottom: 1.6rem;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.04);
-  }
-  .news-badge {
-    font-size: .75rem;
-    background: #f0f0f0;
-    color: #444;
-    border-radius: 4px;
-    padding: 0.2em 0.5em;
-    margin-right: .3em;
-  }
-  .btn {
-    display: inline-block;
-    margin-top: .5rem;
-    font-size: .85rem;
-    color: #0d6efd;
-    text-decoration: none;
-  }
-  .timeline {
-    border-left: 2px solid #ccc;
-    padding-left: 1.4rem;
-  }
-  .timeline-item {
-    margin-bottom: 2rem;
-    position: relative;
-  }
-  .timeline-item::before {
-    content: "";
-    position: absolute;
-    left: -10px;
-    top: 4px;
-    width: 10px;
-    height: 10px;
-    background-color: #0d6efd;
-    border-radius: 50%;
-  }
-  .timeline-date {
-    font-size: .85rem;
-    color: #666;
-    margin-bottom: .3rem;
-  }
-</style>
+### 📂 Launched Data Project Gallery  
+**Date:** December 10, 2024  
+**Tags:** 📊 Projects  
+Centralized ML dashboards, datathon work, and experiment logs with consistent previews.  
+👉 [Open Projects →](https://lywww88.github.io/projects/)
