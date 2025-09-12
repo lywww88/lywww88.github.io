@@ -27,22 +27,21 @@ format:
           /* ---------- Timeline base ---------- */
           .timeline{position:relative;border-left:3px solid #2986cc;padding-left:1.5rem;margin-left:1rem}
           .timeline-item{position:relative;margin:0 0 2rem 0}
-          .timeline-item h4{margin:0 0 .35rem 0;font-size:1.15rem;font-weight:800; position:relative; line-height:1.25}
-          .timeline-item strong{display:block;margin:.15rem 0 .15rem;font-weight:700}
           .timeline-item p{margin:0;color:#555}
+          .timeline-item strong{display:block;margin:.15rem 0 .15rem;font-weight:700}
 
-          /* 旧的点禁用，避免与标题不对齐 */
+          /* 关闭旧的“挂在 .timeline-item 上的”小圆点 */
           .timeline-item::before{ display:none; }
 
-          /* 将圆点固定在 h4 中线，始终与标题对齐 */
-          .timeline-item h4::before{
+          /* 将小圆点挂在标题本身，并与标题垂直居中；同时支持 h3 / h4 */
+          .timeline-item :is(h3,h4){ margin:0 0 .35rem 0; font-weight:800; position:relative; line-height:1.25; }
+          .timeline-item :is(h3,h4)::before{
             content:"";
             position:absolute;
-            left:-1.63rem;         /* 若与左侧竖线轻微偏差，可微调 -1.55rem ~ -1.85rem */
-            top:50%;
-            transform:translateY(-50%);
-            width:.8rem;height:.8rem;border-radius:50%;
-            background:#2986cc;border:2px solid #fff;box-shadow:0 0 0 3px #2986cc55;
+            left:-1.63rem;            /* 若与左侧竖线轻微偏差，可在 -1.55rem ~ -1.85rem 之间微调 */
+            top:50%; transform:translateY(-50%);
+            width:.8rem; height:.8rem; border-radius:50%;
+            background:#2986cc; border:2px solid #fff; box-shadow:0 0 0 3px #2986cc55;
           }
 
           /* ---------- Highlight effect (no jump) ---------- */
@@ -50,9 +49,9 @@ format:
             background:#e9f3ff;border-radius:8px;padding-left:.6rem;
             animation: hi-bg .25s ease-out 1
           }
-          .timeline-item.is-highlight h4,
+          .timeline-item.is-highlight :is(h3,h4),
           .timeline-item.is-highlight strong{color:#0b61c3}
-          .timeline-item.is-highlight h4::before{
+          .timeline-item.is-highlight :is(h3,h4)::before{
             background:#0b61c3;box-shadow:0 0 0 5px rgba(41,134,204,.28);animation:pulse 1.2s ease-out 2
           }
           @keyframes pulse{
@@ -136,7 +135,7 @@ Animated gradient name, glowing avatar ring, and polished project cards with smo
       if(!item) return;
       clearHi();
       item.classList.add('is-highlight');
-      setTimeout(()=> item.classList.remove('is-highlight'), 2500); // 想保持高亮可删掉这一行
+      setTimeout(()=> item.classList.remove('is-highlight'), 2500); // 想常驻高亮可删掉这一行
     });
   });
 </script>
