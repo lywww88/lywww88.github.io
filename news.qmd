@@ -129,12 +129,6 @@ Award
 :::
 
 ::: {.timeline-item}
-### <span id="aug-28-2025">Aug 28, 2025</span>
-**Announcement Bar Updated**  
-<p>Refreshed design and animation for top-of-page announcements.</p>
-:::
-
-::: {.timeline-item}
 ### <span id="aug-27-2025">Aug 27, 2025</span>
 **Won 3rd Place – SAP Integration Naming Contest**  
 <p>Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.</p>
@@ -144,12 +138,6 @@ Award
 ### <span id="aug-20-2025">Aug 20, 2025</span>
 **Profile Section Revamp**  
 <p>Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.</p>
-:::
-
-::: {.timeline-item}
-### <span id="aug-15-2025">Aug 15, 2025</span>
-**Floating Search & Back-to-Top**  
-<p>Quick search (<kbd>/</kbd> or <kbd>Ctrl+K</kbd>) and a floating back-to-top button for long pages.</p>
 :::
 
 ::: {.timeline-item}
