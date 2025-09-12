@@ -10,8 +10,7 @@ format:
 ---
 
 <style>
-/* ===== News page styles ===== */
-:root { --news-blue:#0d6efd; --news-line:#cbd5e1; }
+:root { --news-blue:#0d6efd; --news-line:#9bb9ff; }
 
 .news-wrap{max-width:980px;margin:0 auto;padding:0 12px;}
 .news-intro{margin:22px auto 8px;font-size:1.05rem;line-height:1.8;color:#333;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;}
@@ -29,8 +28,12 @@ format:
 }
 .btn:hover{background:#eef5ff;border-color:#c8dafc;color:#08347a;text-decoration:none;}
 
+/* Make Quarto columns equal height */
+.columns > .column{ display:flex; }
+.columns > .column > .project-card{ display:flex; flex-direction:column; height:100%; }
+
 /* Timeline */
-.news-tl{ --datew:120px; --dot: var(--news-blue); }
+.news-tl{ --datew:120px; --dot: var(--news-blue); position:relative; }
 .news-tl-year{ font-weight:800; font-size:1.2rem; color:#2c3e50; margin:28px 0 10px; }
 
 .news-tl-list{
@@ -38,16 +41,25 @@ format:
   grid-template-columns: var(--datew) 28px 1fr;
   row-gap:16px;
   position:relative;
+  margin-bottom:2rem;
 }
+
+/* Strong, always-visible vertical line */
 .news-tl-list::before{
   content:"";
-  grid-column:2; grid-row:1 / -1;
+  position:absolute;
+  top:0; bottom:0;
+  left: calc(var(--datew) + 14px);
   width:3px;
-  background:linear-gradient(180deg, rgba(13,110,253,.18) 0%, rgba(13,110,253,.28) 20%, rgba(13,110,253,.28) 80%, rgba(13,110,253,.18) 100%);
-  justify-self:center;
+  background: linear-gradient(180deg,
+    rgba(13,110,253,.35) 0%,
+    rgba(13,110,253,.45) 20%,
+    rgba(13,110,253,.45) 80%,
+    rgba(13,110,253,.35) 100%);
   border-radius:2px;
   box-shadow:0 0 0 1px rgba(13,110,253,.08);
 }
+
 .news-tl-item{ display:contents; }
 .news-tl-date{
   grid-column:1; align-self:start; justify-self:end; text-align:right; padding-right:12px;
@@ -70,83 +82,27 @@ format:
     Highlights of personal milestones, professional achievements, and project updates — a living record of progress and outcomes.
   </p>
 
-::: {.columns}
-::: {.column width="50%"}
-<div class="project-card">
-  <div style="margin-bottom:.35rem;">
-    <span class="news-badge">Pinned</span> <span class="news-badge">Award</span>
+```{=html}
+<div class="columns">
+  <div class="column" style="width:50%;">
+    <div class="project-card">
+      <div style="margin-bottom:.35rem;">
+        <span class="news-badge">Pinned</span> <span class="news-badge">Award</span>
+      </div>
+      <h3 style="margin:0 0 .35rem;">Won 3rd Place — SAP Integration Naming Contest</h3>
+      <p style="margin:.25rem 0 .65rem;color:#666;">Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.</p>
+      <a class="btn" href="#sap-award">Jump to entry →</a>
+    </div>
   </div>
-  <h3 style="margin:0 0 .35rem;">Won 3rd Place — SAP Integration Naming Contest</h3>
-  <p style="margin:.25rem 0 .65rem;color:#666;">Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.</p>
-  <a class="btn" href="#sap-award">Jump to entry →</a>
-</div>
-:::
 
-::: {.column width="50%"}
-<div class="project-card">
-  <div style="margin-bottom:.35rem;">
-    <span class="news-badge">Most Recent</span> <span class="news-badge">Design</span>
+  <div class="column" style="width:50%;">
+    <div class="project-card">
+      <div style="margin-bottom:.35rem;">
+        <span class="news-badge">Most Recent</span> <span class="news-badge">Design</span>
+      </div>
+      <h3 style="margin:0 0 .35rem;">Profile Section Revamp</h3>
+      <p style="margin:.25rem 0 .65rem;color:#666;">Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.</p>
+      <a class="btn" href="#profile-revamp">Jump to entry →</a>
+    </div>
   </div>
-  <h3 style="margin:0 0 .35rem;">Profile Section Revamp</h3>
-  <p style="margin:.25rem 0 .65rem;color:#666;">Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.</p>
-  <a class="btn" href="#profile-revamp">Jump to entry →</a>
 </div>
-:::
-:::
-
-<!-- ===== Timeline ===== -->
-<div class="news-tl" aria-label="Timeline of news and updates">
-
-<div class="news-tl-year">2025</div>
-<div class="news-tl-list">
-
-<div class="news-tl-item" id="sap-award">
-<div class="news-tl-date">Aug 27, 2025</div>
-<div class="news-tl-dot"></div>
-<div class="news-tl-card project-card">
-<strong>Won 3rd Place — SAP Integration Naming Contest</strong>
-<p style="margin:.35rem 0 .6rem;color:#667;">Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.</p>
-<a class="btn" href="#sap-award">Permalink →</a>
-</div>
-</div>
-
-<div class="news-tl-item" id="profile-revamp">
-<div class="news-tl-date">Aug 20, 2025</div>
-<div class="news-tl-dot"></div>
-<div class="news-tl-card project-card">
-<strong>Profile Section Revamp</strong>
-<p style="margin:.35rem 0 .6rem;color:#667;">Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.</p>
-<span class="news-badge">Design</span>
-</div>
-</div>
-
-<div class="news-tl-item" id="quick-search">
-<div class="news-tl-date">Aug 15, 2025</div>
-<div class="news-tl-dot"></div>
-<div class="news-tl-card project-card">
-<strong>Floating Search &amp; Back-to-Top</strong>
-<p style="margin:.35rem 0 .6rem;color:#667;">Quick search (<kbd>⌘/Ctrl</kbd> + <kbd>K</kbd>) and a floating back-to-top button for long pages.</p>
-<span class="news-badge">UX</span>
-</div>
-</div>
-
-</div> <!-- /2025 list -->
-
-<div class="news-tl-year">2024</div>
-<div class="news-tl-list">
-
-<div class="news-tl-item" id="gallery-launch">
-<div class="news-tl-date">Dec 10, 2024</div>
-<div class="news-tl-dot"></div>
-<div class="news-tl-card project-card">
-<strong>Launched Data Project Gallery</strong>
-<p style="margin:.35rem 0 .6rem;color:#667;">Centralized ML dashboards, datathon work, and experiment logs with consistent previews.</p>
-<a class="btn" href="https://lywww88.github.io/projects/" target="_blank" rel="noopener">Open Projects →</a>
-</div>
-</div>
-
-</div> <!-- /2024 list -->
-
-</div> <!-- /.news-tl -->
-
-</div> <!-- /.news-wrap -->
