@@ -76,8 +76,6 @@ Outside of work, I’m a curious learner who enjoys exploring tech trends, visua
 
 ---
 
-<div aria-hidden="true" style="border-top: 1px solid #ccc; margin: 1.5em 0;"></div>
-
 <p style="text-align: center; color: #888; font-size: 0.85em; margin-top: 3em;">
   © 2025 Yiwei Lu. All rights reserved.
 </p>
