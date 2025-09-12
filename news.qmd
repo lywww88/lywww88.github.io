@@ -3,7 +3,6 @@ title: ""
 page-title: "News - Yiwei Lu"
 format:
   html:
-    title-block: false
     page-layout: full
     toc: false
     allow-html: true
@@ -72,7 +71,6 @@ format:
   text-decoration: none;
 }
 
-/* Equal height for top columns */
 .columns > .column {
   display: flex;
 }
@@ -82,7 +80,6 @@ format:
   height: 100%;
 }
 
-/* Timeline styles */
 .news-tl {
   --datew: 120px;
   --dot: var(--news-blue);
@@ -154,113 +151,94 @@ format:
   grid-column: 3;
 }
 
-/* Responsive tweaks */
 @media (max-width:740px) {
-  .news-tl {
-    --datew: 98px;
-  }
-  .news-tl-list {
-    grid-template-columns: var(--datew) 26px 1fr;
-  }
+  .news-tl { --datew: 98px; }
+  .news-tl-list { grid-template-columns: var(--datew) 26px 1fr; }
 }
 
 @media (max-width:480px) {
-  .news-tl {
-    --datew: 86px;
-  }
-  .news-tl-date {
-    font-size: 0.9rem;
-  }
-  .news-tl-list {
-    grid-template-columns: var(--datew) 24px 1fr;
-  }
+  .news-tl { --datew: 86px; }
+  .news-tl-date { font-size: 0.9rem; }
+  .news-tl-list { grid-template-columns: var(--datew) 24px 1fr; }
 }
 </style>
 
 <div class="news-wrap">
   <h2 style="text-align:center;">📰 News & Updates</h2>
-
   <p class="news-intro">
     Highlights of personal milestones, professional achievements, and project updates — a living record of progress and outcomes.
   </p>
+</div>
 
+```{=html}
+<!-- All feature cards and timeline go here -->
 <div class="columns">
   <div class="column" style="width:50%;">
     <div class="project-card">
       <div style="margin-bottom:.35rem;">
         <span class="news-badge">Pinned</span> <span class="news-badge">Award</span>
       </div>
-      <h3 style="margin:0 0 .35rem;">Won 3rd Place — SAP Integration Naming Contest</h3>
-      <p style="margin:.25rem 0 .65rem;color:#666;">Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.</p>
+      <h3>Won 3rd Place — SAP Integration Naming Contest</h3>
+      <p>Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.</p>
       <a class="btn" href="#sap-award">Jump to entry →</a>
     </div>
   </div>
-
   <div class="column" style="width:50%;">
     <div class="project-card">
       <div style="margin-bottom:.35rem;">
         <span class="news-badge">Most Recent</span> <span class="news-badge">Design</span>
       </div>
-      <h3 style="margin:0 0 .35rem;">Profile Section Revamp</h3>
-      <p style="margin:.25rem 0 .65rem;color:#666;">Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.</p>
+      <h3>Profile Section Revamp</h3>
+      <p>Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.</p>
       <a class="btn" href="#profile-revamp">Jump to entry →</a>
     </div>
   </div>
 </div>
 
-<!-- ===== Timeline ===== -->
-<div class="news-tl" aria-label="Timeline of news and updates">
+<div class="news-tl">
+  <div class="news-tl-year">2025</div>
+  <div class="news-tl-list">
+    <div class="news-tl-item" id="sap-award">
+      <div class="news-tl-date">Aug 27, 2025</div>
+      <div class="news-tl-dot"></div>
+      <div class="news-tl-card project-card">
+        <strong>Won 3rd Place — SAP Integration Naming Contest</strong>
+        <p>Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.</p>
+        <a class="btn" href="#sap-award">Permalink →</a>
+      </div>
+    </div>
 
-<div class="news-tl-year">2025</div>
-<div class="news-tl-list">
+    <div class="news-tl-item" id="profile-revamp">
+      <div class="news-tl-date">Aug 20, 2025</div>
+      <div class="news-tl-dot"></div>
+      <div class="news-tl-card project-card">
+        <strong>Profile Section Revamp</strong>
+        <p>Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.</p>
+        <span class="news-badge">Design</span>
+      </div>
+    </div>
 
-<div class="news-tl-item" id="sap-award">
-  <div class="news-tl-date">Aug 27, 2025</div>
-  <div class="news-tl-dot"></div>
-  <div class="news-tl-card project-card">
-    <strong>Won 3rd Place — SAP Integration Naming Contest</strong>
-    <p style="margin:.35rem 0 .6rem;color:#667;">Recognized out of 300+ submissions. Focused on clarity, memorability, and product fit.</p>
-    <a class="btn" href="#sap-award">Permalink →</a>
+    <div class="news-tl-item" id="quick-search">
+      <div class="news-tl-date">Aug 15, 2025</div>
+      <div class="news-tl-dot"></div>
+      <div class="news-tl-card project-card">
+        <strong>Floating Search &amp; Back-to-Top</strong>
+        <p>Quick search (<kbd>⌘/Ctrl</kbd> + <kbd>K</kbd>) and a floating back-to-top button for long pages.</p>
+        <span class="news-badge">UX</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="news-tl-year">2024</div>
+  <div class="news-tl-list">
+    <div class="news-tl-item" id="gallery-launch">
+      <div class="news-tl-date">Dec 10, 2024</div>
+      <div class="news-tl-dot"></div>
+      <div class="news-tl-card project-card">
+        <strong>Launched Data Project Gallery</strong>
+        <p>Centralized ML dashboards, datathon work, and experiment logs with consistent previews.</p>
+        <a class="btn" href="https://lywww88.github.io/projects/" target="_blank" rel="noopener">Open Projects →</a>
+      </div>
+    </div>
   </div>
 </div>
-
-<div class="news-tl-item" id="profile-revamp">
-  <div class="news-tl-date">Aug 20, 2025</div>
-  <div class="news-tl-dot"></div>
-  <div class="news-tl-card project-card">
-    <strong>Profile Section Revamp</strong>
-    <p style="margin:.35rem 0 .6rem;color:#667;">Animated gradient name, glowing avatar ring, and polished project cards with smoother hover states.</p>
-    <span class="news-badge">Design</span>
-  </div>
-</div>
-
-<div class="news-tl-item" id="quick-search">
-  <div class="news-tl-date">Aug 15, 2025</div>
-  <div class="news-tl-dot"></div>
-  <div class="news-tl-card project-card">
-    <strong>Floating Search &amp; Back-to-Top</strong>
-    <p style="margin:.35rem 0 .6rem;color:#667;">Quick search (<kbd>⌘/Ctrl</kbd> + <kbd>K</kbd>) and a floating back-to-top button for long pages.</p>
-    <span class="news-badge">UX</span>
-  </div>
-</div>
-
-</div> <!-- /2025 list -->
-
-<div class="news-tl-year">2024</div>
-<div class="news-tl-list">
-
-<div class="news-tl-item" id="gallery-launch">
-  <div class="news-tl-date">Dec 10, 2024</div>
-  <div class="news-tl-dot"></div>
-  <div class="news-tl-card project-card">
-    <strong>Launched Data Project Gallery</strong>
-    <p style="margin:.35rem 0 .6rem;color:#667;">Centralized ML dashboards, datathon work, and experiment logs with consistent previews.</p>
-    <a class="btn" href="https://lywww88.github.io/projects/" target="_blank" rel="noopener">Open Projects →</a>
-  </div>
-</div>
-
-</div> <!-- /2024 list -->
-
-</div> <!-- /.news-tl -->
-
-</div> <!-- /.news-wrap -->
