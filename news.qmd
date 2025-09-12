@@ -144,15 +144,15 @@ My new personal domain is now officially online.
 :::
 
 ::: {.timeline-item}
-### <span id="jun-15-2024">Jun 15, 2025</span>
+### <span id="jun-15-2025">Jun 15, 2025</span>
 **Graduated from UCI**  
-<p>Completed Bachelor of Arts in Education Sciences at the University of California, Irvine.</p>
+<p>Completed Master of Science in Busines Analytics at the University of California, Irvine.</p>
 :::
 
 ::: {.timeline-item}
-### <span id="Testing">xx xx, 2024</span>
-**Testing Entry B**  
-<p>Dummy event, extending the list for scrolling tests.</p>
+### <span id="may-15-2021">May 2021</span>
+**Graduated from CPP**  
+<p>Completed Bachelor of Computer Information Systems at the California State Polytechnic University, Pomona.</p>
 :::
 
 :::
