@@ -78,28 +78,92 @@ Outside of work, I’m a curious learner who enjoys exploring tech trends, visua
 
 <div class="connect-container" style="display: flex; flex-wrap: wrap; gap: 1em; align-items: center;">
 
-<a href="/contact.html"
-   class="btn"
-   aria-label="Open contact form"
-   style="display:inline-flex;align-items:center;gap:.6em;padding:.65em 1.15em;border-radius:999px;
-          background:linear-gradient(135deg,#0d6efd 0%,#4dabf7 100%);color:#fff;font-weight:800;letter-spacing:.2px;
-          box-shadow:0 12px 26px rgba(13,110,253,.35);text-decoration:none;transition:transform .16s ease,box-shadow .16s ease,filter .16s ease;"
-   onmouseenter="this.style.transform='translateY(-2px)';this.style.boxShadow='0 18px 36px rgba(13,110,253,.45)';this.querySelector('i').style.transform='translateX(2px)';"
-   onmouseleave="this.style.transform='';this.style.boxShadow='0 12px 26px rgba(13,110,253,.35)';this.querySelector('i').style.transform='';"
-   onfocus="this.style.boxShadow='0 0 0 4px rgba(13,110,253,.25),0 12px 26px rgba(13,110,253,.35)';"
-   onblur="this.style.boxShadow='0 12px 26px rgba(13,110,253,.35)';"
-   onmousedown="this.style.transform='translateY(0) scale(.98)';"
-   onmouseup="this.style.transform='translateY(-2px)';"
-   onclick="if(window.matchMedia&&window.matchMedia('(max-width:640px)').matches){return true;}
-            var w=780,h=760,cx=window.screenX||window.screenLeft||0,cy=window.screenY||window.screenTop||0,
-                cw=window.innerWidth||document.documentElement.clientWidth||screen.width,
-                ch=window.innerHeight||document.documentElement.clientHeight||screen.height,
-                left=Math.max(0,Math.floor(cx+(cw-w)/2)),top=Math.max(0,Math.floor(cy+(ch-h)/2)),
-                win=window.open(this.href,'contactWin','width='+w+',height='+h+',left='+left+',top='+top+',resizable=yes,scrollbars=yes,noopener');
-            if(win){try{win.focus();}catch(e){} }else{window.location.href=this.href;} return false;">
-  <i class="bi bi-chat-dots" aria-hidden="true" style="font-size:1.05rem;line-height:1;transition:transform .16s ease;"></i>
-  <span>Let’s get in touch!</span>
-</a>
+<!-- ① 按钮特效：CSS -->
+<style>
+  .cta-contact{
+    display:inline-flex; align-items:center; gap:.6em;
+    padding:.7em 1.25em; border-radius:999px;
+    background:linear-gradient(135deg,#0d6efd 0%,#3ea1ff 50%,#17c0ff 100%);
+    color:#fff; font-weight:800; letter-spacing:.2px; text-decoration:none;
+    box-shadow:0 12px 26px rgba(13,110,253,.35), inset 0 -2px 0 rgba(0,0,0,.15);
+    position:relative; overflow:hidden;
+    transition:transform .16s ease, box-shadow .16s ease, filter .16s ease;
+  }
+  .cta-contact:hover{
+    transform:translateY(-3px);
+    box-shadow:0 18px 36px rgba(13,110,253,.45), 0 0 0 4px rgba(13,110,253,.12);
+  }
+  .cta-contact:active{ transform:translateY(0) scale(.98); }
+  .cta-contact:focus-visible{
+    outline:none;
+    box-shadow:0 0 0 4px rgba(13,110,253,.35), 0 12px 26px rgba(13,110,253,.35);
+  }
+  .cta-contact i{ font-size:1.05rem; line-height:1; transition:transform .16s ease; }
+  .cta-contact:hover i{ transform:translateX(2px); }
+
+  /* 光带掠过 */
+  .cta-contact .sheen{
+    position:absolute; inset:0 auto 0 -150%;
+    width:50%; transform:skewX(-20deg);
+    background:linear-gradient(90deg,transparent 0,rgba(255,255,255,.25) 50%,transparent 100%);
+    pointer-events:none;
+  }
+  .cta-contact:hover .sheen{ animation:sheen .9s ease; }
+  @keyframes sheen{ to{ left:150%; } }
+
+  /* 点击涟漪 */
+  .cta-contact .ripple{
+    position:absolute; border-radius:999px; pointer-events:none;
+    transform:translate(-50%,-50%); width:0; height:0; opacity:.5;
+    background:rgba(255,255,255,.35); animation:ripple .45s ease-out forwards;
+  }
+  @keyframes ripple{ to{ width:240px; height:240px; opacity:0; } }
+
+  /* 容器用来居中，保留正常文档流，不会覆盖版权行 */
+  .cta-wrap{ display:flex; justify-content:center; margin:1.2em 0 1em; }
+</style>
+
+<!-- ② 打开小窗 + 涟漪：JS -->
+<script>
+  function openContactWin(a, e){
+    // 小屏直接在当前页打开
+    if (window.matchMedia && window.matchMedia('(max-width:640px)').matches) return true;
+
+    // 桌面端弹小窗并居中
+    const w=780,h=760;
+    const cx=window.screenX||window.screenLeft||0, cy=window.screenY||window.screenTop||0;
+    const cw=window.innerWidth||document.documentElement.clientWidth||screen.width;
+    const ch=window.innerHeight||document.documentElement.clientHeight||screen.height;
+    const left=Math.max(0,Math.floor(cx+(cw-w)/2)), top=Math.max(0,Math.floor(cy+(ch-h)/2));
+    const opts=`width=${w},height=${h},left=${left},top=${top},resizable=yes,scrollbars=yes,noopener`;
+    const win=window.open(a.href,'contactWin',opts);
+    if(win){ try{win.focus();}catch{} } else { window.location.href=a.href; }
+
+    // 点击位置涟漪
+    const rect=a.getBoundingClientRect();
+    const r=document.createElement('span');
+    r.className='ripple';
+    r.style.left=(e.clientX-rect.left)+'px';
+    r.style.top =(e.clientY-rect.top )+'px';
+    a.appendChild(r);
+    setTimeout(()=>r.remove(), 500);
+
+    return false;
+  }
+</script>
+
+<!-- ③ 居中的按钮（替换你原来的那段） -->
+<div class="cta-wrap">
+  <a href="/contact.html"
+     class="cta-contact"
+     aria-label="Open contact form"
+     onclick="return openContactWin(this,event);">
+    <i class="bi bi-chat-dots"></i>
+    <span>Let’s get in touch!</span>
+    <span class="sheen" aria-hidden="true"></span>
+  </a>
+</div>
+
 
 <div aria-hidden="true" style="border-top: 1px solid #ccc; margin: 1.5em 0;"></div>
 
