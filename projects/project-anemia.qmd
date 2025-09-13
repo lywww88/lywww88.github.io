@@ -36,7 +36,7 @@ iframe.pdf-reader {
   <h1 class="header-title">Diagnosing Anemia with Machine Learning</h1>
   <select id="pdf-selector" style="width: 180px; font-size: 1em; padding: 4px;">
     <option value="project-ml-presentation.pdf">Presentation</option>
-    <option value="project-ml-paper.pdf">Paper</option>
+    <option value="project-ml-paper.pdf">Report</option>
   </select>
 </div>
 
