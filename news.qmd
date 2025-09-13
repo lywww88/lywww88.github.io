@@ -25,6 +25,26 @@ format:
           }
           .btn:hover{background:#1f6db3}
 
+          /* ===== Top news cards: button motion (only these two) ===== */
+          .news-card .btn{
+            transform: translateY(0);
+            box-shadow: 0 2px 6px rgba(0,0,0,.12);
+            transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+          }
+          .news-card .btn:hover{
+            transform: translateY(-2px);
+            box-shadow: 0 10px 22px rgba(0,0,0,.18);
+          }
+          .news-card .btn:active{
+            transform: translateY(0);
+            filter: brightness(.96);
+            box-shadow: 0 3px 10px rgba(0,0,0,.16);
+          }
+          .news-card .btn:focus-visible{
+            outline: 3px solid rgba(13,110,253,.35);
+            outline-offset: 2px;
+          }
+
           /* ---------- Timeline: rail = left grid column ---------- */
           .timeline{
             --rail: 28px;                 /* 轨道列宽：点将永远在这列正中 */
@@ -141,21 +161,15 @@ Award
 :::
 
 ::: {.timeline-item}
-### <span id="aug-10-2025">Aug 10, 2025</span>
-**Testing Entry A**  
-<p>Dummy event, extending the list for scrolling tests.</p>
-:::
-
-::: {.timeline-item}
 ### <span id="jun-15-2025">Jun 15, 2025</span>
 **Graduated from UCI**  
 <p>Completed Master of Science in Busines Analytics at the University of California, Irvine.</p>
 :::
 
 ::: {.timeline-item}
-### <span id="may-15-2021">May 2021</span>
-**Graduated from CPP**  
-<p>Completed Bachelor of Computer Information Systems at the California State Polytechnic University, Pomona.</p>
+### <span id="feb-10-2025">Feb 10, 2025</span>
+**Testing Entry A**  
+<p>Dummy event, extending the list for scrolling tests.</p>
 :::
 
 :::
