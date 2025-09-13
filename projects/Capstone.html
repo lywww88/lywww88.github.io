@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../images/logo1.png" rel="icon" type="image/png">
+<link href="../images/favicon.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -134,7 +134,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="dropdown-menu" aria-labelledby="nav-menu-span-classnav-textstartupspan">    
         <li class="dropdown-header"><span style="font-size: 0.7rem; font-weight: 300; color: gray;">STEALTH STAGE</span></li>
         <li>
-    <a class="dropdown-item" href="../contact.yiweilu.me" target="_self">
+    <a class="dropdown-item" href="https://contact.yiweilu.me/" target="_self">
  <span class="dropdown-text"><strong>YPS Tech</strong></span></a>
   </li>  
         <li class="dropdown-header"><span style="font-size: 0.7rem; font-weight: 300; color: gray;">Concept Stage (Paused)</span></li>
@@ -224,13 +224,171 @@ ul.task-list li input[type="checkbox"] {
   margin-bottom: 1em;
   color: #2c3e50;
 }
+
+/* ===== Horizontal Photo Scroller ===== */
+.photo-wrap {
+  max-width: 1000px;
+  margin: 1.2em auto 2.2em;
+  padding: 0 1em;
+  position: relative;
+  overflow: visible;
+}
+
+.photo-track {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+  -webkit-overflow-scrolling: touch;
+}
+.photo-track::-webkit-scrollbar { height: 8px; }
+.photo-track::-webkit-scrollbar-thumb { background: #c9d6f3; border-radius: 8px; }
+.photo-track::-webkit-scrollbar-track { background: #f1f4fb; border-radius: 8px; }
+
+.photo-item {
+  flex: 0 0 auto;
+  width: 320px;              /* 更大一些 */
+  height: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+  scroll-snap-align: start;
+  background: #f8f9fb;
+  position: relative;
+  cursor: zoom-in;           /* 提示可放大 */
+}
+.photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.photo-item:hover img { transform: scale(1.03); }
+
+.photo-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background: #0d6efd;
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(13,110,253,.35);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: filter .18s ease, transform .18s ease;
+  z-index: 2;
+}
+.photo-nav:hover { filter: brightness(1.05); transform: translateY(-50%) scale(1.03); }
+.photo-nav:active { transform: translateY(-50%) scale(.98); }
+.photo-nav.prev { left: 6px; }
+.photo-nav.next { right: 6px; }
+
+/* Lightbox 大图预览 */
+.lightbox {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,.86);
+  display: none;
+  align-items: center; justify-content: center;
+  z-index: 1300;
+}
+.lightbox.show { display: flex; }
+.lightbox img {
+  max-width: 92vw; max-height: 90vh;
+  border-radius: 12px;
+  box-shadow: 0 12px 36px rgba(0,0,0,.5);
+}
+.lightbox .lb-close {
+  position: fixed; top: 14px; right: 14px;
+  width: 40px; height: 40px; border: 0; border-radius: 50%;
+  background: rgba(255,255,255,.92);
+  color: #111; font-size: 1.2rem; cursor: pointer;
+}
+
+@media (max-width: 520px){
+  .photo-item { width: 220px; height: 150px; }
+  .photo-nav { width: 34px; height: 34px; }
+}
 </style>
 <div class="section-title">
-📊 Capstone Project
+Johnson &amp; Johnson Cerenovus Project
 </div>
 <div class="page-intro">
-<p><strong>Johnson &amp; Johnson Cerenovus Project</strong><br><br> Led a data-driven analysis of sales performance and customer retention for Cerenovus, a Johnson &amp; Johnson medical device division. Explored multi-year transaction data to identify key revenue drivers, product line dynamics, and regional sales trends. Applied clustering and churn modeling to uncover at-risk segments and produced actionable recommendations to improve account engagement and inform strategic planning. <br><br> <em>Detailed write-up and dashboards coming soon. Stay tuned!</em></p>
+<p><strong>This page is still under development</strong><br><br> Led a data-driven analysis of sales performance and customer retention for Cerenovus, a Johnson &amp; Johnson medical device division. Explored multi-year transaction data to identify key revenue drivers, product line dynamics, and regional sales trends. Applied clustering and churn modeling to uncover at-risk segments and produced actionable recommendations to improve account engagement and inform strategic planning. <br><br> <em>Detailed write-up and dashboards coming soon. Stay tuned!</em></p>
 </div>
+<div class="section-title">
+Photo Gallery
+</div>
+<div class="photo-wrap">
+<button class="photo-nav prev" type="button" aria-label="Previous" title="Previous">‹</button>
+<div id="photo-track" class="photo-track">
+<figure class="photo-item figure">
+<img src="../images/capstone1.jpeg" alt="Capstone Team Working Session" class="figure-img">
+</figure>
+<figure class="photo-item figure">
+<img src="../images/JJ-cover.png" alt="Data Dashboard Demo" class="figure-img">
+</figure>
+<figure class="photo-item figure">
+<img src="../images/capstone3.jpeg" alt="Presentation Day" class="figure-img">
+</figure>
+<figure class="photo-item figure">
+<img src="../images/capstone4.jpeg" alt="More Work" class="figure-img">
+</figure>
+</div>
+<p><button class="photo-nav next" type="button" aria-label="Next" title="Next">›</button></p>
+</div>
+<script>
+(function(){
+  const track = document.getElementById('photo-track');
+  if (!track) return;
+
+  function getStep() {
+    const first = track.querySelector('.photo-item');
+    if (!first) return 240;
+    const style = getComputedStyle(track);
+    const gap = parseFloat(style.columnGap || style.gap || 12);
+    return first.getBoundingClientRect().width + gap;
+  }
+
+  const prev = document.querySelector('.photo-nav.prev');
+  const next = document.querySelector('.photo-nav.next');
+  prev && prev.addEventListener('click', ()=> track.scrollBy({ left: -getStep(), behavior: 'smooth' }));
+  next && next.addEventListener('click', ()=> track.scrollBy({ left:  getStep(), behavior: 'smooth' }));
+
+  // 键盘左右键也可滚动
+  track.addEventListener('keydown', (e)=>{
+    if (e.key === 'ArrowLeft')  { e.preventDefault(); track.scrollBy({left: -getStep(), behavior:'smooth'}); }
+    if (e.key === 'ArrowRight') { e.preventDefault(); track.scrollBy({left:  getStep(), behavior:'smooth'}); }
+  });
+  track.tabIndex = 0; // 使其可获得焦点接收键盘事件
+
+  // Lightbox 预览
+  const lb = document.createElement('div');
+  lb.className = 'lightbox';
+  lb.innerHTML = '<button class="lb-close" aria-label="Close">×</button><img alt="Preview">';
+  document.body.appendChild(lb);
+  const lbImg = lb.querySelector('img');
+  const lbClose = lb.querySelector('.lb-close');
+
+  track.addEventListener('click', (e)=>{
+    const img = e.target.closest('.photo-item img');
+    if (!img) return;
+    lbImg.src = img.currentSrc || img.src;
+    lb.classList.add('show');
+  });
+  const closeLB = ()=> lb.classList.remove('show');
+  lb.addEventListener('click', (e)=> { if (e.target === lb) closeLB(); });
+  lbClose.addEventListener('click', closeLB);
+  document.addEventListener('keydown', (e)=> { if (e.key === 'Escape') closeLB(); });
+})();
+</script>
 <div aria-hidden="true" style="border-top: 1px solid #ccc; margin: 1.5em 0;">
 
 </div>
