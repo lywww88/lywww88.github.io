@@ -78,17 +78,28 @@ Outside of work, I’m a curious learner who enjoys exploring tech trends, visua
 
 <div class="connect-container" style="display: flex; flex-wrap: wrap; gap: 1em; align-items: center;">
 
-<a href="/contact.html" class="btn"
-     onclick="
-       var w=780,h=760;
-       var left=Math.max(0,(screen.width - w)/2);
-       var top =Math.max(0,(screen.height- h)/2);
-       window.open(this.href,'contactWin',
-         'width='+w+',height='+h+',left='+left+',top='+top+',resizable=yes,scrollbars=yes,noopener');
-       return false;">
-    <i class="bi bi-chat-text"></i> Let's get in touch!
-  </a>
-</div>
+<a href="/contact.html"
+   class="btn"
+   aria-label="Open contact form"
+   style="display:inline-flex;align-items:center;gap:.6em;padding:.65em 1.15em;border-radius:999px;
+          background:linear-gradient(135deg,#0d6efd 0%,#4dabf7 100%);color:#fff;font-weight:800;letter-spacing:.2px;
+          box-shadow:0 12px 26px rgba(13,110,253,.35);text-decoration:none;transition:transform .16s ease,box-shadow .16s ease,filter .16s ease;"
+   onmouseenter="this.style.transform='translateY(-2px)';this.style.boxShadow='0 18px 36px rgba(13,110,253,.45)';this.querySelector('i').style.transform='translateX(2px)';"
+   onmouseleave="this.style.transform='';this.style.boxShadow='0 12px 26px rgba(13,110,253,.35)';this.querySelector('i').style.transform='';"
+   onfocus="this.style.boxShadow='0 0 0 4px rgba(13,110,253,.25),0 12px 26px rgba(13,110,253,.35)';"
+   onblur="this.style.boxShadow='0 12px 26px rgba(13,110,253,.35)';"
+   onmousedown="this.style.transform='translateY(0) scale(.98)';"
+   onmouseup="this.style.transform='translateY(-2px)';"
+   onclick="if(window.matchMedia&&window.matchMedia('(max-width:640px)').matches){return true;}
+            var w=780,h=760,cx=window.screenX||window.screenLeft||0,cy=window.screenY||window.screenTop||0,
+                cw=window.innerWidth||document.documentElement.clientWidth||screen.width,
+                ch=window.innerHeight||document.documentElement.clientHeight||screen.height,
+                left=Math.max(0,Math.floor(cx+(cw-w)/2)),top=Math.max(0,Math.floor(cy+(ch-h)/2)),
+                win=window.open(this.href,'contactWin','width='+w+',height='+h+',left='+left+',top='+top+',resizable=yes,scrollbars=yes,noopener');
+            if(win){try{win.focus();}catch(e){} }else{window.location.href=this.href;} return false;">
+  <i class="bi bi-chat-dots" aria-hidden="true" style="font-size:1.05rem;line-height:1;transition:transform .16s ease;"></i>
+  <span>Let’s get in touch!</span>
+</a>
 
 <div aria-hidden="true" style="border-top: 1px solid #ccc; margin: 1.5em 0;"></div>
 
