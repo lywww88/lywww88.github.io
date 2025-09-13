@@ -15,8 +15,6 @@ format:
   </svg>
   
   <strong>Notice:</strong> <a href="/projects/Capstone.html" target="_self">Capstone page</a> is under development.
-  <a href="news.html" target="_self">[Check News]</a>
-
 
   <button class="ann-close" type="button" aria-label="Dismiss">×</button>
 </div>
