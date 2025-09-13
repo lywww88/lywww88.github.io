@@ -36,7 +36,7 @@ iframe.pdf-reader {
   <h1 class="header-title">Obesity Analysis</h1>
   <select id="pdf-selector" style="width: 180px; font-size: 1em; padding: 4px;">
     <option value="project-obesity-presentation.pdf">Presentation</option>
-    <option value="project-obesity-paper.pdf">Paper</option>
+    <option value="project-obesity-paper.pdf">Report</option>
   </select>
 </div>
 
