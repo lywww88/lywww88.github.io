@@ -27,7 +27,7 @@ website:
       - text: '<span class="nav-text">Startup</span>'
         menu:
           - text: '<span style="font-size: 0.7rem; font-weight: 300; color: gray;">STEALTH STAGE</span>'
-          - href: contact.yiweilu.me
+          - href: https://contact.yiweilu.me/
             text: '<strong>YPS Tech</strong>'
             target: _self
           - text: '<span style="font-size: 0.7rem; font-weight: 300; color: gray;">Concept Stage (Paused)</span>'
