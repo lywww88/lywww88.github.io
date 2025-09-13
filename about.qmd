@@ -86,7 +86,7 @@ Outside of work, I’m a curious learner who enjoys exploring tech trends, visua
        window.open(this.href,'contactWin',
          'width='+w+',height='+h+',left='+left+',top='+top+',resizable=yes,scrollbars=yes,noopener');
        return false;">
-    <i class="bi bi-envelope"></i> Let's get in touch!
+    <i class="bi bi-envelope-at"></i> Let's get in touch!
   </a>
 </div>
 
