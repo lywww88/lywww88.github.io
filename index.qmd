@@ -207,14 +207,8 @@ format:
 
     <!-- Buttons directly under motto -->
     <div class="connect-container" style="display:flex; flex-wrap:wrap; gap:1em; justify-content:center; margin-top:1em;">
-      <a href="https://www.linkedin.com/in/yiwei-lu78" class="btn" target="_blank">
-        <i class="bi bi-linkedin"></i> Linkedin
-      </a>
       <a href="/contact.html" class="btn" onclick="window.open(this.href,'contactWin','width=780,height=760,left=120,top=80,resizable=yes,scrollbars=yes,noopener');return false;">
       <i class="bi bi-envelope"></i> Contact
-      </a>
-      <a href="https://wa.me/6266736276" class="btn" target="_blank">
-        <i class="bi bi-whatsapp"></i> WhatsApp
       </a>
     </div>
   </div>
