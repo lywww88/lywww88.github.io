@@ -25,25 +25,82 @@ format:
   color: #2c3e50;
 }
 
-/* ===== Photo Gallery ===== */
-.photo-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.2rem;
+/* ===== Horizontal Photo Scroller ===== */
+.photo-wrap {
   max-width: 1000px;
-  margin: 2em auto;
+  margin: 1.2em auto 2.2em;
   padding: 0 1em;
+  position: relative;
 }
-.photo-gallery img {
-  width: 100%;
+
+/* 轨道 */
+.photo-track {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding-bottom: 8px;             /* 给阴影留点空间 */
+  -webkit-overflow-scrolling: touch;
+}
+.photo-track::-webkit-scrollbar { height: 8px; }
+.photo-track::-webkit-scrollbar-thumb {
+  background: #c9d6f3; border-radius: 8px;
+}
+.photo-track::-webkit-scrollbar-track {
+  background: #f1f4fb; border-radius: 8px;
+}
+
+/* 单张：统一小尺寸 */
+.photo-item {
+  flex: 0 0 auto;
+  width: 220px;                    /* 统一宽度 */
+  height: 150px;                   /* 统一高度 */
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  object-fit: cover;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+  scroll-snap-align: start;
+  background: #f8f9fb;
+  position: relative;
 }
-.photo-gallery img:hover {
+.photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;               /* 保持裁剪充满容器 */
+  display: block;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.photo-item:hover img {
   transform: scale(1.03);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+/* 左右按钮 */
+.photo-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background: #0d6efd;
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(13,110,253,.35);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: filter .18s ease, transform .18s ease;
+}
+.photo-nav:hover { filter: brightness(1.05); transform: translateY(-50%) scale(1.03); }
+.photo-nav:active { transform: translateY(-50%) scale(.98); }
+.photo-nav.prev { left: 6px; }
+.photo-nav.next { right: 6px; }
+
+/* 移动端：按钮小一点，图片也稍小一点以提高可视张数 */
+@media (max-width: 520px){
+  .photo-item { width: 180px; height: 120px; }
+  .photo-nav { width: 34px; height: 34px; }
 }
 </style>
 
@@ -61,11 +118,37 @@ format:
 <!-- ===== Photo Section ===== -->
 <div class="section-title">📸 Project Photos</div>
 
-<div class="photo-gallery">
-  <img src="/images/capstone1.jpg" alt="Capstone Team Working Session">
-  <img src="/images/capstone2.jpg" alt="Data Dashboard Demo">
-  <img src="/images/capstone3.jpeg" alt="Presentation Day">
+<div class="photo-wrap">
+  <button class="photo-nav prev" type="button" aria-label="Previous" title="Previous">&#8249;</button>
+  <div class="photo-track" id="photo-track">
+    <figure class="photo-item"><img src="/images/capstone1.jpg"  alt="Capstone Team Working Session"></figure>
+    <figure class="photo-item"><img src="/images/capstone2.jpg"  alt="Data Dashboard Demo"></figure>
+    <figure class="photo-item"><img src="/images/capstone3.jpeg" alt="Presentation Day"></figure>
+    <!-- <figure class="photo-item"><img src="/images/capstone4.jpeg"  alt="More Work"></figure> -->
+  </div>
+  <button class="photo-nav next" type="button" aria-label="Next" title="Next">&#8250;</button>
 </div>
+
+<script>
+(function(){
+  const track = document.getElementById('photo-track');
+  if (!track) return;
+
+  function getStep() {
+    const first = track.querySelector('.photo-item');
+    if (!first) return 240;
+    const style = getComputedStyle(track);
+    const gap = parseFloat(style.columnGap || style.gap || 10);
+    return first.getBoundingClientRect().width + gap;
+  }
+
+  const prev = document.querySelector('.photo-nav.prev');
+  const next = document.querySelector('.photo-nav.next');
+
+  prev && prev.addEventListener('click', ()=> track.scrollBy({ left: -getStep(), behavior: 'smooth' }));
+  next && next.addEventListener('click', ()=> track.scrollBy({ left:  getStep(), behavior: 'smooth' }));
+})();
+</script>
 
 <div aria-hidden="true" style="border-top: 1px solid #ccc; margin: 1.5em 0;"></div>
 
