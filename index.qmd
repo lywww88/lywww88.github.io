@@ -208,7 +208,7 @@ format:
     <!-- Buttons directly under motto -->
     <div class="connect-container" style="display:flex; flex-wrap:wrap; gap:1em; justify-content:center; margin-top:1em;">
       <a href="/contact.html" class="btn" onclick="window.open(this.href,'contactWin','width=780,height=760,left=120,top=80,resizable=yes,scrollbars=yes,noopener');return false;">
-      <i class="bi bi-envelope"></i> Contact
+      <i class="bi bi-envelope-fill"></i> Contact me
       </a>
     </div>
   </div>
