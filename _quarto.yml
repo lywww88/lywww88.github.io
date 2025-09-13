@@ -47,6 +47,10 @@ website:
         aria-label: Updates
         href: "#"
         target: _self
+      - icon: whatsapp
+        href: https://wa.me/6266736276
+        aria-label: WhatsApp
+        target: _blank
       - icon: linkedin
         href: https://www.linkedin.com/in/yiwei-lu78
         aria-label: LinkedIn
