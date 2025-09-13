@@ -35,7 +35,7 @@ iframe.pdf-reader {
   <a href="index.html" class="btn">← Back</a>
   <h1 class="header-title">Airbnb Sentiment Application & Hosting Strategy</h1>
   <select id="pdf-selector" style="width: 200px; font-size: 1em; padding: 4px;">
-    <option value="project-airbnb.pdf">Paper</option>
+    <option value="project-airbnb.pdf">Report</option>
     <option value="project-airbnb-presentation.pdf">Presentation</option>
     <option value="404.html">App Demo</option>
   </select>
