@@ -14,7 +14,7 @@ format:
     <circle cx="12" cy="16" r="1.5" fill="currentColor"/>
   </svg>
   
-  <strong>Notice:</strong> <a href="/projects/Capstone.html" target="_self">Explore</a> Capstone page is under development.
+  <strong>Notice:</strong> <a href="/projects/Capstone.html" target="_self">Capstone page</a> is under development.
   <a href="news.html" target="_self">[Check News]</a>
 
 
