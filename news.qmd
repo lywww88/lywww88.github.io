@@ -11,7 +11,7 @@ format:
           /* ---------- Page width ---------- */
           .page-full .content{max-width:1100px;margin-inline:auto;}
 
-          /* ---------- Top cards (2 only) ---------- */
+          /* ---------- Top cards (3 now) ---------- */
           .news-boxes{display:flex;flex-wrap:wrap;gap:1.25rem;margin:0 0 2.2rem 0;}
           .news-card{
             flex:1 1 360px;padding:1.25rem 1.5rem;background:#fff;border:1px solid #e6e6e6;border-radius:14px;
@@ -25,7 +25,7 @@ format:
           }
           .btn:hover{background:#1f6db3}
 
-          /* ===== Top news cards: button motion (only these two) ===== */
+          /* ===== Top news cards: button motion (only these cards) ===== */
           .news-card .btn{
             transform: translateY(0);
             box-shadow: 0 2px 6px rgba(0,0,0,.12);
@@ -47,14 +47,13 @@ format:
 
           /* ---------- Timeline: rail = left grid column ---------- */
           .timeline{
-            --rail: 28px;                 /* 轨道列宽：点将永远在这列正中 */
+            --rail: 28px;
             position:relative;
             margin-left:0; padding-left:0;
           }
-          /* 画整条竖线，与轨道列中心严格同心 */
           .timeline::before{
             content:""; position:absolute;
-            left: calc(var(--rail)/2 - 1.5px);   /* 1.5px = 3px 线宽的一半 */
+            left: calc(var(--rail)/2 - 1.5px);
             top:0; bottom:0; width:3px; background:#2986cc;
           }
 
@@ -99,6 +98,21 @@ format:
 
 ::: {.news-boxes}
 
+::: {.news-card style="border:1.5px solid #6ca0dc; background:#f5f9ff;"}
+<span style="display:inline-block; background:#6ca0dc; color:#fff; font-size:0.75rem; padding:0.2em 0.6em; border-radius:12px; font-weight:600; margin-bottom:0.5em;">
+Update
+</span>
+
+#### Site Polish
+**UI refinements and bug fixes**  
+Minor updates for smoother navigation and mobile layout.  
+
+<button type="button" class="btn js-mark" data-target="sep-10-2025"
+        style="background:#6ca0dc; color:#fff; font-weight:600; border:none; padding:.45em 1em; border-radius:8px; box-shadow:0 2px 4px rgba(0,0,0,.1);">
+  Highlight in Timeline
+</button>
+:::
+
 ::: {.news-card style="border:2px solid #0d6efd; background:#eaf2ff;"}
 <span style="display:inline-block; background:#0d6efd; color:#fff; font-size:0.75rem; padding:0.2em 0.6em; border-radius:12px; font-weight:600; margin-bottom:0.5em;">
 Pinned
@@ -140,6 +154,12 @@ Award
 ### <span id="sep-11-2025">Sep 11, 2025</span>
 **New Domain Released — www.yiweilu.me**  
 <p>Announcing that my new personal domain is now active and accessible.</p>
+:::
+
+::: {.timeline-item}
+### <span id="sep-10-2025">Sep 10, 2025</span>
+**UI Polish Update**  
+<p>Minor refinements for smoother navigation and mobile layout improvements.</p>
 :::
 
 ::: {.timeline-item}
@@ -188,7 +208,7 @@ Award
       if(!item) return;
       clearHi();
       item.classList.add('is-highlight');
-      setTimeout(()=> item.classList.remove('is-highlight'), 2500); // 想常驻高亮，可删这行
+      setTimeout(()=> item.classList.remove('is-highlight'), 2500);
     });
   });
 </script>
