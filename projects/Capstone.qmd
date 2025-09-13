@@ -24,6 +24,27 @@ format:
   margin-bottom: 1em;
   color: #2c3e50;
 }
+
+/* ===== Photo Gallery ===== */
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.2rem;
+  max-width: 1000px;
+  margin: 2em auto;
+  padding: 0 1em;
+}
+.photo-gallery img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  object-fit: cover;
+}
+.photo-gallery img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
 </style>
 
 <div class="section-title">📊 Capstone Project</div>
@@ -35,6 +56,15 @@ format:
   Applied clustering and churn modeling to uncover at-risk segments and produced actionable recommendations 
   to improve account engagement and inform strategic planning. <br><br>
   <em>Detailed write-up and dashboards coming soon. Stay tuned!</em>
+</div>
+
+<!-- ===== Photo Section ===== -->
+<div class="section-title">📸 Project Photos</div>
+
+<div class="photo-gallery">
+  <img src="/images/capstone1.jpg" alt="Capstone Team Working Session">
+  <img src="/images/capstone2.jpg" alt="Data Dashboard Demo">
+  <img src="/images/capstone3.jpg" alt="Presentation Day">
 </div>
 
 <div aria-hidden="true" style="border-top: 1px solid #ccc; margin: 1.5em 0;"></div>
