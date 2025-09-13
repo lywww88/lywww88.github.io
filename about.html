@@ -161,6 +161,11 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
+    <a class="nav-link" href="https://wa.me/6266736276" target="_blank"> <i class="bi bi-whatsapp" role="img" aria-label="WhatsApp">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
     <a class="nav-link" href="https://www.linkedin.com/in/yiwei-lu78"> <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
 </i> 
 <span class="menu-text"></span></a>
@@ -273,18 +278,95 @@ Strong time management and organizational skills with a proven ability to work i
 <p>With every project, I strive to combine analytical precision with business intuition — ensuring that data not only informs but inspires.</p>
 </blockquote>
 <hr>
-<p style="text-align: center; color: #aaa; font-size: 0.9em; margin-top: 2em;">
-Let’s stay in touch — here’s where to find me online.
-</p>
-<div class="connect-container" style="display: flex; flex-wrap: wrap; gap: 1em; align-items: center;">
-<p><a href="https://www.linkedin.com/in/yiwei-lu78" class="btn" target="_blank"> <i class="bi bi-linkedin"></i> LinkedIn </a> <a href="https://wa.me/6266736276" class="btn" target="_blank"> <i class="bi bi-whatsapp"></i> WhatsApp </a></p>
-<p><a href="./contact.html" class="btn" onclick="
-       var w=780,h=760;
-       var left=Math.max(0,(screen.width - w)/2);
-       var top =Math.max(0,(screen.height- h)/2);
-       window.open(this.href,'contactWin',
-         'width='+w+',height='+h+',left='+left+',top='+top+',resizable=yes,scrollbars=yes,noopener');
-       return false;"> <i class="bi bi-envelope"></i> Contact </a></p>
+<div class="connect-container" style="display:flex; flex-wrap:wrap; gap:1em; align-items:center;">
+<!-- ① 按钮特效：CSS（不动其它样式） -->
+<style>
+  .cta-contact{
+    display:inline-flex; align-items:center; gap:.6em;
+    padding:.7em 1.25em; border-radius:999px;
+    background:linear-gradient(135deg,#0d6efd 0%,#3ea1ff 50%,#17c0ff 100%);
+    color:#fff; font-weight:800; letter-spacing:.2px; text-decoration:none;
+    box-shadow:0 12px 26px rgba(13,110,253,.35), inset 0 -2px 0 rgba(0,0,0,.15);
+    position:relative; overflow:hidden;
+    transition:transform .16s ease, box-shadow .16s ease, filter .16s ease;
+  }
+  .cta-contact:hover{
+    transform:translateY(-3px);
+    box-shadow:0 18px 36px rgba(13,110,253,.45), 0 0 0 4px rgba(13,110,253,.12);
+  }
+  .cta-contact:active{ transform:translateY(0) scale(.98); }
+  .cta-contact:focus-visible{
+    outline:none;
+    box-shadow:0 0 0 4px rgba(13,110,253,.35), 0 12px 26px rgba(13,110,253,.35);
+  }
+  .cta-contact i{ font-size:1.05rem; line-height:1; transition:transform .16s ease; }
+  .cta-contact:hover i{ transform:translateX(2px); }
+
+  /* 光带掠过 */
+  .cta-contact .sheen{
+    position:absolute; inset:0 auto 0 -150%;
+    width:50%; transform:skewX(-20deg);
+    background:linear-gradient(90deg,transparent 0,rgba(255,255,255,.25) 50%,transparent 100%);
+    pointer-events:none;
+  }
+  .cta-contact:hover .sheen{ animation:sheen .9s ease; }
+  @keyframes sheen{ to{ left:150%; } }
+
+  /* 点击涟漪 */
+  .cta-contact .ripple{
+    position:absolute; border-radius:999px; pointer-events:none;
+    transform:translate(-50%,-50%); width:0; height:0; opacity:.5;
+    background:rgba(255,255,255,.35); animation:ripple .45s ease-out forwards;
+  }
+  @keyframes ripple{ to{ width:240px; height:240px; opacity:0; } }
+
+  /* 容器仅用于居中，不遮挡版权文字 */
+  .cta-wrap{ display:flex; justify-content:center; margin:1.2em 0 1em; width:100%; }
+</style>
+<!-- ② 居中弹窗 + 防止原页跳走：JS -->
+<script>
+  function openContactWin(e, a){
+    e.preventDefault(); // 先拦截默认跳转（解决“弹窗+原页跳走”）
+
+    // 小屏直接当前页打开
+    if (window.matchMedia && window.matchMedia('(max-width:640px)').matches){
+      window.location.href = a.href;
+      return false;
+    }
+
+    // 用 outerWidth/outerHeight + screenX/screenY 居中，兼容多显示器与缩放
+    const w = 780, h = 760;
+    const sx = (window.screenX ?? window.screenLeft ?? 0);
+    const sy = (window.screenY ?? window.screenTop ?? 0);
+    const ow = (window.outerWidth  ?? window.innerWidth);
+    const oh = (window.outerHeight ?? window.innerHeight);
+    const left = Math.max(0, Math.round(sx + (ow - w)/2));
+    const top  = Math.max(0, Math.round(sy + (oh - h)/2));
+    const opts = `popup=1,width=${w},height=${h},left=${left},top=${top},resizable=yes,scrollbars=yes`;
+
+    const win = window.open(a.href, 'contactWin', opts);
+    if (win){
+      try { win.focus(); } catch {}
+
+      // 点击位置涟漪效果
+      const rect = a.getBoundingClientRect();
+      const r = document.createElement('span');
+      r.className = 'ripple';
+      r.style.left = (e.clientX - rect.left) + 'px';
+      r.style.top  = (e.clientY - rect.top ) + 'px';
+      a.appendChild(r);
+      setTimeout(()=>r.remove(), 500);
+    } else {
+      // 被拦截则回退为同页跳转
+      window.location.href = a.href;
+    }
+    return false;
+  }
+</script>
+<!-- ③ 居中按钮（只改这里） -->
+<div class="cta-wrap">
+<p><a href="./contact.html" class="cta-contact" aria-label="Open contact form" onclick="return openContactWin(event, this);"> <i class="bi bi-chat-dots"></i> <span>Let’s get in touch!</span> <span class="sheen" aria-hidden="true"></span> </a></p>
+</div>
 </div>
 <div aria-hidden="true" style="border-top: 1px solid #ccc; margin: 1.5em 0;">
 
