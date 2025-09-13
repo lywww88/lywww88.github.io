@@ -76,9 +76,9 @@ Outside of work, I’m a curious learner who enjoys exploring tech trends, visua
 
 ---
 
-<div class="connect-container" style="display: flex; flex-wrap: wrap; gap: 1em; align-items: center;">
+<div class="connect-container" style="display:flex; flex-wrap:wrap; gap:1em; align-items:center;">
 
-<!-- ① 按钮特效：CSS -->
+<!-- ① 按钮特效：CSS（不动其它样式） -->
 <style>
   .cta-contact{
     display:inline-flex; align-items:center; gap:.6em;
@@ -119,51 +119,64 @@ Outside of work, I’m a curious learner who enjoys exploring tech trends, visua
   }
   @keyframes ripple{ to{ width:240px; height:240px; opacity:0; } }
 
-  /* 容器用来居中，保留正常文档流，不会覆盖版权行 */
-  .cta-wrap{ display:flex; justify-content:center; margin:1.2em 0 1em; }
+  /* 容器仅用于居中，不遮挡版权文字 */
+  .cta-wrap{ display:flex; justify-content:center; margin:1.2em 0 1em; width:100%; }
 </style>
 
-<!-- ② 打开小窗 + 涟漪：JS -->
+<!-- ② 居中弹窗 + 防止原页跳走：JS -->
 <script>
-  function openContactWin(a, e){
-    // 小屏直接在当前页打开
-    if (window.matchMedia && window.matchMedia('(max-width:640px)').matches) return true;
+  function openContactWin(e, a){
+    e.preventDefault(); // 先拦截默认跳转（解决“弹窗+原页跳走”）
 
-    // 桌面端弹小窗并居中
-    const w=780,h=760;
-    const cx=window.screenX||window.screenLeft||0, cy=window.screenY||window.screenTop||0;
-    const cw=window.innerWidth||document.documentElement.clientWidth||screen.width;
-    const ch=window.innerHeight||document.documentElement.clientHeight||screen.height;
-    const left=Math.max(0,Math.floor(cx+(cw-w)/2)), top=Math.max(0,Math.floor(cy+(ch-h)/2));
-    const opts=`width=${w},height=${h},left=${left},top=${top},resizable=yes,scrollbars=yes,noopener`;
-    const win=window.open(a.href,'contactWin',opts);
-    if(win){ try{win.focus();}catch{} } else { window.location.href=a.href; }
+    // 小屏直接当前页打开
+    if (window.matchMedia && window.matchMedia('(max-width:640px)').matches){
+      window.location.href = a.href;
+      return false;
+    }
 
-    // 点击位置涟漪
-    const rect=a.getBoundingClientRect();
-    const r=document.createElement('span');
-    r.className='ripple';
-    r.style.left=(e.clientX-rect.left)+'px';
-    r.style.top =(e.clientY-rect.top )+'px';
-    a.appendChild(r);
-    setTimeout(()=>r.remove(), 500);
+    // 用 outerWidth/outerHeight + screenX/screenY 居中，兼容多显示器与缩放
+    const w = 780, h = 760;
+    const sx = (window.screenX ?? window.screenLeft ?? 0);
+    const sy = (window.screenY ?? window.screenTop ?? 0);
+    const ow = (window.outerWidth  ?? window.innerWidth);
+    const oh = (window.outerHeight ?? window.innerHeight);
+    const left = Math.max(0, Math.round(sx + (ow - w)/2));
+    const top  = Math.max(0, Math.round(sy + (oh - h)/2));
+    const opts = `popup=1,width=${w},height=${h},left=${left},top=${top},resizable=yes,scrollbars=yes`;
 
+    const win = window.open(a.href, 'contactWin', opts);
+    if (win){
+      try { win.focus(); } catch {}
+
+      // 点击位置涟漪效果
+      const rect = a.getBoundingClientRect();
+      const r = document.createElement('span');
+      r.className = 'ripple';
+      r.style.left = (e.clientX - rect.left) + 'px';
+      r.style.top  = (e.clientY - rect.top ) + 'px';
+      a.appendChild(r);
+      setTimeout(()=>r.remove(), 500);
+    } else {
+      // 被拦截则回退为同页跳转
+      window.location.href = a.href;
+    }
     return false;
   }
 </script>
 
-<!-- ③ 居中的按钮（替换你原来的那段） -->
+<!-- ③ 居中按钮（只改这里） -->
 <div class="cta-wrap">
   <a href="/contact.html"
      class="cta-contact"
      aria-label="Open contact form"
-     onclick="return openContactWin(this,event);">
+     onclick="return openContactWin(event, this);">
     <i class="bi bi-chat-dots"></i>
     <span>Let’s get in touch!</span>
     <span class="sheen" aria-hidden="true"></span>
   </a>
 </div>
 
+</div>
 
 <div aria-hidden="true" style="border-top: 1px solid #ccc; margin: 1.5em 0;"></div>
 
