@@ -121,8 +121,8 @@ format:
 </style>
 
 <div class="section-title">Johnson & Johnson Cerenovus Project</div>
-
 <div class="page-intro">
+  <strong>This page is still under development</strong><br><br>
   Led a data-driven analysis of sales performance and customer retention for Cerenovus, a Johnson &amp; Johnson medical device division. 
   Explored multi-year transaction data to identify key revenue drivers, product line dynamics, and regional sales trends. 
   Applied clustering and churn modeling to uncover at-risk segments and produced actionable recommendations 
