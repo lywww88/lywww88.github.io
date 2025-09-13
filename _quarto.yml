@@ -43,7 +43,7 @@ website:
         text: '<span class="nav-text">About</span>'
 
     right:
-      - icon: bell
+      - icon: bell-fill
         aria-label: Updates
         href: "#"
         target: _self
