@@ -33,15 +33,16 @@ format:
   margin: 1.2em auto 2.2em;
   padding: 0 1em;
   position: relative;
+  overflow: visible;
 }
 
 .photo-track {
   display: flex;
-  gap: 10px;
+  gap: 12px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  padding-bottom: 8px;
+  padding-bottom: 10px;
   -webkit-overflow-scrolling: touch;
 }
 .photo-track::-webkit-scrollbar { height: 8px; }
@@ -50,14 +51,15 @@ format:
 
 .photo-item {
   flex: 0 0 auto;
-  width: 220px;
-  height: 150px;
+  width: 320px;              /* 更大一些 */
+  height: 200px;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,.08);
   scroll-snap-align: start;
   background: #f8f9fb;
   position: relative;
+  cursor: zoom-in;           /* 提示可放大 */
 }
 .photo-item img {
   width: 100%;
@@ -91,8 +93,29 @@ format:
 .photo-nav.prev { left: 6px; }
 .photo-nav.next { right: 6px; }
 
+/* Lightbox 大图预览 */
+.lightbox {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,.86);
+  display: none;
+  align-items: center; justify-content: center;
+  z-index: 1300;
+}
+.lightbox.show { display: flex; }
+.lightbox img {
+  max-width: 92vw; max-height: 90vh;
+  border-radius: 12px;
+  box-shadow: 0 12px 36px rgba(0,0,0,.5);
+}
+.lightbox .lb-close {
+  position: fixed; top: 14px; right: 14px;
+  width: 40px; height: 40px; border: 0; border-radius: 50%;
+  background: rgba(255,255,255,.92);
+  color: #111; font-size: 1.2rem; cursor: pointer;
+}
+
 @media (max-width: 520px){
-  .photo-item { width: 180px; height: 120px; }
+  .photo-item { width: 220px; height: 150px; }
   .photo-nav { width: 34px; height: 34px; }
 }
 </style>
@@ -108,16 +131,15 @@ format:
   <em>Detailed write-up and dashboards coming soon. Stay tuned!</em>
 </div>
 
-<div class="section-title">Project Photos</div>
+<div class="section-title">Photo Gallery</div>
 
 <div class="photo-wrap">
   <button class="photo-nav prev" type="button" aria-label="Previous" title="Previous">&#8249;</button>
   <div class="photo-track" id="photo-track">
 <figure class="photo-item"><img src="/images/capstone1.jpeg"  alt="Capstone Team Working Session"></figure>
-<figure class="photo-item"><img src="/images/capstone2.jpeg"  alt="Data Dashboard Demo"></figure>
+<figure class="photo-item"><img src="/images/JJ-cover.png"   alt="Data Dashboard Demo"></figure>
 <figure class="photo-item"><img src="/images/capstone3.jpeg" alt="Presentation Day"></figure>
 <figure class="photo-item"><img src="/images/capstone4.jpeg"  alt="More Work"></figure>
--->
   </div>
   <button class="photo-nav next" type="button" aria-label="Next" title="Next">&#8250;</button>
 </div>
@@ -131,14 +153,40 @@ format:
     const first = track.querySelector('.photo-item');
     if (!first) return 240;
     const style = getComputedStyle(track);
-    const gap = parseFloat(style.columnGap || style.gap || 10);
+    const gap = parseFloat(style.columnGap || style.gap || 12);
     return first.getBoundingClientRect().width + gap;
   }
+
   const prev = document.querySelector('.photo-nav.prev');
   const next = document.querySelector('.photo-nav.next');
-
   prev && prev.addEventListener('click', ()=> track.scrollBy({ left: -getStep(), behavior: 'smooth' }));
   next && next.addEventListener('click', ()=> track.scrollBy({ left:  getStep(), behavior: 'smooth' }));
+
+  // 键盘左右键也可滚动
+  track.addEventListener('keydown', (e)=>{
+    if (e.key === 'ArrowLeft')  { e.preventDefault(); track.scrollBy({left: -getStep(), behavior:'smooth'}); }
+    if (e.key === 'ArrowRight') { e.preventDefault(); track.scrollBy({left:  getStep(), behavior:'smooth'}); }
+  });
+  track.tabIndex = 0; // 使其可获得焦点接收键盘事件
+
+  // Lightbox 预览
+  const lb = document.createElement('div');
+  lb.className = 'lightbox';
+  lb.innerHTML = '<button class="lb-close" aria-label="Close">×</button><img alt="Preview">';
+  document.body.appendChild(lb);
+  const lbImg = lb.querySelector('img');
+  const lbClose = lb.querySelector('.lb-close');
+
+  track.addEventListener('click', (e)=>{
+    const img = e.target.closest('.photo-item img');
+    if (!img) return;
+    lbImg.src = img.currentSrc || img.src;
+    lb.classList.add('show');
+  });
+  const closeLB = ()=> lb.classList.remove('show');
+  lb.addEventListener('click', (e)=> { if (e.target === lb) closeLB(); });
+  lbClose.addEventListener('click', closeLB);
+  document.addEventListener('keydown', (e)=> { if (e.key === 'Escape') closeLB(); });
 })();
 </script>
 
