@@ -8,7 +8,6 @@ website:
   title: "Yiwei Lu"
   favicon: images/favicon.png   
   site-url: https://www.yiweilu.me  
-  sitemap: true 
   search:
     location: navbar
     type: overlay
