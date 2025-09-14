@@ -316,7 +316,7 @@ format:
 <div style="flex: 1;" markdown="1">
 **Johnson & Johnson Cerenovus Project**
 
-Developed a full-stack analytics dashboard to support sales and retention strategy at Cerenovus, a Johnson & Johnson medical device division. Integrated SQL-based data pipelines, machine learning models (including churn prediction and clustering), and interactive visualizations to identify key revenue drivers, at-risk accounts, and regional product trends. The tool enables real-time exploration and supports strategic planning across sales teams.
+Built a full-stack analytics dashboard for J&J’s Cerenovus, integrating SQL pipelines, churn/clustering models, and interactive visuals to surface revenue drivers, at-risk accounts, and regional trends—supporting real-time exploration and planning.
 
 <div style="margin-top: 1em;">
   [<i class="bi bi-journal-text"></i> Explore Page](/projects/Capstone.html){.btn target="_self"}
