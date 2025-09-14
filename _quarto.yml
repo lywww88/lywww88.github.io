@@ -67,13 +67,7 @@ website:
         text: '<img class="w-logo" src="/images/W.PNG" alt="W Logo">'
         aria-label: W
         icon: none
-        target: _blank
-
-metadata:
-  author: "Yiwei Lu"
-  description: "Yiwei Lu — Business Analytics & Data Products. Projects in strategy, analytics, ML, and interactive dashboards."
-  keywords: ["Yiwei Lu","Business Analytics","Data Science","Machine Learning","Dashboard","UCI","Cerenovus","Johnson & Johnson"]
-  image: "images/Headshot.jpg"    
+        target: _blank 
 
 format:
   html:
@@ -82,6 +76,14 @@ format:
     allow-raw-html: true
     css: styles.css
     title-block: false
+    meta:
+      author: "Yiwei Lu"
+      description: "Yiwei Lu — Business Analytics & Data Products. Projects in strategy, analytics, ML, and interactive dashboards."
+      keywords: "Yiwei Lu,Business Analytics,Data Science,Machine Learning,Dashboard,UCI,Cerenovus,Johnson & Johnson"
+      image: "images/Headshot.jpg"
+      og:title: "Yiwei Lu"
+      og:description: "Business Analytics & Data Products"
+      og:image: "https://www.yiweilu.me/images/Headshot.jpg"
     include-in-header:
       text: |
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
