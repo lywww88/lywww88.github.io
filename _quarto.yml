@@ -7,6 +7,8 @@ project:
 website:
   title: "Yiwei Lu"
   favicon: images/favicon.png   
+  site-url: https://www.yiweilu.me  
+  sitemap: true 
   search:
     location: navbar
     type: overlay
@@ -68,7 +70,11 @@ website:
         icon: none
         target: _blank
 
-
+metadata:
+  author: "Yiwei Lu"
+  description: "Yiwei Lu — Business Analytics & Data Products. Projects in strategy, analytics, ML, and interactive dashboards."
+  keywords: ["Yiwei Lu","Business Analytics","Data Science","Machine Learning","Dashboard","UCI","Cerenovus","Johnson & Johnson"]
+  image: "images/Headshot.jpg"    
 
 format:
   html:
