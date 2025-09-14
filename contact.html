@@ -69,70 +69,67 @@
     .contact-page .status.err{ color:#dc3545; }
     .contact-page .visually-hidden{ position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden; }
 
-    /* 勾选框水平对齐 */
-    .contact-page .checkbox-group{
-      display:flex; align-items:center; gap:.5rem;
-      margin-top:.6rem; font-weight:500;
-    }
-    .contact-page .checkbox-group input[type="checkbox"]{ width:18px; height:18px; margin:0; }
-
-    /* ===== 按钮区 ===== */
+    /* 按钮区：三颗按钮同宽同高，强制同一行 */
     .contact-page .actions{
       display:flex; align-items:center; gap:.9rem;
       justify-content:flex-start; margin-top:1.25rem;
       flex-wrap: nowrap;
     }
-    /* 统一尺寸：等高等宽（照你原来的设定） */
     .contact-page .actions .btn{
       display:inline-flex; align-items:center; justify-content:center; gap:.45rem;
-      height:44px; width:200px;
+      height:44px;               /* 等高 */
+      width:200px;               /* 等宽 */
       border-radius:12px; padding:0 1rem;
-      font-weight:600; line-height:1; text-decoration:none; white-space:nowrap;
-      background:#fff; color:#0e1320;
+      font-weight:700; line-height:1; text-decoration:none; white-space:nowrap;
+      background:#fff;
+      color:#0e1320;
       border:1.5px solid #ced4da;
       box-shadow:0 2px 8px rgba(0,0,0,.06);
       transition:transform .16s ease, box-shadow .16s ease, filter .16s ease, background .16s ease, color .16s ease, border-color .16s ease;
     }
     .contact-page .actions .btn i{
-      font-size:1rem; line-height:1; transition:transform .16s ease;
+      font-size:1rem; line-height:1;
+      transition:transform .16s ease;
     }
     .contact-page .actions .btn:hover{
       transform:translateY(-2px);
       box-shadow:0 10px 24px rgba(0,0,0,.12);
     }
-    .contact-page .actions .btn:active{ transform:translateY(0) scale(.98); }
-    .contact-page .actions .btn:focus-visible{ outline:3px solid rgba(13,110,253,.35); outline-offset:2px; }
+    .contact-page .actions .btn:active{
+      transform:translateY(0) scale(.98);
+    }
+    .contact-page .actions .btn:focus-visible{
+      outline:3px solid rgba(13,110,253,.35);
+      outline-offset:2px;
+    }
 
-    /* —— 主按钮（右侧，深蓝描边，同色填充） */
+    /* 主按钮（提交）——深蓝填充 + 深蓝边框，更突出；放在最右用 margin-left:auto */
     .contact-page .actions .btn-primary{
-      margin-left:auto;               /* 把主按钮推到最右侧 */
-      background:#0d6efd; color:#fff;
-      border:2px solid #0a58ca;       /* 深蓝描边 */
-      box-shadow:0 8px 22px rgba(13,110,253,.35);
-      font-weight:800;
+      background:#0d6efd; color:#fff; border-color:#0a58ca;  /* 深蓝描边 */
+      box-shadow:0 8px 20px rgba(13,110,253,.35);
+      margin-left:auto;  /* 把它推到最右边 */
     }
     .contact-page .actions .btn-primary:hover{
       filter:brightness(1.05);
     }
-    .contact-page .actions .btn-primary:hover i{ transform:translateX(2px); }
+    .contact-page .actions .btn-primary:hover i{
+      transform:translateX(2px);
+    }
 
-    /* —— 次按钮（同色系但弱化：轮廓风格） */
+    /* 次按钮（邮件）——同色系，但弱化为描边 */
     .contact-page .actions .btn-outline{
-      background:#fff; color:#0d6efd;
-      border:1.5px solid #0d6efd;
-      box-shadow:0 1px 4px rgba(13,110,253,.10);
+      background:#fff; color:#0d6efd; border-color:#0d6efd;
     }
     .contact-page .actions .btn-outline:hover{
-      background:#eaf2ff; border-color:#0a58ca;
+      background:#eaf2ff;
     }
 
-    /* —— Home：幽灵/弱化 */
-    .contact-page .actions .btn-home{
+    /* 智能第三按钮（弹窗=Close / 整页=Home）——幽灵样式，最弱化 */
+    .contact-page .actions .btn-ghost{
       background:transparent; color:#6c757d;
-      border:1.5px solid #dee2e6;
-      box-shadow:none;
+      border:1.5px solid #dee2e6; box-shadow:none;
     }
-    .contact-page .actions .btn-home:hover{
+    .contact-page .actions .btn-ghost:hover{
       background:#f6f7f9; border-color:#cfd4da; color:#495057;
     }
 
@@ -146,8 +143,7 @@
     /* 小屏：按钮堆叠满宽 */
     @media (max-width: 640px){
       .contact-page .actions{ flex-wrap:wrap; }
-      .contact-page .actions .btn{ width:100%; }
-      .contact-page .actions .btn-primary{ margin-left:0; } /* 堆叠时不需要右推 */
+      .contact-page .actions .btn{ width:100%; margin-left:0 !important; }
     }
 
     /* 深色模式 */
@@ -155,9 +151,13 @@
       .contact-page form input,
       .contact-page form textarea,
       .contact-page form select{ background:#0e1320; color:#e6e9ef; border-color:#3a4466; }
-      .contact-page .actions .btn{ background:#0f1526; color:#e6e9ef; border-color:#2c3352; }
-      .contact-page .actions .btn-outline{ background:#0f1526; color:#82a8ff; border-color:#2c5be0; }
-      .contact-page .actions .btn-home{ background:transparent; color:#cdd3ea; border-color:#2c3352; }
+      .contact-page .actions .btn-ghost{ color:#b7c0cc; border-color:#374056; }
+      .contact-page .actions .btn-ghost:hover{ background:#121a2a; border-color:#465074; color:#e6e9ef; }
+    }
+
+    /* 轻提示 */
+    .contact-page .mini-tip{
+      margin-top:.6rem; color:#8a97a6; font-size:.85rem;
     }
 
     /* 低运动偏好 */
@@ -230,21 +230,28 @@
 
         <input type="hidden" name="source" value="contact.html">
 
+        <!-- 按钮区 -->
         <div class="actions">
-          <!-- 次要：Email（同色但弱化） -->
+          <!-- 次要：Email（同色但弱化为描边） -->
           <a class="btn btn-outline" href="mailto:yiweilu36@uci.edu?subject=Website%20Contact">
             <i class="bi bi-envelope" aria-hidden="true"></i> Use Email Instead
           </a>
 
-          <!-- 次要：Home（弱化/幽灵） -->
-          <a class="btn btn-home" href="index.html">
-            <i class="bi bi-house-door" aria-hidden="true"></i> Home Page
+          <!-- 智能：弹窗=Close；整页=Home Page -->
+          <a id="btn-close-or-home" class="btn btn-ghost" href="index.html">
+            <i class="bi bi-x-lg" aria-hidden="true"></i> Close
           </a>
 
-          <!-- 主按钮：深蓝描边，右侧对齐 -->
+          <!-- 主按钮：深蓝 + 描边，位于最右侧 -->
           <button class="btn btn-primary" type="submit">
             <i class="bi bi-send" aria-hidden="true"></i> Send Message
           </button>
+        </div>
+
+        <!-- 轻提示（仅弹窗时显示） -->
+        <div class="mini-tip" id="popup-tip" aria-hidden="true" hidden>
+          Press <kbd>Esc</kbd> to close this popup ·
+          <a href="/contact.html" target="_blank" rel="noopener">Open full page ↗︎</a>
         </div>
 
         <div id="status" class="status" role="status" aria-live="polite"></div>
@@ -296,6 +303,47 @@
         submitBtn.innerHTML = '<i class="bi bi-send" aria-hidden="true"></i> Send Message';
       }
     });
+  })();
+  </script>
+
+  <!-- 智能 Close/Home + Esc 关闭（不影响表单逻辑） -->
+  <script>
+  (function(){
+    const btn = document.getElementById('btn-close-or-home');
+    const tip = document.getElementById('popup-tip');
+
+    // 判断是否为脚本打开的小窗（有 opener 且非空）
+    const isPopup = !!(window.opener && !window.opener.closed);
+
+    if (isPopup) {
+      // 弹窗：显示为 Close；点击尝试关闭，失败则回首页
+      btn.innerHTML = '<i class="bi bi-x-lg" aria-hidden="true"></i> Close';
+      btn.addEventListener('click', function(e){
+        e.preventDefault();
+        window.close();
+        // 若关闭失败（被浏览器拦截），退回首页
+        setTimeout(function(){
+          if (!document.hidden) location.href = 'index.html';
+        }, 150);
+      });
+
+      // Esc 关闭
+      document.addEventListener('keydown', function(e){
+        if (e.key === 'Escape') {
+          window.close();
+          setTimeout(function(){
+            if (!document.hidden) location.href = 'index.html';
+          }, 150);
+        }
+      });
+
+      if (tip){ tip.hidden = false; tip.setAttribute('aria-hidden','false'); }
+    } else {
+      // 整页：显示为 Home Page
+      btn.innerHTML = '<i class="bi bi-house-door" aria-hidden="true"></i> Home Page';
+      btn.setAttribute('href','index.html');
+      if (tip){ tip.hidden = true; tip.setAttribute('aria-hidden','true'); }
+    }
   })();
   </script>
 </body>
