@@ -394,7 +394,7 @@ Developed an interactive dashboard to predict Uber driver performance using mach
 <div style="flex: 1;" markdown="1">
 **Explore More Projects**  
 
-Discover work in strategy, analytics, and machine learning — from interactive dashboards and predictive models to data-driven insights. Each project highlights practical solutions with real-world impact, making data more actionable for business decisions.
+Discover work in strategy, analytics, and machine learning — from interactive dashboards and predictive models to data-driven insights. Each project highlights practical solutions that make data more actionable for business decisions.
 
 <div style="margin-top: 1em; display: flex; gap: 0.8em;">
   <a href="/projects/project.html" class="btn" target="_self">
