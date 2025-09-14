@@ -310,6 +310,27 @@ format:
 </div>
 ```
 
+::: { .project-card style="display: flex; flex-wrap: wrap; gap: 1.5em; align-items: flex-start;" markdown="1" }
+
+<!-- Left Text -->
+<div style="flex: 1;" markdown="1">
+**Johnson & Johnson Cerenovus Project**
+
+Developed a full-stack analytics dashboard to support sales and retention strategy at Cerenovus, a Johnson & Johnson medical device division. Integrated SQL-based data pipelines, machine learning models (including churn prediction and clustering), and interactive visualizations to identify key revenue drivers, at-risk accounts, and regional product trends. The tool enables real-time exploration and supports strategic planning across sales teams.
+
+<div style="margin-top: 1em;">
+  [<i class="bi bi-journal-text"></i> Explore Page](/projects/Capstone.html){.btn target="_self"}
+</div>
+</div>
+
+<!-- Right Pic -->
+<div style="flex: 0 0 420px;">
+  <img src="images/JJ-cover.png"
+       alt="Chatbot Image"
+       style="width: 100%; height: auto; border-radius: 0.5em;" />
+</div>
+
+:::
 
 ::: { .project-card style="display: flex; flex-wrap: wrap; gap: 1.5em; align-items: flex-start;" markdown="1" }
 
