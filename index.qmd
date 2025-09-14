@@ -319,7 +319,7 @@ format:
 Built a full-stack analytics dashboard for J&J’s Cerenovus, integrating SQL pipelines, churn/clustering models, and interactive visuals to surface revenue drivers, at risk accounts, and regional trends supporting real time exploration and planning.
 
 <div style="margin-top: 1em;">
-  [<i class="bi bi-bar-chart"></i> View Capstone](/projects/Capstone.html){.btn target="_self"}
+  [<i class="bi bi-rocket"></i> View Capstone](/projects/Capstone.html){.btn target="_self"}
 </div>
 </div>
 
@@ -341,7 +341,7 @@ Built a full-stack analytics dashboard for J&J’s Cerenovus, integrating SQL pi
 Built an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.
 
 <div style="margin-top: 1em;">
-  [<i class="bi bi-journal-text"></i> Open Article](https://medium.com/@dylankl_74733/revolutionizing-stock-market-insights-the-financial-chatbot-that-empowers-investors-d1d8197e6c13){.btn target="_blank"}
+  [<i class="bi bi-robot"></i> Read Case Study](https://medium.com/@dylankl_74733/revolutionizing-stock-market-insights-the-financial-chatbot-that-empowers-investors-d1d8197e6c13){.btn target="_blank"}
 </div>
 </div>
 
@@ -399,7 +399,7 @@ Discover work in strategy, analytics, and machine learning — from interactive 
 
 <div style="margin-top: 1em; display: flex; gap: 0.8em;">
   <a href="/projects/project.html" class="btn" target="_self">
-  <i class="bi bi-folder2-open"></i> Project Page
+  <i class="bi bi-collection"></i> Project Page
 </a>
 </div>
 </div>
