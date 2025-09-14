@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,11 +33,11 @@
       box-sizing: border-box;
     }
 
-    /* 表单控件统一高度与样式 */
-    .contact-page form input,
+    /* 仅作用于文本类输入，不影响 checkbox/radio */
+    .contact-page form input:not([type="checkbox"]):not([type="radio"]),
     .contact-page form select{ height:44px; }
 
-    .contact-page form input,
+    .contact-page form input:not([type="checkbox"]):not([type="radio"]),
     .contact-page form textarea,
     .contact-page form select{
       width:100%;
@@ -50,9 +49,20 @@
       box-sizing: border-box;
     }
     .contact-page form textarea{ min-height:160px; resize:vertical; }
-
     .contact-page form label{ font-weight:600; margin:0 0 .4rem; }
     .contact-page .form-group{ display:flex; flex-direction:column; margin-bottom:1rem; }
+
+    /* 复选框尺寸 & 主题色 */
+    .contact-page .checkbox-group{
+      display:flex; align-items:center; gap:.5rem;
+      margin-top:.6rem; font-weight:500;
+    }
+    .contact-page .checkbox-group input[type="checkbox"]{
+      appearance:auto; -webkit-appearance:auto;
+      width:18px; height:18px; min-width:18px; min-height:18px;
+      margin:0; padding:0; vertical-align:middle; box-sizing:border-box;
+      accent-color:#0d6efd;
+    }
 
     /* 两列布局 */
     .contact-page .form-row{
@@ -70,44 +80,79 @@
     .contact-page .status.err{ color:#dc3545; }
     .contact-page .visually-hidden{ position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden; }
 
-    /* 勾选框水平对齐 */
-    .contact-page .checkbox-group{
-      display:flex; align-items:center; gap:.5rem;
-      margin-top:.6rem; font-weight:500;
-    }
-    .contact-page .checkbox-group input[type="checkbox"]{ width:18px; height:18px; margin:0; }
-
-    /* 按钮区：三颗按钮同宽同高，强制同一行 */
+    /* 按钮区：同宽同高，单行；小屏堆叠 */
     .contact-page .actions{
+      --btnW: 200px;                 /* 统一按钮宽度 */
       display:flex; align-items:center; gap:.9rem;
       justify-content:flex-start; margin-top:1.25rem;
-      flex-wrap: nowrap;         /* 关键：不换行 */
+      flex-wrap: nowrap;
     }
     .contact-page .actions .btn{
       display:inline-flex; align-items:center; justify-content:center; gap:.45rem;
-      height:44px;               /* 等高 */
-      width:200px;               /* 等宽 */
+      height:44px;
+      width:var(--btnW); min-width:var(--btnW);  /* 等宽 */
       border-radius:12px; padding:0 1rem;
-      font-weight:600; line-height:1; text-decoration:none; white-space:nowrap;
+      font-weight:700; line-height:1; text-decoration:none; white-space:nowrap;
+      background:#fff; color:#0e1320; border:1.5px solid #ced4da;
+      box-shadow:0 2px 8px rgba(0,0,0,.06);
+      transition:transform .16s ease, box-shadow .16s ease, filter .16s ease;
+      box-sizing: border-box;       /* 边框计入统一宽度，视觉一致 */
     }
-    /* Home Page 绿色（不再右推） */
-    .contact-page .actions .btn-home{
-      background:#198754; color:#fff; border:none;
+    .contact-page .actions .btn i{ font-size:1rem; line-height:1; transition:transform .16s ease; }
+    .contact-page .actions .btn:hover{ transform:translateY(-2px); box-shadow:0 10px 24px rgba(0,0,0,.12); }
+    .contact-page .actions .btn:active{ transform:translateY(0) scale(.98); }
+    .contact-page .actions .btn:focus-visible{ outline:3px solid rgba(13,110,253,.35); outline-offset:2px; }
+
+    /* 主按钮（提交）——更突出：深蓝背景 + 2px 边框 + 阴影 */
+    .contact-page .actions .btn-primary{
+      background:#0d6efd; color:#fff; border:2px solid #0b5ed7;
+      box-shadow:0 8px 18px rgba(13,110,253,.38);
     }
-    .contact-page .actions .btn-home:hover{ background:#157347; color:#fff; }
+    .contact-page .actions .btn-primary:hover{ filter:brightness(1.05); }
+    .contact-page .actions .btn-primary:hover i{ transform:translateX(2px); }
+
+    /* 次按钮（邮件）——同色系 outline，弱化 */
+    .contact-page .actions .btn-outline{
+      background:#fff; color:#0d6efd; border:2px solid #0d6efd;
+    }
+    .contact-page .actions .btn-outline:hover{ background:#eaf2ff; }
+
+    /* 关闭（ghost）或 Home——最低权重 */
+    .contact-page .actions .btn-ghost{
+      background:#fff; color:#6c757d; border:1.5px solid #dee2e6;
+    }
+    .contact-page .actions .btn-ghost:hover{ background:#f8f9fa; }
 
     /* 小屏：按钮堆叠满宽 */
     @media (max-width: 640px){
       .contact-page .actions{ flex-wrap:wrap; }
-      .contact-page .actions .btn{ width:100%; }
+      .contact-page .actions .btn{ width:100%; min-width:0; }
     }
 
     /* 深色模式 */
     @media (prefers-color-scheme: dark){
-      .contact-page form input,
+      .contact-page form input:not([type="checkbox"]):not([type="radio"]),
       .contact-page form textarea,
       .contact-page form select{ background:#0e1320; color:#e6e9ef; border-color:#3a4466; }
+      .contact-page .actions .btn-ghost{ color:#c7cbd1; border-color:#3a4466; background:#0e1320; }
+      .popup-hint{ color:#c7cbd1; }
+      .popup-hint kbd{ background:#111827; border-color:#334155; color:#e5e7eb; }
     }
+
+    /* 卡片外部的提示（Esc & 全页） */
+    .popup-hint{
+      max-width:720px;
+      margin: .6rem auto 2rem;
+      text-align:center;
+      color:#6c757d;
+      font-size:.88rem;
+    }
+    .popup-hint kbd{
+      padding:0 .35em; border-radius:4px;
+      border:1px solid #d0d5dd; background:#f1f3f5; font-size:.85em;
+    }
+    .popup-hint a{ color:#0d6efd; text-decoration:none; }
+    .popup-hint a:hover{ text-decoration:underline; }
   </style>
 </head>
 <body>
@@ -124,6 +169,7 @@
       </p>
 
       <form id="contact-form" action="https://formspree.io/f/xldwjnqg" method="POST" novalidate>
+        <!-- 蜜罐 -->
         <div class="visually-hidden">
           <label>Do not fill this out if you are human:
             <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
@@ -153,7 +199,7 @@
           </div>
           <div class="form-group">
             <label for="subject">Subject *</label>
-            <input id="subject" name="subject" type="text" required placeholder="Short summary">
+            <input id="subject" name="subject" type="text" required placeholder="Subject">
           </div>
         </div>
 
@@ -171,26 +217,76 @@
         <input type="hidden" name="source" value="contact.html">
 
         <div class="actions">
-          <button class="btn" type="submit">
+          <!-- 次按钮（邮件） -->
+          <a class="btn btn-outline" href="mailto:yiweilu36@uci.edu?subject=Website%20Contact">
+            <i class="bi bi-envelope" aria-hidden="true"></i> Use Email Instead
+          </a>
+
+          <!-- 关闭（弹窗时显示） -->
+          <button type="button" class="btn btn-ghost" id="btn-close">
+            <i class="bi bi-x-lg" aria-hidden="true"></i> Close
+          </button>
+
+          <!-- Home（非弹窗时显示） -->
+          <a href="index.html" class="btn btn-ghost" id="btn-home" style="display:none;">
+            <i class="bi bi-house-door" aria-hidden="true"></i> Home Page
+          </a>
+
+          <!-- 主按钮（提交） -->
+          <button class="btn btn-primary" type="submit" id="btn-submit">
             <i class="bi bi-send" aria-hidden="true"></i> Send Message
           </button>
-          <a class="btn" href="mailto:yiweilu36@uci.edu?subject=Website%20Contact">
-            <i class="bi bi-envelope"></i> Use Email Instead
-          </a>
-          <a class="btn btn-home" href="index.html">Home Page</a>
         </div>
 
         <div id="status" class="status" role="status" aria-live="polite"></div>
       </form>
     </div>
+
+    <!-- 提示移到卡片外：仅弹窗时显示 -->
+    <div class="popup-hint" id="popup-hint" aria-hidden="true">
+      Press <kbd>Esc</kbd> to close this popup ·
+      <a href="contact.html" target="_blank" rel="noopener">Open full page ↗︎</a>
+    </div>
   </main>
 
   <script>
   (function(){
-    const form = document.getElementById('contact-form');
-    const statusEl = document.getElementById('status');
-    const submitBtn = form.querySelector('button[type="submit"]');
-    const endpoint = form.getAttribute('action');
+    const form      = document.getElementById('contact-form');
+    const statusEl  = document.getElementById('status');
+    const submitBtn = document.getElementById('btn-submit');
+    const closeBtn  = document.getElementById('btn-close');
+    const homeBtn   = document.getElementById('btn-home');
+    const hintEl    = document.getElementById('popup-hint');
+    const endpoint  = form.getAttribute('action');
+
+    // —— 判定是否为弹窗打开 —— //
+    const isPopup = (()=>{ try{ return !!(window.opener && !window.opener.closed); }catch(e){ return false; } })();
+
+    // 根据判定切换按钮与提示
+    if (isPopup){
+      closeBtn.style.display = '';
+      homeBtn.style.display  = 'none';
+      hintEl.style.display   = '';
+      // Esc 关闭（仅弹窗时有效）
+      document.addEventListener('keydown', (e)=>{
+        if (e.key === 'Escape'){
+          try{ if (window.opener && !window.opener.closed) window.close(); }catch(e){}
+        }
+      });
+    } else {
+      closeBtn.style.display = 'none';
+      homeBtn.style.display  = '';
+      hintEl.style.display   = 'none';
+    }
+
+    // Close 按钮逻辑（弹窗则关闭，否则回退/回首页）
+    closeBtn.addEventListener('click', () => {
+      if (isPopup){
+        try{ window.close(); return; }catch(e){}
+      }
+      if (history.length > 1) history.back();
+      else window.location.href = 'index.html';
+    });
 
     function show(msg, ok=true){
       statusEl.textContent = msg;
@@ -233,3 +329,21 @@
   </script>
 </body>
 </html>
+
+
+
+<p class="site-foot">
+  © <span id="site-year"></span> yiweilu.me · All rights reserved.
+</p>
+
+<style>
+  .site-foot{
+    text-align:center;
+    color:#888;
+    font-size:.85em;
+    margin:3em 0 1.5em;
+  }
+</style>
+<script>
+  document.getElementById('site-year').textContent = new Date().getFullYear();
+</script>
