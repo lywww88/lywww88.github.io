@@ -407,7 +407,7 @@ Discover data-driven projects in machine learning, dashboard design, and analyti
 <div style="flex: 0 0 420px;">
   <img src="images/project.jpg"
        alt="More Projects"
-       style="width: 100%; height: auto; max-height: 200px; border-radius: 0.5em;" />
+       style="width: 100%; height: auto; max-height: 270px; border-radius: 0.5em;" />
 </div>
 
 </div>
