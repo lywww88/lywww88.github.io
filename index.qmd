@@ -327,7 +327,7 @@ Built a full-stack analytics dashboard for J&J’s Cerenovus, integrating SQL pi
 <div style="flex: 0 0 420px;">
   <img src="images/JJ.png"
        alt="JJ Image"
-       style="width: 100%; height: auto; max-height: 260px; border-radius: 0.5em;" />
+       style="width: 100%; height: auto; max-height: 300px; border-radius: 0.5em;" />
 </div>
 
 :::
