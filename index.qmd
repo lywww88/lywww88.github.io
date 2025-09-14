@@ -1,1 +1,398 @@
 
+---
+title: ""
+format:
+  html: 
+    toc: false
+    allow-html: true
+---
+
+<!-- ===== Announcement (overlay on navbar center) ===== -->
+<div id="announce" class="announce-on-nav" role="dialog" aria-label="Site announcement" hidden>
+  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+    <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
+    <line x1="12" y1="8"  x2="12" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="12" cy="16" r="1.5" fill="currentColor"/>
+  </svg>
+  
+  <strong>Notice:</strong> <a href="/projects/Capstone.html" target="_self">Capstone page</a> is under development.
+
+  <button class="ann-close" type="button" aria-label="Dismiss">×</button>
+</div>
+
+<!-- Minimized (reopen) icon only -->
+<div id="ann-toggle" class="announce-on-nav minimized noframe" role="button"
+     aria-label="Open announcement" title="Open announcement" hidden>
+  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+    <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
+    <line x1="12" y1="7" x2="12" y2="13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="12" cy="17" r="1.6" fill="currentColor"/>
+  </svg>
+</div>
+
+<style>
+  .announce-on-nav{
+    position: fixed;
+    left: 50%;
+    top: var(--ann-center-y, 48px);
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+
+    display: inline-flex; align-items: center; justify-content: center; gap: .6em;
+    color: #07315c;
+    font: 500 0.95rem/1.3 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    min-height: 44px; padding: .6em 1em;
+    border: 1px solid #bfd9ff; border-radius: .5em;
+    box-shadow: 0 6px 18px rgba(0,0,0,.18);
+    white-space: nowrap; pointer-events: auto;
+
+    background:
+      linear-gradient(90deg,#0061ff 0%,#60efff 45%,#00f5a0 100%) top/100% 4px no-repeat,
+      #eaf3ff;
+  }
+  .announce-on-nav a{ color:#c46800; font-weight:600; text-decoration:none; }
+  .announce-on-nav a:hover{ text-decoration:underline; }
+  .announce-on-nav .ann-close{
+    margin-left:.25em; inline-size:28px; block-size:28px;
+    border:0; border-radius:50%; background:transparent; color:inherit;
+    font-size:1.2rem; line-height:1; cursor:pointer;
+  }
+  .announce-on-nav .ann-close:hover{ background:rgba(0,0,0,.08); }
+  .announce-on-nav .icon{ width:20px; height:20px; flex:0 0 20px; }
+
+  .announce-on-nav.minimized.noframe{
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+    inline-size: 36px; block-size: 36px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .announce-on-nav.minimized.noframe .icon{
+    width: 22px; height: 22px;
+  }
+  @media (prefers-reduced-motion: no-preference){
+    .announce-on-nav.minimized.noframe .icon{
+      transition: transform .12s ease, opacity .12s ease;
+    }
+  }
+  .announce-on-nav.minimized.noframe:hover .icon{
+    transform: scale(1.06); opacity: .95;
+  }
+
+  /* 深色模式 */
+  @media (prefers-color-scheme: dark){
+    .announce-on-nav{
+      border-color:#294b73;
+      background:
+        linear-gradient(90deg,#3aa0ff 0%,#60efff 45%,#00f5a0 100%) top/100% 4px no-repeat,
+        #0e2742;
+      color:#e6f0ff;
+    }
+    .announce-on-nav a{ color:#ffb662; }
+    .announce-on-nav .ann-close:hover{ background:rgba(255,255,255,.10); }
+    .announce-on-nav.minimized.noframe{ background: transparent; }
+  }
+
+/* 收起时 pill 吸附在 Yiwei Lu 右侧 */
+#name-anchor > #ann-toggle.announce-on-nav.minimized.noframe {
+  position: absolute;
+  left: calc(100% + 0.5em);
+  top: 0.15em;
+  transform: none;
+}
+</style>
+
+<script>
+(() => {
+  const VERSION = '2025-08-28-overlay-v1-svg-bgstrip';
+  const KEY = 'announce:dismissed';
+  const bar  = document.getElementById('announce');
+  const pill = document.getElementById('ann-toggle');
+
+  if (pill) pill.style.visibility = 'hidden';
+  // ✅ 提前挂载到 name-anchor
+  function mountPill() {
+    const anchor = document.getElementById('name-anchor');
+    if (!anchor || !pill) return false;
+    if (pill.parentElement !== anchor) anchor.appendChild(pill);
+
+    anchor.style.position = anchor.style.position || 'relative';
+    return true;
+  }
+
+  if (!mountPill()) {
+    const obs = new MutationObserver(() => {
+      if (mountPill()) obs.disconnect();
+    });
+    obs.observe(document.documentElement, { childList: true, subtree: true });
+    window.addEventListener('load', mountPill);
+  }
+
+
+  function navEl(){
+    return document.getElementById('quarto-header')
+        || document.querySelector('header.navbar')
+        || document.querySelector('.navbar.navbar-expand')
+        || document.querySelector('header.site-header');
+  }
+  function positionOverNavbar(){
+    const nav = navEl();
+    const rect = nav ? nav.getBoundingClientRect() : { top: 0, height: 96 };
+    const y = rect.top + rect.height / 2;
+    document.documentElement.style.setProperty('--ann-center-y', `${y}px`);
+  }
+
+  try {
+    const dismissed = localStorage.getItem(KEY);
+    if (dismissed !== VERSION){
+      bar.hidden = false; pill.hidden = true;
+      document.documentElement.classList.add('ann-open');
+    }
+    else {
+      bar.hidden = true; pill.hidden = false;
+      document.documentElement.classList.remove('ann-open');
+    }
+  } catch { bar.hidden = false; }
+
+  bar.querySelector('.ann-close').addEventListener('click', () => {
+    bar.hidden = true; pill.hidden = false;
+    document.documentElement.classList.remove('ann-open');
+    try{ localStorage.setItem(KEY, VERSION);}catch{}
+    positionOverNavbar();
+  });
+  pill.addEventListener('click', () => {
+    bar.hidden = false; pill.hidden = true;
+    document.documentElement.classList.add('ann-open');
+    try{ localStorage.removeItem(KEY);}catch{}
+    positionOverNavbar();
+  });
+
+  const nav = navEl();
+  if (nav && 'ResizeObserver' in window) new ResizeObserver(positionOverNavbar).observe(nav);
+  window.addEventListener('scroll', positionOverNavbar, { passive:true });
+  window.addEventListener('resize', positionOverNavbar);
+  window.addEventListener('load', positionOverNavbar);
+  positionOverNavbar();
+
+  requestAnimationFrame(() => {
+    if (pill) pill.style.visibility = '';  
+  });
+})();
+
+</script>
+
+
+```{=html}
+<!-- Profile Section -->
+<div style="display:flex; flex-wrap:wrap; align-items:center; gap:2em; max-width:900px; margin:2em auto;">
+  <!-- Avatar -->
+  <div class="avatar-wrapper" style="flex:0 0 200px; text-align:center;">
+    <a href="about.html" title="About Me">
+      <img src="images/Headshot.jpg" alt="Yiwei Lu Headshot" class="avatar" style="border-radius:50%; width:180px; height:auto;">
+    </a>
+  </div>
+
+  <!-- Right Side: Name + Motto + Buttons -->
+  <div style="flex:1; text-align:center;">
+    <div id="name-anchor" style="position:relative; display:inline-block;">
+      <span class="name" data-text="Yiwei Lu" style="font-size:2.4em; font-weight:700;">Yiwei Lu</span>
+    </div><br>
+    <span class="motto" style="display:block; margin:0.5em 0 1.2em; color:#555;">
+      I believe clarity creates freedom — in data, design, and life.
+    </span>
+
+    <!-- ===== Get in touch (NEW CTA) ===== -->
+    <!-- ① 按钮特效：CSS（不动其它样式） -->
+    <style>
+      .cta-contact{
+        display:inline-flex; align-items:center; gap:.6em;
+        padding:.7em 1.25em; border-radius:999px;
+        background:linear-gradient(135deg,#0d6efd 0%,#3ea1ff 50%,#17c0ff 100%);
+        color:#fff; font-weight:800; letter-spacing:.2px; text-decoration:none;
+        box-shadow:0 12px 26px rgba(13,110,253,.35), inset 0 -2px 0 rgba(0,0,0,.15);
+        position:relative; overflow:hidden;
+        transition:transform .16s ease, box-shadow .16s ease, filter .16s ease;
+      }
+      .cta-contact:hover{
+        transform:translateY(-3px);
+        box-shadow:0 18px 36px rgba(13,110,253,.45), 0 0 0 4px rgba(13,110,253,.12);
+      }
+      .cta-contact:active{ transform:translateY(0) scale(.98); }
+      .cta-contact:focus-visible{
+        outline:none;
+        box-shadow:0 0 0 4px rgba(13,110,253,.35), 0 12px 26px rgba(13,110,253,.35);
+      }
+      .cta-contact i{ font-size:1.05rem; line-height:1; transition:transform .16s ease; }
+      .cta-contact:hover i{ transform:translateX(2px); }
+
+      /* 光带掠过 */
+      .cta-contact .sheen{
+        position:absolute; inset:0 auto 0 -150%;
+        width:50%; transform:skewX(-20deg);
+        background:linear-gradient(90deg,transparent 0,rgba(255,255,255,.25) 50%,transparent 100%);
+        pointer-events:none;
+      }
+      .cta-contact:hover .sheen{ animation:sheen .9s ease; }
+      @keyframes sheen{ to{ left:150%; } }
+
+      /* 点击涟漪 */
+      .cta-contact .ripple{
+        position:absolute; border-radius:999px; pointer-events:none;
+        transform:translate(-50%,-50%); width:0; height:0; opacity:.5;
+        background:rgba(255,255,255,.35); animation:ripple .45s ease-out forwards;
+      }
+      @keyframes ripple{ to{ width:240px; height:240px; opacity:0; } }
+
+      /* 容器仅用于居中，不遮挡版权文字 */
+      .cta-wrap{ display:flex; justify-content:center; margin:1.2em 0 1em; width:100%; }
+    </style>
+
+    <!-- ② 居中弹窗 + 防止原页跳走：JS -->
+    <script>
+      function openContactWin(e, a){
+        e.preventDefault(); // 拦截默认跳转
+
+        // 小屏直接当前页打开
+        if (window.matchMedia && window.matchMedia('(max-width:640px)').matches){
+          window.location.href = a.href;
+          return false;
+        }
+
+        // 居中弹窗（多显示器/缩放友好）
+        const w = 780, h = 760;
+        const sx = (window.screenX ?? window.screenLeft ?? 0);
+        const sy = (window.screenY ?? window.screenTop ?? 0);
+        const ow = (window.outerWidth  ?? window.innerWidth);
+        const oh = (window.outerHeight ?? window.innerHeight);
+        const left = Math.max(0, Math.round(sx + (ow - w)/2));
+        const top  = Math.max(0, Math.round(sy + (oh - h)/2));
+        const opts = `popup=1,width=${w},height=${h},left=${left},top=${top},resizable=yes,scrollbars=yes`;
+
+        const win = window.open(a.href, 'contactWin', opts);
+        if (win){
+          try { win.focus(); } catch {}
+
+          // 点击位置涟漪
+          const rect = a.getBoundingClientRect();
+          const r = document.createElement('span');
+          r.className = 'ripple';
+          r.style.left = (e.clientX - rect.left) + 'px';
+          r.style.top  = (e.clientY - rect.top ) + 'px';
+          a.appendChild(r);
+          setTimeout(()=>r.remove(), 500);
+        } else {
+          // 被拦截则降级为同页跳转
+          window.location.href = a.href;
+        }
+        return false;
+      }
+    </script>
+
+    <!-- ③ 居中按钮（只改按钮这块） -->
+    <div class="cta-wrap">
+      <a href="/contact.html"
+         class="cta-contact"
+         aria-label="Open contact form"
+         onclick="return openContactWin(event, this);">
+        <i class="bi bi-chat-dots"></i>
+        <span>Let’s get in touch!</span>
+        <span class="sheen" aria-hidden="true"></span>
+      </a>
+    </div>
+    <!-- ===== /Get in touch (NEW CTA) ===== -->
+
+  </div>
+</div>
+```
+
+
+::: { .project-card style="display: flex; flex-wrap: wrap; gap: 1.5em; align-items: flex-start;" markdown="1" }
+
+<!-- Left Text -->
+<div style="flex: 1;" markdown="1">
+**Financial Chatbot for Stock Market**
+
+Built an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.
+
+<div style="margin-top: 1em;">
+  [<i class="bi bi-journal-text"></i> Open Article](https://medium.com/@dylankl_74733/revolutionizing-stock-market-insights-the-financial-chatbot-that-empowers-investors-d1d8197e6c13){.btn target="_blank"}
+</div>
+</div>
+
+<!-- Right Pic -->
+<div style="flex: 0 0 420px;">
+  <img src="images/financial-chatbot1.gif"
+       alt="Chatbot Image"
+       style="width: 100%; height: auto; border-radius: 0.5em;" />
+</div>
+
+:::
+
+::: {.project-card}
+<div style="display: flex; flex-wrap: wrap; gap: 1.5em; align-items: flex-start;" markdown="1">
+
+<!-- Left Contents -->
+<div style="flex: 1;" markdown="1">
+**Uber Driver Prediction Dashboard**  
+<small><em>Datathon 2025 Competition</em></small>  
+
+<small>🏆 “Best Use of StrataScratch DC” 🏆</small>
+
+
+Developed an interactive dashboard to predict Uber driver performance using machine learning models.  
+
+<div style="margin-top: 1em; display: flex; gap: 0.8em;">
+  <a href="https://syntax3rr0r1.netlify.app/" class="btn" target="_blank">
+    <i class="bi bi-play-circle"></i> Open Demo
+  </a>
+  <a href="https://devpost.com/software/uber-driver-conversion-analysis" class="btn" target="_blank">
+    <i class="bi bi-journal-text"></i> Open Article
+  </a>
+</div>
+</div>
+
+<!-- Right Pic -->
+<div style="flex: 0 0 420px;">
+  <img src="images/datathon.jpg"
+       alt="Uber Dashboard"
+       style="width: 100%; height: 250px; border-radius: 0.5em;" />
+</div>
+
+</div>
+::: 
+
+::: {.project-card}
+<div style="display: flex; flex-wrap: wrap; gap: 1.5em; align-items: flex-start;" markdown="1">
+
+<!-- Left Contents -->
+<div style="flex: 1;" markdown="1">
+**Explore More Projects**  
+
+Discover data-driven projects in machine learning, dashboard design, and analytics. Each showcasing practical solutions with visuals and links.
+
+<div style="margin-top: 1em; display: flex; gap: 0.8em;">
+  <a href="/projects/project.html" class="btn" target="_self">
+  <i class="bi bi-folder2-open"></i> Project Page
+</a>
+</div>
+</div>
+
+<!-- Right Pic -->
+<div style="flex: 0 0 420px;">
+  <img src="images/project.jpg"
+       alt="More Projects"
+       style="width: 100%; height: auto; border-radius: 0.5em;" />
+</div>
+
+</div>
+:::
+
+
+<p style="text-align: center; color: #888; font-size: 0.85em; margin-top: 3em;">
+  © 2025 Yiwei Lu. All rights reserved.
+</p>
