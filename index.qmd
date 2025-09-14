@@ -325,7 +325,7 @@ Built a full-stack analytics dashboard for J&J’s Cerenovus, integrating SQL pi
 
 <!-- Right Pic -->
 <div style="flex: 0 0 420px;">
-  <img src="images/JJ-cover.png"
+  <img src="images/JJ.png"
        alt="Chatbot Image"
        style="width: 100%; height: auto; border-radius: 0.5em;" />
 </div>
