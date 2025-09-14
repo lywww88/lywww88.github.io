@@ -32,7 +32,7 @@ iframe.pdf-reader {
 </style>
 
 <div class="header-bar">
-  <a href="../index.html" class="btn">← Back</a>
+  <a href="/projects/project.html" class="btn">← Back</a>
   <h1 class="header-title">Google Pixel Marketing</h1>
   <select id="pdf-selector" style="width: 180px; font-size: 1em; padding: 4px;">
     <option value="project-pixel-presentation.pdf">Presentation</option>
