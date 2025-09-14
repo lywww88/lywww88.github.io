@@ -329,3 +329,21 @@
   </script>
 </body>
 </html>
+
+
+
+<p class="site-foot">
+  © <span id="site-year"></span> yiweilu.me · All rights reserved.
+</p>
+
+<style>
+  .site-foot{
+    text-align:center;
+    color:#888;
+    font-size:.85em;
+    margin:3em 0 1.5em;
+  }
+</style>
+<script>
+  document.getElementById('site-year').textContent = new Date().getFullYear();
+</script>
