@@ -82,18 +82,21 @@
 
     /* 按钮区：同宽同高，单行；小屏堆叠 */
     .contact-page .actions{
+      --btnW: 200px;                 /* 统一按钮宽度 */
       display:flex; align-items:center; gap:.9rem;
       justify-content:flex-start; margin-top:1.25rem;
       flex-wrap: nowrap;
     }
     .contact-page .actions .btn{
       display:inline-flex; align-items:center; justify-content:center; gap:.45rem;
-      height:44px; width:200px;                /* 等宽等高 */
+      height:44px;
+      width:var(--btnW); min-width:var(--btnW);  /* 等宽 */
       border-radius:12px; padding:0 1rem;
       font-weight:700; line-height:1; text-decoration:none; white-space:nowrap;
       background:#fff; color:#0e1320; border:1.5px solid #ced4da;
       box-shadow:0 2px 8px rgba(0,0,0,.06);
       transition:transform .16s ease, box-shadow .16s ease, filter .16s ease;
+      box-sizing: border-box;       /* 边框计入统一宽度，视觉一致 */
     }
     .contact-page .actions .btn i{ font-size:1rem; line-height:1; transition:transform .16s ease; }
     .contact-page .actions .btn:hover{ transform:translateY(-2px); box-shadow:0 10px 24px rgba(0,0,0,.12); }
@@ -114,7 +117,7 @@
     }
     .contact-page .actions .btn-outline:hover{ background:#eaf2ff; }
 
-    /* 关闭（ghost）——最低权重 */
+    /* 关闭（ghost）或 Home——最低权重 */
     .contact-page .actions .btn-ghost{
       background:#fff; color:#6c757d; border:1.5px solid #dee2e6;
     }
@@ -123,7 +126,7 @@
     /* 小屏：按钮堆叠满宽 */
     @media (max-width: 640px){
       .contact-page .actions{ flex-wrap:wrap; }
-      .contact-page .actions .btn{ width:100%; }
+      .contact-page .actions .btn{ width:100%; min-width:0; }
     }
 
     /* 深色模式 */
@@ -219,10 +222,15 @@
             <i class="bi bi-envelope" aria-hidden="true"></i> Use Email Instead
           </a>
 
-          <!-- 关闭（ghost） -->
+          <!-- 关闭（弹窗时显示） -->
           <button type="button" class="btn btn-ghost" id="btn-close">
             <i class="bi bi-x-lg" aria-hidden="true"></i> Close
           </button>
+
+          <!-- Home（非弹窗时显示） -->
+          <a href="index.html" class="btn btn-ghost" id="btn-home" style="display:none;">
+            <i class="bi bi-house-door" aria-hidden="true"></i> Home Page
+          </a>
 
           <!-- 主按钮（提交） -->
           <button class="btn btn-primary" type="submit" id="btn-submit">
@@ -234,8 +242,8 @@
       </form>
     </div>
 
-    <!-- 提示移到卡片外 -->
-    <div class="popup-hint" aria-hidden="true">
+    <!-- 提示移到卡片外：仅弹窗时显示 -->
+    <div class="popup-hint" id="popup-hint" aria-hidden="true">
       Press <kbd>Esc</kbd> to close this popup ·
       <a href="contact.html" target="_blank" rel="noopener">Open full page ↗︎</a>
     </div>
@@ -243,39 +251,47 @@
 
   <script>
   (function(){
-    const form = document.getElementById('contact-form');
-    const statusEl = document.getElementById('status');
+    const form      = document.getElementById('contact-form');
+    const statusEl  = document.getElementById('status');
     const submitBtn = document.getElementById('btn-submit');
     const closeBtn  = document.getElementById('btn-close');
+    const homeBtn   = document.getElementById('btn-home');
+    const hintEl    = document.getElementById('popup-hint');
     const endpoint  = form.getAttribute('action');
+
+    // —— 判定是否为弹窗打开 —— //
+    const isPopup = (()=>{ try{ return !!(window.opener && !window.opener.closed); }catch(e){ return false; } })();
+
+    // 根据判定切换按钮与提示
+    if (isPopup){
+      closeBtn.style.display = '';
+      homeBtn.style.display  = 'none';
+      hintEl.style.display   = '';
+      // Esc 关闭（仅弹窗时有效）
+      document.addEventListener('keydown', (e)=>{
+        if (e.key === 'Escape'){
+          try{ if (window.opener && !window.opener.closed) window.close(); }catch(e){}
+        }
+      });
+    } else {
+      closeBtn.style.display = 'none';
+      homeBtn.style.display  = '';
+      hintEl.style.display   = 'none';
+    }
+
+    // Close 按钮逻辑（弹窗则关闭，否则回退/回首页）
+    closeBtn.addEventListener('click', () => {
+      if (isPopup){
+        try{ window.close(); return; }catch(e){}
+      }
+      if (history.length > 1) history.back();
+      else window.location.href = 'index.html';
+    });
 
     function show(msg, ok=true){
       statusEl.textContent = msg;
       statusEl.className = 'status ' + (ok ? 'ok' : 'err');
     }
-
-    // 关闭按钮：若为弹出窗口可关闭，否则回退到首页
-    closeBtn.addEventListener('click', () => {
-      try{
-        // 仅在由 window.open 打开的窗口可被关闭
-        if (window.opener && !window.opener.closed) {
-          window.close();
-          return;
-        }
-      }catch(e){}
-      // 非弹窗则返回上一页或首页
-      if (history.length > 1) history.back();
-      else window.location.href = 'index.html';
-    });
-
-    // Esc 关闭（仅弹窗时有效）
-    document.addEventListener('keydown', (e)=>{
-      if (e.key === 'Escape'){
-        try{
-          if (window.opener && !window.opener.closed) window.close();
-        }catch(e){}
-      }
-    });
 
     form.addEventListener('submit', async function(e){
       e.preventDefault();
