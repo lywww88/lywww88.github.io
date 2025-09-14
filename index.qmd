@@ -407,7 +407,7 @@ Discover work in strategy, analytics, and machine learning — from interactive 
 <div style="flex: 0 0 420px;">
   <img src="images/project.jpg"
        alt="More Projects"
-       style="width: 100%; height: auto; max-height: 300px; border-radius: 0.5em;" />
+       style="width: 100%; height: auto; max-height: 360px; border-radius: 0.5em;" />
 </div>
 
 </div>
