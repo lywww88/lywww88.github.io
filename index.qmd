@@ -316,7 +316,7 @@ format:
 <div style="flex: 1;" markdown="1">
 **Johnson & Johnson Cerenovus Project**
 
-Built a full-stack analytics dashboard for J&J’s Cerenovus, integrating SQL pipelines, churn/clustering models, and interactive visuals to surface revenue drivers, at-risk accounts, and regional trends—supporting real-time exploration and planning.
+Built a full-stack analytics dashboard for J&J’s Cerenovus, integrating SQL pipelines, churn/clustering models, and interactive visuals to surface revenue drivers, at risk accounts, and regional trends supporting real time exploration and planning.
 
 <div style="margin-top: 1em;">
   [<i class="bi bi-journal-text"></i> Explore Page](/projects/Capstone.html){.btn target="_self"}
