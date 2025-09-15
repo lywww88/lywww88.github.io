@@ -54,7 +54,7 @@ format:
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2M7 10l5 5m0 0l5-5m-5 5V4"/>
     </svg>
-    Download Yiwei Lu Resume
+    Download Yiwei Lu’s Resume (PDF)
   </a>
   <p style="color: gray; font-size: 0.9em; margin-top: 0.5em;">
     Last updated: <span id="last-updated">2025</span>
