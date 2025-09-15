@@ -182,7 +182,7 @@
 
   /* Default breathing glow */
   animation: w-glow 1s infinite alternate;
-  transition: transform 0.4s ease, filter 0.4s ease;
+  transition: transform 0.8s ease, filter 0.8s ease;
 }
 
 /* === On hover: stop breathing, zoom in and glow stronger === */
