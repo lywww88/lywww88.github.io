@@ -6,7 +6,7 @@ project:
 
 website:
   title: "Yiwei Lu"
-  favicon: images/favicon.png   
+  favicon: favicon.ico   
   site-url: https://www.yiweilu.me  
   search:
     location: navbar
