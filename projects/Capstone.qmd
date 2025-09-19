@@ -122,7 +122,10 @@ format:
 
 </style>
 
-<div class="section-title">Johnson & Johnson Cerenovus Project - under development</div>
+<h2 class="section-title" style="border-bottom:1px solid #e5e7eb;padding-bottom:.4em;margin-bottom:1.2em;">
+  Johnson &amp; Johnson Cerenovus Project 
+  <span style="font-size:.85rem;font-weight:500;color:#888;">– Page Under Development</span>
+</h2>
 
 <!-- ===== Executive Summary Section ===== -->
 <section id="jj-summary" style="max-width:1000px;margin:2em auto;padding:0 1em;">
@@ -313,7 +316,7 @@ format:
 <!-- Centered, guaranteed-to-open button -->
 <div style="text-align:center; margin:0.8em 0; position:relative; z-index:9999;">
   <button type="button"
-    onclick="(function(u){try{var w=window.open(u,'_blank','noopener'); if(!w) location.href=u;}catch(e){location.href=u;}})('https://your-dashboard-link.com');"
+    onclick="(function(u){try{var w=window.open(u,'_blank','noopener'); if(!w) location.href=u;}catch(e){location.href=u;}})('https://contact.yiweilu.me/');"
     onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 10px 22px rgba(13,110,253,.45)';"
     onmouseout="this.style.transform='none'; this.style.boxShadow='0 6px 16px rgba(13,110,253,.35)';"
     style="appearance:none; border:0; cursor:pointer; pointer-events:auto;
