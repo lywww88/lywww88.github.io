@@ -156,41 +156,129 @@ format:
   </li>
 </ul>
 
-  <details open style="margin:.6em 0;">
-    <summary><strong>Objectives</strong></summary>
-    <ul>
-      <li>TESTING PAGE</li>
-      <li>TESTING PAGE</li>
-      <li>TESTING PAGE</li>
-    </ul>
-  </details>
+<details open style="margin:.6em 0;">
+  <summary><strong>Objectives</strong></summary>
+  <ul style="line-height:1.8;">
+    <li>
+      <strong>Predict Customer Churn:</strong> Develop models to identify which hospital or account is most at risk of leaving, 
+      enabling Johnson &amp; Johnson to prioritize retention actions before revenue is lost.
+    </li>
+    <li>
+      <strong>Segment Customer Base:</strong> Use clustering to group accounts into meaningful profiles 
+      (e.g., High Revenue Contributors, Premium Spenders, Low Engagement) for tailored retention strategies.
+    </li>
+    <li>
+      <strong>Analyze Product Migration:</strong> Track shifts from older coils/stents to aspiration systems, 
+      revealing physician preferences and informing product portfolio planning.
+    </li>
+    <li>
+      <strong>Quantify Financial Impact:</strong> Translate predictive accuracy and segmentation insights into 
+      projected ROI, linking data science outputs to measurable business value.
+    </li>
+    <li>
+      <strong>Deliver Decision-Support Tools:</strong> Build interactive dashboards that connect churn predictions, 
+      segment profiles, and ROI scenarios, giving managers a clear path from insight to action.
+    </li>
+  </ul>
+</details>
 
-  <details style="margin:.6em 0;">
-    <summary><strong>Data &amp; Features</strong></summary>
-    <ul>
-      <li>Transactional tables: FISCAL_YEAR, FISCAL_MONTH, SALES, SKU/category, channel, region.</li>
-      <li>Feature engineering: RFM, seasonality, product mix, pricing tiers, recency windows.</li>
-      <li>Data quality: standardization, outlier handling, cross-source alignment.</li>
-    </ul>
-  </details>
+<details style="margin:.6em 0;">
+  <summary><strong>Data &amp; Features</strong></summary>
+  <ul style="line-height:1.8;">
+    <li>
+      <strong>Transactional Data Sources:</strong> Multi-year sales transaction tables containing 
+      <code>FISCAL_YEAR</code>, <code>FISCAL_MONTH</code>, revenue (<code>SALES</code>), product SKU and category, 
+      sales channel (distributors, direct), and geographic region. These served as the foundation for all modeling and segmentation.
+    </li>
+    <li>
+      <strong>Feature Engineering:</strong> Derived business-relevant metrics including:
+      <ul>
+        <li><em>RFM metrics</em> (Recency, Frequency, Monetary) to capture customer behavior patterns.</li>
+        <li><em>Seasonality features</em> (quarterly and monthly dummy variables) to account for cyclical purchasing behavior.</li>
+        <li><em>Product mix ratios</em> to measure migration trends (e.g., coils → stents → aspiration systems).</li>
+        <li><em>Pricing tiers</em> and discount bands to capture value sensitivity across accounts.</li>
+        <li><em>Recency windows</em> (e.g., 3-, 6-, 12-month lookbacks) to measure recent activity and inactivity.</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Data Quality & Standardization:</strong> Applied systematic cleaning steps:
+      <ul>
+        <li>Standardized product and channel naming across multiple source systems.</li>
+        <li>Handled missing values through imputation and logical rules (e.g., defaulting null channel codes).</li>
+        <li>Detected and capped outliers (e.g., unusually large one-off purchases) to prevent model distortion.</li>
+        <li>Cross-source alignment between transactional, regional, and product hierarchy tables to ensure consistency.</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Final Feature Set:</strong> Combined raw transactional metrics and engineered variables into 
+      a structured dataset ready for churn modeling, clustering, and dashboard integration.
+    </li>
+  </ul>
+</details>
 
-  <details style="margin:.6em 0;">
-    <summary><strong>Methods</strong></summary>
-    <ul>
-      <li>Models: Logistic Regression, XGBoost, Random Survival Forest.</li>
-      <li>Evaluation: AUC/PR, C-index, cost curves under budget constraints.</li>
-      <li>Clustering: K-Means (Premium Spenders, Low Engagement, Power Buyers).</li>
-    </ul>
-  </details>
+<details style="margin:.6em 0;">
+  <summary><strong>Methods</strong></summary>
+  <ul style="line-height:1.8;">
+    <li>
+      <strong>Data Preparation:</strong> Standardized multi-year transactional data (FISCAL_YEAR, FISCAL_MONTH, SALES, SKU, region, channel). 
+      Engineered <em>RFM features</em> (Recency, Frequency, Monetary value), product mix ratios, migration indicators, and seasonality flags.
+    </li>
+    <li>
+      <strong>Predictive Modeling:</strong> 
+      <ul>
+        <li><em>Logistic Regression</em> as baseline for interpretability and quick benchmarking.</li>
+        <li><em>XGBoost</em> for high-performance classification, capturing nonlinear interactions and handling imbalanced churn outcomes.</li>
+        <li><em>Random Survival Forest</em> (RSF) to estimate time-to-churn, providing survival probabilities over time.</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Model Evaluation:</strong> Used <em>ROC-AUC</em> and <em>Precision-Recall AUC</em> to measure classification power, 
+      <em>C-Index</em> for survival analysis accuracy, and <em>cost-benefit curves</em> to test ROI under different marketing budget constraints.
+    </li>
+    <li>
+      <strong>Customer Segmentation:</strong> Applied <em>K-Means clustering</em> on engineered features. Identified distinct groups:
+      <ul>
+        <li><strong>Premium Spenders</strong> – high ticket size, ideal for exclusive offers.</li>
+        <li><strong>Power Buyers</strong> – frequent purchases, responsive to loyalty programs.</li>
+        <li><strong>Low Engagement</strong> – low spend and low frequency, requiring reactivation campaigns.</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Visualization & Decision Support:</strong> Developed interactive dashboards (React + Tailwind + PostgreSQL) 
+      to connect predictions with segmentation and campaign planning for Johnson &amp; Johnson managers.
+    </li>
+  </ul>
+</details>
 
-  <details style="margin:.6em 0;">
-    <summary><strong>Business Impact</strong></summary>
-    <ul>
-      <li>TESTING PAGE</li>
-      <li>TESTING PAGE</li>
-      <li>TESTING PAGE</li>
-    </ul>
-  </details>
+<details style="margin:.6em 0;">
+  <summary><strong>Business Impact</strong></summary>
+  <ul style="line-height:1.8;">
+    <li>
+      <strong>Customer Retention:</strong> Early identification of high-risk accounts enabled targeted outreach strategies. 
+      Our models captured over <strong>60% of churners</strong> in the top-risk deciles, ensuring sales teams can focus efforts on the most vulnerable accounts.
+    </li>
+    <li>
+      <strong>Revenue Protection:</strong> Conservative ROI scenarios projected an annual impact of 
+      <strong>+$1.2M</strong> through optimized retention campaigns, proving that predictive analytics can directly translate into measurable financial value.
+    </li>
+    <li>
+      <strong>Product Migration Insights:</strong> Analysis revealed a <strong>45% migration</strong> from legacy coils/stents to newer aspiration systems (C71 series). 
+      This highlighted evolving physician preferences and informed product portfolio strategy.
+    </li>
+    <li>
+      <strong>Strategic Segmentation:</strong> Customer clustering uncovered distinct profiles—High Revenue Contributors, Low Engagement, and Premium Spenders—
+      giving marketing teams actionable levers for <em>personalized messaging</em> and differentiated retention offers.
+    </li>
+    <li>
+      <strong>Decision-Support Tools:</strong> Delivered an interactive React + Tailwind + PostgreSQL dashboard that closes the loop 
+      (<em>prediction → segmentation → campaign design → monitoring</em>), enabling managers to make real-time, data-driven decisions.
+    </li>
+    <li>
+      <strong>Long-term Impact:</strong> Established a repeatable data pipeline and modeling workflow that can be extended beyond Cerenovus 
+      to other Johnson &amp; Johnson divisions, strengthening enterprise-wide analytics capability.
+    </li>
+  </ul>
+</details>
 
 <!-- ===== Demo Video Section ===== -->
 <section id="jj-demo-video" style="max-width:1000px;margin:2.5em auto;padding:0 1em;text-align:center;">
@@ -215,20 +303,20 @@ format:
   Built an end-to-end dashboard to visualize churn predictions, customer segments, and retention ROI scenarios.
 </p>
 
-<!-- Centered Button -->
-<div style="text-align:center;">
-  <a href="https://your-dashboard-link.com" target="_blank"
-     style="display:inline-block;padding:.8em 1.6em;
-            border-radius:999px;
-            background:linear-gradient(135deg,#0d6efd,#3ea1ff,#17c0ff);
-            color:#fff;
-            font-weight:600;
-            text-decoration:none;
-            font-size:1rem;
-            box-shadow:0 4px 14px rgba(0,0,0,.15);
-            transition:all .2s ease;">
+<!-- Centered, guaranteed-to-open button -->
+<div style="text-align:center; margin:0.8em 0; position:relative; z-index:9999;">
+  <button type="button"
+    onclick="(function(u){try{var w=window.open(u,'_blank','noopener'); if(!w) location.href=u;}catch(e){location.href=u;}})('https://your-dashboard-link.com');"
+    onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 10px 22px rgba(13,110,253,.45)';"
+    onmouseout="this.style.transform='none'; this.style.boxShadow='0 6px 16px rgba(13,110,253,.35)';"
+    style="appearance:none; border:0; cursor:pointer; pointer-events:auto;
+           padding:.85em 1.6em; border-radius:999px;
+           background:linear-gradient(135deg,#0d6efd,#3ea1ff,#17c0ff);
+           color:#fff; font-weight:700; font-size:1rem; letter-spacing:.2px;
+           box-shadow:0 6px 16px rgba(13,110,253,.35);
+           transition:transform .15s ease, box-shadow .15s ease;">
     🚀 Open Dashboard
-  </a>
+  </button>
 </div>
 
 <h3 class="section-title">Tech Stack</h3>
