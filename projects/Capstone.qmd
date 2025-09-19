@@ -328,7 +328,7 @@ format:
   Built an end-to-end dashboard to visualize churn predictions, customer segments, and retention ROI scenarios.
 </p>
 
-<!-- Centered, guaranteed-to-open button -->
+<!-- button -->
 <div style="text-align:center; margin:0.8em 0; position:relative; z-index:9999;">
   <button type="button"
     onclick="(function(u){try{var w=window.open(u,'_blank','noopener'); if(!w) location.href=u;}catch(e){location.href=u;}})('https://contact.yiweilu.me/');"
@@ -342,6 +342,49 @@ format:
            transition:transform .15s ease, box-shadow .15s ease;">
     🚀 Open Dashboard
   </button>
+</div>
+
+<h3 class="section-title" style="border-bottom:1px solid #e5e7eb;
+  padding-bottom:.4em;margin-bottom:1.2em;">
+  Documentation
+</h3>
+
+<p style="text-align:center;max-width:800px;margin:0 auto 1.2em;line-height:1.8;">
+  Access project deliverables below:
+</p>
+
+<div style="text-align:center; display:flex; flex-wrap:wrap; gap:1em; justify-content:center;">
+
+  <!-- Visualization PPT -->
+  <a href="contact.yiweilu.me" target="_blank"
+     style="display:inline-block;padding:.7em 1.4em;border-radius:999px;
+            background:linear-gradient(135deg,#0d6efd,#3ea1ff,#17c0ff);
+            color:#fff;font-weight:600;text-decoration:none;font-size:.95rem;
+            box-shadow:0 6px 16px rgba(13,110,253,.35);
+            transition:transform .15s ease, box-shadow .15s ease;">
+    Visualization PPT
+  </a>
+
+  <!-- Final PPT -->
+  <a href="contact.yiweilu.me" target="_blank"
+     style="display:inline-block;padding:.7em 1.4em;border-radius:999px;
+            background:linear-gradient(135deg,#0d6efd,#3ea1ff,#17c0ff);
+            color:#fff;font-weight:600;text-decoration:none;font-size:.95rem;
+            box-shadow:0 6px 16px rgba(13,110,253,.35);
+            transition:transform .15s ease, box-shadow .15s ease;">
+    Final PPT
+  </a>
+
+  <!-- Report -->
+  <a href="contact.yiweilu.me" target="_blank"
+     style="display:inline-block;padding:.7em 1.4em;border-radius:999px;
+            background:linear-gradient(135deg,#0d6efd,#3ea1ff,#17c0ff);
+            color:#fff;font-weight:600;text-decoration:none;font-size:.95rem;
+            box-shadow:0 6px 16px rgba(13,110,253,.35);
+            transition:transform .15s ease, box-shadow .15s ease;">
+    Final Report
+  </a>
+
 </div>
 
 <h3 class="section-title" style="border-bottom:1px solid #e5e7eb;padding-bottom:.4em;margin-bottom:1.2em;">
