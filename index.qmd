@@ -341,7 +341,7 @@ Built a full-stack analytics dashboard for J&J’s Cerenovus, integrating SQL pi
 Built an AI chatbot that delivers real-time stock analysis by integrating LLMs with financial data APIs, helping users make informed investment decisions.
 
 <div style="margin-top: 1em;">
-  [<i class="bi bi-robot"></i> Read Case Study](https://medium.com/@dylankl_74733/revolutionizing-stock-market-insights-the-financial-chatbot-that-empowers-investors-d1d8197e6c13){.btn target="_blank"}
+  [<i class="bi bi-robot"></i> Open Article](https://medium.com/@dylankl_74733/revolutionizing-stock-market-insights-the-financial-chatbot-that-empowers-investors-d1d8197e6c13){.btn target="_blank"}
 </div>
 </div>
 
