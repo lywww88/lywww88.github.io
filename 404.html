@@ -3,78 +3,226 @@
 <head>
   <meta charset="UTF-8" />
   <title>404 — Page Not Found</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="/favicon.ico">
   <style>
-    body {
-      font-family: system-ui, sans-serif;
-      text-align: center;
-      padding: 4em 1em;
-      color: #333;
-      background-color: #f9f9f9;
-    }
+    :root{
+      --bg:#f8fafc;
+      --fg:#243447;
+      --muted:#6b7280;
+      --card:#ffffff;
+      --line:#e5e7eb;
+      --primary:#0d6efd;    /* 主蓝 */
+      --primary-2:#3ea1ff;
+      --primary-3:#17c0ff;
 
-    h1 {
-      font-size: 3em;
-      margin-bottom: 0.5em;
-    }
+      --tertiary-fill:rgba(13,110,253,.06); 
+      --tertiary-fill-hover:rgba(13,110,253,.12);
+      --tertiary-border:rgba(13,110,253,.25);
 
-    p {
-      font-size: 1.2em;
-      margin-bottom: 2em;
-      color: #666;
+      --lucky-1:#ff0066;   
+      --lucky-2:#ff5e00;
+      --lucky-3:#ffb300;
     }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg:#0b1220;
+        --fg:#e5edf4;
+        --muted:#9aa7b2;
+        --card:#0f172a;
+        --line:#1f2937;
 
-    .button-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1em;
-      margin-top: 2em;
-    }
-
-    @media (min-width: 600px) {
-      .button-container {
-        flex-direction: row;
-        justify-content: center;
+        --tertiary-fill:rgba(62,161,255,.10);
+        --tertiary-fill-hover:rgba(62,161,255,.18);
+        --tertiary-border:rgba(62,161,255,.35);
       }
     }
 
-    .btn {
-      display: inline-block;
-      padding: 0.6em 1.4em;
-      border-radius: 6px;
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1em;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      transition: background 0.2s ease, transform 0.2s ease;
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background:var(--bg);
+      color:var(--fg);
+      padding:4rem 1rem 3rem;
+      display:flex; align-items:center; justify-content:center;
+      min-height:100vh;
+      text-align:center;
+    }
+    .wrap{
+      width:100%;
+      max-width:900px;
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:2rem 1.5rem;
+      box-shadow:0 10px 30px rgba(0,0,0,.08);
+      margin:0 auto;
+    }
+    .top{
+      display:flex; align-items:center; gap:1rem; justify-content:center;
+      padding-bottom:1rem; margin-bottom:1rem; border-bottom:1px solid var(--line);
+    }
+    .badge{
+      display:inline-flex; align-items:center; justify-content:center;
+      width:64px; height:64px; border-radius:14px;
+      background:linear-gradient(135deg,var(--primary),var(--primary-2),var(--primary-3));
+      color:#fff; font-weight:800; font-size:1.2rem; letter-spacing:.5px;
+      box-shadow:0 12px 26px rgba(13,110,253,.35);
+    }
+    h1{ margin:0; font-size:2rem; font-weight:800; letter-spacing:.2px; }
+
+    .hint{
+      background: rgba(13,110,253,.08);
+      border:1px dashed rgba(13,110,253,.35);
+      color: var(--fg);
+      padding:.75rem 1rem; border-radius:10px; margin:0 auto 1.25rem; max-width:720px;
+      font-size:.95rem;
     }
 
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    .controls{
+      display:flex; flex-wrap:wrap; gap:.75rem; justify-content:center;
+      margin:1.25rem 0 1.75rem;
+    }
+    .btn{
+      display:inline-block; padding:.7em 1.2em; border-radius:10px;
+      text-decoration:none; font-weight:700; font-size:.95rem;
+      transition:transform .15s ease, box-shadow .15s ease, filter .15s ease, background .15s ease, border-color .15s ease;
+      will-change: transform;
+    }
+    .btn:hover{ transform:translateY(-2px); filter:brightness(1.02); }
+    .btn:active{ transform:translateY(0); }
+
+    /* 一级：主蓝渐变 */
+    .btn-primary{
+      color:#fff;
+      background:linear-gradient(135deg,var(--primary),var(--primary-2),var(--primary-3));
+      box-shadow:0 6px 16px rgba(13,110,253,.28);
     }
 
-    .btn:active {
-      transform: translateY(1px);
+    /* 一级（突出）：Lucky */
+    .btn-lucky{
+      color:#fff;
+      background:linear-gradient(135deg,var(--lucky-1),var(--lucky-2),var(--lucky-3));
+      box-shadow:0 10px 24px rgba(255,102,0,.35);
     }
 
-    /* Button colors */
-    .home-btn { background-color: #007bff; }
-    .project-btn { background-color: #28a745; }
-    .startup-btn { background-color: #6f42c1; }
-    .about-btn { background-color: #fd7e14; }
+    /* 二级：浅蓝按钮（比一级淡，但比三级明显） */
+    .btn-secondary{
+      color:#fff;
+      background:#60a5fa;   /* sky-400 */
+      border:1px solid #3b82f6;
+      box-shadow:0 4px 12px rgba(96,165,250,.28);
+    }
+    .btn-secondary:hover{
+      background:#3b82f6;   /* hover 深一点 */
+      border-color:#2563eb;
+    }
+
+    /* 三级：淡蓝填充 */
+    .btn-tertiary{
+      color:var(--primary);
+      background:var(--tertiary-fill);
+      border:1px solid var(--tertiary-border);
+      box-shadow:0 2px 8px rgba(13,110,253,.10);
+    }
+    .btn-tertiary:hover{
+      background:var(--tertiary-fill-hover);
+    }
+
+    .grid{ display:grid; gap:1rem; grid-template-columns: 1fr; margin-top:.5rem; text-align:center; }
+    @media(min-width:720px){
+      .grid{ grid-template-columns: 1fr 1fr; }
+    }
+    .card{
+      border:1px solid var(--line); border-radius:12px; padding:1rem;
+      background:var(--card);
+    }
+    .card h3{ margin:.2rem 0 .4rem; font-size:1.05rem; }
+    .muted{ color:var(--muted); font-size:.95rem; }
+
+    .footer{ margin-top:1.5rem; color:var(--muted); font-size:.9rem; }
+    code{ font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
   </style>
 </head>
 <body>
-  <h1>⚠️ 404 ⚠️</h1>
-  <p>Sorry, we couldn’t find the page you were looking for. It may have been moved or doesn’t exist.</p>
+  <main class="wrap" role="main">
+    <div class="top">
+      <div class="badge">404</div>
+      <div><h1>Page Not Found</h1></div>
+    </div>
 
-  <div class="button-container">
-    <a href="/" class="btn home-btn">Home</a>
-    <a href="https://lywww88.github.io/projects/project.html" class="btn project-btn">Projects</a>
-    <a href="https://lywww88.github.io/startup/journey.html" class="btn startup-btn">Startup</a>
-    <a href="https://lywww88.github.io/about.html" class="btn about-btn">About</a>
-  </div>
+    <div class="hint" id="hint">
+      We couldn’t find this URL. Try the links below or 
+      <a href="/" style="color:#0d6efd; font-weight:600; text-decoration:none;">go back to the homepage</a>.
+    </div>
+
+    <!-- 顶部主导航（二级样式） -->
+    <div class="controls">
+      <a class="btn btn-secondary" href="/">Home</a>
+      <a class="btn btn-secondary" href="/projects/project.html">Projects</a>
+      <a class="btn btn-secondary" href="/startup/journey.html">Startup</a>
+      <a class="btn btn-secondary" href="/about.html">About</a>
+    </div>
+
+    <div class="grid">
+      <!-- 左：Lucky + Resume -->
+      <div class="card">
+        <h3>Explore</h3>
+        <p class="muted">Jump to a random project, or view my resume.</p>
+        <div class="controls">
+          <a class="btn btn-lucky" href="javascript:void(0)" onclick="randomProject()">I'm Feeling Lucky</a>
+          <a class="btn btn-primary" href="/resume.html" target="_blank">Open Resume</a>
+        </div>
+      </div>
+
+      <!-- 右：Contact + Email -->
+      <div class="card">
+        <h3>Need help?</h3>
+        <p class="muted">If you believe this is an error, please let me know.</p>
+        <div class="controls">
+          <a class="btn btn-tertiary" href="/contact.html">Contact</a>
+          <a class="btn btn-tertiary" href="mailto:yiweil36@uci.edu">Email Me</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div id="url"></div>
+      <p>The page you’re looking for doesn’t exist or has moved.</p>
+      <div style="margin-top:.4rem; font-size:.85rem; color:var(--muted);">
+        © 2025 <a href="https://www.yiweilu.me" style="color:inherit; text-decoration:none;">yiweilu.me</a>. All rights reserved.
+      </div>
+    </div>
+  </main>
+
+  <script>
+    (function(){
+      var u = window.location.href;
+      var hint = document.getElementById('hint');
+      var urlBox = document.getElementById('url');
+      if(hint){
+        hint.innerHTML = 'We couldn’t find <code>'+u.replace(/</g,'&lt;')+'</code>. '
+          + 'Try the links below or '
+          + '<a href="/" style="color:#0d6efd; font-weight:600; text-decoration:none;">go back to the homepage</a>.';
+      }
+      if(urlBox){
+        urlBox.innerHTML = 'Requested: <code>'+u.replace(/</g,'&lt;')+'</code>';
+      }
+    })();
+
+    function randomProject(){
+      var projects = [
+        '/projects/Capstone.html',
+        '/projects/project.html',
+        '/projects/project-pixel.html',
+        '/projects/project-consulting.html',
+        '/projects/project-airbnb.html',
+        '/projects/project-anemia.html'
+      ];
+      var i = Math.floor(Math.random() * projects.length);
+      window.location.href = projects[i];
+    }
+  </script>
 </body>
 </html>
