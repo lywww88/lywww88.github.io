@@ -131,7 +131,7 @@ format:
 </h2>
 
 <p style="text-align:center;color:#c0392b;font-weight:600;font-size:1rem;margin-top:-.2em;margin-bottom:1.5em;">
-  🚧 This page is still under development 🚧
+  This page is still under development 
 </p>
 
 <!-- ===== Executive Summary Section ===== -->
