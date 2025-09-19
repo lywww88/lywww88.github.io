@@ -100,23 +100,23 @@
       box-shadow:0 6px 16px rgba(13,110,253,.28);
     }
 
-    /* 一级突出：Lucky */
+    /* 一级（突出）：Lucky */
     .btn-lucky{
       color:#fff;
       background:linear-gradient(135deg,var(--lucky-1),var(--lucky-2),var(--lucky-3));
       box-shadow:0 10px 24px rgba(255,102,0,.35);
     }
 
-    /* 二级：纯蓝实心 + 白字，比三级明显 */
+    /* 二级：浅蓝按钮（比一级淡，但比三级明显） */
     .btn-secondary{
       color:#fff;
-      background:#3b82f6;
-      border:1px solid #2563eb;
-      box-shadow:0 6px 14px rgba(59,130,246,.28);
+      background:#60a5fa;   /* sky-400 */
+      border:1px solid #3b82f6;
+      box-shadow:0 4px 12px rgba(96,165,250,.28);
     }
     .btn-secondary:hover{
-      background:#2563eb;
-      border-color:#1d4ed8;
+      background:#3b82f6;   /* hover 深一点 */
+      border-color:#2563eb;
     }
 
     /* 三级：淡蓝填充 */
@@ -176,7 +176,7 @@
         </div>
       </div>
 
-      <!-- 右：Contact + Email（三级） -->
+      <!-- 右：Contact + Email -->
       <div class="card">
         <h3>Need help?</h3>
         <p class="muted">If you believe this is an error, please let me know.</p>
@@ -198,7 +198,7 @@
 
   <script>
     (function(){
-      var u = window.location.href; 
+      var u = window.location.href;
       var hint = document.getElementById('hint');
       var urlBox = document.getElementById('url');
       if(hint){
