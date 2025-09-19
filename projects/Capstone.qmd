@@ -133,8 +133,8 @@ format:
     segments with tailored campaigns.
   </p>
 
-<h3 class="section-title" style="font-size:1.4rem;margin-top:1.5em;">Key Outcomes</h3>
-
+<section id="outcomes" style="max-width:1000px;margin:2.5em auto;padding:0 1em;text-align:center;">
+  <h2 class="section-title">Key Outcomes</h2>
 <ul role="list" style="
   list-style:none;padding:0;margin:.4em auto 1.2em;max-width:1000px;display:grid;
   grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;">
@@ -234,7 +234,6 @@ format:
 <h3 class="section-title">Tech Stack</h3>
 <p style="text-align:center;max-width:800px;margin:0 auto;line-height:1.8;">
   <span style="background:#eef4ff;color:#2457d6;padding:.3em .8em;border-radius:999px;margin:.2em;display:inline-block;">Python</span>
-  <span style="background:#eef4ff;color:#2457d6;padding:.3em .8em;border-radius:999px;margin:.2em;display:inline-block;">Scikit-learn</span>
   <span style="background:#eef4ff;color:#2457d6;padding:.3em .8em;border-radius:999px;margin:.2em;display:inline-block;">XGBoost</span>
   <span style="background:#eef4ff;color:#2457d6;padding:.3em .8em;border-radius:999px;margin:.2em;display:inline-block;">Random Survival Forest</span>
   <span style="background:#eef4ff;color:#2457d6;padding:.3em .8em;border-radius:999px;margin:.2em;display:inline-block;">PostgreSQL</span>
