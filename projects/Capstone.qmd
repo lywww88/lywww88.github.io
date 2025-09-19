@@ -305,7 +305,7 @@ format:
 
 <!-- ===== Demo Video Section ===== -->
 <section id="jj-demo-video" style="max-width:1000px;margin:2.5em auto;padding:0 1em;text-align:center;">
-  <h2 class="section-title">Project Demo Video</h2>
+  <h2 class="section-title">Demo Video</h2>
   <p style="max-width:800px;margin:0.6em auto 1.5em;line-height:1.8;color:#333;">
     Watch a short demo showcasing the interactive dashboard.
   </p>
@@ -398,7 +398,7 @@ format:
     if (e.key === 'ArrowLeft')  { e.preventDefault(); track.scrollBy({left: -getStep(), behavior:'smooth'}); }
     if (e.key === 'ArrowRight') { e.preventDefault(); track.scrollBy({left:  getStep(), behavior:'smooth'}); }
   });
-  track.tabIndex = 0; // 使其可获得焦点接收键盘事件
+  track.tabIndex = 0; 
 
   // Lightbox 预览
   const lb = document.createElement('div');
