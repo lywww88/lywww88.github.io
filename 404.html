@@ -86,7 +86,6 @@
     .btn-green{ background:linear-gradient(135deg,var(--ok),#38c172,#51d88a); }
     .btn-violet{ background:linear-gradient(135deg,var(--violet),#8b5cf6,#a78bfa); }
     .btn-orange{ background:linear-gradient(135deg,var(--orange),#f59e0b,#fbbf24); }
-    .btn-ghost{ background:transparent; color:var(--primary); border:1px solid var(--line); }
 
     .grid{ display:grid; gap:1rem; grid-template-columns: 1fr; margin-top:.5rem; }
     @media(min-width:720px){
@@ -117,23 +116,25 @@
       <a class="btn btn-green" href="/projects/project.html">Projects</a>
       <a class="btn btn-violet" href="/startup/journey.html">Startup</a>
       <a class="btn btn-orange" href="/about.html">About</a>
+      <a class="btn btn-primary" href="/contact.html">Contact</a>
     </div>
 
     <div class="grid">
+      <!-- Try Your Luck -->
       <div class="card">
-        <h3>Popular destinations</h3>
-        <p class="muted">Jump to the sections most visitors are looking for.</p>
+        <h3>Try Your Luck</h3>
+        <p class="muted">Jump to a random project page.</p>
         <div class="controls" style="justify-content:flex-start;">
-          <a class="btn btn-primary" href="/projects/project.html">All Projects</a>
-          <a class="btn btn-green" href="/projects/Capstone.html">Capstone Project</a>
+          <a class="btn btn-violet" href="javascript:void(0)" onclick="randomProject()">I'm Feeling Lucky</a>
         </div>
       </div>
+
+      <!-- Resume -->
       <div class="card">
-        <h3>Need help?</h3>
-        <p class="muted">If you believe this is an error, please let me know.</p>
+        <h3>Resume / CV</h3>
+        <p class="muted">View my latest resume.</p>
         <div class="controls" style="justify-content:flex-start;">
-          <a class="btn btn-ghost" href="/contact.html">Open Contact Form</a>
-          <a class="btn btn-ghost" href="mailto:yiweil36@uci.edu">Email Me</a>
+          <a class="btn btn-green" href="/resume.html" target="_blank">Open Resume</a>
         </div>
       </div>
     </div>
@@ -158,6 +159,17 @@
         urlBox.innerHTML = 'Requested: <code>'+u.replace(/</g,'&lt;')+'</code>';
       }
     })();
+
+    // 随机跳转函数
+    function randomProject(){
+      var projects = [
+        '/projects/Capstone.html',
+        '/projects/project.html'
+        // 可以继续添加你的其它项目页面
+      ];
+      var i = Math.floor(Math.random() * projects.length);
+      window.location.href = projects[i];
+    }
   </script>
 </body>
 </html>
