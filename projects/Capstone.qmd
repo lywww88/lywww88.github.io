@@ -335,12 +335,12 @@ format:
     onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 10px 22px rgba(13,110,253,.45)';"
     onmouseout="this.style.transform='none'; this.style.boxShadow='0 6px 16px rgba(13,110,253,.35)';"
     style="appearance:none; border:0; cursor:pointer; pointer-events:auto;
-           padding:.85em 1.6em; border-radius:999px;
+           padding:.85em 1.6em; border-radius:8px; /* 方块：圆角改小 */
            background:linear-gradient(135deg,#0d6efd,#3ea1ff,#17c0ff);
            color:#fff; font-weight:700; font-size:1rem; letter-spacing:.2px;
            box-shadow:0 6px 16px rgba(13,110,253,.35);
            transition:transform .15s ease, box-shadow .15s ease;">
-    🚀 Open Dashboard
+    Open Dashboard
   </button>
 </div>
 
@@ -349,41 +349,40 @@ format:
   Documentation
 </h3>
 
+<h3 class="section-title" style="border-bottom:1px solid #e5e7eb;
+  padding-bottom:.4em;margin-bottom:1.2em;">
+  Documentation
+</h3>
+
 <p style="text-align:center;max-width:800px;margin:0 auto 1.2em;line-height:1.8;">
-  Access project deliverables below:
+  Select a deliverable and click "Open":
 </p>
 
-<div style="text-align:center; display:flex; flex-wrap:wrap; gap:1em; justify-content:center;">
+<div style="display:flex; justify-content:center; gap:1em; flex-wrap:wrap;">
 
-  <!-- Visualization PPT -->
-  <a href="contact.yiweilu.me" target="_blank"
-     style="display:inline-block;padding:.7em 1.4em;border-radius:999px;
-            background:linear-gradient(135deg,#0d6efd,#3ea1ff,#17c0ff);
-            color:#fff;font-weight:600;text-decoration:none;font-size:.95rem;
-            box-shadow:0 6px 16px rgba(13,110,253,.35);
-            transition:transform .15s ease, box-shadow .15s ease;">
-    Visualization PPT
-  </a>
+  <select id="docSelect" style="padding:.6em 1em; border:1px solid #ccc;
+          border-radius:8px; font-size:1rem; min-width:200px;">
+    <option value="">-- Choose a file --</option>
+    <option value="https://contact.yiweilu.me/visualization-ppt">Visualization PPT</option>
+    <option value="https://contact.yiweilu.me/final-ppt">Final PPT</option>
+    <option value="https://contact.yiweilu.me/final-report">Final Report</option>
+  </select>
 
-  <!-- Final PPT -->
-  <a href="contact.yiweilu.me" target="_blank"
-     style="display:inline-block;padding:.7em 1.4em;border-radius:999px;
-            background:linear-gradient(135deg,#0d6efd,#3ea1ff,#17c0ff);
-            color:#fff;font-weight:600;text-decoration:none;font-size:.95rem;
-            box-shadow:0 6px 16px rgba(13,110,253,.35);
-            transition:transform .15s ease, box-shadow .15s ease;">
-    Final PPT
-  </a>
-
-  <!-- Report -->
-  <a href="contact.yiweilu.me" target="_blank"
-     style="display:inline-block;padding:.7em 1.4em;border-radius:999px;
-            background:linear-gradient(135deg,#0d6efd,#3ea1ff,#17c0ff);
-            color:#fff;font-weight:600;text-decoration:none;font-size:.95rem;
-            box-shadow:0 6px 16px rgba(13,110,253,.35);
-            transition:transform .15s ease, box-shadow .15s ease;">
-    Final Report
-  </a>
+  <button type="button"
+    onclick="(function(){ 
+        var sel = document.getElementById('docSelect');
+        if(sel.value){ window.open(sel.value,'_blank'); } 
+        else { alert('Please select a document first!'); } 
+    })();"
+    style="appearance:none; border:0; cursor:pointer;
+           padding:.7em 1.4em; border-radius:999px;
+           background:linear-gradient(135deg,#0d6efd,#3ea1ff,#17c0ff);
+           color:#fff; font-weight:600; font-size:.95rem;
+           box-shadow:0 6px 16px rgba(13,110,253,.35);
+           transition:transform .15s ease, box-shadow .15s ease;">
+    Open
+  </button>
+</div>
 
 </div>
 
