@@ -122,6 +122,15 @@ format:
 
 </style>
 
+<p style="text-align:center;color:#c0392b;font-weight:600;font-size:1rem;margin-top:-.2em;margin-bottom:0.8em;">
+  (This page is still under development) 
+</p>
+<p style="text-align:center;">
+  <a href="/" style="color:#0d6efd;text-decoration:none;font-weight:600;">
+    ⬅ Back to Home
+  </a>
+</p>
+
 <h2 class="section-title" style="border-bottom:1px solid #e5e7eb;
   padding-bottom:.6em;margin-bottom:1.2em;
   display:flex;justify-content:center;align-items:center;">
@@ -130,9 +139,6 @@ format:
        style="max-height:60px;width:auto;display:block;">
 </h2>
 
-<p style="text-align:center;color:#c0392b;font-weight:600;font-size:1rem;margin-top:-.2em;margin-bottom:1.5em;">
-  This page is still under development 
-</p>
 
 <!-- ===== Executive Summary Section ===== -->
 <section id="jj-summary" style="max-width:1000px;margin:2em auto;padding:0 1em;">
