@@ -193,6 +193,28 @@ format:
   </details>
 </section>
 
+<h3 class="section-title" style="font-size:1.4rem;margin-top:1.5em;">Demo Video</h3>
+
+
+<h3 class="section-title">Interactive Dashboard</h3>
+<p style="text-align:center;max-width:800px;margin:0 auto 1em;line-height:1.8;">
+  Built an end-to-end dashboard to visualize churn predictions, customer segments, and retention ROI scenarios.
+</p>
+<div style="text-align:center;">
+  <img src=".png" alt="Dashboard Demo" style="max-width:90%;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.1);">
+</div>
+
+<h3 class="section-title">Tech Stack</h3>
+<p style="text-align:center;max-width:800px;margin:0 auto;line-height:1.8;">
+  <span style="background:#eef4ff;color:#2457d6;padding:.3em .8em;border-radius:999px;margin:.2em;display:inline-block;">Python</span>
+  <span style="background:#eef4ff;color:#2457d6;padding:.3em .8em;border-radius:999px;margin:.2em;display:inline-block;">Scikit-learn</span>
+  <span style="background:#eef4ff;color:#2457d6;padding:.3em .8em;border-radius:999px;margin:.2em;display:inline-block;">XGBoost</span>
+  <span style="background:#eef4ff;color:#2457d6;padding:.3em .8em;border-radius:999px;margin:.2em;display:inline-block;">Random Survival Forest</span>
+  <span style="background:#eef4ff;color:#2457d6;padding:.3em .8em;border-radius:999px;margin:.2em;display:inline-block;">PostgreSQL</span>
+  <span style="background:#eef4ff;color:#2457d6;padding:.3em .8em;border-radius:999px;margin:.2em;display:inline-block;">React</span>
+  <span style="background:#eef4ff;color:#2457d6;padding:.3em .8em;border-radius:999px;margin:.2em;display:inline-block;">Tailwind CSS</span>
+</p>
+
 <div class="section-title">Photo Gallery</div>
 
 <div class="photo-wrap">
