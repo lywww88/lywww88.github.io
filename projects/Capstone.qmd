@@ -122,9 +122,10 @@ format:
 
 </style>
 
-<h2 class="section-title" style="border-bottom:1px solid #e5e7eb;padding-bottom:.4em;margin-bottom:.6em;">
-  Johnson &amp; Johnson Cerenovus Project
+<h2 class="section-title" style="border-bottom:1px solid #e5e7eb;padding-bottom:.6em;margin-bottom:1.2em;display:flex;justify-content:center;align-items:center;">
+  <img src="/images/johnson-johnson.png" alt="Johnson & Johnson Cerenovus Project" style="max-height:60px; width:auto;">
 </h2>
+
 <p style="text-align:center;color:#c0392b;font-weight:600;font-size:1rem;margin-top:-.2em;margin-bottom:1.5em;">
   🚧 This page is still under development 🚧
 </p>
