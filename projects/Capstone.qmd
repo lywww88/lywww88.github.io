@@ -335,7 +335,7 @@ format:
     onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 10px 22px rgba(13,110,253,.45)';"
     onmouseout="this.style.transform='none'; this.style.boxShadow='0 6px 16px rgba(13,110,253,.35)';"
     style="appearance:none; border:0; cursor:pointer; pointer-events:auto;
-           padding:.85em 1.6em; border-radius:8px; /* 方块：圆角改小 */
+           padding:.85em 1.6em; border-radius:8px;
            background:linear-gradient(135deg,#0d6efd,#3ea1ff,#17c0ff);
            color:#fff; font-weight:700; font-size:1rem; letter-spacing:.2px;
            box-shadow:0 6px 16px rgba(13,110,253,.35);
@@ -343,11 +343,6 @@ format:
     Open Dashboard
   </button>
 </div>
-
-<h3 class="section-title" style="border-bottom:1px solid #e5e7eb;
-  padding-bottom:.4em;margin-bottom:1.2em;">
-  Documentation
-</h3>
 
 <h3 class="section-title" style="border-bottom:1px solid #e5e7eb;
   padding-bottom:.4em;margin-bottom:1.2em;">
@@ -375,7 +370,7 @@ format:
         else { alert('Please select a document first!'); } 
     })();"
     style="appearance:none; border:0; cursor:pointer;
-           padding:.7em 1.4em; border-radius:999px;
+           padding:.85em 1.6em; border-radius:8px; 
            background:linear-gradient(135deg,#0d6efd,#3ea1ff,#17c0ff);
            color:#fff; font-weight:600; font-size:.95rem;
            box-shadow:0 6px 16px rgba(13,110,253,.35);
