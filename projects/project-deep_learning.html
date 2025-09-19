@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>project-pixel – Yiwei Lu</title>
+<title>project-deep_learning – Yiwei Lu</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -221,52 +221,42 @@ ul.task-list li input[type="checkbox"] {
 
 
 <style>
-.header-bar {
+.under-dev {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 1em 0;
-}
-
-.header-title {
-  flex-grow: 1;
+  justify-content: center;
+  height: 60vh;
   text-align: center;
-  font-size: 2em;
-  font-weight: 700;
-  margin: 0;
-}
-
-iframe.pdf-reader {
-  width: 100%;
-  height: 90vh;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  color: #444;
+  opacity: 0.85;
+  letter-spacing: 0.5px;
 }
 </style>
-<div class="header-bar">
-<a href="../projects/project.html" class="btn">← Back</a>
-<h1 class="header-title">
-Google Pixel Marketing
-</h1>
-<p><select id="pdf-selector" style="width: 180px; font-size: 1em; padding: 4px;"> <option value="project-pixel-presentation.pdf">Presentation</option> <option value="project-pixel-paper.pdf">Report</option> </select></p>
+<div class="under-dev">
+<p>🚧 This page is under development. Please check back soon.</p>
 </div>
-<iframe id="pdf-frame" class="pdf-reader" src="project-pixel-presentation.pdf" title="Google Pixel Marketing">
-</iframe>
-<script>
-  const selector = document.getElementById('pdf-selector');
-  const iframe = document.getElementById('pdf-frame');
+<div aria-hidden="true" style="border-top: 1px solid #ccc; margin: 1.5em 0;">
 
-  selector.addEventListener('change', function () {
-    iframe.src = this.value;
-  });
-</script>
+</div>
+<p style="text-align: center; color: #aaa; font-size: 0.9em; margin-top: 2em;">
+Let’s stay in touch — here’s where to find me online.
+</p>
+<div class="connect-container" style="display: flex; flex-wrap: wrap; gap: 1em; align-items: center; justify-content: center;">
+<p><a href="https://www.linkedin.com/in/yiwei-lu78" class="btn" target="_blank"> <i class="bi bi-linkedin"></i> LinkedIn </a> <a href="https://wa.me/6266736276" class="btn" target="_blank"> <i class="bi bi-whatsapp"></i> WhatsApp </a> <a href="https://github.com/lywww88" class="btn" target="_blank"> <i class="bi bi-github"></i> GitHub </a> <span style="color: #ccc;">|</span> <a href="mailto:yiweilu36@uci.edu" class="btn"> <i class="bi bi-envelope"></i> Email Me </a> <a href="https://lywww88.github.io/" class="btn"> <i class="bi bi-person-circle"></i> Home Page </a></p>
+</div>
 <div aria-hidden="true" style="border-top: 1px solid #ccc; margin: 1.5em 0;">
 
 </div>
 <p style="text-align: center; color: #888; font-size: 0.85em; margin-top: 3em;">
-© 2025 Yiwei Lu. All rights reserved.
+© <span id="year"></span> Yiwei Lu. All rights reserved.
 </p>
+<script>
+// 自动年份更新
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 
 
