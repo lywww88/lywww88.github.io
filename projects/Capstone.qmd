@@ -8,9 +8,6 @@ format:
     allow-raw-html: true
 ---
 
-<!-- Bootstrap Icons (for the contact button icon) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
 <style>
 .page-intro {
   max-width: 800px;
@@ -54,7 +51,7 @@ format:
 
 .photo-item {
   flex: 0 0 auto;
-  width: 320px;              /* larger thumbnails */
+  width: 320px;              /* 更大一些 */
   height: 200px;
   border-radius: 12px;
   overflow: hidden;
@@ -62,7 +59,7 @@ format:
   scroll-snap-align: start;
   background: #f8f9fb;
   position: relative;
-  cursor: zoom-in;           /* hint zoom */
+  cursor: zoom-in;           /* 提示可放大 */
 }
 .photo-item img {
   width: 100%;
@@ -96,7 +93,7 @@ format:
 .photo-nav.prev { left: 6px; }
 .photo-nav.next { right: 6px; }
 
-/* Lightbox */
+/* Lightbox 大图预览 */
 .lightbox {
   position: fixed; inset: 0;
   background: rgba(0,0,0,.86);
@@ -117,80 +114,13 @@ format:
   color: #111; font-size: 1.2rem; cursor: pointer;
 }
 
-/* ===== Executive Summary & KPIs ===== */
-.exec-summary p{
-  max-width: 900px; margin: 0.6em auto 0; padding: 0 1em;
-  color:#2c3e50; line-height:1.85; font-size:1.05rem;
-}
-
-.kpi-wrap { max-width: 1000px; margin: 0.4em auto 0; padding: 0 1em; }
-.kpi-cards{
-  display:grid; grid-template-columns: repeat(4, minmax(0,1fr));
-  gap: 12px; list-style:none; padding:0; margin: 0 auto 0.8em;
-}
-.kpi{
-  border:1px solid #e7ecf3; border-radius:12px; padding: 1.0em 1.0em;
-  background:#fff; box-shadow: 0 2px 10px rgba(0,0,0,.03);
-  display:flex; flex-direction:column; align-items:flex-start; justify-content:center;
-}
-.kpi-label{ color:#6c7a89; font-size:.92rem; }
-.kpi-value{ color:#0d6efd; font-size:1.5rem; font-weight:800; margin-top:.2rem; letter-spacing:.3px; }
-
-.stack{ display:flex; flex-wrap:wrap; gap:.5em; align-items:center; margin-top:.8em; }
-.stack .tag{
-  display:inline-block; padding:.32em .6em; border-radius:999px; font-size:.82rem; font-weight:600;
-  background:#eef4ff; color:#2457d6; border:1px solid #d7e3ff;
-}
-
-@media (max-width: 900px){
-  .kpi-cards{ grid-template-columns: repeat(2, minmax(0,1fr)); }
-}
 @media (max-width: 520px){
-  .kpi-cards{ grid-template-columns: 1fr; }
   .photo-item { width: 220px; height: 150px; }
   .photo-nav { width: 34px; height: 34px; }
 }
-
-/* ===== Contact CTA button (kept minimal & scoped) ===== */
-.cta-contact{
-  display:inline-flex; align-items:center; gap:.6em;
-  padding:.7em 1.25em; border-radius:999px;
-  background:linear-gradient(135deg,#0d6efd 0%,#3ea1ff 50%,#17c0ff 100%);
-  color:#fff; font-weight:800; letter-spacing:.2px; text-decoration:none;
-  box-shadow:0 12px 26px rgba(13,110,253,.35), inset 0 -2px 0 rgba(0,0,0,.15);
-  position:relative; overflow:hidden;
-  transition:transform .16s ease, box-shadow .16s ease, filter .16s ease;
-}
-.cta-contact:hover{
-  transform:translateY(-3px);
-  box-shadow:0 18px 36px rgba(13,110,253,.45), 0 0 0 4px rgba(13,110,253,.12);
-}
-.cta-contact:active{ transform:translateY(0) scale(.98); }
-.cta-contact:focus-visible{
-  outline:none;
-  box-shadow:0 0 0 4px rgba(13,110,253,.35), 0 12px 26px rgba(13,110,253,.35);
-}
-.cta-contact i{ font-size:1.05rem; line-height:1; transition:transform .16s ease; }
-.cta-contact:hover i{ transform:translateX(2px); }
-.cta-contact .sheen{
-  position:absolute; inset:0 auto 0 -150%;
-  width:50%; transform:skewX(-20deg);
-  background:linear-gradient(90deg,transparent 0,rgba(255,255,255,.25) 50%,transparent 100%);
-  pointer-events:none;
-}
-.cta-contact:hover .sheen{ animation:sheen .9s ease; }
-@keyframes sheen{ to{ left:150%; } }
-.cta-contact .ripple{
-  position:absolute; border-radius:999px; pointer-events:none;
-  transform:translate(-50%,-50%); width:0; height:0; opacity:.5;
-  background:rgba(255,255,255,.35); animation:ripple .45s ease-out forwards;
-}
-@keyframes ripple{ to{ width:240px; height:240px; opacity:0; } }
-.cta-wrap{ display:flex; justify-content:center; margin:1.2em 0 1em; width:100%; }
 </style>
 
 <div class="section-title">Johnson & Johnson Cerenovus Project</div>
-
 <div class="page-intro">
   <strong>This page is still under development</strong><br><br>
   Led a data-driven analysis of sales performance and customer retention for Cerenovus, a Johnson &amp; Johnson medical device division. 
@@ -200,95 +130,15 @@ format:
   <em>Detailed write-up and dashboards coming soon. Stay tuned!</em>
 </div>
 
-<!-- ===== Executive Summary ===== -->
-<section class="exec-wrap" aria-labelledby="exec-title">
-  <h2 id="exec-title" class="section-title" style="margin-top:2em;">Executive Summary</h2>
-  <div class="exec-summary">
-    <p>
-      Partnered with <strong>Johnson & Johnson – Cerenovus</strong> to build a data-driven retention program for neurovascular products.
-      We engineered features from multi-year transactional data (FISCAL_YEAR / FISCAL_MONTH / SALES), trained churn models
-      (Logistic Regression, XGBoost, Random Survival Forest), and delivered an interactive React dashboard for marketing and sales.
-      The solution identifies high-risk accounts early, segments customers by value and behavior, and recommends targeted actions.
-    </p>
-  </div>
-</section>
-
-<!-- ===== KPIs + Tech Stack ===== -->
-<section class="kpi-wrap" aria-labelledby="kpi-title">
-  <h2 id="kpi-title" class="section-title">Key Outcomes</h2>
-
-  <ul class="kpi-cards" role="list">
-    <li class="kpi">
-      <span class="kpi-label">Churn Model AUC</span>
-      <span class="kpi-value">0.86</span>
-    </li>
-    <li class="kpi">
-      <span class="kpi-label">Top-Decile Capture</span>
-      <span class="kpi-value">62%</span>
-    </li>
-    <li class="kpi">
-      <span class="kpi-label">Projected ROI (Annual)</span>
-      <span class="kpi-value">+$1.2M</span>
-    </li>
-    <li class="kpi">
-      <span class="kpi-label">Retention Uplift</span>
-      <span class="kpi-value">+7.8%</span>
-    </li>
-  </ul>
-
-  <div class="stack">
-    <strong>Tech Stack:</strong>
-    <span class="tag">Python</span>
-    <span class="tag">Pandas</span>
-    <span class="tag">Scikit-learn</span>
-    <span class="tag">XGBoost</span>
-    <span class="tag">RandomSurvivalForest</span>
-    <span class="tag">PostgreSQL</span>
-    <span class="tag">React</span>
-    <span class="tag">TypeScript</span>
-    <span class="tag">Tailwind</span>
-  </div>
-</section>
-
-<!-- ===== Brief expandable sections ===== -->
-<section class="brief-sections" aria-label="Brief Sections" style="max-width:1000px;margin:1.2em auto 0;padding:0 1em;">
-  <details open>
-    <summary><strong>Objectives</strong></summary>
-    <ul>
-      <li>Predict account churn risk early and prioritize outreach.</li>
-      <li>Segment customers by value, frequency, and product preferences for tailored campaigns.</li>
-      <li>Provide an actionable dashboard that links predictions to next-best-actions.</li>
-    </ul>
-  </details>
-
-  <details style="margin-top:.6em;">
-    <summary><strong>Methods</strong></summary>
-    <ul>
-      <li>Feature engineering from fiscal time series: RFM, seasonality, product mix, pricing tiers.</li>
-      <li>Models: Logistic Regression, XGBoost, Random Survival Forest; evaluation by AUC, PR, C-index.</li>
-      <li>Customer segmentation (K-Means) to identify Premium Spenders, Low Engagement, etc.</li>
-    </ul>
-  </details>
-
-  <details style="margin-top:.6em;">
-    <summary><strong>Business Impact</strong></summary>
-    <ul>
-      <li>Top-decile capture of 62% churners enables focused retention offers.</li>
-      <li>Projected +$1.2M annual ROI from targeted campaigns under conservative scenarios.</li>
-      <li>Dashboard closes the loop: prediction → action → monitoring for continuous improvement.</li>
-    </ul>
-  </details>
-</section>
-
 <div class="section-title">Photo Gallery</div>
 
 <div class="photo-wrap">
   <button class="photo-nav prev" type="button" aria-label="Previous" title="Previous">&#8249;</button>
   <div class="photo-track" id="photo-track">
-    <figure class="photo-item"><img src="/images/capstone1.jpeg"  alt="Capstone Team Working Session"></figure>
-    <figure class="photo-item"><img src="/images/JJ-cover.png"   alt="Data Dashboard Demo"></figure>
-    <figure class="photo-item"><img src="/images/capstone3.jpeg" alt="Presentation Day"></figure>
-    <figure class="photo-item"><img src="/images/capstone4.jpeg" alt="More Work"></figure>
+<figure class="photo-item"><img src="/images/capstone1.jpeg"  alt="Capstone Team Working Session"></figure>
+<figure class="photo-item"><img src="/images/JJ-cover.png"   alt="Data Dashboard Demo"></figure>
+<figure class="photo-item"><img src="/images/capstone3.jpeg" alt="Presentation Day"></figure>
+<figure class="photo-item"><img src="/images/capstone4.jpeg"  alt="More Work"></figure>
   </div>
   <button class="photo-nav next" type="button" aria-label="Next" title="Next">&#8250;</button>
 </div>
@@ -311,14 +161,14 @@ format:
   prev && prev.addEventListener('click', ()=> track.scrollBy({ left: -getStep(), behavior: 'smooth' }));
   next && next.addEventListener('click', ()=> track.scrollBy({ left:  getStep(), behavior: 'smooth' }));
 
-  // keyboard support
+  // 键盘左右键也可滚动
   track.addEventListener('keydown', (e)=>{
     if (e.key === 'ArrowLeft')  { e.preventDefault(); track.scrollBy({left: -getStep(), behavior:'smooth'}); }
     if (e.key === 'ArrowRight') { e.preventDefault(); track.scrollBy({left:  getStep(), behavior:'smooth'}); }
   });
-  track.tabIndex = 0;
+  track.tabIndex = 0; // 使其可获得焦点接收键盘事件
 
-  // Lightbox
+  // Lightbox 预览
   const lb = document.createElement('div');
   lb.className = 'lightbox';
   lb.innerHTML = '<button class="lb-close" aria-label="Close">×</button><img alt="Preview">';
@@ -342,56 +192,106 @@ format:
 ---
 
 <div class="connect-container" style="display:flex; flex-wrap:wrap; gap:1em; align-items:center;">
-  <!-- Contact Center Button -->
-  <div class="cta-wrap">
-    <a href="/contact.html"
-      class="cta-contact"
-      aria-label="Open contact form"
-      onclick="return openContactWin(event, this);">
-      <i class="bi bi-chat-dots"></i>
-      <span>Let’s get in touch!</span>
-      <span class="sheen" aria-hidden="true"></span>
-    </a>
-  </div>
-</div>
 
+<!-- ① 按钮特效：CSS（不动其它样式） -->
+<style>
+  .cta-contact{
+    display:inline-flex; align-items:center; gap:.6em;
+    padding:.7em 1.25em; border-radius:999px;
+    background:linear-gradient(135deg,#0d6efd 0%,#3ea1ff 50%,#17c0ff 100%);
+    color:#fff; font-weight:800; letter-spacing:.2px; text-decoration:none;
+    box-shadow:0 12px 26px rgba(13,110,253,.35), inset 0 -2px 0 rgba(0,0,0,.15);
+    position:relative; overflow:hidden;
+    transition:transform .16s ease, box-shadow .16s ease, filter .16s ease;
+  }
+  .cta-contact:hover{
+    transform:translateY(-3px);
+    box-shadow:0 18px 36px rgba(13,110,253,.45), 0 0 0 4px rgba(13,110,253,.12);
+  }
+  .cta-contact:active{ transform:translateY(0) scale(.98); }
+  .cta-contact:focus-visible{
+    outline:none;
+    box-shadow:0 0 0 4px rgba(13,110,253,.35), 0 12px 26px rgba(13,110,253,.35);
+  }
+  .cta-contact i{ font-size:1.05rem; line-height:1; transition:transform .16s ease; }
+  .cta-contact:hover i{ transform:translateX(2px); }
+
+  /* 光带掠过 */
+  .cta-contact .sheen{
+    position:absolute; inset:0 auto 0 -150%;
+    width:50%; transform:skewX(-20deg);
+    background:linear-gradient(90deg,transparent 0,rgba(255,255,255,.25) 50%,transparent 100%);
+    pointer-events:none;
+  }
+  .cta-contact:hover .sheen{ animation:sheen .9s ease; }
+  @keyframes sheen{ to{ left:150%; } }
+
+  /* 点击涟漪 */
+  .cta-contact .ripple{
+    position:absolute; border-radius:999px; pointer-events:none;
+    transform:translate(-50%,-50%); width:0; height:0; opacity:.5;
+    background:rgba(255,255,255,.35); animation:ripple .45s ease-out forwards;
+  }
+  @keyframes ripple{ to{ width:240px; height:240px; opacity:0; } }
+
+  /* 容器仅用于居中，不遮挡版权文字 */
+  .cta-wrap{ display:flex; justify-content:center; margin:1.2em 0 1em; width:100%; }
+</style>
+
+<!-- ② 居中弹窗 + 防止原页跳走：JS -->
 <script>
-function openContactWin(e, a){
-  e.preventDefault();
+  function openContactWin(e, a){
+    e.preventDefault(); // 先拦截默认跳转（解决“弹窗+原页跳走”）
 
-  // small screens: open in same tab
-  if (window.matchMedia && window.matchMedia('(max-width:640px)').matches){
-    window.location.href = a.href;
+    // 小屏直接当前页打开
+    if (window.matchMedia && window.matchMedia('(max-width:640px)').matches){
+      window.location.href = a.href;
+      return false;
+    }
+
+    // 用 outerWidth/outerHeight + screenX/screenY 居中，兼容多显示器与缩放
+    const w = 780, h = 760;
+    const sx = (window.screenX ?? window.screenLeft ?? 0);
+    const sy = (window.screenY ?? window.screenTop ?? 0);
+    const ow = (window.outerWidth  ?? window.innerWidth);
+    const oh = (window.outerHeight ?? window.innerHeight);
+    const left = Math.max(0, Math.round(sx + (ow - w)/2));
+    const top  = Math.max(0, Math.round(sy + (oh - h)/2));
+    const opts = `popup=1,width=${w},height=${h},left=${left},top=${top},resizable=yes,scrollbars=yes`;
+
+    const win = window.open(a.href, 'contactWin', opts);
+    if (win){
+      try { win.focus(); } catch {}
+
+      // 点击位置涟漪效果
+      const rect = a.getBoundingClientRect();
+      const r = document.createElement('span');
+      r.className = 'ripple';
+      r.style.left = (e.clientX - rect.left) + 'px';
+      r.style.top  = (e.clientY - rect.top ) + 'px';
+      a.appendChild(r);
+      setTimeout(()=>r.remove(), 500);
+    } else {
+      // 被拦截则回退为同页跳转
+      window.location.href = a.href;
+    }
     return false;
   }
-
-  const w = 780, h = 760;
-  const sx = (window.screenX ?? window.screenLeft ?? 0);
-  const sy = (window.screenY ?? window.screenTop ?? 0);
-  const ow = (window.outerWidth  ?? window.innerWidth);
-  const oh = (window.outerHeight ?? window.innerHeight);
-  const left = Math.max(0, Math.round(sx + (ow - w)/2));
-  const top  = Math.max(0, Math.round(sy + (oh - h)/2));
-  const opts = `popup=1,width=${w},height=${h},left=${left},top=${top},resizable=yes,scrollbars=yes`;
-
-  const win = window.open(a.href, 'contactWin', opts);
-  if (win){
-    try { win.focus(); } catch {}
-
-    // click ripple
-    const rect = a.getBoundingClientRect();
-    const r = document.createElement('span');
-    r.className = 'ripple';
-    r.style.left = (e.clientX - rect.left) + 'px';
-    r.style.top  = (e.clientY - rect.top ) + 'px';
-    a.appendChild(r);
-    setTimeout(()=>r.remove(), 500);
-  } else {
-    window.location.href = a.href;
-  }
-  return false;
-}
 </script>
+
+<!-- ③ 居中按钮（只改这里） -->
+<div class="cta-wrap">
+  <a href="/contact.html"
+     class="cta-contact"
+     aria-label="Open contact form"
+     onclick="return openContactWin(event, this);">
+    <i class="bi bi-chat-dots"></i>
+    <span>Let’s get in touch!</span>
+    <span class="sheen" aria-hidden="true"></span>
+  </a>
+</div>
+
+</div>
 
 <div aria-hidden="true" style="border-top: 1px solid #ccc; margin: 1.5em 0;"></div>
 
