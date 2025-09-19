@@ -139,14 +139,14 @@ Conducted a comprehensive analysis of obesity risk using classification models, 
 :::
 
 ::: {.project-card-page}
-## Deep Learning Chip Inspector {#pixel-strategy}
+## Deep Learning Chip Inspector {#Chip-Inspector}
 
 **Deep Learning Classification and Automated Chip Inspection**  
 Deep learning and computer vision are applied to identify defective potato chips and ensure consistent product quality. The automated system reduces labor costs, prevents waste, and safeguards brand reputation.
 
 <a href="/projects/project-deep_learning.html" class="btn">Read More</a>
 
-<img src="../images/pixel-cover.png">
+<img src="../images/chip-cover.png">
 :::
 
 ::: {.project-card-page}
