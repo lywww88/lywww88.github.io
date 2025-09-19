@@ -141,25 +141,28 @@ format:
     segments with tailored campaigns.
   </p>
 
-  <h3 class="section-title" style="font-size:1.4rem;margin-top:1.5em;">Key Outcomes</h3>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-bottom:1.2em;">
-    <div style="border:1px solid #e7ecf3;border-radius:12px;padding:1em;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.03);">
-      <div style="color:#6c7a89;font-size:.92rem;">Churn Model AUC</div>
-      <div style="color:#0d6efd;font-size:1.5rem;font-weight:800;">0.86</div>
-    </div>
-    <div style="border:1px solid #e7ecf3;border-radius:12px;padding:1em;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.03);">
-      <div style="color:#6c7a89;font-size:.92rem;">Top-Decile Capture</div>
-      <div style="color:#0d6efd;font-size:1.5rem;font-weight:800;">62%</div>
-    </div>
-    <div style="border:1px solid #e7ecf3;border-radius:12px;padding:1em;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.03);">
-      <div style="color:#6c7a89;font-size:.92rem;">Projected ROI (Annual)</div>
-      <div style="color:#0d6efd;font-size:1.5rem;font-weight:800;">+$1.2M</div>
-    </div>
-    <div style="border:1px solid #e7ecf3;border-radius:12px;padding:1em;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.03);">
-      <div style="color:#6c7a89;font-size:.92rem;">Retention Uplift</div>
-      <div style="color:#0d6efd;font-size:1.5rem;font-weight:800;">+7.8%</div>
-    </div>
-  </div>
+<h3 class="section-title" style="font-size:1.4rem;margin-top:1.5em;">Key Outcomes</h3>
+
+<ul role="list" style="
+  list-style:none;padding:0;margin:.4em auto 1.2em;max-width:1000px;display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;">
+  <li style="border:1px solid #e7ecf3;border-radius:12px;padding:1em;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.03);">
+    <div style="color:#6c7a89;font-size:.92rem;">Churn Model AUC</div>
+    <div style="color:#0d6efd;font-size:1.5rem;font-weight:800;">0.86</div>
+  </li>
+  <li style="border:1px solid #e7ecf3;border-radius:12px;padding:1em;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.03);">
+    <div style="color:#6c7a89;font-size:.92rem;">Top-Decile Capture</div>
+    <div style="color:#0d6efd;font-size:1.5rem;font-weight:800;">62%</div>
+  </li>
+  <li style="border:1px solid #e7ecf3;border-radius:12px;padding:1em;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.03);">
+    <div style="color:#6c7a89;font-size:.92rem;">Projected ROI (Annual)</div>
+    <div style="color:#0d6efd;font-size:1.5rem;font-weight:800;">+$1.2M</div>
+  </li>
+  <li style="border:1px solid #e7ecf3;border-radius:12px;padding:1em;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.03);">
+    <div style="color:#6c7a89;font-size:.92rem;">Retention Uplift</div>
+    <div style="color:#0d6efd;font-size:1.5rem;font-weight:800;">+7.8%</div>
+  </li>
+</ul>
 
   <details open style="margin:.6em 0;">
     <summary><strong>Objectives</strong></summary>
