@@ -12,10 +12,18 @@
       --muted:#6b7280;
       --card:#ffffff;
       --line:#e5e7eb;
-      --primary:#0d6efd;    /* 主色：蓝 */
+      --primary:#0d6efd;    /* 主蓝 */
       --primary-2:#3ea1ff;
       --primary-3:#17c0ff;
-      --lucky-1:#ff0066;    /* Lucky 夸张渐变 */
+
+      --secondary-fill:#eef5ff; /* 二级：浅蓝填充 */
+      --secondary-border:#d6e4ff;
+
+      --tertiary-fill:rgba(13,110,253,.06); /* 三级：更淡的浅蓝填充 */
+      --tertiary-fill-hover:rgba(13,110,253,.12);
+      --tertiary-border:rgba(13,110,253,.25);
+
+      --lucky-1:#ff0066;   /* Lucky 夸张渐变 */
       --lucky-2:#ff5e00;
       --lucky-3:#ffb300;
     }
@@ -26,6 +34,13 @@
         --muted:#9aa7b2;
         --card:#0f172a;
         --line:#1f2937;
+
+        --secondary-fill:#0f1c32;
+        --secondary-border:#1b2a45;
+
+        --tertiary-fill:rgba(62,161,255,.10);
+        --tertiary-fill-hover:rgba(62,161,255,.18);
+        --tertiary-border:rgba(62,161,255,.35);
       }
     }
 
@@ -38,7 +53,7 @@
       padding:4rem 1rem 3rem;
       display:flex; align-items:center; justify-content:center;
       min-height:100vh;
-      text-align:center; /* 全局居中基调 */
+      text-align:center;
     }
     .wrap{
       width:100%;
@@ -48,7 +63,7 @@
       border-radius:16px;
       padding:2rem 1.5rem;
       box-shadow:0 10px 30px rgba(0,0,0,.08);
-      margin:0 auto; /* 居中容器 */
+      margin:0 auto;
     }
     .top{
       display:flex; align-items:center; gap:1rem; justify-content:center;
@@ -76,35 +91,45 @@
       margin:1.25rem 0 1.75rem;
     }
     .btn{
-      display:inline-block; padding:.7em 1.2em; border-radius:10px; /* 方块感稍强一点 */
-      color:#fff; text-decoration:none; font-weight:700; font-size:.95rem;
-      box-shadow:0 6px 16px rgba(13,110,253,.28);
-      transition:transform .15s ease, box-shadow .15s ease, filter .15s ease;
+      display:inline-block; padding:.7em 1.2em; border-radius:10px;
+      text-decoration:none; font-weight:700; font-size:.95rem;
+      transition:transform .15s ease, box-shadow .15s ease, filter .15s ease, background .15s ease, border-color .15s ease;
       will-change: transform;
     }
-    .btn:hover{ transform:translateY(-2px); filter:brightness(1.03); }
+    .btn:hover{ transform:translateY(-2px); filter:brightness(1.02); }
     .btn:active{ transform:translateY(0); }
 
-    /* 统一主色按钮（Home / Projects / Startup / About / Resume） */
+    /* 一级：主蓝渐变（Resume / 也可用于特别重要的导航） */
     .btn-primary{
+      color:#fff;
       background:linear-gradient(135deg,var(--primary),var(--primary-2),var(--primary-3));
+      box-shadow:0 6px 16px rgba(13,110,253,.28);
     }
 
-    /* Lucky 夸张渐变 + 更强阴影 */
+    /* 一级（突出）：Lucky 夸张暖色 */
     .btn-lucky{
+      color:#fff;
       background:linear-gradient(135deg,var(--lucky-1),var(--lucky-2),var(--lucky-3));
       box-shadow:0 10px 24px rgba(255, 102, 0, .35);
     }
 
-    /* 三级弱化按钮（Contact / Email） */
-    .btn-ghost{
-      background:transparent;
+    /* 二级：浅蓝填充 + 蓝字 + 细边框（顶部导航） */
+    .btn-secondary{
       color:var(--primary);
-      border:1px solid var(--line);
-      box-shadow:none;
+      background:var(--secondary-fill);
+      border:1px solid var(--secondary-border);
+      box-shadow:0 3px 10px rgba(13,110,253,.12);
     }
-    .btn-ghost:hover{
-      background:rgba(13,110,253,.05);
+
+    /* 三级：更淡的浅蓝填充（Contact / Email）——不至于太弱 */
+    .btn-tertiary{
+      color:var(--primary);
+      background:var(--tertiary-fill);
+      border:1px solid var(--tertiary-border);
+      box-shadow:0 2px 8px rgba(13,110,253,.10);
+    }
+    .btn-tertiary:hover{
+      background:var(--tertiary-fill-hover);
     }
 
     .grid{ display:grid; gap:1rem; grid-template-columns: 1fr; margin-top:.5rem; text-align:center; }
@@ -134,16 +159,16 @@
       <a href="/" style="color:#0d6efd; font-weight:600; text-decoration:none;">go back to the homepage</a>.
     </div>
 
-    <!-- 顶部主导航按钮（统一主色 & 居中） -->
+    <!-- 顶部主导航（二级样式） -->
     <div class="controls">
-      <a class="btn btn-primary" href="/">Home</a>
-      <a class="btn btn-primary" href="/projects/project.html">Projects</a>
-      <a class="btn btn-primary" href="/startup/journey.html">Startup</a>
-      <a class="btn btn-primary" href="/about.html">About</a>
+      <a class="btn btn-secondary" href="/">Home</a>
+      <a class="btn btn-secondary" href="/projects/project.html">Projects</a>
+      <a class="btn btn-secondary" href="/startup/journey.html">Startup</a>
+      <a class="btn btn-secondary" href="/about.html">About</a>
     </div>
 
     <div class="grid">
-      <!-- 左：Lucky + Resume（Lucky最强对比，Resume主色） -->
+      <!-- 左：Lucky + Resume（Lucky最强、Resume主蓝） -->
       <div class="card">
         <h3>Explore</h3>
         <p class="muted">Jump to a random project, or view my resume.</p>
@@ -153,13 +178,13 @@
         </div>
       </div>
 
-      <!-- 右：Contact + Email（同一框，弱化） -->
+      <!-- 右：Contact + Email（三级：淡填充，不至于过弱） -->
       <div class="card">
         <h3>Need help?</h3>
         <p class="muted">If you believe this is an error, please let me know.</p>
         <div class="controls">
-          <a class="btn btn-ghost" href="/contact.html">Contact</a>
-          <a class="btn btn-ghost" href="mailto:yiweil36@uci.edu">Email Me</a>
+          <a class="btn btn-tertiary" href="/contact.html">Contact</a>
+          <a class="btn btn-tertiary" href="mailto:yiweil36@uci.edu">Email Me</a>
         </div>
       </div>
     </div>
@@ -172,7 +197,7 @@
 
   <script>
     (function(){
-      var u = window.location.href;
+      var u = window.location.href; // 如需更简洁：改成 window.location.pathname
       var hint = document.getElementById('hint');
       var urlBox = document.getElementById('url');
       if(hint){
@@ -190,8 +215,11 @@
       var projects = [
         '/projects/Capstone.html',
         '/projects/project.html'
-        // '/projects/your-project-1.html',
-        // '/projects/your-project-2.html'
+        '/projects/project-pixel.html'
+        '/projects/project-consulting.html'
+        '/projects/project-airbnb.html'
+        '/projects/project-anemia.html'
+
       ];
       var i = Math.floor(Math.random() * projects.length);
       window.location.href = projects[i];
