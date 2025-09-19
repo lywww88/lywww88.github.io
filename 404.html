@@ -85,7 +85,7 @@
     .btn:hover{ transform:translateY(-2px); filter:brightness(1.03); }
     .btn:active{ transform:translateY(0); }
 
-    /* 统一主色按钮（Home / Projects / Startup / About / Resume / Contact） */
+    /* 统一主色按钮（Home / Projects / Startup / About / Resume） */
     .btn-primary{
       background:linear-gradient(135deg,var(--primary),var(--primary-2),var(--primary-3));
     }
@@ -94,6 +94,17 @@
     .btn-lucky{
       background:linear-gradient(135deg,var(--lucky-1),var(--lucky-2),var(--lucky-3));
       box-shadow:0 10px 24px rgba(255, 102, 0, .35);
+    }
+
+    /* 三级弱化按钮（Contact / Email） */
+    .btn-ghost{
+      background:transparent;
+      color:var(--primary);
+      border:1px solid var(--line);
+      box-shadow:none;
+    }
+    .btn-ghost:hover{
+      background:rgba(13,110,253,.05);
     }
 
     .grid{ display:grid; gap:1rem; grid-template-columns: 1fr; margin-top:.5rem; text-align:center; }
@@ -132,7 +143,7 @@
     </div>
 
     <div class="grid">
-      <!-- 左：Lucky + Resume（按钮居中，色系统一；Lucky更夸张） -->
+      <!-- 左：Lucky + Resume（Lucky最强对比，Resume主色） -->
       <div class="card">
         <h3>Explore</h3>
         <p class="muted">Jump to a random project, or view my resume.</p>
@@ -142,13 +153,13 @@
         </div>
       </div>
 
-      <!-- 右：Contact + Email（同一框，统一主色） -->
+      <!-- 右：Contact + Email（同一框，弱化） -->
       <div class="card">
         <h3>Need help?</h3>
         <p class="muted">If you believe this is an error, please let me know.</p>
         <div class="controls">
-          <a class="btn btn-primary" href="/contact.html">Contact</a>
-          <a class="btn btn-primary" href="mailto:yiweil36@uci.edu">Email Me</a>
+          <a class="btn btn-ghost" href="/contact.html">Contact</a>
+          <a class="btn btn-ghost" href="mailto:yiweil36@uci.edu">Email Me</a>
         </div>
       </div>
     </div>
