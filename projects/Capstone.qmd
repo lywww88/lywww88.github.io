@@ -120,31 +120,6 @@ format:
   .photo-nav { width: 34px; height: 34px; }
 }
 
-
-/* --- Normalize <details>/<summary> to align with your sections --- */
-details { max-width: 1000px; margin: 0 auto; padding: 0 1em; }
-
-/* 隐藏默认的小三角，自己画，保持风格统一 */
-details > summary::-webkit-details-marker { display: none; }
-details > summary { list-style: none; cursor: pointer; }
-
-/* 让 summary 的字跟“小节标题”一致（更小一号的 section-title 风格） */
-details > summary {
-  color: #2c3e50;
-  font-weight: 700;
-  font-size: 1.05rem;          /* 和你正文比例匹配 */
-  line-height: 1.6;
-  display: flex; align-items: center; gap: .5rem;
-  padding: .4em 0;
-}
-
-/* 自定义展开/收起的小箭头，和你页面风格一致 */
-details > summary::before { content: "▸"; color: #6c7a89; font-weight: 700; }
-details[open] > summary::before { content: "▾"; }
-
-/* 折叠内容的左右内边距微调，视觉上和正文对齐 */
-details > *:not(summary) { padding-left: 1.4rem; }
-
 </style>
 
 <div class="section-title">Johnson & Johnson Cerenovus Project - under development</div>
@@ -328,7 +303,9 @@ details > *:not(summary) { padding-left: 1.4rem; }
   </iframe>
 </section>
 
-<h3 class="section-title">Interactive Dashboard</h3>
+<h3 class="section-title" style="border-bottom:1px solid #e5e7eb;padding-bottom:.4em;margin-bottom:1.2em;">
+  Interactive Dashboard
+</h3>
 <p style="text-align:center;max-width:800px;margin:0 auto 1em;line-height:1.8;">
   Built an end-to-end dashboard to visualize churn predictions, customer segments, and retention ROI scenarios.
 </p>
@@ -349,17 +326,25 @@ details > *:not(summary) { padding-left: 1.4rem; }
   </button>
 </div>
 
-<h3 class="section-title">Tech Stack</h3>
+<h3 class="section-title" style="border-bottom:1px solid #e5e7eb;padding-bottom:.4em;margin-bottom:1.2em;">
+  Tech Stack
+</h3>
 <p style="text-align:center;max-width:800px;margin:0 auto;line-height:1.8;">
   <span style="background:#eef4ff;color:#2457d6;padding:.3em .8em;border-radius:999px;margin:.2em;display:inline-block;">Python</span>
   <span style="background:#eef4ff;color:#2457d6;padding:.3em .8em;border-radius:999px;margin:.2em;display:inline-block;">XGBoost</span>
   <span style="background:#eef4ff;color:#2457d6;padding:.3em .8em;border-radius:999px;margin:.2em;display:inline-block;">Random Survival Forest</span>
+  <span style="background:#eef4ff;color:#2457d6;padding:.3em .8em;border-radius:999px;margin:.2em;display:inline-block;">Scikit-learn</span>
   <span style="background:#eef4ff;color:#2457d6;padding:.3em .8em;border-radius:999px;margin:.2em;display:inline-block;">PostgreSQL</span>
   <span style="background:#eef4ff;color:#2457d6;padding:.3em .8em;border-radius:999px;margin:.2em;display:inline-block;">React</span>
   <span style="background:#eef4ff;color:#2457d6;padding:.3em .8em;border-radius:999px;margin:.2em;display:inline-block;">Tailwind CSS</span>
+  <span style="background:#eef4ff;color:#2457d6;padding:.3em .8em;border-radius:999px;margin:.2em;display:inline-block;">Flask API</span>
+  <span style="background:#eef4ff;color:#2457d6;padding:.3em .8em;border-radius:999px;margin:.2em;display:inline-block;">Power BI</span>
+  <span style="background:#eef4ff;color:#2457d6;padding:.3em .8em;border-radius:999px;margin:.2em;display:inline-block;">Tableau</span>
 </p>
 
-<div class="section-title">Photo Gallery</div>
+<h3 class="section-title" style="border-bottom:1px solid #e5e7eb;padding-bottom:.4em;margin-bottom:1.2em;">
+  Photo Gallery
+</h3>
 
 <div class="photo-wrap">
   <button class="photo-nav prev" type="button" aria-label="Previous" title="Previous">&#8249;</button>
