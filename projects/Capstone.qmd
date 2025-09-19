@@ -125,7 +125,7 @@ format:
 <h2 class="section-title" style="border-bottom:1px solid #e5e7eb;
   padding-bottom:.6em;margin-bottom:1.2em;
   display:flex;justify-content:center;align-items:center;">
-  <img src="/images/johnson-johnson.png?v=1"
+  <img src="/images/JNJ.png?v=1"
        alt="Johnson & Johnson Cerenovus Project"
        style="max-height:60px;width:auto;display:block;">
 </h2>
