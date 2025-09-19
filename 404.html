@@ -4,21 +4,20 @@
   <meta charset="UTF-8" />
   <title>404 — Page Not Found</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <!-- 可选：如果有站点 favicon，可保留；否则删除下一行 -->
   <link rel="icon" href="/favicon.ico">
   <style>
     :root{
-      --bg:#f8fafc;      /* 背景 */
-      --fg:#243447;      /* 正文 */
-      --muted:#6b7280;   /* 次要文字 */
-      --card:#ffffff;    /* 卡片底色 */
-      --line:#e5e7eb;    /* 细线 */
-      --primary:#0d6efd; /* 主蓝 */
+      --bg:#f8fafc;
+      --fg:#243447;
+      --muted:#6b7280;
+      --card:#ffffff;
+      --line:#e5e7eb;
+      --primary:#0d6efd;
       --primary-2:#3ea1ff;
       --primary-3:#17c0ff;
-      --ok:#28a745;      /* 绿 */
-      --violet:#6f42c1;  /* 紫 */
-      --orange:#fd7e14;  /* 橙 */
+      --ok:#28a745;
+      --violet:#6f42c1;
+      --orange:#fd7e14;
     }
     @media (prefers-color-scheme: dark){
       :root{
@@ -33,7 +32,7 @@
     *{box-sizing:border-box}
     body{
       margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
       background:var(--bg);
       color:var(--fg);
       padding:4rem 1rem 3rem;
@@ -61,14 +60,13 @@
       box-shadow:0 12px 26px rgba(13,110,253,.35);
     }
     h1{ margin:0; font-size:2rem; font-weight:800; letter-spacing:.2px; }
-    p.lead{ margin:.5rem 0 1.2rem; color:var(--muted); font-size:1.05rem; text-align:center; }
 
     .hint{
       background: rgba(13,110,253,.08);
       border:1px dashed rgba(13,110,253,.35);
       color: var(--fg);
       padding:.75rem 1rem; border-radius:10px; margin:0 auto 1.25rem; max-width:720px;
-      font-size:.95rem;
+      font-size:.95rem; text-align:center;
     }
 
     .controls{
@@ -80,56 +78,45 @@
       color:#fff; text-decoration:none; font-weight:700; font-size:.95rem;
       box-shadow:0 6px 16px rgba(13,110,253,.28);
       transition:transform .15s ease, box-shadow .15s ease, filter .15s ease;
-      will-change: transform;
     }
     .btn:hover{ transform:translateY(-2px); filter:brightness(1.03); }
     .btn:active{ transform:translateY(0); }
 
     .btn-primary{ background:linear-gradient(135deg,var(--primary),var(--primary-2),var(--primary-3)); }
-    .btn-green{ background:linear-gradient(135deg,var(--ok),#38c172,#51d88a); box-shadow:0 6px 16px rgba(40,167,69,.28); }
-    .btn-violet{ background:linear-gradient(135deg,var(--violet),#8b5cf6,#a78bfa); box-shadow:0 6px 16px rgba(111,66,193,.28); }
-    .btn-orange{ background:linear-gradient(135deg,var(--orange),#f59e0b,#fbbf24); box-shadow:0 6px 16px rgba(253,126,20,.28); }
-    .btn-ghost{
-      background:transparent; color:var(--primary);
-      border:1px solid var(--line);
-      box-shadow:none;
-    }
+    .btn-green{ background:linear-gradient(135deg,var(--ok),#38c172,#51d88a); }
+    .btn-violet{ background:linear-gradient(135deg,var(--violet),#8b5cf6,#a78bfa); }
+    .btn-orange{ background:linear-gradient(135deg,var(--orange),#f59e0b,#fbbf24); }
+    .btn-ghost{ background:transparent; color:var(--primary); border:1px solid var(--line); }
 
-    .grid{
-      display:grid; gap:1rem; grid-template-columns: 1fr; margin-top:.5rem;
-    }
+    .grid{ display:grid; gap:1rem; grid-template-columns: 1fr; margin-top:.5rem; }
     @media(min-width:720px){
       .grid{ grid-template-columns: 1fr 1fr; }
     }
-    .card{
-      border:1px solid var(--line); border-radius:12px; padding:1rem;
-      background:var(--card);
-    }
+    .card{ border:1px solid var(--line); border-radius:12px; padding:1rem; background:var(--card); }
     .card h3{ margin:.2rem 0 .4rem; font-size:1.05rem; }
     .muted{ color:var(--muted); font-size:.95rem; }
 
-    .footer{
-      margin-top:1.5rem; text-align:center; color:var(--muted); font-size:.9rem;
-    }
-    code{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+    .footer{ margin-top:1.5rem; text-align:center; color:var(--muted); font-size:.9rem; }
+    code{ font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
   </style>
 </head>
 <body>
   <main class="wrap" role="main">
     <div class="top">
       <div class="badge">404</div>
-      <div>
-        <h1>Page Not Found</h1>
-      </div>
+      <div><h1>Page Not Found</h1></div>
     </div>
 
-    <div class="hint" id="hint">We couldn’t find this URL. Try the links below or go back to the homepage.</div>
+    <div class="hint" id="hint">
+      We couldn’t find this URL. Try the links below or 
+      <a href="/" style="color:#0d6efd; font-weight:600; text-decoration:none;">go back to the homepage</a>.
+    </div>
 
     <div class="controls">
       <a class="btn btn-primary" href="/">Home</a>
-      <a class="btn btn-green" href="https://lywww88.github.io/projects/project.html">Projects</a>
-      <a class="btn btn-violet" href="https://lywww88.github.io/startup/journey.html">Startup</a>
-      <a class="btn btn-orange" href="https://lywww88.github.io/about.html">About</a>
+      <a class="btn btn-green" href="/projects/project.html">Projects</a>
+      <a class="btn btn-violet" href="/startup/journey.html">Startup</a>
+      <a class="btn btn-orange" href="/about.html">About</a>
     </div>
 
     <div class="grid">
@@ -153,23 +140,24 @@
 
     <div class="footer">
       <div id="url"></div>
+      <p>The page you’re looking for doesn’t exist or has moved.</p>
     </div>
   </main>
 
   <script>
-    // 显示当前 404 的 URL，帮助用户确认
     (function(){
       var u = window.location.href;
       var hint = document.getElementById('hint');
       var urlBox = document.getElementById('url');
-      if(hint){ hint.innerHTML = 'We couldn’t find <code>'+u.replace(/</g,'&lt;')+'</code>. Try the links below or go back to the homepage.'; }
-      if(urlBox){ urlBox.innerHTML = 'Requested: <code>'+u.replace(/</g,'&lt;')+'</code>'; }
+      if(hint){
+        hint.innerHTML = 'We couldn’t find <code>'+u.replace(/</g,'&lt;')+'</code>. '
+          + 'Try the links below or '
+          + '<a href="/" style="color:#0d6efd; font-weight:600; text-decoration:none;">go back to the homepage</a>.';
+      }
+      if(urlBox){
+        urlBox.innerHTML = 'Requested: <code>'+u.replace(/</g,'&lt;')+'</code>';
+      }
     })();
-
-    <p class="lead">The page you’re looking for doesn’t exist or has moved.</p>
-
-    // 可选：若来自站内，3 秒后自动回首页（想要就取消注释）
-    // setTimeout(function(){ window.location.href = '/'; }, 3000);
   </script>
 </body>
 </html>
