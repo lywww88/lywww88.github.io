@@ -166,6 +166,7 @@ format:
   </li>
 </ul>
 
+<div style="max-width:1000px; margin:0 auto; padding:0 1em;">
 <details open style="margin:.6em 0;">
   <summary><strong>Objectives</strong></summary>
   <ul style="line-height:1.8;">
@@ -289,6 +290,7 @@ format:
     </li>
   </ul>
 </details>
+</div>
 
 <!-- ===== Demo Video Section ===== -->
 <section id="jj-demo-video" style="max-width:1000px;margin:2.5em auto;padding:0 1em;text-align:center;">
