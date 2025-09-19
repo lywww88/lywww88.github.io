@@ -11,7 +11,7 @@ format:
 ---
 
 <style>
-nav[role="doc-toc"] li:nth-child(8)::after {
+nav[role="doc-toc"] li:nth-child(9)::after {
   content: "";
   display: block;
   height: 1px;
