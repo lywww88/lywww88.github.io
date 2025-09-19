@@ -120,15 +120,7 @@ format:
 }
 </style>
 
-<div class="section-title">Johnson & Johnson Cerenovus Project</div>
-<div class="page-intro">
-  <strong>This page is still under development</strong><br><br>
-  Led a data-driven analysis of sales performance and customer retention for Cerenovus, a Johnson &amp; Johnson medical device division. 
-  Explored multi-year transaction data to identify key revenue drivers, product line dynamics, and regional sales trends. 
-  Applied clustering and churn modeling to uncover at-risk segments and produced actionable recommendations 
-  to improve account engagement and inform strategic planning. <br><br>
-  <em>Detailed write-up and dashboards coming soon. Stay tuned!</em>
-</div>
+<div class="section-title">Johnson & Johnson Cerenovus Project - under development</div>
 
 <!-- ===== Executive Summary Section ===== -->
 <section id="jj-summary" style="max-width:1000px;margin:2em auto;padding:0 1em;">
