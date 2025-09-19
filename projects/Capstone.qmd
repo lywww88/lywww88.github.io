@@ -122,10 +122,12 @@ format:
 
 </style>
 
-<h2 class="section-title" style="border-bottom:1px solid #e5e7eb;padding-bottom:.4em;margin-bottom:1.2em;">
-  Johnson &amp; Johnson Cerenovus Project 
-  <span style="font-size:.85rem;font-weight:500;color:#888;">– Page Under Development</span>
+<h2 class="section-title" style="border-bottom:1px solid #e5e7eb;padding-bottom:.4em;margin-bottom:.6em;">
+  Johnson &amp; Johnson Cerenovus Project
 </h2>
+<p style="text-align:center;color:#c0392b;font-weight:600;font-size:1rem;margin-top:-.2em;margin-bottom:1.5em;">
+  🚧 This page is still under development 🚧
+</p>
 
 <!-- ===== Executive Summary Section ===== -->
 <section id="jj-summary" style="max-width:1000px;margin:2em auto;padding:0 1em;">
