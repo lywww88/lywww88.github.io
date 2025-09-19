@@ -196,13 +196,13 @@ format:
 <section id="jj-demo-video" style="max-width:1000px;margin:2.5em auto;padding:0 1em;text-align:center;">
   <h2 class="section-title">Project Demo Video</h2>
   <p style="max-width:800px;margin:0.6em auto 1.5em;line-height:1.8;color:#333;">
-    Watch a short demo showcasing the interactive dashboard, customer segmentation workflow, and predictive modeling results.
+    Watch a short demo showcasing the interactive dashboard.
   </p>
 
   <iframe 
     width="100%" 
     height="480" 
-    src="https://www.youtube.com/" 
+    src="https://www.youtube.com/watch?v=CH3mrQMFN20" 
     title="J&J Capstone Demo Video" 
     frameborder="0" 
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
