@@ -17,7 +17,7 @@
       --primary-3:#17c0ff;
 
       --secondary-fill:#eef5ff; /* 二级：浅蓝填充 */
-      --secondary-border:#d6e4ff;
+      --secondary-border:#c7d8ff;
 
       --tertiary-fill:rgba(13,110,253,.06); /* 三级：更淡的浅蓝填充 */
       --tertiary-fill-hover:rgba(13,110,253,.12);
@@ -99,7 +99,7 @@
     .btn:hover{ transform:translateY(-2px); filter:brightness(1.02); }
     .btn:active{ transform:translateY(0); }
 
-    /* 一级：主蓝渐变（Resume / 也可用于特别重要的导航） */
+    /* 一级：主蓝渐变（Resume / 特别重要） */
     .btn-primary{
       color:#fff;
       background:linear-gradient(135deg,var(--primary),var(--primary-2),var(--primary-3));
@@ -110,18 +110,23 @@
     .btn-lucky{
       color:#fff;
       background:linear-gradient(135deg,var(--lucky-1),var(--lucky-2),var(--lucky-3));
-      box-shadow:0 10px 24px rgba(255, 102, 0, .35);
+      box-shadow:0 10px 24px rgba(255,102,0,.35);
     }
 
     /* 二级：浅蓝填充 + 蓝字 + 细边框（顶部导航） */
     .btn-secondary{
       color:var(--primary);
-      background:var(--secondary-fill);
+      background:linear-gradient(180deg, #f1f6ff, var(--secondary-fill));
       border:1px solid var(--secondary-border);
-      box-shadow:0 3px 10px rgba(13,110,253,.12);
+      box-shadow:0 4px 12px rgba(13,110,253,.16);
+    }
+    .btn-secondary:hover{
+      background:linear-gradient(180deg, #e9f2ff, #eaf2ff);
+      border-color:#b4c9ff;
+      filter:brightness(1.01);
     }
 
-    /* 三级：更淡的浅蓝填充（Contact / Email）——不至于太弱 */
+    /* 三级：更淡的浅蓝填充（Contact / Email） */
     .btn-tertiary{
       color:var(--primary);
       background:var(--tertiary-fill);
@@ -168,7 +173,7 @@
     </div>
 
     <div class="grid">
-      <!-- 左：Lucky + Resume（Lucky最强、Resume主蓝） -->
+      <!-- 左：Lucky + Resume -->
       <div class="card">
         <h3>Explore</h3>
         <p class="muted">Jump to a random project, or view my resume.</p>
@@ -178,7 +183,7 @@
         </div>
       </div>
 
-      <!-- 右：Contact + Email（三级：淡填充，不至于过弱） -->
+      <!-- 右：Contact + Email（三级） -->
       <div class="card">
         <h3>Need help?</h3>
         <p class="muted">If you believe this is an error, please let me know.</p>
@@ -197,7 +202,7 @@
 
   <script>
     (function(){
-      var u = window.location.href; // 如需更简洁：改成 window.location.pathname
+      var u = window.location.href; // 需要只显示路径可改为 window.location.pathname
       var hint = document.getElementById('hint');
       var urlBox = document.getElementById('url');
       if(hint){
@@ -214,12 +219,11 @@
     function randomProject(){
       var projects = [
         '/projects/Capstone.html',
-        '/projects/project.html'
-        '/projects/project-pixel.html'
-        '/projects/project-consulting.html'
-        '/projects/project-airbnb.html'
+        '/projects/project.html',
+        '/projects/project-pixel.html',
+        '/projects/project-consulting.html',
+        '/projects/project-airbnb.html',
         '/projects/project-anemia.html'
-
       ];
       var i = Math.floor(Math.random() * projects.length);
       window.location.href = projects[i];
