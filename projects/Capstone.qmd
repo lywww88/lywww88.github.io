@@ -3,6 +3,7 @@ title: ""
 page-title: "Capstone Project - Yiwei Lu"
 format:
   html:
+    anchor-sections: false
     title-block: false
     page-layout: full
     allow-raw-html: true
@@ -125,13 +126,36 @@ format:
 <!-- ===== Executive Summary Section ===== -->
 <section id="jj-summary" style="max-width:1000px;margin:2em auto;padding:0 1em;">
   <h2 class="section-title" style="margin-top:0;">Executive Summary</h2>
+  
   <p style="color:#2c3e50;line-height:1.85;font-size:1.05rem;">
-    Partnered with <strong>Johnson &amp; Johnson – Cerenovus</strong> to build a data-driven retention model built in dashboard 
-    for neurovascular products. Using multi-year transactional data (FISCAL_YEAR / FISCAL_MONTH / SALES), 
-    we engineered features, trained churn models (Logistic Regression, XGBoost, Random Survival Forest), 
-    and delivered insights that help marketing and sales teams prioritize high-risk accounts and target 
-    segments with tailored campaigns.
+    Partnered with <strong>Johnson &amp; Johnson – Cerenovus</strong>, a division focused on neurovascular medical devices, 
+    to address a critical business challenge: <em>account churn and retention</em>. 
+    Our project aimed to transform raw sales transactions into predictive insights that inform 
+    revenue protection and growth strategies.
   </p>
+
+  <p style="color:#2c3e50;line-height:1.85;font-size:1.05rem;">
+    Leveraging <strong>multi-year transactional data</strong> (FISCAL_YEAR, FISCAL_MONTH, SALES, product SKU, region, channel), 
+    we engineered business-driven features such as RFM metrics, product migration indicators, pricing tiers, 
+    and seasonality patterns. These features fed into multiple predictive models including 
+    <strong>Logistic Regression</strong> for interpretability, <strong>XGBoost</strong> for high-performance churn classification, 
+    and <strong>Random Survival Forest</strong> to capture time-to-churn dynamics.
+  </p>
+
+  <p style="color:#2c3e50;line-height:1.85;font-size:1.05rem;">
+    The results were both <strong>quantitative</strong> and <strong>strategic</strong>: models identified over 
+    <strong>60% of churners in the top-risk decile</strong>, segmentation revealed distinct groups such as Premium Spenders, 
+    Power Buyers, and Low Engagement customers, and product analysis highlighted a <strong>45% migration</strong> from coils/stents 
+    to aspiration systems. Financial scenarios projected an annual <strong>+ $1.2M ROI</strong> from targeted retention initiatives.
+  </p>
+
+  <p style="color:#2c3e50;line-height:1.85;font-size:1.05rem;">
+    To translate insights into action, we delivered an <strong>interactive dashboard</strong> (React + Tailwind + PostgreSQL) 
+    that connects predictions, segment profiles, and ROI simulations. This decision-support tool empowers sales and marketing teams 
+    to design personalized campaigns, monitor outcomes, and scale the methodology across other Johnson &amp; Johnson divisions. 
+    Ultimately, the project demonstrated how <em>advanced analytics can directly enable measurable business impact</em>.
+  </p>
+</section>
 
 <h3 class="section-title" style="font-size:1.4rem;margin-top:1.5em;">Key Outcomes</h3>
 
