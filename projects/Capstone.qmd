@@ -349,7 +349,7 @@ format:
   Documentation
 </h3>
 
-<p style="text-align:center;max-width:800px;margin:0 auto 1.2em;line-height:1.8;">
+<p style="text-align:center;max-width:800px;margin:0 auto 1.2em;line-height:1.6;">
   Select a deliverable and click "Open":
 </p>
 
