@@ -27,14 +27,13 @@ website:
             text: '<span class="nav-text">Capstone Project</span>'
       - text: '<span class="nav-text">Startup</span>'
         menu:
-          - text: '<span style="font-size: 0.7rem; font-weight: 300; color: gray;">STEALTH STAGE</span>'
-          - href: https://contact.yiweilu.me/
-            text: '<strong>YPS Tech</strong>'
-            target: _self
           - text: '<span style="font-size: 0.7rem; font-weight: 300; color: gray;">Concept Stage (Paused)</span>'
           - href: https://platemateofficial.netlify.app/
             text: '<strong>Platemate</strong>'
             target: _blank
+          - href: https://contact.yiweilu.me/
+            text: '<strong>YPS Tech</strong>'
+            target: _self
           - text: '<hr style="border: none; border-top: 1px solid #ccc; margin: 0.8em 0;">'
           - text: '<span style="font-size: 0.7rem; font-weight: 300; color: gray;">ABOUT</span>'
           - href: startup/journey.qmd
